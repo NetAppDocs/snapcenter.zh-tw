@@ -1,0 +1,36 @@
+---
+permalink: protect-sco/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_oracle_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for Oracle Database 
+summary: 在您使用SnapCenter 原地複製之前、先瞭解與您想要執行的備份、複製及還原作業相關的基本概念非常實用。 
+---
+= 如何使用資源、資源群組和原則來保護Oracle資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在您使用SnapCenter 原地複製之前、先瞭解與您想要執行的備份、複製及還原作業相關的基本概念非常實用。
+
+* 資源通常是SnapCenter Oracle資料庫的功能。
+* SnapCenterResource群組是主機或叢集上的資源集合。
++
+當您對資源群組執行作業時、會對資源群組中定義的資源執行該作業。
+
++
+資源群組先前稱為資料集。
+
+* 這些原則會指定資料保護作業的備份頻率、複本保留、複寫、指令碼及其他特性。
++
+當您建立資源群組時、請為該群組選取一或多個原則。當您針對單一資源執行隨需備份時、也可以選取原則。您也可以針對單一資源和資源群組執行排程備份。
+
+
+
+將資源群組想像成定義您要保護的內容、以及您想要在何時保護資源群組。請將原則想像為定義您要保護的方式。
+
+例如、如果您要備份主機的所有資料庫、您可以建立一個資源群組、其中包含主機中的所有資料庫。然後您可以將兩個原則附加到資源群組：每日原則和每小時原則。當您建立資源群組並附加原則時、可能會將資源群組設定為每日執行完整備份、以及每小時執行記錄備份的另一個排程。
+
+下圖說明資料庫的資源、資源群組和原則之間的關係：
+
+image::../media/sco_resourcegroup_policy.gif[SCO資源群組原則]

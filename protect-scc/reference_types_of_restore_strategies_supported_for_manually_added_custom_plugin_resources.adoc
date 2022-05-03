@@ -1,0 +1,35 @@
+---
+permalink: protect-scc/reference_types_of_restore_strategies_supported_for_manually_added_custom_plugin_resources.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。手動新增自訂外掛程式資源的還原策略有兩種類型。您無法恢復手動新增的自訂外掛程式資源。 
+---
+= 手動新增自訂外掛程式資源所支援的還原策略類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。手動新增自訂外掛程式資源的還原策略有兩種類型。
+
+
+NOTE: 您無法恢復手動新增的自訂外掛程式資源。
+
+
+
+== 完成資源還原
+
+* 還原資源的所有磁碟區、qtree和LUN
+
+
+
+NOTE: 如果資源包含磁碟區或qtree、則會刪除在這類磁碟區或qtree上選取要還原的Snapshot複本之後所取得的Snapshot複本、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。
+
+
+
+== 檔案層級還原
+
+* 從磁碟區、qtree或目錄還原檔案
+* 僅還原選取的LUN
+

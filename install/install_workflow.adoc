@@ -1,0 +1,16 @@
+---
+permalink: install/install_workflow.html 
+sidebar: sidebar 
+keywords: install, snapcenter server, license, storage system, RBAC, provision storage, workflow 
+summary: 工作流程影像顯示安裝及設定SnapCenter ImageServer的步驟。 
+---
+= 安裝工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+工作流程會顯示安裝及設定SnapCenter 此伺服器所需的不同工作。
+
+image::../media/install_snapcenter_server.png[安裝SnapCenter 伺服器]

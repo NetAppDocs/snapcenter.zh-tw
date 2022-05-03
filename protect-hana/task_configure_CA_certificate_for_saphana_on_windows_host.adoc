@@ -1,0 +1,131 @@
+---
+permalink: protect-hana/task_configure_CA_certificate_for_saphana_on_windows_host.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 在SnapCenter Windows主機上設定「CA憑證」以使用「更新自訂外掛程式」服務 
+---
+= 在SnapCenter Windows主機上設定「CA憑證」以執行「SAP HANA外掛程式」服務
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+您應該管理自訂外掛程式Keystore的密碼及其憑證、設定CA憑證、設定根或中繼憑證至自訂外掛程式信任存放區、以及設定CA簽署金鑰配對至自訂外掛程式信任存放區、並使用SnapCenter 「依賴自訂外掛程式」服務啟動已安裝的數位憑證。
+
+自訂外掛程式使用檔案_keyKeystore。jks_、位於_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_、兩者都是其信任存放區和金鑰存放區。
+
+
+
+== 管理自訂外掛程式Keystore的密碼、以及使用中的CA簽署金鑰配對別名
+
+*步驟*
+
+. 您可以從自訂外掛程式代理程式內容檔擷取自訂外掛程式Keystore預設密碼。
++
+它是對應於key_keystore _pass的值。
+
+. 變更Keystore密碼：
++
+_keytool-storepasswd -keystore keystor.jks_
+
++
+
+NOTE: 如果Windows命令提示字元無法辨識「keytool」命令、請將keytoolt命令替換為完整路徑。
+
++
+_C：\Program Files\Java\<JDK_VERY>\BIN\keytool.exe"-storepasswd -keystore keyKeystore .jks_
+
+. 將Keystore中私密金鑰項目的所有別名密碼變更為與Keystore相同的密碼：
++
+_keytool-keypasswd -alias "alias name_in_cert - keystore keystore .jks_
+
++
+在_agent.properties_檔案中更新keyKeystore _pass的相同更新。
+
+. 變更密碼後重新啟動服務。
++
+
+NOTE: 自訂外掛程式Keystore的密碼、以及私密金鑰的所有相關別名密碼均應相同。
+
+
+
+
+
+== 將根或中繼憑證設定為自訂外掛程式信任存放區
+
+您應該設定根或中繼憑證、而不使用私密金鑰、以自訂外掛程式信任存放區。
+
+*步驟*
+
+. 瀏覽至包含自訂外掛程式Keystore _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_的資料夾
+. 找到「keystore .jks」檔案。
+. 在Keystore中列出新增的憑證：
++
+_keytool-list -v -keystore keyKeystore .jks_
+
+. 新增根或中繼憑證：
++
+_keytool-import -cactacerts -alias myRootCA -file /root/USERTrustra_root.cer -keystore keyKeystore .jks_
+
+. 將根或中繼憑證設定為自訂外掛程式信任存放區之後、請重新啟動服務。
+
+
+
+NOTE: 您應該先新增根CA憑證、然後再新增中繼CA憑證。
+
+
+
+== 將CA簽署金鑰配對設定為自訂外掛程式信任存放區
+
+您應該將CA簽署金鑰配對設定為自訂外掛程式信任存放區。
+
+*步驟*
+
+. 瀏覽至包含自訂外掛程式Keystore _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_的資料夾
+. 找到檔案_keystore。jks_。
+. 在Keystore中列出新增的憑證：
++
+_keytool-list -v -keystore keyKeystore .jks_
+
+. 新增具有私密金鑰和公開金鑰的CA憑證。
++
+_keytool-importkeystore -srckeystore /root/snapcenter.ssl.test.netapp.com.pfx -srcstoretype.kcs12 -destkeystore keyKeystore .jks -deststoretype.jks_
+
+. 在Keystore中列出新增的憑證。
++
+_keytool-list -v -keystore keyKeystore .jks_
+
+. 驗證密鑰庫是否包含與新CA憑證對應的別名、該CA憑證已新增至金鑰庫。
+. 將CA憑證的新增私密金鑰密碼變更為金鑰庫密碼。
++
+預設的自訂外掛程式Keystore密碼是agent.properties檔案中KeyKeyKeystore _pass的值。
+
++
+_keytool-keypasswd -alias "alias name_in_CA_cert "-keystore keyKeystore .jks_
+
+. 在_agent.properties_檔案中設定CA憑證的別名。
++
+請根據SCC_IDATure_ALIAS金鑰更新此值。
+
+. 將CA簽署金鑰配對設定為自訂外掛程式信任存放區之後、請重新啟動服務。
+
+
+
+
+== 針對SnapCenter 「不一樣的自訂外掛程式」設定憑證撤銷清單（CRL）
+
+*關於此工作*
+
+* 若要下載相關CA憑證的最新CRL檔案、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_update_certificate_revocation_list_file_in_SnapCenter_CA_Certificate["如何更新SnapCenter 「驗證CA憑證」中的憑證撤銷清單檔案"]。
+* 「自訂外掛程式」會在預先設定的目錄中搜尋CRL檔案。SnapCenter
+* 適用於「不適用自訂外掛程式」的CRL檔案預設目錄SnapCenter 為：_C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\ etc\crl__。
+
+
+*步驟*
+
+. 您可以根據金鑰CRP_path修改及更新_agent.properties_檔案中的預設目錄。
+. 您可以在此目錄中放置多個CRL檔案。
++
+傳入的憑證會根據每個CRL進行驗證。
+
+

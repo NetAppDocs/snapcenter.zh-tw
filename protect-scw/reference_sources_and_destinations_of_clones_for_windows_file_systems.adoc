@@ -1,0 +1,33 @@
+---
+permalink: protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以從主要儲存設備或次要儲存設備複製檔案系統備份。您也可以選擇支援您需求的目的地：原始備份位置、或是同一主機或不同主機上的不同目的地。目的地必須與複製來源備份位於同一個磁碟區。 
+---
+= Windows檔案系統的複本來源與目的地
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從主要儲存設備或次要儲存設備複製檔案系統備份。您也可以選擇支援您需求的目的地：原始備份位置、或是同一主機或不同主機上的不同目的地。目的地必須與複製來源備份位於同一個磁碟區。
+
+|===
+| 複製目的地 | 說明 
+
+
+ a| 
+原始、來源、位置
+ a| 
+根據預設SnapCenter 、將實體複本儲存在複製備份所在的相同位置和主機上。
+
+
+
+ a| 
+不同的位置
+ a| 
+您可以將實體複本儲存在同一主機或不同主機上的不同位置。主機必須已設定連線至儲存虛擬機器（SVM）。
+
+|===
+您可以在完成複製作業後重新命名複本。

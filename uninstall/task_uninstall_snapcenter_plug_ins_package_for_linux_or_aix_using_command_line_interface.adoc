@@ -1,0 +1,24 @@
+---
+permalink: uninstall/task_uninstall_snapcenter_plug_ins_package_for_linux_or_aix_using_command_line_interface.html 
+sidebar: sidebar 
+keywords: uninstall plug-ins, linux, aix, command-line interface, cli 
+summary: 您SnapCenter 可以使用命令列介面來解除安裝適用於Linux的RUNS-外掛程式套件或SnapCenter 適用於AIX的RUNS-外掛程式套件。 
+---
+= 使用CLI解除安裝適用於Linux或AIX的外掛程式套件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您SnapCenter 可以使用命令列介面來解除安裝適用於Linux的RUNS-外掛程式套件或SnapCenter 適用於AIX的RUNS-外掛程式套件。
+
+*您需要的是什麼*
+
+* 請確定您已刪除排程的工作
+* 確保所有執行中的工作都已完成。
+
+
+*步驟*
+
+執行_/cust_LOUSE/NetApp/snapcenter/spl/install/plugins/uninstall_以解除安裝。

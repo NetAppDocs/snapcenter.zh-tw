@@ -1,0 +1,16 @@
+---
+permalink: protect-scc/concept_number_of_backup_jobs_needed.html 
+sidebar: sidebar 
+keywords:  
+summary: 決定所需備份工作數目的因素包括資源大小、使用的磁碟區數目、資源變更率、以及服務層級協議（SLA）。 
+---
+= 所需的備份工作數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+決定所需備份工作數目的因素包括資源大小、使用的磁碟區數目、資源變更率、以及服務層級協議（SLA）。
+
+您選擇的備份工作數量通常取決於您放置資源的磁碟區數量。例如、如果您將一組小型資源放在一個磁碟區上、而另一個磁碟區上有一組大型資源、則您可以為小型資源建立一個備份工作、為大型資源建立一個備份工作。

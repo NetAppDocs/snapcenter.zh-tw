@@ -1,0 +1,199 @@
+---
+permalink: protect-scc/reference_custom_plugin_in_snapcenter.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用SnapCenter 支援應用程式資料保護的功能、在主機上安裝所建立的自訂外掛程式。 
+---
+= 自訂SnapCenter 插件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== 自訂SnapCenter 插件
+
+使用Java、Perl或原生樣式所建立的自訂外掛程式、可以使用SnapCenter 支援應用程式資料保護的功能、安裝在主機上。您必須先匯出外掛程式、SnapCenter 才能使用本教學課程所提供的程序將其安裝在支援主機上。
+
+
+
+=== 建立外掛程式說明檔案
+
+對於每個建立的外掛程式、您都必須擁有說明檔案。說明檔案會說明外掛程式的詳細資料。檔案名稱必須是Plugin_filer.xml。
+
+
+
+==== 使用外掛程式描述元檔案屬性及其重要性
+
+|===
+| 屬性 | 說明 
+
+
+ a| 
+名稱
+ a| 
+外掛程式的名稱。允許使用英數字元。例如DB2、MySQL、MongoDB
+
+對於以原生樣式建立的外掛程式、請確定您未提供檔案副檔名。例如、如果外掛程式名稱為MongoDB.sh、請將名稱指定為MongoDB。
+
+
+
+ a| 
+版本
+ a| 
+外掛程式版本。可同時包含主要和次要版本。例如1.0、1.1、2.0、2.1
+
+
+
+ a| 
+顯示名稱
+ a| 
+顯示在SnapCenter Is供 伺服器中的外掛程式名稱。如果寫入相同外掛程式的多個版本、請確認所有版本的顯示名稱都相同。
+
+
+
+ a| 
+PluginType
+ a| 
+用於建立外掛程式的語言。支援的值包括Perl、Java和Native。原生外掛程式類型包括Unix/Linux Shell指令碼、Windows指令碼、Python或任何其他指令碼語言。
+
+
+
+ a| 
+OSName
+ a| 
+安裝外掛程式的主機OS名稱。有效值為Windows和Linux。單一外掛程式可以部署在多種作業系統類型上、例如Perl類型的外掛程式。
+
+
+
+ a| 
+作業系統版本
+ a| 
+安裝外掛程式的主機作業系統版本。
+
+
+
+ a| 
+資源名稱
+ a| 
+外掛程式可支援的資源類型名稱。例如資料庫、執行個體、集合。
+
+
+
+ a| 
+父
+ a| 
+在這種情況下、資源名稱會階層式相依於其他資源類型、然後由父資源類型決定父資源類型。
+
+例如，DB2外掛程式的資源名稱「資料庫」具有父「執行個體」。
+
+
+
+ a| 
+RequireFileSystemPlugin
+ a| 
+是或否決定還原精靈中是否顯示「恢復」索引標籤。
+
+
+
+ a| 
+資源要求驗證
+ a| 
+是或否決定自動探索或未自動探索的資源、在探索儲存設備後、是否需要認證資料來執行資料保護作業。
+
+
+
+ a| 
+RequireFileSystemClone
+ a| 
+是或否決定外掛程式是否需要檔案系統外掛程式整合、才能完成複製工作流程。
+
+|===
+以下是自訂外掛程式DB2的Plugin_descriptor.xml檔案範例：
+
+....
+<Plugin>
+<SMSServer></SMSServer>
+<Name>DB2</Name>
+<Version>1.0</Version>
+<PluginType>Perl</PluginType>
+<DisplayName>Custom DB2 Plugin</DisplayName>
+<SupportedOS>
+<OS>
+<OSName>windows</OSName>
+<OSVersion>2012</OSVersion>
+</OS>
+<OS>
+<OSName>Linux</OSName>
+<OSVersion>7</OSVersion>
+</OS>
+</SupportedOS>
+<ResourceTypes>
+<ResourceType>
+<ResourceName>Database</ResourceName>
+<Parent>Instance</Parent>
+</ResourceType>
+<ResourceType>
+<ResourceName>Instance</ResourceName>
+</ResourceType>
+</ResourceTypes>
+<RequireFileSystemPlugin>no</RequireFileSystemPlugin>
+<ResourceRequiresAuthentication>yes</ResourceRequiresAuthentication>
+<SupportsApplicationRecovery>yes</SupportsApplicationRecovery>
+</Plugin>
+....
+
+
+=== 建立壓縮檔
+
+在開發外掛程式並建立描述元檔案之後、您必須將外掛程式檔案和Plugin_descriptor.xml檔案新增至資料夾、然後將其壓縮。
+
+在建立ZIP檔案之前、您必須考量下列事項：
+
+* 指令碼名稱必須與外掛程式名稱相同。
+* 對於Perl外掛程式、ZIP資料夾必須包含含有指令碼檔案的資料夾、且描述元檔案必須位於此資料夾之外。資料夾名稱必須與外掛程式名稱相同。
+* 對於Perl外掛程式以外的外掛程式、ZIP資料夾必須包含描述元和指令碼檔案。
+* 作業系統版本必須為數字。
+
+
+範例：
+
+* DB2外掛程式：將DB2.PM和Plugin_descriptor.xml檔案新增至「DB2.zip」。
+* 使用Java開發的外掛程式：將Jar檔案、相依的Jar檔案和Plugin_descriptor.xml檔案新增至資料夾、然後將其壓縮。
+
+
+
+
+=== 正在上傳外掛程式ZIP檔案
+
+您必須將外掛程式的ZIP檔案上傳SnapCenter 至Sfor the plug-in Server、以便在所需的主機上部署外掛程式。
+
+您可以使用UI或Cmdlet上傳外掛程式。
+
+*使用者介面：*
+
+* 將外掛程式ZIP檔案上傳為「*新增*」或「*修改主機*」工作流程精靈的一部分
+* 按一下*「Select to upload custom plug-in（選擇上傳自訂外掛程式）」*
+
+
+* PowerShell：*
+
+* uple-SmPluginPackage Cmdlet
++
+例如、PS-Ups>Upse-SmPluginPackage -AbsolutePath c：\DB2_1.zip
+
++
+如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式指令程式說明或參閱Cmdlet參考資訊。
+
+
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+
+
+
+=== 部署自訂外掛程式
+
+上傳的自訂外掛程式現在可在*新增*和*修改主機*工作流程的所需主機上進行部署。您可以將多個版本的外掛程式上傳至SnapCenter 支援伺服器、也可以選擇要部署在特定主機上的版本。
+
+如需如何上傳外掛程式的詳細資訊、請參閱： link:task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html["新增主機並在遠端主機上安裝外掛程式套件"]

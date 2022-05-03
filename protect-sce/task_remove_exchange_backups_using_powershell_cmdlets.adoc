@@ -1,0 +1,40 @@
+---
+permalink: protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords: backups 
+summary: 如果您不再需要移除SmBackup指令程式來執行其他資料保護作業、可以使用該指令程式來刪除Exchange備份。 
+---
+= 使用PowerShell Cmdlet移除Exchange備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您不再需要移除SmBackup指令程式來執行其他資料保護作業、可以使用該指令程式來刪除Exchange備份。
+
+您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+
+*步驟*
+
+. 使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
+. 使用「Remove-SmBackup」Cmdlet刪除一或多個備份。
++
+此範例使用兩個備份ID刪除兩個備份：
+
++
+[listing]
+----
+Remove-SmBackup -BackupIds 3,4
+Remove-SmBackup
+Are you sure want to remove the backup(s).
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+----
+

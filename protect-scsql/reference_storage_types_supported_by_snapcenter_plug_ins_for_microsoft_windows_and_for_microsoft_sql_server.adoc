@@ -1,0 +1,137 @@
+---
+permalink: protect-scsql/reference_storage_types_supported_by_snapcenter_plug_ins_for_microsoft_windows_and_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: 支援實體機器和虛擬機器上的各種儲存類型。SnapCenter在安裝主機套件之前、您必須先確認儲存類型是否支援。 
+---
+= 適用於Microsoft Windows和Microsoft SQL Server的解決方案SnapCenter 支援的儲存類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+支援實體機器和虛擬機器上的各種儲存類型。SnapCenter在安裝主機套件之前、您必須先確認儲存類型是否支援。
+
+Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+
+|===
+| 機器 | 儲存類型 | 資源配置使用 | 支援附註 
+
+
+ a| 
+實體伺服器
+ a| 
+連接FC的LUN
+ a| 
+圖形化使用者介面（GUI）或PowerShell Cmdlet SnapCenter
+ a| 
+
+
+
+ a| 
+實體伺服器
+ a| 
+連接iSCSI的LUN
+ a| 
+指令程式GUI或PowerShell Cmdlet SnapCenter
+ a| 
+
+
+
+ a| 
+實體伺服器
+ a| 
+儲存虛擬機器（SVM）上的SMB3（CIFS）共享區
+ a| 
+指令程式GUI或PowerShell Cmdlet SnapCenter
+ a| 
+僅支援資源配置。
+
+您無法使用SnapCenter 支援功能來備份任何使用SMB傳輸協定的資料或共用。
+
+
+
+ a| 
+VMware VM
+ a| 
+由FC或iSCSI HBA連接的RDM LUN
+ a| 
+PowerShell Cmdlet
+ a| 
+
+
+
+ a| 
+VMware VM
+ a| 
+iSCSI啟動器直接連接至來賓系統的iSCSI LUN
+ a| 
+指令程式GUI或PowerShell Cmdlet SnapCenter
+ a| 
+
+
+
+ a| 
+VMware VM
+ a| 
+虛擬機器檔案系統（VMFS）或NFS資料存放區
+ a| 
+VMware vSphere
+ a| 
+
+
+
+ a| 
+VMware VM
+ a| 
+連線至SMB3共用的客體系統、位於SVM上
+ a| 
+指令程式GUI或PowerShell Cmdlet SnapCenter
+ a| 
+僅支援資源配置。
+
+您無法使用SnapCenter 支援功能來備份任何使用SMB傳輸協定的資料或共用。
+
+
+
+ a| 
+Hyper-V VM
+ a| 
+虛擬光纖通道交換器所連接的虛擬FC（vFC）LUN
+ a| 
+指令程式GUI或PowerShell Cmdlet SnapCenter
+ a| 
+您必須使用Hyper-V Manager來配置虛擬光纖通道交換器所連接的虛擬FC（vFC）LUN。
+
+
+NOTE: Hyper-V不支援在NetApp儲存設備上配置的VHD（x）上傳遞磁碟和備份資料庫。
+
+
+
+ a| 
+Hyper-V VM
+ a| 
+iSCSI啟動器直接連接至來賓系統的iSCSI LUN
+ a| 
+指令程式GUI或PowerShell Cmdlet SnapCenter
+ a| 
+
+NOTE: Hyper-V不支援在NetApp儲存設備上配置的VHD（x）上傳遞磁碟和備份資料庫。
+
+
+
+ a| 
+Hyper-V VM
+ a| 
+連線至SMB3共用的客體系統、位於SVM上
+ a| 
+指令程式GUI或PowerShell Cmdlet SnapCenter
+ a| 
+僅支援資源配置。
+
+您無法使用SnapCenter 支援功能來備份任何使用SMB傳輸協定的資料或共用。
+
+
+NOTE: Hyper-V不支援在NetApp儲存設備上配置的VHD（x）上傳遞磁碟和備份資料庫。
+
+|===

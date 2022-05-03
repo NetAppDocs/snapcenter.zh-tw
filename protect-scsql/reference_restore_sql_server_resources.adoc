@@ -1,0 +1,28 @@
+---
+permalink: protect-scsql/reference_restore_sql_server_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用SnapCenter 支援功能還原SQL Server資料庫、方法是將資料從一或多個備份還原至使用中的檔案系統、然後還原資料庫。您也可以還原「可用度」群組中的資料庫、然後將還原的資料庫新增至「可用度群組」。還原SQL Server資料庫之前、您必須執行多項準備工作。 
+---
+= 還原工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapCenter 支援功能還原SQL Server資料庫、方法是將資料從一或多個備份還原至使用中的檔案系統、然後還原資料庫。您也可以還原「可用度」群組中的資料庫、然後將還原的資料庫新增至「可用度群組」。還原SQL Server資料庫之前、您必須執行多項準備工作。
+
+下列工作流程顯示您必須執行資料庫還原作業的順序：
+
+image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_還原 工作流程]
+
+您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原、還原、驗證及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2874310["《Software 4.4 Cmdlet參考指南》SnapCenter"]
+
+*瞭解更多資訊*
+
+link:task_restore_a_sql_server_database_from_secondary_storage.html["從次要儲存設備還原SQL Server資料庫"]
+
+link:task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html["使用PowerShell Cmdlet還原及還原資源"]
+
+link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Restore_operation_might_fail_on_Windows_2008_R2["還原作業可能會在Windows 2008 R2上失敗"]

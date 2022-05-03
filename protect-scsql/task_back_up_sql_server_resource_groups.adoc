@@ -1,0 +1,50 @@
+---
+permalink: protect-scsql/task_back_up_sql_server_resource_groups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SQL Server 
+summary: 您可以從「資源」頁面隨需備份資源群組。如果資源群組已附加原則並設定排程、則會根據排程自動進行備份。 
+---
+= 備份SQL Server資源群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從「資源」頁面隨需備份資源群組。如果資源群組已附加原則並設定排程、則會根據排程自動進行備份。
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、從*檢視*清單中選取*資源群組*。
++
+您可以在搜尋方塊中輸入資源群組名稱、或按一下*來搜尋資源群組image:../media/filter_icon.gif[""]*、然後選取標記。然後按一下*image:../media/filter_icon.gif[""]*關閉篩選窗格。
+
+. 在「資源群組」頁面中、選取您要備份的資源群組、然後按一下*立即備份*。
+. 在「備份」頁面中、執行下列步驟：
++
+.. 如果您已將多個原則與資源群組建立關聯、請從* Policy*下拉式清單中選取要用於備份的原則。
++
+如果針對隨需備份所選取的原則與備份排程相關聯、則會根據為排程類型指定的保留設定來保留隨需備份。
+
+.. 備份後、選取* Verify（驗證）*以驗證隨需備份。
++
+原則中的「*驗證*」選項僅適用於排程的工作。
+
+.. 按一下*備份*。
+
+
+. 按一下*監控*>*工作*來監控作業進度。
+
+
+*瞭解更多資訊*
+
+link:task_create_backup_policies_for_sql_server_databases.html["建立SQL Server資料庫的備份原則"]
+
+link:task_create_resource_groups_and_attach_policies_for_sql_server.html["建立SQL Server的資源群組和附加原則"]
+
+link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["使用PowerShell Cmdlet備份資源"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["由於TCP_timeout延遲、導致MySQL連線錯誤導致備份作業失敗"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["Windows排程器錯誤導致備份失敗"]

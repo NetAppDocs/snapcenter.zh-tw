@@ -1,0 +1,22 @@
+---
+permalink: protect-scw/reference_back_up_windows_file_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: 當SnapCenter 您在環境中安裝適用於Microsoft Windows的還原外掛程式時、SnapCenter 可以使用還原來備份Windows檔案系統。您可以備份單一檔案系統或包含多個檔案系統的資源群組。您可以根據需求或根據定義的保護排程進行備份。 
+---
+= 備份Windows檔案系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當SnapCenter 您在環境中安裝適用於Microsoft Windows的還原外掛程式時、SnapCenter 可以使用還原來備份Windows檔案系統。您可以備份單一檔案系統或包含多個檔案系統的資源群組。您可以根據需求或根據定義的保護排程進行備份。
+
+您可以排程在伺服器之間同時執行多個備份。無法同時在同一個資源上執行備份與還原作業。
+
+下列工作流程顯示您必須執行備份作業的順序：
+
+image::../media/sce_backup_workflow.gif[SCE備份工作流程]
+
+您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。支援的支援或SnapCenter https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^] 包含PowerShell Cmdlet的詳細資訊。

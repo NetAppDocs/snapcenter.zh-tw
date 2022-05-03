@@ -1,0 +1,199 @@
+---
+permalink: protect-scw/reference_minimum_ontap_privileges_required_for_windows_plug_in.html 
+sidebar: sidebar 
+keywords:  
+summary: 所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter 
+---
+= Windows外掛程式所需的ONTAP 最低版本權限
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter
+
+|===
+| All Access命令：ONTAP 要求最低權限才能執行支援 
+
+
+ a| 
+事件generate-autosup-log
+
+
+
+ a| 
+工作歷史記錄顯示
+
+工作停止
+
+
+
+ a| 
+LUN
+
+LUN建立
+
+LUN刪除
+
+新增LUN igroup
+
+建立LUN igroup
+
+LUN igroup刪除
+
+LUN igroup重新命名
+
+LUN igroup顯示
+
+LUN對應新增報告節點
+
+建立LUN對應
+
+刪除LUN對應
+
+LUN對應移除報告節點
+
+LUN對應顯示
+
+LUN修改
+
+LUN移入Volume
+
+LUN離線
+
+LUN連線
+
+LUN大小調整
+
+LUN序列
+
+LUN顯示
+
+
+
+ a| 
+SnapMirror原則新增規則
+
+SnapMirror原則修改規則
+
+SnapMirror原則移除規則
+
+SnapMirror原則顯示
+
+SnapMirror還原
+
+SnapMirror顯示
+
+SnapMirror顯示歷史記錄
+
+SnapMirror更新
+
+SnapMirror更新-ls-set
+
+SnapMirror清單目的地
+
+
+
+ a| 
+版本
+
+
+
+ a| 
+建立Volume Clone
+
+Volume Clone顯示
+
+磁碟區複製分割開始
+
+Volume Clone切割停止
+
+Volume建立
+
+Volume銷毀
+
+建立Volume檔案複製
+
+Volume檔案show-disk-usage
+
+Volume離線
+
+Volume線上
+
+Volume修改
+
+Volume qtree建立
+
+Volume qtree刪除
+
+Volume qtree修改
+
+Volume qtree顯示
+
+Volume限制
+
+Volume Show
+
+建立Volume Snapshot快照
+
+Volume Snapshot刪除
+
+Volume Snapshot修改
+
+Volume Snapshot重新命名
+
+Volume Snapshot還原
+
+Volume Snapshot還原檔
+
+Volume Snapshot顯示
+
+Volume卸載
+
+
+
+ a| 
+Vserver CIFS
+
+建立Vserver CIFS共用區
+
+Vserver CIFS共用區刪除
+
+Vserver CIFS ShadowCopy展示
+
+Vserver CIFS共享秀
+
+Vserver CIFS展示
+
+Vserver匯出原則
+
+建立Vserver匯出原則
+
+Vserver匯出原則刪除
+
+建立Vserver匯出原則規則
+
+顯示Vserver匯出原則規則
+
+Vserver匯出原則顯示
+
+Vserver iSCSI
+
+顯示Vserver iSCSI連線
+
+Vserver展示
+
+|===
+|===
+| 唯讀命令：ONTAP 要求具備最低權限才能執行支援 
+
+
+ a| 
+網路介面
+
+網路介面顯示
+
+Vserver
+
+|===

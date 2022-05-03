@@ -1,0 +1,128 @@
+---
+section: protect-sco
+title: 保護Oracle資料庫
+entries:
+- title: Oracle資料庫的支援功能概述SnapCenter
+  entries:
+  - title: 如何使用Oracle資料庫的外掛程式
+    url: "/protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html"
+  - title: Oracle外掛程式的功能
+    url: "/protect-sco/concept_snapcenter_plug_in_for_oracle_database_features.html"
+  - title: Oracle資料庫外掛程式支援的儲存類型
+    url: "/protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html"
+  - title: 準備儲存系統以進行SnapMirror和SnapVault Oracle外掛程式的等化複寫
+    url: "/protect-sco/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_oracle.html"
+  - title: Oracle外掛程式所需的ONTAP 最低支援權限
+    url: "/protect-sco/reference_minimum_ontap_privileges_required_for_oracle_plug_in.html"
+- title: 安裝SnapCenter 適用於Oracle資料庫的功能外掛程式
+  entries:
+  - title: Oracle資料庫適用的安裝流程SnapCenter
+    url: "/protect-sco/install-snapcenter-plug-in-for-oracle-workflow.html"
+  - title: 新增主機及安裝適用於Linux或AIX的外掛程式套件的必要條件
+    url: "/protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html"
+  - title: 新增主機並安裝適用於Linux或AIX的外掛程式套件
+    url: "/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html"
+  - title: 安裝適用於Linux或AIX的外掛程式套件的其他方法
+    url: "/protect-sco/alternate-ways-install-plug-in-linux-aix.html"
+  - title: 設定SnapCenter 「靜態外掛程式載入器」服務
+    url: "/protect-sco/task_configure_snapcenter_plug_in_loader_service.html"
+  - title: 在SnapCenter Linux主機上使用支援功能的「支援程式載入器」服務來設定CA憑證
+    url: "/protect-sco/task_configure_CA_certificate_with_SPL_on_Linux_host.html"
+  - title: 啟用外掛程式的CA憑證
+    url: "/protect-sco/task_enable_ca_certificates_for_plug-ins.html"
+  - title: 從SnapManager Oracle的支援中心和SnapManager SAP的支援中心將資料匯入SnapCenter 到支援中心
+    url: "/protect-sco/concept_import_data_from_snapmanager_for_oracle_and_snapmanager_for_sap_to_snapcenter.html"
+- title: 安裝SnapCenter VMware vSphere的VMware vCenter外掛程式
+  url: "/protect-sco/concept_install_snapcenter_plug_in_for_vmware_vsphere.html"
+- title: 準備保護Oracle資料庫
+  url: "/protect-sco/concept_prepare_for_protecting_oracle_databases.html"
+- title: 備份Oracle資料庫
+  entries:
+  - title: 備份工作流程
+    url: "/protect-sco/backup-workflow.html"
+  - title: 定義Oracle資料庫的備份策略
+    url: "/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html"
+  - title: 預先定義的環境變數、用於備份特定的pretced和postscript
+    url: "/protect-sco/predefined-environment-variables-prescript-postscript-backup.html"
+  - title: 確定Oracle資料庫是否可供備份
+    url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
+  - title: 為Oracle資料庫建立備份原則
+    url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
+  - title: 建立Oracle資料庫的資源群組及附加原則
+    url: "/protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html"
+  - title: 備份Oracle資料庫的需求
+    url: "/protect-sco/reference_requirements_for_backing_up_an_oracle_database.html"
+  - title: 備份Oracle資源
+    url: "/protect-sco/task_back_up_oracle_resources.html"
+  - title: 備份Oracle資料庫資源群組
+    url: "/protect-sco/task_back_up_oracle_database_resource_groups.html"
+  - title: 使用UNIX命令備份Oracle資料庫
+    url: "/protect-sco/task_back_up_oracle_databases_using_unix_commands.html"
+  - title: 監控Oracle資料庫備份作業
+    url: "/protect-sco/task_monitor_oracle_database_backup_operations.html"
+  - title: 取消Oracle資料庫的備份作業
+    url: "/protect-sco/task_cancel_the_snapcenter_plug_in_for_oracle_database_backup_operations.html"
+  - title: 在「拓撲」頁面中檢視Oracle資料庫備份與複製
+    url: "/protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html"
+- title: 掛載及卸載資料庫備份
+  url: "/protect-sco/task_mount_and_unmount_databases_backups.html"
+- title: 還原及還原Oracle資料庫
+  entries:
+  - title: 還原工作流程
+    url: "/protect-sco/restore-workflow.html"
+  - title: 定義Oracle資料庫的還原與還原策略
+    url: "/protect-sco/task_define_a_restore_and_recovery_strategy_for_oracle_databases.html"
+  - title: 預先定義的環境變數、用於還原特定的pretced和postscript
+    url: "/protect-sco/predefined-environment-variables-prescript-postscript-restore.html"
+  - title: 還原Oracle資料庫的需求
+    url: "/protect-sco/reference_requirements_for_restoring_an_oracle_database.html"
+  - title: 還原及還原Oracle資料庫
+    url: "/protect-sco/task_restore_an_oracle_database.html"
+  - title: 使用時間點還原來還原及還原資料表空間
+    url: "/protect-sco/task_restore_and_recovere_tablespaces_using_point_in_time_recovery.html"
+  - title: 使用時間點還原來還原及還原可插拔的資料庫
+    url: "/protect-sco/task_restore_and_recover_pluggable_database_using_point_in_time_recovery.html"
+  - title: 使用UNIX命令還原及還原Oracle資料庫
+    url: "/protect-sco/task_restore_and_recover_oracle_databases_using_unix_commands.html"
+  - title: 監控Oracle資料庫還原作業
+    url: "/protect-sco/task_monitor_oracle_database_restore_operations.html"
+  - title: 取消Oracle資料庫還原作業
+    url: "/protect-sco/task_cancel_oracle_database_restore_operations.html"
+- title: 複製Oracle資料庫
+  entries:
+  - title: 複製工作流程
+    url: "/protect-sco/clone-workflow.html"
+  - title: 定義Oracle資料庫的複製策略
+    url: "/protect-sco/task_define_a_clone_strategy_for_oracle_databases.html"
+  - title: 針對特定實體複本的預先定義環境變數、以及PostScript
+    url: "/protect-sco/predefined-environment-variables-prescript-postscript-clone.html"
+  - title: 複製Oracle資料庫的需求
+    url: "/protect-sco/reference_requirements_for_cloning_an_oracle_database.html"
+  - title: 複製Oracle資料庫
+    url: "/protect-sco/task_clone_an_oracle_database_backup.html"
+  - title: 複製可插拔的資料庫
+    url: "/protect-sco/task_clone_a_pluggable_database.html"
+  - title: 使用UNIX命令複製Oracle資料庫備份
+    url: "/protect-sco/task_clone_oracle_database_backups_using_unix_commands.html"
+  - title: 分割Oracle資料庫複製
+    url: "/protect-sco/task_split_an_oracle_database_clone.html"
+  - title: 分割可插拔資料庫的實體複本
+    url: "/protect-sco/task_split_clone_of_a_pluggable_database.html"
+  - title: 監控Oracle資料庫複製作業
+    url: "/protect-sco/task_monitor_oracle_database_clone_operations.html"
+  - title: 重新整理實體複本
+    url: "/protect-sco/task_refresh_a_clone.html"
+  - title: 刪除可插拔資料庫的實體複本
+    url: "/protect-sco/task_delete_clone_of_a_pluggable_database.html"
+- title: 管理應用程式磁碟區
+  entries:
+  - title: 新增應用程式磁碟區
+    url: "/protect-sco/add-application-volume.html"
+  - title: 備份應用程式磁碟區
+    entries:
+    - title: 備份應用程式Volume
+      url: "/protect-sco/backup-application-volume.html"
+    - title: 備份應用程式磁碟區資源群組
+      url: "/protect-sco/backup-application-volume-resource-group.html"
+  - title: 複製應用程式Volume備份
+    url: "/protect-sco/clone-application-volume.html"

@@ -1,0 +1,82 @@
+---
+permalink: protect-sco/predefined-environment-variables-prescript-postscript-restore.html 
+sidebar: sidebar 
+keywords: environment variable, predefined, prescript, postscript, restore 
+summary: 還原資料庫時、可使用預先定義的環境變數執行預先記錄和PostScript。SnapCenter 
+---
+= 預先定義的環境變數、用於還原特定的pretced和postscript
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+還原資料庫時、可使用預先定義的環境變數執行預先記錄和PostScript。SnapCenter
+
+*支援用於還原資料庫的預先定義環境變數*
+
+* * sc_job_ID*指定作業的工作ID。
++
+範例：257
+
+* *SC_Oracle_SID*指定資料庫的系統識別碼。
++
+如果作業涉及多個資料庫、則會包含以管道分隔的資料庫名稱。
+
++
+範例：NFS31
+
+* * sc_host*指定資料庫的主機名稱。
++
+此參數將會填入應用程式磁碟區。
+
++
+範例：scsmohost2.gdl.englabe.netapp.com
+
+* * sc_os_user*指定資料庫的作業系統擁有者。
++
+範例：Oracle
+
+* * sc_os_group *指定資料庫的作業系統群組。
++
+範例：oinstall
+
+* * sc_backup_name*指定備份的名稱。
++
+此參數將會填入應用程式磁碟區。
+
++
+範例：
+
++
+** 如果資料庫未以ARCHIVELOG模式執行：DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267 0| LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267
+** 如果資料庫以ARCHIVELOG模式執行：DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267 0| LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267 1、RG2_scspr2417819002_07-21至2021_12.16.48.9267_1、RG2_scspr2417819002_07-22-2021_12.16.48.9267_1
+
+
+* * sc_backup_ID*指定備份的ID。
++
+此參數將會填入應用程式磁碟區。
+
++
+範例：
+
++
+** 如果資料庫未以ARCHIVELOG模式執行：data@203|log@205.
+** 如果資料庫以ARCHIVELOG模式執行：data@203|log@205,206,207.
+
+
+* * sc_resource_group_name*指定資源群組的名稱。
++
+範例：RG1.
+
+* * sc_oracle_home*指定Oracle主目錄的路徑。
++
+範例：/ora01/app/oracle/product/18.1.0/db_1
+
+* *sc_recovery類型*指定要恢復的文件以及恢復範圍。
++
+範例：RESTORESOPE：使用BackupControlfile=false | RECOVERYSCOPPE:allLogs=true、noLogs=false、UntilTimes=假、untilscn=假。
+
+
+
+如需分隔符號的相關資訊、請參閱 link:../protect-sco/predefined-environment-variables-prescript-postscript-backup.html#supported-delimiters["支援的分隔符號"^]。

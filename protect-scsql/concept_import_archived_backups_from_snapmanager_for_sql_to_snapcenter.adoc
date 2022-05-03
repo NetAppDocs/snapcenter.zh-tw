@@ -1,0 +1,16 @@
+---
+permalink: protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html 
+sidebar: sidebar 
+keywords:  
+summary: 將資料從SnapManager Microsoft SQL Server的支援中心匯入SnapCenter 至支援中心、可讓您繼續使用舊版的資料。您只能將使用SnapVault 支援Microsoft SnapManager SQL Server的支援技術所歸檔的備份匯入SnapCenter 到 
+---
+= 匯入歸檔備份總覽
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+將資料從SnapManager Microsoft SQL Server的支援中心匯入SnapCenter 至支援中心、可讓您繼續使用舊版的資料。您只能將使用SnapVault 支援Microsoft SnapManager SQL Server的支援技術所歸檔的備份匯入SnapCenter 到
+
+不支援以7-Mode運作的功能。SnapCenter Data ONTAP您可以使用7-Mode Transition Tool、將儲存在Data ONTAP 以7-Mode運作的系統上的資料和組態移轉到ONTAP 一個支援VMware的系統。

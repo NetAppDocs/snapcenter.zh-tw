@@ -1,0 +1,51 @@
+---
+permalink: protect-sco/task_back_up_oracle_databases_using_unix_commands.html 
+sidebar: sidebar 
+keywords: backup, cli, commands 
+summary: 備份工作流程包括規劃、識別備份資源、建立備份原則、建立資源群組及附加原則、建立備份及監控作業。 
+---
+= 使用UNIX命令備份Oracle資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+備份工作流程包括規劃、識別備份資源、建立備份原則、建立資源群組及附加原則、建立備份及監控作業。
+
+*您需要的是什麼*
+
+* 您應該已經使用命令_Add-SmStorageConnection_和_Add-SmCredential__新增儲存系統連線並建立認證。
+* 您應該SnapCenter 已經使用命令_Open-SmConnection_建立了與該伺服器的連線工作階段。
++
+您只能有一個SnapCenter 帳戶登入工作階段、而且權杖會儲存在使用者主目錄中。
+
++
+
+NOTE: 連線工作階段僅在24小時內有效。不過、您可以使用「TokenNeverExpires」選項建立權杖、以建立永不過期且工作階段永遠有效的權杖。
+
+
+
+*關於此工作*
+
+您應該執行下列命令、以建立與SnapCenter 該伺服器的連線、探索Oracle資料庫執行個體、新增原則和資源群組、備份及驗證備份。
+
+您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725["《軟件命令參考指南》SnapCenter"^]。
+
+*步驟*
+
+. 針對SnapCenter 指定的使用者（_Open-SmConnection_）、啟動與該伺服器的連線工作階段
+. 執行主機資源探索作業：_Get-SmResources"
+. 設定Oracle資料庫認證和偏好的節點、以進行Real Application Cluster（RAC）資料庫的備份作業：_Configure-SmOracleDatabase_
+. 建立備份原則：_Add-SmPolicy_
+. 擷取次要SnapVault （例如、SnapMirror）儲存位置的相關資訊：_Get-SmSecondaryDetails_
++
+此命令會擷取指定資源的主要至次要儲存設備對應詳細資料。您可以使用對應詳細資料來設定次要驗證設定、同時建立備份資源群組。
+
+. 將資源群組新增SnapCenter 至Fese:_Add-SmResourceGroup_
+. 建立備份：_New-SmBackup
++
+您可以使用「等待完成」選項輪詢工作。如果指定此選項、則命令會繼續輪詢伺服器、直到備份工作完成為止。
+
+. 從SnapCenter 下列來源擷取記錄：_Get-SmLogs_
+

@@ -1,0 +1,154 @@
+---
+permalink: protect-sco/task_back_up_oracle_resources.html 
+sidebar: sidebar 
+keywords: backup, Oracle database, policy, schedule, verification, resources 
+summary: 如果資源不屬於任何資源群組、您可以從「資源」頁面備份資源。 
+---
+= 備份Oracle資源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果資源不屬於任何資源群組、您可以從「資源」頁面備份資源。
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、從*檢視*清單中選取*資料庫*。
+. 按一下*image:../media/filter_icon.gif[""]*、然後選取主機名稱和資料庫類型以篩選資源。
++
+然後按一下*image:../media/filter_icon.gif[""]*關閉篩選窗格。
+
+. 選取您要備份的資料庫。
++
+此時會顯示「資料庫保護」頁面。
+
+. 在「資源」頁面中、執行下列動作：
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+使用自訂名稱格式進行Snapshot複本
+ a| 
+選取此核取方塊、然後輸入您要用於Snapshot複本名稱的自訂名稱格式。
+
+例如、customtext_policy_hostnameor resource_hostname.根據預設、快照複本名稱會附加時間戳記。
+
+
+
+ a| 
+從備份中排除歸檔記錄目的地
+ a| 
+指定您不想備份的歸檔記錄檔目的地。
+
+|===
+. 在「原則」頁面中、執行下列步驟：
++
+.. 從下拉式清單中選取一或多個原則。
++
+
+NOTE: 您也可以按一下*來建立原則image:../media/add_policy_from_resourcegroup.gif[""]*。
+
++
+在「設定所選原則的排程」區段中、會列出所選原則。
+
+.. 按一下 image:../media/add_policy_from_resourcegroup.gif[""] 在您要為其設定排程的原則之「設定排程」欄中。
+.. 在Add schedules for policy _policy_name_（新增原則_原則名稱_的排程）視窗中、設定排程、然後按一下* OK*（確定*）。
++
+_policy_name_是您選取的原則名稱。
+
++
+已設定的排程會列在「已套用的排程」欄中。
+
+
+
+. 在「驗證」頁面中、執行下列步驟：
++
+.. 按一下*載入定位器*以載入SnapMirror或SnapVault SnapMirror磁碟區、以便在二線儲存設備上執行驗證。
+.. 按一下 image:../media/add_policy_from_resourcegroup.gif[""] 在「設定排程」欄中、設定原則所有排程類型的驗證排程。
+.. 在「新增驗證排程_policy_name_」對話方塊中、執行下列動作：
++
+|===
+| 如果您想要... | 執行此動作... 
+
+
+ a| 
+備份後執行驗證
+ a| 
+選擇*備份後執行驗證*。
+
+
+
+ a| 
+排程驗證
+ a| 
+選取*執行排程驗證*、然後從下拉式清單中選取排程類型。
+
+
+NOTE: 在Flex ASM設定中、如果基數小於RAC叢集中的節點數、則無法在葉節點上執行驗證作業。
+
+|===
+.. 選取*在次要位置驗證*以驗證您在次要儲存設備上的備份。
+.. 按一下「*確定*」。
++
+已設定的驗證排程會列在「已套用的排程」欄中。
+
+
+
+. 在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。
++
+您也必須指定寄件者和接收者的電子郵件地址、以及電子郵件的主旨。如果您要附加在資源上執行的備份作業報告、請選取*附加工作報告*。
+
++
+
+NOTE: 對於電子郵件通知、您必須使用GUI或PowerShell命令Set-SmtpServer來指定SMTP伺服器詳細資料。
+
+. 檢閱摘要、然後按一下「*完成*」。
++
+隨即顯示資料庫拓撲頁面。
+
+. 按一下*立即備份*。
+. 在「備份」頁面中、執行下列步驟：
++
+.. 如果您已將多個原則套用至資源、請從* Policy*下拉式清單中選取要用於備份的原則。
++
+如果針對隨需備份所選取的原則與備份排程相關聯、則會根據為排程類型指定的保留設定來保留隨需備份。
+
+.. 按一下*備份*。
+
+
+. 按一下*監控*>*工作*來監控作業進度。
+
+
+*完成後*
+
+* 在AIX安裝程式中、您可以使用lkDev命令來鎖定、使用rendev命令來重新命名備份資料庫所在的磁碟。
++
+使用該備份還原時、裝置的鎖定或重新命名不會影響還原作業。
+
+* 如果由於資料庫查詢執行時間超過逾時值而導致備份作業失敗、您應該執行Set-SmConfigSettings Cmdlet來變更Oracle_SQL_query_timeout和Oracle_plugin_SQL_query_timeout參數的值：
++
+修改參數值後、SnapCenter 請執行下列命令「/opt /NetApp/snapcenter/spl/bin/spl recrt」、重新啟動「停止插件載入器（SPL）」服務
+
+* 如果無法存取檔案、且掛載點在驗證程序期間無法使用、則作業可能會失敗、並顯示錯誤代碼DBV-00100指定檔案。您應該修改sco.properties中的verifying_delay和verifying_reture_counts參數值。
++
+修改參數值後、SnapCenter 請執行下列命令「/opt /NetApp/snapcenter/spl/bin/spl recrt」、重新啟動「停止插件載入器（SPL）」服務
+
+* 在不完整的組態中MetroCluster 、SnapCenter 在容錯移轉之後、可能無法偵測到保護關係。
+* 如果您在VMDK上備份應用程式資料、SnapCenter 而針對VMware vSphere的VMware vSphere的Java堆疊大小不夠大、則備份可能會失敗。
++
+若要增加Java堆大小、請找出指令碼檔案_/opt/netapp/init_scripts/scvservice_。在該指令碼中、「do_start方法」命令會啟動SnapCenter VMware插件服務。將該命令更新為：「java -jar -Xmx8192M -Xms4096M」。
+
+
+
+*瞭解更多資訊*
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["無法偵測SnapVault 到SnapMirror或在MetroCluster 進行不復原容錯移轉之後的不協調關係"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["Oracle RAC單節點資料庫會跳過以執行SnapCenter 功能不整的作業"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_change_the_state_of_an_Oracle_12c_ASM_database_from_shutdown_to_mount["無法變更Oracle 12c ASM資料庫的狀態"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["可自訂的參數、用於在AIX系統上進行備份、還原和複製作業"^]
+

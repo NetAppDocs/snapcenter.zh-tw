@@ -1,0 +1,100 @@
+---
+permalink: protect-sco/task_mount_and_unmount_databases_backups.html 
+sidebar: sidebar 
+keywords: mount, unmount, backup, ASM, asm_diskstring 
+summary: 若要存取備份中的檔案、您可以掛載單一或多個資料、並只記錄備份。您可以將備份掛載到建立備份的同一部主機、或掛載到具有相同類型Oracle和主機組態的遠端主機。如果您已手動掛載備份、則應在完成作業後手動卸載備份。您只能在特定資料庫的主機上掛載資料庫備份一次。執行作業時、您只能掛載單一備份。 
+---
+= 掛載及卸載資料庫備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要存取備份中的檔案、您可以掛載單一或多個資料、並只記錄備份。您可以將備份掛載到建立備份的同一部主機、或掛載到具有相同類型Oracle和主機組態的遠端主機。如果您已手動掛載備份、則應在完成作業後手動卸載備份。在任何指定執行個體中、都可以將資料庫的備份掛載到任一主機上。執行作業時、您只能掛載單一備份。
+
+
+NOTE: 在Flex ASM設定中、如果基數小於RAC叢集中的節點數、則無法在葉節點上執行掛載作業。
+
+
+
+== 掛載資料庫備份
+
+若要存取備份中的檔案、您應該手動掛載資料庫備份。
+
+*您需要的是什麼*
+
+* 如果您在NFS環境中有自動儲存管理（ASM）資料庫執行個體、且想要掛載ASM備份、則應將ASM磁碟路徑（/var/opt/snapcenter/scop/backup_*/_/_/_*/_/_*）新增至在asm_string磁碟參數中定義的現有路徑。
+* 如果您在NFS環境中有ASM資料庫執行個體、且想要在恢復作業中掛載ASM記錄備份、則應將ASM磁碟路徑//var/capcenter/SCU/Clone /__/_*新增至在asm_diskstring參數中定義的現有路徑。
+* 在asm_diskstring參數中，如果使用ASMfd，則應配置_afd:*_；如果使用ASMLIB，則應配置_ORCL:*_。
+
+
+
+NOTE: 如需如何編輯asm_diskstring參數的資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["如何將磁碟路徑新增至asm_diskstring"^]。
+
+* 如果ASM認證與ASM連接埠與來源資料庫主機的認證不同、則應在掛載備份時加以設定。
+* 如果要掛載到備用主機、您必須確認備用主機符合下列需求：
++
+** 與原始主機相同的UID和GID
+** 與原始主機相同的Oracle版本
+** 與原始主機相同的作業系統發佈與版本
+
+
+
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、從*檢視*清單中選取*資料庫*或*資源群組*。
+. 從資料庫詳細資料檢視或資源群組詳細資料檢視中選取資料庫。
++
+隨即顯示資料庫拓撲頁面。
+
+. 從「管理複本」檢視中、從主要或次要（鏡射或複寫）儲存系統選取*備份*。
+. 從表格中選取備份、然後按一下 image:../media/mount_icon.gif["掛載圖示"]。
+. 在「掛載備份」頁面中、從*選擇要掛載備份的主機下拉式清單中選取要掛載備份的主機。
++
+隨即顯示掛載路徑：/var/opt/snapcenter/scope_mount/backup_name/database_name_。
+
++
+如果要掛載ASM資料庫的備份、則會顯示掛載路徑+diskGroupname_sid_backupid。
+
+. 按一下*掛載*。
+
+
+*完成後*
+
+* 您可以執行下列命令來擷取與掛載備份相關的資訊：
++
+「/sccli Get-SmBackup - Backup - Backup名稱BACKup_name -listMountInfo」
+
+* 如果已掛載ASM資料庫、您可以執行下列命令來擷取與掛載備份相關的資訊：
++
+Check Alignment of PHs>`/sccli Get-SmBackup -BackupNamediskGroupname_sid_backupid-listmountinfo'
+
+* 若要擷取備份ID、請執行下列命令：
++
+"/sccli Get-Smupde-Backup備份名稱BACKup_name"
+
++
+您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725["《軟件命令參考指南》SnapCenter"^]。
+
+
+
+
+
+== 卸載資料庫備份
+
+當您不想再存取備份上的檔案時、可以手動卸載掛載的資料庫備份。
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、從*檢視*清單中選取*資料庫*或*資源群組*。
+. 從資料庫詳細資料檢視或資源群組詳細資料檢視中選取資料庫。
++
+隨即顯示資料庫拓撲頁面。
+
+. 選取已掛載的備份、然後按一下 image:../media/unmount_icon.gif["卸載圖示"]。
+. 按一下「*確定*」。
+

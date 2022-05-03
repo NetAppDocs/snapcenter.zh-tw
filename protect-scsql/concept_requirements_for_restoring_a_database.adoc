@@ -1,0 +1,48 @@
+---
+permalink: protect-scsql/concept_requirements_for_restoring_a_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 從SnapCenter 適用於Microsoft SQL Server備份的還原外掛程式還原SQL Server資料庫之前、您必須確保符合多項需求。 
+---
+= 還原資料庫的需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+從SnapCenter 適用於Microsoft SQL Server備份的還原外掛程式還原SQL Server資料庫之前、您必須確保符合多項需求。
+
+* 目標SQL Server執行個體必須在線上且正在執行、才能還原資料庫。
++
+這適用於使用者資料庫還原作業和系統資料庫還原作業。
+
+* 排定針對您要還原的SQL Server資料執行的支援作業必須停用、包括任何排定在遠端管理或遠端驗證伺服器上的工作。SnapCenter
+* 如果系統資料庫無法運作、您必須先使用SQL Server公用程式來重建系統資料庫。
+* 如果您要安裝外掛程式、請務必授予其他角色權限、以還原可用性群組（AG）備份。
++
+當符合下列其中一項條件時、還原AG會失敗：
+
++
+** 如果外掛程式是由RBAC使用者安裝、且系統管理員嘗試還原AG備份
+** 如果外掛程式是由管理員安裝、而RBAC使用者嘗試還原AG備份
+
+
+* 如果您要將自訂記錄目錄備份還原至其他主機、SnapCenter 則必須SnapCenter 安裝相同的版本支援功能。
+* 您必須安裝Microsoft熱修復程式、KB2887595。Microsoft支援網站包含更多關於KB2887595的資訊。
++
+https://support.microsoft.com/kb/2887595["Microsoft支援文件編號2887595：Windows RT 8.1、Windows 8.1和Windows Server 2012 R2更新彙總套件：2013年11月"]
+
+* 您必須備份資源群組或資料庫。
+* 如果您要將Snapshot複本複製到鏡射或保存庫、SnapCenter 則該管理員必須為來源磁碟區和目的地磁碟區指派儲存虛擬機器（SVM）給您。
++
+如需系統管理員如何指派資源給使用者的詳細資訊、請參閱SnapCenter 《關於安裝的資訊：
+
+* 還原資料庫之前、必須先停止所有備份與複製工作。
+* 如果資料庫大小以TB為單位、則還原作業可能會逾時。
++
+您必須SnapCenter 執行下列命令、將RESTRESTRimeout參數的值增加至20000000 ms：Set-SmConfigSettings -Agent -configSettings @｛"RESttimeout"="20000000"｝。根據資料庫的大小、可以變更逾時值、而您可以設定的最大值為2147483648。
+
+
+
+如果您想要在資料庫上線時還原、應在「還原」頁面中啟用線上還原選項。

@@ -1,0 +1,28 @@
+---
+permalink: protect-sco/task_delete_clone_of_a_pluggable_database.html 
+sidebar: sidebar 
+keywords: delete, PDB, clone PDB 
+summary: 如果不再需要、您可以刪除可插拔資料庫（pdb）的複本。 
+---
+= 刪除可插拔資料庫的實體複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果不再需要、您可以刪除可插拔資料庫（pdb）的複本。
+
+如果您建立複製pdb的目標CDB備份、則刪除pdb複製時、複製的pdb也會從目標CDB的備份中移除。
+
+
+NOTE: 目錄或資源檢視中不會顯示pdb複本。
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 從資源或資源群組檢視中選取來源容器資料庫（CDB）。
+. 從「管理複本」檢視中、從主要或次要（鏡射或複寫）儲存系統選取* Clones *。
+. 選取pdb實體複本（目標CDB：PDBClone）、然後按一下 image:../media/delete_icon.gif[""]。
+. 按一下「*確定*」。
+

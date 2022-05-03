@@ -1,0 +1,44 @@
+---
+permalink: protect-sco/backup-application-volume-resource-group.html 
+sidebar: sidebar 
+keywords: application volume, resource group, back up, database 
+summary: 您可以備份僅包含應用程式磁碟區的資源群組、或是應用程式磁碟區與資料庫的混合。 
+---
+= 備份應用程式磁碟區資源群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以備份僅包含應用程式磁碟區的資源群組、或是應用程式磁碟區與資料庫的混合。資源群組上的備份作業會對資源群組中定義的所有資源執行。
+
+如果資源群組有多個應用程式磁碟區、則所有的應用程式磁碟區都應具有SnapMirror或SnapVault SnapMirror複寫原則。
+
+*關於此工作*
+
+根據預設、會建立一致性群組（CG）備份。如果要建立磁碟區型備份、您應該在_web.config_檔案中將*啟用OracleNdvVolume BasedBackup *的值設為true。
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取Oracle資料庫外掛程式。
+. 在「資源」頁面中、從*檢視*清單中選取*資源群組*。
++
+您可以在搜尋方塊中輸入資源群組名稱、或按一下*來搜尋資源群組image:../media/filter_icon.gif[""]*、然後選取標記。然後按一下*image:../media/filter_icon.gif[""]*關閉篩選窗格。
+
+. 在「資源群組」頁面中、選取您要備份的資源群組、然後按一下*立即備份*。
+. 在「備份」頁面中、執行下列步驟：
++
+.. 如果您已將多個原則與資源群組建立關聯、請從* Policy*下拉式清單中選取要用於備份的原則。
++
+如果針對隨需備份所選取的原則與備份排程相關聯、則會根據為排程類型指定的保留設定來保留隨需備份。
+
+.. 按一下*備份*。
+
+
+. 按一下*監控*>*工作*來監控作業進度。
++
+
+NOTE: 驗證作業只會針對資料庫執行、而不會針對應用程式磁碟區執行。
+
+

@@ -1,0 +1,54 @@
+---
+permalink: protect-sco/task_split_an_oracle_database_clone.html 
+sidebar: sidebar 
+keywords: split a clone, split 
+summary: 您可以使用SnapCenter 此功能從父資源分割複製的資源。分割的實體複本會變成獨立於父資源的實體複本。 
+---
+= 分割Oracle資料庫複製
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapCenter 此功能從父資源分割複製的資源。分割的實體複本會變成獨立於父資源的實體複本。
+
+*關於此工作*
+
+* 您無法在中繼實體複本上執行實體複本分割作業。
++
+例如、從資料庫備份建立clone1之後、您可以建立clone1的備份、然後複製此備份（clone2）。建立clone2之後、clone1是中繼實體複本、您無法在clone1上執行實體複本分割作業。不過、您可以在clone2上執行實體複本分割作業。
+
++
+分割clone2之後、您可以在clone1上執行實體複本分割作業、因為clone1不再是中繼複本。
+
+* 當您分割複本時、複本的備份複本會被刪除。
+* 如需有關實體複本分割作業限制的資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 9 邏輯儲存管理指南》 ONTAP"^]。
+* 確保儲存系統上的磁碟區或Aggregate已上線。
+
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、從*檢視*清單中選取*資料庫*。
+. 選取複製的資源（例如資料庫或LUN）、然後按一下 image:../media/split_cone.gif[""]。
+. 檢閱要分割的實體複本估計大小、以及集合體上可用的必要空間、然後按一下* Start*。
+. 按一下*監控*>*工作*來監控作業進度。
++
+如果SMCore服務重新啟動、而執行實體複本分割作業的資料庫在「資源」頁面中列為實體複本、則實體複本分割作業將停止回應。您應該執行_stop-SmJob_ Cmdlet來停止複製分割作業、然後重試複製分割作業。
+
++
+如果您想要較長的輪詢時間或較短的輪詢時間來檢查實體複本是否分割、您可以在SMCoreServiceHost.exe.config檔案中變更CloneSplitStatusChecksollTime參數的值、以設定SMCore輪詢實體分割作業狀態的時間間隔。此值以毫秒為單位、預設值為5分鐘。
+
++
+例如、
+
++
+[listing]
+----
+<add key="CloneSplitStatusCheckPollTime" value="300000" />
+----
+
+
+
+IMPORTANT: 如果正在進行備份、還原或其他實體複本分割、則複本分割啟動作業會失敗。只有在執行中的作業完成後、才應重新啟動複本分割作業。

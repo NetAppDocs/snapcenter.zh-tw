@@ -1,0 +1,74 @@
+---
+permalink: protect-sco/task_define_a_clone_strategy_for_oracle_databases.html 
+sidebar: sidebar 
+keywords: backup types, cloning type, clone name, limitations 
+summary: 在複製資料庫之前定義策略、可確保複製作業成功。 
+---
+= 定義Oracle資料庫的複製策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在複製資料庫之前定義策略、可確保複製作業成功。
+
+
+
+== 支援複製的備份類型
+
+支援複製不同類型的Oracle資料庫備份。SnapCenter
+
+* 線上資料備份
+* 線上完整備份
+* 離線掛載備份
+* 離線關機備份
+* 備份Data Guard待命資料庫和Active Data Guard待命資料庫
+* 線上資料備份、線上完整備份、離線掛載備份、以及實際應用程式叢集（RAC）組態中的離線關機備份
+* 在自動儲存管理（ASM）組態中進行線上資料備份、線上完整備份、離線掛載備份及離線關機備份
++
+
+IMPORTANT: 如果多重路徑組態檔中的USER_友好 名稱選項設為yes、則不支援SAN組態。
+
+
+
+
+NOTE: 不支援複製歸檔記錄備份。
+
+
+
+== Oracle資料庫支援的複製類型
+
+在Oracle資料庫環境中SnapCenter 、支援複製資料庫備份。您可以從一線和二線儲存系統複製備份。
+
+此伺服器SnapCenter 使用NetApp FlexClone技術來複製備份。
+
+您可以執行「Refresh-SmClone」命令來重新整理實體複本。此命令會建立資料庫的備份、刪除現有的實體複本、並建立名稱相同的實體複本。
+
+
+NOTE: 只能使用UNIX命令執行實體複本重新整理作業。
+
+
+
+== Oracle資料庫的複製命名慣例
+
+從3.0開始SnapCenter 、檔案系統複製所使用的命名慣例與ASM磁碟群組的複本不同。
+
+* SAN或NFS檔案系統的命名慣例為FileSystemNameofsourcedatabase_CLONESID。
+* ASM磁碟群組的命名慣例為SC_HASHCODEofDISKKKROUP_CLONESID。
++
+HASHCODEofDISKKROUP是自動產生的數字（2到10位數）、每個ASM磁碟群組都是唯一的數字。
+
+
+
+
+
+== 複製Oracle資料庫的限制
+
+在複製資料庫之前、您應該瞭解複製作業的限制。
+
+* 如果您使用的Oracle版本從11.2.0.4到12.1.0.1、則當您執行_renamedg_命令時、複製作業會處於掛起狀態。您可以套用Oracle修補程式19544733來修正此問題。
+* 不支援將資料庫從直接連接至主機（例如在Windows主機上使用Microsoft iSCSI啟動器）的LUN複製到同一Windows主機上的VMDK或RDM LUN、或是複製到另一部Windows主機、反之亦然。
+* Volume掛載點的根目錄不能是共享目錄。
+* 如果您將包含複本的LUN移至新磁碟區、則無法刪除複本。
+

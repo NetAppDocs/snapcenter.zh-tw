@@ -1,0 +1,362 @@
+---
+permalink: concept/concept_snapcenter_overview.html 
+sidebar: sidebar 
+keywords:  
+summary: 支援簡單、集中化、可擴充的平台、可為在混合雲任何地方的不間斷系統上執行的應用程式、資料庫、主機檔案系統及VM提供應用程式一致的資料保護。SnapCenter ONTAP 
+---
+= 概述SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援簡單、集中化、可擴充的平台、可為在混合雲任何地方的不間斷系統上執行的應用程式、資料庫、主機檔案系統及VM提供應用程式一致的資料保護。SnapCenter ONTAP
+
+利用NetApp Snapshot、功能豐富、FlexClone、SnapMirror和支援技術、提供下列功能：SnapCenter SnapRestore SnapVault
+
+* 快速、節省空間、應用程式一致的磁碟型備份
+* 快速、精細的還原、以及應用程式一致的還原
+* 快速、節省空間的複製
+
+
+包含不支援的伺服器和個別輕量外掛程式。SnapCenter SnapCenter您可以將外掛程式的部署作業自動化至遠端應用程式主機、排程備份、驗證和複製作業、以及監控所有資料保護作業。
+
+下列方式可部署下列項目：SnapCenter
+
+* 內部部署以保護下列項目：
++
+** 資料位於ONTAP FAS 不二元或AFF 不二元系統上、並複製到ONTAP FAS 不二元系統或不AFF 二元系統
+** 資料位於不整系統上ONTAP Select
+
+
+* 內部部署於混合雲中、以保護下列項目：
++
+** 資料位於ONTAP FAS 不二元或AFF 不二元系統上、並複寫至Cloud Volumes ONTAP NetApp私有儲存二線系統
+
+
+* 在公有雲中保護下列項目：
++
+** 資料位於Cloud Volumes ONTAP 僅有ONTAP 的部分系統（前身為《不知道如何解決此問題》）
+
+
+
+
+包含下列主要功能：SnapCenter
+
+* 集中化、應用程式一致的資料保護
++
+資料保護功能可支援Microsoft Exchange Server、Microsoft SQL Server、Linux或AIX上的Oracle資料庫、SAP HANA資料庫、ONTAP 以及執行於更新系統上的Windows主機檔案系統。
+
++
+其他標準或自訂應用程式和資料庫也支援資料保護、提供架構以建立使用者定義SnapCenter 的功能表外掛程式。如此一來、其他應用程式和資料庫就能從同一個單一窗口進行資料保護。藉由運用此架構、NetApp已在SnapCenter NetApp Automation Store上針對IBM DB2、MongoDB、MySQL等發佈了適用的功能不全的外掛程式。
+
+* 原則型備份
++
+以原則為基礎的備份運用NetApp Snapshot複製技術、建立快速、節省空間、應用程式一致、磁碟型的備份。或者、您也可以更新現有的保護關係、將這些備份作業自動化至二線儲存設備。
+
+* 備份多種資源
++
+您可以使用SnapCenter 資源群組、同時備份同類型的多個資源（應用程式、資料庫或主機檔案系統）。
+
+* 還原與還原
++
+提供快速、精細的備份還原、以及應用程式一致、以時間為基礎的還原。SnapCenter您可以從混合雲中的任何目的地還原。
+
+* 複製
++
+提供快速、節省空間、應用程式一致的複製功能、可加速軟體開發。SnapCenter您可以在混合雲中的任何目的地上複製。
+
+* 單一使用者管理圖形化使用者介面（GUI）
++
+支援此功能的統一介面、可管理混合雲中任何目的地的資源備份與複製。SnapCenter
+
+* REST API、Windows Cmdlet、UNIX命令
++
+包含REST API的大部分功能可與任何協調軟體整合、以及使用Windows PowerShell Cmdlet和命令列介面。SnapCenter
+
+* 集中式資料保護儀表板與報告
+* 角色型存取控制（RBAC）、以確保安全性和委派。
+* 高可用度儲存庫資料庫
++
+提供內建的儲存庫資料庫、具備高可用度、可儲存所有備份中繼資料。SnapCenter
+
+* 自動化外掛程式的推送安裝
++
+您可以將SnapCenter 從SnapCenter 支援伺服器主機到應用程式主機的整套程式遠端推送自動化。
+
+* 高可用度
++
+使用外部負載平衡器（F5）設定高可用度的功能。SnapCenter同一個資料中心最多支援兩個節點。
+
+* 災難恢復（DR）
++
+當資源毀損或伺服器當機等災難發生時、您可以恢復SnapCenter 該伺服器。
+
+
+
+
+
+== 架構SnapCenter
+
+此平台以多層架構為基礎、SnapCenter 其中包含集中式管理伺服器SnapCenter （簡稱「支援伺服器」）和SnapCenter 一個「支援」外掛主機。
+
+支援多站台資料中心。SnapCenter支援的伺服器和外掛程式主機可能位於不同的地理位置。SnapCenter
+
+image::../media/snapcenter_architecture.gif[架構SnapCenter]
+
+
+
+== 元件SnapCenter
+
+包含支援VMware的支援服務器和不支援的外掛程式。SnapCenter SnapCenter SnapCenter您應該只安裝適合您要保護之資料的外掛程式。
+
+* 伺服器SnapCenter
+* 適用於Windows的程式集外掛程式套件、包括下列外掛程式：SnapCenter
++
+** 適用於Microsoft SQL Server的支援外掛程式SnapCenter
+** 適用於Microsoft Windows的解決方案SnapCenter
+** 適用於Microsoft Exchange Server的元件外掛程式SnapCenter
+** SAP HANA資料庫適用的插件SnapCenter
+
+
+* 適用於Linux的程式集外掛套件、包括下列外掛程式：SnapCenter
++
+** Oracle資料庫的支援外掛程式SnapCenter
+** SAP HANA資料庫適用的插件SnapCenter
+** UNIX版的插件SnapCenter
++
+
+NOTE: 適用於UNIX的DB2外掛程式不是獨立式外掛程式、無法獨立安裝。SnapCenter當您安裝SnapCenter 適用於Oracle資料庫的不穩定插件或SnapCenter 適用於SAP HANA資料庫的不穩定插件時、就會自動安裝此外掛程式。
+
+
+
+* 適用於AIX的程式集外掛套件、包含下列外掛程式：SnapCenter
++
+** Oracle資料庫的支援外掛程式SnapCenter
+** UNIX版的插件SnapCenter
++
+
+NOTE: 適用於UNIX的DB2外掛程式不是獨立式外掛程式、無法獨立安裝。SnapCenter當您安裝SnapCenter 適用於Oracle資料庫的支援功能時、會自動安裝此外掛程式。
+
+
+
+* 不適用的自訂外掛程式SnapCenter
++
+自訂外掛程式受到社群支援、可從下載 https://automationstore.netapp.com/home.shtml["NetApp儲存自動化商店"]。
+
+
+
+VMware vSphere的VMware vSphere外掛程式（前身為NetApp Data Broker）是獨立式虛擬應用裝置、可在虛擬化資料庫和檔案系統上支援資料保護作業。SnapCenter SnapCenter
+
+
+
+== 伺服器SnapCenter
+
+此伺服器SnapCenter 包括Web伺服器、集中式HTML5使用者介面、PowerShell Cmdlet、REST API及SnapCenter 此資訊庫。
+
+在單一使用者介面中、可在多個支援範圍內實現高可用度和水平擴充。SnapCenter SnapCenter您可以使用外部負載平衡器（F5）來實現高可用度。對於擁有數千台主機的大型環境、新增多SnapCenter 個支援功能的伺服器有助於平衡負載。
+
+* 如果您使用SnapCenter 的是適用於Windows的支援功能、主機代理程式會在SnapCenter 支援Windows的支援服務器和Windows外掛程式主機上執行。主機代理程式會在遠端Windows主機或Microsoft SQL Server上執行原生排程、排程會在本機SQL執行個體上執行。
++
+透過主機代理程式與Windows外掛程式通訊。SnapCenter
+
+* 如果您使用SnapCenter 的是適用於Linux的Singes外掛程式套件或SnapCenter 適用於AIX的Singe-Plug-ins套件、排程SnapCenter 會在Windows工作排程中於該伺服器上執行。
++
+** 針對Oracle資料庫的支援功能、在支援Oracle資料庫的支援中心主機上執行的主機代理程式會與在Linux或AIX主機上執行的支援程式（SPL）通訊、以執行不同的資料保護作業。SnapCenter SnapCenter SnapCenter
+** 針對SAP HANA資料庫和更新版的SAP HANA外掛程式、透過主機上執行的SCCore代理程式、讓支援這些外掛程式的支援能力更高。SnapCenter SnapCenter SnapCenter
+
+
+
+
+支援使用HTTPS的支援伺服器和外掛程式與主機代理程式通訊。SnapCenter
+
+關於功能的資訊SnapCenter 會儲存在SnapCenter 資訊庫中。
+
+
+
+== 實體外掛程式SnapCenter
+
+每SnapCenter 個支援特定環境、資料庫和應用程式的支援。
+
+|===
+| 外掛程式名稱 | 包含在安裝套件中 | 需要其他外掛程式 | 安裝在主機上 | 平台支援 
+
+
+ a| 
+SQL Server的外掛程式
+ a| 
+適用於Windows的外掛程式套件
+ a| 
+適用於Windows的外掛程式
+ a| 
+SQL Server主機
+ a| 
+Windows
+
+
+
+ a| 
+適用於Windows的外掛程式
+ a| 
+適用於Windows的外掛程式套件
+ a| 
+ a| 
+Windows主機
+ a| 
+Windows
+
+
+
+ a| 
+Exchange外掛程式
+ a| 
+適用於Windows的外掛程式套件
+ a| 
+適用於Windows的外掛程式
+ a| 
+Exchange Server主機
+ a| 
+Windows
+
+
+
+ a| 
+Oracle資料庫的外掛程式
+ a| 
+適用於Linux的外掛程式套件和適用於AIX的外掛程式套件
+ a| 
+UNIX外掛程式
+ a| 
+Oracle主機
+ a| 
+Linux或AIX
+
+
+
+ a| 
+SAP HANA資料庫的外掛程式
+ a| 
+適用於Linux的外掛程式套件與適用於Windows的外掛程式套件
+ a| 
+適用於UNIX的外掛程式或適用於Windows的外掛程式
+ a| 
+HDBSQL用戶端主機
+ a| 
+Linux或Windows
+
+
+
+ a| 
+自訂外掛程式
+ a| 
+https://automationstore.netapp.com/home.shtml["NetApp儲存自動化商店"^]
+ a| 
+對於檔案系統備份、Windows外掛程式
+ a| 
+自訂應用程式主機
+ a| 
+Linux或Windows
+
+|===
+
+NOTE: VMware vSphere的支援VMware vSphere的VMware vCenter外掛程式可支援虛擬機器（VM）、資料存放區和虛擬機器磁碟（VMDK）的損毀一致與VM一致的備份與還原作業、並支援以應用程式為特定的外掛程式、以保護虛擬化資料庫和檔案系統的應用程式一致備份與還原作業。SnapCenter SnapCenter
+
+針對VMware vSphere 4.1.1版的《VMware vSphere 4.1.1版》（《VMware vSphere 4.1.1版》）文件提供有關保護虛擬化資料庫和檔案系統的資訊。SnapCenter SnapCenter對於NetApp Data Broker 1.0和1.0.1、NetApp Data Broker 4.2.x使用者而言、文件中包含使用以Linux為基礎的NetApp Data Broker虛擬應用裝置（開放式虛擬應用裝置格式）所提供的VMware vSphere版《支援VMware vSphere的VMware外掛程式》來保護虛擬化資料庫和檔案系統的相關資訊。SnapCenter SnapCenter若使用SnapCenter 者使用的是版本不含更新版本的版本 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["VMware vSphere文件的VMware外掛程式SnapCenter"^] 擁有使用適用於SnapCenter VMware vSphere虛擬應用裝置的Linux型VMware vCenter外掛程式（開放式虛擬應用裝置格式）來保護虛擬化資料庫和檔案系統的相關資訊。
+
+
+
+=== 適用於Microsoft SQL Server功能的支援外掛程式SnapCenter
+
+* 在SnapCenter 您的支援環境中、自動化Microsoft SQL Server資料庫的應用程式感知備份、還原及複製作業。
+* 當您部署SnapCenter VMware vSphere的VMware vSphere支援Microsoft SQL Server資料庫、並使用SnapCenter VMware vCenter登錄外掛程式時、可支援VMDK上的Microsoft SQL Server資料庫和原始裝置對應（RDM）LUN
+* 僅支援資源配置SMB共用區。不支援在SMB共用區上備份SQL Server資料庫。
+* 支援將備份從SnapManager Microsoft SQL Server的支援功能匯入SnapCenter 到支援功能。
+
+
+
+
+=== 適用於Microsoft Windows功能的插件SnapCenter
+
+* 為SnapCenter 執行於Windows主機上的其他外掛程式啟用應用程式感知資料保護功能、以保護您的支援環境
+* 在SnapCenter 您的支援環境中、自動化Microsoft檔案系統的應用程式感知備份、還原及複製作業
+* 支援儲存資源配置、Snapshot複本一致性、以及Windows主機的空間回收
++
+
+NOTE: Windows外掛程式會在實體和RDM LUN上配置SMB共用和Windows檔案系統、但不支援SMB共用上的Windows檔案系統備份作業。
+
+
+
+
+
+=== 適用於Microsoft Exchange Server功能的元件外掛程式SnapCenter
+
+* 在SnapCenter 您的支援環境中、自動化Microsoft Exchange Server資料庫和資料庫可用度群組（DAG）的應用程式感知備份與還原作業
+* 當您部署SnapCenter VMware vSphere的VMware vSphere支援VMware vCenter外掛程式、並使用SnapCenter VMware vCenter登錄外掛程式時、可在RDM LUN上支援虛擬化Exchange Server
+
+
+
+
+=== 適用於Oracle資料庫功能的支援外掛程式SnapCenter
+
+* 自動化應用程式感知備份、還原、還原、驗證、掛載、 在SnapCenter 您的整個環境中卸載及複製Oracle資料庫的作業
+* 支援Oracle資料庫for SAP、但不提供SAP BR* Tools整合
+
+
+
+
+=== UNIX功能的插件SnapCenter
+
+* 讓Oracle資料庫外掛程式能夠處理Linux或AIX系統上的基礎主機儲存堆疊、在Oracle資料庫上執行資料保護作業
+* 支援執行ONTAP 支援的儲存系統上的網路檔案系統（NFS）和儲存區域網路（SAN）傳輸協定。
+* 對於Linux系統、當您部署SnapCenter 適用於VMware vSphere的VMware vSphere的VMware vCenter外掛程式、並使用SnapCenter VMware vCenter登錄外掛程式時、即可支援VMDK和RDM LUN上的Oracle資料庫。
+* 在SAN檔案系統和LVM配置上支援Mount Guard for AIX。
+* 支援增強的日誌式檔案系統（JFS2）、只有在SAN檔案系統上進行即時記錄、以及僅適用於AIX系統的LVM配置。
++
+SAN原生裝置、檔案系統及以SAN裝置為建置基礎的LVM配置均受到支援。
+
+
+
+
+
+=== SAP HANA資料庫功能的選用外掛程式SnapCenter
+
+* 將SAP HANA資料庫的應用程式感知備份、還原及複製作業自動化、並可在SnapCenter 您的支援環境中執行
+
+
+
+
+=== 「自訂外掛程式」SnapCenter 功能
+
+* 支援自訂外掛程式、以管理其他SnapCenter 不受支援的應用程式或資料庫。不提供自訂外掛程式做為SnapCenter 安裝的一部分。
+* 支援在另一個磁碟區上建立備份集的鏡射複本、並執行磁碟對磁碟備份複寫。
+* 同時支援Windows和Linux環境。在Windows環境中、透過自訂外掛程式的自訂應用程式可選擇性地使用SnapCenter 適用於Microsoft Windows的還原外掛程式來進行檔案系統一致的備份。
+
+
+MySQL、DB2和MongoDB自訂插件範例SnapCenter 可從下載 https://automationstore.netapp.com/home.shtml["NetApp儲存自動化商店"^]。
+
+
+NOTE: MySQL、DB2和MongoDB自訂外掛程式僅透過NetApp社群提供支援。
+
+NetApp支援建立及使用自訂外掛程式的功能、但NetApp不支援您所建立的自訂外掛程式。
+
+如需詳細資訊、請參閱 link:../protect-scc/concept_develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"^]
+
+
+
+== 系統儲存庫SnapCenter
+
+此系統庫有時也稱為NSM資料庫、可儲存每個環節的資訊和中繼資料。SnapCenter SnapCenter
+
+MySQL Server儲存庫資料庫預設會在您安裝SnapCenter 此伺服器時安裝。如果已經安裝MySQL Server、而且您正在執行SnapCenter 全新安裝的功能、則應該解除安裝MySQL Server。
+
+支援MySQL Server 5.7.25或更新版本作為不支援的儲存庫資料庫。SnapCenter SnapCenter如果您使用舊版的MySQL Server搭配舊版SnapCenter 的功能、SnapCenter 在進行更新時、MySQL Server會升級至5.7.25或更新版本。
+
+此產品庫儲存下列資訊和中繼資料：SnapCenter
+
+* 備份、複製、還原及驗證中繼資料
+* 報告、工作和事件資訊
+* 主機與外掛程式資訊
+* 角色、使用者及權限詳細資料
+* 儲存系統連線資訊
+

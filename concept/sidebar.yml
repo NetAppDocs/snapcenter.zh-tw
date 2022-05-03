@@ -1,0 +1,24 @@
+---
+section: concept
+title: 概念
+entries:
+- title: 概述SnapCenter
+  url: "/concept/concept_snapcenter_overview.html"
+- title: 安全功能
+  url: "/concept/reference_data_security.html"
+- title: 以角色為基礎的存取控制（RBAC）SnapCenter
+  entries:
+  - title: RBAC類型
+    url: "/concept/concept_types_of_role_based_access_control_in_snapcenter.html"
+  - title: RBAC權限和角色
+    url: "/concept/reference_role_based_access_control_permissions_and_roles.html"
+  - title: 預先定義SnapCenter 的功能和權限
+    url: "/concept/reference_pre_defined_snapcenter_roles_and_permissions.html"
+- title: 災難恢復
+  url: "/protect-concept/concept_disaster_recovery.html"
+- title: 資源、資源群組和原則
+  url: "/concept/concept_resources_resource_groups_and_policies.html"
+- title: 簡報與指令碼
+  url: "/concept/concept_prescripts_and_postscripts.html"
+- title: 使用REST API進行自動化SnapCenter
+  url: "/concept/concept_snapcenter_rest_apis.html"

@@ -1,0 +1,38 @@
+---
+permalink: install/task_create_a_role.html 
+sidebar: sidebar 
+keywords: role, create, permission 
+summary: 除了使用現有SnapCenter 的功能、您還可以建立自己的角色、並自訂權限。 
+---
+= 建立角色
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+除了使用現有SnapCenter 的功能、您還可以建立自己的角色、並自訂權限。
+
+您應該以「SnapCenterAdmin」角色登入。
+
+*步驟*
+
+. 在左側導覽窗格中、按一下*設定*。
+. 在「設定」頁面中、按一下「*角色*」。
+. 按一下 image:../media/add_icon_configure_database.gif["在設定資料庫畫面中新增圖示"]。
+. 在「新增角色」頁面中、指定新角色的名稱和說明。
++
+
+NOTE: 從S32 4.5開始SnapCenter 、您只能在使用者名稱和群組名稱中包含下列特殊字元：空格（）、連字號（-）、底線（_）和分號（：）。如果您想要使用在SnapCenter 舊版的下列特殊字元中建立的角色、可以在SnapCenter 安裝了Web.config檔案中、將「isableSQLInjectionValidation」參數的值變更為true、以停用角色名稱驗證。修改值之後、您不需要重新啟動服務。
+
+. 選取*此角色的所有成員都可以看到其他成員的物件*、以便其他角色成員在重新整理資源清單之後、能夠查看資源、例如磁碟區和主機。
++
+如果不希望此角色的成員看到指派給其他成員的物件、則應取消選取此選項。
+
++
+
+NOTE: 啟用此選項時、如果使用者與建立物件或資源的使用者具有相同角色、則不需要指派使用者存取物件或資源的權限。
+
+. 在「權限」頁面中、選取您要指派給該角色的權限、或按一下*全選*、將所有權限授予該角色。
+. 按一下*提交*。
+

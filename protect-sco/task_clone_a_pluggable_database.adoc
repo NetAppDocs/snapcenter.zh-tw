@@ -1,0 +1,207 @@
+---
+permalink: protect-sco/task_clone_a_pluggable_database.html 
+sidebar: sidebar 
+keywords: clone, pluggable database, PDB 
+summary: 您可以將可插拔資料庫（pdb）複製到同一主機或替代主機上的不同或相同目標CDB。您也可以將複製的pdb恢復至所需的SCN或日期與時間。 
+---
+= 複製可插拔的資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以將可插拔資料庫（pdb）複製到同一主機或替代主機上的不同或相同目標CDB。您也可以將複製的pdb恢復至所需的SCN或日期與時間。
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、從*檢視*清單中選取*資料庫*或*資源群組*。
+. 從資料庫詳細資料檢視或資源群組詳細資料檢視中、選取單一執行個體（多租戶）類型的資料庫。
++
+隨即顯示資料庫拓撲頁面。
+
+. 從管理複本檢視中、從本機複本（主要）、鏡射複本（次要）或Vault複本（次要）中選取備份。
+. 從表格中選取備份、然後按一下*image:../media/clone_icon.gif["複製圖示"]*。
+. 在「名稱」頁面中、執行下列動作：
++
+.. 選擇* pdb Clone（pdb複製）*。
+.. 指定要複製的pdb。
++
+
+NOTE: 一次只能複製一個pdb。
+
+.. 指定複製的pdb名稱。
+
+
+. 在「位置」頁面中、執行下列動作：
++
+|===
+
+
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+實體複製主機
+ a| 
+預設會填入來源資料庫主機。
+
+如果您想要在替代主機上建立實體複本、請選取與來源資料庫主機版本相同的Oracle和OS主機。
+
+
+
+ a| 
+目標CDB
+ a| 
+選取您要包含複製之pdb的CDB。
+
+您應確保目標CDB正在執行。
+
+
+
+ a| 
+資料庫狀態
+ a| 
+如果您要以讀寫模式開啟pdb、請選取「以讀寫模式開啟複製的pdb *」核取方塊。
+
+
+
+ a| 
+資料檔案位置
+ a| 
+預設會填入資料檔案位置。
+
+SAN或NFS檔案系統的還原預設命名慣例為FileSystemNameofsourcedatabase_SCJOBID。SnapCenter
+
+ASM磁碟群組的「支援」預設命名慣例為SC_HASHCODEofDISKKKROUP_SCJOBID。SnapCenterHASHCODEofDISKKROUP是自動產生的數字（2到10位數）、每個ASM磁碟群組都是唯一的數字。
+
+
+NOTE: 如果您要自訂ASM磁碟群組名稱、請確定名稱長度符合Oracle支援的最大長度。
+
+如果您想要指定不同的路徑、則必須輸入資料檔案掛載點或ASM磁碟群組名稱、以供複製資料庫使用。
+
+|===
++
+Oracle主目錄、使用者名稱和群組詳細資料會自動從來源資料庫填入。您可以根據要建立實體複本的主機之Oracle環境來變更值。
+
+. 在「PreOps」頁面中、執行下列步驟：
++
+.. 輸入要在複製作業之前執行的指令碼路徑和引數。
++
+您應該將預先記錄儲存在/var/opt/snapcenter/spl/scripts或此路徑內的任何資料夾中。根據預設、會填入/var/opt/snapcenter/spl/scripts路徑。如果您已將指令碼置於此路徑內的任何資料夾中、則必須提供完整路徑、直到指令碼所在的資料夾。
+
++
+利用此功能、您可以在執行pretced和postscript時、使用預先定義的環境變數。SnapCenter link:../protect-sco/predefined-environment-variables-prescript-postscript-clone.html["深入瞭解"^]
+
+.. 在「輔助CDB複製資料庫參數設定」區段中、修改用於初始化資料庫的預先填入資料庫參數值。
+
+
+. 按一下*重設*以取得預設的資料庫參數設定。
+. 在「PostOps」頁面中、預設選取「*直到取消*」以執行複製資料庫的還原。
++
+如果無法找到適當的記錄備份、則不會選取「*直到取消*」選項SnapCenter 。如果在*指定外部歸檔記錄位置*中無法使用記錄備份、您可以提供外部歸檔記錄位置。您可以指定多個記錄位置。
+
++
+
+NOTE: 如果您想要複製設定為支援Flash恢復區域（FRA）和Oracle託管檔案（OMF）的來源資料庫、則用於還原的記錄目的地也必須遵守OMF目錄結構。
+
++
+|===
+| 欄位名稱 | 說明 
+
+
+ a| 
+直到取消為止
+ a| 
+執行恢復的方法是：在選擇要複製的資料備份之後、安裝最新的記錄備份、並以不中斷的順序記錄歸檔記錄。SnapCenter
+
+記錄與資料備份應位於主要儲存設備上、以便在主要儲存設備上執行複製、而記錄與資料備份則應位於次要儲存設備上、以便在次要儲存設備上執行複製。複製的資料庫會恢復到遺失或毀損的記錄檔為止。
+
+
+
+ a| 
+日期與時間
+ a| 
+還原資料庫至指定的日期和時間。SnapCenter
+
+
+NOTE: 時間可以24小時格式指定。
+
+
+
+ a| 
+直到SCN（系統變更編號）
+ a| 
+將資料庫恢復至指定的系統變更編號（SCN）SnapCenter 。
+
+
+
+ a| 
+指定外部歸檔記錄位置
+ a| 
+指定外部歸檔記錄位置。
+
+
+
+ a| 
+建立新的DBID
+ a| 
+缺省情況下*未選中輔助克隆數據庫的Create new DBID*複選框。
+
+如果您要為輔助複製資料庫產生唯一編號（DBID）、使其與來源資料庫區隔、請選取此核取方塊。
+
+
+
+ a| 
+建立暫用資料表空間的暫用檔案
+ a| 
+如果您要為複製資料庫的預設暫存資料表空間建立暫存檔、請選取此核取方塊。
+
+如果未選取此核取方塊、則會建立不含臨時檔案的資料庫複本。
+
+
+
+ a| 
+輸入建立複本時要套用的SQL項目
+ a| 
+新增建立複本時要套用的SQL項目。
+
+
+
+ a| 
+輸入要在複製作業後執行的指令碼
+ a| 
+指定要在複製作業之後執行的PostScript路徑和引數。
+
+您應將此等附文儲存在_/var/opt/snapcenter/spl/scripts_或此路徑內的任何資料夾中。
+
+依預設、會填入_/var/opt/snapcenter/spl/scripts_路徑。如果您已將指令碼置於此路徑內的任何資料夾中、則必須提供完整路徑、直到指令碼所在的資料夾。
+
+
+NOTE: 如果複製作業失敗、將不會執行指令碼、並直接觸發清除活動。
+
+|===
+. 在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。
++
+您也必須指定寄件者和接收者的電子郵件地址、以及電子郵件的主旨。如果您要附加執行的複製作業報告、請選取*附加作業報告*。
+
++
+
+NOTE: 對於電子郵件通知、您必須使用GUI或PowerShell命令Set-SmtpServer來指定SMTP伺服器詳細資料。
+
+. 檢閱摘要、然後按一下「*完成*」。
+. 按一下*監控*>*工作*來監控作業進度。
+
+
+*完成後*
+
+如果您想要建立複製的pdb備份、您應該備份要複製pdb的目標CDB、因為無法只備份複製的pdb。如果您想要建立具有次要關係的備份、則應該為目標CDB建立次要關係。
+
+在RAC設定中、複製的pdb儲存設備只會附加至執行pdb複製的節點。RAC其他節點上的PDF處於掛載狀態。如果您想要從其他節點存取複製的pdb、則應手動將儲存設備附加至其他節點。
+
+*瞭解更多資訊*
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["還原或複製失敗、並顯示ORA-00308錯誤訊息"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["可自訂的參數、用於在AIX系統上進行備份、還原和複製作業"^]
+

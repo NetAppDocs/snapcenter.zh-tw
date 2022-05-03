@@ -1,0 +1,128 @@
+---
+permalink: upgrade/task_upgrade_your_plug_in_packages.html 
+sidebar: sidebar 
+keywords: upgrade, upgrade plug-in packages 
+summary: 外掛程式套件是SnapCenter 隨附於升級版的一部分而發佈。 
+---
+= 升級外掛程式套件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+外掛程式套件是SnapCenter 隨附於升級版的一部分而發佈。
+
+*您需要的是什麼*
+
+* 如果您是非root使用者、可以存取Linux機器、則在執行升級作業之前、應先使用最新的Checksum值來更新/etc/udoers_檔案。
+* 根據預設SnapCenter 、此功能會從環境中偵測Java_Home。如果您想要使用固定的Java_Home、而且要升級Linux主機上的外掛程式、您應該在位於_/var/opt/snapcenter/spl/etc/_的_spl.properties_檔案中、手動新增SKip_JAVAHOME_update參數、並將值設為true。
++
+當外掛程式升級或SnapCenter 重新啟動時、Java_Home的值會更新。在升級或重新啟動SPL之前、如果您新增SKip_JAVAHOME_update參數並將值設為true、則Java_homeTM的值不會更新。
+
+* 您應該已經備份SnapCenter 所有已在SnapCenter 支援伺服器主機或外掛主機上修改的支援功能組態檔案。
++
+例如：SnapDriveService.exe.config、SMCoreServiceHost.exe.config等。SnapCenter
+
+
+
+*關於此工作*
+
+* 升級程序會將Windows、Linux或AIX主機置於「維護」模式、使主機無法執行任何排程工作。
+* 支援的升級途徑：
++
+|===
+| 如果使用的是... | 您可以... 
+
+
+ a| 
+4.4.x
+ a| 
+** 直接升級至4.1.x
+** 請先升級至4.1.x、然後升級至4.2.x、以升級至4.2.x
+** 先升級至4.1.x、然後升級至4.2.x、再升級至4.3.x
+** 先升級至4.1.x、再升級至4.2.x、再升級至4.3.x、然後升級至4.3.x、再升級至4.4.x
+** 先升級至4.1.x、再升級至4.2.x、然後升級至4.3.x、再升級至4.3.x、再升級至4.4.x、然後升級至4.5
+** 先升級至4.1.x、然後升級至4.2.x、再升級至4.3.x、再升級至4.3.x、然後升級至4.4.x、再升級至4.5.x、然後升級至4.6.x、再升級至4.6
+
+
+
+
+ a| 
+4.1.x
+ a| 
+** 直接升級至4.2.x
+** 先升級至4.2.x、然後升級至4.3.x、即可升級至4.3.x
+** 先升級至4.2.x、再升級至4.3.x、然後升級至4.3.x、再升級至4.4.x
+** 先升級至4.2.x、再升級至4.3.x、再升級至4.4.x、然後升級至4.4.x、再升級至4.5
+** 先升級至4.2.x、再升級至4.3.x、然後升級至4.4.x、再升級至4.4.x、然後升級至4.5.x、再升級至4.6
+
+
+
+
+ a| 
+4.2.x
+ a| 
+** 直接升級至4.3.x
+** 先升級至4.3.x、然後升級至4.4.x、即可升級至4.4.x
+** 先升級至4.3.x、然後升級至4.4.x、再升級至4.5
+** 先升級至4.3.x、再升級至4.4.x、再升級至4.4.x、然後升級至4.5.x、再升級至4.6
+
+
+
+
+ a| 
+4.3.x
+ a| 
+** 直接升級至4.4.x
+** 先升級至4.4.x、然後升級至4.5、即可升級至4.5
+** 先升級至4.4.x、再升級至4.5.x、然後升級至4.6.x、再升級至4.6
+
+
+
+
+ a| 
+4.4.x
+ a| 
+** 直接升級至4.5
+** 先升級至4.5.x、然後升級至4.6%、即可升級至4.6%
+
+
+
+
+ a| 
+4.5.x
+ a| 
+直接升級至4.6
+
+|===
+
+
+
+NOTE: 如需升級SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式的相關資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["升級SnapCenter VMware vSphere的插件"^]。
+
+*步驟*
+
+. 在左側導覽窗格中、按一下*主機*>*受管理主機*。
+. 執行下列其中一項工作來升級主機：
++
+** 如果其中一部主機的整體狀態欄顯示「Upgrade Available」（可用升級）、請按一下主機名稱、然後執行下列步驟：
++
+... 按一下*「更多選項」*。
+... 如果您不想驗證主機是否符合升級外掛程式的需求、請選取*跳過預先檢查*。
+... 按一下*升級*。
+
+
+** 如果您要升級多個主機、請選取所有主機、然後按一下 image:../media/more_icon.gif[""]，然後單擊*升級*>*確定*。
++
+
+NOTE: 套件中的所有外掛程式都會被選取、但只SnapCenter 有隨舊版的更新安裝的外掛程式會被升級、而其餘的外掛程式則不會安裝。您必須使用*新增外掛程式*選項來安裝任何新的外掛程式。
+
+
+
+
+
+如果您尚未選取「*跳過預先檢查*」核取方塊、系統會驗證主機是否符合安裝外掛程式的需求。如果不符合最低要求、則會顯示適當的錯誤或警告訊息。修復問題後、按一下*升級*。
+
+
+NOTE: 如果錯誤與磁碟空間或RAM有關、您可以更新位於C:\Program Files\NetApp\SnapCenter Webapp的Web.config或位於C：\Windows\System32\Windows PowerShell\v1.0\Modules\SnapCenter\的PowerShell組態檔案、以修改預設值。如果錯誤與剩餘參數有關、則您必須修正問題、然後再次驗證需求。

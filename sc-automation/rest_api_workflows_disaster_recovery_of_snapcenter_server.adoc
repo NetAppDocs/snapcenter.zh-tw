@@ -1,0 +1,105 @@
+---
+permalink: sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html 
+sidebar: sidebar 
+keywords:  
+summary: 支援災難恢復功能、使用REST API來備份功能。SnapCenter SnapCenter 
+---
+= 支援REST API以進行SnapCenter 支援的REST伺服器災難恢復
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援災難恢復（DR）功能、使用REST API來備份支援。SnapCenter SnapCenter使用REST API、您可以在REST API Swagger頁面上執行下列作業。如需存取Swagger頁面的資訊、請參閱 link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["如何使用Swagger API網頁存取REST API"]。
+
+*您需要的是什麼*
+
+* 您應該以SnapCenter 「管理員」使用者的身分登入。
+* 應啟動並執行此伺服器SnapCenter 以執行DR還原API。
+
+
+*關於此工作*
+
+支援所有外掛程式的Sfor Server DR。SnapCenter
+
+[cols="10,40,50,10"]
+|===
+| 步驟 | 說明 | REST API | HTTP方法 
+
+
+ a| 
+1.
+ a| 
+擷取現有SnapCenter 的伺服器DR備份
+
+
+NOTE: 您必須提供備份名稱和必須儲存災難恢復備份的目標路徑。
+ a| 
+「/4.5/disstarrecovery / server/Backup」（伺服器/備份）「TarketPath={path}」（目標路徑=｛path｝）
+ a| 
+取得
+
+
+
+ a| 
+2.
+ a| 
+建立新的伺服器災難恢復備份。從SnapCenter 指定的伺服器災難恢復備份還原支援服務器。
+ a| 
+/4.5/dissterrecovery / server / Backup（伺服器/備份）
+ a| 
+貼文
+
+
+
+ a| 
+3.
+ a| 
+從SnapCenter 指定的伺服器災難恢復備份還原支援服務器。
+
+*先決條件*
+
+* 替代伺服器主機名稱應與主要伺服器相同、但IP位址可能不同。
+* 伺服器版本應與主要伺服器相同。
+* 主機名稱應與主要伺服器相同。
+* 使用SnapCenter 下列命令、確保DR備份檔案已複製到新的支援伺服器：
++
+「xcopy <SsSOUR_Path>\<DORD_SERVER_IP>\<Folder_Path>/O /X /E /H /K｛ex：xcopy C：\DRBackup \10.225.81.114\c$\DRBackup /O /X /E /H /K｝」
+
+
+
+如果外掛程式無法解析伺服器主機名稱、請登入每個外掛程式主機、然後以「<新IP > SC_Server_Name'」格式新增新IP的etc/host項目
+
+例如10.225.81.35 SCServer1
+
+伺服器etc/host項目將不會還原。您可以從DR備份資料夾手動還原。
+ a| 
+/4.5/dissterrecovery / server /還原
+ a| 
+貼文
+
+
+
+ a| 
+4.
+ a| 
+根據備份名稱刪除伺服器DR備份。
+ a| 
+（如：/4.5/dissterrecovery / server / Backup）
+ a| 
+刪除
+
+
+
+ a| 
+5.
+ a| 
+啟用或停用儲存災難恢復
+ a| 
+/4.5/dissterrecovery /儲存設備
+ a| 
+貼文
+
+|===
+如需詳細資訊、請參閱 https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["災難恢復API"^] 影片：

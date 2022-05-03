@@ -1,0 +1,22 @@
+---
+permalink: protect-sce/concept_what_you_can_do_with_snapcenter_plug_in_for_microsoft_exchange_server.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用外掛程式for Exchange來備份及還原Exchange Server資料庫。 
+---
+= 使用適用於Microsoft Exchange Server的解決方案SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用外掛程式for Exchange來備份及還原Exchange Server資料庫。
+
+* 檢視及管理Exchange資料庫可用度群組（DAG）、資料庫和複本集的作用中庫存
+* 定義提供備份自動化保護設定的原則
+* 將原則指派給資源群組
+* 保護個別的DAG和資料庫
+* 備份主要和次要Exchange信箱資料庫
+* 從一線備份和二線備份還原資料庫
+

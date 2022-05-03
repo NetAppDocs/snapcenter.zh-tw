@@ -1,0 +1,51 @@
+---
+permalink: protect-hana/concept_auto_discovery_of_resources_on_linux_host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 資源包括SAP HANA資料庫和SnapCenter 非資料Volume、位於由支援的Linux主機上。安裝SnapCenter 完SAP HANA資料庫外掛程式後、該Linux主機上的SAP HANA資料庫會自動探索並顯示在「資源」頁面中。 
+---
+= 自動探索Linux主機上的資源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+資源包括SAP HANA資料庫和SnapCenter 非資料Volume、位於由支援的Linux主機上。安裝SnapCenter 完SAP HANA資料庫外掛程式後、該Linux主機上的SAP HANA資料庫會自動探索並顯示在「資源」頁面中。
+
+下列SAP HANA資源支援自動探索：
+
+* 單一容器
++
+安裝或升級外掛程式之後、位於集中式主機外掛程式上的單一容器資源將會繼續以手動新增資源的方式運作。
+
++
+安裝或升級外掛程式之後、SAP HANA資料庫只會自動探索SAP HANA Linux主機上的SAP HANA資料庫、這些主機會直接登錄SnapCenter 到更新版。
+
+* 多租戶資料庫容器（MDC）
++
+安裝或升級外掛程式之後、位於集中式主機外掛程式上的MDC資源將繼續以手動新增資源的形式運作。
+
++
+升級至SnapCenter 更新版的支援功能4.3之後、您必須繼續在集中式主機外掛程式上手動新增MDC資源。
+
++
+若SAP HANA Linux主機直接登錄SnapCenter 到位、安裝或升級外掛程式會觸發自動探索主機上的資源。在升級外掛程式之後、對於外掛程式主機上的每個MDC資源、將會自動以不同的GUID格式探索另一個的MDC資源、並在SnapCenter 還原中註冊。新資源將處於鎖定狀態。
+
++
+例如SnapCenter 、在支援功能4.2中、如果E90的MDC資源位於外掛主機上、並手動登錄、則在升級SnapCenter 至支援功能4.3之後、SnapCenter 將會發現另一個具有不同GUID的E90的MDC資源、並在該功能中進行登錄。
+
+
+
+下列組態不支援自動探索：
+
+* RDM和VMDK配置
++
+
+NOTE: 如果發現上述資源、這些資源不支援資料保護作業。
+
+* Hana多主機組態
+* 同一主機上有多個執行個體
+* 多層橫向擴充HANA系統複寫
+* 系統複寫模式中的串聯複寫環境
+

@@ -1,0 +1,26 @@
+---
+permalink: protect-hana/reference_considerations_for_determining_backup_schedules_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 決定備份排程的最關鍵因素是資源的變更率。您可以每小時備份大量使用的資源、而每天備份一次極少使用的資源。其他因素包括資源對貴組織的重要性、服務層級協議（SLA）和您的恢復點目標（RPO）。 
+---
+= 決定SAP HANA資料庫備份排程的考量事項
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+決定備份排程的最關鍵因素是資源的變更率。您可以每小時備份大量使用的資源、而每天備份一次極少使用的資源。其他因素包括資源對貴組織的重要性、服務層級協議（SLA）、以及您的恢復點目標（RPO）。
+
+備份排程分為兩部分、如下所示：
+
+* 備份頻率（執行備份的頻率）
++
+備份頻率也稱為某些外掛程式的排程類型、是原則組態的一部分。例如、您可以將備份頻率設定為每小時、每日、每週或每月。
+
+* 備份排程（準確的備份時間
++
+備份排程是資源或資源群組組組態的一部分。例如、如果您的資源群組已設定每週備份原則、您可以設定每週四下午10：00進行備份的排程
+
+

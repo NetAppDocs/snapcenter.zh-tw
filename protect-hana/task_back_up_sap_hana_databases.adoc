@@ -1,0 +1,156 @@
+---
+permalink: protect-hana/task_back_up_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 如果某個資源尚未納入任何資源群組、您可以從「資源」頁面備份該資源。 
+---
+= 備份SAP HANA資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果某個資源尚未納入任何資源群組、您可以從「資源」頁面備份該資源。
+
+*您需要的是什麼*
+
+* 您必須已建立備份原則。
+* 如果您想要備份與二線儲存設備有SnapMirror關係的資源、ONTAP 指派給儲存設備使用者的這個角色應該包含「全部快照鏡射」權限。不過、如果您使用「vsadmin」角色、則不需要「全部快照鏡像」權限。
+* 對於Snapshot複製型備份作業、請確定所有租戶資料庫均有效且有效。
+* 若要建立SAP HANA系統複寫備份、建議將SAP HANA系統的所有資源新增至單一資源群組。如此可確保在接管容錯回復模式期間進行無縫備份。
++
+link:task_create_resource_groups_and_attach_policies.html["建立資源群組並附加原則"]。
+
++
+link:task_back_up_resource_groups_sap_hana.html["備份資源群組"]
+
+* 如果您想要在一或多個租戶資料庫關閉時建立檔案型備份、請使用「Set-ConfigSmSettings'指令程式」、將HANA內容檔案中的參數參數設定為* Yes*。
++
+您可以執行Get-Help _command_name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"]
+
+
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、根據資源類型篩選*檢視*下拉式清單中的資源。
++
+按一下*image:../media/filter_icon.gif[""]*、然後選取主機名稱和資源類型以篩選資源。然後按一下 image:../media/filter_icon.gif[""] 以關閉篩選窗格。
+
+. 按一下您要備份的資源。
+. 在「資源」頁面中、選取*使用Snapshot COPU*的自訂名稱格式、然後輸入您要用於Snapshot複本名稱的自訂名稱格式。
++
+例如、_customtext_policy_hostname_或_resource_hostname_。根據預設、快照複本名稱會附加時間戳記。
+
+. 在「應用程式設定」頁面中、執行下列動作：
++
+** 按一下*備份*箭頭以設定其他備份選項：
++
+視需要啟用一致性群組備份、並執行下列工作：
+
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+等待「一致性群組快照」作業完成的時間
+ a| 
+選擇*緊急*或*中型*或*休閒*以指定Snapshot複製作業完成的等待時間。「緊急」= 5秒、「中」= 7秒、「輕鬆」= 20秒。
+
+
+
+ a| 
+停用WAFL Sync
+ a| 
+選擇此選項可避免強制WAFL 使用不一致點。
+
+|===
+** 按一下「*指令碼*」箭頭以執行「靜止」、「Snapshot複本」和「靜止」作業的「預先」和「POST」命令。
++
+您也可以在結束備份作業之前執行pres命令。指令碼和指令碼會在SnapCenter 支援服務器上執行。
+
+** 按一下「自訂組態」箭頭、然後輸入使用此資源之所有工作所需的自訂值配對。
+** 按一下「* Snapshot Copy Tool*（* Snapshot複製工具*）」箭頭、選取建立Snapshot複本的工具：
++
+|===
+| 如果您需要... | 然後... 
+
+
+ a| 
+建立儲存層級Snapshot複本SnapCenter
+ a| 
+選擇* SnapCenter 不含檔案系統一致性*的功能。
+
+
+
+ a| 
+使用Windows外掛程式將檔案系統置於一致狀態、然後建立Snapshot複本SnapCenter
+ a| 
+選擇* SnapCenter 《以檔案系統一致性*》。
+
+
+
+ a| 
+可輸入命令以建立Snapshot複本
+ a| 
+選取*其他*、然後輸入命令以建立Snapshot複本。
+
+|===
++
+image:../media/application_settings.gif[""]
+
+
+
+. 在「原則」頁面中、執行下列步驟：
++
+.. 從下拉式清單中選取一或多個原則。
++
+
+NOTE: 您也可以按一下*來建立原則image:../media/add_policy_from_resourcegroup.gif[""]*。
+
++
+在「設定所選原則的排程」區段中、會列出所選原則。
+
+.. 按一下*image:../media/add_policy_from_resourcegroup.gif[""]*在您要為其設定排程的原則的「設定排程」欄中。
+.. 在「新增原則_policy_name_的排程」對話方塊中、設定排程、然後按一下「*確定*」。
++
+_policy_name_是您選取的原則名稱。
+
++
+已設定的排程會列在「已套用的排程」欄中。
+
+
+
+. 在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。
++
+您也必須指定寄件者和接收者的電子郵件地址、以及電子郵件的主旨。也必須在*設定*>*全域設定*中設定SMTP。
+
+. 檢閱摘要、然後按一下「*完成*」。
++
+此時會顯示「資源拓撲」頁面。
+
+. 按一下*立即備份*。
+. 在「備份」頁面中、執行下列步驟：
++
+.. 如果您已將多個原則套用至資源、請從* Policy*下拉式清單中、選取您要用於備份的原則。
++
+如果針對隨需備份所選取的原則與備份排程相關聯、則會根據為排程類型指定的保留設定來保留隨需備份。
+
+.. 按一下*備份*。
+
+
+. 按一下*監控*>*工作*來監控作業進度。
++
+** 在不完整的組態中MetroCluster 、SnapCenter 在容錯移轉之後、可能無法偵測到保護關係。
++
+如需相關資訊、請參閱： https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["無法偵測SnapVault 到SnapMirror或在MetroCluster 進行不復原容錯移轉之後的不協調關係"^]
+
+** 如果您在VMDK上備份應用程式資料、SnapCenter 而針對VMware vSphere的VMware vSphere的Java堆疊大小不夠大、則備份可能會失敗。
++
+若要增加Java堆大小、請找出指令碼檔案_/opt/netapp/init_scripts/scvservice_。在該指令碼中、_do_start method_命令會啟動SnapCenter VMware插件服務。將該命令更新為：_java -jar -Xmx8192M -Xms4096M_
+
+
+
+

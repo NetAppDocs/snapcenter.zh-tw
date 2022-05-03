@@ -1,0 +1,168 @@
+---
+permalink: admin/concept_manage_the_snapcenter_server_repository.html 
+sidebar: sidebar 
+keywords:  
+summary: 有關從功能執行的各種操作的資訊SnapCenter 、會儲存在SnapCenter 功能性伺服器資料庫儲存庫中。您必須建立儲存庫的備份、以防止SnapCenter 資料遺失。 
+---
+= 管理SnapCenter 伺服器儲存庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+有關從功能執行的各種操作的資訊SnapCenter 、會儲存在SnapCenter 功能性伺服器資料庫儲存庫中。您必須建立儲存庫的備份、以防止SnapCenter 資料遺失。
+
+有時、這個伺服器SnapCenter 儲存庫稱為NSM資料庫。
+
+
+
+== 保護SnapCenter 知識庫的先決條件
+
+您的環境必須符合保護SnapCenter 該資訊庫的特定先決條件。
+
+* 管理儲存虛擬機器（SVM）連線
++
+您應該設定儲存認證資料。
+
+* 資源配置主機
++
+至少一個NetApp儲存磁碟應該存在SnapCenter 於該系統資訊庫主機上。如果SnapCenter NetApp磁碟不存在於知識庫主機上、您必須建立一個。
+
++
+如需新增主機、設定SVM連線及資源配置主機的詳細資訊、請參閱安裝指示。
+
+* 配置iSCSI LUN或VMDK
++
+對於高可用度（HA）組態、您可以在SnapCenter 任一部「支援服務器」中配置iSCSI LUN或VMDK。
+
+
+
+
+
+== 備份SnapCenter 這個資訊庫
+
+備份SnapCenter 支援不中斷資料的伺服器儲存庫、有助於保護儲存庫免受資料遺失的影響。您可以執行_Protect - Smrepository_ Cmdlet來備份儲存庫。
+
+*關於此工作*
+
+_Protect - SmRepository_ Cmdlet可完成下列工作：
+
+* 建立資源群組和原則
+* 為SnapCenter 這個資訊儲存庫建立備份排程
+
+
+*步驟*
+
+. 啟動PowerShell。
+. 在支援服務器主機上SnapCenter 、使用_Open-SmConnection_ Cmdlet建立工作階段、然後輸入您的認證資料。
+. 使用_Protect - Smrepository_ Cmdlet和必要參數來備份儲存庫。
+
+
+
+
+== 檢視SnapCenter 還原儲存庫的備份
+
+您可以執行_Get-SmrepositoryBackups_指令程式、顯示SnapCenter 一份清單、列出所有的SURFServer資料庫儲存庫備份。
+
+儲存庫備份是根據_Protect - Smrepository_ Cmdlet中指定的排程來建立。
+
+*步驟*
+
+. 啟動PowerShell。
+. 在命令提示字元中輸入下列Cmdlet、然後提供認證資料以連線SnapCenter 至The SURF伺 服器：_Open-SMConnection_
+. 使用SnapCenter _Get-SmrepositoryBackups_ Cmdlet列出所有可用的還原資料庫備份。
+
+
+
+
+== 還原SnapCenter 還原還原資料庫儲存庫
+
+您可以執行_Restore-SmrepositoryBackup_ Cmdlet來還原SnapCenter 此資訊庫。
+
+當您還原SnapCenter 此資訊庫時、SnapCenter 執行的其他功能不穩定作業將受到影響、因為還原作業期間無法存取儲存庫資料庫。
+
+*步驟*
+
+. 啟動PowerShell。
+. 在命令提示字元中輸入下列Cmdlet、然後提供認證資料以連線SnapCenter 至The SURF伺 服器：_Open-SMConnection_
+. 使用_Restore-SmrepositoryBackup_ Cmdlet還原儲存庫備份。
++
+下列Cmdlet可從SnapCenter iSCSI LUN或VMDK上現有的備份還原VMware資料庫儲存庫：
+
++
+[listing]
+----
+C:\PS>Restore-SmRepositoryBackup -BackupName MYSQL_DS_SC_Repository_mva-x3550-s09_09-15-2016_10.32.00.4445
+----
++
+下列Cmdlet會在SnapCenter iSCSI LUN中意外刪除備份檔案時、還原MySQL的功能。若為VMDK、請手動從ONTAP Snapshot複本還原備份。
+
++
+[listing]
+----
+C:\PS>Restore-SmRepositoryBackup -BackupName MYSQL_DS_SC_Repository_mva-x3550-s09_09-15-2016_10.32.00.4445 -RestoreFileSystem
+----
+
+
+
+NOTE: 執行還原作業之後擷取儲存庫備份時、不會列出用來執行儲存庫還原作業的備份。
+
+
+
+== 移轉SnapCenter 此系統資訊庫
+
+您可以將SnapCenter 預設位置的還原伺服器資料庫儲存庫移轉到另一個磁碟。當您想要將儲存庫重新部署到空間較多的磁碟時、可以移轉儲存庫。
+
+*步驟*
+
+. 在Windows中停止MySQL57服務。
+. 找到MySQL資料目錄。
++
+您通常可以在C：\ProgramData\MySQL\MySQL Server 5.7\Data找到資料目錄。
+
+. 將MySQL資料目錄複製到新位置、例如E：\Data\NSM。
+. 在新目錄上按一下滑鼠右鍵、然後選取「*內容*>*安全性*」、將「網路服務」本機伺服器帳戶新增至新目錄、然後指派帳戶完整控制權。
+. 重新命名原始資料庫目錄、例如NSM_copy。
+. 在Windows命令提示字元中、使用_mklink_命令建立符號目錄連結。
++
+"mklink /d "C：\ProgramData\MySQL\MySQL Server 5.7\Data\NSM""E：\Data\NSM"""
+
+. 在Windows中啟動MySQL57服務。
+. 請登入SnapCenter 到還原並檢查儲存庫項目、或登入MySQL公用程式並連線至新儲存庫、以確認資料庫位置變更是否成功。
+. 刪除原始、重新命名的資料庫儲存庫目錄（NSM_copy）。
+
+
+
+
+== 重設SnapCenter 資訊儲存庫密碼
+
+MySQL Server儲存庫資料庫密碼會在SnapCenter 從SnapCenter 還原4.2安裝時自動產生。這個自動產生的密碼在SnapCenter 任何時候都不知道。如果您要存取儲存庫資料庫、應重設密碼。
+
+*您需要的是什麼*
+
+您應該擁有SnapCenter 管理員權限才能重設密碼。
+
+*步驟*
+
+. 啟動PowerShell。
+. 在命令提示字元中輸入下列命令、然後提供認證資料以連線SnapCenter 至The SURF伺 服器：_Open-SMConnection_
+. 重設儲存庫密碼：_Set-SmrepositoryPassword_
++
+下列命令會重設儲存庫密碼：
+
++
+[listing]
+----
+
+Set-SmRepositoryPassword at command pipeline position 1
+Supply values for the following parameters:
+NewPassword: ********
+ConfirmPassword: ********
+Successfully updated the MySQL server password.
+----
+
+
+*瞭解更多資訊*
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。

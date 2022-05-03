@@ -1,0 +1,28 @@
+---
+permalink: install/reference_supported_storage_systems_and_applications.html 
+sidebar: sidebar 
+keywords: storage system, ONTAP version 
+summary: 您應該知道支援的儲存系統、應用程式和資料庫。 
+---
+= 支援的儲存系統與應用程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該知道支援的儲存系統、應用程式和資料庫。
+
+* 支援不支援更新版本的支援功能、可保護您的資料。SnapCenter ONTAP
+* 支援Amazon FSX for NetApp功能、保護資料不受來自於更新版的支援。SnapCenter ONTAP SnapCenter
++
+如果您使用Amazon FSX for NetApp ONTAP Sfor NetApp的話、請確保SnapCenter 將支援此功能的支援伺服器主機外掛程式升級至4.5 P1或更新版本、以執行資料保護作業。
+
++
+如需Amazon FSX for NetApp ONTAP 功能的相關資訊、請參閱 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP 的支援文件"^]。
+
+* 支援不同應用程式和資料庫的保護。SnapCenter
++
+如需支援的應用程式和資料庫詳細資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+
+

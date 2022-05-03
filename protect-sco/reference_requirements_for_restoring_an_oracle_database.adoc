@@ -1,0 +1,34 @@
+---
+permalink: protect-sco/reference_requirements_for_restoring_an_oracle_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 在還原Oracle資料庫之前、您應確保已完成先決條件。 
+---
+= 還原Oracle資料庫的需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在還原Oracle資料庫之前、您應確保已完成先決條件。
+
+* 您應該已經定義了還原與還原策略。
+* 如果您要將Snapshot複本複製到鏡射或保存庫、那麼支援此功能的管理員應該已為來源Volume和目的地Volume指派儲存虛擬機器（SVM）SnapCenter 。
+* 如果將歸檔記錄剪除為備份的一部分、您應該手動掛載所需的歸檔記錄備份。
+* 如果您要還原位於虛擬機器磁碟（VMDK）上的Oracle資料庫、應確保客體機器具有所需數量的可用插槽、以便配置複製的VMDK。
+* 如果該資料庫已啟用二線保護、則應確保屬於資料庫的所有資料磁碟區和歸檔記錄磁碟區都受到保護。
+* 您應確保RAC One Node資料庫處於「nomount」狀態、以執行控制檔或完整資料庫還原。
+* 如果您在NFS環境中有ASM資料庫執行個體、則應將ASM磁碟路徑//var/capcenter/SCU/CLINE/*/*新增至在asm_diskstring參數中定義的現有路徑、以便成功掛載ASM記錄備份、作為還原作業的一部分。
+* 在asm_diskstring參數中，如果使用ASMfd，則應配置_afd:*_；如果使用ASMLIB，則應配置_ORCL:*_。
++
+
+NOTE: 如需如何編輯asm_diskstring參數的資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["如何將磁碟路徑新增至asm_diskstring"^]
+
+* 如果您已停用OS驗證並啟用Oracle資料庫的Oracle資料庫驗證、且想要還原該資料庫的資料檔和控制檔、則應在非ASM資料庫的* listener.ora*檔案中設定靜態接聽程式、該檔案位於：_$oracle_home/network/admin_、以及ASM資料庫的$grid_home/network/admin_。
+* 如果資料庫大小是以TB（TB）為單位、您應該執行Set- SmConfigSettings命令來增加SCORestoretimeout參數的值。
+* 您應確保vCenter所需的所有授權均已安裝且為最新版本。
++
+如果未安裝或未更新授權、則會顯示警告訊息。如果您忽略警告並繼續、從RDM還原就會失敗。
+
+

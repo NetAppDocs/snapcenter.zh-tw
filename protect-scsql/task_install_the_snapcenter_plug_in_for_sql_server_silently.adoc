@@ -1,0 +1,59 @@
+---
+permalink: protect-scsql/task_install_the_snapcenter_plug_in_for_sql_server_silently.html 
+sidebar: sidebar 
+keywords:  
+summary: 您應該SnapCenter 從SnapCenter 支援功能的使用者介面中安裝適用於Microsoft SQL Server的支援功能。不過、如果您因為某些原因無法執行、您可以從Windows命令列以無訊息模式執行SQL Server外掛程式安裝程式。 
+---
+= 從命令列以無訊息方式安裝SnapCenter 適用於Microsoft SQL Server的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該SnapCenter 從SnapCenter 支援功能的使用者介面中安裝適用於Microsoft SQL Server的支援功能。不過、如果您因為某些原因無法執行、您可以從Windows命令列以無訊息模式執行SQL Server外掛程式安裝程式。
+
+*您需要的是什麼*
+
+* 安裝之前、您必須先刪除SnapCenter 舊版的Microsoft SQL Server適用的支援功能。
++
+如需詳細資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Install_a_SnapCenter_Plug-In_manually_and_directly_from_thePlug-In_Host["如何SnapCenter 手動直接從外掛主機安裝功能不全的外掛程式"^]。
+
+
+
+*步驟*
+
+. 驗證外掛程式主機上是否存在C：\Temp資料夾、且登入的使用者是否擁有該資料夾的完整存取權。
+. 從C：\ProgramData \NetApp\SnapCenter\Package儲存庫下載SQL Server外掛程式軟體。
++
+此路徑可從SnapCenter 安裝了此伺服器的主機存取。
+
+. 將安裝檔案複製到您要安裝外掛程式的主機。
+. 從本機主機上的Windows命令提示字元、瀏覽至您儲存外掛程式安裝檔案的目錄。
+. 安裝適用於SQL Server軟體的外掛程式：
++
+「snapcenter_windows_host_plugin.exe」/無聲/debuglog"debug_Log_Path"/log"Log_Path" BI_SNAPCENTE_port=Numsit_Install_Directory路徑" BI_ServiceAccount=domain\Administrator BI_SERVERICEPW=password ISfeatureInstall=SCW,SCSQL
+
++
+將預留位置值取代為您的資料
+
++
+** debug_Log_Path是套件安裝程式記錄檔的名稱和位置。
+** Log_Path是外掛程式元件（SCW、SCSQL和SMCore）安裝記錄的位置。
+** 區號是SnapCenter 指與SMCore進行通訊的連接埠
+** 安裝目錄路徑是主機外掛程式套件安裝目錄。
+** 網域\系統管理員是SnapCenter 適用於Microsoft Windows Web服務帳戶的功能不全外掛程式。
+** 密碼是SnapCenter Microsoft Windows Web服務帳戶的密碼。+"snapcenter_windows_host_plugin.exe"/silent /debuglog" C：\HPPW_SCSQL_Install.log"/log" C：" BI_SNAPCENTE_port=8145套件_INSTALLDIR="C：\Program Files\NetApp\Center" BI_ServiceAccount=domain\Administrator BI_SCW=SnapSCW=SQL安裝
+
+
++
+
+NOTE: 安裝適用於SQL Server的外掛程式時所傳遞的所有參數都區分大小寫。
+
+. 監控Windows工作排程器、主要安裝記錄檔C：\Installdebug.log、以及C：\Temp中的其他安裝檔案。
+. 監控%temp%目錄、確認msiexe.exe安裝程式安裝軟體時沒有錯誤。
++
+
+NOTE: SQL Server外掛程式的安裝會在主機上登錄外掛程式、而非SnapCenter 在伺服器上登錄外掛程式。您可以SnapCenter 透過SnapCenter 使用支援程式介面或PowerShell Cmdlet新增主機、在支援服務器上登錄外掛程式。新增主機之後、即會自動探索外掛程式。
+
+

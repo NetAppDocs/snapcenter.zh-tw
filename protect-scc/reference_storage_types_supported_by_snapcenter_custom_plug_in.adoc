@@ -1,0 +1,39 @@
+---
+permalink: protect-scc/reference_storage_types_supported_by_snapcenter_custom_plug_in.html 
+sidebar: sidebar 
+keywords:  
+summary: 支援實體與虛擬機器上的各種儲存類型。SnapCenter您必須先驗證儲存類型的支援、才能安裝SnapCenter 「更新自訂外掛程式」。 
+---
+= 支援的儲存類型SnapCenter 由「支援的儲存類型」由「支援的自訂外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援實體與虛擬機器上的各種儲存類型。SnapCenter您必須先驗證儲存類型的支援、才能安裝SnapCenter 「更新自訂外掛程式」。
+
+|===
+| 機器 | 儲存類型 
+
+
+ a| 
+不支援實體與虛擬伺服器（VMDK與RDM LUN）。
+ a| 
+連接FC的LUN
+
+
+
+ a| 
+不支援實體與虛擬伺服器（VMDK與RDM LUN）。
+ a| 
+連接iSCSI的LUN
+
+
+
+ a| 
+不支援實體與虛擬伺服器（VMDK與RDM LUN）。
+ a| 
+NFS連線的磁碟區
+
+|===

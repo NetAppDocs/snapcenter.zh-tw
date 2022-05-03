@@ -1,0 +1,131 @@
+---
+permalink: install/reference_features_enabled_on_your_windows_host_during_installation.html 
+sidebar: sidebar 
+keywords:  
+summary: 安裝過程中、支援Windows主機上的Windows功能和角色。SnapCenter這些問題可能有針對疑難排解和主機系統維護的意義。 
+---
+= 安裝期間在Windows主機上啟用的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安裝過程中、支援Windows主機上的Windows功能和角色。SnapCenter這些問題可能有針對疑難排解和主機系統維護的意義。
+
+|===
+| 類別 | 功能 
+
+
+ a| 
+Web伺服器
+ a| 
+* 網際網路資訊服務
+* 全球網路服務
+* 一般HTTP功能
++
+** 預設文件
+** 目錄瀏覽
+** HTTP錯誤
+** HTTP重新導向
+** 靜態內容
+** WebDAWeb.發佈
+
+
+* 健全狀況與診斷
++
+** 自訂記錄
+** HTTP記錄
+** 記錄工具
+** 要求監控
+** 追蹤
+
+
+* 效能特色
++
+** 靜態內容壓縮
+
+
+* 安全性
++
+** IP安全性
+** 基本驗證
+** 集中式SSL憑證支援
+** 用戶端憑證對應驗證
+** 「IIS用戶端憑證對應驗證」
+** IP和網域限制
+** 要求篩選
+** URL授權
+** Windows驗證
+
+
+* 應用程式開發功能
++
+** .NET擴充性4.5
+** 應用程式初始化
+** ASP.NET 4.5
+** 伺服器端隨附
+** WebSocket傳輸協定
+
+
+* 管理工具
++
+** IIS管理主控台
+
+
+
+
+
+
+ a| 
+「IIS管理指令碼與工具」
+ a| 
+* IIS管理服務
+* 網路管理工具
+
+
+
+
+ a| 
++.NET Framework 4.5.2功能+
+ a| 
+* NET Framework 4.5.2
+* ASP.NET 4.5.2
+* Windows Communication Foundation（WCF）HTTP Activation45
++
+** TCP啟動
+** HTTP啟動
+** 訊息佇列（MSMQ）啟動
+
+
+
+
+
+
+ a| 
+訊息佇列
+ a| 
+* 訊息佇列服務
++
+
+NOTE: 確保沒有其他應用程式使用SnapCenter 可用來建立及管理的msmqmq.服務。
+
+* msmqmq
+
+
+
+
+ a| 
+Windows處理程序啟動服務
+ a| 
+* 程序模式
+
+
+
+
+ a| 
+組態API
+ a| 
+全部
+
+|===

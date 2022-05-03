@@ -1,0 +1,39 @@
+---
+permalink: protect-concept/concept_disaster_recovery.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果發生資源毀損或伺服器當機等災難、您可以SnapCenter 使用SnapCenter 「還原災難恢復」功能來還原此伺服器。 
+---
+= 災難恢復
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果發生資源毀損或伺服器當機等災難、您可以SnapCenter 使用SnapCenter 「還原災難恢復」功能來還原此伺服器。您可以恢復SnapCenter 不中斷的儲存庫、伺服器排程和伺服器組態元件。
+
+您也可以恢復SnapCenter 適用於SQL Server的支援功能、SnapCenter 以及適用於SQL Server儲存設備的支援功能。
+
+以下是災難恢復（DR）的類型：
+
+* *《伺服器災難恢復*》SnapCenter
++
+無論是否有任何外掛程式是由支援伺服器新增或管理、均可備份及恢復支援的伺服器資料。SnapCenter SnapCenter
+
++
+支援災難恢復功能、使用REST API來備份功能。SnapCenter SnapCenter
+
++
+link:../sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["REST API工作流程、可用於SnapCenter 支援還原至支援的伺服器災難恢復"]
+
+* *《外掛程式與儲存災難恢復*》SnapCenter
++
+DR僅支援SnapCenter SQL Server的不支援的程式。當適用於SQL Server的解決方案不正常時、請切換至其他SQL主機、然後執行幾個步驟來恢復資料。SnapCenter
+
++
+link:../protect-scsql/task_disaster_recovery_scsql.html["SQL Server適用的支援功能SnapCenter"]
+
+
+
+使用支援支援的SnapMirror技術來複寫資料。SnapCenter ONTAP它可用於將資料複寫至次要站台以進行災難恢復、並保持同步。故障切換可透過中斷SnapMirror中的複寫關係來啟動。在容錯回復期間、可以反轉同步處理、並將DR站台的資料複寫回主要位置。

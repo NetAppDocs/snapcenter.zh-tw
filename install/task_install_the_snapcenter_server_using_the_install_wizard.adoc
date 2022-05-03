@@ -1,0 +1,67 @@
+---
+permalink: install/task_install_the_snapcenter_server_using_the_install_wizard.html 
+sidebar: sidebar 
+keywords: install, snapcenter software, install wizard 
+summary: 您可以執行SnapCenter 《伺服器安裝程式執行檔」來安裝SnapCenter 《伺服器版」。 
+---
+= 安裝SnapCenter 此伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以執行SnapCenter 《伺服器安裝程式執行檔」來安裝SnapCenter 《伺服器版」。
+
+您可以選擇使用PowerShell Cmdlet來執行多個安裝和組態程序。
+
+
+NOTE: 不支援從SnapCenter 命令列無聲安裝支援。
+
+*您需要的是什麼*
+
+* 支援Windows更新的更新必須是最新版的伺服器SnapCenter 主機、而且不會有擱置中的系統重新啟動。
+* 您應該已確定MySQL Server未安裝在您計畫安裝SnapCenter 此伺服器的主機上。
+* 您應該已啟用Windows安裝程式偵錯功能。
++
+如需啟用的相關資訊、請參閱Microsoft網站 https://support.microsoft.com/kb/223300["Windows安裝程式記錄"^]。
+
++
+
+NOTE: 您不應在SnapCenter 擁有Microsoft Exchange Server、Active Directory或網域名稱伺服器的主機上安裝此伺服器。
+
+
+
+*步驟*
+
+. 請SnapCenter 從下載《停止更新》安裝套件 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支援網站"^]。
+. 連按兩下下載的.exe檔案、即可啟動SnapCenter 安裝程式。
++
+在您啟動安裝之後、會執行所有預先檢查、如果未達到最低要求、則會顯示適當的錯誤或警告訊息。
+
++
+您可以忽略警告訊息並繼續安裝、但錯誤應予以修正。
+
+. 檢閱SnapCenter 安裝此功能所需的預先填入值、並視需要進行修改。
++
+您不需要指定MySQL Server儲存庫資料庫的密碼。在安裝過程中、會自動產生密碼。SnapCenter
+
++
+
+NOTE: 儲存庫資料庫的自訂路徑不支援特殊字元「`%'」。如果您在路徑中加入「`%'」、安裝將會失敗。
+
+. 按一下*立即安裝*。
++
+如果您已指定任何無效的值、將會顯示適當的錯誤訊息。您應該重新輸入值、然後開始安裝。
+
++
+
+NOTE: 如果您按一下「*取消*」按鈕、將會完成正在執行的步驟、然後開始復原作業。將從主機中完全移除該伺服器。SnapCenter
+
++
+不過、如果SnapCenter 您在執行「停止伺SnapCenter 服器站台重新啟動」或「等待伺服器啟動」作業時按*「取消」、安裝作業將會繼續進行、而不會取消作業。
+
++
+記錄檔一律會列在管理使用者的%temp%資料夾中（最舊的優先）。如果您想重新導向記錄位置、SnapCenter 請執行：'C：\installer_location\installer_name.exe /log"C：\""、從命令提示字元啟動安裝
+
+

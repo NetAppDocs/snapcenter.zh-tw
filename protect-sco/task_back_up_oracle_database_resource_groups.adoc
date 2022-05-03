@@ -1,0 +1,56 @@
+---
+permalink: protect-sco/task_back_up_oracle_database_resource_groups.html 
+sidebar: sidebar 
+keywords: backup, resource group 
+summary: 資源群組是主機或叢集上的資源集合。資源群組上的備份作業會對資源群組中定義的所有資源執行。 
+---
+= 備份Oracle資料庫資源群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+資源群組是主機或叢集上的資源集合。資源群組上的備份作業會對資源群組中定義的所有資源執行。
+
+您可以從「資源」頁面隨需備份資源群組。如果資源群組已附加原則並設定排程、則會根據排程自動進行備份。
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、從*檢視*清單中選取*資源群組*。
++
+您可以在搜尋方塊中輸入資源群組名稱、或按一下*來搜尋資源群組image:../media/filter_icon.gif[""]*、然後選取標記。然後按一下*image:../media/filter_icon.gif[""]*關閉篩選窗格。
+
+. 在「資源群組」頁面中、選取您要備份的資源群組、然後按一下*立即備份*。
++
+
+NOTE: 如果您的聯盟資源群組有兩個資料庫、而其中一個資料庫在非NetApp儲存設備上有資料檔案、則即使另一個資料庫位於NetApp儲存設備上、備份作業仍會中止。
+
+. 在「備份」頁面中、執行下列步驟：
++
+.. 如果您已將多個原則與資源群組建立關聯、請從* Policy*下拉式清單中選取要用於備份的原則。
++
+如果針對隨需備份所選取的原則與備份排程相關聯、則會根據為排程類型指定的保留設定來保留隨需備份。
+
+.. 按一下*備份*。
+
+
+. 按一下*監控*>*工作*來監控作業進度。
+
+
+*完成後*
+
+* 在AIX安裝程式中、您可以使用lkDev命令來鎖定、使用rendev命令來重新命名備份資料庫所在的磁碟。
++
+使用該備份還原時、裝置的鎖定或重新命名不會影響還原作業。
+
+* 如果由於資料庫查詢執行時間超過逾時值而導致備份作業失敗、您應該執行Set-SmConfigSettings Cmdlet來變更Oracle_SQL_query_timeout和Oracle_plugin_SQL_query_timeout參數的值：
++
+修改參數值後、SnapCenter 請執行下列命令「/opt /NetApp/snapcenter/spl/bin/spl recrt」、重新啟動「停止插件載入器（SPL）」服務
+
+* 如果無法存取檔案、且掛載點在驗證程序期間無法使用、則作業可能會失敗、並顯示錯誤代碼DBV-00100指定檔案。您應該修改sco.properties中的verifying_delay和verifying_reture_counts參數值。
++
+修改參數值後、SnapCenter 請執行下列命令「/opt /NetApp/snapcenter/spl/bin/spl recrt」、重新啟動「停止插件載入器（SPL）」服務
+
+

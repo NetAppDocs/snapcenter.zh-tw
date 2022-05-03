@@ -1,0 +1,119 @@
+---
+permalink: protect-sce/task_back_up_exchange_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter plug-in for Exchange Server 
+summary: 如果資料庫不是任何資源群組的一部分、您可以從「資源」頁面備份資料庫或「資料庫可用度群組」。 
+---
+= 備份Exchange資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果資料庫不是任何資源群組的一部分、您可以從「資源」頁面備份資料庫或「資料庫可用度群組」。
+
+*您需要的是什麼*
+
+* 您必須已建立備份原則。
+* 您必須將備份作業所使用的Aggregate指派給資料庫所使用的SVM。
+* 如果要備份與二線儲存設備具有SnapMirror關係的資源、則指派給儲存使用者的角色應包含「全部快照鏡射」權限。不過、如果您使用「vsadmin」角色、則不需要「全部快照鏡像」權限。
+* 如果您想要備份在NetApp和非NetApp儲存設備上具有主動/被動資料庫複本的資料庫或資料庫可用度群組、 而且您已在原則中選取*備份作用中複本*或*備份要在備份工作建立時間*期間選取的伺服器上的複本選項、則備份工作會進入警告狀態。在NetApp儲存設備上成功備份主動/被動資料庫複本、而非NetApp儲存設備上主動/被動資料庫複本的備份將會失敗。
++
+|===
+
+
+| *最佳實務做法：*請勿同時執行主動式與被動式資料庫的備份。可能會發生競爭狀況、其中一個備份可能會失敗。 
+|===
+
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取* Microsoft Exchange Server外掛程式*。
+. 在「資源」頁面中、從*檢視*清單中選取*資料庫*或*資料庫可用度群組*。
++
+在「資源」頁面中 image:../media/not_supported_icon.png[""] 圖示表示資料庫位於非NetApp儲存設備上。
+
++
+
+NOTE: 在DAG中、如果主動式資料庫複本位於非NetApp儲存設備上、且至少有一個被動式資料庫複本位於NetApp儲存設備上、則您可以保護資料庫。
+
++
+按一下*image:../media/filter_icon.gif[""]*、然後選取主機名稱和資料庫類型以篩選資源。然後按一下*image:../media/filter_icon.gif[""]*關閉篩選窗格。
+
++
+** 如果您要備份資料庫、請按一下資料庫名稱。
++
+... 如果顯示「拓撲」檢視、請按一下「*保護*」。
+... 如果顯示Database - Protect Resource（資料庫-保護資源）精靈、請繼續執行步驟3。
+
+
+** 如果您要備份資料庫可用度群組、請按一下資料庫可用度群組名稱。
+
+
+. 如果您要指定自訂Snapshot複本名稱，請在「資源」頁面中選取「*使用Snapshot複本的自訂名稱格式*」核取方塊，然後輸入您要用於Snapshot複本名稱的自訂名稱格式。
++
+例如、_customtext_policy_hostname_或_resource_hostname_。根據預設、快照複本名稱會附加時間戳記。
+
+. 在「原則」頁面中、執行下列步驟：
++
+.. 從下拉式清單中選取一或多個原則。
++
+
+NOTE: 您也可以按一下*來建立原則image:../media/add_policy_from_resourcegroup.gif[""]*。
+
++
+
+NOTE: 如果原則包含*在備份工作建立時間*選取的伺服器上備份複本選項、則會顯示伺服器選擇選項以選取一或多個伺服器。伺服器選擇選項只會列出所選資料庫位於NetApp儲存設備上的伺服器。
+
+
+
++
+在「設定所選原則的排程」區段中、會列出所選原則。
+
++
+.. 按一下*image:../media/add_policy_from_resourcegroup.gif[""]*在您要為其設定排程的原則的「設定排程」欄中。
+.. 在Add schedules for policy _policy_name_（新增原則_原則名稱_的排程）視窗中、設定排程、然後按一下* OK*（確定*）。
++
+其中、_policy_name_是您選取的原則名稱。
+
++
+已設定的排程會列在「已套用的排程」欄中。
+
+
+
+. 在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。
++
+您也必須指定寄件者和接收者的電子郵件地址、以及電子郵件的主旨。如果您要附加在資源上執行的備份作業報告、請選取*附加工作報告*。
+
++
+
+NOTE: 對於電子郵件通知、您必須使用GUI或PowerShell命令Set-SmtpServer來指定SMTP伺服器詳細資料。
+
+. 檢閱摘要、然後按一下「*完成*」。
++
+隨即顯示資料庫拓撲頁面。
+
+. 按一下*立即備份*。
+. 在「備份」頁面中、執行下列步驟：
++
+.. 如果您已將多個原則套用至資源、請從* Policy*下拉式清單中選取要用於備份的原則。
++
+如果針對隨需備份所選取的原則與備份排程相關聯、則會根據為排程類型指定的保留設定來保留隨需備份。
+
+.. 按一下*備份*。
+
+
+. 在頁面底部的「活動」窗格中按兩下工作、以顯示「工作詳細資料」頁面、藉此監控備份進度。
++
+** 在不完整的組態中MetroCluster 、SnapCenter 在容錯移轉之後、可能無法偵測到保護關係。
++
+如需相關資訊、請參閱： https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["無法偵測SnapVault 到SnapMirror或在MetroCluster 進行不復原容錯移轉之後的不協調關係"^]
+
+** 如果您在VMDK上備份應用程式資料、SnapCenter 而針對VMware vSphere的VMware vSphere的Java堆疊大小不夠大、則備份可能會失敗。
++
+若要增加Java堆大小、請找出指令碼檔案_/opt/netapp/init_scripts/scvservice_。在該指令碼中、_do_start method_命令會啟動SnapCenter VMware插件服務。將該命令更新為：_java -jar -Xmx8192M -Xms4096M_
+
+
+
+

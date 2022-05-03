@@ -1,0 +1,30 @@
+---
+permalink: upgrade/task_configure_snapcenter_to_check_for_available_updates.html 
+sidebar: sidebar 
+keywords: configure, snapcenter server, updates, software updates 
+summary: 本產品可定期與NetApp支援網站通訊、通知您有可用的軟體更新。SnapCenter您也可以建立排程、以指定接收可用更新資訊的時間間隔。 
+---
+= 設定SnapCenter 以檢查可用的更新
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本產品可定期與NetApp支援網站通訊、通知您有可用的軟體更新。SnapCenter您也可以建立排程、以指定接收可用更新資訊的時間間隔。
+
+*步驟*
+
+. 在左側導覽窗格中、按一下*設定*。
+. 在「設定」頁面中、按一下「*軟體*」。
++
+「可用軟體」頁面會顯示可用的外掛程式套件、可用版本及其安裝狀態。
+
+. 按一下*「Check for updates*（檢查更新*）」以查看是否有任何較新版本的外掛程式套件可供使用。
+. 按一下*排程更新*來建立排程、以指定您要接收可用更新資訊的時間間隔：
++
+.. 在*檢查更新*中選取時間間隔。
+.. 選取SnapCenter 「更新伺服器管理Windows」認證、然後按一下「*確定*」。
+
+
+

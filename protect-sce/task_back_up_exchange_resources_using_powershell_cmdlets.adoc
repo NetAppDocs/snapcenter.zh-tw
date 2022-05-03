@@ -1,0 +1,121 @@
+---
+permalink: protect-sce/task_back_up_exchange_resources_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords: backup 
+summary: 備份Exchange Server資料庫包括與SnapCenter 該伺服器建立連線、探索Exchange Server資料庫、新增原則、建立備份資源群組、備份及檢視備份狀態。 
+---
+= 使用PowerShell Cmdlet備份Exchange資源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+備份Exchange Server資料庫包括與SnapCenter 該伺服器建立連線、探索Exchange Server資料庫、新增原則、建立備份資源群組、備份及檢視備份狀態。
+
+*您需要的是什麼*
+
+* 您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。
+* 您必須新增儲存系統連線並建立認證。
+* 您必須新增主機和探索到的資源。
+
+
+
+NOTE: Exchange的外掛程式不支援複製作業、因此Exchange的外掛程式不支援Add-SmPolicy Cmdlet的CloneType參數
+
+*步驟*
+
+. 使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
++
+隨即顯示使用者名稱和密碼提示。
+
+. 使用Add-SmPolicy Cmdlet建立備份原則。
++
+此範例建立具有完整備份和記錄備份Exchange備份類型的新備份原則：
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName SCE_w2k12_Full_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType FullBackupAndLogBackup -BackupActiveCopies
+----
++
+此範例建立新的備份原則、並以每小時一次的完整備份和記錄備份Exchange備份類型：
+
++
+[listing]
+----
+C:\PS> Add-SmPolicy -PolicyName SCE_w2k12_Hourly_Full_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType FullBackupAndLogBackup -BackupActiveCopies -ScheduleType Hourly -RetentionSettings @{'BackupType'='DATA';'ScheduleType'='Hourly';'RetentionCount'='10'}
+----
++
+此範例建立新的備份原則、僅備份Exchange記錄：
+
++
+[listing]
+----
+Add-SmPolicy -PolicyName SCE_w2k12_Log_bkp_Policy -PolicyType Backup -PluginPolicytype SCE -SceBackupType LogBackup -BackupActiveCopies
+----
+. 使用Get-SmResources Cmdlet探索主機資源。
++
+此範例會探索指定主機上Microsoft Exchange Server外掛程式的資源：
+
++
+[listing]
+----
+C:\PS> Get-SmResources -HostName vise-f6.sddev.mycompany.com -PluginCode SCE
+----
+. 使用Add-SmResourceDGroup Cmdlet新增資源群組SnapCenter 至Seset.
++
+此範例會使用指定的原則和資源建立新的Exchange Server資料庫備份資源群組：
+
++
+[listing]
+----
+C:\PS> Add-SmResourceGroup -ResourceGroupName SCE_w2k12_bkp_RG -Description 'Backup ResourceGroup with Full and Log backup policy' -PluginCode SCE -Policies SCE_w2k12_Full_bkp_Policy,SCE_w2k12_Full_Log_bkp_Policy,SCE_w2k12_Log_bkp_Policy -Resources @{'Host'='sce-w2k12-exch';'Type'='Exchange Database';'Names'='sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_1,sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2'}
+----
++
+此範例會建立新的Exchange資料庫可用度群組（DAG）備份資源群組、其中包含指定的原則和資源：
+
++
+[listing]
+----
+Add-SmResourceGroup -ResourceGroupName SCE_w2k12_bkp_RG -Description 'Backup ResourceGroup with Full and Log backup policy' -PluginCode SCE -Policies SCE_w2k12_Full_bkp_Policy,SCE_w2k12_Full_Log_bkp_Policy,SCE_w2k12_Log_bkp_Policy -Resources @{"Host"="DAGSCE0102";"Type"="Database Availability Group";"Names"="DAGSCE0102"}
+----
+. 使用New-SmBackup Cmdlet來初始化新的備份工作。
++
+[listing]
+----
+C:\PS> New-SmBackup -ResourceGroupName SCE_w2k12_bkp_RG -Policy SCE_w2k12_Full_Log_bkp_Policy
+----
++
+此範例建立新的次要儲存設備備份：
+
++
+[listing]
+----
+New-SMBackup -DatasetName ResourceGroup1 -Policy Secondary_Backup_Policy4
+----
+. 使用Get-SmBackupReport Cmdlet檢視備份工作的狀態。
++
+此範例顯示在指定日期執行之所有工作的工作摘要報告：
+
++
+[listing]
+----
+C:\PS> Get-SmJobSummaryReport -Date ?1/27/2018?
+----
++
+此範例顯示特定工作ID的工作摘要報告：
+
++
+[listing]
+----
+C:\PS> Get-SmJobSummaryReport -JobId 168
+----
+
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。

@@ -1,0 +1,84 @@
+---
+permalink: protect-scsql/task_determine_whether_resources_are_available_for_backup.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 資源是資料庫、應用程式執行個體、可用度群組、以及您安裝的外掛程式所維護的類似元件。您可以將這些資源新增至資源群組、以便執行資料保護工作、但必須先找出可用的資源。確定可用資源也會驗證外掛程式安裝是否已成功完成。 
+---
+= 判斷資源是否可供備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+資源是資料庫、應用程式執行個體、可用度群組、以及您安裝的外掛程式所維護的類似元件。您可以將這些資源新增至資源群組、以便執行資料保護工作、但必須先找出可用的資源。確定可用資源也會驗證外掛程式安裝是否已成功完成。
+
+*您需要的是什麼*
+
+* 您必須已經完成安裝SnapCenter 完諸如安裝支援服務器、新增主機、建立儲存系統連線及新增認證等工作。
+* 若要探索Microsoft SQL資料庫、應符合下列其中一項條件。
++
+** 用於將外掛主機新增SnapCenter 至支援伺服器的使用者、應該在Microsoft SQL Server上擁有必要的權限（Sysadmin）。
+** 如果不符合上述條件、SnapCenter 您應在支援服務器中設定在Microsoft SQL Server上具有所需權限（Sysadmin）的使用者。使用者應設定為Microsoft SQL Server執行個體層級、使用者可以是SQL或Windows使用者。
+
+
+* 若要探索Windows叢集中的Microsoft SQL資料庫、您必須解除封鎖容錯移轉叢集執行個體（FCI）TCP/IP連接埠。
+* 如果資料庫位於VMware RDM LUN或VMDK上、您必須部署SnapCenter VMware vSphere的VMware vCenter外掛程式、並使用SnapCenter VMware vCenter登錄外掛程式。
++
+如需詳細資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["部署SnapCenter VMware vSphere的VMware vCenter外掛程式"^]
+
+* 如果使用GMSA新增主機、且GMSA具有登入和系統管理權限、則會使用GMSA連線至SQL執行個體。
+
+
+*關於此工作*
+
+當「詳細資料」頁面中的*整體狀態*選項設定為無法備份時、您就無法備份資料庫。當下列任一情況成立時、*整體狀態*選項會設為無法備份：
+
+* 資料庫不在NetApp LUN上。
+* 資料庫並非處於正常狀態。
++
+當資料庫離線、還原、還原擱置中、可疑等時、資料庫並未處於正常狀態。
+
+* 資料庫權限不足。
++
+例如、如果使用者只有資料庫的檢視存取權、就無法識別資料庫的檔案和內容、因此無法進行備份。
+
+
+
+
+NOTE: 如果SQL Server Standard Edition上有可用度群組組組態、則僅能備份主要資料庫。SnapCenter
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、從「*檢視*」下拉式清單中選取「*資料庫*」或「*執行個體*」或「*可用度群組*」。
++
+按一下 image:../media/filter_icon.gif[""] 然後選取主機名稱和SQL Server執行個體以篩選資源。然後按一下 image:../media/filter_icon.gif[""] 以關閉篩選窗格。
+
+. 按一下*重新整理資源*。
++
+新新增、重新命名或刪除的資源會更新SnapCenter 至「支援服務器」目錄。
+
++
+
+IMPORTANT: 如果資料庫重新命名為SnapCenter 不屬於支援範圍、您必須重新整理資源。
+
++
+這些資源會連同資源類型、主機或叢集名稱、相關資源群組、備份類型、原則和整體狀態等資訊一起顯示。
+
++
+** 如果資料庫位於非NetApp儲存設備上、「Not Available for Backup」（無法備份）會顯示在「*整體狀態*」欄中。
++
+您無法在非NetApp儲存設備上的資料庫上執行資料保護作業。
+
+** 如果資料庫位於NetApp儲存設備上且未受到保護、則「Not protected（未受保護）」會顯示在「*整體狀態*」欄中。
+** 如果資料庫位於NetApp儲存系統上並受到保護、使用者介面會在*整體狀態*欄中顯示「Backup Not RUN」訊息。
+** 如果資料庫位於NetApp儲存系統上且受到保護、且已觸發資料庫的備份、則使用者介面會在*整體狀態*欄中顯示「備份成功」訊息。
+
+
+
+
+
+NOTE: 如果您在設定認證資料時啟用SQL驗證、探索到的執行個體或資料庫會顯示紅色的掛鎖圖示。如果出現掛鎖圖示、您必須指定執行個體或資料庫認證、才能將執行個體或資料庫成功新增至資源群組。
+
+將資源指派給RBAC使用者之後SnapCenter 、RBAC使用者必須登入、然後按一下「*重新整理資源*」以查看資源的最新*整體狀態*。

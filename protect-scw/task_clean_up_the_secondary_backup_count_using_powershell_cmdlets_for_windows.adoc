@@ -1,0 +1,39 @@
+---
+permalink: protect-scw/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_windows.html 
+sidebar: sidebar 
+keywords: backups 
+summary: 您可以使用Remove-SmBackup Cmdlet來清除無Snapshot複本之次要備份的備份計數。當管理複本拓撲中顯示的Snapshot複本總數與次要儲存Snapshot複本保留設定不符時、您可能需要使用此Cmdlet。 
+---
+= 使用PowerShell Cmdlet清除次要備份數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+您可以使用Remove-SmBackup Cmdlet來清除無Snapshot複本之次要備份的備份計數。當管理複本拓撲中顯示的Snapshot複本總數與次要儲存Snapshot複本保留設定不符時、您可能會想要使用此Cmdlet。
+
+您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+
+*步驟*
+
+. 使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。
++
+[listing]
+----
+Open-SmConnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. 使用-Clean輔助備份參數清除二線備份數。
++
+此範例可清除次要備份的備份數、而不使用Snapshot複本：
+
++
+[listing]
+----
+Remove-SmBackup -CleanupSecondaryBackups
+Remove-SmBackup
+Are you sure want to remove the backup(s).
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
+----
+

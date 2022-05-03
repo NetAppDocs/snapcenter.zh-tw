@@ -1,0 +1,36 @@
+---
+permalink: protect-hana/reference_prerequisites_for_using_snapcenter_plug_in_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords: Credentials,SnapCenter Plug-in for SAP HANA Database 
+summary: 在使用SnapCenter 適用於SAP HANA資料庫的靜態外掛程式之前SnapCenter 、管理員必須先安裝及設定SnapCenter 該伺服器、並執行必要的工作。 
+---
+= SAP SnapCenter HANA資料庫使用此功能的先決條件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用SnapCenter 適用於SAP HANA資料庫的靜態外掛程式之前SnapCenter 、管理員必須先安裝及設定SnapCenter 該伺服器、並執行必要的工作。
+
+* 安裝及設定SnapCenter 靜態伺服器。
+* 登入SnapCenter 到伺服器。
+* 新增儲存系統連線並SnapCenter 建立認證資料（若適用）、以設定「靜態」環境。
+* 在Linux或Windows主機上安裝Java 1.7或Java 1.8。
++
+您必須在主機的環境路徑變數中設定Java路徑。
+
+* 如果SnapVault 您想要備份複寫、請設定SnapMirror和SnapMirror。
+* 在要安裝SAP HANA資料庫外掛程式的主機上安裝HDBSQL用戶端。
++
+設定要透過此主機管理的SAP HANA節點的使用者儲存金鑰。
+
+* 對於SAP HANA資料庫2.0SPS05、如果您使用SAP HANA資料庫使用者帳戶、請確保您具有下列權限、可在SnapCenter S還原 伺服器中執行備份、還原及複製作業：
++
+** 備份管理
+** 目錄讀取
+** 資料庫備份管理
+** 資料庫恢復營運者
+
+
+

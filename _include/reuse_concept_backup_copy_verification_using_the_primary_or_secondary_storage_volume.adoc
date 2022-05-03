@@ -1,0 +1,9 @@
+= 
+:allow-uri-read: 
+
+
+您可以在主要儲存磁碟區或SnapMirror或SnapVault 支援的二線儲存磁碟區上驗證備份複本。使用次要儲存磁碟區進行驗證、可降低主要儲存磁碟區的負載。
+
+當您驗證主儲存磁碟區或次儲存磁碟區上的備份時、所有的主要與次要Snapshot複本都會標示為已驗證。
+
+驗證SnapMirror和不二級儲存磁碟區上的備份複本時需要使用支援。SnapRestore SnapVault

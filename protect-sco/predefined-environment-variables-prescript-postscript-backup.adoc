@@ -1,0 +1,268 @@
+---
+permalink: protect-sco/predefined-environment-variables-prescript-postscript-backup.html 
+sidebar: sidebar 
+keywords: environment variable, predefined, prescript, postscript, backup, policy 
+summary: 利用此功能、您可以在建立備份原則的同時、使用預先定義的環境變數來執行預先記錄和PostScript。SnapCenter 
+---
+= 預先定義的環境變數、用於備份特定的pretced和postscript
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+利用此功能、您可以在建立備份原則的同時、使用預先定義的環境變數來執行預先記錄和PostScript。SnapCenter除了VMDK之外、所有Oracle組態都支援此功能。
+
+可預先定義在執行Shell指令碼的環境中、可直接存取的參數值。SnapCenter執行指令碼時、您不需要手動指定這些參數的值。
+
+
+
+== 支援建立備份原則的預先定義環境變數
+
+* * sc_job_ID*指定作業的工作ID。
++
+範例：256
+
+* *SC_Oracle_SID*指定資料庫的系統識別碼。
++
+如果作業涉及多個資料庫、則參數將包含以管道分隔的資料庫名稱。
+
++
+此參數將會填入應用程式磁碟區。
+
++
+範例：NFSbr32|NFSB31
+
+* * sc_host*指定資料庫的主機名稱。
++
+對於RAC、主機名稱將是執行備份的主機名稱。
+
++
+此參數將會填入應用程式磁碟區。
+
++
+範例：scsmohost2.gdl.englabe.netapp.com
+
+* * sc_os_user*指定資料庫的作業系統擁有者。
++
+資料的格式將為<db1>@<osuser1>|<db2>@<osuser2>。
+
++
+範例：NFSb31@oracle|NFSb32@oracle
+
+* * sc_os_group *指定資料庫的作業系統群組。
++
+資料的格式將為<db1>@<osGroup1>|<db2>@<osGroup2>。
+
++
+範例：NFSb31@install|NFSb32@oinstall
+
+* * sc_backup_type*」指定備份類型（線上完整、線上資料、線上記錄、離線關機、離線掛載）
++
+範例：
+
++
+** 完整備份：ONINLINK
+** 純資料備份：ONLINEDATA
+** 僅限記錄備份：ONLINK
+
+
+* * sc_backup_name*指定備份的名稱。
++
+此參數將會填入應用程式磁碟區。
+
++
+範例：DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267、0| LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267、1| AV@RG2_scspr2417819002_07-20-2021_12.16.48.9267
+
+* * sc_backup_ID*指定備份ID。
++
+此參數將會填入應用程式磁碟區。
+
++
+範例：data@203| log@205| av@207.
+
+* * sc_oracle_home*指定Oracle主目錄的路徑。
++
+範例：NFSb32@/ora01/app/oracle/product/181.0/db_1|NFSb31@/ora01/app/oracle/product/181.0/db_1
+
+* * sc_backup_retenture*指定原則中定義的保留期間。
++
+範例：
+
++
+** 完整備份：hourly | data@days：3| log@count:4
+** 僅限隨需資料備份：OnDemand | data@count:2
+** 僅限隨需記錄備份：OnDemand | log@count:2
+
+
+* * sc_resource_group_name*指定資源群組的名稱。
++
+範例：RG1.
+
+* * sc_backup_policy_name*指定備份原則的名稱。
++
+範例：backup_policy
+
+* * sc_av_name*指定應用程式磁碟區的名稱。
++
+範例：AV1|AV2
+
+* * sc_primary資料磁碟區磁碟區完整路徑*指定資料檔案目錄的SVM到磁碟區的儲存對應。它將是LUN和qtree的父Volume名稱。
++
+資料的格式將為<db1>@<SVM1:volume1>|<DB2>@<SVM2:volume2>。
+
++
+範例：
+
++
+** 對於同一資源群組中的2個資料庫：NFSb32@buck:/vol/scspr2417819002_NFSb_NFSb32_data|NFSb31@buck:/vol/scspr2417819002_NFS_CDB_NFSb31_data
+** 對於分散於多個磁碟區的單一資料庫：buck/vol/scspr2417819002_nfs_CDB_NFSb31_data,herculus:/vol/scspr2417819002_nfs
+
+
+* *SC_PRIMAR_ARCHIVELOGs_Volume _Full_path*指定將SVM對應至磁碟區的儲存設備、以供記錄檔目錄使用。它將是LUN和qtree的父Volume名稱。
++
+範例：
+
++
+** 單一資料庫執行個體：buck/vol/scspr2417819002_nfs_CDB_NFSb31_REDO
+** 對於多個資料庫執行個體：NFSb31@buck:/vol/scspr2417819002_nfs_CDB_NFSb31_REDO|NFSb32@buck:/vol/scspr2417819002_nfs_CDB_NFSb32_REDO
+
+
+* * sc_primary _full快照名稱_for_tag*指定包含儲存系統名稱和磁碟區名稱的快照清單。
++
+範例：
+
++
+** 對於單一資料庫執行個體：buck:/vol/scspr2417819002_nfs_CDB_NFSb32_data/Rg2_scspr2417819002_07-21_02.28.3973_0、buck:/vol/scspr2417819002_nfs_CDB_NFS32_rede/Rg2/Rg2_20G2_19002_20872_19001_2_2_2_20872_2_2_2_20872_2_2_2_2_2_2_2087
+** 多個資料庫執行個體：NFSb32@buck:/vol/scspr2417819002_nfs_CDB_NFSb32_data/rg2_scspr2417819002_07-21_02.28.3973_0、buck:/scpr2417819002_nfs_CDB_NFS32_red32_rbred202_202_202_202_32_32_32_rbuck_2022202_202202_202_202_202_202_32_20228.32_202_scsprbuck_32_202_202_202_202_202_202_scbuck_202_202_202_202_scbuck_202_202_2_202_202_202_202_scbuck_202_2_202_2_scbuck_202_2_2_202_2_2_2_
+
+
+* * sc_primary快照名稱*指定備份期間建立的主要快照名稱。
++
+範例：
+
++
+** 單一資料庫執行個體：RG2_scspr2417819002_07-21-02.28.26.3973_0、RG2_scspr2417819002_07-21-0221_02.28.26.3973_1
+** 若為多個資料庫執行個體：NFSB32@RG2_scspr2417819002_07-21-2021_02.28.26.3973、RG2_scspr2417819002_07-21-2021_02.28.26.3973_1|NFSB31@RG2_scspr2417819002_07-21-2021_02.28.26.3973、RG2_scspr2417819002_07-21-02.28.3973_1
+** 如需包含2個磁碟區的一致性群組快照：cgr_r80404CBEF5V1_04-05-2021_03.08.03.4945_0_bfc279cc-28ad-465c-9d60-5487ac17b25d_2021_5_3_8_58_350
+
+
+* * sc_primary _mount_points*指定備份的掛載點詳細資料。
++
+詳細資料包括掛載磁碟區的目錄、而非備份中檔案的直接父目錄。對於ASM組態、它是磁碟群組的名稱。
+
++
+資料的格式設定為<db1>@<mountpoint1、mountpoint2>|<db2>@<mountpoint1、mountpoint2>。
+
++
+範例：
+
++
+** 對於單一資料庫執行個體：/mnt/nfsdb3_data、/mnt/nfsdb3_log、/mnt/nfsdb3_data1
+** 若為多個資料庫執行個體：NFSb31@/mnt/nfsdb31_data、/mnt/nfsdb31_log、/mnt/nfsdb31_dataa1|NFSb32@/mnt/nfsdb32_data、/mnt/nfsdb32_log、/mnt/nfsdb32_data1
+** 適用於ASM：+DATA2DG、+LOG2DG
+
+
+* * sc_primer_snapshots_and _mount_points*指定在備份每個掛載點期間所建立的快照名稱。
++
+範例：
+
++
+** 單一資料庫執行個體：RG2_scspr2417819002_07-21-021_02.28.26.3973_0：/mnt/nfsb32_data、RG2_scspr2417819002_07-21-02.28.3973_1：/mnt/nfsb31_log
+** 若為多個資料庫執行個體：NFSB32@RG2_scspr2417819002_07-21-2021_02.28.26.3973：/mnt/nfsb32_data、RG2_scspr2417819002_07-21-0221_02.28.26.3973_1：/mnt/nfsb31_log| NFSB31@RG2_scspr2417819002_07-21-2021_02.28.26.3973：/mnt/nfsb31_data、RG2_sc2417819002_07-21-021-02_220.32_s2032_s20_s=2_2=210/210/210/210/210/210/210/210/210/210/210/210/210/210/210/210/210/210/210/
+
+
+* *sc_archIVELOGs_locations*指定歸檔日誌目錄的位置。
++
+目錄名稱將是歸檔記錄檔的直接父目錄。如果歸檔記錄放在多個位置、則會擷取所有位置。這也包括FRA案例。如果將softlinks用於目錄、則會填入相同的項目。
+
++
+範例：
+
++
+** 對於NFS上的單一資料庫：/mnt/nfsdb2_log
+** 對於NFS上的多個資料庫和NFSb31資料庫歸檔記錄、這些記錄位於兩個不同位置：NFSb31@/mnt/nfsdb31_log1、/mnt/nfsdb31_log2|NFSb32@/mnt/nfsdb32_log
+** 若為ASM：+LOG2DG/ASMDB2/ARCHIVELOG/2021_07_15
+
+
+* * sc_REDO_logs_location*指定重作記錄目錄的位置。
++
+目錄名稱將是重作記錄檔的直接父目錄。如果將softlinks用於目錄、則會填入相同的項目。
+
++
+範例：
+
++
+** 對於NFS上的單一資料庫：/mnt/nfsdb2_data/newdb1
+** NFS上的多個資料庫：NFSb31@/mnt/nfsdb31_data/newdb31|NFSb32@/mnt/nfsdb32_data/newdb32
+** 適用於ASM：+LOG2DG/ASMDB2/ONLINELOG
+
+
+* * sc_control_fils_locations*指定控制檔目錄的位置。
++
+目錄名稱將是控制檔的直接父目錄。如果將softlinks用於目錄、則會填入相同的項目。
+
++
+範例：
+
++
+** 對於NFS上的單一資料庫：/mnt/nfsdb2_data/fa/newdb1、/mnt/nfsdb2_data/newdb1
+** NFS上的多個資料庫：NFSb31@/mnt/nfsdb31_data/fafr/newdb31、/mnt/nfsdb31_data/newdb31|NFSb32@/mnt/nfsdb32_data/fra/newdb32、/mnt/nfsdb32_data/newdb32
+** 適用於ASM：+LOG2DG/ASMDB2/CONTROLLE
+
+
+* *sc_data_fils_locations*"指定資料檔案目錄的位置。
++
+目錄名稱將是資料檔案的直接父目錄。如果將softlinks用於目錄、則會填入相同的項目。
+
++
+範例：
+
++
+** 對於NFS上的單一資料庫：/mnt/nfsdb3_da1、/mnt/nfsdb3_data/NEWDB3/datafile
+** NFS上的多個資料庫：NFSb31@/mnt/nfsdb31_data1、/mnt/nfsdb31_data/NEWDB31/datafile | NFSb32@/mnt/nfsdb32_data1、/mnt/nfsdb32_data/NEWDB32/datafile
+** 若為ASM：+DatA2DG/ASMDB2/datafile、+DatA2DG/ASMDB2/Tempdfile
+
+
+* * sc_fsnapshot _label*指定次要標籤的名稱。
++
+範例：每小時、每日、每週、每月或自訂標籤。
+
+
+
+
+
+== 支援的分隔符號
+
+* *：*用於分隔SVM名稱和Volume名稱
++
+範例：buck/vol/scspr2417819002_nfs_CDB_NFSb32_data/RG2_scspr2417819002_07-21_02.28.26.3973_0、buck：/vol/scspr2417819002_nfs_CDB_NFS32_ree/Rg2/rg2_sc2424242420243920001_21-0722_220.202_21-0722_2_212.07-2028.202_212.07-20212.07-
+
+* 「*@*」是用來分隔資料與其資料庫名稱、並將值與金鑰區隔。
++
+範例：
+
++
+** NFSb32@buck:/vol/scspr2417819002_nfs_CDB_NFS32_data/RG2_scspr2417819002_07-21-022_02.28.3973_0、buck:/vol/scpr2417819002_nfs_CDB_NF32_red/RG2_Rg2/Rg2/R222019002_2022_32_32_32_scrbuck_19002_202220222022_32_202220222022_scsprbuck_2022_32_32_2022_32_32_32_32_32_32_scsprbuck_2022201720172022_scrbuck_32_32_32_2022_scrbuck_2_2022_32_32_32_202220222022_scrbuck_32_32_32_32_scrbuck_scrbuck_32_32_32_20
+** NFSb31@oracle|NFSb32@oracle
+
+
+* *|*用於分隔兩個不同資料庫之間的資料、以及在SC_backup_ID、SC_backup_retenture,和SC_backup_name參數的兩個不同實體之間分隔資料。
++
+範例：
+
++
+** data@203| log@205.
+** 每小時| data@days：3| log@count:4
+** DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267 0| LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267
+
+
+* */*用於將磁碟區名稱與SC_PRIMAR_SnapShot名稱及SC_PRIMAR_US_snapshot名稱的Snapshot區隔開。
++
+範例：NFSb32@buck:/vol/scspr2417819002_nfs_CDB_NFSb32_data/Rg2_scspr2417819002_07-21_02.26.3973_0、buck:/vol/scpr2417819002_nfs_CDB_NFS32_ree/Rg2/Rg2_202_202_2019002_2_2_20872_2_2_2_2_20872-2_2_2_2_2_2_20872-20872-
+
+* *、*用於分隔同一資料庫的變數集。
++
+範例：NFSb32@buck:/vol/scspr2417819002_nfs_CDB_NFS32_data/Rg2_scspr2417819002_07-21-022_02.26.3973_0、buck:/vol/scpr2417819002_nfs_CDB_NFS32_red2/R32_ree/Rg2/Rg2_202_32_32_32_32_32_32202_32_32202_32_32_32202_32_scbuck_32_32_32_2022202220222022_32_32_32_32_scbuck_32_32_32_32_32_20872-20872_20872/2022_scbuck_32_20872/2022_scbuck_202_32_32_32_202_scbuck_32_32_32_32_32_scvoltol_2022_32_32_32_2022_
+
+

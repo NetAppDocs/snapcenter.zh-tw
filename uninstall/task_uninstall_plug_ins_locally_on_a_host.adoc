@@ -1,0 +1,35 @@
+---
+permalink: uninstall/task_uninstall_plug_ins_locally_on_a_host.html 
+sidebar: sidebar 
+keywords: uninstall, uninstall plug-in locally, uninstall plug-in from a host 
+summary: 如果無法從S仰賴 伺服器連線到主機、您可以在SnapCenter 主機上本機解除安裝支援程式。SnapCenter 
+---
+= 在主機本機上解除安裝外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果無法從S仰賴 伺服器連線到主機、您可以在SnapCenter 主機上本機解除安裝支援程式。SnapCenter
+
+*關於此工作*
+
+解除安裝個別外掛程式或外掛程式套件的最佳實務做法、是使用SnapCenter 支援程式介面上的程式集圖形化圖形介面、或是SnapCenter 使用Unmer-SmHostPackage指令程式。這些程序有助SnapCenter 於支援所有變更、讓支援者隨時掌握最新資訊。
+
+不過、您可能很少需要在本機上解除安裝外掛程式。例如、您可能已從SnapCenter 該伺服器執行解除安裝工作、但工作失敗、或者您已解除安裝SnapCenter 了您的故障、而孤立的外掛程式仍保留在主機上。
+
+
+IMPORTANT: 在主機本機上解除安裝外掛程式套件不會刪除與主機相關的資料、例如排程工作和備份中繼資料。
+
+
+IMPORTANT: 請勿嘗試從SnapCenter 「控制台」在本機上解除安裝適用於Windows的《Se Plug-ins套件」。您必須使用SnapCenter 無法更新的圖形使用者介面來確保SnapCenter 正確解除安裝適用於Microsoft Windows的功能。
+
+*步驟*
+
+. 在主機系統上、瀏覽至「控制台」、然後按一下「*解除安裝程式*」。
+. 在程式清單中、選取SnapCenter 您要解除安裝的不完整版外掛程式或外掛程式套件、然後按一下「*解除安裝*」。
++
+Windows會解除安裝所選套件中的所有外掛程式。
+
+

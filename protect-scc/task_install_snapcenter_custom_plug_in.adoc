@@ -1,0 +1,18 @@
+---
+permalink: protect-scc/task_install_snapcenter_custom_plug_in.html 
+sidebar: sidebar 
+keywords: installing 
+summary: 如果您想要保護自訂外掛程式資源、請安裝並設定SnapCenter 「支援」功能。 
+---
+= 安裝流程：不需安裝程式SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您想要保護自訂外掛程式資源、請安裝並設定SnapCenter 「支援」功能。
+
+image::../media/scc_install_configure_workflow.png[SCC安裝設定工作流程]
+
+link:concept_develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"]

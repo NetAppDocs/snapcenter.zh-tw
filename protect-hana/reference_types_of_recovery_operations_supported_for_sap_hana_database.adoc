@@ -1,0 +1,24 @@
+---
+permalink: protect-hana/reference_types_of_recovery_operations_supported_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 利用此解決方案、您可以為SAP HANA資料庫執行不同類型的還原作業。SnapCenter 
+---
+= SAP HANA資料庫支援的恢復作業類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+利用此解決方案、您可以為SAP HANA資料庫執行不同類型的還原作業。SnapCenter
+
+* 將資料庫恢復至最新狀態
+* 將資料庫恢復到特定時間點
++
+您必須指定恢復的日期和時間。
+
+* 將資料庫恢復至特定的資料備份
+
+
+此外、SAP HANA資料庫也提供「無法恢復」選項。SnapCenter

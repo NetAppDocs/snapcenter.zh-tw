@@ -1,0 +1,197 @@
+---
+permalink: protect-scc/concept_develop_a_plug_in_for_your_application.html 
+sidebar: sidebar 
+keywords:  
+summary: 利用此伺服器SnapCenter 、您可以將應用程式部署及管理為SnapCenter 支援的外掛程式。 
+---
+= 總覽
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+利用此伺服器SnapCenter 、您可以將應用程式部署及管理為SnapCenter 支援的外掛程式。您可將所選的應用程式插入SnapCenter 到《資料保護與管理功能》的《伺服器》中。
+
+使用支援各種程式設計語言、開發自訂外掛程式。SnapCenter您可以使用Perl、Java、批次或其他指令碼語言來開發自訂外掛程式。
+
+若要在SnapCenter Suse中使用自訂外掛程式、您必須執行下列工作：
+
+* 依照本指南的指示、為應用程式建立外掛程式
+* 建立說明檔案
+* 匯出自訂外掛程式、將其安裝在SnapCenter 支援的主機上
+* 將外掛程式的壓縮檔上傳至SnapCenter 32個伺服器
+
+
+
+
+== 所有API呼叫的一般外掛處理
+
+[role="lead"]
+對於每個API呼叫、請使用下列資訊：
+
+* 外掛程式參數
+* 結束代碼
+* 記錄錯誤訊息
+* 資料一致性
+
+
+
+
+=== 使用外掛程式參數
+
+每次API呼叫時、都會將一組參數傳送至外掛程式。下表列出參數的特定資訊。
+
+|===
+| 參數 | 目的 
+
+
+ a| 
+行動
+ a| 
+決定工作流程名稱。例如、探索、備份、檔案VolRestore或cloneVolAndLun
+
+
+
+ a| 
+資源
+ a| 
+列出要保護的資源。資源會以UID和類型來識別。清單會以下列格式呈現給外掛程式：
+
+「<UID>、<type >、<UID>、<type >」。例如「Instance1、Instance;instance2\DB1、Database」
+
+
+
+ a| 
+app_name
+ a| 
+決定要使用的外掛程式。例如DB2、MySQL。支援所列應用程式的內建支援。SnapCenter此參數區分大小寫。
+
+
+
+ a| 
+app_ignore錯誤
+ a| 
+（Y或N）SnapCenter 這會導致出現應用程式錯誤時、不退出或不退出。當您正在備份多個資料庫、但不希望單一故障停止備份作業時、此功能非常實用。
+
+
+
+ a| 
+<resource_name>_APP_instance_username
+ a| 
+設定資源的認證資料。SnapCenter
+
+
+
+ a| 
+<resource_name>_APP_instance_password
+ a| 
+設定資源的認證資料。SnapCenter
+
+
+
+ a| 
+<resource_name>_<custom_Param>
+ a| 
+每個資源層級的自訂金鑰值都可用於以「<resource_name>_」開頭的外掛程式。例如，如果名稱為「MySQLDB」之資源的自訂金鑰為「master_slave」，則該金鑰會以MySQLDB_master_slave的形式提供
+
+|===
+
+
+=== 使用結束代碼
+
+外掛程式會透過結束代碼、將作業狀態傳回主機。每個程式碼都有特定意義、而且外掛程式會使用正確的結束程式碼來表示相同的意義。
+
+下表說明錯誤代碼及其意義。
+
+|===
+| 結束代碼 | 目的 
+
+
+ a| 
+0
+ a| 
+成功營運。
+
+
+
+ a| 
+99
+ a| 
+不支援或實作要求的作業。
+
+
+
+ a| 
+100
+ a| 
+失敗的作業、跳過取消靜止、然後結束。依預設、取消靜止。
+
+
+
+ a| 
+101.
+ a| 
+作業失敗、請繼續備份作業。
+
+
+
+ a| 
+其他
+ a| 
+失敗的作業、執行Unquiesce、然後結束。
+
+|===
+
+
+=== 記錄錯誤訊息
+
+錯誤訊息會從外掛程式傳遞至SnapCenter 該伺服器。訊息包括訊息、記錄層級和時間戳記。
+
+下表列出層級及其用途。
+
+|===
+| 參數 | 目的 
+
+
+ a| 
+資訊
+ a| 
+資訊訊息
+
+
+
+ a| 
+警告
+ a| 
+警告訊息
+
+
+
+ a| 
+錯誤
+ a| 
+錯誤訊息
+
+
+
+ a| 
+偵錯
+ a| 
+偵錯訊息
+
+
+
+ a| 
+追蹤
+ a| 
+追蹤訊息
+
+|===
+
+
+=== 維持資料一致性
+
+自訂外掛程式會在執行相同工作流程的作業之間保留資料。例如、外掛程式可以在靜止結束時儲存資料、以便在靜止作業期間使用。
+
+要保留的資料會透過外掛程式設定為結果物件的一部分。它採用特定格式、並在每種外掛程式開發方式下詳細說明。

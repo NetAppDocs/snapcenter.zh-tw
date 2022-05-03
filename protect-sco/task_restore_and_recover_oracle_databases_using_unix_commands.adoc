@@ -1,0 +1,31 @@
+---
+permalink: protect-sco/task_restore_and_recover_oracle_databases_using_unix_commands.html 
+sidebar: sidebar 
+keywords: restore, recover, CLI 
+summary: 還原與還原工作流程包括規劃、執行還原與還原作業、以及監控作業。 
+---
+= 使用UNIX命令還原及還原Oracle資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+還原與還原工作流程包括規劃、執行還原與還原作業、以及監控作業。
+
+*關於此工作*
+
+您應該執行下列命令、以建立與SnapCenter 該伺服器的連線、列出備份並擷取其資訊、以及還原備份。
+
+您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725["《軟件命令參考指南》SnapCenter"^]。
+
+*步驟*
+
+. 針對SnapCenter 指定的使用者（_Open-SmConnection_）、啟動與該伺服器的連線工作階段
+. 擷取您要還原的備份相關資訊：_Get-SmBackup
+. 擷取指定備份的詳細資訊：_Get-SmBackup Details
++
+此命令會擷取使用指定備份ID備份指定資源的詳細資訊。這些資訊包括資料庫名稱、版本、主目錄、開始與結束SCN、表格空間、可插拔的資料庫及其表格空間。
+
+. 從備份還原資料：_Restore-SmBackup
+

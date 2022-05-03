@@ -1,0 +1,26 @@
+---
+permalink: protect-sco/reference_requirements_for_backing_up_an_oracle_database.html 
+sidebar: sidebar 
+keywords: requirements, prerequisites 
+summary: 在備份Oracle資料庫之前、您應確保已完成先決條件。 
+---
+= 備份Oracle資料庫的需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在備份Oracle資料庫之前、您應確保已完成先決條件。
+
+* 您必須已建立附加原則的資源群組。
+* 如果您想要備份與二線儲存設備有SnapMirror關係的資源、ONTAP 指派給儲存設備使用者的這個角色應該包含「全部快照鏡射」權限。不過、如果您使用「vsadmin」角色、則不需要「全部快照鏡像」權限。
+* 您必須將備份作業所使用的集合體指派給資料庫所使用的儲存虛擬機器（SVM）。
+* 您應該已經確認、如果該資料庫已啟用二線保護、則屬於資料庫的所有資料磁碟區和歸檔記錄磁碟區都會受到保護。
+* 您應該已確認ASM磁碟群組中含有檔案的資料庫應處於「安裝」或「開啟」狀態、以便使用Oracle DBVERIFY公用程式來驗證其備份。
+* 您應該已確認Volume掛載點長度不超過240個字元。
+* 如果要備份的資料庫很大（TB大小）、則應將RESTimeout的值增加至SnapCenter 32伺服器主機中的_C：\Program Files\NetApp \SMCore\SMCoreServiceHost.exe.config_檔案中的86400000秒。
++
+修改這些值時、請確保沒有執行中的工作、SnapCenter 並在增加值後重新啟動「WSSMCore」服務。
+
+

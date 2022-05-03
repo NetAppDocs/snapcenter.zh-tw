@@ -1,0 +1,173 @@
+---
+permalink: protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html 
+sidebar: sidebar 
+keywords:  
+summary: 新增主機並安裝外掛程式套件之前、您必須先完成所有需求。 
+---
+= 新增主機及安裝SnapCenter Microsoft Exchange Server的功能的先決條件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+新增主機並安裝外掛程式套件之前、您必須先完成所有需求。
+
+* 如果您使用iSCSI、則必須執行iSCSI服務。
+* 您必須擁有具有本機系統管理員權限的網域使用者、並在遠端主機上具有本機登入權限。
+* 您必須使用Microsoft Exchange Server 2013、2016或2019來進行獨立式和資料庫可用度群組組組態。
+* 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.
+* 如果您管理SnapCenter 的是叢集節點、則必須有擁有叢集中所有節點管理權限的使用者。
+* 您的使用者必須具有Exchange Server的管理權限。
+* 如果SnapManager 已SnapDrive 安裝適用於Microsoft Exchange Server和Windows的Sfor、則必須先取消登錄SnapDrive 適用於Windows的VSS硬體供應商、才能在同一部Exchange Server上安裝Exchange外掛程式、以確保使用SnapCenter WALL成功保護資料。
+* 如果SnapManager 同一部伺服器上安裝了適用於Microsoft Exchange Server和Exchange外掛程式、則您必須暫停或刪除Windows排程器SnapManager 中所有由Microsoft Exchange Server的更新排程。
+* 主機必須可解析為伺服器的完整網域名稱（FQDN）。如果已修改hosts檔案以使其可解析、且在hosts檔案中同時指定了簡短名稱和FQDN、請在SnapCenter 下列格式的Sesfhosts檔案中建立項目：_<ip_address><host_fqd><host_name>_。
+* 請確定下列連接埠未在防火牆中遭到封鎖、否則新增主機作業會失敗。若要解決此問題、您必須設定動態連接埠範圍。如需詳細資訊、請參閱 https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Microsoft文件"^]。
++
+** 適用於Windows 2016和Exchange 2016的連接埠範圍為50000 - 51000
+** 適用於Windows 2012 R2和Exchange 2013的連接埠範圍為6000 - 6500
+** 適用於Windows 2019的連接埠範圍為49152 - 65536
+
+
+
+
+[NOTE]
+====
+若要識別連接埠範圍、請執行下列命令：
+
+* Netsh int ipv4顯示為Dynamicport tcp
+* Netsh int ipv4顯示Dynamicport udp
+* Netsh int IPv6顯示為Dynamicport TCP
+* Netsh int IPv6顯示Dynamicport udp
+
+
+====
+
+
+== 安裝SnapCenter 適用於Windows的功能性外掛程式套件的主機需求
+
+在安裝SnapCenter 適用於Windows的整套解決方案之前、您應該先熟悉一些基本的主機系統空間需求和規模調整需求。
+
+|===
+| 項目 | 需求 
+
+
+ a| 
+作業系統
+ a| 
+Microsoft Windows
+
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+
+
+
+ a| 
+主機上安裝的不需使用的RAM SnapCenter
+ a| 
+1 GB
+
+
+
+ a| 
+主機上安裝及記錄SnapCenter 插件的最低空間
+ a| 
+5 GB
+
+
+NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使用量。所需的記錄空間會因受保護的實體數量和資料保護作業的頻率而有所不同。如果沒有足夠的磁碟空間、將不會針對最近執行的作業建立記錄。
+
+
+
+ a| 
+必要的軟體套件
+ a| 
+* Microsoft .NET Framework 4.5.2或更新版本
+* Windows管理架構（WMF4.0或更新版本）
+* PowerShell 4.0或更新版本
+
+
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+
+|===
+
+
+== 需要Exchange Server權限
+
+若要啟用SnapCenter 支援功能以新增Exchange Server或DAG、並在SnapCenter 主機或DAG上安裝適用於Microsoft Exchange Server的支援功能外掛程式、您必須為SnapCenter 擁有最低權限和權限的使用者設定認證功能。
+
+您必須擁有具有本機系統管理員權限的網域使用者、並擁有遠端Exchange主機的本機登入權限、以及DAG中所有節點的系統管理權限。網域使用者需要下列最低權限：
+
+* add-MailboxDatabaseCopy
+* 卸載資料庫
+* Get-AdServerSettings
+* Get-DatabaseAvailable Group
+* Get-ExchangeServer
+* Get-mailboxDatabase
+* Get-MailboxDatabaseCopyStatus
+* Get-MailboxServer
+* Get-MailboxStatistics
+* Get-PublicFolderDatabase
+* move-ActiveMailboxDatabase
+* move-DatabasePath -Configuration Only：$true
+* 掛載資料庫
+* 全新的mailboxDatabase
+* 新出版資料庫
+* 去除mailboxDatabase
+* 去除MailboxDatabaseCopy
+* 移除-出版資料庫
+* RESUME：MailboxDatabaseCopy
+* Set-AdServerSettings
+* Set-mailboxdatabase-allowfilerestore：$true
+* Set-MailboxDatabaseCopy
+* Set-PublicFolderDatabase
+* suspend-MailboxDatabaseCopy
+* update-MailboxDatabaseCopy
+
+
+
+
+== 在Windows Server 2012或更新版本上設定GMSA
+
+在安裝SnapCenter 適用於Windows的整套解決方案之前、您應該先熟悉一些基本的主機系統空間需求和規模調整需求。
+
+|===
+| 項目 | 需求 
+
+
+ a| 
+作業系統
+ a| 
+Microsoft Windows
+
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+
+
+
+ a| 
+主機上安裝的不需使用的RAM SnapCenter
+ a| 
+1 GB
+
+
+
+ a| 
+主機上安裝及記錄SnapCenter 插件的最低空間
+ a| 
+5 GB
+
+
+NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使用量。所需的記錄空間會因受保護的實體數量和資料保護作業的頻率而有所不同。如果沒有足夠的磁碟空間、將不會針對最近執行的作業建立記錄。
+
+
+
+ a| 
+必要的軟體套件
+ a| 
+* Microsoft .NET Framework 4.5.2或更新版本
+* Windows管理架構（WMF4.0或更新版本）
+* PowerShell 4.0或更新版本
+
+
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+
+|===

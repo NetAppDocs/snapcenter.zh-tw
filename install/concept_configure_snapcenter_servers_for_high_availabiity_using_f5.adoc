@@ -1,0 +1,40 @@
+---
+permalink: install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html 
+sidebar: sidebar 
+keywords: F5,load balancer 
+summary: 若要在SnapCenter 支援方面支援高可用度（HA）、您可以安裝F5負載平衡器。在同SnapCenter 一位置的最多兩部主機中、使用F5可支援主動-被動組態。若要在SnapCenter 整個過程中使用F5負載平衡器、您應該設定SnapCenter 「伺服器」並設定「F5負載平衡器」。 
+---
+= 使用SnapCenter F5設定高可用度的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要在SnapCenter 支援方面支援高可用度（HA）、您可以安裝F5負載平衡器。在同SnapCenter 一位置的最多兩部主機中、使用F5可支援主動-被動組態。若要在SnapCenter 整個過程中使用F5負載平衡器、您應該設定SnapCenter 「伺服器」並設定「F5負載平衡器」。
+
+
+IMPORTANT: 如果您已從SnapCenter 更新版的版本為版本4.2.x、而且之前使用的是網路負載平衡（NLB）、則可以繼續使用該組態或切換至F5。
+
+工作流程影像會列出使用SnapCenter F5負載平衡器設定高可用度的功能步驟。如需詳細指示、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["如何使用SnapCenter F5負載平衡器設定高可用度的功能"^]。
+
+image::../media/sc-F5-configure-workflow.png[SC F5設定工作流程]
+
+您必須是SnapCenter 本機「管理員」群組的成員（除了指派給SnapCenterAdmin角色之外）、才能使用下列Cmdlet來新增和移除F5叢集：
+
+* add-SmServerCluster
+* add-SmServer
+* 移除SmServerCluster
++
+如需詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+
+
+
+
+
+=== 其他的F5組態資訊
+
+* 安裝並設定SnapCenter 好高可用度的功能後、請編輯SnapCenter 「不間斷」桌面捷徑、以指向F5叢集IP。
+* 如果SnapCenter 在伺服器之間發生容錯移轉、而且還有現有SnapCenter 的故障恢復工作階段、您必須關閉瀏覽器並SnapCenter 重新登入。
+* 在負載平衡器設定（NLB或F5）中、如果您新增的節點已部分由NLB或F5節點解析、SnapCenter 而且如果此節點無法連線至此節點、SnapCenter 則「支援服務」頁面會頻繁地在主機停機和執行狀態之間切換。若要解決此問題、您應該確定SnapCenter 兩個支援節點都能解決NLB或F5節點中的主機問題。
+

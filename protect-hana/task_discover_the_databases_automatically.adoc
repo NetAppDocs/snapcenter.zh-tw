@@ -1,0 +1,62 @@
+---
+permalink: protect-hana/task_discover_the_databases_automatically.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 資源包括SAP HANA資料庫和SnapCenter 非資料Volume、位於由支援的Linux主機上。探索可用的SAP HANA資料庫之後、您可以將這些資源新增至資源群組、以執行資料保護作業。 
+---
+= 自動探索資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+資源包括SAP HANA資料庫和SnapCenter 非資料Volume、位於由支援的Linux主機上。探索可用的SAP HANA資料庫之後、您可以將這些資源新增至資源群組、以執行資料保護作業。
+
+*您需要的是什麼*
+
+* 您必須已經完成安裝SnapCenter 完《支援服務器》、新增HDB使用者儲存金鑰、新增主機、以及設定儲存系統連線等工作。
+* 您必須在Linux主機上設定HDB Secure User Store Key和HDB SQL OS使用者。
++
+** 您必須使用SID adm使用者來設定HDB使用者存放區金鑰。例如、若HANA系統的SID為A22、則HDB使用者儲存區金鑰必須設定為a22adm。
+
+
+* SAP HANA資料庫的支援SAP HANA外掛程式不支援自動探索Rdm/VMDK虛擬環境中的資源。SnapCenter您必須在手動新增資料庫的同時、提供虛擬環境的儲存資訊。
+
+
+*關於此工作*
+
+安裝外掛程式之後、該Linux主機上的所有資源都會自動探索並顯示在「資源」頁面上。
+
+無法修改或刪除自動探索的資源。
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取SAP HANA資料庫的外掛程式。
+. 在「資源」頁面中、從「檢視」清單中選取資源類型。
+. （選用）按一下*image:../media/filter_icon.gif[""]*、然後選取主機名稱。
++
+然後按一下*image:../media/filter_icon.gif[""]*關閉篩選窗格。
+
+. 按一下*重新整理資源*以探索主機上可用的資源。
++
+這些資源會連同資源類型、主機名稱、相關資源群組、備份類型、原則和整體狀態等資訊一起顯示。
+
++
+** 如果資料庫位於NetApp儲存設備上且未受到保護、則「整體狀態」欄中會顯示「未受保護」。
+** 如果資料庫位於NetApp儲存系統上且受到保護、且未執行備份作業、則「整體狀態」欄中會顯示「未執行備份」。否則狀態會變更為「備份失敗」或「備份成功」、視上次的備份狀態而定。
+
+
+
+
+
+NOTE: 如果SAP HANA資料庫未設定HDB Secure User Store金鑰、則資源旁會出現紅色掛鎖圖示。如果在後續探索作業期間、發現設定的HDB Secure User Store金鑰不正確或無法存取資料庫本身、則紅色的掛鎖圖示會重新出現。
+
+
+IMPORTANT: 如果資料庫重新命名為SnapCenter 不屬於支援範圍、您必須重新整理資源。
+
+*完成後*
+
+您必須設定HDB安全使用者儲存金鑰和HDBSQL OS使用者、才能保護資料庫或將其新增至資源群組、以執行資料保護作業。
+
+link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["針對SAP HANA資料庫設定HDB使用者儲存金鑰和HDBSQL OS使用者"]

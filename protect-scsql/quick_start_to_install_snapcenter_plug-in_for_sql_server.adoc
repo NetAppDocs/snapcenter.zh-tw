@@ -1,0 +1,324 @@
+---
+permalink: protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 提供安裝SnapCenter 適用於SnapCenter Microsoft SQL Server的支援服務器和支援Microsoft SQL Server的支援服務。 
+---
+= 快速安裝SnapCenter 適用於SQL Server的解決方法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+提供一套精簡的安裝說明、以安裝SnapCenter 適用於SnapCenter Microsoft SQL Server的支援功能、以及支援Microsoft SQL Server的支援功能。
+
+
+
+== 準備安裝
+
+*網域與工作群組需求*
+
+可在網域或工作群組中的系統上安裝。SnapCenter
+
+如果您使用的是Active Directory網域、則應使用具有本機系統管理員權限的網域使用者。網域使用者應該是Windows主機上本機系統管理員群組的成員。
+
+如果您使用的是工作群組、則應使用具有本機系統管理員權限的本機帳戶。
+
+*授權要求*
+
+您安裝的授權類型取決於您的環境。
+
+|===
+| 授權 | 必要時 
+
+
+ a| 
+以標準控制器為基礎SnapCenter
+ a| 
+不適用於功能不一的儲存控制器FAS AFF
+
+不含不含控制器型授權的優質套裝組合。SnapCenter如果您擁有SnapManager 此產品的不支援功能、您也可以取得SnapCenter 「不支援即用」的授權。如果您想SnapCenter 要以試用版的FAS 方式安裝含有VMware或AFF VMware的儲存設備、您可以聯絡銷售代表、取得Premium產品組合評估授權。
+
+
+
+ a| 
+以容量為基礎的標準SnapCenter
+ a| 
+需要搭配使用ONTAP Select Cloud Volumes ONTAP
+
+如果Cloud Volumes ONTAP 您是一個不知道或ONTAP Select 不知道的客戶、您必須根據SnapCenter 由支援的資料、購買每TB容量型授權。根據預設SnapCenter 、不含內建90天100 TB SnapCenter 的功能型試用授權。如需其他詳細資料、請聯絡銷售代表。
+
+
+
+ a| 
+SnapMirror或SnapVault
+ a| 
+ONTAP
+
+如果在功能區啟用複寫、則需要SnapMirror或SnapVault 不含任何資訊的授權SnapCenter 。
+
+
+
+ a| 
+額外授權（選用）
+ a| 
+請參閱 link:../install/concept_snapcenter_licenses.html["不需要授權SnapCenter"^]。
+
+
+
+ a| 
+不含標準授權（選用）SnapCenter
+ a| 
+次要目的地
+
+
+NOTE: 我們建議您將SnapCenter 不需要的「不二用」授權新增至次要目的地。如果SnapCenter 在次要目的地上未啟用「支援支援功能」、SnapCenter 則在執行容錯移轉作業之後、您將無法使用「支援功能」在次要目的地上備份資源。不過、次要目的地需要FlexClone授權才能執行複製與驗證作業。
+
+|===
+*額外需求*
+
+如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["互通性對照表工具"^]
+
+|===
+| 主機 | 最低要求 
+
+
+ a| 
+作業系統（64位元）
+ a| 
+請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["互通性對照表工具"^]
+
+
+
+ a| 
+CPU
+ a| 
+* 伺服器主機：4核心
+* 外掛程式主機：1核心
+
+
+
+
+ a| 
+RAM
+ a| 
+* 伺服器主機：8 GB
+* 外掛程式主機：1 GB
+
+
+
+
+ a| 
+硬碟空間
+ a| 
+伺服器主機：
+
+* 4 GB、適用於SnapCenter 伺服器軟體和記錄
+* 6 GB、用於SnapCenter 儲存庫
+* 每個外掛程式主機：2 GB用於外掛程式安裝和記錄、只有在外掛程式安裝在專用主機上時才需要。
+
+
+
+
+ a| 
+協力廠商程式庫
+ a| 
+在伺服器主機和外掛主機上需要SnapCenter ：
+
+* Microsoft .NET Framework 4.5.2或更新版本
+* Windows管理架構（WMF4.0或更新版本）
+* PowerShell 4.0或更新版本
+
+
+
+
+ a| 
+瀏覽器
+ a| 
+Chrome、Internet Explorer和Microsoft Edge
+
+|===
+|===
+| 連接埠類型 | 預設連接埠 
+
+
+ a| 
+連接埠SnapCenter
+ a| 
+8146（HTTPS）、雙向、可自訂的、如URL _\https://server:8146_所載
+
+
+
+ a| 
+WSSMCore通訊連接埠SnapCenter
+ a| 
+8145（HTTPS）、雙向、可自訂
+
+
+
+ a| 
+儲存庫資料庫
+ a| 
+3306（HTTPS）、雙向
+
+
+
+ a| 
+Windows外掛程式主機
+ a| 
+135、445（TCP）
+
+除了連接埠135和445之外、Microsoft指定的動態連接埠範圍也應該開啟。遠端安裝作業使用Windows Management Instrumentation（WMI）服務、此服務會動態搜尋此連接埠範圍。
+
+如需支援的動態連接埠範圍資訊、請參閱 https://docs.microsoft.com/en-US/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements["Windows的服務總覽和網路連接埠需求"^]。
+
+
+
+ a| 
+適用於Windows的插件SnapCenter
+ a| 
+8145（HTTPS）、雙向、可自訂
+
+
+
+ a| 
+叢集或SVM通訊連接埠ONTAP
+ a| 
+443（HTTPS）、雙向；80（HTTP）、雙向
+
+連接埠可用於SnapCenter 在SVM主機、外掛主機和SVM或ONTAP S叢 集之間進行通訊。
+
+|===
+*適用於Microsoft SQL Server需求的外掛程式* SnapCenter
+
+您的使用者應具備本機系統管理員權限、並具有遠端主機的本機登入權限。如果您管理叢集節點、則需要擁有叢集中所有節點管理權限的使用者。
+
+您應該擁有SQL Server上具有Sysadmin權限的使用者。外掛程式使用Microsoft VDI Framework、需要系統管理員存取權。
+
+如果您使用SnapManager 的是Microsoft SQL Server的支援功能、而且想要將資料從SnapManager Microsoft SQL Server的支援中心匯入SnapCenter 到支援中心、請參閱 link:../protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["匯入歸檔備份"^]
+
+
+
+== 安裝SnapCenter 伺服器
+
+*下載並安裝SnapCenter 《Sile Server*》
+
+*步驟*
+
+. 從下載SnapCenter 《the》的《the》（英文）《the》（英文 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支援網站"^] 然後按兩下exe。
++
+在您啟動安裝之後、會執行所有預先檢查、如果未達到最低要求、則會顯示適當的錯誤或警告訊息。您可以忽略警告訊息並繼續安裝、但錯誤應予以修正。
+
+. 檢閱SnapCenter 安裝此功能所需的預先填入值、並視需要進行修改。
++
+您不需要指定MySQL Server儲存庫資料庫的密碼。在安裝過程中、會自動產生密碼。SnapCenter
+
++
+
+NOTE: 自訂安裝路徑不支援特殊字元「%」。如果您在路徑中加入「%」、安裝將會失敗。
+
+. 按一下*立即安裝*。
+
+
+*登入SnapCenter 到S編*
+
+*步驟*
+
+. 從SnapCenter 主機桌面上的捷徑或安裝所提供的URL啟動支援（預設連接埠8146安裝SnapCenter 了支援支援服務器的端口為_\https://server:8146_）。
+. 輸入認證資料。
++
+如需內建的網域管理使用者名稱格式、請使用：_netbios\<使用者名稱>_或@<網域>_或_<網域FQDN >\<使用者名稱>_。
+
++
+如需內建的本機管理使用者名稱格式、請使用_。
+
+. 按一下*登入*。
+
+
+*新增SnapCenter 一套以控制器為基礎的功能*
+
+*步驟*
+
+. 使用ONTAP 下列命令列登入控制器：
++
+「系統授權新增-授權碼<license_key>」
+
+. 驗證授權：
++
+《許可證展示》
+
+
+
+*加入SnapCenter 以功能為基礎的授權*
+
+*步驟*
+
+. 在「S16GUI」左窗格中、按一下「*設定>軟體*」、然後在「授權」區段中、按一下「*+*」SnapCenter 。
+. 選取兩種取得授權的方法之一：
++
+** 輸入您的NetApp Support網站登入認證資料以匯入授權。
+** 瀏覽至NetApp授權檔案的位置、然後按一下*「Open*（開啟*）」。
+
+
+. 在精靈的「通知」頁面中、使用90%的預設容量臨界值。
+. 單擊*完成*。
+
+
+*設定儲存系統連線*
+
+*步驟*
+
+. 在左窗格中、按一下*儲存系統>新增*。
+. 在「Add Storage System（新增儲存系統）」頁面中、執行下列步驟：
++
+.. 輸入儲存系統的名稱或IP位址。
+.. 輸入用於存取儲存系統的認證資料。
+.. 勾選核取方塊以啟用事件管理系統（EMS）和AutoSupport 功能表。
+
+
+. 如果要修改指派給平台、傳輸協定、連接埠和逾時的預設值、請按一下*「更多選項」*。
+. 按一下*提交*。
+
+
+
+
+== 安裝Microsoft SQL Server外掛程式
+
+*設定「執行身分證明」以安裝Microsoft SQL Server*的外掛程式
+
+*步驟*
+
+. 在左窗格中、按一下*設定>認證>新增*。
+. 輸入認證資料。
++
+如需內建的網域管理使用者名稱格式、請使用：_netbios\<使用者名稱>_或@<網域>_或_<網域FQDN >\<使用者名稱>_。
+
++
+如需內建的本機管理使用者名稱格式、請使用_。
+
+
+
+*新增主機並安裝Microsoft SQL Server*的外掛程式
+
+*步驟*
+
+. 在「S16GUI」左窗格中、按一下SnapCenter 「*主機>託管主機>新增*」。
+. 在精靈的「主機」頁面中、執行下列步驟：
++
+.. 主機類型：選取Windows主機類型。
+.. 主機名稱：使用SQL主機或指定專屬Windows主機的FQDN。
+.. 認證：選取您所建立之主機的有效認證名稱、或是建立新認證。
+
+
+. 在Select Plug-ins to Install（選擇要安裝的外掛程式）區段中、選取* Microsoft SQL Server*。
+. 按一下*「更多選項」*以指定下列詳細資料：
++
+.. 連接埠：保留預設連接埠號碼或指定連接埠號碼。
+.. 安裝路徑：預設路徑為_C:\Program Files\NetApp\SnapCenter_。您可以選擇性地自訂路徑。
+.. 新增叢集中的所有主機：如果您在WSFC中使用SQL、請選取此核取方塊。
+.. 跳過預先安裝檢查：如果您已手動安裝外掛程式、或不想驗證主機是否符合安裝外掛程式的需求、請選取此核取方塊。
+
+
+. 按一下*提交*。
+

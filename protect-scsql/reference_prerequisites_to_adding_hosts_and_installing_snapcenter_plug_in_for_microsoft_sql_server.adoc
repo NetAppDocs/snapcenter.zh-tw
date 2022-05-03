@@ -1,0 +1,35 @@
+---
+permalink: protect-scsql/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。 
+---
+= 新增主機和安裝SnapCenter Microsoft SQL Server的支援功能外掛程式的先決條件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。
+
+* 如果您使用iSCSI、則必須執行iSCSI服務。
+* 您必須擁有具有本機系統管理員權限的使用者、且該使用者具有遠端主機的本機登入權限。
+* 如果您管理SnapCenter 的是叢集節點、則必須有擁有叢集中所有節點管理權限的使用者。
+* 您的使用者必須具有SQL Server上的Sysadmin權限。
++
+適用於Microsoft SQL Server的VMware vCenter外掛程式使用Microsoft VDI架構、需要系統管理員存取權。SnapCenter
+
++
+http://support.microsoft.com/kb/2926557/["Microsoft支援文件編號2926557：SQL Server VDI備份與還原作業需要Sysadmin權限"]
+
+* 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.
+* 如果安裝了適用於Microsoft SQL Server的功能、您必須停止或停用服務和排程。SnapManager
++
+如果您打算將備份或複製工作匯入SnapCenter 到支援區、請勿解除安裝SnapManager Microsoft SQL Server的功能。
+
+* 主機必須可解析為伺服器的完整網域名稱（FQDN）。
++
+如果已修改hosts檔案以使其可解析、且在hosts檔案中同時指定了簡短名稱和FQDN、請在SnapCenter 下列格式的Isethosts檔案中建立項目：<ip_address><host_fqd><host_name>
+
+

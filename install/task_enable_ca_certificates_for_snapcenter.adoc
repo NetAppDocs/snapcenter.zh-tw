@@ -1,0 +1,42 @@
+---
+permalink: install/task_enable_ca_certificates_for_snapcenter.html 
+sidebar: sidebar 
+keywords: SnapCenter, enable CA, certificate 
+summary: 您應該設定CA憑證、並啟用SnapCenter 適用於該伺服器的CA憑證驗證。 
+---
+= 啟用CA認證SnapCenter 以供使用
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該設定CA憑證、並啟用SnapCenter 適用於該伺服器的CA憑證驗證。
+
+*您需要的是什麼*
+
+* 您可以使用Set-SmCertificateSettings Cmdlet來啟用或停用CA憑證。
+* 您可以SnapCenter 使用Get-SmCertificateSettings Cmdlet來顯示驗證伺服器的憑證狀態。
+
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+
+*步驟*
+
+. 在「設定」頁面中、瀏覽至*設定*>*全域設定*>* CA憑證設定*。
+. 選取*啟用憑證驗證*。
+. 按一下「 * 套用 * 」。
+
+
+*完成後*
+
+「受管理的主機」標籤主機會顯示掛鎖、掛鎖的色彩則會指出SnapCenter 「支援服務器」與外掛主機之間的連線狀態。
+
+* *image:../media/enable_ca_issues_icon.png[""]*表示沒有啟用CA憑證或指派給外掛程式主機。
+* *image:../media/enable_ca_good_icon.png[""]*表示CA憑證已成功驗證。
+* *image:../media/enable_ca_failed_icon.png[""]*表示無法驗證CA憑證。
+* *image:../media/enable_ca_undefined_icon.png[""]*表示無法擷取連線資訊。
+
+
+
+NOTE: 當狀態為黃色或綠色時、資料保護作業會成功完成。

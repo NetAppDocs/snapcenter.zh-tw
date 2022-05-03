@@ -1,0 +1,40 @@
+---
+section: admin
+title: 管理SnapCenter 伺服器和外掛程式
+entries:
+- title: 檢視儀表板
+  entries:
+  - title: 儀表板總覽
+    url: "/admin/concept_overview_of_dashboard.html"
+  - title: 如何檢視儀表板上的資訊
+    url: "/admin/task_how_to_view_information_on_the_dashboard.html"
+  - title: 從儀表板要求工作狀態報告
+    url: "/admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html"
+  - title: 從儀表板索取保護狀態報告
+    url: "/admin/task_request_reports_of_the_protection_status_from_the_dashboard.html"
+- title: 管理RBAC
+  url: "/admin/task_manage_rbac.html"
+- title: 管理主機
+  url: "/admin/concept_manage_hosts.html"
+- title: "「資源」頁面支援的作業"
+  url: "/admin/concept_what_operations_can_be_performed_from_the_resource_page.html"
+- title: 管理原則
+  url: "/admin/concept_manage_policies.html"
+- title: 管理資源群組
+  url: "/admin/task_manage_resource_groups.html"
+- title: 管理備份
+  url: "/admin/concept_manage_backups.html"
+- title: 刪除複本
+  url: "/admin/task_delete_clones.html"
+- title: 監控工作、排程、事件和記錄
+  url: "/admin/concept_monitor_jobs_schedules_events_and_logs.html"
+- title: 概述功能SnapCenter
+  url: "/admin/concept_overview_of_snapcenter_reports.html"
+- title: 管理SnapCenter 伺服器儲存庫
+  url: "/admin/concept_manage_the_snapcenter_server_repository.html"
+- title: 管理不受信任網域的資源
+  url: "/admin/concept_manage_resources_of_untrusted_domains.html"
+- title: 管理儲存系統
+  url: "/admin/concept_manage_the_storage_system.html"
+- title: 管理EMS資料收集
+  url: "/admin/concept_manage_ems_data_collection.html"

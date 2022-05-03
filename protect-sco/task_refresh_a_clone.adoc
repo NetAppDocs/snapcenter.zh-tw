@@ -1,0 +1,64 @@
+---
+permalink: protect-sco/task_refresh_a_clone.html 
+sidebar: sidebar 
+keywords: refresh clone, clone 
+summary: 您可以執行「Refresh-SmClone」命令來重新整理實體複本。此命令會建立資料庫的備份、刪除現有的實體複本、並建立名稱相同的實體複本。 
+---
+= 重新整理實體複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以執行_Refresh-SmClon_命令來重新整理複本。此命令會建立資料庫的備份、刪除現有的實體複本、並建立名稱相同的實體複本。
+
+
+NOTE: 您無法重新整理pdb複本。
+
+*您需要的是什麼*
+
+* 在未啟用排程備份的情況下、建立線上完整備份或離線資料備份原則。
+* 在原則中設定電子郵件通知、僅用於備份失敗。
+* 適當定義隨需備份的保留次數、以確保沒有不必要的備份。
+* 請確定只有線上完整備份或離線資料備份原則與資源群組相關聯、而資源群組可識別為重新整理複本作業。
+* 建立只有一個資料庫的資源群組。
+* 如果建立了cron工作來執行Clone Refresh命令、請確保SnapCenter 資料庫資源群組的執行不重疊。
++
+對於為Clone Refresh命令所建立的cron工作、請確定您每24小時執行一次Open-SmConnection。
+
+* 確保主機的實體複本SID是唯一的。
++
+如果多個重新整理複本作業使用相同的實體複本規格檔案、或是使用具有相同實體複本ID的實體複本規格檔案、則會刪除主機上具有該SID的現有實體複本、然後建立該實體複本。
+
+* 確保備份原則已啟用二線保護、且複製規格檔案是以「-IncludeSecondaryDetails」建立、以使用二線備份建立複本。
++
+** 如果已指定主要實體複本規格檔案、但已選取原則的次要更新選項、則會建立備份、並將更新傳輸至次要。不過、複本會從主要備份建立。
+** 如果已指定主要實體複本規格檔案、但未選取原則的次要更新選項、則會在主要系統上建立備份、並從主要系統建立實體複本。
+
+
+
+
+*步驟*
+
+. 針對SnapCenter 指定的使用者（_Open-SmConnection_）、啟動與該伺服器的連線工作階段
+. 從指定的備份建立Oracle資料庫複製規格：_New-SmOracleClonewor__
++
+
+NOTE: 如果次要資料保護原則是統一化的鏡射保存庫、則只需指定-IncludeSecondaryDetails。您不需要指定-SecondaryStorageType。
+
++
+此命令會自動為指定的來源資料庫及其備份建立Oracle資料庫複製規格檔案。您也必須提供複製資料庫的SID、以便所建立的規格檔案具有您要建立之複製資料庫的自動產生值。
+
++
+
+NOTE: 複製規格檔案建立於_/var/opt/snapcenter/scope/clone _specs_。
+
+. 執行_Refresh-SmClon_。
++
+如果作業失敗並顯示「PL-SCO-20032：CanExecute operation失敗、並顯示錯誤：PL-SCO-30031：REDO記錄檔+SC_2959770772_clmdb/clmdb/redog/redo01_01.log exists」錯誤訊息、請為「-WaitToTrigerClerClone」指定較高的值。
+
++
+如需UNIX命令的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725["《軟件命令參考指南》SnapCenter"^]。
+
+

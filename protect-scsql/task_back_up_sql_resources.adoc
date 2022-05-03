@@ -1,0 +1,154 @@
+---
+permalink: protect-scsql/task_back_up_sql_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果某個資源尚未納入任何資源群組、您可以從「資源」頁面備份該資源。 
+---
+= 備份SQL資源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果某個資源尚未納入任何資源群組、您可以從「資源」頁面備份該資源。
+
+*關於此工作*
+
+* 對於Windows認證驗證、您必須先設定認證、才能安裝外掛程式。
+* 對於SQL Server執行個體驗證、您必須在安裝外掛程式之後新增認證。
+* 若要進行GMSA驗證、您必須在SnapCenter 「*新增主機*」或「*修改主機*」頁面中、設定GMSA、才能啟用及使用GMSA。
+* 如果使用GMSA新增主機、且GMSA具有登入和系統管理權限、則會使用GMSA連線至SQL執行個體。
+
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、從「*檢視*」下拉式清單中選取「*資料庫*」、「*執行個體*」或「*可用度群組*」。
++
+.. 選取您要備份的資料庫、執行個體或可用度群組。
++
+當您備份執行個體時、「資源」頁面將無法提供該執行個體上次備份狀態或時間戳記的相關資訊。
+
++
+在拓撲檢視中、您無法區分備份狀態、時間戳記或備份是針對執行個體或資料庫。
+
+
+
+. 在「資源」頁面中、選取「Snapshot Copy*的*自訂名稱格式」核取方塊、然後輸入您要用於Snapshot複本名稱的自訂名稱格式。
++
+例如、customtext_policy_hostnameor resource_hostname.根據預設、快照複本名稱會附加時間戳記。
+
+. 在「原則」頁面中、執行下列工作：
++
+.. 在原則區段中、從下拉式清單中選取一或多個原則。
++
+您可以按一下*來建立原則image:../media/add_policy_from_resourcegroup.gif[""]*啟動原則精靈。
+
++
+在「*設定所選原則的排程*」區段中、會列出所選原則。
+
+.. 按一下*image:../media/add_policy_from_resourcegroup.gif[""]*在您要為其設定排程的原則的「設定排程」欄中。
+.. 在「*新增原則的排程*「policy_name」對話方塊中、設定排程、然後按一下「*確定*」。
++
+此處的「policy_name」是您選取的原則名稱。
+
++
+已設定的排程會列在*已套用的排程*欄中。
+
+.. 選取*使用Microsoft SQL Server排程器*、然後從*排程器執行個體*下拉式清單中選取與排程原則相關的排程器執行個體。
+
+
+. 在「驗證」頁面中、執行下列步驟：
++
+.. 從*驗證伺服器*下拉式清單中選取驗證伺服器。
++
+您可以選取多個驗證伺服器（本機主機或遠端主機）。
+
++
+
+NOTE: 驗證伺服器版本應等於或高於主資料庫所在的SQL Server版本。
+
+.. 選取*「Load二線定位器」以驗證二線*上的備份、以驗證二線儲存系統上的備份。
+.. 選取您要設定驗證排程的原則、然後按一下*image:../media/add_policy_from_resourcegroup.gif[""]*。
+.. 在「新增驗證排程_policy_name_」對話方塊中、執行下列動作：
++
+|===
+| 如果您想要... | 執行此動作... 
+
+
+ a| 
+備份後執行驗證
+ a| 
+選擇*備份後執行驗證*。
+
+
+
+ a| 
+排程驗證
+ a| 
+選取*執行排程驗證*。
+
+|===
++
+
+NOTE: 如果驗證伺服器沒有儲存連線、驗證作業會失敗並顯示錯誤：無法掛載磁碟。
+
+.. 按一下「*確定*」。
++
+已設定的排程會列在「已套用的排程」欄中。
+
+
+
+. 在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。
++
+您也必須指定寄件者和接收者的電子郵件地址、以及電子郵件的主旨。如果您要附加在資源群組上執行之作業的報告、請選取*附加工作報告*。
+
++
+
+NOTE: 對於電子郵件通知、您必須使用GUI或PowerShell命令Set-SmtpServer來指定SMTP伺服器詳細資料。
+
+. 檢閱摘要、然後按一下「*完成*」。
++
+隨即顯示資料庫拓撲頁面。
+
+. 按一下*立即備份*。
+. 在「備份」頁面中、執行下列步驟：
++
+.. 如果您已將多個原則套用至資源、請從* Policy*下拉式清單中選取要用於備份的原則。
++
+如果針對隨需備份所選取的原則與備份排程相關聯、則會根據為排程類型指定的保留設定來保留隨需備份。
+
+.. 選擇*備份後驗證*以驗證備份。
+.. 按一下*備份*。
++
+如果針對隨需備份所選取的原則與備份排程相關聯、則會根據為排程類型指定的保留設定來保留隨需備份。
+
++
+隨即建立內含資源群組。您可以從「使用者存取」頁面選取個別的使用者或群組來檢視此資訊。隱含資源群組類型為「資源」。
+
+
+
+. 按一下*監控*>*工作*來監控作業進度。
+
+
+*完成後*
+
+* 在不完整的組態中MetroCluster 、SnapCenter 在容錯移轉之後、可能無法偵測到保護關係。
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["無法偵測SnapVault 到SnapMirror或在MetroCluster 進行不復原容錯移轉之後的不協調關係"]
+
+* 如果您在VMDK上備份應用程式資料、SnapCenter 而針對VMware vSphere的VMware vSphere的Java堆疊大小不夠大、則備份可能會失敗。若要增加Java堆大小、請找出指令碼檔案/opp/netapp/init_scripts/scvservice。在該指令碼中、「do_start方法」命令會啟動SnapCenter VMware插件服務。將該命令更新為：「java -jar -Xmx8192M -Xms4096M」。
+
+
+*瞭解更多資訊*
+
+link:task_create_backup_policies_for_sql_server_databases.html["建立SQL Server資料庫的備份原則"]
+
+link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["使用PowerShell Cmdlet備份資源"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["由於TCP_timeout延遲、導致MySQL連線錯誤導致備份作業失敗"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["Windows排程器錯誤導致備份失敗"]
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["靜止或分組資源作業失敗"]

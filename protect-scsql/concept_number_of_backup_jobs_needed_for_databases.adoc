@@ -1,0 +1,16 @@
+---
+permalink: protect-scsql/concept_number_of_backup_jobs_needed_for_databases.html 
+sidebar: sidebar 
+keywords:  
+summary: 決定所需備份工作數目的因素包括資料庫大小、使用的磁碟區數目、資料庫變更率、以及服務層級協議（SLA）。 
+---
+= 資料庫所需的備份工作數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+決定所需備份工作數目的因素包括資料庫大小、使用的磁碟區數目、資料庫變更率、以及服務層級協議（SLA）。
+
+對於資料庫備份、您選擇的備份工作數量通常取決於您放置資料庫的磁碟區數量。例如、如果您將一組小型資料庫放在一個磁碟區上、而另一個磁碟區上有一個大型資料庫、則您可以為小型資料庫建立一個備份工作、為大型資料庫建立一個備份工作。

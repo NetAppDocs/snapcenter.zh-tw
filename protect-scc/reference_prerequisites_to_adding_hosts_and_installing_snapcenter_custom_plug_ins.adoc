@@ -1,0 +1,64 @@
+---
+permalink: protect-scc/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_custom_plug_ins.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。自訂外掛程式可在Windows和Linux環境中使用。 
+---
+= 新增主機和安裝SnapCenter 「更新自訂」外掛程式的先決條件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。自訂外掛程式可在Windows和Linux環境中使用。
+
+* 您必須已建立自訂外掛程式。如需詳細資訊、請參閱開發人員資訊。
++
+link:concept_develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"]
+
+* 如果您想要管理MySQL或DB2應用程式、必須下載NetApp提供的MySQL和DB2自訂外掛程式。
+* 您必須在Linux或Windows主機上安裝Java 1.8、64位元。
+* 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.
+* 自訂外掛程式必須在執行新增主機作業的用戶端主機上可用。
+
+
+
+
+== 一般
+
+如果您使用iSCSI、則必須執行iSCSI服務。
+
+
+
+== Windows主機
+
+* 您必須擁有具有本機系統管理員權限的網域使用者、並在遠端主機上具有本機登入權限。
+* 如果您管理SnapCenter 的是叢集節點、則必須有擁有叢集中所有節點管理權限的使用者。
+
+
+
+
+== Linux主機
+
+* 您必須為root或非root使用者啟用密碼型SSH連線。
+* 您必須在Linux主機上安裝Java 1.8 64位元。
++
+如果SnapCenter 您使用Windows 2019或Windows 2016作為支援此功能的伺服器主機、則必須安裝Java 1.8（64位元）。互通性對照表工具IMT （英文）包含有關需求的最新資訊。
+
++
+http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
+
++
+https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"]
+
+* 您必須為非root使用者設定Sudo權限、才能存取多個路徑。使用visudo Linux公用程式、將下列行新增至/etc/udoers檔案。例如、
++
+[listing]
+----
+Cmnd_Alias SCCMD = /opt/NetApp/snapcenter/scc/bin/scc <non_root_user> ALL=(ALL) NOPASSWD:SETENV: SCCMD
+----
++
+非root使用者是您所建立的非root使用者名稱。
+
+

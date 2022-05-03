@@ -1,0 +1,39 @@
+---
+permalink: protect-hana/reference_storage_types_supported_by_snapcenter_plug_in_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 支援實體機器和虛擬機器（VMs）上的各種儲存類型。SnapCenter安裝SnapCenter 適用於SAP HANA資料庫的支援功能之前、您必須先確認儲存類型的支援。 
+---
+= SAP HANA資料庫的支援儲存類型SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援實體機器和虛擬機器（VM）上的各種儲存類型。SnapCenter安裝SnapCenter 適用於SAP HANA資料庫的支援功能之前、您必須先確認儲存類型的支援。
+
+|===
+| 機器 | 儲存類型 
+
+
+ a| 
+實體與虛擬伺服器
+ a| 
+連接FC的LUN
+
+
+
+ a| 
+實體伺服器
+ a| 
+連接iSCSI的LUN
+
+
+
+ a| 
+實體與虛擬伺服器
+ a| 
+NFS連線的磁碟區
+
+|===

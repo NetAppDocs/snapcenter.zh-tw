@@ -1,0 +1,115 @@
+---
+permalink: protect-hana/task_add_resources_manually_to_the_plug_in_host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 某些HANA執行個體不支援自動探索。您必須手動新增這些資源。 
+---
+= 將資源手動新增至外掛程式主機
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+某些HANA執行個體不支援自動探索。您必須手動新增這些資源。
+
+*您需要的是什麼*
+
+* 您必須已完成安裝SnapCenter 支援服務器、新增主機、設定儲存系統連線、以及新增HDB使用者儲存金鑰等工作。
+* 對於SAP HANA系統複寫、建議將該HANA系統的所有資源新增至單一資源群組、然後進行資源群組備份。如此可確保在接管容錯回復模式期間進行無縫備份。
+
+
+link:task_create_resource_groups_and_attach_policies.html["建立資源群組並附加原則"]。
+
+*關於此工作*
+
+下列組態不支援自動探索：
+
+* RDM和VMDK配置
++
+
+NOTE: 如果發現上述資源、這些資源不支援資料保護作業。
+
+* Hana多主機組態
+* 同一主機上有多個執行個體
+* 多層橫向擴充HANA系統複寫
+* 系統複寫模式中的串聯複寫環境
+
+
+*步驟*
+
+. 在左側導覽窗格中、從SnapCenter 下拉式清單中選取「SAP HANA資料庫的功能不全」外掛程式、然後按一下「*資源*」。
+. 在「Resources（資源）」頁面中、按一下「* Add SAP HANA Database*（*新增SAP HANA
+. 在「提供資源詳細資料」頁面中、執行下列動作：
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+資源類型
+ a| 
+輸入資源類型。資源類型包括單一Container、多租戶資料庫Container（MDC）和非資料Volume。
+
+
+
+ a| 
+Hana系統名稱
+ a| 
+輸入描述性SAP HANA系統名稱。此選項僅適用於選取單一容器或MDC資源類型的情況。
+
+
+
+ a| 
+SID
+ a| 
+輸入系統ID（SID）。已安裝的SAP HANA系統是由單一的SID識別。
+
+
+
+ a| 
+外掛程式主機
+ a| 
+選取外掛程式主機。
+
+
+
+ a| 
+HDB安全使用者儲存金鑰
+ a| 
+輸入金鑰以連線至SAP HANA系統。
+
+金鑰包含連線至資料庫的登入資訊。
+
+對於SAP HANA系統複寫、次要使用者金鑰未通過驗證。這將在接管期間使用。
+
+
+
+ a| 
+HDBSQL OS使用者
+ a| 
+輸入設定HDB Secure User Store金鑰的使用者名稱。對於Windows、HDBSQL OS使用者必須是系統使用者。因此、您必須為系統使用者設定HDB Secure User Store金鑰。
+
+|===
+. 在「提供儲存設備佔用空間」頁面中、選取儲存系統、然後選擇一或多個磁碟區、LUN和qtree、然後按一下「*儲存*」。
++
+選用：您可以按一下*image:../media/add_policy_from_resourcegroup.gif[""]*圖示、可從其他儲存系統新增更多磁碟區、LUN及qtree。
+
+. 檢閱摘要、然後按一下「*完成*」。
++
+這些資料庫會連同諸如SID、外掛程式主機、相關資源群組和原則、以及整體狀態等資訊一起顯示
+
+
+
+如果您想要讓使用者存取資源、您必須將資源指派給使用者。如此一來、使用者就能對指派給他們的資產執行其擁有權限的動作。
+
+link:https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html["新增使用者或群組、並指派角色和資產"]
+
+新增資料庫之後、您可以修改SAP HANA資料庫詳細資料。
+
+如果有與SAP HANA資源相關的備份、您就無法修改下列項目：
+
+* 多租戶資料庫容器（MDC）：SID或HDBSQL用戶端（外掛程式）主機
+* 單一容器：SID或HDBSQL用戶端（外掛程式）主機
+* 非資料磁碟區：資源名稱、相關的SID或外掛主機
+

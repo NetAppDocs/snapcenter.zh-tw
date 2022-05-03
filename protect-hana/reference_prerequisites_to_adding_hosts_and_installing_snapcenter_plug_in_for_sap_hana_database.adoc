@@ -1,0 +1,54 @@
+---
+permalink: protect-hana/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_sap_hana_database.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 新增主機並安裝外掛程式套件之前、您必須先完成所有需求。SAP HANA資料庫的支援套件可在Windows和Linux環境中使用。SnapCenter 
+---
+= 新增主機及安裝SnapCenter 適用於SAP HANA資料庫的功能性外掛程式的先決條件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+新增主機並安裝外掛程式套件之前、您必須先完成所有需求。SAP HANA資料庫的支援套件可在Windows和Linux環境中使用。SnapCenter
+
+* 您必須在主機上安裝Java 1.8 64位元。
+* 您必須在主機上安裝SAP HANA資料庫互動終端機（HDBSQL用戶端）。
+* 對於Windows、外掛程式Creator Service應使用「'LocalSystem'」Windows使用者執行、這是以網域管理員身分安裝SAP HANA資料庫外掛程式時的預設行為。
+* 對於Windows、應以系統使用者身分建立使用者儲存金鑰。
+* 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.適用於Microsoft Windows的SAP外掛程式預設會與SAP HANA外掛程式一起部署於Windows主機上。SnapCenter
+* 對於Linux主機、HDB Secure User Store金鑰會以HDBSQL OS使用者的身分存取。
+* 支援SAP HANA資料庫主機的支援應可存取8145或外掛程式的自訂連接埠。SnapCenter
+
+
+
+
+== Windows主機
+
+* 您必須擁有具有本機系統管理員權限的網域使用者、並在遠端主機上具有本機登入權限。
+* 在Windows主機上安裝SAP HANA資料庫外掛程式時SnapCenter 、會自動安裝適用於Microsoft Windows的整套外掛程式。
+* 您必須為root或非root使用者啟用密碼型SSH連線。
+* 您必須在Windows主機上安裝Java 1.8 64位元。
++
+http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
+
++
+https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"]
+
+
+
+
+
+== Linux主機
+
+* 您必須為root或非root使用者啟用密碼型SSH連線。
+* 您必須在Linux主機上安裝Java 1.8 64位元。
++
+http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
+
++
+https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"]
+
+* 對於在Linux主機上執行的SAP HANA資料庫、在安裝SAP HANA資料庫外掛程式時SnapCenter 、會自動安裝適用於UNIX的整套外掛程式。
+

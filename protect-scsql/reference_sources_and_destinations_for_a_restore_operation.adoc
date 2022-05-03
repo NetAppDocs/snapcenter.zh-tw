@@ -1,0 +1,53 @@
+---
+permalink: protect-scsql/reference_sources_and_destinations_for_a_restore_operation.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以從主要或次要儲存設備上的備份複本還原SQL Server資料庫。您也可以將資料庫還原至不同目的地、以及其原始位置、讓您選擇支援需求的目的地。 
+---
+= 還原作業的來源和目的地
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從主要或次要儲存設備上的備份複本還原SQL Server資料庫。您也可以將資料庫還原至不同目的地、以及其原始位置、讓您選擇支援需求的目的地。
+
+
+
+== 還原作業的來源
+
+您可以從一線或二線儲存設備還原資料庫。
+
+
+
+== 還原作業的目的地
+
+您可以將資料庫還原至各種目的地：
+
+|===
+| 目的地 | 說明 
+
+
+ a| 
+原始位置
+ a| 
+根據預設SnapCenter 、將資料庫還原至同一個SQL Server執行個體上的相同位置。
+
+
+
+ a| 
+不同的位置
+ a| 
+您可以將資料庫還原至同一主機內任何SQL Server執行個體上的不同位置。
+
+
+
+ a| 
+使用不同資料庫名稱的原始或不同位置
+ a| 
+您可以使用不同名稱還原資料庫、使其還原至建立備份的同一主機上的任何SQL Server執行個體。
+
+|===
+
+NOTE: 不支援在VMDK（NFS和VMFS資料存放區）上的SQL資料庫、跨ESX伺服器還原至替代主機。

@@ -1,0 +1,100 @@
+---
+permalink: protect-sco/predefined-environment-variables-prescript-postscript-clone.html 
+sidebar: sidebar 
+keywords: environment variable, predefined, prescript, postscript, clone 
+summary: 利用此功能、您可以在複製資料庫時、使用預先定義的環境變數來執行預先記錄和PostScript。SnapCenter 
+---
+= 針對特定實體複本的預先定義環境變數、以及PostScript
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+利用此功能、您可以在複製資料庫時、使用預先定義的環境變數來執行預先記錄和PostScript。SnapCenter
+
+*支援的預先定義環境變數、可用於複製資料庫*
+
+* * sc_ORIGIN_SID*指定來源資料庫的SID。
++
+此參數將會填入應用程式磁碟區。
+
++
+範例：NFS32
+
+* * sc_ORIGIN_host*指定來源主機的名稱。
++
+此參數將會填入應用程式磁碟區。
+
++
+範例：asmrac1.gdl.englab.netapp.com
+
+* * sc_oracle_home*指定目標資料庫的Oracle主目錄路徑。
++
+範例：/ora01/app/oracle/product/18.1.0/db_1
+
+* *sc_backup_name*指定備份的名稱。
++
+此參數將會填入應用程式磁碟區。
+
++
+範例：
+
++
+** 如果資料庫未以ARCHIVELOG模式執行：DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267 0| LOG@RG2_scspr2417819002_07-20-2021_12.16.48.9267
+** 如果資料庫以ARCHIVELOG模式執行：DATA@RG2_scspr2417819002_07-20-2021_12.16.48.9267 0|記錄：RG2_scspr2417819002_07-20-2021_12.16.48.9267_1、RG2_scspr2417819002_07-21-2021_12.16.9267_1、RG2_scspr2417819002_48.202_12.267-2022_16.267-12.2022_16.2022-16.2022_16.267-16.2016.2022_1.267-1.2016.2016.2016.2_16.2016.2_1
+
+
+* * sc_av_name*指定應用程式磁碟區的名稱。
++
+範例：AV1|AV2
+
+* * sc_ORIGIN_OS_USER*指定來源資料庫的作業系統擁有者。
++
+範例：Oracle
+
+* * sc_ORIGINAL_OS_group *指定來源資料庫的作業系統群組。
++
+範例：oinstall
+
+* *sc_target SID*」指定複製資料庫的SID。
++
+對於pdb複製工作流程、此參數的值將不會預先定義。
+
++
+此參數將會填入應用程式磁碟區。
+
++
+範例：clonedb
+
+* * sc_target主機*指定要複製資料庫的主機名稱。
++
+此參數將會填入應用程式磁碟區。
+
++
+範例：asmrac1.gdl.englab.netapp.com
+
+* * sc_target作業系統使用者*指定複製資料庫的作業系統擁有者。
++
+對於pdb複製工作流程、此參數的值將不會預先定義。
+
++
+範例：Oracle
+
+* * sc_target作業系統群組*指定複製資料庫的作業系統群組。
++
+對於pdb複製工作流程、此參數的值將不會預先定義。
+
++
+範例：oinstall
+
+* * sc_target資料庫連接埠*指定複製資料庫的資料庫連接埠。
++
+對於pdb複製工作流程、此參數的值將不會預先定義。
+
++
+範例：1521
+
+
+
+如需分隔符號的相關資訊、請參閱 link:../protect-sco/predefined-environment-variables-prescript-postscript-backup.html#supported-delimiters["支援的分隔符號"^]。

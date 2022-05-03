@@ -1,0 +1,169 @@
+---
+permalink: protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html 
+sidebar: sidebar 
+keywords: installing 
+summary: 您可以使用SnapCenter 「更新主機」頁面來新增Windows主機。適用於Microsoft Windows的支援功能外掛程式會自動安裝在指定的主機上。SnapCenter這是安裝外掛程式的建議方法。您可以為個別主機或叢集新增主機並安裝外掛程式。 
+---
+= 新增主機並安裝SnapCenter 適用於Microsoft Windows的解決方案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapCenter 「更新主機」頁面來新增Windows主機。適用於Microsoft Windows的支援功能外掛程式會自動安裝在指定的主機上。SnapCenter這是安裝外掛程式的建議方法。您可以為個別主機或叢集新增主機並安裝外掛程式。
+
+*您需要的是什麼*
+
+* 您必須是指派給具有外掛安裝和解除安裝權限之角色的使用者、例如SnapCenter 「支援管理員」角色。
+* 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.
+* 應將此使用者新增至Windows Server的「登入即服務」角色。SnapCenter
+* 您應確保訊息佇列服務處於執行中狀態。
+* 如果您使用群組託管服務帳戶（GMSA）、則應該使用管理權限來設定GMSA。
++
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["在Windows Server 2012或更新版本上為Windows檔案系統設定群組託管服務帳戶"]
+
+
+
+*關於此工作*
+
+* 您無法將SnapCenter 某個支援服務器作為外掛主機新增至另SnapCenter 一個支援服務器。
+* Windows外掛程式
++
+** Microsoft Windows
+** Microsoft Exchange Server
+** Microsoft SQL Server
+** SAP HANA
+** 自訂外掛程式
+
+
+* 在叢集上安裝外掛程式
++
+如果您在叢集（WSFC、Oracle RAC或Exchange DAG）上安裝外掛程式、這些外掛程式會安裝在叢集的所有節點上。
+
+* E系列儲存設備
++
+您無法在連接至E系列儲存設備的Windows主機上安裝Windows外掛程式。
+
+
+
+*步驟*
+
+. 在左側導覽窗格中、按一下*主機*。
+. 確保在頂端選擇*託管主機*。
+. 按一下「 * 新增 * 」。
+. 在「hosts」頁面中、執行下列動作：
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+主機類型
+ a| 
+選擇* Windows *類型的主機。
+
+如果主機尚未安裝Windows外掛程式、則支援使用者可新增主機、然後安裝該外掛程式。SnapCenter
+
+
+
+ a| 
+主機名稱
+ a| 
+輸入主機的完整網域名稱（FQDN）或IP位址。
+
+取決於DNS的正確組態。SnapCenter因此、最佳做法是輸入完整網域名稱（FQDN）。
+
+您可以輸入下列其中一項的IP位址或FQDN：
+
+** 獨立式主機
+** Windows伺服器容錯移轉叢集（WSFC）
++
+如果您要使用SnapCenter 支援功能來新增主機、而且主機是子網域的一部分、則必須提供FQDN。
+
+
+
+
+
+ a| 
+認證資料
+ a| 
+選取您建立的認證名稱、或建立新認證資料。
+
+認證資料必須具有遠端主機的管理權限。如需詳細資訊、請參閱建立認證的相關資訊。
+
+如需認證的詳細資料、包括使用者名稱、網域和主機類型、請將游標放在您提供的認證名稱上方、即可顯示。
+
+
+NOTE: 驗證模式取決於您在「新增主機」精靈中指定的主機類型。
+
+|===
+. 在選取要安裝的外掛程式區段中、選取要安裝的外掛程式。
++
+對於新部署、未列出外掛套件。
+
+. （可選）單擊*更多選項*。
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+連接埠
+ a| 
+保留預設連接埠號碼或指定連接埠號碼。
+
+預設連接埠號碼為8145。如果SnapCenter 將該伺服器安裝在自訂連接埠上、該連接埠編號將會顯示為預設連接埠。
+
+
+NOTE: 如果您手動安裝外掛程式並指定自訂連接埠、則必須指定相同的連接埠。否則、作業將會失敗。
+
+
+
+ a| 
+安裝路徑
+ a| 
+預設路徑為C:\Program Files\NetApp\SnapCenter。
+
+您可以選擇性地自訂路徑。針對適用於Windows的「版本套件」、預設路徑為C：\Program Files\NetApp\SnapCenter。SnapCenter不過、如果需要、您可以自訂預設路徑。
+
+
+
+ a| 
+新增叢集中的所有主機
+ a| 
+選取此核取方塊可新增WSFC中的所有叢集節點。
+
+
+
+ a| 
+跳過預先安裝檢查
+ a| 
+如果您已手動安裝外掛程式、但不想驗證主機是否符合安裝外掛程式的需求、請選取此核取方塊。
+
+
+
+ a| 
+使用群組託管服務帳戶（GMSA）來執行外掛程式服務
+ a| 
+如果您要使用群組託管服務帳戶（GMSA）來執行外掛程式服務、請選取此核取方塊。
+
+請以下列格式提供GMSA名稱：_domainName\accountName$_。
+
+
+NOTE: GMSA僅會做為SnapCenter Windows版的更新外掛程式服務的登入服務帳戶。
+
+|===
+. 按一下*提交*。
++
+如果您尚未選取「*跳過預先檢查*」核取方塊、系統會驗證主機是否符合安裝外掛程式的需求。磁碟空間、RAM、PowerShell版本、.NET版本和位置均會根據最低需求進行驗證。如果不符合最低要求、則會顯示適當的錯誤或警告訊息。
+
++
+如果錯誤與磁碟空間或RAM有關、您可以更新位於「C:\Program Files\NetApp\SnapCenter' webapp」的Web.config檔案、以修改預設值。如果錯誤與其他參數有關、您必須修正問題。
+
++
+
+NOTE: 在HA設定中、如果您要更新web.config檔案、則必須更新兩個節點上的檔案。
+
+. 監控安裝進度。
+

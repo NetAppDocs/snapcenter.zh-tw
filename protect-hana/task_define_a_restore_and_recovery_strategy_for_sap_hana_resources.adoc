@@ -1,0 +1,21 @@
+---
+permalink: protect-hana/task_define_a_restore_and_recovery_strategy_for_sap_hana_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 您必須先定義策略、才能還原及還原資料庫、以便順利執行還原與還原作業。 
+---
+= 定義SAP HANA資源的還原與還原策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須先定義策略、才能還原及還原資料庫、以便順利執行還原與還原作業。
+
+*步驟*
+
+. 判斷手動新增SAP HANA資源所支援的還原策略
+. 判斷自動探索的SAP HANA資料庫所支援的還原策略
+. 決定您要執行的恢復作業類型。
+

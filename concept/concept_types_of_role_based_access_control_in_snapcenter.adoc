@@ -1,0 +1,78 @@
+---
+permalink: concept/concept_types_of_role_based_access_control_in_snapcenter.html 
+sidebar: sidebar 
+keywords: RBAC, roles, permissions, application-level RBAC, ONTAP permissions 
+summary: 以角色為基礎的存取控制（RBAC）和權限功能可讓管理員建立角色並設定存取權限。SnapCenter ONTAP SnapCenter這項集中管理的存取功能可讓應用程式管理員在委派的環境中安全地工作。 
+---
+= RBAC類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+以角色為基礎的存取控制（RBAC）和權限功能可讓管理員將對各種資源的控制權委派給不同的使用者或使用者群組。SnapCenter ONTAP SnapCenter SnapCenter這項集中管理的存取功能可讓應用程式管理員在委派的環境中安全地工作。
+
+您可以隨時建立及修改角色、並新增資源存取權限給使用者、但SnapCenter 第一次設定時、您至少應該將Active Directory使用者或群組新增至角色、然後將資源存取權限新增至這些使用者或群組。
+
+
+NOTE: 您無法使用SnapCenter 無法建立使用者或群組帳戶。您應該在作業系統或資料庫的Active Directory中建立使用者或群組帳戶。
+
+使用下列類型的角色型存取控制：SnapCenter
+
+* RBAC SnapCenter
+* 列舉RBAC外掛程式（適用於部分外掛程式）SnapCenter
+* 應用程式層級RBAC
+* 權限ONTAP
+
+
+
+
+== RBAC SnapCenter
+
+
+
+=== 角色與權限
+
+隨附預先定義且已指派權限的角色。SnapCenter您可以將使用者或使用者群組指派給這些角色。您也可以建立新角色、並管理權限和使用者。
+
+*指派權限給使用者或群組*
+
+您可以指派權限給使用者或群組、以存取SnapCenter 諸如主機、儲存連線和資源群組等物件。您無法變更SnapCenterAdmin角色的權限。
+
+您可以將RBAC權限指派給同一個樹系中的使用者和群組、以及屬於不同樹系的使用者。您無法將RBAC權限指派給跨樹系屬於巢狀群組的使用者。
+
+
+NOTE: 如果您建立自訂角色、則必須包含SnapCenter 所有的「管理員」角色權限。如果您只複製部分權限、例如「主機新增」或「主機移除」、就無法執行這些作業。
+
+
+
+=== 驗證
+
+使用者必須在登入期間、透過圖形使用者介面（GUI）或使用PowerShell Cmdlet來提供驗證。如果使用者是多個角色的成員、則在輸入登入認證之後、系統會提示使用者指定想要使用的角色。使用者也必須提供驗證、才能執行API。
+
+
+
+== 應用程式層級RBAC
+
+使用認證資料來驗證獲授權的使用者是否也擁有應用程式層級的權限。SnapCenter SnapCenter
+
+例如、如果您想要在SQL Server環境中執行Snapshot複本和資料保護作業、則必須使用適當的Windows或SQL認證來設定認證資料。此伺服器SnapCenter 會使用任一種方法驗證認證集。如果您想要在ONTAP Windows檔案系統環境中執行Snapshot複製和資料保護作業、請在Windows SnapCenter 主機上執行此功能。
+
+同樣地、如果您要在Oracle資料庫上執行資料保護作業、而且資料庫主機中的作業系統（OS）驗證已停用、則必須使用Oracle資料庫或Oracle ASM認證來設定認證資料。根據作業情況、此伺服器會使用下列其中一種方法來驗證認證集。SnapCenter
+
+
+
+== VMware vSphere RBAC的插件SnapCenter
+
+如果您使用SnapCenter VMware vCenter外掛程式來提供VM一致的資料保護、vCenter Server會提供額外的RBAC層級。VMware支援vCenter Server RBAC和VMware RBAC外掛程式。SnapCenter Data ONTAP
+
+如需相關資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html["VMware vSphere RBAC的插件SnapCenter"^]
+
+
+
+== 權限ONTAP
+
+您應該建立具有存取儲存系統所需權限的vsadmin帳戶。
+
+如需建立帳戶及指派權限的資訊、請參閱 link:../install/task_create_an_ontap_cluster_role_with_minimum_privileges.html["以ONTAP 最低權限建立一個不含任何權限的叢集角色"^]

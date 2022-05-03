@@ -1,0 +1,42 @@
+---
+permalink: protect-scsql/concept_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: 當您的環境中安裝了適用於Microsoft SQL Server的支援程式時、您可以使用支援程序來備份、還原及複製SQL Server資料庫。SnapCenter SnapCenter 
+---
+= 您可以使用SnapCenter 適用於Microsoft SQL Server的支援功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您的環境中安裝了適用於Microsoft SQL Server的支援程式時、您可以使用支援程序來備份、還原及複製SQL Server資料庫。SnapCenter SnapCenter
+
+您可以執行下列工作、以支援SQL Server資料庫和資料庫資源的備份作業、還原作業和複製作業：
+
+* 備份SQL Server資料庫及相關的交易記錄
++
+您無法為主要和msdb系統資料庫建立記錄備份。不過、您可以為模型系統資料庫建立記錄備份。
+
+* 還原資料庫資源
++
+** 您可以還原主系統資料庫、msdbb系統資料庫、以及模型系統資料庫。
+** 您無法還原多個資料庫、執行個體和可用度群組。
+** 您無法將系統資料庫還原至替代路徑。
+
+
+* 建立正式作業資料庫的時間點複本
++
+您無法在Tempdb系統資料庫上執行備份、還原、複製及複製生命週期作業。
+
+* 立即驗證備份作業、或延後驗證至稍後
++
+不支援驗證SQL Server系統資料庫。執行驗證作業時、使用實體複製資料庫。SnapCenter無法複製SQL Server系統資料庫、因此不支援驗證這些資料庫。SnapCenter
+
+* 排程備份作業和複製作業
+* 監控備份作業、還原作業及複製作業
+
+
+
+NOTE: SQL Server外掛程式不支援在SMB共用區上備份及還原SQL Server資料庫。

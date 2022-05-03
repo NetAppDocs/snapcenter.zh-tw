@@ -1,0 +1,145 @@
+---
+permalink: upgrade/task_upgrade_snapcenter.html 
+sidebar: sidebar 
+keywords: upgrade, upgrade snapcenter server 
+summary: 您可以使用SnapCenter 「伺服器安裝程式執行檔」來升級SnapCenter 「伺服器」。 
+---
+= 升級SnapCenter 此伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapCenter 「伺服器安裝程式執行檔」來升級SnapCenter 「伺服器」。
+
+*您需要的是什麼*
+
+* 支援Windows更新的SnapCenter 更新必須是最新版的伺服器主機、而且不會有擱置中的系統重新啟動。
+* 在開始升級作業之前、您應確保沒有其他作業正在執行。
+* 您應該在SnapCenter 確保沒有工作正在執行之後、備份這個資訊儲存庫（MySQL）資料庫。建議在升級SnapCenter 完Exchange Server和Exchange外掛程式之前先執行此動作。
++
+如需相關資訊、請參閱 link:../admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["備份SnapCenter 這個資訊庫"^]。
+
+* 您應該備份SnapCenter 所有已在SnapCenter 還原伺服器主機或外掛主機上修改的支援功能組態檔案。
++
+例如：SnapDriveService.exe.config、SMCoreServiceHost.exe.config等。SnapCenter
+
+
+
+*關於此工作*
+
+* 在升級期間、主機會自動進入維護模式、以防止主機執行任何排程的工作。升級後、主機會自動退出維護模式。
+* 在升級期間、會執行SQL指令碼來更新NSM資料庫中的Exchange資料、將DAG和主機簡稱轉換為FQDN。這僅適用於SnapCenter 搭配使用含有Exchange外掛程式的NetApp伺服器。
+* 在開始升級作業之前、如果您已手動將主機置於維護模式、則升級後、您必須按一下*主機*>*啟動排程*、手動將主機從維護模式中移出。
+* 支援的升級途徑：
++
+|===
+| 如果您使用... | 您可以... 
+
+
+ a| 
+4.4.x
+ a| 
+** 直接升級至4.1.x或4.2.x
+** 先升級至4.1.x或4.2.x、然後升級至4.3.x、即可升級至4.3.x
+** 先升級至4.2.x、然後升級至4.4.x、升級至4.4.x
+** 先升級至4.2.x、然後升級至4.4.x、再升級至4.5
+** 先升級至4.2.x、再升級至4.4.x、然後升級至4.4.x、再升級至4.6
+
+
+
+
+ a| 
+4.1.x
+ a| 
+** 直接升級至4.2.x或4.3.x
+** 先升級至4.2.x或4.3.x、然後升級至4.4.x、即可升級至4.4.x
+** 先升級至4.3.x、然後升級至4.5、即可升級至4.5
+** 先升級至4.3.x、再升級至4.5.x、然後升級至4.6.x、再升級至4.6
+
+
+
+
+ a| 
+4.2.x
+ a| 
+** 直接升級至4.3.x或4.4.x
+** 先升級至4.3.x或4.4.x、然後升級至4.5、即可升級至4.5
+** 先升級至4.4.x、然後升級至4.6%、即可升級至4.6
+
+
+
+
+ a| 
+4.3.x
+ a| 
+** 直接升級至4.4.x或4.5
+** 先升級至4.5.x、然後升級至4.6%、即可升級至4.6%
+
+
+
+
+ a| 
+4.4.x
+ a| 
+直接升級至4.5或4.6
+
+
+
+ a| 
+4.5.x
+ a| 
+直接升級至4.6
+
+|===
+
+
+*步驟*
+
+. 從SnapCenter NetApp支援網站下載《支援伺服器》安裝套件。
++
+https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab[]
+
+. 建立網路組態的複本、網址為：C:\Program Files\NetApp\SnapCenter網路應用程式。
+. 從SnapCenter Windows工作排程中匯出與外掛程式主機相關的支援排程、以便在升級失敗時使用此排程來還原排程。
++
+「md：\scBackup」「shchtases /query /xml /tn taskname >>「D：\scBackup \taskname.xml」
+
+. 如果SnapCenter 未設定儲存庫備份、請建立「支援MySQL資料庫傾印」。
++
+「md：\scBackup」「mysqldump - all資料庫-單一交易-新增-刪除資料庫-觸發程式-例程-事件-u root -p > D:\scBackup \screpoBackup .dmpp」
+
++
+出現提示時、請輸入密碼。
+
+. 連按兩下下載的.exe檔案、即可啟動SnapCenter 更新版的功能。
++
+在您啟動升級之後、系統會執行所有預先檢查、如果不符合最低需求、則會顯示適當的錯誤或警告訊息。您可以忽略警告訊息、然後繼續安裝。不過、錯誤應該修正。
+
++
+
+NOTE: 安裝舊版的還原伺服器時、將繼續使用現有的MySQL Server儲存庫資料庫密碼。SnapCenter SnapCenter
+
+. 按一下*升級*。
++
+在任何階段、如果您按一下*取消*按鈕、升級工作流程都會取消。它不會將SnapCenter 此伺服器復原至先前的狀態。
+
++
+|===
+
+
+| *最佳實務做法：*您應該先登出再登入SnapCenter 、或關閉再開啟新的瀏覽器、以存取SnapCenter 該GUI。 
+|===
+
+
+*完成後*
+
+* 如果外掛程式是使用Sudo使用者安裝、您應該複製_C：\ProgramData \NetApp\SnapCenter\Package Repository\Oracle_checksum．txt_提供的shap224金鑰、以更新_/etc/udoers_檔案。
+* 您應該在主機上重新探索資源。
++
+如果主機狀態顯示為「已停止」、您可以稍候一段時間、然後執行全新探索。您也可以將*主機重新更新間隔*參數（預設值為3、600秒）的值變更為超過10分鐘的任何值。
+
+* 如果升級失敗、您應該清理失敗的安裝、重新安裝SnapCenter 舊版的還原功能、然後將NSM資料庫還原至先前的狀態。
+* 升級SnapCenter 完Szing Server主機之後、您也必須先升級外掛程式、才能新增任何儲存系統。
+

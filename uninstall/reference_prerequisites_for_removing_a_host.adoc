@@ -1,0 +1,50 @@
+---
+permalink: uninstall/reference_prerequisites_for_removing_a_host.html 
+sidebar: sidebar 
+keywords: uninstall, prerequisites, plug-in, plug-in packages 
+summary: 如果您不想再使用SnapCenter 支援功能來管理資料保護工作、可以移除主機。例如、如果主機不再有需要保護的資料、您可能會想要移除該主機。在將主機從SnapCenter 支援伺服器移除之前、您必須先執行必要的工作。 
+---
+= 移除主機的必要條件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapCenter 無法辨識的GUI移除主機、並解除安裝個別的外掛程式或外掛程式套件。您也可以在遠端主機上使用SnapCenter 命令列介面（CLI）、或在任何主機上使用Windows *解除安裝程式*選項、來解除安裝個別外掛程式或外掛程式套件。
+
+在您從SnapCenter 「支援伺服器」移除主機之前、您應該先完成先決條件。
+
+* 您應該以系統管理員的身分登入。
+* 如果您使用SnapCenter 的是「無法自訂的外掛程式」、則應刪除SnapCenter 所有與主機相關的實體複本。
+* 您應該確定探索工作未在主機上執行。
+* 您應該被指派具有必要權限的角色、以便移除與主機相關聯的所有物件。否則、移除作業將會失敗。
+* 如果SSH金鑰在將主機新增SnapCenter 至支援功能後已修改、您應該確認指紋。
+* 如果SnapCenter 將支援指紋的主機升級至SnapCenter 更新版本的支援、但外掛程式主機仍在執行舊版的外掛程式、您應該確認指紋。
+
+
+
+
+== 使用角色型存取控制來移除主機的必要條件
+
+* 您應該已使用具有讀取、刪除主機、安裝、解除安裝外掛程式及刪除物件權限的RBAC角色登入。
++
+物件可以是複製、備份、資源群組、儲存系統等。
+
+* 您應該已將RBAC使用者新增至RBAC角色。
+* 您應該將RBAC使用者指派給您要刪除的主機、外掛程式、認證、資源群組和儲存系統（適用於複本）。
+* 您應該SnapCenter 已以RBAC使用者身分登入了不真實的功能。
+
+
+
+
+== 移除主機的先決條件、並從實體複本生命週期作業中建立複本
+
+* 您應該已經使用SQL資料庫的複製生命週期管理來建立複製工作。
+* 您應該已建立RBAC角色、其中包含複製的讀取與刪除、資源讀取與刪除、資源群組讀取與刪除、儲存設備讀取與刪除、資源讀取與刪除、掛載、卸載、外掛程式安裝與解除安裝、主機讀取與刪除權限。
+* 您應該已將RBAC使用者指派給RBAC角色。
+* 您應該已將RBAC使用者指派給主機SnapCenter 、Microsoft SQL Server適用的支援功能、認證、複製生命週期資源群組和儲存系統。
+* 您應該SnapCenter 已以RBAC使用者身分登入了不真實的功能。
+
+
+如需解除安裝SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式的相關資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#remove-snapcenter-plug-in-for-vmware-vsphere["移除SnapCenter VMware vSphere的功能性外掛程式"^]。

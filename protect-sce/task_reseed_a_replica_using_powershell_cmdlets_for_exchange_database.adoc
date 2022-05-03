@@ -1,0 +1,43 @@
+---
+permalink: protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用PowerShell Cmdlet還原不正常的複本、方法是使用相同主機上的最新複本、或使用替代主機的最新複本。 
+---
+= 已使用PowerShell Cmdlet重新建立Exchange資料庫的複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用PowerShell Cmdlet還原不正常的複本、方法是使用相同主機上的最新複本、或使用替代主機的最新複本。
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+
+*步驟*
+
+. 使用「Open-SmConnection」指令程式、為SnapCenter 指定的使用者啟動與該伺服器的連線工作階段。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146/
+----
+. 使用「RESEED - SmDagReplicaCopy」Cmdlet重新建置資料庫。
++
+此範例使用該主機上的最新備份、重新複製主機「mva-rx200.netapp.com"」上名為「execdb」的資料庫失敗複本。
+
++
+[listing]
+----
+reseed-SmDagReplicaCopy -ReplicaHost "mva-rx200.netapp.com" -Database execdb
+----
++
+此範例使用替代主機「mva-rx201.netapp.com."」上的資料庫最新備份（正式作業/複製）、重新複寫名為「execdb」的資料庫失敗複本
+
++
+[listing]
+----
+reseed-SmDagReplicaCopy -ReplicaHost "mva-rx200.netapp.com" -Database  execdb -BackupHost "mva-rx201.netapp.com"
+----
+

@@ -1,0 +1,20 @@
+---
+permalink: protect-sce/concept_back_up_exchange_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 當SnapCenter 您在環境中安裝適用於Microsoft Exchange Server的還原外掛程式時、您可以使用SnapCenter 效益管理功能來備份Exchange資源。 
+---
+= 備份工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當SnapCenter 您在環境中安裝適用於Microsoft Exchange Server的還原外掛程式時、您可以使用SnapCenter 效益管理功能來備份Exchange資源。
+
+您可以排程在伺服器之間同時執行多個備份。無法同時在同一個資源上執行備份與還原作業。不支援同一個磁碟區上的主動和被動備份複本。
+
+下列工作流程顯示您必須執行備份作業的順序：
+
+image:../media/sce_backup_workflow.gif[""]

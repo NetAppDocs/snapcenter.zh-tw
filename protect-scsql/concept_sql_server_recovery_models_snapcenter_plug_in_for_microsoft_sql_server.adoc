@@ -1,0 +1,30 @@
+---
+permalink: protect-scsql/concept_sql_server_recovery_models_snapcenter_plug_in_for_microsoft_sql_server.html 
+sidebar: sidebar 
+keywords:  
+summary: 預設會將特定的恢復模式指派給每種資料庫類型。SQL Server資料庫管理員可將每個資料庫重新指派至不同的還原模式。 
+---
+= 支援的SQL Server恢復模式SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+預設會將特定的恢復模式指派給每種資料庫類型。SQL Server資料庫管理員可將每個資料庫重新指派至不同的還原模式。
+
+支援三種SQL Server恢復模式：SnapCenter
+
+* 簡單的恢復模式
++
+當您使用簡單的恢復模式時、便無法備份交易記錄。
+
+* 完整恢復模式
++
+使用完整還原模式時、您可以從故障點將資料庫還原至先前的狀態。
+
+* 大量記錄的還原模式
++
+使用大量記錄的還原模式時、您必須手動重新執行大量記錄的作業。如果包含作業提交記錄的交易記錄在還原之前尚未備份、則必須執行大量記錄作業。如果大量記錄作業在資料庫中插入1、000萬列、而資料庫在備份交易記錄之前失敗、則還原的資料庫將不會包含大量記錄作業所插入的列。
+
+

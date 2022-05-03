@@ -1,0 +1,30 @@
+---
+permalink: protect-scw/task_install_on_multiple_remote_hosts_using_powershell_cmdlets.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您想SnapCenter 要同時在多個主機上安裝適用於Microsoft Windows的效能提升外掛程式、可以使用Install-SmHostPackage PowerShell Cmdlet來執行此作業。 
+---
+= 使用PowerShell Cmdlet在SnapCenter 多個遠端主機上安裝適用於Microsoft Windows的支援功能外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您想SnapCenter 要同時在多個主機上安裝適用於Microsoft Windows的效能分析外掛程式、您可以使用「Install-SmHostPackage」PowerShell Cmdlet來執行此作業。
+
+您必須以SnapCenter 網域使用者的身分登入到支援安裝外掛程式的每個主機、並擁有本機系統管理員權限。
+
+*步驟*
+
+. 啟動PowerShell。
+. 在支援服務器主機上SnapCenter 、使用「Open-SmConnection」指令程式建立工作階段、然後輸入您的認證資料。
+. 使用「Add-SmHost」Cmdlet和必要參數、將獨立主機或叢集新增SnapCenter 至支援功能。
++
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+
+. 使用「Install-SmHostPackage」Cmdlet和必要參數、在多個主機上安裝外掛程式。
++
+手動安裝外掛程式時、您可以使用「-skipprecheck」選項、而且您不想驗證主機是否符合安裝外掛程式的需求。
+
+

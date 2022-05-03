@@ -1,0 +1,30 @@
+---
+permalink: protect-sco/concept_install_snapcenter_plug_in_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords: install, VMware vSphere 
+summary: 如果資料庫儲存在虛擬機器（VM）上、或是想要保護VM和資料存放區、則必須部署SnapCenter VMware vSphere虛擬應用裝置的《支援VMware vSphere的還原外掛程式》。 
+---
+= 安裝SnapCenter VMware vSphere的VMware vCenter外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果資料庫儲存在虛擬機器（VM）上、或是想要保護VM和資料存放區、則必須部署SnapCenter VMware vSphere虛擬應用裝置的《支援VMware vSphere的還原外掛程式》。
+
+如需部署資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["部署總覽"^]。
+
+
+
+== 部署CA憑證
+
+若要使用SnapCenter VMware vSphere的VMware vSphere的VMware認證外掛程式來設定CA認證、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere_(SCV)["建立或匯入SSL憑證"^]。
+
+
+
+== 設定CRL檔案
+
+VMware vSphere的還原外掛程式會在預先設定的目錄中尋找CRL檔案。SnapCenterVMware vSphere適用的VMware vSphere的CRL檔案預設目錄SnapCenter 為：_/opt/NetApp/config/crl_。
+
+您可以在此目錄中放置多個CRL檔案。傳入的憑證會根據每個CRL進行驗證。

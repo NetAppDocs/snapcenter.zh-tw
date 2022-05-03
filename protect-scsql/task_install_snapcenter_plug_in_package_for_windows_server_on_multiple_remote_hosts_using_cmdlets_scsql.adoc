@@ -1,0 +1,32 @@
+---
+permalink: protect-scsql/task_install_snapcenter_plug_in_package_for_windows_server_on_multiple_remote_hosts_using_cmdlets_scsql.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、在多個主機上同時安裝適用於Microsoft SQL Server的VMware®更新外掛程式。 
+---
+= 使用Cmdlet在SnapCenter 多個遠端主機上安裝適用於Microsoft SQL Server的支援功能外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、在多個主機上同時安裝適用於Microsoft SQL Server的VMware®更新外掛程式。
+
+*您需要的是什麼*
+
+您必須以SnapCenter 網域使用者的身分登入到支援安裝外掛程式套件的每個主機、並具有本機系統管理員權限。
+
+*步驟*
+
+. 啟動PowerShell。
+. 在支援服務器主機上SnapCenter 、使用Open-SmConnection Cmdlet建立工作階段、然後輸入您的認證資料。
+. 使用Install-SmHostPackage Cmdlet和必要參數、在SnapCenter 多個遠端主機上安裝適用於Microsoft SQL Server的VMware vCenter外掛程式。
++
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+
++
+當您已手動安裝外掛程式、但不想驗證主機是否符合安裝外掛程式的需求時、可以使用-skipprecheck選項。
+
+. 輸入遠端安裝的認證資料。
+

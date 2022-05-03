@@ -1,0 +1,168 @@
+---
+permalink: install/task_add_a_user_or_group_and_assign_role_and_assets.html 
+sidebar: sidebar 
+keywords: RBAC, add user, add group, assign role, assign assets 
+summary: 若要設定SnapCenter 適用於哪些使用者的角色型存取控制、您可以新增使用者或群組並指派角色。角色決定SnapCenter 了使用者可以存取的選項。 
+---
+= 新增使用者或群組、並指派角色和資產
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要設定SnapCenter 適用於哪些使用者的角色型存取控制、您可以新增使用者或群組並指派角色。角色決定SnapCenter 了使用者可以存取的選項。
+
+*您需要的是什麼*
+
+* 您必須以「SnapCenterAdmin」角色登入。
+* 您必須在作業系統或資料庫的Active Directory中建立使用者或群組帳戶。您無法使用SnapCenter 不禁用功能來建立這些帳戶。
++
+
+NOTE: 從S32 4.5開始SnapCenter 、您只能在使用者名稱和群組名稱中包含下列特殊字元：空格（）、連字號（-）、底線（_）和分號（：）。如果您想要使用在SnapCenter 舊版的下列特殊字元中建立的角色、可以在SnapCenter 安裝了Web.config檔案中、將「isableSQLInjectionValidation」參數的值變更為true、以停用角色名稱驗證。修改值之後、您不需要重新啟動服務。
+
+* 包含數個預先定義的角色。SnapCenter
++
+您可以將這些角色指派給使用者、或是建立新角色。
+
+* 新增至SnapCenter RBAC的AD使用者和AD群組必須擁有Active Directory中「使用者容器」和「電腦容器」的讀取權限。
+* 將角色指派給包含適當權限的使用者或群組之後、您必須指派使用者存取SnapCenter 諸如主機和儲存連線等各種資源。
++
+如此一來、使用者就能對指派給他們的資產執行其擁有權限的動作。
+
+* 您應該在某個時間點指派角色給使用者或群組、以充分利用RBAC權限和效率。
+* 您可以指派主機、資源群組、原則、儲存連線、外掛程式、 並在建立使用者或群組時向使用者提供認證。
+* 您應指派使用者執行特定作業的最低資產如下：
++
+|===
+| 營運 | 資產指派 
+
+
+ a| 
+保護資源
+ a| 
+主機、原則
+
+
+
+ a| 
+備份
+ a| 
+主機、資源群組、原則
+
+
+
+ a| 
+還原
+ a| 
+主機、資源群組
+
+
+
+ a| 
+複製
+ a| 
+主機、資源群組、原則
+
+
+
+ a| 
+複製生命週期
+ a| 
+主機
+
+
+
+ a| 
+建立資源群組
+ a| 
+主機
+
+|===
+* 當新節點新增至Windows叢集或DAG（Exchange Server資料庫可用度群組）資產、且此新節點已指派給使用者時、您必須將資產重新指派給使用者或群組、以便將新節點納入使用者或群組。
++
+您應該將RBAC使用者或群組重新指派給叢集或DAG、以便將新節點納入RBAC使用者或群組。例如、您有一個雙節點叢集、而且已將RBAC使用者或群組指派給叢集。當您將另一個節點新增至叢集時、應將RBAC使用者或群組重新指派至叢集、以納入RBAC使用者或群組的新節點。
+
+* 如果您打算複寫Snapshot複本、則必須將來源和目的地Volume的儲存連線指派給執行作業的使用者。
++
+您應該先新增資產、再將存取權指派給使用者。
+
+
+
+
+IMPORTANT: 如果您使用SnapCenter VMware vSphere的VMware vSphere功能的VMware vCenter外掛程式來保護VM、VMDK或資料存放區、則應使用VMware vSphere GUI將vCenter使用者新增至SnapCenter VMware vSphere的「VMware vSphere的VMware vSphere插件」角色。如需VMware vSphere角色的相關資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_predefined_roles_packaged_with_snapcenter.html["VMware SnapCenter vSphere隨附於VMware vSphere的VMware vCenter外掛程式的預先定義角色"^]。
+
+*步驟*
+
+. 在左側導覽窗格中、按一下*設定*。
+. 在「設定」頁面中、按一下「*使用者與存取*>*」image:../media/add_icon_configure_database.gif["在設定資料庫畫面中新增圖示"]*。
+. 在「從Active Directory或工作群組新增使用者/群組」頁面中：
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+存取類型
+ a| 
+選取網域或工作群組
+
+對於網域驗證類型、您應該指定要將使用者新增至角色的使用者或群組網域名稱。
+
+依預設、系統會預先填入登入的網域名稱。
+
+
+NOTE: 您必須在「*設定*>*全域設定*>*網域設定*」頁面中註冊不受信任的網域。
+
+
+
+ a| 
+類型
+ a| 
+選取使用者或群組
+
+
+NOTE: 支援僅安全群組、不支援通訊群組。SnapCenter
+
+
+
+ a| 
+使用者名稱
+ a| 
+.. 輸入部分使用者名稱、然後按一下「*新增*」。
++
+
+NOTE: 使用者名稱區分大小寫。
+
+.. 從搜尋清單中選取使用者名稱。
+
+
+
+NOTE: 當您新增來自不同網域或不受信任網域的使用者時、應該完整輸入使用者名稱、因為沒有跨網域使用者的搜尋清單。
+
+重複此步驟、將其他使用者或群組新增至選取的角色。
+
+
+
+ a| 
+角色
+ a| 
+選取您要新增使用者的角色。
+
+|===
+. 按一下「*指派*」、然後在「指派資產」頁面中：
++
+.. 從*資產*下拉式清單中選取資產類型。
+.. 在「資產」表格中、選取資產。
++
+只有在使用者將資產新增SnapCenter 至下列項目時、才會列出這些資產。
+
+.. 針對所有必要資產重複此程序。
+.. 按一下「 * 儲存 * 」。
+
+
+. 按一下*提交*。
++
+新增使用者或群組並指派角色之後、請重新整理資源清單。
+
+

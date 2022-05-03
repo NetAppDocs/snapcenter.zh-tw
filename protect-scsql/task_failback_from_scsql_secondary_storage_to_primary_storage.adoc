@@ -1,0 +1,42 @@
+---
+permalink: protect-scsql/task_failback_from_scsql_secondary_storage_to_primary_storage.html 
+sidebar: sidebar 
+keywords:  
+summary: 當SQL Server主要儲存設備的「支援還原」外掛程式重新連線後SnapCenter 、您應該容錯回復至主要儲存設備。 
+---
+= 從SnapCenter SQL Server二線儲存設備的支援程式容錯回復到一線儲存設備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當SQL Server主要儲存設備的「支援還原」外掛程式重新連線後SnapCenter 、您應該容錯回復至主要儲存設備。
+
+*您需要的是什麼*
+
+* 從SnapCenter 「託管主機」頁面、將適用於SQL Server的「支援」外掛程式置於*維護*模式。
+* 從主機拔下二線儲存設備、然後從一線儲存設備連線。
+* 若要容錯回復至主要儲存設備、請執行反向重新同步作業、確保關係方向與容錯移轉之前的方向相同。
++
+若要在反向重新同步作業之後保留主要和次要儲存設備的角色、請再次執行反轉重新同步作業。
+
++
+如需詳細資訊、請參閱 link:https://docs.netapp.com/us-en/ontap-sm-classic/online-help-96-97/task_reverse_resynchronizing_snapmirror_relationships.html["反轉重新同步鏡射關係"]
+
+* 重新啟動MSSQL伺服器服務。
+* 確保SQL資源重新連線。
+
+
+*步驟*
+
+. 在「設定」頁面中、瀏覽至*設定*>*全域設定*>*災難恢復*。
+. 取消選擇*啟用災難恢復*。
+. 按一下「 * 套用 * 」。
+. 按一下「*監控*>*工作*」來確認DR工作是否已啟用。
+
+
+*完成後*
+
+* 您可以使用SnapCenter UI或下列Cmdlet刪除在容錯移轉期間建立的SQL Server備份的現象：「移除-短型RFailoverBackups」
+

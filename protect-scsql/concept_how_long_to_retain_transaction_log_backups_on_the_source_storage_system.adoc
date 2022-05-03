@@ -1,0 +1,18 @@
+---
+permalink: protect-scsql/concept_how_long_to_retain_transaction_log_backups_on_the_source_storage_system.html 
+sidebar: sidebar 
+keywords:  
+summary: 適用於Microsoft SQL Server的解決方案外掛程式需要交易記錄備份、才能執行最新的還原作業、將資料庫還原至兩次完整備份之間的一段時間。SnapCenter 
+---
+= 在來源儲存系統上保留交易記錄備份的時間
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於Microsoft SQL Server的解決方案外掛程式需要交易記錄備份、才能執行最新的還原作業、將資料庫還原至兩次完整備份之間的一段時間。SnapCenter
+
+例如、如果SQL Server的外掛程式在上午8：00進行完整備份另一個完整備份則是在下午5：00、它可以使用最新的交易記錄備份、將資料庫還原至上午8：00之間的任何時間下午5：00如果交易記錄無法使用、則SQL Server外掛程式只能執行時間點還原作業、將資料庫還原至SQL Server外掛程式完成完整備份的時間。
+
+一般而言、您只需要一兩天的最新還原作業。根據預設SnapCenter 、不超過兩天的情況下、將會保留不超過2天的時間。

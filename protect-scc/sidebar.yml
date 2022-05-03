@@ -1,0 +1,130 @@
+---
+section: protect-scc
+title: 保護自訂應用程式
+entries:
+- title: 不適用的自訂外掛程式SnapCenter
+  entries:
+  - title: "「自訂外掛程式」總覽SnapCenter"
+    url: "/protect-scc/concept_snapcenter_custom_plug_ins_overview.html"
+  - title: 您可以使用SnapCenter 「不一樣的自訂外掛程式」來做什麼
+    url: "/protect-scc/concept_what_you_can_do_with_the_snapcenter_custom_plug_ins.html"
+  - title: "「自訂外掛程式」SnapCenter 功能"
+    url: "/protect-scc/concept_snapcenter_custom_plug_ins_features.html"
+  - title: 支援的儲存類型SnapCenter 由「支援的儲存類型」由「支援的自訂外掛程式
+    url: "/protect-scc/reference_storage_types_supported_by_snapcenter_custom_plug_in.html"
+  - title: 自訂外掛程式所需的ONTAP 最低需求權限
+    url: "/protect-scc/reference_minimum_ontap_privileges_required_for_custom_plug_in.html"
+  - title: 準備儲存系統以進行SnapMirror和SnapVault 資訊複寫
+    url: "/protect-scc/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_scc.html"
+  - title: 定義備份策略
+    url: "/protect-scc/task_define_a_backup_strategy.html"
+  - title: 自訂外掛程式的備份策略
+    entries:
+    - title: 自訂外掛程式資源的備份排程
+      url: "/protect-scc/reference_backup_schedules_of_custom_plug_in_resources.html"
+    - title: 所需的備份工作數
+      url: "/protect-scc/concept_number_of_backup_jobs_needed.html"
+  - title: 手動新增自訂外掛程式資源所支援的還原策略類型
+    url: "/protect-scc/reference_types_of_restore_strategies_supported_for_manually_added_custom_plugin_resources.html"
+- title: 為應用程式開發外掛程式
+  entries:
+  - title: 總覽
+    url: "/protect-scc/concept_develop_a_plug_in_for_your_application.html"
+  - title: 基於Perl的開發
+    url: "/protect-scc/reference_perl.html"
+  - title: 原生風格
+    url: "/protect-scc/reference_native.html"
+  - title: Java樣式
+    url: "/protect-scc/reference_java.html"
+  - title: 自訂SnapCenter 插件
+    url: "/protect-scc/reference_custom_plugin_in_snapcenter.html"
+- title: 準備安裝SnapCenter 「精選」外掛程式
+  entries:
+  - title: 安裝流程：不需安裝程式SnapCenter
+    url: "/protect-scc/task_install_snapcenter_custom_plug_in.html"
+  - title: 新增主機和安裝SnapCenter 「更新自訂」外掛程式的先決條件
+    url: "/protect-scc/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_custom_plug_ins.html"
+  - title: 安裝SnapCenter 適用於Windows的功能性外掛程式套件的主機需求
+    url: "/protect-scc/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_scc.html"
+  - title: 安裝SnapCenter 適用於Linux的支援功能外掛套件的主機需求
+    url: "/protect-scc/reference_host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux_scc.html"
+  - title: 設定SnapCenter 認證資料以供「不一樣的自訂外掛程式」使用
+    url: "/protect-scc/task_set_up_credentials_for_snapcenter_custom_plug_in.html"
+  - title: 在Windows Server 2012或更新版本上設定GMSA
+    url: "/protect-scc/task_configure_gMSA_on_windows_server_2012_or_later.html"
+  - title: 安裝SnapCenter 「不一樣的自訂外掛程式」
+    entries:
+    - title: 新增主機並在遠端主機上安裝外掛程式套件
+      url: "/protect-scc/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html"
+    - title: 使用Cmdlet在SnapCenter 多個遠端主機上安裝適用於Linux或Windows的支援功能外掛套件
+      url: "/protect-scc/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_scc.html"
+    - title: 使用命令列介面、在SnapCenter Linux主機上安裝《程式集指令集自訂外掛程式」
+      url: "/protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html"
+    - title: 監控SnapCenter 程式套件安裝狀態
+      url: "/protect-scc/task_monitor_the_status_of_installing_plugin_for_scc.html"
+  - title: 設定CA憑證
+    entries:
+    - title: 產生CA認證CSR檔案
+      url: "/protect-scc/reference_generate_CA_certificate_CSR_file.html"
+    - title: 匯入CA憑證
+      url: "/protect-scc/task_import_CA_certificates.html"
+    - title: 取得CA憑證指紋
+      url: "/protect-scc/task_get_the_CA_certificate_thumbprint.html"
+    - title: 使用Windows主機外掛程式服務設定CA憑證
+      url: "/protect-scc/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
+    - title: 在SnapCenter Linux主機上設定「CA憑證」以使用「支援整套自訂外掛程式」服務
+      url: "/protect-scc/task_configure_CA_certificate_for_SCC_on_Linux_host.html"
+    - title: 在SnapCenter Windows主機上設定「CA憑證」以使用「更新自訂外掛程式」服務
+      url: "/protect-scc/task_configure_CA_certificate_for_SCC_on_windows_host.html"
+    - title: 啟用外掛程式的CA憑證
+      url: "/protect-scc/task_enable_ca_certificates_for_plug-ins.html"
+- title: 準備資料保護
+  entries:
+  - title: 使用SnapCenter 「Solutions自訂外掛程式」的先決條件
+    url: "/protect-scc/reference_prerequisites_for_using_snapcenter_custom_plug_ins.html"
+  - title: 如何使用資源、資源群組和原則來保護自訂外掛程式資源
+    url: "/protect-scc/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_custom_plug_in_resources.html"
+- title: 備份自訂外掛程式資源
+  entries:
+  - title: 備份工作流程
+    url: "/protect-scc/task_back_up_custom_plug_in_resources.html"
+  - title: 將資源新增至SnapCenter 「支援自訂外掛程式」
+    url: "/protect-scc/task_add_resources_to_snapcenter_custom_plug_ins.html"
+  - title: 建立自訂外掛程式資源的原則
+    url: "/protect-scc/task_create_policies_for_custom_plug_in_resources.html"
+  - title: 建立資源群組並附加原則
+    url: "/protect-scc/task_create_resource_groups_and_attach_policies.html"
+  - title: 備份個別的自訂外掛程式資源
+    url: "/protect-scc/task_back_up_individual_custom_plug_in_resources.html"
+  - title: 備份自訂外掛程式資源的資源群組
+    url: "/protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html"
+  - title: 使用PowerShell Cmdlet建立儲存系統連線和認證
+    url: "/protect-scc/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_scc.html"
+  - title: 使用PowerShell Cmdlet備份資源
+    url: "/protect-scc/task_back_up_resources_using_powershell_cmdlets.html"
+  - title: 監控備份作業
+    url: "/protect-scc/task_monitor_scc_resources_backup_operations.html"
+  - title: 取消備份作業
+    url: "/protect-scc/task_cancel_backup_operations_for_scc.html"
+  - title: 在「拓撲」頁面中檢視自訂外掛程式資源相關備份與複製
+    url: "/protect-scc/task_view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html"
+- title: 還原自訂外掛程式資源
+  entries:
+  - title: 還原工作流程
+    url: "/protect-scc/task_restore_custom_plug_in_resources.html"
+  - title: 還原資源備份
+    url: "/protect-scc/task_restore_a_resource_backup.html"
+  - title: 使用PowerShell Cmdlet還原資源
+    url: "/protect-scc/task_restore_and_recover_resources_using_powershell_cmdlets_scc.html"
+  - title: 監控還原作業
+    url: "/protect-scc/task_monitor_scc_resources_restore_operations.html"
+- title: 複製自訂外掛程式資源備份
+  entries:
+  - title: 複製工作流程
+    url: "/protect-scc/task_clone_custom_plug_in_resource_backups.html"
+  - title: 從備份複製
+    url: "/protect-scc/task_clone_from_a_backup.html"
+  - title: 使用PowerShell Cmdlet複製備份
+    url: "/protect-scc/task_clone_backups_using_powershell_cmdlets.html"
+  - title: 監控SnapCenter 實體複製作業
+    url: "/protect-scc/task_monitor_scc_resource_clone_operations.html"

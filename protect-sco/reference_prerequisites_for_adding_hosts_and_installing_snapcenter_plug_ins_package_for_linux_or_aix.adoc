@@ -1,0 +1,441 @@
+---
+permalink: protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html 
+sidebar: sidebar 
+keywords: prerequisites, iSCSI, Oracle path, host requirement for Linux, sudo privileges, non-root user, host requirements for AIX, credentials, authenticate, domain administrator, local administrator, workgroup, sudo, root user 
+summary: 在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。 
+---
+= 新增主機及安裝適用於Linux或AIX的外掛程式套件的必要條件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。
+
+* 如果您使用iSCSI、則必須執行iSCSI服務。
+* 您必須為root或非root使用者啟用密碼型SSH連線。
++
+非root使用者可以安裝適用於Oracle資料庫的支援程式外掛程式。SnapCenter不過、您應該設定非root使用者的Sudo權限、以便安裝和啟動外掛程式程序。安裝外掛程式之後、程序將以有效的root使用者身分執行。
+
+* 如果您要在SnapCenter AIX主機上安裝適用於AIX的Sfor AIX外掛程式套件、您應該已經手動解析目錄層級符號連結。
++
+適用於AIX的程式庫外掛套件會自動解析檔案層級符號連結、但不會解析目錄層級符號連結、以取得Java_Home絕對路徑。SnapCenter
+
+* 以驗證模式建立認證、做為安裝使用者的Linux或AIX。
+* 您必須在Linux或AIX主機上安裝Java 1.8.x（64位元）。
++
+如需下載Java的資訊、請參閱：
+
++
+** http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"^]
+** https://www.ibm.com/support/pages/java-sdk-aix["IBM Java for AIX"^]
+
+
+* 對於在Linux或AIX主機上執行的Oracle資料庫、您應該同時安裝SnapCenter 適用於Oracle資料庫的支援功能、SnapCenter 以及適用於UNIX的支援功能。
++
+
+NOTE: 您也可以使用Oracle資料庫的外掛程式來管理Oracle資料庫for SAP。不過、不支援SAP BR*工具整合。
+
+* 如果您使用的是Oracle資料庫11.2.0.3或更新版本、則必須安裝13366202 Oracle修補程式。
+
+
+
+NOTE: 不支援SnapCenter 位於/etc/stab檔案中的UUID對應。
+
+
+
+== Linux主機需求
+
+在安裝SnapCenter 適用於Linux的支援套件之前、您應確保主機符合要求。
+
+|===
+| 項目 | 需求 
+
+
+ a| 
+作業系統
+ a| 
+* Red Hat Enterprise Linux
+* Oracle Linux
++
+
+NOTE: 如果您在Oracle Linux或Red Hat Enterprise Linux 6.6或7.0作業系統的LVM上使用Oracle資料庫、則必須安裝最新版本的邏輯Volume Manager（LVM）。
+
+* SUSE Linux Enterprise Server（SLES）
+
+
+
+
+ a| 
+主機上安裝的不需使用的RAM SnapCenter
+ a| 
+1 GB
+
+
+
+ a| 
+主機上安裝及記錄SnapCenter 插件的最低空間
+ a| 
+2 GB
+
+
+NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使用量。所需的記錄空間會因受保護的實體數量和資料保護作業的頻率而有所不同。如果沒有足夠的磁碟空間、將不會針對最近執行的作業建立記錄。
+
+
+
+ a| 
+必要的軟體套件
+ a| 
+Java 1.8.x（64位元）Oracle Java和OpenJDKFlavors
+
+如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。
+
+|===
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+
+
+
+=== 為Linux主機的非root使用者設定Sudo權限
+
+非root使用者可利用發行版本的更新版本安裝適用於Linux的《SUSE外掛程式套件」、並開始外掛程序。SnapCenter SnapCenter您應該為非root使用者設定Sudo權限、以提供對多個路徑的存取權。
+
+*您需要的是什麼*
+
+* Sudo版本介於1.8.7與1.8.19P2之間。
+* 確保非root使用者是Oracle安裝群組的一部分。
+* 編輯_/etc/ssh / sshd_config_檔案、以設定訊息驗證代碼演算法：Macs HMAC - SHA2-256和MAC HMAC - SHA2-512。
++
+更新組態檔後、重新啟動sshd服務。
+
++
+範例：
+
++
+[listing]
+----
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+#Legacy changes
+#KexAlgorithms diffie-hellman-group1-sha1
+#Ciphers aes128-cbc
+#The default requires explicit activation of protocol
+Protocol 2
+HostKey/etc/ssh/ssh_host_rsa_key
+MACs hmac-sha2-256
+----
+
+
+*關於此工作*
+
+您應該為非root使用者設定Sudo權限、以便存取下列路徑：
+
+* /home/_Sudo使用者_/.sc_NetApp/snapcenter_linux_host_plugin.bin
+* /custature_location / NetApp/snapcenter/spl/installal/plugins/uninstall
+* /cust_LOUSE/NetApp/snapcenter/spl/bin/spl
+
+
+*步驟*
+
+. 登入您要安裝SnapCenter 適用於Linux的支援套件的Linux主機。
+. 使用visudo Linux公用程式、將下列行新增至/etc/udoers檔案。
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias SCCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin,
+/opt/NetApp/snapcenter/spl/installation/plugins/uninstall,
+/opt/NetApp/snapcenter/spl/bin/spl
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/Linux_Prechecks.sh
+_SUDO_USER_ ALL=(ALL) NOPASSWD:SETENV: SCCMD, PRECHECKCMD
+Defaults: _SUDO_USER_ env_keep=JAVA_HOME
+Defaults: _SUDO_USER_ !visiblepw
+Defaults: _SUDO_USER_ !requiretty
+----
++
+_Susu_user_是您所建立的非root使用者名稱。
+
++
+您可以從* oracle_checksum．txt*檔案取得Checksum值、該檔案位於_C：\ProgramData \NetApp\SnapCenter\Package儲存庫_。
+
++
+如果您已指定自訂位置、則位置將是_custom_path\NetApp\SnapCenter\Package_。
+
++
+
+IMPORTANT: 此範例只能做為建立自己資料的參考。
+
+
+
+|===
+
+
+| *最佳實務做法：*基於安全考量、您應在完成每次安裝或升級後移除Sudo項目。 
+|===
+
+
+== AIX主機需求
+
+在安裝SnapCenter 適用於AIX的支援套件之前、您應確保主機符合要求。
+
+
+NOTE: 作爲適用於AIX的支援不支援並行Volume群組的《支援UNIX的程式集》外掛程式。SnapCenter SnapCenter
+
+|===
+| 項目 | 需求 
+
+
+ a| 
+作業系統
+ a| 
+AIX 6.1或更新版本
+
+
+
+ a| 
+主機上安裝的不需使用的RAM SnapCenter
+ a| 
+4 GB
+
+
+
+ a| 
+主機上安裝及記錄SnapCenter 插件的最低空間
+ a| 
+1 GB
+
+
+NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使用量。所需的記錄空間會因受保護的實體數量和資料保護作業的頻率而有所不同。如果沒有足夠的磁碟空間、將不會針對最近執行的作業建立記錄。
+
+
+
+ a| 
+必要的軟體套件
+ a| 
+Java 1.8.x（64位元）IBM Java
+
+如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。
+
+|===
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+
+
+
+=== 為非root使用者設定適用於AIX主機的Sudo權限
+
+支援非root使用者安裝適用於AIX的支援套件、並啟動外掛程式的程序。SnapCenter SnapCenter您應該為非root使用者設定Sudo權限、以提供對多個路徑的存取權。
+
+*您需要的是什麼*
+
+* Sudo版本介於1.8.7與1.8.19P2之間。
+* 確保非root使用者是Oracle安裝群組的一部分。
+* 編輯_/etc/ssh / sshd_config_檔案、以設定訊息驗證代碼演算法：Macs HMAC - SHA2-256和MAC HMAC - SHA2-512。
++
+更新組態檔後、重新啟動sshd服務。
+
++
+範例：
+
++
+[listing]
+----
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+#Legacy changes
+#KexAlgorithms diffie-hellman-group1-sha1
+#Ciphers aes128-cbc
+#The default requires explicit activation of protocol
+Protocol 2
+HostKey/etc/ssh/ssh_host_rsa_key
+MACs hmac-sha2-256
+----
+
+
+*關於此工作*
+
+您應該為非root使用者設定Sudo權限、以便存取下列路徑：
+
+* /home/_AIX_USER_/.SC_NetApp/snapcenter_AIX_host_plugin.bsx
+* /custature_location / NetApp/snapcenter/spl/installal/plugins/uninstall
+* /cust_LOUSE/NetApp/snapcenter/spl/bin/spl
+
+
+*步驟*
+
+. 登入您要在其中安裝SnapCenter 適用於AIX的整套件的AIX主機。
+. 使用visudo Linux公用程式、將下列行新增至/etc/udoers檔案。
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias SCCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/snapcenter_aix_host_plugin.bsx,
+/opt/NetApp/snapcenter/spl/installation/plugins/uninstall,
+/opt/NetApp/snapcenter/spl/bin/spl
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/AIX_Prechecks.sh
+_AIX_USER_ ALL=(ALL) NOPASSWD:SETENV: SCCMD, PRECHECKCMD
+Defaults: _AIX_USER_ !visiblepw
+Defaults: _AIX_USER_ !requiretty
+----
++
+_AIX_USER_是您所建立的非root使用者名稱。
+
++
+您可以從* oracle_checksum．txt*檔案取得Checksum值、該檔案位於_C：\ProgramData \NetApp\SnapCenter\Package儲存庫_。
+
++
+如果您已指定自訂位置、則位置將是_custom_path\NetApp\SnapCenter\Package_。
+
++
+
+IMPORTANT: 此範例只能做為建立自己資料的參考。
+
+
+
+|===
+
+
+| *最佳實務做法：*基於安全考量、您應在完成每次安裝或升級後移除Sudo項目。 
+|===
+
+
+== 設定認證資料
+
+使用認證資料驗證使用者執行的不中斷作業。SnapCenter SnapCenter您應該建立認證、以便在Linux或AIX主機上安裝外掛程式套件。
+
+*關於此工作*
+
+系統會為root使用者或具有Sudo權限的非root使用者建立認證、以安裝及啟動外掛程式程序。
+
+如需相關資訊、請參閱： <<Configure sudo privileges for non-root users for Linux host>> 或 <<Configure sudo privileges for non-root users for AIX host>>
+
+|===
+
+
+| *最佳實務做法：*雖然您可以在部署主機及安裝外掛程式之後建立認證、但最佳實務做法是在新增SVM之後建立認證、然後再部署主機及安裝外掛程式。 
+|===
+*步驟*
+
+. 在左側導覽窗格中、按一下*設定*。
+. 在「設定」頁面中、按一下「*認證*」。
+. 按一下「*新增*」。
+. 在「認證」頁面中、輸入認證資訊：
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+認證名稱
+ a| 
+輸入認證的名稱。
+
+
+
+ a| 
+使用者名稱/密碼
+ a| 
+輸入用於驗證的使用者名稱和密碼。
+
+** 網域管理員
++
+在您要安裝SnapCenter 此插件的系統上指定網域管理員。「使用者名稱」欄位的有效格式為：
+
++
+*** _netbios\使用者名稱_
+*** 網域FQDN \使用者名稱_
+
+
+** 本機管理員（僅適用於工作群組）
++
+對於屬於工作群組的系統、請在安裝SnapCenter 此插件的系統上指定內建的本機管理員。如果使用者帳戶擁有較高的權限、或主機系統上的使用者存取控制功能已停用、您可以指定屬於本機系統管理員群組的本機使用者帳戶。「使用者名稱」欄位的有效格式為：_username_
+
+
+
+
+
+ a| 
+驗證模式
+ a| 
+選取您要使用的驗證模式。
+
+視外掛程式主機的作業系統而定、選取Linux或AIX。
+
+
+
+ a| 
+使用Sudo權限
+ a| 
+如果您要為非root使用者建立認證、請選取「*使用Sudo權限*」核取方塊。
+
+|===
+. 按一下「*確定*」。
+
+
+完成認證設定之後、您可能會想要在*使用者與存取*頁面上、將認證維護指派給使用者或使用者群組。
+
+
+
+== 設定Oracle資料庫的認證資料
+
+您必須設定用於在Oracle資料庫上執行資料保護作業的認證資料。
+
+*關於此工作*
+
+您應該檢閱Oracle資料庫支援的不同驗證方法。如需相關資訊、請參閱link:../install/concept_authentication_methods_for_your_credentials.html["認證方法"^]。
+
+如果您為個別資源群組設定認證、且使用者名稱沒有完整的管理權限、則使用者名稱至少必須具有資源群組和備份權限。
+
+如果您已啟用Oracle資料庫驗證、資源檢視中會顯示紅色的掛鎖圖示。您必須設定資料庫認證、才能保護資料庫或將其新增至資源群組、以執行資料保護作業。
+
+
+NOTE: 如果您在建立認證時指定不正確的詳細資料、則會顯示錯誤訊息。您必須按一下*「取消」*、然後重試。
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、從*檢視*清單中選取*資料庫*。
+. 按一下 image:../media/filter_icon.gif[""]，然後選取主機名稱和資料庫類型以篩選資源。
++
+然後按一下 image:../media/filter_icon.gif[""] 以關閉篩選窗格。
+
+. 選取資料庫、然後按一下*資料庫設定*>*設定資料庫*。
+. 在「設定資料庫設定」區段的「使用現有認證*」下拉式清單中、選取應該用來在Oracle資料庫上執行資料保護工作的認證。
++
+
+NOTE: Oracle使用者應該擁有Sysdba權限。
+
++
+您也可以按一下建立認證 image:../media/add_icon_configure_database.gif["在設定資料庫畫面中新增圖示"]。
+
+. 在Configure ASM settings（設定ASM設定）區段的* Use existing Credential*（使用現有認證*）下拉式清單中、選取應用於在ASM執行個體上執行資料保護工作的認證資料。
++
+
+NOTE: ASM使用者應具有SysASM權限。
+
++
+您也可以按一下建立認證 image:../media/add_icon_configure_database.gif["在設定資料庫畫面中新增圖示"]。
+
+. 在「設定RMAN目錄設定」區段的「使用現有認證資料*」下拉式清單中、選取應用於在Oracle Recovery Manager（RMAN）目錄資料庫上執行資料保護工作的認證資料。
++
+您也可以按一下建立認證 image:../media/add_icon_configure_database.gif["在設定資料庫畫面中新增圖示"]。
+
++
+在「* TNSName*」欄位中、輸入SnapCenter 透明網路基底（TNS）檔案名稱、以便讓該伺服器用於與資料庫通訊。
+
+. 在*慣用的RAC節點*欄位中、指定備份首選的實際應用程式叢集（RAC）節點。
++
+偏好的節點可能是存在RAC資料庫執行個體的一個或所有叢集節點。備份作業只會依喜好順序在這些偏好的節點上觸發。
+
++
+在RAC One Node中、偏好的節點中只會列出一個節點、而此偏好的節點是目前裝載資料庫的節點。
+
++
+在容錯移轉或重新配置RAC單一節點資料庫之後、重新整理SnapCenter 「還原資源」頁面中的資源、將會從先前裝載資料庫的*偏好的RAC節點*清單中移除主機。資料庫重新放置的RAC節點將列於* RAC節點*、並需要手動設定為偏好的RAC節點。
+
++
+如需詳細資訊、請參閱 link:../protect-sco/task_define_a_backup_strategy_for_oracle_databases.html#preferred-nodes-in-rac-setup["RAC設定中的慣用節點"^]。
+
+. 按一下「*確定*」。
+

@@ -1,0 +1,34 @@
+---
+permalink: protect-scsql/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_sql_server.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SQL Server 
+summary: 在您使用SnapCenter 原地複製之前、先瞭解與您想要執行的備份、複製及還原作業相關的基本概念非常實用。您可以與不同作業的資源、資源群組和原則互動。 
+---
+= 如何使用資源、資源群組和原則來保護SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在您使用SnapCenter 原地複製之前、先瞭解與您想要執行的備份、複製及還原作業相關的基本概念非常實用。您可以與不同作業的資源、資源群組和原則互動。
+
+* 資源通常是資料庫、資料庫執行個體或Microsoft SQL Server可用度群組、您可以使用SnapCenter 還原進行備份或複製。
+* 指的是主機或叢集上的資源集合。SnapCenter
++
+當您對資源群組執行作業時、會根據您為資源群組指定的排程、對資源群組中定義的資源執行該作業。
+
++
+您可以隨需備份單一資源或資源群組。您也可以針對單一資源和資源群組執行排程備份。
+
+* 這些原則會指定資料保護作業的備份頻率、複本保留、複寫、指令碼及其他特性。
++
+當您建立資源群組時、請為該群組選取一或多個原則。當您針對單一資源執行隨需備份時、也可以選取原則。
+
+
+
+將資源群組想像成定義您要保護的內容、以及您想要在何時保護資源群組。請將原則想像為定義您要保護的方式。例如、如果您要備份所有資料庫或備份主機的所有檔案系統、您可以建立一個資源群組、其中包含主機中的所有資料庫或所有檔案系統。然後您可以將兩個原則附加到資源群組：每日原則和每小時原則。當您建立資源群組並附加原則時、可能會將資源群組設定為每日執行完整備份、以及每小時執行記錄備份的另一個排程。
+
+下圖說明資料庫的資源、資源群組和原則之間的關係：
+
+image::../media/scsql_resourcegroup_policy.gif[scsql resourcegrogroup原則]

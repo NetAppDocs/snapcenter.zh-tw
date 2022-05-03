@@ -1,0 +1,60 @@
+---
+permalink: protect-sco/concept_snapcenter_plug_in_for_oracle_database_features.html 
+sidebar: sidebar 
+keywords: plug-in for Oracle features 
+summary: 適用於Oracle資料庫的外掛程式可與Linux或AIX主機上的Oracle資料庫整合、並與儲存系統上的NetApp技術整合。 
+---
+= Oracle資料庫外掛程式的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於Oracle資料庫的外掛程式可與Linux或AIX主機上的Oracle資料庫整合、並與儲存系統上的NetApp技術整合。
+
+* 統一化圖形化使用者介面
++
+此支援介面可在外掛程式與環境之間提供標準化與一致性。SnapCenter利用此支援介面、您可以完成跨外掛程式的一致備份、還原、還原及複製作業、使用集中式報告、使用概覽儀表板檢視、設定角色型存取控制（RBAC）、以及監控所有外掛程式的工作。SnapCenter
+
+* 自動化集中管理
++
+您可以排程備份與複製作業、設定原則型備份保留、以及執行還原作業。您也可以設定SnapCenter 使用功能支援功能來傳送電子郵件警示、主動監控環境。
+
+* 不中斷營運的NetApp Snapshot複製技術
++
+使用NetApp Snapshot複製技術搭配Oracle資料庫外掛程式和UNIX外掛程式來備份資料庫。SnapCenterSnapshot複本所耗用的儲存空間最小。
+
+
+
+適用於Oracle資料庫的外掛程式也具有下列優點：
+
+* 支援備份、還原、複製、掛載、卸載、 和驗證工作流程
+* 自動探索主機上設定的Oracle資料庫
+* 支援使用Oracle Recovery Manager（RMAN）進行目錄分類和取消目錄
+* RBAC支援的安全性與集中式角色委派
++
+您也可以設定認證資料、讓獲授權SnapCenter 的功能驗證使用者擁有應用程式層級的權限。
+
+* 建立線上資料庫的空間效率與時間點複本、以便使用NetApp FlexClone技術進行測試或資料擷取
++
+您要建立複本的儲存系統需要FlexClone授權。
+
+* 支援ONTAP 以支援支援的一致性群組（CG）功能、作為在SAN和ASM環境中建立備份的一部分
+* 不中斷營運且自動化的備份驗證
+* 能夠在多個資料庫主機上同時執行多個備份
++
+在單一作業中、當單一主機中的資料庫共用相同的磁碟區時、就會合併Snapshot複本。
+
+* 支援實體與虛擬化基礎架構
+* 支援NFS、iSCSI、Fibre Channel（FC）、RDM、VMDK over NFS和VMFS、以及ASM over NFS、SAN、RDM和VMDK
+* 支援ONTAP 精選LUN地圖（SLM),功能如所述
++
+根據預設、「SLM-功能」會定期探索沒有最佳化路徑的LUN、並加以修正。您可以修改位於/var/opt/snapcenter/SCU/依此類推 的scu.properties檔案中的參數來設定SLM..
+
++
+** 您可以將啟用午餐路徑監控的值設為假、以停用此功能。
+** 您可以指定LUN路徑自動固定的頻率、方法是將lunpath_監 控時間間隔的值（以小時為單位）指派給lunpath_監 控時間間隔。如需有關SLM,請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["《SAN管理指南》（英文）ONTAP"^]。
+
+
+

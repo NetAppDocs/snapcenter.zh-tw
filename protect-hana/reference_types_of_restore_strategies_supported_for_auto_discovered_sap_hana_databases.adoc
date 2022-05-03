@@ -1,0 +1,38 @@
+---
+permalink: protect-hana/reference_types_of_restore_strategies_supported_for_auto_discovered_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Databases 
+summary: 您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。自動探索SAP HANA資料庫的還原策略有兩種類型。 
+---
+= 自動探索的SAP HANA資料庫所支援的還原策略類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。自動探索SAP HANA資料庫的還原策略有兩種類型。
+
+
+
+== 完成資源還原
+
+* 還原資源的所有磁碟區、qtree和LUN
++
+** 應選取「* Volume Revert *」（*磁碟區恢復*）選項、以還原整個磁碟區。
++
+
+NOTE: 如果資源包含磁碟區或qtree、則會刪除在這類磁碟區或qtree上選取要還原的Snapshot複本之後所取得的Snapshot複本、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。
+
+
+
+
+
+
+
+== 租戶資料庫
+
+* 還原租戶資料庫
+
+
+如果選擇*租戶資料庫*選項、SnapCenter 則必須使用HANA studio或HANA recovery指令碼來執行恢復作業。

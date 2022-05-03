@@ -1,0 +1,24 @@
+---
+permalink: protect-sce/reference_granular_recovery_of_mails_and_mailbox.html 
+sidebar: sidebar 
+keywords: SMBR, Single Mailbox recovery, Exchange database 
+summary: 單一信箱恢復（SMBR）軟體可讓您還原及恢復郵件或信箱、而非完整的Exchange資料庫。 
+---
+= 精細恢復郵件和信箱
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+單一信箱恢復（SMBR）軟體可讓您還原及恢復郵件或信箱、而非完整的Exchange資料庫。
+
+只為了恢復單一郵件而還原完整的資料庫、將耗費大量時間和資源。SMBR建立Snapshot的複本、然後使用Microsoft API在SMBR中掛載信箱、有助於快速恢復郵件。如需如何使用SMBR的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2871407["SMBR系統管理指南"^]。
+
+*瞭解更多資訊*
+
+* link:../install/concept_snapcenter_licenses.html#single-mailbox-recovery-smbr-licenses["SMBR授權"^]
+* https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30035["SMBR文件庫"^]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Single_Mailbox_Recovery_(SMBR)/How_to_restore_from_secondary_storage_in_SMBR_with_SnapCenter["如何使用SnapCenter NetApp從SMBR的二線儲存設備還原"^]
+* https://www.youtube.com/watch?v=fOMuaaXrreI&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg&index=3["使用SMBR從SnapVault 功能中還原Microsoft Exchange郵件"^]
+

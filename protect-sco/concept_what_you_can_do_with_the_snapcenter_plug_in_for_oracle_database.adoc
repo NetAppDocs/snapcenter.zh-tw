@@ -1,0 +1,37 @@
+---
+permalink: protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html 
+sidebar: sidebar 
+keywords: backup, restore, clone, oracle database 
+summary: 您可以使用Oracle資料庫的外掛程式來備份、驗證、還原、還原、掛載、 卸載並複製Oracle資料庫及其資源。您也可以使用Oracle Recovery Manager（RMAN）來編錄或取消資料庫備份目錄。 
+---
+= 如何使用Oracle資料庫的外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於Oracle資料庫的支援功能、是NetApp支援應用程式感知的Oracle資料庫資料保護管理功能的NetApp支援軟體主機端元件。SnapCenter SnapCenter
+
+Oracle資料庫外掛程式利用Oracle Recovery Manager（RMAN）、驗證、掛載、卸載、還原、 在SnapCenter 您的整個環境中恢復及複製Oracle資料庫。Oracle資料庫外掛程式會安裝SnapCenter 適用於UNIX的支援功能、以執行所有的資料保護作業。
+
+您可以使用Oracle資料庫外掛程式來管理執行SAP應用程式之Oracle資料庫的備份。不過、不支援SAP BR*工具整合。
+
+* 備份資料檔案、控制檔及歸檔記錄檔。
++
+備份僅在Container資料庫（CDB）層級支援。
+
+* 還原及還原資料庫、CDB及可插拔資料庫（PDF）。
++
+不支援不完整的PDF還原。
+
+* 建立正式作業資料庫的複本、直到時間點。
++
+複製僅在CDB層級支援。
+
+* 立即驗證備份。
+* 掛載及卸載資料與記錄備份、以利恢復作業。
+* 排程備份與驗證作業。
+* 監控所有作業。
+* 檢視備份、還原及複製作業的報告。
+

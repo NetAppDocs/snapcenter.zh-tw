@@ -1,0 +1,104 @@
+---
+section: install
+title: 安裝伺服器SnapCenter
+entries:
+- title: 安裝工作流程
+  url: "/install/install_workflow.html"
+- title: 準備安裝SnapCenter 完此伺服器
+  entries:
+  - title: 網域與工作群組需求
+    url: "/install/reference_domain_and_workgroup_requirements.html"
+  - title: 空間與規模需求
+    url: "/install/reference_space_and_sizing_requirements.html"
+  - title: SAN主機需求
+    url: "/install/reference_san_host_requirements.html"
+  - title: 支援的儲存系統與應用程式
+    url: "/install/reference_supported_storage_systems_and_applications.html"
+  - title: 支援的瀏覽器
+    url: "/install/reference_supported_browsers.html"
+  - title: 連線與連接埠需求
+    url: "/install/reference_connection_and_port_requirements.html"
+  - title: 不需要授權SnapCenter
+    url: "/install/concept_snapcenter_licenses.html"
+  - title: 認證方法
+    url: "/install/concept_authentication_methods_for_your_credentials.html"
+  - title: 儲存虛擬機器連線與認證
+    url: "/install/concept_svm_connections_and_credentials.html"
+- title: 安裝SnapCenter 此伺服器
+  url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
+- title: 登入SnapCenter 到
+  url: "/install/task_log_in_to_snapcenter.html"
+- title: 設定CA憑證
+  entries:
+  - title: 產生CA認證CSR檔案
+    url: "/install/reference_generate_CA_certificate_CSR_file.html"
+  - title: 匯入CA憑證
+    url: "/install/task_import_CA_certificates.html"
+  - title: 取得CA憑證指紋
+    url: "/install/task_get_the_CA_certificate_thumbprint.html"
+  - title: 使用Windows主機外掛程式服務設定CA憑證
+    url: "/install/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
+  - title: 使用SnapCenter 站台設定CA憑證
+    url: "/install/task_configure_CA_certificate_with_snapcenter_site.html"
+  - title: 啟用SnapCenter 適用於伺服器的CA憑證
+    url: "/install/task_enable_ca_certificates_for_snapcenter.html"
+- title: 設定Active Directory、LDAP和LDAPS
+  entries:
+  - title: 登錄不受信任的Active Directory網域
+    url: "/install/task_register_untrusted_active_directory_domains.html"
+  - title: 設定LDAPS的CA用戶端憑證
+    url: "/install/task_configure_CA_client_certificate_for_LDAPS.html"
+- title: 設定高可用度
+  entries:
+  - title: 使用SnapCenter F5設定高可用度的功能
+    url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
+  - title: 手動設定Microsoft網路負載平衡器
+    url: "/install/concept_network_load_balanacing_and_application_request_routing_requirements.html"
+  - title: 從NLB切換至F5以獲得高可用度
+    url: "/install/task_switch_from_nlb_to_f5_for_high_availability.html"
+  - title: 高可用度：SnapCenter 適用於MySQL的功能
+    url: "/install/concept_high_availability_for_snapcenter_mysql_repository.html"
+  - title: 匯出SnapCenter 功能證書
+    url: "/install/task_export_snapcenter_certificates.html"
+- title: 設定角色型存取控制（RBAC）
+  entries:
+  - title: 新增使用者或群組、並指派角色和資產
+    url: "/install/task_add_a_user_or_group_and_assign_role_and_assets.html"
+  - title: 建立角色
+    url: "/install/task_create_a_role.html"
+  - title: 使用ONTAP 安全登入命令新增一個RBAC角色
+    url: "/install/task_add_an_rbac_role_using_security_login_commands.html"
+  - title: 以最低權限建立SVM角色
+    url: "/install/create-svm-roles-minimum-privileges.html"
+  - title: 以ONTAP 最低權限建立叢集角色
+    url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
+  - title: 設定「IIS應用程式集區」以啟用Active Directory讀取權限
+    url: "/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html"
+- title: 新增儲存系統
+  url: "/install/task_add_storage_systems.html"
+- title: 新增SnapCenter 以控制器為基礎的功能
+  url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
+- title: 新增SnapCenter 以功能為基礎的「功能型標準」授權
+  url: "/install/concept_snapcenter_standard_capacity_based_licenses.html"
+- title: 配置您的儲存系統
+  entries:
+  - title: 在Windows主機上配置儲存設備
+    entries:
+    - title: 設定LUN儲存設備
+      url: "/install/concept_configure_lun_storage.html"
+    - title: 建立及管理igroup
+      url: "/install/concept_create_and_manage_igroups.html"
+    - title: 建立及管理磁碟
+      url: "/install/task_create_and_manage_disks.html"
+    - title: 建立及管理SMB共用區
+      url: "/install/concept_create_and_manage_smb_shares.html"
+    - title: 回收儲存系統上的空間
+      url: "/install/task_reclaim_space_on_the_storage_system.html"
+    - title: 使用PowerShell Cmdlet來配置儲存設備
+      url: "/install/reference_provision_storage_using_powershell_cmdlets.html"
+  - title: 在VMware環境中配置儲存設備
+    url: "/install/concept_provision_storage_in_vmware_environments.html"
+- title: 使用SnapCenter 伺服器設定安全的MySQL連線
+  url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
+- title: 安裝期間在Windows主機上啟用的功能
+  url: "/install/reference_features_enabled_on_your_windows_host_during_installation.html"

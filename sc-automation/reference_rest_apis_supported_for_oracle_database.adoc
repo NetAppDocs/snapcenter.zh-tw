@@ -1,0 +1,115 @@
+---
+permalink: sc-automation/refrence_rest_apis_supported_for_oracle_database.html 
+sidebar: sidebar 
+keywords: REST APIs, oracle database 
+summary: 說明Oracle資料庫支援的REST API工作流程 
+---
+= Oracle資料庫支援REST API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Oracle資料庫使用REST API執行下列作業：
+
+
+
+== 認證資料
+
+* 向SnapCenter 伺服器註冊認證資料
+* 擷取SnapCenter 以伺服器登錄的認證資料
+* 依名稱擷取認證資料
+* 修改認證資料
+* 刪除認證資料
+
+
+
+
+== 主機
+
+* 新增主機
+* 從SnapCenter 無法辨識的地方移除一或多個主機
+* 依名稱擷取主機
+
+
+
+
+== 外掛程式
+
+* 在現有主機上安裝外掛程式
+* 升級外掛程式
+
+
+
+
+== 原則
+
+* 建立新原則
+* 依名稱擷取原則
+* 修改原則
+* 刪除原則
+
+
+
+
+== 資源群組
+
+* 保護資源群組
+* 修改保護
+* 移除保護
+* 建立新的資源群組
+* 依名稱擷取資源群組
+* 修改資源群組
+* 刪除資源群組
+
+
+
+
+== 資源
+
+* 探索資料庫
+* 設定資料庫
+
+
+
+
+== 備份
+
+* 啟動資源備份作業
+* 開始備份作業
+* 依名稱擷取備份
+* 擷取備份
+* 依名稱刪除備份
+
+
+
+
+== 還原
+
+* 還原備份
+
+
+
+
+== Clone重新整理
+
+* 從指定的備份建立Oracle資料庫複製規格
+* 顯示、修改及刪除特定的實體複本檔案
+* Clone重新整理
+
+
+
+
+== RBAC
+
+* 將資源指派給使用者或群組
+* 取消指派資源給使用者或群組
+
+
+
+
+== 組態設定
+
+* 擷取及修改組態設定
+

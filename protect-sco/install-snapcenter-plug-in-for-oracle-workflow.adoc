@@ -1,0 +1,16 @@
+---
+permalink: protect-sco/install-snapcenter-plug-in-for-oracle-workflow.html 
+sidebar: sidebar 
+keywords: installing 
+summary: 若要SnapCenter 保護Oracle資料庫、您應該安裝並設定適用於Oracle資料庫的整套功能。 
+---
+= Oracle資料庫適用的安裝流程SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要SnapCenter 保護Oracle資料庫、您應該安裝並設定適用於Oracle資料庫的整套功能。
+
+image::../media/sco_install_configure_workflow.png[SCO安裝設定工作流程]

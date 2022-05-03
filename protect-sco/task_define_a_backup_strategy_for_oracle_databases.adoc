@@ -1,0 +1,299 @@
+---
+permalink: protect-sco/task_define_a_backup_strategy_for_oracle_databases.html 
+sidebar: sidebar 
+keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
+summary: 在建立備份工作之前定義備份策略、可確保您擁有成功還原或複製資料庫所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您備份策略的主要決定因素。 
+---
+= 定義Oracle資料庫的備份策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在建立備份工作之前定義備份策略、可確保您擁有成功還原或複製資料庫所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您備份策略的主要決定因素。
+
+SLA定義預期的服務層級、並解決許多與服務相關的問題、包括服務的可用度和效能。RTO是指在服務中斷後、必須還原業務程序的時間。RPO定義了檔案的存留期策略、這些檔案必須從備份儲存設備中恢復、以便在故障後恢復正常作業。SLA、RTO及RPO有助於資料保護策略。
+
+
+
+== 支援的Oracle資料庫備份組態
+
+支援不同Oracle資料庫組態的備份。SnapCenter
+
+* Oracle獨立式
+* Oracle Real Application叢集（RAC）
+* Oracle獨立式傳統
+* Oracle獨立容器資料庫（CDB）
+* Oracle Data Guard待命
++
+您只能建立Data Guard待命資料庫的離線掛載備份。不支援離線關機備份、僅歸檔記錄備份及完整備份。
+
+* Oracle Active Data Guard待命
++
+您只能建立Active Data Guard待命資料庫的線上備份。不支援僅歸檔記錄備份和完整備份。
+
++
+
+NOTE: 在建立Data Guard待命或Active Data Guard待命資料庫的備份之前、託管還原程序（MRP）會停止、一旦建立備份、就會啟動MRP。
+
+* 自動儲存管理（ASM）
++
+** 虛擬機器磁碟（VMDK）上的獨立式ASM和ASM RAC
++
+
+NOTE: 在Oracle資料庫支援的所有還原方法中、您只能在VMDK上執行ASM RAC資料庫的連線與複製還原。
+
+** ASM獨立式和ASM RAC（採用原始設備對應）（RDM）可在ASM上的Oracle資料庫上執行備份、還原和複製作業、無論是否使用ASMLib。
+** Oracle ASM篩選器驅動程式（ASMFD）
++
+
+NOTE: 不支援pdb移轉和pdb複製作業。
+
+** Oracle Flex ASM
+
+
+
+
+如需受支援Oracle版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+
+
+
+== Oracle資料庫支援的備份類型
+
+備份類型指定您要建立的備份類型。支援Oracle資料庫的線上和離線備份類型。SnapCenter
+
+
+
+=== 線上備份
+
+當資料庫處於線上狀態時所建立的備份稱為線上備份。線上備份也稱為熱備份、可讓您在不關閉資料庫的情況下建立資料庫備份。
+
+在線上備份中、您可以建立下列檔案的備份：
+
+* 僅資料檔案和控制檔案
+* 僅歸檔記錄檔（在此案例中、資料庫不會進入備份模式）
+* 完整資料庫、包含資料檔案、控制檔及歸檔記錄檔
+
+
+
+
+=== 離線備份
+
+當資料庫處於掛載或關機狀態時所建立的備份稱為離線備份。離線備份也稱為冷備份。您只能在離線備份中包含資料檔案和控制檔案。您可以建立離線掛載或離線關機備份。
+
+* 建立離線掛載備份時、您必須確保資料庫處於掛載狀態。
++
+如果資料庫處於任何其他狀態、則備份作業會失敗。
+
+* 建立離線關機備份時、資料庫可以處於任何狀態。
++
+資料庫狀態會變更為建立備份所需的狀態。建立備份之後、資料庫狀態會還原為原始狀態。
+
+
+
+
+
+== 如何探索Oracle資料庫SnapCenter
+
+「資源」是SnapCenter 指主機上由NetApp維護的Oracle資料庫。您可以將這些資料庫新增至資源群組、以便在探索可用的資料庫之後執行資料保護作業。您應該瞭解SnapCenter 以下流程、瞭解Oracle資料庫的不同類型和版本。
+
+|===
+| 適用於Oracle版本11_g__至12_c_R1 | 適用於Oracle版本12_c__R2至18_c__ 
+
+
+ a| 
+* RAC databaset*：只能根據/etc/oratab項目來探索RAC資料庫。
+
+您應該在/etc/oratab檔案中有資料庫項目。
+ a| 
+* RAC database*：使用srvctl config命令可發現RAC資料庫。
+
+
+
+ a| 
+*獨立式*：獨立式資料庫只會根據/etc/oratab項目來探索。
+
+您應該在/etc/oratab檔案中有資料庫項目。
+ a| 
+*獨立式*：獨立式資料庫是根據/etc/oratab檔案中的項目以及srvctl config命令的輸出而探索。
+
+
+
+ a| 
+* ASM*：ASM執行個體項目應可在/etc/oratab檔案中使用。
+ a| 
+* ASM*：ASM執行個體項目不需要位於/etc/oratab檔案中。
+
+
+
+ a| 
+* RAC One Nod*：RAC One Node資料庫只會根據/etc/oratab項目來探索。
+
+資料庫應處於_nomount_、_mount_或_open_狀態。您應該在/etc/oratab檔案中有資料庫項目。
+
+如果資料庫已探索且備份與資料庫相關聯、則RAC單一節點資料庫狀態會標示為已重新命名或刪除。
+
+如果資料庫重新放置、您應該執行下列步驟：
+
+. 在容錯移轉RAC節點的/etc/oratab檔案中、手動新增重新放置的資料庫項目。
+. 手動重新整理資源。
+. 從資源頁面中選取RAC One Node資料庫、然後按一下* Database Settings*。
+. 設定資料庫、將偏好的叢集節點設為目前裝載資料庫的RAC節點。
+. 執行SnapCenter 不中斷作業。
+
+
+
+NOTE: 如果您已將資料庫從一個節點重新放置到另一個節點、而且先前節點中的oratab項目未刪除、則應手動刪除oratab項目、以避免重複顯示相同的資料庫。
+ a| 
+* RAC One Nod*：RAC One Node資料庫只能使用srvctl config命令來探索。
+
+資料庫應處於_nomount_、_mount_或_open_狀態。如果資料庫已探索且備份與資料庫相關聯、則RAC單一節點資料庫狀態會標示為已重新命名或刪除。
+
+如果資料庫重新放置、您應該執行下列步驟：
+
+. 手動重新整理資源。
+. 從資源頁面中選取RAC One Node資料庫、然後按一下「**資料庫設定」。
+. 設定資料庫、將偏好的叢集節點設為目前裝載資料庫的RAC節點。
+. 執行SnapCenter 不中斷作業。
+
+
+|===
+
+NOTE: 如果/etc/oratab檔案中有任何Oracle 12__c_R2和18_c__資料庫項目、且同一個資料庫已使用srvctl config命令登錄、SnapCenter 則無法使用此功能刪除重複的資料庫項目。如果有過時的資料庫項目、則會探索資料庫、但資料庫將無法連線、且狀態將為離線。
+
+
+
+== RAC設定中的慣用節點
+
+在Oracle Real Application Cluster（RAC）設定中、您可以指定要執行備份作業的慣用節點。如果您未指定偏好的節點、SnapCenter 則會自動將節點指派為偏好的節點、並在該節點上建立備份。
+
+偏好的節點可能是存在RAC資料庫執行個體的一個或所有叢集節點。備份作業只會依照偏好順序在這些偏好的節點上觸發。
+
+範例：RAC資料庫cdrac有三個執行個體：節點1上的cdrbac1、節點2上的cdrbac2、節點3上的cdrbac3。節點1和節點2執行個體已設定為慣用節點、節點2為第一個偏好選項、節點1為第二個偏好選項。當您執行備份作業時、會先在節點2上嘗試此作業、因為節點2是第一個慣用節點。如果節點2未處於備份狀態、這可能是因為主機上未執行外掛程式代理程式等多種原因、則主機上的資料庫執行個體不會處於指定備份類型所需的狀態、 或是FlexASM組態中節點2上的資料庫執行個體未由本機ASM執行個體提供服務、則會在節點1上嘗試執行該作業。節點3不會用於備份、因為它不在偏好的節點清單中。
+
+在Flex ASM設定中、如果基數小於RAC叢集中的節點數、則不會將葉節點列為偏好的節點。如果Flex ASM叢集節點角色有任何變更、您應該手動探索、以便重新整理偏好的節點。
+
+
+
+=== 必要的資料庫狀態
+
+偏好的節點上的RAC資料庫執行個體必須處於必要狀態、備份才能成功完成：
+
+* 設定的慣用節點中的其中一個RAC資料庫執行個體必須處於開啟狀態、才能建立線上備份。
+* 設定的慣用節點中的其中一個RAC資料庫執行個體必須處於掛載狀態、而所有其他執行個體（包括其他慣用節點）必須處於掛載狀態或更低狀態、才能建立離線掛載備份。
+* RAC資料庫執行個體可以處於任何狀態、但您必須指定偏好的節點、才能建立離線關機備份。
+
+
+
+
+== 如何使用Oracle Recovery Manager對備份進行目錄編錄
+
+Oracle資料庫的備份可透過Oracle Recovery Manager（RMAN）進行目錄、以將備份資訊儲存在Oracle RMAN儲存庫中。
+
+目錄式備份稍後可用於區塊層級還原或表格空間時間點還原作業。當您不需要這些已編製目錄的備份時、可以移除目錄資訊。
+
+資料庫必須處於掛載狀態或更高狀態、才能進行分類。您可以對資料備份、歸檔記錄備份及完整備份執行目錄化。如果已啟用資源群組的目錄建立備份、且該資源群組具有多個資料庫、則會針對每個資料庫執行目錄建立。對於Oracle RAC資料庫、目錄會在資料庫至少處於掛載狀態的偏好節點上執行。
+
+
+NOTE: 如果您想要編錄RAC資料庫的備份目錄、請確定該資料庫沒有執行其他工作。如果另一個工作正在執行中、則目錄作業會失敗、而非排入佇列。
+
+根據預設、目標資料庫控制檔會用於分類。如果您想要新增外部目錄資料庫、可以使用SnapCenter 「資料庫設定」精靈、從圖形化使用者介面（GUI）指定外部目錄的認證和透明網路基底（TNS）名稱來設定。您也可以從CLI中設定外部目錄資料庫、方法是使用-OracleRmanCatalogCredentialName和-OracleRmanCatalogTnsName選項執行「Configure - SmOracleDatabase」命令。
+
+如果您在SnapCenter 從還原GUI建立Oracle備份原則時啟用目錄選項、則備份會使用Oracle RMAN進行目錄化、作為備份作業的一部分。您也可以執行Catalog-SmBackupWithOracleRMAN命令來執行備份的延後目錄。建立備份目錄之後、您可以執行Get-SmBackupDetails命令、取得目錄化的備份資訊、例如目錄化資料檔案的標記、控制檔目錄路徑、以及目錄化的歸檔記錄位置。
+
+如果ASM磁碟群組名稱大於或等於16個字元、則SnapCenter 用於備份的命名格式為SC_HASHCODEofDISKKKROUP_DBSID_BACKUPID。不過、如果磁碟群組名稱少於16個字元、則用於備份的命名格式為DISKKROUPNAM_DBSID_BACKUPID、其格式與SnapCenter 在S16 2.0中使用的格式相同。
+
+
+NOTE: HASHCODEofDISKKROUP是每個ASM磁碟群組自動產生的數字（2到10位數）。
+
+您可以執行交叉檢查、以更新過時的RMAN儲存庫資訊、瞭解儲存庫記錄與其實體狀態不符的備份。例如、如果使用者使用作業系統命令從磁碟移除已歸檔的記錄、控制檔仍會指出記錄是在磁碟上、實際上並不是。交叉檢查作業可讓您使用資訊來更新控制檔。您可以執行Set-SmConfigSettings命令來啟用交叉檢查、並將值true指派給啟用交叉檢查參數。預設值設為假。
+
+「ccli Set-SmConfigSettings-ConfigSettingsTYPEPluginCodeSCO-ConfigSettings」「key=enable_scCrossCheck、Value=true」
+
+您可以執行Uncategor-SmBackupWithOracleRMAN命令來移除目錄資訊。您無法使用SnapCenter 無法使用程式庫GUI移除目錄資訊。不過、刪除備份或刪除與該目錄備份相關的保留與資源群組時、會移除已編製備份的資訊。
+
+
+NOTE: 當您強制刪除SnapCenter 該主機時、不會移除與該主機相關聯的已分類備份資訊。強制刪除主機之前、您必須先移除該主機所有已編製目錄的備份資訊。
+
+如果由於作業時間超過為oracle_plugin_RMAN目錄逾時參數指定的逾時值、而導致目錄分類和取消目錄失敗、您應該執行下列命令來修改參數值：
+
+/`opt/NetApp/snapcenter/spl/bin/sccli Set-SmConfigSettings-ConfigSettingsType外掛程式-PluginCode SCO-ConfigSettings "key=oracle_plugin_rman_Catalog_timeout,value=user_defined_value"
+
+修改參數值後SnapCenter 、請執行下列命令、重新啟動「RESTART Plug-in Loader（SPL）」服務：
+
+/`opt/NetApp/snapcenter/spl/bin/spl recovery（選擇/NetApp/snapcenter/spl/bin / spl重新啟動）
+
+您可以執行Get-Help命令名稱來取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725["《軟件命令參考指南》SnapCenter"^]。
+
+
+
+== 備份排程
+
+備份頻率（排程類型）是在原則中指定、備份排程則是在資源群組組態中指定。決定備份頻率或排程的最關鍵因素是資源的變更率和資料的重要性。您可以每小時備份大量使用的資源、而每天備份一次極少使用的資源。其他因素包括資源對貴組織的重要性、服務層級協議（SLA）、以及您的恢復點目標（RPO）。
+
+SLA定義預期的服務層級、並解決許多與服務相關的問題、包括服務的可用度和效能。RPO定義了檔案的存留期策略、這些檔案必須從備份儲存設備中恢復、以便在故障後恢復正常作業。SLA和RPO有助於資料保護策略。
+
+即使是使用頻繁的資源、也不需要一天執行一次或兩次以上的完整備份。例如、定期交易記錄備份可能足以確保您擁有所需的備份。備份資料庫的頻率越高、SnapCenter 還原時所需使用的交易記錄就越少、還原作業的速度就越快。
+
+備份排程分為兩部分、如下所示：
+
+* 備份頻率
++
+備份頻率（執行備份的頻率）、對於某些外掛程式稱為_schedule類型_、是原則組態的一部分。您可以選取每小時、每日、每週或每月作為原則的備份頻率。如果您未選取任何頻率、則所建立的原則為「隨需」原則。您可以按一下*設定*>*原則*來存取原則。
+
+* 備份排程
++
+備份排程（準確是在何時執行備份）是資源群組組態的一部分。例如、如果您的資源群組已設定每週備份的原則、您可以設定每週四下午10：00進行備份的排程。您可以按一下*資源*>*資源群組*來存取資源群組排程。
+
+
+
+
+
+== 備份命名慣例
+
+您可以使用預設的Snapshot複本命名慣例、也可以使用自訂的命名慣例。預設的備份命名慣例會在Snapshot複本名稱中新增時間戳記、協助您識別複本的建立時間。
+
+Snapshot複本使用下列預設命名慣例：
+
+"resourceGroupname_hostname_timestamp"
+
+您應該以邏輯方式命名備份資源群組、如下列範例所示：
+
+[listing]
+----
+dts1_mach1x88_03-12-2015_23.17.26
+----
+在此範例中、語法元素具有下列意義：
+
+* _dbs1_是資源群組名稱。
+* _mach1x88_是主機名稱。
+* _03-12-2015_23.17.26_是日期和時間戳記。
+
+
+或者、您也可以選取*使用Snapshot COPY*的自訂名稱格式、以指定Snapshot複本名稱格式、同時保護資源或資源群組。例如、customtext資源群組原則主機名稱或資源群組主機名稱。根據預設、時間戳記尾碼會新增至Snapshot複本名稱。
+
+
+
+== 備份保留選項
+
+您可以選擇保留備份複本的天數、或指定您要保留的備份複本數量、最多ONTAP 255份。例如、貴組織可能需要保留10天的備份複本或130個備份複本。
+
+建立原則時、您可以指定備份類型和排程類型的保留選項。
+
+如果您設定SnapMirror複寫、保留原則就會鏡射到目的地磁碟區。
+
+還原刪除保留的備份、這些備份的保留標籤與排程類型相符。SnapCenter如果變更了資源或資源群組的排程類型、則使用舊排程類型標籤的備份仍可能保留在系統上。
+
+
+NOTE: 若要長期保留備份複本、您應該使用SnapVault 此功能進行備份。
+
+
+
+== 使用主要或次要儲存磁碟區驗證備份複本
+
+您可以在主要儲存磁碟區或SnapMirror或SnapVault 支援的二線儲存磁碟區上驗證備份複本。使用次要儲存磁碟區進行驗證、可降低主要儲存磁碟區的負載。
+
+當您驗證主儲存磁碟區或次儲存磁碟區上的備份時、所有的主要與次要Snapshot複本都會標示為已驗證。
+
+驗證SnapMirror和不二級儲存磁碟區上的備份複本時需要使用支援。SnapRestore SnapVault

@@ -1,0 +1,139 @@
+---
+permalink: install/concept_provision_storage_in_vmware_environments.html 
+sidebar: sidebar 
+keywords: guest OS, VMware ESXi server, limitations, RDM, Microsoft cluster 
+summary: 您可以在SnapCenter VMware環境中使用適用於Microsoft Windows的解決方案、來建立及管理LUN、以及管理Snapshot備份複本。 
+---
+= 在VMware環境中配置儲存設備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在SnapCenter VMware環境中使用適用於Microsoft Windows的解決方案、來建立及管理LUN、以及管理Snapshot備份複本。
+
+
+
+== 支援的VMware來賓作業系統平台
+
+* 支援的Windows Server版本
+* Microsoft叢集組態
++
+使用Microsoft iSCSI軟體啟動器時、VMware最多支援16個節點、或使用FC最多支援兩個節點
+
+* RDM LUN
++
+對於一般RDM、最多可支援56個RDM LUN、四個LSI Logic SCSI控制器、或是在VMware VM的Windows組態中、使用三個LSI Logic SCSI控制器的42個RDM LUN
+
++
+支援VMware半虛擬SCSI控制器。RDM磁碟可支援256個磁碟。
+
+
+
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+
+
+
+=== VMware ESXi伺服器相關限制
+
+* 不支援在使用ESXi認證的虛擬機器上、於Microsoft叢集上安裝Windows外掛程式。
++
+在叢集式虛擬機器上安裝Windows外掛程式時、您應該使用vCenter認證。
+
+* 所有叢集式節點都必須使用相同的目標ID（位於虛擬SCSI介面卡上）來處理同一個叢集式磁碟。
+* 當您在外掛程式for Windows之外建立RDM LUN時、必須重新啟動外掛程式服務、使其能夠辨識新建立的磁碟。
+* 您無法在VMware來賓作業系統上同時使用iSCSI和FC啟動器。
+
+
+
+
+=== 執行不必要的vCenter權限SnapCenter
+
+您應該在主機上擁有下列vCenter權限、以便在客體作業系統中執行RDM作業：
+
+* 資料存放區：移除檔案
+* 主機：組態>儲存分割區組態
+* 虛擬機器：組態
+
+
+您必須將這些權限指派給Virtual Center Server層級的角色。您指派這些權限的角色無法指派給沒有root權限的任何使用者。
+
+指派這些權限之後、您就可以在客體作業系統上安裝Windows外掛程式。
+
+
+
+== 管理Microsoft叢集中的FC RDM LUN
+
+您可以使用Windows外掛程式來管理使用FC RDM LUN的Microsoft叢集、但必須先在外掛程式之外建立共用的RDM仲裁和共用儲存設備、然後將磁碟新增至叢集的虛擬機器。
+
+從ESXi 5.5開始、您也可以使用ESX iSCSI和FCoE硬體來管理Microsoft叢集。適用於Windows的外掛程式包含Microsoft叢集的隨裝即用支援。
+
+
+
+=== 需求
+
+當您符合特定組態需求時、適用於Windows的外掛程式會在兩部不同的虛擬機器上使用FC RDM LUN來支援Microsoft叢集、這些虛擬機器屬於兩部不同的ESX或ESXi伺服器、也稱為跨機箱叢集。
+
+* 虛擬機器（VM）必須執行相同的Windows Server版本。
+* 每個VMware父主機的ESX或ESXi伺服器版本必須相同。
+* 每個父主機必須至少有兩個網路介面卡。
+* 兩部ESX或ESXi伺服器之間必須至少共用一個VMware虛擬機器檔案系統（VMFS）資料存放區。
+* VMware建議在FC SAN上建立共用資料存放區。
++
+如有必要、也可透過iSCSI建立共用資料存放區。
+
+* 共享的RDM LUN必須處於實體相容模式。
+* 共享的RDM LUN必須在Windows的外掛程式之外手動建立。
++
+您無法將虛擬磁碟用於共享儲存設備。
+
+* 叢集中的每個虛擬機器上、必須以實體相容模式設定SCSI控制器：
++
+Windows Server 2008 R2要求您在每個虛擬機器上設定LSI Logic SAS SCSI控制器。如果現有的LSI Logic SAS控制器只有其中一種類型存在、且已連接至C：磁碟機、則共享LUN無法使用。
+
++
+VMware Microsoft叢集不支援半虛擬化類型的SCSI控制器。
+
++
+
+NOTE: 在實體相容模式下、將SCSI控制器新增至虛擬機器上的共享LUN時、您必須在VMware Infrastructure Client中選取*原始裝置對應*（RDM）選項、而非*建立新磁碟*選項。
+
+* Microsoft虛擬機器叢集不能是VMware叢集的一部分。
+* 在屬於Microsoft叢集的虛擬機器上安裝Windows外掛程式時、您必須使用vCenter認證、而非ESX或ESXi認證。
+* Windows外掛程式無法使用多個主機的啟動器建立單一igroup。
++
+必須先在儲存控制器上建立包含所有ESXi主機啟動器的igroup、然後再建立將用作共用叢集磁碟的RDM LUN。
+
+* 請確定您使用FC啟動器在ESXi 5.0上建立RDM LUN。
++
+建立RDM LUN時、會使用ALUA建立啟動器群組。
+
+
+
+
+
+=== 限制
+
+適用於Windows的外掛程式可在屬於不同ESX或ESXi伺服器的不同虛擬機器上、使用FC/iSCSI RDM LUN來支援Microsoft叢集。
+
+
+NOTE: ESX 5.5i之前的版本不支援此功能。
+
+* Windows外掛程式不支援ESX iSCSI和NFS資料存放區上的叢集。
+* Windows外掛程式不支援叢集環境中的混合啟動器。
++
+啟動器必須是FC或Microsoft iSCSI、但不能同時是兩者。
+
+* Microsoft叢集中的共享磁碟不支援ESX iSCSI啟動器和HBA。
+* 如果虛擬機器是Microsoft叢集的一部分、則適用於Windows的外掛程式不支援使用VMotion進行虛擬機器移轉。
+* Windows外掛程式不支援Microsoft叢集中虛擬機器上的MPIO。
+
+
+
+
+=== 建立共享的FC RDM LUN
+
+在使用FC RDM LUN在Microsoft叢集中的節點之間共用儲存設備之前、您必須先建立共用仲裁磁碟和共用儲存磁碟、然後將它們新增至叢集中的兩個虛擬機器。
+
+共用磁碟並非使用Windows的外掛程式建立。您應該建立共享LUN、然後將其新增至叢集中的每個虛擬機器。如需相關資訊、請參閱 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.mscs.doc/GUID-1A2476C0-CA66-4B80-B6F9-8421B6983808.html["跨實體主機叢集虛擬機器"^]。

@@ -1,0 +1,43 @@
+---
+permalink: uninstall/task_uninstalling_the_snapcenter_server.html 
+sidebar: sidebar 
+keywords: uninstall, snapcenter server 
+summary: 如果您不想再使用SnapCenter 支援資料保護的功能、可以SnapCenter 使用SnapCenter 支援服務器主機上的程式和功能控制台來解除安裝支援服務器。解除安裝SnapCenter 此伺服器會移除其所有元件。 
+---
+= 解除安裝SnapCenter 此伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您不想再使用SnapCenter 支援資料保護的功能、可以SnapCenter 使用SnapCenter 支援服務器主機上的程式和功能控制台來解除安裝支援服務器。解除安裝SnapCenter 此伺服器會移除其所有元件。
+
+*您需要的是什麼*
+
+* 請確定SnapCenter 安裝了該伺服器的磁碟機上至少有2 GB的可用空間。
+* 請確定SnapCenter 安裝了該伺服器的網域並未移除。
++
+如果您移除SnapCenter 安裝了該伺服器的網域、然後嘗試解除安裝、則作業會失敗。
+
+* 您應該已經備份儲存庫資料庫、因為儲存庫資料庫將被清除並解除安裝。
+
+
+*步驟*
+
+. 在支援服務器主機上SnapCenter 、瀏覽至「控制台」。
+. 請確定您在*類別*檢視中。
+. 在「程式集」下、按一下「*解除安裝程式*」。
++
+「程式與功能」視窗即會開啟。
+
+. 選取「NetApp SnapCenter 」「伺服器」、然後按一下「*解除安裝*」。
++
+從還原4.2開始、當您解除安裝此伺服器時、所有元件（包括MySQL Server儲存庫資料庫）都會解除安裝。SnapCenter SnapCenter
+
++
+** 若要從NLB叢集移除NLB節點、必須重新啟動SnapCenter 支援服務器主機。如果您未重新啟動主機、嘗試重新安裝SnapCenter 此伺服器時可能會發生故障。
+** 您應該手動解除安裝未在解除安裝期間移除的.NET Framework。
+
+
+

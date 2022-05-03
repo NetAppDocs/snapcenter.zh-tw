@@ -1,0 +1,64 @@
+---
+permalink: protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html 
+sidebar: sidebar 
+keywords: credentials,SnapCenter Plug-in for Oracle Databases 
+summary: 資源是SnapCenter 由Oracle管理的主機上的Oracle資料庫。您可以將這些資料庫新增至資源群組、以便在探索可用的資料庫之後執行資料保護作業。 
+---
+= 確定Oracle資料庫是否可供備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+資源是SnapCenter 由Oracle管理的主機上的Oracle資料庫。您可以將這些資料庫新增至資源群組、以便在探索可用的資料庫之後執行資料保護作業。
+
+*您需要的是什麼*
+
+* 您必須已完成安裝SnapCenter 完「支援服務器」、新增主機、建立儲存系統連線、以及新增認證等工作。
+* 如果資料庫位於虛擬機器磁碟（VMDK）或原始裝置對應（RDM）上、您必須部署SnapCenter VMware vSphere的「The VMware Plug-in」、並以SnapCenter 「Sfor VMware vSphere」登錄外掛程式。
++
+如需詳細資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["部署SnapCenter VMware vSphere的VMware vCenter外掛程式"^]。
+
+* 如果資料庫位於VMDK檔案系統、您必須登入vCenter並瀏覽至* VM選項*>*進階*>*編輯組態*、才能將VM的_disk.enableUUUUID_值設為true。
+* 您必須檢閱SnapCenter 下列程序、才能探索不同類型和版本的Oracle資料庫。
+
+
+*關於此工作*
+
+安裝外掛程式之後、該主機上的所有資料庫都會自動探索並顯示在「資源」頁面中。
+
+資料庫至少應處於掛載狀態或以上、才能成功探索資料庫。在Oracle Real Application叢集（RAC）環境中、執行探索的主機上的RAC資料庫執行個體至少應處於掛載狀態或以上、以便成功探索資料庫執行個體。只有成功探索的資料庫才能新增至資源群組。
+
+如果您已刪除主機上的Oracle資料庫、SnapCenter 則無法感知到該資料庫、並會列出刪除的資料庫。您應該手動重新整理資源、以更新SnapCenter 「資源更新清單」。
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、從*檢視*清單中選取*資料庫*。
++
+按一下 image:../media/filter_icon.gif[""]，然後選取主機名稱和資料庫類型以篩選資源。然後按一下 image:../media/filter_icon.gif[""] 圖示以關閉篩選窗格。
+
+. 按一下*重新整理資源*。
++
+在RAC單節點案例中、資料庫會被視為目前裝載該資料庫的節點上的RAC資料庫。
+
+
+
+*結果*
+
+資料庫會連同資料庫類型、主機或叢集名稱、相關資源群組和原則、以及狀態等資訊一起顯示。
+
+
+IMPORTANT: 如果資料庫重新命名為SnapCenter 不屬於支援範圍、您必須重新整理資源。
+
+* 如果資料庫位於非NetApp儲存系統上、則使用者介面會在「整體狀態」欄中顯示「不可用於備份」訊息。
++
+您無法在非NetApp儲存系統上的資料庫上執行資料保護作業。
+
+* 如果資料庫位於NetApp儲存系統上且未受到保護、則使用者介面會在「整體狀態」欄中顯示未受保護的訊息。
+* 如果資料庫位於NetApp儲存系統上且受到保護、則使用者介面會在「整體狀態」欄中顯示可供備份的訊息。
+
+
+
+NOTE: 如果您已啟用Oracle資料庫驗證、資源檢視中會顯示紅色的掛鎖圖示。您必須設定資料庫認證、才能保護資料庫或將其新增至資源群組、以執行資料保護作業。

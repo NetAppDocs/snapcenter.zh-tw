@@ -1,0 +1,29 @@
+---
+permalink: protect-scc/task_define_a_backup_strategy.html 
+sidebar: sidebar 
+keywords:  
+summary: 在建立備份工作之前定義備份策略、可確保您擁有成功還原或複製資源所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您的備份策略的主要決定因素。 
+---
+= 定義備份策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在建立備份工作之前定義備份策略、可確保您擁有成功還原或複製資源所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您備份策略的主要決定因素。
+
+*關於此工作*
+
+SLA定義預期的服務層級、並解決許多與服務相關的問題、包括服務的可用度和效能。RTO是指在服務中斷後、必須還原業務程序的時間。RPO定義了檔案的存留期策略、這些檔案必須從備份儲存設備中恢復、以便在故障後恢復正常作業。SLA、RTO及RPO有助於資料保護策略。
+
+*步驟*
+
+. 決定何時應備份資源。
+. 決定您需要多少備份工作。
+. 決定如何命名備份。
+. 決定是否要使用一致性群組Snapshot複本、並決定刪除一致性群組Snapshot複本的適當選項。
+. 決定要使用NetApp SnapMirror技術進行複寫、還是使用NetApp SnapVault SnapMirror技術來長期保留。
+. 確定來源儲存系統和SnapMirror目的地上Snapshot複本的保留期間。
+. 判斷您是否要在備份作業之前或之後執行任何命令、並提供預先記錄或PostScript。
+

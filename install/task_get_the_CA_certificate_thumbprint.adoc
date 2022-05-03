@@ -1,0 +1,39 @@
+---
+permalink: install/task_get_the_CA_certificate_thumbprint.html 
+sidebar: sidebar 
+keywords: SnapCenter, certificate thumbprint 
+summary: 憑證指紋是用來識別憑證的十六進位字串。指紋是使用指紋演算法、從憑證內容中計算出來。 
+---
+= 取得CA憑證指紋
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+憑證指紋是用來識別憑證的十六進位字串。指紋是使用指紋演算法、從憑證內容中計算出來。
+
+*步驟*
+
+. 在GUI上執行下列步驟：
++
+.. 按兩下憑證。
+.. 在「憑證」對話方塊中、按一下「*詳細資料*」索引標籤。
+.. 捲動欄位清單、然後按一下* Thumbprint*。
+.. 複製方塊中的十六進位字元。
+.. 移除十六進位數字之間的空格。
++
+例如、如果指紋為：「A9 09 50 2D D8 2a E4 14 33 E6 F8 38 86 b0 d 42 77 A3 2a 7b」、則移除空格後、將會是：「a909502dd82ae41433e6f83886b00d4277a32a7b」。
+
+
+
+. 從PowerShell執行下列作業：
++
+.. 執行下列命令、列出已安裝憑證的指紋、並依主體名稱識別最近安裝的憑證。
++
+_Get-ChildItem路徑認證：\LocalComputer\My_
+
+.. 複製指紋。
+
+
+

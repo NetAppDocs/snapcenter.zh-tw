@@ -1,0 +1,35 @@
+---
+permalink: sc-automation/task_how to_access_rest_apis_using_the_swagger_api_web_page.html 
+sidebar: sidebar 
+keywords: REST API, Swagger 
+summary: REST API會透過Swagger網頁公開。您可以存取Swagger網頁以顯示SnapCenter 「伺服器REST API」、以及手動發出API呼叫。您可以使用REST API來協助管理SnapCenter 您的支援中心伺服器或執行資料保護作業。 
+---
+= 如何使用Swagger API網頁存取REST API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+REST API會透過Swagger網頁公開。您可以存取Swagger網頁以顯示SnapCenter 「伺服器REST API」、以及手動發出API呼叫。您可以使用REST API來協助管理SnapCenter 您的支援中心伺服器或執行資料保護作業。
+
+您應該知道SnapCenter 要在其上執行REST API的Managed IP位址或域名。
+
+您不需要特殊權限即可執行REST API用戶端。任何使用者都可以存取Swagger網頁。透過REST API存取之物件的個別權限、取決於產生權杖以登入REST API的使用者。
+
+*步驟*
+
+. 從瀏覽器輸入URL、以_\ https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_格式存取Swagger網頁。
++
+
+NOTE: 請確定REST API URL沒有下列字元：+、.、%和&。
+
+. 在* Swagger Explore*欄位中、如果Swagger API文件未自動顯示、請輸入：_\https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/Content/swagger/SnapCenter.yaml_
+. 按一下* Explore *。
++
+隨即顯示API資源類型或類別清單。
+
+. 按一下API資源類型、以該資源類型顯示API。
+
+
+如果在執行SnapCenter 靜態API時遇到非預期的行為、您可以使用記錄檔來識別原因並解決問題。按一下「*監控*」>「*記錄*」>「*下載*」、即可從SnapCenter 「還原」使用者介面下載記錄檔。

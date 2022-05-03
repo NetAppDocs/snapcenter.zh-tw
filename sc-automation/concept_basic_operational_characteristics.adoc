@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: sc-automation/concept_basic_operational_characterstics.html 
+keywords: request and response, object identifiers, synchronous, asynchronous 
+summary: REST建立一套通用的技術和最佳實務做法、但每個API的詳細資料可能會因設計選項而異。 
+---
+= 基本營運特性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+REST建立一套通用的技術和最佳實務做法、但每個API的詳細資料可能會因設計選項而異。
+
+
+
+== 要求及回應API交易
+
+每次REST API呼叫都會以HTTP要求的形式執行、以產生SnapCenter 與用戶端相關的回應。此要求與回應配對被視為API交易。
+
+在使用API之前、您應該先熟悉可用於控制要求的輸入變數、以及回應輸出的內容。
+
+
+
+== 支援CRUD作業
+
+透過「REST API」提供的每項資源SnapCenter 、都是根據CRUD模式來存取：
+
+* 建立
+* 讀取
+* 更新
+* 刪除
+
+
+對於某些資源、只支援一部分作業。
+
+
+
+== 物件識別碼
+
+每個資源執行個體或物件在建立時都會指派一個唯一的識別碼。在大多數情況下、識別碼為128位元UUID。這些識別碼在特定SnapCenter 的支援服務器中是全域唯一的。
+
+發出API呼叫以建立新的物件執行個體之後、會在HTTP回應的位置標頭中、將具有相關ID的URL傳回給呼叫者。您可以擷取識別碼、並在參照資源執行個體時用於後續通話。
+
+
+IMPORTANT: 物件識別碼的內容和內部結構可隨時變更。當您參照相關的物件時、只能視需要在適用的API呼叫上使用識別碼。
+
+
+
+== 物件執行個體和集合
+
+根據資源路徑和HTTP方法、API呼叫可套用至特定物件執行個體或物件集合。
+
+
+
+== 同步與非同步作業
+
+執行從用戶端接收的HTTP要求、無論是同步或非同步。SnapCenter
+
+
+
+=== 同步處理
+
+如果HTTP狀態代碼為200或201（成功）、則會立即執行要求、並以HTTP狀態代碼回應。SnapCenter
+
+使用方法Get的每個要求都會同步執行。此外、使用POST的要求設計為在預期不到兩秒內完成時同步執行。
+
+
+
+=== 非同步處理
+
+如果非同步要求有效、SnapCenter 則會建立背景工作來處理要求、並建立工作物件來固定工作。HTTP狀態代碼202會連同工作物件一起傳回給呼叫者。您應該擷取工作狀態、以判斷成功或失敗。
+
+使用POST和刪除方法的要求、是設計成在預期需要兩秒以上才能完成時、非同步執行。
+
+
+
+== 安全性
+
+REST API所提供的安全性主要是以SnapCenter 現有的資訊安全功能為基礎。API使用下列安全性：
+
+
+
+=== 傳輸層安全性
+
+透過網路在SnapCenter 伺服器與用戶端之間傳送的所有流量、通常會根據SnapCenter 各種組態設定、使用TLS加密。
+
+
+
+=== HTTP驗證
+
+在HTTP層級、API交易會使用基本驗證。每個要求都會新增一個HTTP標頭、其中使用者名稱和密碼為基礎64字串。

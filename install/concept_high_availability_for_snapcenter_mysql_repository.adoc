@@ -1,0 +1,38 @@
+---
+permalink: install/concept_high_availability_for_snapcenter_mysql_repository.html 
+sidebar: sidebar 
+keywords: SnapCenter, MySQL high availability 
+summary: MySQL複寫是MySQL Server的一項功能、可讓您將資料從一個MySQL資料庫伺服器（主要）複寫到另一個MySQL資料庫伺服器（從屬）。支援MySQL複寫、只能在兩個啟用網路負載平衡（啟用NLB）的節點上提供高可用度。SnapCenter 
+---
+= 高可用度：SnapCenter 適用於MySQL的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MySQL複寫是MySQL Server的一項功能、可讓您將資料從一個MySQL資料庫伺服器（主要）複寫到另一個MySQL資料庫伺服器（從屬）。支援MySQL複寫、只能在兩個啟用網路負載平衡（啟用NLB）的節點上提供高可用度。SnapCenter
+
+當主要儲存庫發生故障時、系統會在主要儲存庫上執行讀取或寫入作業、並將其連線傳送至從屬儲存庫。SnapCenter從屬儲存庫隨即成為主要儲存庫。支援反轉複寫、僅在容錯移轉期間啟用。SnapCenter
+
+若要使用MySQL高可用度（HA）功能、您必須在第一個節點上設定網路負載平衡器（NLB）。MySQL儲存庫會安裝在此節點上、做為安裝的一部分。在SnapCenter 第二個節點上安裝時、您必須加入第一個節點的F5、並在第二個節點上建立MySQL儲存庫的複本。
+
+提供_Get-SmrepositoryConfig_和_Set-SmrepositoryConfig_ PowerShell Cmdlet來管理MySQL複寫。SnapCenter
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+
+您必須瞭解MySQL HA功能的相關限制：
+
+* NLB和MySQL HA不支援超過兩個節點。
+* 不支援從SnapCenter 不支援使用支援功能的獨立安裝切換至NLB安裝、或從MySQL獨立安裝切換至MySQL HA。
+* 如果從屬儲存庫資料未與主要儲存庫資料同步、則不支援自動容錯移轉。
++
+您可以使用_Set-SmRegitoryConfig_ Cmdlet來啟動強制容錯移轉。
+
+* 啟動容錯移轉時、執行中的工作可能會失敗。
++
+如果發生容錯移轉是因為MySQL Server或SnapCenter 現象伺服器停機、則執行中的任何工作都可能失敗。容錯移轉至第二個節點之後、所有後續工作都會成功執行。
+
+
+
+如需設定高可用度的相關資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_NLB_and_ARR_with_SnapCenter["如何設定NLB與ARR SnapCenter 搭配使用功能"^]。

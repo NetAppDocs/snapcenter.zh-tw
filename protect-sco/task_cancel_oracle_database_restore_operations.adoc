@@ -1,0 +1,52 @@
+---
+permalink: protect-sco/task_cancel_oracle_database_restore_operations.html 
+sidebar: sidebar 
+keywords: cancel, restore 
+summary: 您可以取消佇列中的還原工作。 
+---
+= 取消Oracle資料庫還原作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以取消佇列中的還原工作。
+
+您應以SnapCenter 「管理員」或「工作擁有者」身分登入、以取消還原作業。
+
+*關於此工作*
+
+* 您可以從「*監控*」頁面或「*活動*」窗格取消佇列中的還原作業。
+* 您無法取消執行中的還原作業。
+* 您可以使用SnapCenter RESPE GUI、PowerShell Cmdlet或CLI命令來取消佇列中的還原作業。
+* 對於無法取消的還原作業、*取消工作*按鈕會停用。
+* 如果您在建立角色時、選取*此角色的所有成員都可以在「使用者\群組」頁面的其他成員物件*上查看及操作、您可以在使用該角色時取消其他成員的佇列還原作業。
+
+
+*步驟*
+
+執行下列其中一項動作：
+
+|===
+| 從... | 行動 
+
+
+ a| 
+監控頁面
+ a| 
+. 在左側導覽窗格中、按一下*監控*>*工作*。
+. 選取工作、然後按一下*取消工作*。
+
+
+
+
+ a| 
+活動窗格
+ a| 
+. 啟動還原作業之後、按一下 image:../media/activity_pane_icon.gif[""] 在「活動」窗格中、檢視五項最近的作業。
+. 選取作業。
+. 在「工作詳細資料」頁面中、按一下*取消工作*。
+
+
+|===

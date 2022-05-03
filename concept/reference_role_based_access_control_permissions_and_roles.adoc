@@ -1,0 +1,86 @@
+---
+permalink: concept/reference_role_based_access_control_permissions_and_roles.html 
+sidebar: sidebar 
+keywords: RBAC, roles, permissions 
+summary: 利用角色型存取控制（RBAC）、您可以建立角色並新增這些角色的權限、然後將使用者或使用者群組指派給這些角色。SnapCenter如此一來SnapCenter 、管理員就能建立集中管理的環境、而應用程式管理員則能管理資料保護工作。隨附一些預先定義的角色和權限。SnapCenter 
+---
+= RBAC權限和角色
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+利用角色型存取控制（RBAC）、您可以建立角色並指派權限給這些角色、然後將使用者或使用者群組指派給這些角色。SnapCenter如此一來SnapCenter 、管理員就能建立集中管理的環境、而應用程式管理員則能管理資料保護工作。隨附一些預先定義的角色和權限。SnapCenter
+
+
+
+== 職務SnapCenter
+
+隨附下列預先定義的角色。SnapCenter您可以將使用者和群組指派給這些角色、或是建立新角色。
+
+當您指派角色給使用者時、除非您指派SnapCenter 「管理員」角色、否則「工作」頁面中只會顯示與該使用者相關的工作。
+
+* 應用程式備份與複製管理
+* 備份與複製檢視器
+* 基礎架構管理員
+* SnapCenterAdmin
+
+
+
+
+== VMware vSphere角色適用的外掛程式SnapCenter
+
+為了管理VM、VMDK和資料存放區的VM一致資料保護、SnapCenter vCenter中的VMware vSphere支援VMware vSphere的VMware外掛程式會建立下列角色：
+
+* 選擇控制閥管理員
+* 選擇控制閥視圖
+* 選擇控制閥備用
+* 選擇控制閥恢復
+* 選擇控制閥客體檔案還原
+
+
+如需詳細資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["VMware vSphere使用者適用的RBAC外掛程式類型SnapCenter"^]
+
+|===
+
+
+| *最佳實務做法：* NetApp建議您為ONTAP VMware vSphere作業建立一個適用於SnapCenter VMware vSphere的解決方案、並指派所有必要的權限給它。 
+|===
+
+
+== 權限SnapCenter
+
+支援下列權限：SnapCenter
+
+* 資源群組
+* 原則
+* 備份
+* 主機
+* 儲存連線
+* 複製
+* 資源配置（僅適用於Microsoft SQL資料庫）
+* 儀表板
+* 報告
+* 還原
++
+** 完整Volume還原（僅適用於自訂外掛程式）
+
+
+* 資源
++
+非系統管理員需要外掛程式權限、才能執行資源探索作業。
+
+* 外掛程式安裝或解除安裝
++
+
+NOTE: 啟用外掛程式安裝權限時、您也必須修改主機權限、才能啟用讀取和更新。
+
+* 移轉
+* 掛載（僅適用於Oracle資料庫）
+* 卸載（僅適用於Oracle資料庫）
+* 工作監控
++
+「工作監控」權限可讓不同角色的成員查看指派給他們的所有物件上的作業。
+
+

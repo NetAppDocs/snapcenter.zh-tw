@@ -1,0 +1,154 @@
+---
+permalink: protect-sco/alternate-ways-install-plug-in-linux-aix.html 
+sidebar: sidebar 
+keywords: alternate methods, install, plug-ins package, linux, aix, remote hosts, cmdlets, cluster host, silent mode, console mode 
+summary: 您也可以使用其他替代方法來安裝SnapCenter 適用於Linux的不二插件套件或SnapCenter 適用於AIX的不二插件套件。 
+---
+= 安裝適用於Linux或AIX的外掛程式套件的其他方法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+
+
+== 使用Cmdlet在多個遠端主機上安裝
+
+您應該使用_Install-SmHostPackage_PowerShell Cmdlet在SnapCenter 多個主機上安裝適用於Linux或SnapCenter 適用於AIX的VMware外掛套件。
+
+*您需要的是什麼*
+
+您應該SnapCenter 以網域使用者的身分登入到支援您安裝外掛程式套件的每個主機、並具有本機系統管理員權限。
+
+*步驟*
+
+. 啟動PowerShell。
+. 在支援服務器主機上SnapCenter 、使用_Open-SmConnection_ Cmdlet建立工作階段、然後輸入您的認證資料。
+. 使用SnapCenter _Install-SmHostPackage_ Cmdlet和SnapCenter 必要的參數來安裝適用於Linux或適用於AIX的VMware vCenter外掛套件套件。
++
+當您已手動安裝外掛程式、但不想驗證主機是否符合安裝外掛程式的需求時、可以使用-skipprenatqu__選項。
+
++
+
+NOTE: 如果在防火牆拒絕規則中指定外掛程式連接埠防火牆狀態、則預先檢查指令碼不會驗證該狀態。
+
+. 輸入遠端安裝的認證資料。
+
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+
+
+
+== 安裝在叢集主機上
+
+您應該在SnapCenter 叢集主機的兩個節點上安裝適用於Linux或SnapCenter 適用於AIX的支援不支援功能外掛程式套件。
+
+叢集主機的每個節點都有兩個IP。其中一個IP位址是個別節點的公用IP、第二個IP位址則是兩個節點之間共享的叢集IP位址。
+
+*步驟*
+
+. 在SnapCenter 叢集主機的兩個節點上安裝適用於Linux的支援功能外掛程式套件或SnapCenter 適用於AIX的支援功能外掛程式套件。
+. 驗證SNAPCENTE_SERVER_主機、SPL_port、SNAPCENTE_SERVER_port和SPL_END_plugins參數的正確值是否已在位於_/var/opt/snapcenter/spl/etc/_的spl.properties檔案中指定。
++
+如果spl.properties未指定SPL_enabled_plugins、您可以新增它並指派值SCO、sca。
+
+. 在支援服務器主機上SnapCenter 、使用_Open-SmConnection_ Cmdlet建立工作階段、然後輸入您的認證資料。
+. 在每個節點中、使用_Set-PreferredHostIPsInStorageExpportPolicy_sccli命令和必要參數來設定節點的慣用IP。
+. 在「支援服務器」主機的SnapCenter _C：\Windows\System32\drivers\etc\hosts_中、新增叢集IP項目和對應的DNS名稱。
+. 透過指定主機名稱的叢集IP、使用_Add-SmHost_指令程式將節點新增SnapCenter 至Ses供 伺服器。
+
+
+探索節點1上的Oracle資料庫（假設叢集IP位於節點1上）、然後建立資料庫備份。如果發生容錯移轉、您可以使用在節點1上建立的備份來還原節點2上的資料庫。您也可以使用在節點1上建立的備份、在節點2上建立複本。
+
+
+NOTE: 如果容錯移轉發生在SnapCenter 執行任何其他的動作時、則會有過時的磁碟區、目錄和鎖定檔案。
+
+
+
+== 以無聲模式或主控台模式安裝適用於Linux的外掛程式套件
+
+您可以SnapCenter 使用命令列介面（CLI）、在主控台模式或無聲模式下安裝適用於Linux的Sf2外掛程式套件。
+
+*您需要的是什麼*
+
+* 您應該檢閱安裝外掛程式套件的先決條件。
+* 您應該確定未設定顯示環境變數。
++
+如果已設定顯示環境變數、您應該執行未設定顯示、然後嘗試手動安裝外掛程式。
+
+
+
+*關於此工作*
+
+在主控台模式下安裝時、您必須提供必要的安裝資訊、而在無訊息模式安裝時、您不需要提供任何安裝資訊。
+
+*步驟*
+
+. 從SnapCenter 《Singz Server安裝位置》下載適用於Linux的《SUSE Plug-in套件SnapCenter 》。
++
+預設安裝路徑為_C：\ProgramData\NetApp\SnapCenter\PackageInfrastructure_。此路徑可從SnapCenter 安裝了此伺服器的主機存取。
+
+. 在命令提示字元中、瀏覽至您下載安裝檔案的目錄。
+. 視您偏好的安裝模式而定、請執行下列步驟之一。
++
+|===
+| 安裝模式 | 步驟 
+
+
+ a| 
+主控台模式
+ a| 
+.. 執行：
++
+如：/SnapCenter_linux_host_plugin.bin–i Console
+
+.. 依照畫面上的提示完成安裝。
+
+
+
+
+ a| 
+無聲模式
+ a| 
+執行：
+
+「/SnapCenter_Linux/host_plugin.bin-i silent-DPORT=8145-dserver_ip=SnapCenter_Server_FQDN：dserver_HTTPS連接埠=SnapCenter_Server_Port-Duser_install_DIR=/opt/custom路徑」
+
+|===
+. 編輯位於_/var/opt/snapcenter/spl/etc/_的spl.properties檔案、新增SPL_enabled_plugins=sco、scc、然後重新啟動SnapCenter 「支援此功能的程式集載入器」服務。
+
+
+
+IMPORTANT: 外掛程式套件的安裝會在主機上登錄外掛程式、而非SnapCenter 在伺服器上登錄外掛程式。您應該SnapCenter 使用SnapCenter Seting GUI或PowerShell Cmdlet新增主機、以便在SetzServer上登錄外掛程式。新增主機時、請選取「無」作為認證資料。新增主機之後、會自動探索已安裝的外掛程式。
+
+
+
+== 在無聲模式下安裝Plug-ins套件for AIX
+
+您可以SnapCenter 使用命令列介面（CLI）、以無聲模式安裝適用於AIX的Sf2外掛程式套件。
+
+*您需要的是什麼*
+
+* 您應該檢閱安裝外掛程式套件的先決條件。
+* 您應該確定未設定顯示環境變數。
++
+如果已設定顯示環境變數、您應該執行未設定顯示、然後嘗試手動安裝外掛程式。
+
+
+
+*步驟*
+
+. 從SnapCenter 「Singrease伺服SnapCenter 器」安裝位置下載適用於AIX的「功能更新套件」。
++
+預設安裝路徑為_C：\ProgramData\NetApp\SnapCenter\PackageInfrastructure_。此路徑可從SnapCenter 安裝了此伺服器的主機存取。
+
+. 在命令提示字元中、瀏覽至您下載安裝檔案的目錄。
+. 執行
++
+「/snapcenter_AIX_host_plugin.bsx-i silent-DPORT=8145-dserver_ip=SnapCenter_Server_FQDN、dserver_HTTPS連接埠=SnapCenter_Server_Port-Duser_install_DIR=/opt/custom路徑-Dinstall l_log_name=SnapCenter_AIX_Host_Plug-OST_OSL_Install_OST_OST_OSLI=OST_OST_ST_ST_ST_STOSIL=US.US_OST_ST_ST_OPSL=OST_LOT=8_ST_ST_
+
+. 編輯位於_/var/opt/snapcenter/spl/etc/_的spl.properties檔案、新增SPL_enabled_plugins=sco、scc、然後重新啟動SnapCenter 「支援此功能的程式集載入器」服務。
+
+
+
+IMPORTANT: 外掛程式套件的安裝會在主機上登錄外掛程式、而非SnapCenter 在伺服器上登錄外掛程式。您應該SnapCenter 使用SnapCenter Seting GUI或PowerShell Cmdlet新增主機、以便在SetzServer上登錄外掛程式。新增主機時、請選取「無」作為認證資料。新增主機之後、會自動探索已安裝的外掛程式。

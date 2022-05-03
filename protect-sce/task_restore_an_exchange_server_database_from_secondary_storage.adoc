@@ -1,0 +1,30 @@
+---
+permalink: protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以從次要儲存設備（鏡射或保存庫）還原備份的Exchange Server資料庫。 
+---
+= 從次要儲存設備還原Exchange Server資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從次要儲存設備（鏡射或保存庫）還原備份的Exchange Server資料庫。
+
+您必須將Snapshot複本從一線儲存設備複寫到二線儲存設備。
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取* Microsoft Exchange Server外掛程式*。
+. 在「資源」頁面中、從「*檢視*」下拉式清單中選取「*資料庫*」或「*資源群組*」。
+. 選取資料庫或資源群組。
++
+隨即顯示資料庫或資源群組拓撲頁面。
+
+. 在「管理複本」區段中、從次要儲存系統（鏡射或保存庫）選取*備份*。
+. 從清單中選取備份、然後按一下 image:../media/restore_icon.gif["還原圖示"]。
+. 在「位置」頁面中、選擇要還原所選資源的目的地Volume。
+. 完成還原精靈、檢閱摘要、然後按一下*完成*。
+

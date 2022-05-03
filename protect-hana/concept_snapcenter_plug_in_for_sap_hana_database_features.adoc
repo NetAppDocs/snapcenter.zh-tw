@@ -1,0 +1,49 @@
+---
+permalink: protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_features.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 可與外掛應用程式及儲存系統上的NetApp技術整合。SnapCenter若要搭配SAP HANA資料庫外掛程式使用、您可以使用SnapCenter 這個圖形化使用者介面。 
+---
+= SAP HANA資料庫功能的選用外掛程式SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+可與外掛應用程式及儲存系統上的NetApp技術整合。SnapCenter若要搭配SAP HANA資料庫外掛程式使用、您可以使用SnapCenter 這個圖形化使用者介面。
+
+* *統一化圖形使用者介面*
++
+此支援介面可在外掛程式與環境之間提供標準化與一致性。SnapCenter利用此支援介面、您可以跨外掛程式完成一致的備份、還原及複製作業、使用集中式報告、使用概覽儀表板檢視、設定角色型存取控制（RBAC）、以及監控所有外掛程式的工作。SnapCenter
+
+* *自動化中央管理*
++
+您可以排程備份作業、設定原則型備份保留、以及執行還原作業。您也可以設定SnapCenter 使用功能支援功能來傳送電子郵件警示、主動監控環境。
+
+* *不中斷營運的NetApp Snapshot複製技術*
++
+利用NetApp Snapshot複製技術搭配SAP HANA資料庫外掛程式來備份資源。SnapCenter
+
+
+
+SAP HANA資料庫外掛程式的使用也具有下列優點：
+
+* 支援備份、還原及複製工作流程
+* RBAC支援的安全性與集中式角色委派
++
+您也可以設定認證資料、讓獲授權SnapCenter 的功能驗證使用者擁有應用程式層級的權限。
+
+* 使用NetApp FlexClone技術建立空間效率與時間點資源複本、以供測試或資料擷取之用
++
+您要建立複本的儲存系統需要FlexClone授權。
+
+* 支援ONTAP 一致性群組（CG）的Snapshot複本功能、做為建立備份的一部分。
+* 能夠在多個資源主機之間同時執行多個備份
++
+在單一作業中、當單一主機中的資源共用相同的磁碟區時、就會合併Snapshot複本。
+
+* 能夠使用外部命令建立Snapshot複本。
+* 支援檔案型備份。
+* 支援XFS檔案系統上的Linux LVM。
+

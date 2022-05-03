@@ -1,0 +1,77 @@
+---
+permalink: protect-sco/reference_requirements_for_cloning_an_oracle_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 在複製Oracle資料庫之前、您應確保已完成先決條件。 
+---
+= 複製Oracle資料庫的需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在複製Oracle資料庫之前、您應確保已完成先決條件。
+
+* 您應該已經使用SnapCenter 還原建立資料庫備份。
++
+您應該已成功建立線上資料和記錄備份、或是離線（掛載或關機）備份、以便成功完成複製作業。
+
+* 如果您想要自訂控制檔或重作記錄檔路徑、應該已預先配置必要的檔案系統或自動儲存管理（ASM）磁碟群組。
++
+根據預設、複製資料庫的重作記錄和控制檔會建立在ASM磁碟群組或SnapCenter 由供應給實體複製資料庫資料檔案的檔案系統上。
+
+* 如果您使用的是ASM over NFS、則應將//var/capcenter/SCU/Clone /*/*新增至在asm_diskstring參數中定義的現有路徑。
+* 在asm_diskstring參數中，如果使用ASMfd，則應配置_afd:*_；如果使用ASMLIB，則應配置_ORCL:*_。
++
+如需如何編輯asm_diskstring參數的資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["如何將磁碟路徑新增至asm_diskstring"^]。
+
+* 如果要在備用主機上建立複本、備用主機應符合下列需求：
++
+** Oracle資料庫的支援元件應安裝在替代主機上。SnapCenter
+** 實體複本主機應該能夠從主要或次要儲存設備探索LUN。
++
+*** 如果您要從主要儲存設備或次要（Vault或Mirror）儲存設備複製到替代主機、請確定iSCSI工作階段是建立在次要儲存設備和備用主機之間、或是適當地分區用於FC。
++
+**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["《Linux主機公用程式安裝與設定指南》"^]
+**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["《AIX主機公用程式安裝與設定指南》"^]
+
+
+*** 如果您要從Vault或Mirror儲存設備複製到同一主機、請確定iSCSI工作階段是在Vault或Mirror儲存設備與主機之間建立、或是適當地分區用於FC。
+*** 如果是在虛擬化環境中進行複製、請確定iSCSI工作階段是在主要或次要儲存設備與裝載備用主機的ESX伺服器之間建立、或是適當地分區以供FC使用。
+
+
+** 如果來源資料庫是ASM資料庫：
++
+*** ASM執行個體應在執行實體複本的主機上啟動並執行。
+*** 如果您想要將複製資料庫的歸檔記錄檔放入專屬的ASM磁碟群組、則應在複製作業之前配置ASM磁碟群組。
+*** 您可以設定資料磁碟群組的名稱、但請確保執行實體複本之主機上的任何其他ASM磁碟群組不會使用該名稱。
++
+ASM磁碟群組中的資料檔案是SnapCenter 作爲還原複製工作流程的一部分進行配置的。
+
+
+
+
+
+* 資料LUN和記錄LUN的保護類型（例如鏡射、保存庫或鏡射保存庫）應相同、以便在使用記錄備份複製到替代主機期間、探索次要定位器。
+* 您應該在來源資料庫參數檔中將exclude _seed_cdb_view的值設為假、以擷取與複製12_c__資料庫備份相關的種子pdb資訊。
++
+SEED pdb是系統提供的範本、CDB可用來建立PDF。SEED（子）pdb的名稱為pdB$seed。如需PDB$SEED的相關資訊、請參閱Oracle文件ID 1940806.1。
+
++
+
+NOTE: 備份12_c__資料庫之前、應先設定值。
+
+* 支援由autofs子系統管理的檔案系統備份。SnapCenter如果您要複製資料庫、請確定資料掛載點不在autofs掛載點的根目錄下、因為外掛程式主機的根使用者無權在autofs掛載點的根目錄下建立目錄。
++
+如果控制項和重作記錄檔位於資料裝載點之下、您應該修改控制檔路徑、然後相應地重作記錄檔路徑。
+
++
+
+NOTE: 您可以手動將新的複製掛載點登錄至autofs子系統。新的複製掛載點不會自動登錄。
+
+* 如果您有TDE（自動登入）、且想要複製同一或備用主機上的資料庫、則應將來源資料庫中的//etc/oracle/wallet/$oracle_SID_下的錢包（主要檔案）複製到複製的資料庫。
+* 您應該在/etc/lvm/lvm.conf中設定use_lvmetad = 0的值、然後停止LVM2-lvmetad服務、以便在Oracle Linux 7或更新版本、或Red Hat Enterprise Linux（RHEL）7或更新版本的儲存區域網路（SAN）環境中成功執行複製。
+* 如果您使用Oracle資料庫11.2.0.3或更新版本、且輔助執行個體的資料庫ID已使用NID指令碼變更、則應安裝13366202 Oracle修補程式。
+* 您應確保託管磁碟區的集合體應位於儲存虛擬機器（SVM）的指派集合體清單中。
+

@@ -1,0 +1,30 @@
+---
+permalink: protect-scsql/concept_support_for_asymmetric_lun_mapping_alm_in_windows_clusters.html 
+sidebar: sidebar 
+keywords: ALM 
+summary: 適用於Microsoft SQL Server的支援在SQL Server 2012及更新版本中探索、適用於高可用度的非對稱LUN對應（ALM\）組態、以及用於災難恢復的可用性群組。SnapCenter當發現資源時SnapCenter 、利用ALM組態探索本機主機和遠端主機上的資料庫。 
+---
+= 支援Windows叢集中的非對稱LUN對應
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於Microsoft SQL Server的支援下列項目的支援：SQL Server 2012及更新版本中的探索、適用於高可用度的非對稱LUN對應（ALM）組態、以及用於災難恢復的可用度群組。SnapCenter當發現資源時SnapCenter 、利用ALM組態探索本機主機和遠端主機上的資料庫。
+
+ALM組態是單一Windows伺服器容錯移轉叢集、其中包含一或多個主資料中心節點、以及災難恢復中心的一或多個節點。
+
+以下是ALM組態的範例：
+
+* 多站台資料中心內有兩個容錯移轉叢集執行個體（FCI）
+* FCI適用於本機高可用度（HA）和可用度群組（AG）、可在災難恢復站台使用獨立執行個體進行災難恢復
+
+
+image::../media/asymmetric_lun_mapping_diagram.gif[非對稱LUN對應圖]
+
+主資料中心的儲存設備會在主資料中心的FCI節點之間共享。災難恢復資料中心的儲存設備會在災難恢復資料中心的FCI節點之間共享。
+
+主資料中心的儲存設備在災難恢復資料中心的節點上看不到、反之亦然。
+
+ALM架構結合了FCI使用的兩種共享儲存解決方案、以及SQL AG使用的非共享或專用儲存解決方案。AG解決方案使用相同的磁碟機代號、用於跨資料中心的共享磁碟資源。這種儲存設備配置稱為ALM、叢集磁碟是在WSFC內的節點子集之間共享。

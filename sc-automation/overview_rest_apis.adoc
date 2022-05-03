@@ -1,0 +1,24 @@
+---
+permalink: sc-automation/overview_rest_apis.html 
+sidebar: sidebar 
+keywords: REST APIs, swagger 
+summary: 說明如何使用REST API來執行多SnapCenter 項功能完善的管理作業。REST API會透過Swagger網頁公開。 
+---
+= REST API總覽
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+REST API可用於執行多SnapCenter 項功能完善的管理作業。REST API會透過Swagger網頁公開。
+
+您可以存取Swagger網頁、網址為：_https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_、以顯示REST API文件、以及手動發出API呼叫。
+
+支援REST API的外掛程式包括：
+
+* Microsoft SQL Server的外掛程式
+* SAP HANA資料庫的外掛程式
+* 自訂外掛程式
+* Oracle資料庫的外掛程式
+

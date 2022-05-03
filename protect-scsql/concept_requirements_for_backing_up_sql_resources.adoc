@@ -1,0 +1,22 @@
+---
+permalink: protect-scsql/concept_requirements_for_backing_up_sql_resources.html 
+sidebar: sidebar 
+keywords:  
+summary: 在備份SQL資源之前、您必須確保符合多項需求。 
+---
+= 備份SQL資源的需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在備份SQL資源之前、您必須確保符合多項需求。
+
+* 您必須已將資源從非NetApp儲存系統移轉至NetApp儲存系統。
+* 您必須已建立備份原則。
+* 如果您想要備份與二線儲存設備有SnapMirror關係的資源、ONTAP 指派給儲存設備使用者的這個角色應該包含「全部快照鏡射」權限。不過、如果您使用「vsadmin」角色、則不需要「全部快照鏡像」權限。
+* 如果未將SQL執行個體認證指派給AD使用者或群組、則Active Directory（AD）使用者所啟動的備份作業會失敗。您必須從「*設定*>*使用者存取*」頁面、將SQL執行個體認證指派給AD使用者或群組。
+* 您必須已建立附加原則的資源群組。
+* 如果某個資源群組有來自不同主機的多個資料庫、可能會因為網路問題而在某些主機上觸發備份作業。您應該使用Set-SmConfigSettings PS Cmdlet來設定網路設定中的FMaxRetryForUninitalizedHoes值。
+

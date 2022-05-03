@@ -1,0 +1,25 @@
+---
+permalink: protect-scw/reference_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_windows.html 
+sidebar: sidebar 
+keywords:  
+summary: 在您的環境中安裝Windows外掛程式時、SnapCenter 您可以使用效益管理功能來備份、還原及複製Windows檔案系統。您也可以執行支援這些作業的工作。 
+---
+= 使用適用於Microsoft Windows的《不要用作更新程式的SnapCenter 功能」
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在您的環境中安裝Windows外掛程式時、SnapCenter 您可以使用效益管理功能來備份、還原及複製Windows檔案系統。您也可以執行支援這些作業的工作。
+
+* 探索資源
+* 備份Windows檔案系統
+* 排程備份作業
+* 還原檔案系統備份
+* 複製檔案系統備份
+* 監控備份、還原及複製作業
+
+
+
+NOTE: 適用於Windows的外掛程式不支援在SMB共用區上備份及還原檔案系統。

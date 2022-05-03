@@ -1,0 +1,74 @@
+---
+permalink: admin/concept_manage_ems_data_collection.html 
+sidebar: sidebar 
+keywords:  
+summary: 您可以使用PowerShell Cmdlet排程及管理事件管理系統（EMS）資料收集。EMS資料收集作業包括收集SnapCenter 有關下列項目的詳細資料：《SesfServer》（《SesfServer》）、「Installed SnapCenter 》（已安裝的）插件套件、「Host」（主機）及類似資訊、然後將其傳送至指定ONTAP 的《SVM\》（《SVM\》）。 
+---
+= 管理EMS資料收集
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用PowerShell Cmdlet排程及管理事件管理系統（EMS）資料收集。EMS資料收集作業包括收集SnapCenter 有關下列項目的詳細資料：《Sing Server》（《Sf2伺服器》）、安裝SnapCenter 的《Sing外掛套件》（《物件套件》）、主機及類似資訊、然後將其傳送至指定ONTAP 的《SVM》（《物件套件》）。
+
+
+NOTE: 資料收集工作進行時、系統CPU使用率會很高。無論資料大小為何、只要作業仍在進行、CPU使用率就會維持高。
+
+
+
+== 停止EMS資料收集
+
+依預設、系統會啟用EMS資料收集功能、並在安裝日期後每隔七天執行一次。您可以隨時使用PowerShell Cmdlet _Disable-SmDataCollectionEMS_停用資料收集。
+
+*步驟*
+
+. 從PowerShell命令列SnapCenter 輸入_Open-SmConnection_、建立使用Sflexion的工作階段。
+. 輸入_disable-SmDataCollectionEms_停用EMS資料收集。
+
+
+
+
+== 開始EMS資料收集
+
+依預設、系統會啟用EMS資料收集功能、排定在安裝日期後每七天執行一次。如果您已停用、可以使用_Enable - SmDataCollectionEEMS _ Cmdlet再次啟動EMS資料收集。
+
+已授予儲存虛擬機器（SVM）使用者「事件產生自動支援記錄」權限。Data ONTAP
+
+*步驟*
+
+. 從PowerShell命令列SnapCenter 輸入_Open-SmConnection_、建立使用Sflexion的工作階段。
+. 輸入_Enable-SmDataCollectionEms_以啟用EMS資料收集。
+
+
+
+
+== 變更EMS資料收集排程和目標SVM
+
+您可以使用PowerShell Cmdlet變更EMS資料收集排程或目標儲存虛擬機器（SVM）。
+
+*步驟*
+
+. 從PowerShell命令列SnapCenter 中、若要建立使用下列功能的工作階段、請輸入_Open-SmConnection_ Cmdlet。
+. 若要變更EMS資料收集目標、請輸入_Set-SmDataCollectionEmsTarget _ Cmdlet。
+. 若要變更EMS資料收集排程、請輸入_Set-SmDataCollectionEmsSchedule_ Cmdlet。
+
+
+
+
+== 監控EMS資料收集狀態
+
+您可以使用數個PowerShell Cmdlet來監控EMS資料集合的狀態。您可以取得排程、儲存虛擬機器（SVM）目標和狀態的相關資訊。
+
+*步驟*
+
+. 從PowerShell命令列SnapCenter 輸入_Open-SmConnection_、建立使用Sflexion的工作階段。
+. 輸入_Get-SmDataCollectionEmsSchedule_以擷取有關EMS資料收集排程的資訊。
+. 輸入_Get-SmDataCollectionEmsData_以擷取有關EMS資料收集狀態的資訊。
+. 輸入_Get-SmDataCollectionEmsTarget _以擷取有關EMS資料收集目標的資訊。
+
+
+*瞭解更多資訊*
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。

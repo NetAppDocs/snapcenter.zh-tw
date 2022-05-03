@@ -1,0 +1,110 @@
+---
+permalink: protect-scw/task_back_up_a_single_resource_on_demand_for_windows_file_systems.html 
+sidebar: sidebar 
+keywords: backing up 
+summary: 如果資源不在資源群組中、您可以從「資源」頁面隨需備份資源。 
+---
+= 隨需備份單一資源以供Windows檔案系統使用
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果資源不在資源群組中、您可以從「資源」頁面隨需備份資源。
+
+*關於此工作*
+
+如果要備份與二線儲存設備具有SnapMirror關係的資源、則指派給儲存設備使用者的角色應包含「全部快照鏡射」權限。不過、如果您使用「vsadmin」角色、則不需要「全部快照鏡像」權限。
+
+
+NOTE: 備份檔案系統時SnapCenter 、不備份掛載於要備份之檔案系統的Volume掛載點（VMP）上的LUN。
+
+
+IMPORTANT: 如果您使用的是Windows檔案系統內容、請勿備份資料庫檔案。這樣做會造成備份不一致、而且在還原時可能會遺失資料。若要保護資料庫檔案、您必須針對SnapCenter 資料庫使用適當的支援程式（例如SnapCenter 、Microsoft SQL Server的支援程式、SnapCenter Microsoft Exchange Server的支援程式、或資料庫檔案的自訂外掛程式）。
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、選取「檔案系統」資源類型、然後選取您要備份的資源。
+. 如果「檔案系統-保護」精靈未自動啟動、請按一下「*保護*」以啟動精靈。
++
+指定保護設定、如建立資源群組工作中所述。
+
+. 選用：在精靈的「資源」頁面中、輸入Snapshot複本的自訂名稱格式。
++
+例如、customtext資源群組原則主機名稱或資源群組主機名稱。根據預設、快照複本名稱會附加時間戳記。
+
+. 在「原則」頁面中、執行下列工作：
++
+.. 從下拉式清單中選取一或多個原則。
++
+您可以選取任何現有的原則、然後按一下*詳細資料*來判斷您是否可以使用該原則。
+
++
+如果現有原則不符合您的需求、您可以複製現有原則並加以修改、或按一下建立新原則 image:../media/add_policy_from_resourcegroup.gif[""] 啟動原則精靈。
+
++
+選取的原則會列在「設定所選原則的排程」區段的「原則」欄中。
+
+.. 在「Configure schedules for selected Policies（設定所選原則的排程）」區段中、按 image:../media/add_policy_from_resourcegroup.gif[""] 在您要為其設定排程的原則之「設定排程」欄中。
+.. 在「新增原則_policy_name_的排程」對話方塊中、指定開始日期、到期日和頻率來設定排程、然後按一下「*完成*」。
++
+設定的排程會列在「設定所選原則的排程」區段的「套用的排程」欄中。
+
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Scheduled_data_protection_operations_fail_if_the_number_of_operations_running_reaches_maximum_limit["排程的作業可能會失敗"]
+
+
+
+. 在「通知」頁面中、執行下列工作：
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+電子郵件偏好設定
+ a| 
+選取*永遠*或*失敗*或*失敗或警告*、即可在建立備份資源群組、附加原則及設定排程之後、將電子郵件傳送給收件者。
+
+輸入SMTP伺服器資訊、預設電子郵件主旨行、以及「收件人」和「寄件者」電子郵件地址。
+
+
+
+ a| 
+寄件者
+ a| 
+電子郵件地址
+
+
+
+ a| 
+至
+ a| 
+電子郵件至地址
+
+
+
+ a| 
+主旨
+ a| 
+預設電子郵件主旨行
+
+|===
+. 檢閱摘要、然後按一下「*完成*」。
++
+隨即顯示資料庫拓撲頁面。
+
+. 按一下*立即備份*。
+. 在「備份」頁面中、執行下列步驟：
++
+.. 如果您已將多個原則套用至資源、請從「原則」下拉式清單中、選取您要用於備份的原則。
++
+如果針對隨需備份所選取的原則與備份排程相關聯、則會根據為排程類型指定的保留設定來保留隨需備份。
+
+.. 按一下*備份*。
+
+
+. 按一下*監控*>*工作*來監控作業進度。
+

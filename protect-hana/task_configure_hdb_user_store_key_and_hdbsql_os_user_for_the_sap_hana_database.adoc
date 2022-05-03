@@ -1,0 +1,40 @@
+---
+permalink: protect-hana/task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html 
+sidebar: sidebar 
+keywords:  
+summary: 您必須設定HDB使用者儲存金鑰和HDBSQL OS使用者、才能在SAP HANA資料庫上執行資料保護作業。 
+---
+= 針對SAP HANA資料庫設定HDB使用者儲存金鑰和HDBSQL OS使用者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須設定HDB使用者儲存金鑰和HDBSQL OS使用者、才能在SAP HANA資料庫上執行資料保護作業。
+
+*您需要的是什麼*
+
+* 如果SAP HANA資料庫未設定HDB Secure User Store Key和HDB SQL OS User、則只有自動探索的資源才會顯示紅色掛鎖圖示。如果在後續探索作業期間、發現設定的HDB Secure User Store金鑰不正確或無法存取資料庫本身、則紅色的掛鎖圖示會重新出現。
+* 您必須設定HDB安全使用者存放區金鑰和HDB SQL OS使用者、才能保護資料庫或將其新增至資源群組、以執行資料保護作業。
+* 您必須設定HDB SQL OS使用者、才能存取系統資料庫。如果HDB SQL OS使用者設定為只存取租戶資料庫、探索作業將會失敗。
+
+
+*步驟*
+
+. 在左側導覽窗格中、按一下* Resources（資源）*、然後從SnapCenter 清單中選取「SAP HANA資料庫適用的插件」。
+. 在「資源」頁面中、從*檢視*清單中選取資源類型。
+. （選用）按一下 image:../media/filter_icon.gif[""] 然後選取主機名稱。
++
+然後按一下 image:../media/filter_icon.gif[""] 以關閉篩選窗格。
+
+. 選取資料庫、然後按一下「*設定資料庫*」。
+. 在「Configure databasing settings（設定資料庫設定）」區段中、輸入HDB Secure User Store Key。
++
+
+NOTE: 外掛程式主機名稱隨即顯示、HDB SQL OS使用者會自動填入<SID>adm。
+
+. 按一下「*確定*」。
+
+
+您可以從「拓撲」頁面修改資料庫組態。

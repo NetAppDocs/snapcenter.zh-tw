@@ -1,0 +1,100 @@
+---
+permalink: install/task_add_an_rbac_role_using_security_login_commands.html 
+sidebar: sidebar 
+keywords: RBAC roles, add, ONTAP RBAC role 
+summary: 當儲存系統執行叢集式的動作時、您可以使用安全登入命令來新增ONTAP 一個無法使用的RBAC角色ONTAP 。 
+---
+= 使用ONTAP 安全登入命令新增一個RBAC角色
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當儲存系統執行叢集式的動作時、您可以使用安全登入命令來新增ONTAP 一個無法使用的RBAC角色ONTAP 。
+
+*您需要的是什麼*
+
+* 在您為ONTAP 執行叢集ONTAP 式功能的儲存系統建立一套不必要的RBAC角色之前、您必須先識別下列項目：
++
+** 您要執行的工作
+** 執行這些工作所需的權限
+
+
+* 若要設定RBAC角色、您必須執行下列動作：
++
+** 授予命令和（或）命令目錄的權限。
++
+每個命令/命令目錄都有兩種存取層級：All存取和唯讀。
+
++
+您必須一律先指派所有存取權限。
+
+** 指派角色給使用者。
+** 根據SnapCenter 您的不確定插件是連接至整個叢集的叢集管理員IP、還是直接連接至叢集內的SVM、而有所不同。
+
+
+
+
+*關於此工作*
+
+為了簡化儲存系統上的角色設定、您可以使用Data ONTAP NetApp社群論壇上發佈的RBAC User Creator for Soliding工具。
+
+此工具會自動ONTAP 正確處理設定功能不正確的功能。例如、RBAC User Creator for Data ONTAP BIOS工具會自動以正確順序新增權限、以便先顯示所有存取權限。如果您先新增唯讀權限、然後新增全存取權限、ONTAP 則將全存取權限標示為重複、並予以忽略。
+
+
+NOTE: 如果您稍後升級SnapCenter 了版本的功能、ONTAP 應該重新執行RBAC User Creator for Data ONTAP BIOS工具、以更新您先前建立的使用者角色。為SnapCenter 舊版的版本的使用者角色無法ONTAP 在升級版本中正常運作。當您重新執行此工具時、它會自動處理升級作業。您不需要重新建立角色。
+
+如需設定ONTAP RBAC角色的詳細資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["《Administrator驗證與RBAC電源指南》（英文）ONTAP"^]。
+
+
+NOTE: 為了保持一致性、SnapCenter 本文檔將角色稱為使用權限。此功能使用「'attribute'」一詞、而非「'privation.」一詞。OnCommand 在設定ONTAP 支援RBAC角色時、這兩個詞彙代表相同的意義。
+
+*步驟*
+
+. 在儲存系統上、輸入下列命令以建立新角色：
++
+「安全登入角色create <role名稱>>-cmd目錄名稱"command"-access all–vserver <Svm_name\>'」
+
++
+** SVM_name是SVM的名稱。如果您將此欄位保留空白、則預設為叢集管理員。
+** role名稱是您為角色指定的名稱。
+** Command ONTAP 是功能不一的功能。
++
+
+NOTE: 您必須針對每個權限重複此命令。請記住、All Access命令必須在唯讀命令之前列出。
+
++
+如需權限清單的相關資訊、請參閱 link:../install/task_create_an_ontap_cluster_role_with_minimum_privileges.html#ontap-cli-commands-for-creating-roles-and-assigning-permissions["用於建立角色和指派權限的CLI命令ONTAP"^]。
+
+
+
+. 輸入下列命令來建立使用者名稱：
++
+「安全性登入建立-使用者名稱>-applicationontapi -authmethod <password\>-role <name_of_rouse_in_step _1\>–vserver <Svm_name\>-comment "user_description"」
+
++
+** user_name是您要建立的使用者名稱。
+** 是您的密碼。如果您未指定密碼、系統會提示您輸入密碼。
+** SVM_name是SVM的名稱。
+
+
+. 輸入下列命令、將角色指派給使用者：
++
+「安全性登入修改使用者名稱」：-vserver <Svm_name\>-role <rose_name\>-application-ontapi應用程式主控台-authmethod <password\>`
+
++
+** 是您在步驟2中建立的使用者名稱。此命令可讓您修改使用者、使其與角色建立關聯。
+** SVM_name>是SVM的名稱。
+** <role名稱>是您在步驟1中建立的角色名稱。
+** 是您的密碼。如果您未指定密碼、系統會提示您輸入密碼。
+
+
+. 輸入下列命令、確認使用者已正確建立：
++
+「安全登入show–vserver <Svm_name\>-user-or group name <user_name\>」
+
++
+user_name是您在步驟3中建立的使用者名稱。
+
+

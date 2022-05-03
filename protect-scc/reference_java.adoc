@@ -1,0 +1,469 @@
+---
+permalink: protect-scc/reference_java.html 
+sidebar: sidebar 
+keywords:  
+summary: 使用Java樣式開發外掛程式。 
+---
+= Java樣式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Java自訂外掛程式會直接與資料庫、執行個體等應用程式互動。
+
+
+
+== 限制
+
+使用Java程式設計語言開發外掛程式時、您應該注意到某些限制。
+
+|===
+| 外掛程式特性 | Java外掛程式 
+
+
+ a| 
+複雜度
+ a| 
+從低到中
+
+
+
+ a| 
+記憶體佔用空間
+ a| 
+最高10至20 MB
+
+
+
+ a| 
+相依於其他程式庫
+ a| 
+用於應用程式通訊的程式庫
+
+
+
+ a| 
+執行緒數量
+ a| 
+1.
+
+
+
+ a| 
+執行緒執行時間
+ a| 
+不到一小時
+
+|===
+
+
+=== Java限制的理由
+
+此解決方案的目標SnapCenter 是確保應用程式整合持續、安全且健全。藉由支援Java外掛程式、外掛程式可能會導致記憶體洩漏及其他不必要的問題。這些問題很難解決、尤其是為了讓事情變得簡單易用。如果外掛程式的複雜度不太複雜、則開發人員較不可能導入錯誤。Java外掛程式的危險在於它們與SnapCenter Sof the Sof the Sof the Same JVM.外掛程式當機或洩漏記憶體時、也可能對代理程式造成負面影響。
+
+
+
+== 支援的方法
+
+|===
+| 方法 | 必要 | 說明 | 何時及由誰呼叫？ 
+
+
+ a| 
+版本
+ a| 
+是的
+ a| 
+需要傳回外掛程式的版本。
+ a| 
+由伺服器或代理程式要求外掛程式的版本。SnapCenter
+
+
+
+ a| 
+靜止
+ a| 
+是的
+ a| 
+需要在應用程式上執行靜止。在大多數情況下、這表示將應用程式置於SnapCenter 某個狀態、讓該應用程式能夠建立備份（例如Snapshot複本）。
+ a| 
+在該伺服器SnapCenter 建立Snapshot複本或執行一般備份之前。
+
+
+
+ a| 
+取消靜止
+ a| 
+是的
+ a| 
+需要在應用程式上執行靜止。在大多數情況下、這表示應用程式會恢復正常運作狀態。
+ a| 
+在支援伺服器SnapCenter 建立Snapshot複本或執行一般備份之後。
+
+
+
+ a| 
+清理
+ a| 
+否
+ a| 
+負責清除外掛程式需要清理的任何項目。
+ a| 
+當在伺服器SnapCenter 上完成工作流程（成功或失敗）時。
+
+
+
+ a| 
+clonewePre
+ a| 
+否
+ a| 
+應在執行複製作業之前執行必要的動作。
+ a| 
+當使用者觸發「clonewal Vol」或「clonewlun」動作、並使用內建的複製精靈（GUI / CLI）。
+
+
+
+ a| 
+clonePost
+ a| 
+否
+ a| 
+應在執行複製作業之後執行必要的動作。
+ a| 
+當使用者觸發「clonewal Vol」或「clonewlun」動作、並使用內建的複製精靈（GUI / CLI）。
+
+
+
+ a| 
+重述預先發
+ a| 
+否
+ a| 
+應在叫用還原作業之前執行必要的動作。
+ a| 
+當使用者觸發還原作業時。
+
+
+
+ a| 
+還原
+ a| 
+否
+ a| 
+負責執行應用程式的還原/還原。
+ a| 
+當使用者觸發還原作業時。
+
+
+
+ a| 
+應用程式版本
+ a| 
+否
+ a| 
+擷取由外掛程式管理的應用程式版本。
+ a| 
+在每個工作流程（例如備份/還原/複製）中、ASUP資料收集的一部分。
+
+|===
+
+
+== 教學課程
+
+本節說明如何使用Java程式設計語言建立自訂外掛程式。
+
+
+
+=== 設定月食
+
+. 在Eclipse中建立新的Java專案「圖則外掛程式」
+. 單擊*完成*
+. 右鍵單擊*新項目*->*屬性*->* Java建置路徑*->*資源庫*->*新增外部JAR*
+. 瀏覽至主機代理程式的./lib/資料夾、然後選取Jar scAgent-5.0-core.jar和common-5.0.jar
+. 選取專案、然後在* src資料夾*->*新增*->套件*上按一下滑鼠右鍵、然後建立名稱為com.netapp.snapcreator.agent.plugin.TutorialPlugin的新套件
+. 在新套件上按一下滑鼠右鍵、然後選取「New（新增）」->「Java Class（Java類別）」。
++
+.. 輸入圖則外掛程式名稱。
+.. 按一下超類別瀏覽按鈕、然後搜尋「*抽象外掛程式」。只能顯示一個結果：
++
+ "AbstractPlugin - com.netapp.snapcreator.agent.nextgen.plugin".
+.. 單擊*完成*。
+.. Java類別：
++
+....
+package com.netapp.snapcreator.agent.plugin.TutorialPlugin;
+import
+com.netapp.snapcreator.agent.nextgen.common.result.Describe
+Result;
+import
+com.netapp.snapcreator.agent.nextgen.common.result.Result;
+import
+com.netapp.snapcreator.agent.nextgen.common.result.VersionR
+esult;
+import
+com.netapp.snapcreator.agent.nextgen.context.Context;
+import
+com.netapp.snapcreator.agent.nextgen.plugin.AbstractPlugin;
+public class TutorialPlugin extends AbstractPlugin {
+  @Override
+  public DescribeResult describe(Context context) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+  @Override
+  public Result quiesce(Context context) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+  @Override
+  public Result unquiesce(Context context) {
+    // TODO Auto-generated method stub
+    return null;
+  }
+  @Override
+  public VersionResult version() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+}
+....
+
+
+
+
+
+
+=== 實作所需方法
+
+靜止、取消靜止和版本是每個自訂Java外掛程式必須實作的必要方法。
+
+以下是傳回外掛程式版本的版本方法。
+
+....
+@Override
+public VersionResult version() {
+    VersionResult versionResult = VersionResult.builder()
+                                            .withMajor(1)
+                                            .withMinor(0)
+                                            .withPatch(0)
+                                            .withBuild(0)
+                                            .build();
+    return versionResult;
+}
+....
+....
+Below is the implementation of quiesce and unquiesce method. These will be interacting with   the application, which is being protected by SnapCenter Server. As this is just a tutorial, the
+application part is not explained, and the focus is more on the functionality that SnapCenter   Agent provides the following to the plug-in developers:
+....
+....
+@Override
+  public Result quiesce(Context context) {
+    final Logger logger = context.getLogger();
+    /*
+      * TODO: Add application interaction here
+    */
+....
+....
+logger.error("Something bad happened.");
+logger.info("Successfully handled application");
+....
+....
+    Result result = Result.builder()
+                    .withExitCode(0)
+                    .withMessages(logger.getMessages())
+                    .build();
+    return result;
+}
+....
+方法會在內容物件中傳遞。其中包含多個協助工具、例如Logger和內容存放區、以及目前作業的相關資訊（工作流程ID、工作ID）。我們可以呼叫最終Logger logger = context.getLogger（）；來取得記錄程式。記錄程式物件提供類似於其他記錄架構的方法、例如登入。在結果物件中、您也可以指定結束程式碼。在此範例中、零會傳回、因為沒有問題。其他結束代碼可對應至不同的故障情況。
+
+
+
+=== 使用結果物件
+
+結果物件包含下列參數：
+
+|===
+| 參數 | 預設 | 說明 
+
+
+ a| 
+組態
+ a| 
+空組態
+ a| 
+此參數可用於將組態參數傳回伺服器。它可以是外掛程式想要更新的參數。此變更是否實際反映在SnapCenter 支援伺服器上的組態中、取決於組態中的APP_CON_PONY面=Y或N參數。
+
+
+
+ a| 
+exitCode
+ a| 
+0
+ a| 
+表示作業狀態。「0」表示作業已成功執行。其他值表示錯誤或警告。
+
+
+
+ a| 
+stdout
+ a| 
+空白清單
+ a| 
+這可用來將stdout訊息傳回SnapCenter 至該伺服器。
+
+
+
+ a| 
+stderr
+ a| 
+空白清單
+ a| 
+這可用來將stderr訊息傳回SnapCenter 至該伺服器。
+
+
+
+ a| 
+訊息
+ a| 
+空白清單
+ a| 
+此清單包含外掛程式要傳回伺服器的所有訊息。該伺服器會在CLI或GUI中顯示這些訊息。SnapCenter
+
+|===
+此功能可為建置者提供支援SnapCenter (https://en.wikipedia.org/wiki/Builder_pattern["建構者模式"]）的所有結果類型。這讓使用者變得非常簡單：
+
+....
+Result result = Result.builder()
+                    .withExitCode(0)
+                    .withStdout(stdout)
+                    .withStderr(stderr)
+                    .withConfig(config)
+                    .withMessages(logger.getMessages())
+                    .build()
+....
+例如、將結束程式碼設為0、設定stdout和Stderr的清單、設定組態參數、以及附加將傳送回伺服器的記錄訊息。如果您不需要所有參數、請只傳送所需的參數。由於每個參數都有一個預設值、因此如果您從下列程式碼中移除.withExitCode（0）、則不會影響結果：
+
+....
+Result result = Result.builder()
+                      .withExitCode(0)
+                      .withMessages(logger.getMessages())
+                      .build();
+....
+
+
+=== 版本結果
+
+版本結果會將SnapCenter 外掛程式版本通知到該伺服器。由於它也從結果繼承、因此包含config、exitCode、stdout、stderr和Messages參數。
+
+|===
+| 參數 | 預設 | 說明 
+
+
+ a| 
+主要
+ a| 
+0
+ a| 
+外掛程式的主要版本欄位。
+
+
+
+ a| 
+次要
+ a| 
+0
+ a| 
+外掛程式的次要版本欄位。
+
+
+
+ a| 
+修補程式
+ a| 
+0
+ a| 
+外掛程式的「修補版本」欄位。
+
+
+
+ a| 
+建置
+ a| 
+0
+ a| 
+外掛程式的建置版本欄位。
+
+|===
+例如：
+
+....
+VersionResult result = VersionResult.builder()
+                                  .withMajor(1)
+                                  .withMinor(0)
+                                  .withPatch(0)
+                                  .withBuild(0)
+                                  .build();
+....
+
+
+=== 使用內容物件
+
+內容物件提供下列方法：
+
+|===
+| 內容方法 | 目的 
+
+
+ a| 
+字串getWorkflowId()；
+ a| 
+傳回SnapCenter 目前工作流程使用的流程ID。
+
+
+
+ a| 
+config getconfig（）；
+ a| 
+傳回SnapCenter 正在從功能表伺服器傳送至代理程式的組態。
+
+|===
+
+
+=== 工作流程ID
+
+Workflow ID是SnapCenter 指由伺服器用來參照特定執行中工作流程的ID。
+
+
+
+=== 組態
+
+此物件包含（大部分）使用者可在SnapCenter 物件伺服器的組態中設定的參數。不過、由於安全性原因、部分參數可能會在伺服器端篩選。以下是如何存取Config和擷取參數的範例：
+
+....
+final Config config = context.getConfig();
+String myParameter =
+config.getParameter("PLUGIN_MANDATORY_PARAMETER");
+....
+現在、「//myParexer」包含SnapCenter 從效能分析伺服器上的組態讀取的參數。如果組態參數鍵不存在、則會傳回空白字串（""）。
+
+
+
+=== 匯出外掛程式
+
+您必須匯出外掛程式、才能將其安裝在SnapCenter 該支援主機上。
+
+在Eclipse中執行下列工作：
+
+. 在外掛程式的基礎套件上按一下滑鼠右鍵（請參閱範例com.netapp.snapcreator.agent.plugin.TutorialPlugin）。
+. 選擇*匯出*->* Java*->* Jar檔案*
+. 單擊 * 下一步 * 。
+. 在下列視窗中、指定目的地Jar檔案路徑：tutorial_plugin.jar外掛程式的基礎類別名稱為"TutorialPlugin.class"、外掛程式必須新增至名稱相同的資料夾。
+
+
+如果外掛程式取決於其他程式庫、您可以建立下列資料夾：lib/
+
+您可以新增與外掛程式相依的Jar檔案（例如資料庫驅動程式）。當程式庫載入外掛程式時、它會自動將此資料夾中的所有Jar檔案與其相關聯、並將其新增至類路徑。SnapCenter

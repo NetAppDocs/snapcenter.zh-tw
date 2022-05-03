@@ -1,0 +1,23 @@
+---
+permalink: protect-sce/reference_exchange_database_and_backup_verification.html 
+sidebar: sidebar 
+keywords:  
+summary: 適用於Microsoft Exchange Server的程式庫外掛程式不提供備份驗證、不過您可以使用Exchange隨附的Eseutil工具來驗證Exchange資料庫和備份。SnapCenter 
+---
+= Exchange資料庫與備份驗證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於Microsoft Exchange Server的程式庫外掛程式不提供備份驗證、不過您可以使用Exchange隨附的Eseutil工具來驗證Exchange資料庫和備份。SnapCenter
+
+Microsoft Exchange Eseutil工具是Exchange伺服器隨附的命令列公用程式。此公用程式可讓您執行一致性檢查、以驗證Exchange資料庫和備份的完整性。
+
+|===
+
+
+| *最佳實務做法：*不需要對資料庫可用度群組（DAG）組態中至少有兩個複本的資料庫執行一致性檢查。 
+|===
+如需其他資訊、請參閱 https://docs.microsoft.com/en-us/exchange/exchange-server?view=exchserver-2019["Microsoft Exchange Server文件"^]。

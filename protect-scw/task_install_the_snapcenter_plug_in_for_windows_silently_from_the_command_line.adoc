@@ -1,0 +1,107 @@
+---
+permalink: protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果無法從Windows GUI遠端安裝外掛程式、您可以SnapCenter 在Windows主機本機上安裝適用於Microsoft Windows的支援功能。SnapCenter您可以SnapCenter 從Windows命令列、以無訊息模式在無人值守的情況下執行Microsoft Windows安裝程式的功能。 
+---
+= 從命令列以無訊息方式安裝SnapCenter 適用於Microsoft Windows的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果無法從Windows GUI遠端安裝外掛程式、您可以SnapCenter 在Windows主機本機上安裝適用於Microsoft Windows的支援功能。SnapCenter您可以SnapCenter 從Windows命令列、以無訊息模式在無人值守的情況下執行Microsoft Windows安裝程式的功能。
+
+*您需要的是什麼*
+
+* 您必須安裝Microsoft Net 4.5.2或更新版本。
+* 您必須安裝PowerShell 4.0或更新版本。
+* 您必須開啟Windows訊息佇列。
+* 您必須是主機上的本機管理員。
+
+
+*步驟*
+
+. 從SnapCenter 您的安裝位置下載適用於Microsoft Windows的功能更新外掛程式。
++
+例如、預設安裝路徑為C：\ProgramData\NetApp\SnapCenter\Package儲存庫。
+
++
+此路徑可從SnapCenter 安裝了此伺服器的主機存取。
+
+. 將安裝檔案複製到您要安裝外掛程式的主機。
+. 在命令提示字元中、瀏覽至您下載安裝檔案的目錄。
+. 輸入下列命令、以資料取代變數：
++
+"snapcenter_windows_host_plugin.exe"/無聲/除錯記錄"/log"" by_SNAPCENTE_port=套件_InstallalDIR="" be_ServiceAccount= be_SERVERICEPWD= ISfeatureInstall=scW'
+
++
+例如：
+
++
+ `"C:\ProgramData\NetApp\SnapCenter\Package Repository \snapcenter_windows_host_plugin.exe"/silent /debuglog"C: \HPPW_SCW_Install.log" /log"C:\" BI_SNAPCENTER_PORT=8145 SUITE_INSTALLDIR="C: \Program Files\NetApp\SnapCenter" BI_SERVICEACCOUNT=domain\administrator BI_SERVICEPWD=password ISFeatureInstall=SCW`
++
+
+NOTE: 安裝Windows外掛程式期間所傳遞的所有參數均區分大小寫。
+
++
+輸入下列變數的值：
+
++
+|===
+| 變動 | 價值 
+
+
+ a| 
+_/debuglog"<debug_Log_Path>_
+ a| 
+指定套件安裝程式記錄檔的名稱和位置、如下列範例所示：setup.exe /debuglog" C：\PathToLog\setupexe.log"。
+
+
+
+ a| 
+BI_SNAPCENTIER_port
+ a| 
+指定SnapCenter 用來與SMCore進行通訊的連接埠。
+
+
+
+ a| 
+套件_INSTALLDIR
+ a| 
+指定主機外掛程式套件安裝目錄。
+
+
+
+ a| 
+BI_ServiceAccount
+ a| 
+指定SnapCenter Microsoft Windows Web服務帳戶的功能外掛程式。
+
+
+
+ a| 
+BI_SERVERICEPWD
+ a| 
+指定SnapCenter Microsoft Windows Web服務帳戶的密碼。
+
+
+
+ a| 
+ISfeatureInstall
+ a| 
+指定SnapCenter 要在遠端主機上部署的解決方案。
+
+|===
++
+_debuglog_參數包括用於SnapCenter 資訊的記錄檔路徑。寫入此記錄檔是取得疑難排解資訊的慣用方法、因為檔案包含安裝針對外掛程式先決條件所執行的檢查結果。
+
++
+如有必要、您可以在適用於SnapCenter Windows的資訊套件的記錄檔中找到其他疑難排解資訊。套件的記錄檔會列在_%Temp %_資料夾中（最舊的優先）、例如_C：\臨時\_。
+
++
+
+NOTE: 安裝Windows外掛程式時、會在主機上登錄外掛程式、而非SnapCenter 在伺服器上登錄外掛程式。您可以SnapCenter 透過SnapCenter 使用支援程式介面或PowerShell Cmdlet新增主機、在支援服務器上登錄外掛程式。新增主機之後、即會自動探索外掛程式。
+
+

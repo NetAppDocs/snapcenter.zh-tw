@@ -1,0 +1,109 @@
+---
+permalink: install/concept_configure_lun_storage.html 
+sidebar: sidebar 
+keywords: LUN storage, iSCSI, 
+summary: 您可以使用SnapCenter 支援功能來設定FC連接或iSCSI連接的LUN。您也可以使用SnapCenter 支援功能將現有的LUN連線至Windows主機。 
+---
+= 設定LUN儲存設備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapCenter 支援功能來設定FC連接或iSCSI連接的LUN。您也可以使用SnapCenter 支援功能將現有的LUN連線至Windows主機。
+
+LUN是SAN組態中的基本儲存單元。Windows主機將系統上的LUN視為虛擬磁碟。如需詳細資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanconf/home.html["《支援SAN組態指南》（英文）ONTAP"^]。
+
+
+
+== 建立iSCSI工作階段
+
+如果您使用iSCSI連線至LUN、則必須先建立iSCSI工作階段、再建立LUN以啟用通訊。
+
+*開始之前*
+
+* 您必須將儲存系統節點定義為iSCSI目標。
+* 您必須已在儲存系統上啟動iSCSI服務。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["深入瞭解"^]
+
+
+*關於此工作*
+
+您只能在相同的IP版本之間建立iSCSI工作階段、無論是從IPv6到IPv6、或是從IPv4到IPv6。
+
+您可以使用連結本機IPv6位址進行iSCSI工作階段管理、以及僅當主機和目標位於相同子網路時、才進行通訊。
+
+如果變更iSCSI啟動器的名稱、則存取iSCSI目標的權限會受到影響。變更名稱之後、您可能需要重新設定啟動器存取的目標、以便辨識新名稱。變更iSCSI啟動器名稱後、您必須確保重新啟動主機。
+
+如果您的主機有多個iSCSI介面、當您在SnapCenter 第一個介面上使用IP位址建立iSCSI工作階段以供支援時、就無法從另一個介面建立具有不同IP位址的iSCSI工作階段。
+
+*步驟*
+
+. 在左側導覽窗格中、按一下*主機*。
+. 在「主機」頁面中、按一下「* iSCSI工作階段*」。
+. 從*儲存虛擬機器*下拉式清單中、選取iSCSI目標的儲存虛擬機器（SVM）。
+. 從*主機*下拉式清單中、選取工作階段的主機。
+. 按一下*建立工作階段*。
++
+隨即顯示「建立工作階段精靈」。
+
+. 在建立工作階段精靈中、找出目標：
++
+|===
+| 在此欄位中... | 輸入... 
+
+
+ a| 
+目標節點名稱
+ a| 
+iSCSI目標的節點名稱
+
+如果有現有的目標節點名稱、則名稱會以唯讀格式顯示。
+
+
+
+ a| 
+目標入口網站位址
+ a| 
+目標網路入口網站的IP位址
+
+
+
+ a| 
+目標入口網站連接埠
+ a| 
+目標網路入口網站的TCP連接埠
+
+
+
+ a| 
+啟動器入口網站位址
+ a| 
+啟動器網路入口網站的IP位址
+
+|===
+. 當您對輸入項目感到滿意時、請按一下*「Connect（連線）」*。
++
+建立iSCSI工作階段。SnapCenter
+
+. 重複此程序、為每個目標建立工作階段。
+
+
+
+
+== 中斷iSCSI工作階段的連線
+
+有時候、您可能需要中斷iSCSI工作階段與具有多個工作階段的目標之間的連線。
+
+*步驟*
+
+. 在左側導覽窗格中、按一下*主機*。
+. 在「主機」頁面中、按一下「* iSCSI工作階段*」。
+. 從*儲存虛擬機器*下拉式清單中、選取iSCSI目標的儲存虛擬機器（SVM）。
+. 從*主機*下拉式清單中、選取工作階段的主機。
+. 從iSCSI工作階段清單中、選取您要中斷連線的工作階段、然後按一下*中斷連線工作階段*。
+. 在「中斷連線工作階段」對話方塊中、按一下「*確定*」。
++
+中斷iSCSI工作階段連線。SnapCenter
+
+

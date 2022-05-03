@@ -1,0 +1,160 @@
+---
+section: protect-hana
+title: 保護SAP HANA資料庫
+entries:
+- title: SAP HANA資料庫適用的SAP外掛程式SnapCenter
+  entries:
+  - title: SAP HANA資料庫適用的外掛程式總覽SnapCenter
+    url: "/protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_overview.html"
+  - title: 使用SAP HANA資料庫的《不穩定》外掛程式可以做什麼SnapCenter
+    url: "/protect-hana/concept_what_you_can_do_using_the_snapcenter_plug_in_for_sap_hana_database.html"
+  - title: SAP HANA資料庫功能的選用外掛程式SnapCenter
+    url: "/protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_features.html"
+  - title: SAP HANA資料庫的支援儲存類型SnapCenter
+    url: "/protect-hana/reference_storage_types_supported_by_snapcenter_plug_in_for_sap_hana_database.html"
+  - title: 需要最低ONTAP 的權限
+    url: "/protect-hana/concept_minimum_privileges_required_for_sap_hana_and_exchange_plug_in.html"
+  - title: 準備儲存系統以進行SnapMirror和SnapVault 資訊複寫
+    url: "/protect-hana/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_hana.html"
+  - title: SAP HANA資料庫的備份策略
+    entries:
+    - title: 定義SAP HANA資料庫的備份策略
+      url: "/protect-hana/task_define_a_backup_strategy_for_sap_hana_databases.html"
+    - title: 自動探索Linux主機上的資源
+      url: "/protect-hana/concept_auto_discovery_of_resources_on_linux_host.html"
+    - title: 支援的備份類型
+      url: "/protect-hana/concept_type_of_backups_supported.html"
+    - title: SAP HANA資料庫的功能介紹如何使用一致性群組Snapshot複本SnapCenter
+      url: "/protect-hana/concept_how_snapcenter_plug_in_for_sap_hana_database_uses_consistency_group_snapshot_copies.html"
+    - title: 如何管理記錄與資料備份的內部管理SnapCenter
+      url: "/protect-hana/concept_housekeeping_of_log_backups.html"
+    - title: 決定SAP HANA資料庫備份排程的考量事項
+      url: "/protect-hana/reference_considerations_for_determining_backup_schedules_for_sap_hana_database.html"
+    - title: SAP HANA資料庫所需的備份工作數量
+      url: "/protect-hana/concept_number_of_backup_jobs_needed_for_sap_hana_databases.html"
+    - title: 備份命名慣例
+      url: "/protect-hana/concept_backup_naming_conventions_for_plugin_for_hana.html"
+  - title: SAP HANA資料庫的還原與還原策略
+    entries:
+    - title: 定義SAP HANA資源的還原與還原策略
+      url: "/protect-hana/task_define_a_restore_and_recovery_strategy_for_sap_hana_resources.html"
+    - title: 手動新增SAP HANA資源所支援的還原策略類型
+      url: "/protect-hana/reference_types_of_restore_strategies_supported_for_manually_added_sap_hana_resources.html"
+    - title: 自動探索的SAP HANA資料庫所支援的還原策略類型
+      url: "/protect-hana/reference_types_of_restore_strategies_supported_for_auto_discovered_sap_hana_databases.html"
+    - title: 自動探索SAP HANA資料庫的還原作業類型
+      url: "/protect-hana/reference_types_of_restore_performed_for_auto_discovered_sap_hana_databases.html"
+    - title: SAP HANA資料庫支援的恢復作業類型
+      url: "/protect-hana/reference_types_of_recovery_operations_supported_for_sap_hana_database.html"
+- title: 準備安裝SnapCenter 適用於SAP HANA資料庫的NetApp外掛程式
+  entries:
+  - title: SAP HANA資料庫適用的安裝流程SnapCenter
+    url: "/protect-hana/task_install_snapcenter_plug_in_for_sap_hana_database.html"
+  - title: 新增主機及安裝SnapCenter 適用於SAP HANA資料庫的功能性外掛程式的先決條件
+    url: "/protect-hana/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_sap_hana_database.html"
+  - title: 安裝SnapCenter 適用於Windows的功能性外掛程式套件的主機需求
+    url: "/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_hana.html"
+  - title: 安裝SnapCenter 適用於Linux的支援功能外掛套件的主機需求
+    url: "/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_linux.html"
+  - title: 設定SnapCenter SAP HANA資料庫的效能分析外掛程式認證
+    url: "/protect-hana/task_set_up_credentials_for_snapcenter_plug_in_for_sap_hana_database.html"
+  - title: 在Windows Server 2012或更新版本上設定GMSA
+    url: "/protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html"
+  - title: 安裝SnapCenter 適用於SAP HANA資料庫的功能
+    entries:
+    - title: 新增主機並在遠端主機上安裝外掛程式套件
+      url: "/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html"
+    - title: 使用Cmdlet在SnapCenter 多個遠端主機上安裝適用於Linux或Windows的支援功能外掛套件
+      url: "/protect-hana/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_sap_hana.html"
+    - title: 使用命令列介面、在SnapCenter Linux主機上安裝適用於SAP HANA資料庫的功能
+      url: "/protect-hana/task_install_the_snapcenter_plug_in_for_sap_hana_database_on_linux_hosts_using_the_command_line_interface.html"
+    - title: 監控SnapCenter 程式套件安裝狀態
+      url: "/protect-hana/task_monitor_the_status_of_installing_plugin_for_sap_hana.html"
+  - title: 設定CA憑證
+    entries:
+    - title: 產生CA認證CSR檔案
+      url: "/protect-hana/reference_generate_CA_certificate_CSR_file.html"
+    - title: 匯入CA憑證
+      url: "/protect-hana/task_import_CA_certificates.html"
+    - title: 取得CA憑證指紋
+      url: "/protect-hana/task_get_the_CA_certificate_thumbprint.html"
+    - title: 使用Windows主機外掛程式服務設定CA憑證
+      url: "/protect-hana/task_configure_CA_certificate_with_Windows_host_plug-in_services.html"
+    - title: 在SnapCenter Linux主機上設定適用於SAP HANA外掛程式服務的CA憑證
+      url: "/protect-hana/task_configure_CA_certificate_for_saphana_on_Linux_host.html"
+    - title: 在SnapCenter Windows主機上設定「CA憑證」以執行「SAP HANA外掛程式」服務
+      url: "/protect-hana/task_configure_CA_certificate_for_saphana_on_windows_host.html"
+    - title: 啟用外掛程式的CA憑證
+      url: "/protect-hana/task_enable_ca_certificates_for_plug-ins.html"
+- title: 安裝SnapCenter VMware vSphere的VMware vCenter外掛程式
+  url: "/protect-hana/task_install_snapcenter_plug_in_for_vmware_vsphere.html"
+- title: 準備資料保護
+  entries:
+  - title: SAP SnapCenter HANA資料庫使用此功能的先決條件
+    url: "/protect-hana/reference_prerequisites_for_using_snapcenter_plug_in_for_sap_hana_database.html"
+  - title: 如何使用資源、資源群組和原則來保護SAP HANA資料庫
+    url: "/protect-hana/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_sap_hana_databases.html"
+- title: 備份SAP HANA資源
+  entries:
+  - title: 備份工作流程
+    url: "/protect-hana/task_back_up_sap_hana_resources.html"
+  - title: 針對SAP HANA資料庫設定HDB使用者儲存金鑰和HDBSQL OS使用者
+    url: "/protect-hana/task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html"
+  - title: 探索資源並準備多租戶資料庫容器以進行資料保護
+    entries:
+    - title: 自動探索資料庫
+      url: "/protect-hana/task_discover_the_databases_automatically.html"
+    - title: 準備多租戶資料庫容器以進行資料保護
+      url: "/protect-hana/task_prepare_multitenant_database_containers_for_data_protection.html"
+  - title: 將資源手動新增至外掛程式主機
+    url: "/protect-hana/task_add_resources_manually_to_the_plug_in_host.html"
+  - title: 為SAP HANA資料庫建立備份原則
+    url: "/protect-hana/task_create_backup_policies_for_sap_hana_databases.html"
+  - title: 建立資源群組並附加原則
+    url: "/protect-hana/task_create_resource_groups_and_attach_policies.html"
+  - title: 備份SAP HANA資料庫
+    url: "/protect-hana/task_back_up_sap_hana_databases.html"
+  - title: 備份資源群組
+    url: "/protect-hana/task_back_up_resource_groups_sap_hana.html"
+  - title: 使用適用於SAP HANA資料庫的PowerShell Cmdlet建立儲存系統連線和認證
+    url: "/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html"
+  - title: 使用PowerShell Cmdlet備份資料庫
+    url: "/protect-hana/task_back_up_databases_using_powershell_cmdlets_sap_hana.html"
+  - title: 監控備份作業
+    entries:
+    - title: 監控SnapCenter 「不支援作業」頁面中的備份作業
+      url: "/protect-hana/task_monitor_hana_databases_backup_operations.html"
+    - title: 監控「活動」窗格中的作業
+      url: "/protect-hana/task_monitor_dataprotection_operations_on_hana_databases_in_the_activity_pane.html"
+  - title: 取消備份作業
+    url: "/protect-hana/task_cancel_backup_operations_for_sap_hana.html"
+  - title: 在「拓撲」頁面中檢視SAP HANA資料庫備份與複製
+    url: "/protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html"
+- title: 還原SAP HANA資料庫
+  entries:
+  - title: 還原工作流程
+    url: "/protect-hana/task_restore_sap_hana_databases.html"
+  - title: 還原及還原手動新增的資源備份
+    url: "/protect-hana/task_restore_and_recover_a_manually_added_resource_backup.html"
+  - title: 還原及還原自動探索的資料庫備份
+    url: "/protect-hana/task_restore_and_recover_an_auto_discovered_database_backup.html"
+  - title: 使用PowerShell Cmdlet還原SAP HANA資料庫
+    url: "/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html"
+  - title: 使用PowerShell Cmdlet還原資源
+    url: "/protect-hana/task_restore_and_recover_resources_using_powershell_cmdlets_hana.html"
+  - title: 監控還原作業
+    url: "/protect-hana/task_monitor_hana_databases_restore_operations.html"
+- title: 複製SAP HANA資源備份
+  entries:
+  - title: 複製工作流程
+    url: "/protect-hana/task_clone_sap_hana_resource_backups.html"
+  - title: 複製SAP HANA資料庫備份
+    url: "/protect-hana/task_clone_a_sap_hana_database_backup.html"
+  - title: 使用PowerShell Cmdlet複製SAP HANA資料庫備份
+    url: "/protect-hana/task_clone_sap_hana_database_backups_using_powershell_cmdlets.html"
+  - title: 監控SnapCenter 實體複製作業
+    url: "/protect-hana/task_monitor_hana_database_clone_operations.html"
+  - title: 分割實體複本
+    url: "/protect-hana/task_split_a_clone_for_hana.html"
+  - title: 升級SnapCenter 完功能後刪除或分割SAP HANA資料庫複本
+    url: "/protect-hana/task_delete_or_split_sap_hana_database_clones_after_upgrading_snapcenter.html"

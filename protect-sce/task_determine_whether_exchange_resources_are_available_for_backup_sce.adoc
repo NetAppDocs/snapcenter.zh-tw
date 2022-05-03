@@ -1,0 +1,71 @@
+---
+permalink: protect-sce/task_determine_whether_exchange_resources_are_available_for_backup_sce.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 資源是由您安裝的外掛程式所維護的資料庫、Exchange資料庫可用度群組。您可以將這些資源新增至資源群組、以便執行資料保護工作、但必須先找出可用的資源。確定可用資源也會驗證外掛程式安裝是否已成功完成。 
+---
+= 判斷Exchange資源是否可供備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+資源是由您安裝的外掛程式所維護的資料庫、Exchange資料庫可用度群組。您可以將這些資源新增至資源群組、以便執行資料保護工作、但必須先找出可用的資源。確定可用資源也會驗證外掛程式安裝是否已成功完成。
+
+*您需要的是什麼*
+
+* 您必須已經完成安裝SnapCenter 支援服務器、新增主機、建立儲存系統連線、新增認證、以及安裝Exchange外掛程式等工作。
+* 若要善用單一信箱恢復軟體功能、您必須在安裝單一信箱恢復軟體的Exchange Server上找到作用中資料庫。
+* 如果資料庫位於VMware RDM LUN上、您必須部署SnapCenter VMware vSphere的VMware vCenter外掛程式、並使用SnapCenter VMware vCenter登錄外掛程式。。 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["VMware vSphere文件的VMware外掛程式SnapCenter"] 有更多資訊。
+
+
+*關於此工作*
+
+* 當「詳細資料」頁面中的*整體狀態*選項設定為無法備份時、您就無法備份資料庫。當下列任一情況成立時、*整體狀態*選項會設為無法備份：
++
+** 資料庫不在NetApp LUN上。
+** 資料庫並非處於正常狀態。
++
+資料庫處於掛載、卸載、重新分載或還原擱置狀態時、並未處於正常狀態。
+
+
+
+* 如果您有資料庫可用度群組（DAG）、您可以從DAG執行備份工作、來備份群組中的所有資料庫。
+
+
+*步驟*
+
+. 在左導覽窗格中、按一下*資源*、然後從「資源」頁面左上角的外掛程式下拉式清單中選取* Microsoft Exchange Server*。
+. 在「資源」頁面中、從「*檢視*」下拉式清單中選取「*資料庫*」或「*資料庫可用度群組*」或「*資源群組*」。
++
+所有資料庫和DAG都會以FQDN格式顯示其DAG或主機名稱、以便區分多個資料庫。
+
++
+按一下 image:../media/filter_icon.gif[""] 然後選取主機名稱和Exchange Server以篩選資源。然後按一下 image:../media/filter_icon.gif[""] 以關閉篩選窗格。
+
+. 按一下*重新整理資源*。
++
+新新增、重新命名或刪除的資源會更新SnapCenter 至「支援服務器」目錄。
+
++
+
+IMPORTANT: 如果資料庫重新命名為SnapCenter 不屬於支援範圍、您必須重新整理資源。
+
++
+這些資源會連同資源名稱、資料庫可用度群組名稱、資料庫目前使用中的伺服器、複本伺服器、上次備份時間及整體狀態等資訊一起顯示。
+
++
+** 如果資料庫位於非NetApp儲存設備上、「整體狀態」欄中會顯示「不可備份」。
++
+在DAG中、如果主動式資料庫複本位於非NetApp儲存設備上、且至少有一個被動式資料庫複本位於NetApp儲存設備上、則「*整體狀態*」欄中會顯示「未受保護」。
+
++
+您無法在非NetApp儲存類型的資料庫上執行資料保護作業。
+
+** 如果資料庫位於NetApp儲存設備上且未受到保護、則「*整體狀態*」欄中會顯示「未受保護」。
+** 如果資料庫位於NetApp儲存系統上且受到保護、使用者介面會在*整體狀態*欄中顯示「Backup Not RUN」（備份未執行）訊息。
+** 如果資料庫位於NetApp儲存系統上且受到保護、且已觸發資料庫的備份、則使用者介面會在*整體狀態*欄中顯示備份成功訊息。
+
+
+

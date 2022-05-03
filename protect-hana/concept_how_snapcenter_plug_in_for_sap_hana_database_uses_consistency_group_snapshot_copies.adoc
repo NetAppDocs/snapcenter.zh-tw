@@ -1,0 +1,16 @@
+---
+permalink: protect-hana/concept_how_snapcenter_plug_in_for_sap_hana_database_uses_consistency_group_snapshot_copies.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database 
+summary: 您可以使用外掛程式為資源群組建立一致性群組Snapshot複本。一致性群組是一個容器、可容納多個磁碟區、以便您將其管理為單一實體。一致性群組是多個磁碟區的同步Snapshot複本、提供一組磁碟區的一致複本。 
+---
+= SAP HANA資料庫的功能介紹如何使用一致性群組Snapshot複本SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用外掛程式為資源群組建立一致性群組Snapshot複本。一致性群組是一個容器、可容納多個磁碟區、以便您將其管理為單一實體。一致性群組是多個磁碟區的同步Snapshot複本、提供一組磁碟區的一致複本。
+
+您也可以指定儲存控制器一致群組Snapshot複本的等待時間。可用的等待時間選項包括*緊急*、*中*和*休閒*。您也可以在WAFL 一致的群組Snapshot複製作業期間、啟用或停用Write Anywhere File Layout（更新）同步。利用此技術、可提升一致性群組Snapshot複本的效能。WAFL

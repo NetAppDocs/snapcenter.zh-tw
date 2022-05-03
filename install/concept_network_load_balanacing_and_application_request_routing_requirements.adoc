@@ -1,0 +1,19 @@
+---
+permalink: install/concept_network_load_balanacing_and_application_request_routing_requirements.html 
+sidebar: sidebar 
+keywords: NLB, configure 
+summary: 您可以設定Microsoft網路負載平衡（NLB）以設定SnapCenter 「高可用度」。 
+---
+= 手動設定Microsoft網路負載平衡器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定Microsoft網路負載平衡（NLB）以設定SnapCenter 「高可用度」。從功能4.2開始SnapCenter 、您應該在SnapCenter 不安裝於功能表的情況下手動設定NLB、以確保高可用度。
+
+如需如何使用SnapCenter 功能來設定網路負載平衡（NLB）的相關資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_NLB_and_ARR_with_SnapCenter["如何使用SnapCenter 功能進行NLB設定"^]。
+
+
+NOTE: 安裝時支援的網路負載平衡（NLB）組態為支援的版本4.1.1或更早版本。SnapCenter SnapCenter

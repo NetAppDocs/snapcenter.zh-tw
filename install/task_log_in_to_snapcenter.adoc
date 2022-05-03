@@ -1,0 +1,133 @@
+---
+permalink: install/task_log_in_to_snapcenter.html 
+sidebar: sidebar 
+keywords: log in, logging, SnapCenter UI, modify timeout, GUI session timeout, disbale SSL 3.0, SSL 3.0, security 
+summary: 支援角色型存取控制（RBAC）SnapCenter 。透過支援資源的RBAC、將角色和資源指派給工作群組或作用中目錄的使用者、或指派給作用中目錄中的群組。SnapCenter SnapCenterRBAC使用者現在可以SnapCenter 使用指派的角色登入至功能表。 
+---
+= 登入SnapCenter 到
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援角色型存取控制（RBAC）SnapCenter 。透過支援資源的RBAC、將角色和資源指派給工作群組或作用中目錄的使用者、或指派給作用中目錄中的群組。SnapCenter SnapCenterRBAC使用者現在可以SnapCenter 使用指派的角色登入至功能表。
+
+*您需要的是什麼*
+
+* 您應該在Windows Server Manager中啟用Windows處理程序啟動服務（WOS）。
+* 如果您想要使用Internet Explorer作為瀏覽器登入SnapCenter 到該伺服器、您應該確定Internet Explorer中的「保護模式」已停用。
+
+
+*關於此工作*
+
+安裝期間SnapCenter 、「VMware Server安裝精靈」會建立捷徑、並將其放在桌面和SnapCenter 安裝了VMware的主機的「開始」功能表中。此外、在安裝結束時、安裝精靈會根據SnapCenter 您在安裝期間提供的資訊來顯示該URL、如果您想從遠端系統登入、可以複製該URL。
+
+
+IMPORTANT: 如果您在網頁瀏覽器中開啟多個索引標籤、只要關閉SnapCenter 「瀏覽器」索引標籤、就不會將您登出SnapCenter 「支援」。若要結束SnapCenter 與Sendor的連線、您必須SnapCenter 按一下*登出*按鈕、或關閉整個網路瀏覽器來登出Sing。
+
+|===
+
+
+| *最佳實務做法：*基於安全考量、建議您不要讓瀏覽器儲存SnapCenter 您的密碼。 
+|===
+預設的GUI URL是安全連線至SnapCenter 安裝了該伺服器的預設連接埠8146（_\https://server:8146_）。如果您在SnapCenter 安裝過程中提供不同的伺服器連接埠、則會改用該連接埠。
+
+若要部署高可用度（HA）、您必須SnapCenter 使用虛擬叢集IP _\ https://Virtual_Cluster_IP_or_FQDN:8146_來存取功能。如果您在Internet Explorer（IE）中瀏覽至_https://Virtual_Cluster_IP_or_FQDN:8146_時沒有看到SnapCenter 此功能、則必須在每個外掛主機的IE中、將虛擬叢集IP位址或FQDN新增為信任的網站、或是在每個外掛主機上停用IE增強安全功能。如需詳細資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["無法從外部網路存取叢集IP位址"^]。
+
+除了使用SnapCenter 還原GUI、您還可以使用PowerShell Cmdlet建立指令碼來執行組態、備份及還原作業。每SnapCenter 個版本的各個版本可能都有一些Cmdlet變更。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^] 有詳細資料。
+
+
+NOTE: 如果SnapCenter 您是第一次登入到此資訊中心、則必須使用安裝程序中提供的認證登入。
+
+*步驟*
+
+. 從SnapCenter 本機主機桌面上的捷徑、安裝結束時提供的URL、或SnapCenter 從您的管理員提供的URL啟動支援。
+. 輸入使用者認證資料。
++
+|===
+| 若要指定下列項目... | 使用下列其中一種格式... 
+
+
+ a| 
+網域管理員
+ a| 
+** NetBios \使用者名稱
+** 使用者名稱@ UPN尾碼
++
+例如：\username@netapp.com
+
+** 網域FQDN \使用者名稱
+
+
+
+
+ a| 
+本機系統管理員
+ a| 
+使用者名稱
+
+|===
+. 如果您被指派一個以上的角色、請從「角色」方塊中選取您要用於此登入工作階段的角色。
++
+登入後、您目前的使用者和相關角色會顯示在SnapCenter 畫面右上角。
+
+
+
+*結果*
+
+隨即顯示儀表板頁面。
+
+如果記錄失敗並顯示無法連線至站台的錯誤、您應該將SSL憑證對應SnapCenter 至 https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Protection_and_Security%2FSnapCenter%2FSnapCenter_will_not_open_with_error_%2522This_site_can%2527t_be_reached%2522["深入瞭解"^]
+
+*完成後*
+
+初次以SnapCenter RBAC使用者身分登入到支援服務器之後、請重新整理資源清單。
+
+如果您有不受信任的Active Directory網域想SnapCenter 要支援此功能、則必須先以SnapCenter 支援的方式登錄這些網域、然後再為不受信任網域上的使用者設定角色。 link:../install/task_register_untrusted_active_directory_domains.html["深入瞭解"^]
+
+
+
+== 修改SnapCenter 功能不全的GUI工作階段逾時時間
+
+您可以修改SnapCenter 不必要的GUI工作階段逾時期間、使其低於或大於預設的逾時期間20分鐘。
+
+作爲一項安全功能、SnapCenter 當預設的閒置時間為15分鐘後、下列警告將在5分鐘內登出GUI工作階段。根據預設SnapCenter 、若無活動20分鐘、將會從GUI工作階段登出、您必須重新登入。
+
+*步驟*
+
+. 在左導覽窗格中、按一下*設定*>*全域設定*。
+. 在「全域設定」頁面中、按一下*「組態設定」*。
+. 在工作階段逾時欄位中、輸入以分鐘為單位的新工作階段逾時時間、然後按一下*儲存*。
+
+
+
+
+== 停用SSL 3.0來保護SnapCenter Web伺服器的安全
+
+基於安全考量、如果在SnapCenter 您的支援網頁伺服器上啟用安全通訊端層（SSL）3.0傳輸協定、您應該在Microsoft IIS中停用該傳輸協定。
+
+SSL 3.0傳輸協定有漏洞、攻擊者可以用來造成連線失敗、或是執行攔截式攻擊、以及觀察網站與訪客之間的加密流量。
+
+*步驟*
+
+. 若要在SnapCenter SWeb伺服器主機上啟動登錄編輯程式、請按一下*開始*>*執行*、然後輸入regedit.
+. 在「登錄編輯程式」中、瀏覽至「本地機器\系統\控制項\安全性供應商\ SChannel\傳輸協定\ SSL 3.0\」。
++
+** 如果伺服器金鑰已經存在：
++
+... 選取「已啟用」的雙字節、然後按一下「*編輯*>*修改*」。
+... 將值變更為0、然後按一下「*確定*」。
+
+
+** 如果伺服器金鑰不存在：
++
+... 按一下*編輯*>*新增*>*金鑰*、然後命名金鑰伺服器。
+... 選取新的伺服器機碼後、按一下*編輯*>*新增*>*雙字節*。
+... 將新的「啟用的雙字節」命名為「已啟用」、然後輸入0作為值。
+
+
+
+
+. 關閉「登錄編輯程式」。
+
