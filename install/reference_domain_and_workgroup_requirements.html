@@ -1,0 +1,4564 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head class="at-element-marker">
+  <title>網域與工作群組需求</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="網域與工作群組需求" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/zh-tw/snapcenter/install/reference_domain_and_workgroup_requirements.html" />
+	<meta property="og:description" content="可以在網域或工作群組中的系統上安裝此伺服器SnapCenter 。在工作群組和網域的情況下、用於安裝的使用者應該擁有機器的管理權限。" />
+  <meta property="og:image" content="https://docs.netapp.com/zh-tw/snapcenter/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="可以在網域或工作群組中的系統上安裝此伺服器SnapCenter 。在工作群組和網域的情況下、用於安裝的使用者應該擁有機器的管理權限。">
+  <meta name="keywords" content=" active directory domain, workgroups, multi-domain forests, cross-domain, cross-forest domains"><!-- Icons -->
+  <link rel="icon" href="/zh-tw/snapcenter/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/snapcenter/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/zh-tw/snapcenter/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/snapcenter/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/zh-tw/snapcenter/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/zh-tw/snapcenter/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/zh-tw/snapcenter/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/zh-tw/snapcenter/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/zh-tw/snapcenter/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/zh-tw/snapcenter/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/zh-tw/snapcenter/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/snapcenter/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/snapcenter/css/custom-dropdown.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/snapcenter/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/zh-tw/snapcenter/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/zh-tw/snapcenter/css/tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel='stylesheet' href='/zh-tw/snapcenter/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
+    if (document.location.hostname === "docs.netapp.com") {
+      var head = document.getElementsByTagName('head')[0];
+      var onetrustConsent = document.createElement("script");
+      onetrustConsent.type = "text/javascript";
+      onetrustConsent.src = "https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js";
+      head.appendChild(onetrustConsent);
+
+      var onetrustScript = document.createElement("script");
+      onetrustScript.type = "text/javascript";
+      onetrustScript.src = "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js";
+      onetrustScript.charset = "UTF-8";
+      onetrustScript.dataset.documentLanguage = "true";
+      onetrustScript.dataset.domainScript = "72570c5c-fe30-465f-b0e0-b77f7fb4ae34";
+      head.appendChild(onetrustScript);
+    }
+
+    function OptanonWrapper() { }
+
+    if (document.location.hostname === "docs.netapp.com") {
+      var adobe = document.createElement("script");
+      adobe.type = "text/plain";
+      adobe.className = "optanon-category-C0002";
+      adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+      head.appendChild(adobe);
+
+      var google = document.createElement("script");
+      google.type = "text/plain";
+      google.className = "optanon-category-C0002";
+      google.src = "https://www.googletagmanager.com/gtag/js?id=UA-81697994-3";
+      head.appendChild(google);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-81697994-3');
+    }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/zh-tw/snapcenter/js/na-search.js'></script><script src='/zh-tw/snapcenter/js/na-pagenav.js'></script><link rel='stylesheet' href='/zh-tw/snapcenter/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/zh-tw/snapcenter/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/zh-tw/snapcenter/js/na-utility.js'></script>
+  <script src='/zh-tw/snapcenter/js/clouddocs.js'></script>
+  <script src='/zh-tw/snapcenter/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/zh-tw/snapcenter/js/toc.js'></script>
+  <script src='/zh-tw/snapcenter/js/customscripts.js'></script><script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script>
+  <script src='/zh-tw/snapcenter/js/custom-dropdown.js'></script>
+  <script src='/zh-tw/snapcenter/js/FileSaver.min.js'></script>
+  <script src='/zh-tw/snapcenter/js/jszip-utils.min.js'></script>
+  <script src='/zh-tw/snapcenter/js/jszip.min.js'></script>
+  <script src='/zh-tw/snapcenter/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document" data-flavor="">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  
+  <!-- Start Page Toolbar -->
+  
+  <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
+  <div class="custom-dropdown-select unselected" title="軟件SnapCenter 4.6">
+    <label>version</label>
+    <span translate="no" class="notranslate">軟件SnapCenter 4.6</span>
+    <img src="/zh-tw/snapcenter/images/chevron_up.svg" class="custom-icon chevrondown invisible" />
+    <img src="/zh-tw/snapcenter/images/chevron_down.svg" class="custom-icon chevronup" />
+  </div>
+
+  <ul class="custom-dropdown-menu"><li>
+      
+      <a href="https://docs.netapp.com/zh-tw/snapcenter/install/reference_domain_and_workgroup_requirements.html" target="_self">
+        <span translate="no" class="notranslate"><span>軟件SnapCenter</span><span class="version"> 4.6</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/zh-tw/snapcenter-45/install/reference_domain_and_workgroup_requirements.html" target="_self">
+        <span translate="no" class="notranslate"><span>軟件SnapCenter</span><span class="version"> 4.5</span></span>
+      </a>
+                     
+    </li>
+    
+  </ul>
+</div><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/snapcenter/issues/new?body=Page%3A%20[網域與工作群組需求](https://docs.netapp.com/zh-tw/snapcenter/install/reference_domain_and_workgroup_requirements.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/snapcenter/images/discuss-sm.svg" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/snapcenter/blob/main/install/reference_domain_and_workgroup_requirements.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/snapcenter/images/edit-sm.svg" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/snapcenter/images/article-sm.svg" class="github-icon" />瞭解如何作出貢獻</a></div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">在此頁面上</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">產品與解決方案</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">支援與訓練</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">社群</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">部落格</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">客戶成功案例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">聯絡人</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">聯絡人</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/zh-tw/snapcenter/search.html"
+          data-type="widget" 
+          data-placeholder="搜尋文件" 
+          data-no-results-found="找不到符合 {query} 的相關結果。" 
+          data-did-you-mean="搜尋 {suggestion}。" 
+          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？" 
+          data-results-found="找到 {hitCount} 筆結果"  
+          data-sk-es-pf-indexes=""
+          data-flavor=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">繁體中文</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/snapcenter/install/reference_domain_and_workgroup_requirements.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/snapcenter/install/reference_domain_and_workgroup_requirements.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ko-kr/snapcenter/install/reference_domain_and_workgroup_requirements.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/snapcenter/install/reference_domain_and_workgroup_requirements.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-tw/snapcenter/install/reference_domain_and_workgroup_requirements.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" id="sidebar-height">
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>可用的 PDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        
+        
+        
+        <a target="_blank" href="/zh-tw/snapcenter/pdfs/fullsite-sidebar/軟件文檔SnapCenter.pdf" >
+          <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>此文件網站（PDF 格式）</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/概念.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            概念
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/以角色為基礎的存取控制_RBAC_SnapCenter.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            以角色為基礎的存取控制（RBAC）SnapCenter
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/安裝伺服器SnapCenter.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            安裝伺服器SnapCenter
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/準備安裝SnapCenter_完此伺服器.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            準備安裝SnapCenter 完此伺服器
+          </a>
+          
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/zh-tw/snapcenter/pdfs/pages/install/reference_domain_and_workgroup_requirements.pdf" >
+    <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/設定CA憑證.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            設定CA憑證
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/設定Active_Directory_LDAP和LDAPS.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            設定Active Directory、LDAP和LDAPS
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/設定高可用度.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            設定高可用度
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/設定角色型存取控制_RBAC_.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            設定角色型存取控制（RBAC）
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/配置您的儲存系統.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            配置您的儲存系統
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/在Windows主機上配置儲存設備.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            在Windows主機上配置儲存設備
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/保護Microsoft_SQL_Server資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            保護Microsoft SQL Server資料庫
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/適用於Microsoft_SQL_Server的支援外掛程式SnapCenter.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            適用於Microsoft SQL Server的支援外掛程式SnapCenter
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/SQL_Server資源的備份策略.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            SQL Server資源的備份策略
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/SQL_Server的還原策略.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            SQL Server的還原策略
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/準備安裝SnapCenter_適用於Microsoft_SQL_Server的支援功能.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            準備安裝SnapCenter 適用於Microsoft SQL Server的支援功能
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/安裝SnapCenter_適用於Microsoft_SQL_Server的功能性外掛程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            安裝SnapCenter 適用於Microsoft SQL Server的功能性外掛程式
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/設定CA憑證.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            設定CA憑證
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/設定災難恢復.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            設定災難恢復
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/將歸檔的備份從SnapManager_Microsoft_SQL_Server的支援功能匯入SnapCenter_到支援功能.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            將歸檔的備份從SnapManager Microsoft SQL Server的支援功能匯入SnapCenter 到支援功能
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/準備資料保護.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            準備資料保護
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/備份SQL_Server資料庫_執行個體或可用度群組.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            備份SQL Server資料庫、執行個體或可用度群組
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/監控備份作業.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            監控備份作業
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/還原SQL_Server資源.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            還原SQL Server資源
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/複製SQL_Server資料庫資源.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            複製SQL Server資料庫資源
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/保護SAP_HANA資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            保護SAP HANA資料庫
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/SAP_HANA資料庫適用的SAP外掛程式SnapCenter.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            SAP HANA資料庫適用的SAP外掛程式SnapCenter
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/SAP_HANA資料庫的備份策略.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            SAP HANA資料庫的備份策略
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/SAP_HANA資料庫的還原與還原策略.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            SAP HANA資料庫的還原與還原策略
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/準備安裝SnapCenter_適用於SAP_HANA資料庫的NetApp外掛程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            準備安裝SnapCenter 適用於SAP HANA資料庫的NetApp外掛程式
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/安裝SnapCenter_適用於SAP_HANA資料庫的功能.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            安裝SnapCenter 適用於SAP HANA資料庫的功能
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/設定CA憑證.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            設定CA憑證
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/準備資料保護.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            準備資料保護
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/備份SAP_HANA資源.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            備份SAP HANA資源
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/探索資源並準備多租戶資料庫容器以進行資料保護.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            探索資源並準備多租戶資料庫容器以進行資料保護
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/監控備份作業.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            監控備份作業
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/還原SAP_HANA資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            還原SAP HANA資料庫
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/複製SAP_HANA資源備份.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            複製SAP HANA資源備份
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/保護Oracle資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            保護Oracle資料庫
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/Oracle資料庫的支援功能概述SnapCenter.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            Oracle資料庫的支援功能概述SnapCenter
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/安裝SnapCenter_適用於Oracle資料庫的功能外掛程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            安裝SnapCenter 適用於Oracle資料庫的功能外掛程式
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/備份Oracle資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            備份Oracle資料庫
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/還原及還原Oracle資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            還原及還原Oracle資料庫
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/複製Oracle資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            複製Oracle資料庫
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/管理應用程式磁碟區.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            管理應用程式磁碟區
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/備份應用程式磁碟區.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            備份應用程式磁碟區
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/保護Windows檔案系統.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            保護Windows檔案系統
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/適用於Microsoft_Windows概念的元件外掛程式SnapCenter.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            適用於Microsoft Windows概念的元件外掛程式SnapCenter
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/安裝SnapCenter_適用於Microsoft_Windows的功能性外掛程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            安裝SnapCenter 適用於Microsoft Windows的功能性外掛程式
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/設定CA憑證.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            設定CA憑證
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/備份Windows檔案系統.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            備份Windows檔案系統
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/還原Windows檔案系統.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            還原Windows檔案系統
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/複製Windows檔案系統.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            複製Windows檔案系統
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/保護Microsoft_Exchange_Server資料庫.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            保護Microsoft Exchange Server資料庫
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/適用於Microsoft_Exchange_Server概念的元件外掛程式SnapCenter.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            適用於Microsoft Exchange Server概念的元件外掛程式SnapCenter
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/安裝SnapCenter_適用於Microsoft_Exchange_Server的功能外掛程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            安裝SnapCenter 適用於Microsoft Exchange Server的功能外掛程式
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/設定CA憑證.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            設定CA憑證
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/備份Exchange資源.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            備份Exchange資源
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/還原Exchange資源.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            還原Exchange資源
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/保護自訂應用程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            保護自訂應用程式
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/不適用的自訂外掛程式SnapCenter.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            不適用的自訂外掛程式SnapCenter
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/自訂外掛程式的備份策略.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            自訂外掛程式的備份策略
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/為應用程式開發外掛程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            為應用程式開發外掛程式
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/準備安裝SnapCenter__精選_外掛程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            準備安裝SnapCenter 「精選」外掛程式
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/安裝SnapCenter__不一樣的自訂外掛程式_.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            安裝SnapCenter 「不一樣的自訂外掛程式」
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/設定CA憑證.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            設定CA憑證
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/準備資料保護.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            準備資料保護
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/備份自訂外掛程式資源.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            備份自訂外掛程式資源
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/還原自訂外掛程式資源.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            還原自訂外掛程式資源
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/複製自訂外掛程式資源備份.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            複製自訂外掛程式資源備份
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/管理SnapCenter_伺服器和外掛程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            管理SnapCenter 伺服器和外掛程式
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/檢視儀表板.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            檢視儀表板
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/升級SnapCenter_伺服器和外掛程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            升級SnapCenter 伺服器和外掛程式
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/解除安裝SnapCenter_伺服器和外掛程式.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            解除安裝SnapCenter 伺服器和外掛程式
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/解除安裝SnapCenter_這個外掛程式套件.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            解除安裝SnapCenter 這個外掛程式套件
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/使用REST_API自動化.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            使用REST API自動化
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" 
+            
+              href="/zh-tw/snapcenter/pdfs/sidebar/支援的REST_API.pdf" 
+            
+          >
+            <img src="/zh-tw/snapcenter/images/pdf.png" width="16" height="16"/>
+            支援的REST API
+          </a>
+          
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/zh-tw/snapcenter/images/pdf-zip.png" width="16" height="16"/>
+      <pre>個別 PDF 文件的集合<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/index.html">
+        Software 4.6文件SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/release-notes.html">
+        版本資訊
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 概念</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/concept/concept_snapcenter_overview.html">
+        概述SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/concept/reference_data_security.html">
+        安全功能
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 以角色為基礎的存取控制（RBAC）SnapCenter</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html">
+        RBAC類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/concept/reference_role_based_access_control_permissions_and_roles.html">
+        RBAC權限和角色
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/concept/reference_pre_defined_snapcenter_roles_and_permissions.html">
+        預先定義SnapCenter 的功能和權限
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-concept/concept_disaster_recovery.html">
+        災難恢復
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/concept/concept_resources_resource_groups_and_policies.html">
+        資源、資源群組和原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/concept/concept_prescripts_and_postscripts.html">
+        簡報與指令碼
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/concept/concept_snapcenter_rest_apis.html">
+        使用REST API進行自動化SnapCenter
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 安裝伺服器SnapCenter</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/install_workflow.html">
+        安裝工作流程
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 準備安裝SnapCenter 完此伺服器</div>
+      </a>
+      <ul><li class="  active "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/reference_domain_and_workgroup_requirements.html">
+        網域與工作群組需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/reference_space_and_sizing_requirements.html">
+        空間與規模需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/reference_san_host_requirements.html">
+        SAN主機需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/reference_supported_storage_systems_and_applications.html">
+        支援的儲存系統與應用程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/reference_supported_browsers.html">
+        支援的瀏覽器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/reference_connection_and_port_requirements.html">
+        連線與連接埠需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/concept_snapcenter_licenses.html">
+        不需要授權SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/concept_authentication_methods_for_your_credentials.html">
+        認證方法
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/concept_svm_connections_and_credentials.html">
+        儲存虛擬機器連線與認證
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html">
+        安裝SnapCenter 此伺服器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_log_in_to_snapcenter.html">
+        登入SnapCenter 到
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 設定CA憑證</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/reference_generate_CA_certificate_CSR_file.html">
+        產生CA認證CSR檔案
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_import_CA_certificates.html">
+        匯入CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_get_the_CA_certificate_thumbprint.html">
+        取得CA憑證指紋
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_configure_CA_certificate_with_Windows_host_plug-in_services.html">
+        使用Windows主機外掛程式服務設定CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_configure_CA_certificate_with_snapcenter_site.html">
+        使用SnapCenter 站台設定CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_enable_ca_certificates_for_snapcenter.html">
+        啟用SnapCenter 適用於伺服器的CA憑證
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 設定Active Directory、LDAP和LDAPS</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_register_untrusted_active_directory_domains.html">
+        登錄不受信任的Active Directory網域
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_configure_CA_client_certificate_for_LDAPS.html">
+        設定LDAPS的CA用戶端憑證
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 設定高可用度</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html">
+        使用SnapCenter F5設定高可用度的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/concept_network_load_balanacing_and_application_request_routing_requirements.html">
+        手動設定Microsoft網路負載平衡器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_switch_from_nlb_to_f5_for_high_availability.html">
+        從NLB切換至F5以獲得高可用度
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/concept_high_availability_for_snapcenter_mysql_repository.html">
+        高可用度：SnapCenter 適用於MySQL的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_export_snapcenter_certificates.html">
+        匯出SnapCenter 功能證書
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 設定角色型存取控制（RBAC）</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_add_a_user_or_group_and_assign_role_and_assets.html">
+        新增使用者或群組、並指派角色和資產
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_create_a_role.html">
+        建立角色
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_add_an_rbac_role_using_security_login_commands.html">
+        使用ONTAP 安全登入命令新增一個RBAC角色
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/create-svm-roles-minimum-privileges.html">
+        以最低權限建立SVM角色
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html">
+        以ONTAP 最低權限建立叢集角色
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html">
+        設定「IIS應用程式集區」以啟用Active Directory讀取權限
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_add_storage_systems.html">
+        新增儲存系統
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/concept_snapcenter_standard_controller_based_licenses.html">
+        新增SnapCenter 以控制器為基礎的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/concept_snapcenter_standard_capacity_based_licenses.html">
+        新增SnapCenter 以功能為基礎的「功能型標準」授權
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 配置您的儲存系統</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 在Windows主機上配置儲存設備</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/concept_configure_lun_storage.html">
+        設定LUN儲存設備
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/concept_create_and_manage_igroups.html">
+        建立及管理igroup
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_create_and_manage_disks.html">
+        建立及管理磁碟
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/concept_create_and_manage_smb_shares.html">
+        建立及管理SMB共用區
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/task_reclaim_space_on_the_storage_system.html">
+        回收儲存系統上的空間
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/reference_provision_storage_using_powershell_cmdlets.html">
+        使用PowerShell Cmdlet來配置儲存設備
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/concept_provision_storage_in_vmware_environments.html">
+        在VMware環境中配置儲存設備
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html">
+        使用SnapCenter 伺服器設定安全的MySQL連線
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/install/reference_features_enabled_on_your_windows_host_during_installation.html">
+        安裝期間在Windows主機上啟用的功能
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 保護Microsoft SQL Server資料庫</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 適用於Microsoft SQL Server的支援外掛程式SnapCenter</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_overview.html">
+        適用於Microsoft SQL Server的解決方案外掛程式總覽SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_sql_server.html">
+        您可以使用SnapCenter 適用於Microsoft SQL Server的支援功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_features.html">
+        適用於Microsoft SQL Server功能的支援外掛程式SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_support_for_asymmetric_lun_mapping_alm_in_windows_clusters.html">
+        支援Windows叢集中的非對稱LUN對應
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/reference_storage_types_supported_by_snapcenter_plug_ins_for_microsoft_windows_and_for_microsoft_sql_server.html">
+        適用於Microsoft Windows和Microsoft SQL Server的解決方案SnapCenter 支援的儲存類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/reference_storage_layout_recommendations_for_snapcenter_plug_in_for_microsoft_sql_server.html">
+        針對Microsoft SQL Server的解決方案、提供儲存配置建議SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/reference_minimum_ontap_privileges_required_for_sql_plug_in.html">
+        SQL外掛程式所需的ONTAP 最低支援權限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_sql.html">
+        準備儲存系統以進行SnapMirror和SnapVault 資訊複寫
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SQL Server資源的備份策略</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_define_a_backup_strategy_for_sql_server_resources.html">
+        定義SQL Server資源的備份策略
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_type_of_backups_supported.html">
+        支援的備份類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_backup_schedules_for_plugin_for_sql.html">
+        資料庫外掛程式的備份排程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_number_of_backup_jobs_needed_for_databases.html">
+        資料庫所需的備份工作數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_backup_naming_conventions_for_plugin_for_sql.html">
+        備份命名慣例
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_backup_retention_options_for_plugin_for_sql.html">
+        備份保留選項
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_how_long_to_retain_transaction_log_backups_on_the_source_storage_system.html">
+        在來源儲存系統上保留交易記錄備份的時間
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_multiple_databases_on_the_same_volume.html">
+        相同磁碟區上有多個資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_backup_copy_verification_using_the_primary_or_secondary_storage_volume_for_plugin_for_sql.html">
+        使用主要或次要儲存磁碟區進行備份複本驗證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_when_to_schedule_verification_jobs.html">
+        何時排程驗證工作
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SQL Server的還原策略</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_define_a_restoration_strategy_for_sql_server.html">
+        定義SQL Server的還原策略
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/reference_sources_and_destinations_for_a_restore_operation.html">
+        還原作業的來源和目的地
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_sql_server_recovery_models_snapcenter_plug_in_for_microsoft_sql_server.html">
+        支援的SQL Server恢復模式SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/reference_types_of_restore_operations.html">
+        還原作業類型
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_define_a_clone_strategy_for_sql_server.html">
+        定義SQL Server的複製策略
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html">
+        快速安裝SnapCenter 適用於Microsoft SQL Server的解決方案外掛程式
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 準備安裝SnapCenter 適用於Microsoft SQL Server的支援功能</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_install_snapcenter_plug_in_for_microsoft_sql_server_database.html">
+        適用於Microsoft SQL Server的安裝工作流程SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_microsoft_sql_server.html">
+        新增主機和安裝SnapCenter Microsoft SQL Server的支援功能外掛程式的先決條件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_sql.html">
+        安裝SnapCenter 適用於Windows的功能性外掛程式套件的主機需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_set_up_credentials_for_snapcenter_plug_ins_package_for_windows.html">
+        設定SnapCenter 適用於Windows的效能不整套件認證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_configure_credentials_for_an_individual_sql_server_resource.html">
+        設定個別SQL Server資源的認證資料
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_configure_gMSA_on_windows_server_2012_or_later.html">
+        在Windows Server 2012或更新版本上設定GMSA
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 安裝SnapCenter 適用於Microsoft SQL Server的功能性外掛程式</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_add_hosts_and_install_snapcenter_plug_ins_package_for_windows.html">
+        新增主機並安裝SnapCenter 適用於Windows的Sfor Plug-ins套件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_install_snapcenter_plug_in_package_for_windows_server_on_multiple_remote_hosts_using_cmdlets_scsql.html">
+        使用Cmdlet在SnapCenter 多個遠端主機上安裝適用於Microsoft SQL Server的支援功能外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_install_the_snapcenter_plug_in_for_sql_server_silently.html">
+        從命令列以無訊息方式安裝SnapCenter 適用於Microsoft SQL Server的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_monitor_the_status_of_installing_plugin_for_sql.html">
+        監控安裝SQL Server外掛程式的狀態
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 設定CA憑證</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/reference_generate_CA_certificate_CSR_file.html">
+        產生CA認證CSR檔案
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_import_CA_certificates.html">
+        匯入CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_get_the_CA_certificate_thumbprint.html">
+        取得CA憑證指紋
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_configure_CA_certificate_with_Windows_host_plug-in_services.html">
+        使用Windows主機外掛程式服務設定CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_enable_ca_certificates_for_plug-ins.html">
+        啟用外掛程式的CA憑證
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 設定災難恢復</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_disaster_recovery_scsql.html">
+        SQL Server適用的支援功能SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_storage_disaster_recovery_for_scsql.html">
+        適用於SQL Server的儲存災難恢復SnapCenter 功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_failback_from_scsql_secondary_storage_to_primary_storage.html">
+        從SnapCenter SQL Server二線儲存設備的支援程式容錯回復到一線儲存設備
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 將歸檔的備份從SnapManager Microsoft SQL Server的支援功能匯入SnapCenter 到支援功能</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html">
+        匯入歸檔備份總覽
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_limitations_related_to_the_import_feature.html">
+        與匯入功能相關的限制
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_import_archived_backups.html">
+        匯入歸檔備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_view_the_imported_backups_in_snapcenter_server.html">
+        在SnapCenter 還原伺服器中檢視匯入的備份
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_install_snapcenter_plug_in_for_vmware_vsphere.html">
+        安裝SnapCenter VMware vSphere的VMware vCenter外掛程式
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 準備資料保護</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_prerequisites_for_using_snapcenter_plug_in_for_microsoft_sql_server.html">
+        使用SnapCenter Microsoft SQL Server的功能的先決條件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_sql_server.html">
+        如何使用資源、資源群組和原則來保護SQL Server
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 備份SQL Server資料庫、執行個體或可用度群組</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/reference_back_up_sql_server_database_or_instance_or_availability_group.html">
+        備份工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_determine_whether_resources_are_available_for_backup.html">
+        判斷資源是否可供備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_migrate_resources_to_netapp_storage.html">
+        將資源移轉至NetApp儲存系統
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_create_backup_policies_for_sql_server_databases.html">
+        建立SQL Server資料庫的備份原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_create_resource_groups_and_attach_policies_for_sql_server.html">
+        建立SQL Server的資源群組和附加原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_requirements_for_backing_up_sql_resources.html">
+        備份SQL資源的需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_back_up_sql_resources.html">
+        備份SQL資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_back_up_sql_server_resource_groups.html">
+        備份SQL Server資源群組
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 監控備份作業</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_monitor_sql_resources_backup_operations.html">
+        監控SnapCenter 「不支援作業」頁面中的備份作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_monitor_dataprotection_operations_on_sql_resources_in_the_activity_pane.html">
+        監控「活動」窗格中的作業
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_sql.html">
+        使用PowerShell Cmdlet建立儲存系統連線和認證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_back_up_resources_using_powershell_cmdlets_for_sql.html">
+        使用PowerShell Cmdlet備份資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html">
+        取消SnapCenter Microsoft SQL Server備份作業的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html">
+        在「拓撲」頁面中檢視SQL Server備份與複製
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_remove_backups_using_powershell_cmdlets_for_sql.html">
+        使用PowerShell Cmdlet移除備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_sql.html">
+        使用PowerShell Cmdlet清除次要備份數
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 還原SQL Server資源</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/reference_restore_sql_server_resources.html">
+        還原工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/concept_requirements_for_restoring_a_database.html">
+        還原資料庫的需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_restore_sql_server_database_backups.html">
+        還原SQL Server資料庫備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html">
+        從次要儲存設備還原SQL Server資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_reseed_availability_group_databases.html">
+        重新建立可用度群組資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html">
+        使用PowerShell Cmdlet還原及還原資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_monitor_sql_resources_restore_operations.html">
+        監控還原作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_cancel_sql_resources_restore_operations.html">
+        取消還原作業
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 複製SQL Server資料庫資源</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/reference_clone_sql_server_database_resources.html">
+        複製工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_clone_from_a_sql_server_database_backup.html">
+        從SQL Server資料庫備份複製
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html">
+        使用PowerShell Cmdlet複製備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_perform_clone_lifecycle_management.html">
+        執行Clone生命週期
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_monitor_sql_database_clone_operations.html">
+        監控SnapCenter 實體複製作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_cancel_sql_resource_clone_operations.html">
+        取消複製作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scsql/task_split_a_clone_for_sql.html">
+        分割實體複本
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 保護SAP HANA資料庫</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SAP HANA資料庫適用的SAP外掛程式SnapCenter</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_overview.html">
+        SAP HANA資料庫適用的外掛程式總覽SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/concept_what_you_can_do_using_the_snapcenter_plug_in_for_sap_hana_database.html">
+        使用SAP HANA資料庫的《不穩定》外掛程式可以做什麼SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/concept_snapcenter_plug_in_for_sap_hana_database_features.html">
+        SAP HANA資料庫功能的選用外掛程式SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/reference_storage_types_supported_by_snapcenter_plug_in_for_sap_hana_database.html">
+        SAP HANA資料庫的支援儲存類型SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/concept_minimum_privileges_required_for_sap_hana_and_exchange_plug_in.html">
+        需要最低ONTAP 的權限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_hana.html">
+        準備儲存系統以進行SnapMirror和SnapVault 資訊複寫
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SAP HANA資料庫的備份策略</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_define_a_backup_strategy_for_sap_hana_databases.html">
+        定義SAP HANA資料庫的備份策略
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/concept_auto_discovery_of_resources_on_linux_host.html">
+        自動探索Linux主機上的資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/concept_type_of_backups_supported.html">
+        支援的備份類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/concept_how_snapcenter_plug_in_for_sap_hana_database_uses_consistency_group_snapshot_copies.html">
+        SAP HANA資料庫的功能介紹如何使用一致性群組Snapshot複本SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/concept_housekeeping_of_log_backups.html">
+        如何管理記錄與資料備份的內部管理SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/reference_considerations_for_determining_backup_schedules_for_sap_hana_database.html">
+        決定SAP HANA資料庫備份排程的考量事項
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/concept_number_of_backup_jobs_needed_for_sap_hana_databases.html">
+        SAP HANA資料庫所需的備份工作數量
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/concept_backup_naming_conventions_for_plugin_for_hana.html">
+        備份命名慣例
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SAP HANA資料庫的還原與還原策略</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_define_a_restore_and_recovery_strategy_for_sap_hana_resources.html">
+        定義SAP HANA資源的還原與還原策略
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/reference_types_of_restore_strategies_supported_for_manually_added_sap_hana_resources.html">
+        手動新增SAP HANA資源所支援的還原策略類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/reference_types_of_restore_strategies_supported_for_auto_discovered_sap_hana_databases.html">
+        自動探索的SAP HANA資料庫所支援的還原策略類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/reference_types_of_restore_performed_for_auto_discovered_sap_hana_databases.html">
+        自動探索SAP HANA資料庫的還原作業類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/reference_types_of_recovery_operations_supported_for_sap_hana_database.html">
+        SAP HANA資料庫支援的恢復作業類型
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 準備安裝SnapCenter 適用於SAP HANA資料庫的NetApp外掛程式</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_install_snapcenter_plug_in_for_sap_hana_database.html">
+        SAP HANA資料庫適用的安裝流程SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_plug_in_for_sap_hana_database.html">
+        新增主機及安裝SnapCenter 適用於SAP HANA資料庫的功能性外掛程式的先決條件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_hana.html">
+        安裝SnapCenter 適用於Windows的功能性外掛程式套件的主機需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_linux.html">
+        安裝SnapCenter 適用於Linux的支援功能外掛套件的主機需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_set_up_credentials_for_snapcenter_plug_in_for_sap_hana_database.html">
+        設定SnapCenter SAP HANA資料庫的效能分析外掛程式認證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html">
+        在Windows Server 2012或更新版本上設定GMSA
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 安裝SnapCenter 適用於SAP HANA資料庫的功能</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html">
+        新增主機並在遠端主機上安裝外掛程式套件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_sap_hana.html">
+        使用Cmdlet在SnapCenter 多個遠端主機上安裝適用於Linux或Windows的支援功能外掛套件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_install_the_snapcenter_plug_in_for_sap_hana_database_on_linux_hosts_using_the_command_line_interface.html">
+        使用命令列介面、在SnapCenter Linux主機上安裝適用於SAP HANA資料庫的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_monitor_the_status_of_installing_plugin_for_sap_hana.html">
+        監控SnapCenter 程式套件安裝狀態
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 設定CA憑證</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/reference_generate_CA_certificate_CSR_file.html">
+        產生CA認證CSR檔案
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_import_CA_certificates.html">
+        匯入CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_get_the_CA_certificate_thumbprint.html">
+        取得CA憑證指紋
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_configure_CA_certificate_with_Windows_host_plug-in_services.html">
+        使用Windows主機外掛程式服務設定CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_configure_CA_certificate_for_saphana_on_Linux_host.html">
+        在SnapCenter Linux主機上設定適用於SAP HANA外掛程式服務的CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_configure_CA_certificate_for_saphana_on_windows_host.html">
+        在SnapCenter Windows主機上設定「CA憑證」以執行「SAP HANA外掛程式」服務
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_enable_ca_certificates_for_plug-ins.html">
+        啟用外掛程式的CA憑證
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_install_snapcenter_plug_in_for_vmware_vsphere.html">
+        安裝SnapCenter VMware vSphere的VMware vCenter外掛程式
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 準備資料保護</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/reference_prerequisites_for_using_snapcenter_plug_in_for_sap_hana_database.html">
+        SAP SnapCenter HANA資料庫使用此功能的先決條件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_sap_hana_databases.html">
+        如何使用資源、資源群組和原則來保護SAP HANA資料庫
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 備份SAP HANA資源</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_back_up_sap_hana_resources.html">
+        備份工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html">
+        針對SAP HANA資料庫設定HDB使用者儲存金鑰和HDBSQL OS使用者
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 探索資源並準備多租戶資料庫容器以進行資料保護</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_discover_the_databases_automatically.html">
+        自動探索資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_prepare_multitenant_database_containers_for_data_protection.html">
+        準備多租戶資料庫容器以進行資料保護
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_add_resources_manually_to_the_plug_in_host.html">
+        將資源手動新增至外掛程式主機
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_create_backup_policies_for_sap_hana_databases.html">
+        為SAP HANA資料庫建立備份原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_create_resource_groups_and_attach_policies.html">
+        建立資源群組並附加原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_back_up_sap_hana_databases.html">
+        備份SAP HANA資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_back_up_resource_groups_sap_hana.html">
+        備份資源群組
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html">
+        使用適用於SAP HANA資料庫的PowerShell Cmdlet建立儲存系統連線和認證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_back_up_databases_using_powershell_cmdlets_sap_hana.html">
+        使用PowerShell Cmdlet備份資料庫
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 監控備份作業</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_monitor_hana_databases_backup_operations.html">
+        監控SnapCenter 「不支援作業」頁面中的備份作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_monitor_dataprotection_operations_on_hana_databases_in_the_activity_pane.html">
+        監控「活動」窗格中的作業
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_cancel_backup_operations_for_sap_hana.html">
+        取消備份作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html">
+        在「拓撲」頁面中檢視SAP HANA資料庫備份與複製
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 還原SAP HANA資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_restore_sap_hana_databases.html">
+        還原工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_restore_and_recover_a_manually_added_resource_backup.html">
+        還原及還原手動新增的資源備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_restore_and_recover_an_auto_discovered_database_backup.html">
+        還原及還原自動探索的資料庫備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_restore_sap_hana_database_using_powershell_cmdlets.html">
+        使用PowerShell Cmdlet還原SAP HANA資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_restore_and_recover_resources_using_powershell_cmdlets_hana.html">
+        使用PowerShell Cmdlet還原資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_monitor_hana_databases_restore_operations.html">
+        監控還原作業
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 複製SAP HANA資源備份</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_clone_sap_hana_resource_backups.html">
+        複製工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_clone_a_sap_hana_database_backup.html">
+        複製SAP HANA資料庫備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_clone_sap_hana_database_backups_using_powershell_cmdlets.html">
+        使用PowerShell Cmdlet複製SAP HANA資料庫備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_monitor_hana_database_clone_operations.html">
+        監控SnapCenter 實體複製作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_split_a_clone_for_hana.html">
+        分割實體複本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-hana/task_delete_or_split_sap_hana_database_clones_after_upgrading_snapcenter.html">
+        升級SnapCenter 完功能後刪除或分割SAP HANA資料庫複本
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 保護Oracle資料庫</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Oracle資料庫的支援功能概述SnapCenter</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/concept_what_you_can_do_with_the_snapcenter_plug_in_for_oracle_database.html">
+        如何使用Oracle資料庫的外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/concept_snapcenter_plug_in_for_oracle_database_features.html">
+        Oracle外掛程式的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/reference_storage_types_supported_by_snapcenter_plug_in_for_oracle_database.html">
+        Oracle資料庫外掛程式支援的儲存類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_oracle.html">
+        準備儲存系統以進行SnapMirror和SnapVault Oracle外掛程式的等化複寫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/reference_minimum_ontap_privileges_required_for_oracle_plug_in.html">
+        Oracle外掛程式所需的ONTAP 最低支援權限
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 安裝SnapCenter 適用於Oracle資料庫的功能外掛程式</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/install-snapcenter-plug-in-for-oracle-workflow.html">
+        Oracle資料庫適用的安裝流程SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux_or_aix.html">
+        新增主機及安裝適用於Linux或AIX的外掛程式套件的必要條件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html">
+        新增主機並安裝適用於Linux或AIX的外掛程式套件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/alternate-ways-install-plug-in-linux-aix.html">
+        安裝適用於Linux或AIX的外掛程式套件的其他方法
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html">
+        設定SnapCenter 「靜態外掛程式載入器」服務
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_configure_CA_certificate_with_SPL_on_Linux_host.html">
+        在SnapCenter Linux主機上使用支援功能的「支援程式載入器」服務來設定CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_enable_ca_certificates_for_plug-ins.html">
+        啟用外掛程式的CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/concept_import_data_from_snapmanager_for_oracle_and_snapmanager_for_sap_to_snapcenter.html">
+        從SnapManager Oracle的支援中心和SnapManager SAP的支援中心將資料匯入SnapCenter 到支援中心
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/concept_install_snapcenter_plug_in_for_vmware_vsphere.html">
+        安裝SnapCenter VMware vSphere的VMware vCenter外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/concept_prepare_for_protecting_oracle_databases.html">
+        準備保護Oracle資料庫
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 備份Oracle資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/backup-workflow.html">
+        備份工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html">
+        定義Oracle資料庫的備份策略
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/predefined-environment-variables-prescript-postscript-backup.html">
+        預先定義的環境變數、用於備份特定的pretced和postscript
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html">
+        確定Oracle資料庫是否可供備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_create_backup_policies_for_oracle_database.html">
+        為Oracle資料庫建立備份原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html">
+        建立Oracle資料庫的資源群組及附加原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/reference_requirements_for_backing_up_an_oracle_database.html">
+        備份Oracle資料庫的需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_back_up_oracle_resources.html">
+        備份Oracle資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_back_up_oracle_database_resource_groups.html">
+        備份Oracle資料庫資源群組
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_back_up_oracle_databases_using_unix_commands.html">
+        使用UNIX命令備份Oracle資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_monitor_oracle_database_backup_operations.html">
+        監控Oracle資料庫備份作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_cancel_the_snapcenter_plug_in_for_oracle_database_backup_operations.html">
+        取消Oracle資料庫的備份作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html">
+        在「拓撲」頁面中檢視Oracle資料庫備份與複製
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_mount_and_unmount_databases_backups.html">
+        掛載及卸載資料庫備份
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 還原及還原Oracle資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/restore-workflow.html">
+        還原工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_define_a_restore_and_recovery_strategy_for_oracle_databases.html">
+        定義Oracle資料庫的還原與還原策略
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/predefined-environment-variables-prescript-postscript-restore.html">
+        預先定義的環境變數、用於還原特定的pretced和postscript
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/reference_requirements_for_restoring_an_oracle_database.html">
+        還原Oracle資料庫的需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_restore_an_oracle_database.html">
+        還原及還原Oracle資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_restore_and_recovere_tablespaces_using_point_in_time_recovery.html">
+        使用時間點還原來還原及還原資料表空間
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_restore_and_recover_pluggable_database_using_point_in_time_recovery.html">
+        使用時間點還原來還原及還原可插拔的資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_restore_and_recover_oracle_databases_using_unix_commands.html">
+        使用UNIX命令還原及還原Oracle資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_monitor_oracle_database_restore_operations.html">
+        監控Oracle資料庫還原作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_cancel_oracle_database_restore_operations.html">
+        取消Oracle資料庫還原作業
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 複製Oracle資料庫</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/clone-workflow.html">
+        複製工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_define_a_clone_strategy_for_oracle_databases.html">
+        定義Oracle資料庫的複製策略
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/predefined-environment-variables-prescript-postscript-clone.html">
+        針對特定實體複本的預先定義環境變數、以及PostScript
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/reference_requirements_for_cloning_an_oracle_database.html">
+        複製Oracle資料庫的需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_clone_an_oracle_database_backup.html">
+        複製Oracle資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_clone_a_pluggable_database.html">
+        複製可插拔的資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_clone_oracle_database_backups_using_unix_commands.html">
+        使用UNIX命令複製Oracle資料庫備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_split_an_oracle_database_clone.html">
+        分割Oracle資料庫複製
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_split_clone_of_a_pluggable_database.html">
+        分割可插拔資料庫的實體複本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_monitor_oracle_database_clone_operations.html">
+        監控Oracle資料庫複製作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_refresh_a_clone.html">
+        重新整理實體複本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/task_delete_clone_of_a_pluggable_database.html">
+        刪除可插拔資料庫的實體複本
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 管理應用程式磁碟區</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/add-application-volume.html">
+        新增應用程式磁碟區
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 備份應用程式磁碟區</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/backup-application-volume.html">
+        備份應用程式Volume
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/backup-application-volume-resource-group.html">
+        備份應用程式磁碟區資源群組
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sco/clone-application-volume.html">
+        複製應用程式Volume備份
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 保護Windows檔案系統</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 適用於Microsoft Windows概念的元件外掛程式SnapCenter</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/concept_snapcenter_plug_in_for_microsoft_windows_overview.html">
+        適用於Microsoft Windows的插件總覽SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/reference_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_windows.html">
+        使用適用於Microsoft Windows的《不要用作更新程式的SnapCenter 功能」
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/concept_snapcenter_plug_in_for_windows_features.html">
+        適用於Windows功能的插件SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/concept_how_snapcenter_backs_up_windows_file_systems.html">
+        如何備份Windows檔案系統SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/reference_storage_types_supported_by_snapcenter_plug_ins_for_microsoft_windows.html">
+        支援Microsoft Windows的儲存類型SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/reference_minimum_ontap_privileges_required_for_windows_plug_in.html">
+        Windows外掛程式所需的ONTAP 最低版本權限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/reference_prepare_storage_system_for_snapmirror_and_snapvault.html">
+        準備儲存系統以進行SnapMirror和SnapVault 資訊複寫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_define_a_backup_strategy_for_windows_file_systems.html">
+        定義Windows檔案系統的備份策略
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/reference_sources_and_destinations_of_clones_for_windows_file_systems.html">
+        Windows檔案系統的複本來源與目的地
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 安裝SnapCenter 適用於Microsoft Windows的功能性外掛程式</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html">
+        適用於Microsoft Windows的安裝流程SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html">
+        適用於Microsoft Windows的安裝需求SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_configure_gMSA_on_windows_server_2012_or_later.html">
+        在Windows Server 2012或更新版本上設定GMSA
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html">
+        新增主機並安裝SnapCenter 適用於Microsoft Windows的解決方案
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_install_on_multiple_remote_hosts_using_powershell_cmdlets.html">
+        使用PowerShell Cmdlet在SnapCenter 多個遠端主機上安裝適用於Microsoft Windows的支援功能外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html">
+        從命令列以無訊息方式安裝SnapCenter 適用於Microsoft Windows的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_monitor_snapcenter_plug_in_package_installation_status.html">
+        監控SnapCenter 程式套件安裝狀態
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 設定CA憑證</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/reference_generate_CA_certificate_CSR_file.html">
+        產生CA認證CSR檔案
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_import_CA_certificates.html">
+        匯入CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_get_the_CA_certificate_thumbprint.html">
+        取得CA憑證指紋
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_configure_CA_certificate_with_Windows_host_plug-in_services.html">
+        使用Windows主機外掛程式服務設定CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_enable_ca_certificates_for_plug-ins.html">
+        啟用外掛程式的CA憑證
+      </a></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_install_snapcenter_plug_in_for_vmware_vsphere.html">
+        安裝SnapCenter VMware vSphere的VMware vCenter外掛程式
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 備份Windows檔案系統</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/reference_back_up_windows_file_systems.html">
+        備份工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_determine_resource_availability_for_windows_file_systems.html">
+        判斷Windows檔案系統的資源可用度
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_create_backup_policies_for_windows_file_systems.html">
+        為Windows檔案系統建立備份原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_create_resource_groups_for_windows_file_systems.html">
+        為Windows檔案系統建立資源群組
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_back_up_a_single_resource_on_demand_for_windows_file_systems.html">
+        隨需備份單一資源以供Windows檔案系統使用
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_back_up_resource_groups_for_windows_file_systems.html">
+        備份Windows檔案系統的資源群組
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_windows.html">
+        使用PowerShell Cmdlet建立儲存系統連線和認證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_back_up_resources_using_powershell_cmdlets_for_windows.html">
+        使用PowerShell Cmdlet備份資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_monitor_backup_operations.html">
+        監控備份作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_cancel_backup_operations_for_windows_file_system.html">
+        取消備份作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_view_related_backups_and_clones_in_the_topology_page.html">
+        在「拓撲」頁面中檢視相關的備份與複本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_remove_backups_using_powershell_cmdlets_for_windows.html">
+        使用PowerShell Cmdlet移除備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_windows.html">
+        使用PowerShell Cmdlet清除次要備份數
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 還原Windows檔案系統</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_restore_windows_file_system_backups.html">
+        還原Windows檔案系統備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_restore_and_recover_resources_using_powershell_cmdlets_for_windows.html">
+        使用PowerShell Cmdlet還原及還原資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_monitor_restore_operations.html">
+        監控還原作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_cancel_restore_operations.html">
+        取消還原作業
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 複製Windows檔案系統</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_clone_from_a_windows_file_system_backup.html">
+        從Windows檔案系統備份複製
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_clone_backups_using_powershell_cmdlets_for_windows.html">
+        使用PowerShell Cmdlet複製備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_monitor_clone_operations.html">
+        監控複製作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_cancel_clone_operations.html">
+        取消複製作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scw/task_split_a_clone_for_windows.html">
+        分割實體複本
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 保護Microsoft Exchange Server資料庫</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 適用於Microsoft Exchange Server概念的元件外掛程式SnapCenter</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/concept_snapcenter_plug_in_for_exchange_server_overview.html">
+        總覽
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/concept_what_you_can_do_with_snapcenter_plug_in_for_microsoft_exchange_server.html">
+        使用適用於Microsoft Exchange Server的解決方案SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/reference_storage_types_supported_by_snapcenter_plug_in_for_microsoft_windows_and_for_microsoft_exchange_server.html">
+        適用於Microsoft Windows和Microsoft Exchange Server的解決方案SnapCenter 支援的儲存類型
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/concept_minimum_privileges_required_exchange_plug_in.html">
+        需要最低ONTAP 的權限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/reference_prepare_storage_system_for_snapmirror_and_snapvault.html">
+        準備儲存系統以進行SnapMirror和SnapVault 資訊複寫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_define_a_backup_strategy_for_exchange_server_resources.html">
+        定義Exchange Server資源的備份策略
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_define_a_restore_strategy_for_exchange_databases.html">
+        定義Exchange資料庫的還原策略
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 安裝SnapCenter 適用於Microsoft Exchange Server的功能外掛程式</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/concept_install_snapcenter_plug_in_for_microsoft_exchange_server.html">
+        適用於Microsoft Exchange Server的安裝流程SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html">
+        新增主機及安裝SnapCenter Microsoft Exchange Server的功能的先決條件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_set_up_credentials_for_the_snapcenter_plug_in_for_windows_sce.html">
+        設定SnapCenter 適用於Windows的驗證外掛程式認證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_configure_gMSA_on_windows_server_2012_or_later.html">
+        在Windows Server 2012或更新版本上設定GMSA
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html">
+        新增主機並安裝Exchange外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_install_plug_in_for_exchange_from_the_snapcenter_server_host_using_powershell_cmdlets.html">
+        使用PowerShell Cmdlet從SnapCenter 支援伺服器的支援伺服器主機安裝Exchange外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_install_the_snapcenter_plug_in_for_exchange_silently_from_the_command_line.html">
+        從命令列以無訊息方式安裝SnapCenter Exchange的功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_monitor_snapcenter_plug_in_package_installation_status.html">
+        監控SnapCenter 程式套件安裝狀態
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 設定CA憑證</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/reference_generate_CA_certificate_CSR_file.html">
+        產生CA認證CSR檔案
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_import_CA_certificates.html">
+        匯入CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_get_the_CA_certificate_thumbprint.html">
+        取得CA憑證指紋
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_configure_CA_certificate_with_Windows_host_plug-in_services.html">
+        使用Windows主機外掛程式服務設定CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_enable_ca_certificates_for_plug-ins.html">
+        啟用外掛程式的CA憑證
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_configure_snapmanager_7_x_for_exchange_and_snapcenter_plug_in_for_exchange_to_coexist.html">
+        設定SnapManager 讓Exchange SnapCenter 和VMware能夠共存的版本
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_install_snapcenter_plug_in_for_vmware_vsphere.html">
+        安裝SnapCenter VMware vSphere的VMware vCenter外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/concept_prepare_for_data_protection.html">
+        準備資料保護
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 備份Exchange資源</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/concept_back_up_exchange_resources.html">
+        備份工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/reference_exchange_database_and_backup_verification.html">
+        Exchange資料庫與備份驗證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_determine_whether_exchange_resources_are_available_for_backup_sce.html">
+        判斷Exchange資源是否可供備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_create_backup_policies_for_exchange_server_databases.html">
+        為Exchange Server資料庫建立備份原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_create_resource_groups_and_attach_policies_for_exchange_servers.html">
+        建立Exchange Server的資源群組及附加原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_back_up_exchange_databases.html">
+        備份Exchange資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_back_up_exchange_resources_groups.html">
+        備份Exchange資源群組
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html">
+        使用適用於Exchange Server的PowerShell Cmdlet建立儲存系統連線和認證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_back_up_exchange_resources_using_powershell_cmdlets.html">
+        使用PowerShell Cmdlet備份Exchange資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_monitor_backup_operations.html">
+        監控備份作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_cancel_backup_operations_for_exchange_database.html">
+        取消Exchange資料庫的備份作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html">
+        使用PowerShell Cmdlet移除Exchange備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_view_exchange_backups_in_the_topology_page.html">
+        在「拓撲」頁面中檢視Exchange備份
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 還原Exchange資源</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/reference_restore_exchange_resources.html">
+        還原工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/concept_requirements_for_restoring_an_exchange_database.html">
+        還原Exchange資料庫的需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_restore_exchange_databases.html">
+        還原Exchange資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/reference_granular_recovery_of_mails_and_mailbox.html">
+        精細恢復郵件和信箱
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html">
+        從次要儲存設備還原Exchange Server資料庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_restore_exchange_resources_using_powershell_cmdlets.html">
+        使用PowerShell Cmdlet還原Exchange資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_reseed_a_passive_exchange_node_replica.html">
+        已重新建立被動式Exchange節點複本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_reseed_a_replica_using_powershell_cmdlets_for_exchange_database.html">
+        已使用PowerShell Cmdlet重新建立Exchange資料庫的複本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_monitor_restore_operations.html">
+        監控還原作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-sce/task_cancel_restore_operations.html">
+        取消還原作業
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 保護自訂應用程式</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 不適用的自訂外掛程式SnapCenter</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/concept_snapcenter_custom_plug_ins_overview.html">
+        「自訂外掛程式」總覽SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/concept_what_you_can_do_with_the_snapcenter_custom_plug_ins.html">
+        您可以使用SnapCenter 「不一樣的自訂外掛程式」來做什麼
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/concept_snapcenter_custom_plug_ins_features.html">
+        「自訂外掛程式」SnapCenter 功能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_storage_types_supported_by_snapcenter_custom_plug_in.html">
+        支援的儲存類型SnapCenter 由「支援的儲存類型」由「支援的自訂外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_minimum_ontap_privileges_required_for_custom_plug_in.html">
+        自訂外掛程式所需的ONTAP 最低需求權限
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_plugin_for_scc.html">
+        準備儲存系統以進行SnapMirror和SnapVault 資訊複寫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_define_a_backup_strategy.html">
+        定義備份策略
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 自訂外掛程式的備份策略</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_backup_schedules_of_custom_plug_in_resources.html">
+        自訂外掛程式資源的備份排程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/concept_number_of_backup_jobs_needed.html">
+        所需的備份工作數
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_types_of_restore_strategies_supported_for_manually_added_custom_plugin_resources.html">
+        手動新增自訂外掛程式資源所支援的還原策略類型
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 為應用程式開發外掛程式</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/concept_develop_a_plug_in_for_your_application.html">
+        總覽
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_perl.html">
+        基於Perl的開發
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_native.html">
+        原生風格
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_java.html">
+        Java樣式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_custom_plugin_in_snapcenter.html">
+        自訂SnapCenter 插件
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 準備安裝SnapCenter 「精選」外掛程式</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_install_snapcenter_custom_plug_in.html">
+        安裝流程：不需安裝程式SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_prerequisites_to_adding_hosts_and_installing_snapcenter_custom_plug_ins.html">
+        新增主機和安裝SnapCenter 「更新自訂」外掛程式的先決條件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_scc.html">
+        安裝SnapCenter 適用於Windows的功能性外掛程式套件的主機需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_host_requirements_for_installing_the_snapcenter_plug_in_package_for_linux_scc.html">
+        安裝SnapCenter 適用於Linux的支援功能外掛套件的主機需求
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_set_up_credentials_for_snapcenter_custom_plug_in.html">
+        設定SnapCenter 認證資料以供「不一樣的自訂外掛程式」使用
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_configure_gMSA_on_windows_server_2012_or_later.html">
+        在Windows Server 2012或更新版本上設定GMSA
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 安裝SnapCenter 「不一樣的自訂外掛程式」</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html">
+        新增主機並在遠端主機上安裝外掛程式套件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_scc.html">
+        使用Cmdlet在SnapCenter 多個遠端主機上安裝適用於Linux或Windows的支援功能外掛套件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html">
+        使用命令列介面、在SnapCenter Linux主機上安裝《程式集指令集自訂外掛程式」
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_monitor_the_status_of_installing_plugin_for_scc.html">
+        監控SnapCenter 程式套件安裝狀態
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 設定CA憑證</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_generate_CA_certificate_CSR_file.html">
+        產生CA認證CSR檔案
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_import_CA_certificates.html">
+        匯入CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_get_the_CA_certificate_thumbprint.html">
+        取得CA憑證指紋
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_configure_CA_certificate_with_Windows_host_plug-in_services.html">
+        使用Windows主機外掛程式服務設定CA憑證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_configure_CA_certificate_for_SCC_on_Linux_host.html">
+        在SnapCenter Linux主機上設定「CA憑證」以使用「支援整套自訂外掛程式」服務
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_configure_CA_certificate_for_SCC_on_windows_host.html">
+        在SnapCenter Windows主機上設定「CA憑證」以使用「更新自訂外掛程式」服務
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_enable_ca_certificates_for_plug-ins.html">
+        啟用外掛程式的CA憑證
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 準備資料保護</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/reference_prerequisites_for_using_snapcenter_custom_plug_ins.html">
+        使用SnapCenter 「Solutions自訂外掛程式」的先決條件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/concept_how_resources_resource_groups_and_policies_are_used_for_protecting_custom_plug_in_resources.html">
+        如何使用資源、資源群組和原則來保護自訂外掛程式資源
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 備份自訂外掛程式資源</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_back_up_custom_plug_in_resources.html">
+        備份工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_add_resources_to_snapcenter_custom_plug_ins.html">
+        將資源新增至SnapCenter 「支援自訂外掛程式」
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_create_policies_for_custom_plug_in_resources.html">
+        建立自訂外掛程式資源的原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_create_resource_groups_and_attach_policies.html">
+        建立資源群組並附加原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_back_up_individual_custom_plug_in_resources.html">
+        備份個別的自訂外掛程式資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_back_up_resource_groups_of_custom_plug_in_resources.html">
+        備份自訂外掛程式資源的資源群組
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_scc.html">
+        使用PowerShell Cmdlet建立儲存系統連線和認證
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_back_up_resources_using_powershell_cmdlets.html">
+        使用PowerShell Cmdlet備份資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_monitor_scc_resources_backup_operations.html">
+        監控備份作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_cancel_backup_operations_for_scc.html">
+        取消備份作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html">
+        在「拓撲」頁面中檢視自訂外掛程式資源相關備份與複製
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 還原自訂外掛程式資源</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_restore_custom_plug_in_resources.html">
+        還原工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_restore_a_resource_backup.html">
+        還原資源備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_restore_and_recover_resources_using_powershell_cmdlets_scc.html">
+        使用PowerShell Cmdlet還原資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_monitor_scc_resources_restore_operations.html">
+        監控還原作業
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 複製自訂外掛程式資源備份</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_clone_custom_plug_in_resource_backups.html">
+        複製工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_clone_from_a_backup.html">
+        從備份複製
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_clone_backups_using_powershell_cmdlets.html">
+        使用PowerShell Cmdlet複製備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/protect-scc/task_monitor_scc_resource_clone_operations.html">
+        監控SnapCenter 實體複製作業
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 管理SnapCenter 伺服器和外掛程式</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 檢視儀表板</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/concept_overview_of_dashboard.html">
+        儀表板總覽
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/task_how_to_view_information_on_the_dashboard.html">
+        如何檢視儀表板上的資訊
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/task_request_status_reports_of_the_jobs_from_the_dashboard.html">
+        從儀表板要求工作狀態報告
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/task_request_reports_of_the_protection_status_from_the_dashboard.html">
+        從儀表板索取保護狀態報告
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/task_manage_rbac.html">
+        管理RBAC
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/concept_manage_hosts.html">
+        管理主機
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/concept_what_operations_can_be_performed_from_the_resource_page.html">
+        「資源」頁面支援的作業
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/concept_manage_policies.html">
+        管理原則
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/task_manage_resource_groups.html">
+        管理資源群組
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/concept_manage_backups.html">
+        管理備份
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/task_delete_clones.html">
+        刪除複本
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html">
+        監控工作、排程、事件和記錄
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/concept_overview_of_snapcenter_reports.html">
+        概述功能SnapCenter
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/concept_manage_the_snapcenter_server_repository.html">
+        管理SnapCenter 伺服器儲存庫
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/concept_manage_resources_of_untrusted_domains.html">
+        管理不受信任網域的資源
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/concept_manage_the_storage_system.html">
+        管理儲存系統
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/admin/concept_manage_ems_data_collection.html">
+        管理EMS資料收集
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 升級SnapCenter 伺服器和外掛程式</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/upgrade/task_configure_snapcenter_to_check_for_available_updates.html">
+        設定SnapCenter 以檢查可用的更新
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/upgrade/upgrade_workflow.html">
+        升級工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/upgrade/task_upgrade_snapcenter.html">
+        升級SnapCenter 此伺服器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/upgrade/task_upgrade_your_plug_in_packages.html">
+        升級外掛程式套件
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 解除安裝SnapCenter 伺服器和外掛程式</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 解除安裝SnapCenter 這個外掛程式套件</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/uninstall/reference_prerequisites_for_removing_a_host.html">
+        移除主機的必要條件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/uninstall/task_remove_a_host.html">
+        移除主機
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/uninstall/task_uninstall_plug_ins_from_a_host_using_the_snapcenter_gui.html">
+        使用SnapCenter 無法使用的GUI解除安裝外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/uninstall/task_uninstalling_windows_plug_ins_using_the_command_line_interface_on_the_snapcenter_server_host.html">
+        使用PowerShell Cmdlet解除安裝Windows外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/uninstall/task_uninstall_plug_ins_locally_on_a_host.html">
+        在主機本機上解除安裝外掛程式
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/uninstall/task_uninstall_snapcenter_plug_ins_package_for_linux_or_aix_using_command_line_interface.html">
+        使用CLI解除安裝適用於Linux或AIX的外掛程式套件
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/uninstall/task_uninstalling_the_snapcenter_server.html">
+        解除安裝SnapCenter 此伺服器
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 使用REST API自動化</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/sc-automation/overview_rest_apis.html">
+        REST API總覽
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/sc-automation/concept_how_to_access_snapcenter_rest_api_natively.html">
+        如何SnapCenter 原生存取靜態API
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/sc-automation/concept_rest_web_services_foundation.html">
+        REST Web服務基礎
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/sc-automation/concept_basic_operational_characterstics.html">
+        基本營運特性
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/sc-automation/concept_input_variables_controlling_an_api_request.html">
+        控制API要求的輸入變數
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/sc-automation/concept_interpreting_an_api_response.html">
+        API回應的解讀
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 支援的REST API</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/sc-automation/reference_supported_rest_apis.html">
+        其他外掛程式支援REST API工作流程
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/sc-automation/refrence_rest_apis_supported_for_oracle_database.html">
+        Oracle資料庫支援REST API
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html">
+        支援REST API以進行SnapCenter 支援的REST伺服器災難恢復
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/sc-automation/task_how to_access_rest_apis_using_the_swagger_api_web_page.html">
+        如何使用Swagger API網頁存取REST API
+      </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/sc-automation/task_get_started_with_the_rest_api.html">
+        開始使用REST API
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/legal-notices.html">
+        法律聲明
+      </a></li></ul>
+</div>
+<script>
+  window.onscroll = () => {
+    const value = -40 - (document.body.scrollHeight - (window.innerHeight + document.scrollingElement.scrollTop));
+    
+    document.getElementById("sidebar-height").style.bottom = Math.max(0,value) + "px";
+};
+</script>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">docs.netapp.com</a>
+        </li>
+        
+
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/zh-tw/snapcenter/">SnapCenter&nbsp;Software&nbsp;4.6</a>
+        </li>
+
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 本繁體中文版使用機器翻譯，譯文僅供參考，若與英文版本牴觸，應以英文版本為準。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">網域與工作群組需求</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2022-05-03 06:34:08 +0000">05/03/2022</time>
+    
+  
+
+
+</p>
+
+<div class="paragraph lead">
+<p>可以在網域或工作群組中的系統上安裝此伺服器SnapCenter 。在工作群組和網域的情況下、用於安裝的使用者應該擁有機器的管理權限。</p>
+</div>
+<div class="paragraph">
+<p>若要在SnapCenter Windows主機上安裝Sfor Server和SnapCenter Sof the plug-ins、您應該使用下列其中一項：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>* Active Directory網域*</p>
+<div class="paragraph">
+<p>您必須使用具有本機系統管理員權限的網域使用者。網域使用者必須是Windows主機上本機系統管理員群組的成員。</p>
+</div>
+</li>
+<li>
+<p><strong>工作群組</strong></p>
+<div class="paragraph">
+<p>您必須使用具有本機系統管理員權限的本機帳戶。</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>雖然支援網域信任、多網域樹系和跨網域信任、但不支援跨樹系網域。Microsoft的Active Directory網域及信任相關文件包含更多資訊。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/snapcenter/images/note.svg" alt="附註">
+</td>
+<td class="content">
+安裝SnapCenter 完支援服務器後、您不應變更SnapCenter 支援該主機的網域。如果您從SnapCenter 安裝了支援服務器的網域中移除此伺服器主機SnapCenter 、然後嘗試解除安裝SnapCenter 支援服務器、則解除安裝作業會失敗。
+</td>
+</tr>
+</table>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">legal-terms</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">legal-privacy</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">legal-cookies</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">cookie-settings</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="n-footer__bottom-right">
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <span class="n-footer__fine-print">對我們的網站有任何意見或要求？</span>
+              <a target="_self" href="javascript:netapp_mailto()">請與我們聯絡</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://docs.netapp.com/zh-tw/announcements/">公告</a>
+            </li>
+          </ul>
+        </div>
+        <div class="n-footer__social-links">
+          <ul class="n-footer__social-link-list">
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com"
+                target="_blank" title="blog" alt="blog">
+                <span class="n-footer__social-link-text">blog</span>
+                <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+                  <title>blog@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#blog"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/"
+                target="_blank" title="community" alt="community">
+                <span class="n-footer__social-link-text">community</span>
+                <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+                  <title>community@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#comments"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp"
+                target="_blank" title="twitter" alt="twitter">
+                <span class="n-footer__social-link-text">twitter</span>
+                <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+                  <title>twitter@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp"
+                target="_blank" title="facebook" alt="facebook">
+                <span class="n-footer__social-link-text">facebook</span>
+                <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+                  <title>facebook@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-linkedin"
+                href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+                <span class="n-footer__social-link-text">linkedin</span>
+                <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+                  <title>linkedin@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-youtube"
+                href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+                <span class="n-footer__social-link-text">youtube</span>
+                <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+                  <title>youtube@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#youtube"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="n-footer__social-link-list-item">
+              <a class="n-footer__social-link" data-ntap-social="follow-slideshare"
+                href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+                <span class="n-footer__social-link-text">slideshare</span>
+                <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+                  <title>slideshare@</title>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#slideshare"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/zh-tw/snapcenter/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/zh-tw/snapcenter/js/prism.js'></script>
+      <script type="text/javascript" src='/zh-tw/snapcenter/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/zh-tw/snapcenter/js/www-ntap.js'></script>
+    <script src='/zh-tw/snapcenter/js/tabbed-blocks.js'></script>
+  </body></html>
