@@ -171,7 +171,7 @@
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
   <div class="custom-dropdown-select unselected" title="軟件SnapCenter 4.6">
-    <label>version</label>
+    <label>版本</label>
     <span translate="no" class="notranslate">軟件SnapCenter 4.6</span>
     <img src="/zh-tw/snapcenter/images/chevron_up.svg" class="custom-icon chevrondown invisible" />
     <img src="/zh-tw/snapcenter/images/chevron_down.svg" class="custom-icon chevronup" />
@@ -4371,13 +4371,15 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 06:34:08 +0000">05/03/2022</time>
+    <time datetime="2022-05-31 19:40:11 +0000">05/31/2022</time>
     
   
 
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
 <p>每個SnapCenter 版本的更新SnapCenter 版本均包含更新的更新版的《伺服器與外掛程式》套件。外掛程式套件更新會隨SnapCenter 更新程式一起發佈。您可以設定SnapCenter 使用此功能來檢查是否有可用的更新。</p>
 </div>
@@ -4387,6 +4389,119 @@
 <div class="imageblock">
 <div class="content">
 <img src="../media/upgrade_workflow.png" alt="升級工作流程">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="支援的升級途徑">支援的升級途徑</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">如果您使用SnapCenter 的是伺服器版本&#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">您可以直接將SnapCenter 伺服器升級至&#8230;&#8203;</th>
+<th class="tableblock halign-left valign-top">支援的外掛程式版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">4.3.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.4.x</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>4.3.x</p>
+</li>
+<li>
+<p>4.4.x</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.5.x</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>4.5.x</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock">4.4.x</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.5.x</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>4.4.x</p>
+</li>
+<li>
+<p>4.5.x</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.6.x</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>4.6.x</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>4.5.x</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>4.6.x</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>4.5.x</p>
+</li>
+<li>
+<p>4.6.x</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/snapcenter/images/important.svg" alt="重要">
+</td>
+<td class="content">
+例如、如果您使用SnapCenter 的是版本4.3.x且想要升級至4.6.x、您應該先升級至4.5.x、然後再執行4.6.x的循環升級
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/snapcenter/images/note.svg" alt="附註">
+</td>
+<td class="content">
+如需升級SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式的相關資訊、請參閱 <a href="https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html" target="_blank" rel="noopener">"升級SnapCenter VMware vSphere的插件"</a>。
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 
@@ -4408,16 +4523,16 @@
               <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/terms-of-use/">legal-terms</a>
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">條款與條件</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/privacy-policy/">legal-privacy</a>
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">Privacy Policy</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a href="https://www.netapp.com/company/legal/cookie-policy/">legal-cookies</a>
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">Cookie Policy</a>
             </li>
             <li class="n-footer__copyright-link">
-              <a class="ot-sdk-show-settings">cookie-settings</a>
+              <a class="ot-sdk-show-settings">Cookie 設定</a>
             </li>
           </ul>
         </div>
