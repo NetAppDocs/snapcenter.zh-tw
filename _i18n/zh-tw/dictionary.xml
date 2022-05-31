@@ -2953,11 +2953,6 @@
   <block id="87438cb05e7f3a99d7cb0f708d03820f" category="paragraph">「安全登入解除鎖定-使用者&lt;user_name\&gt;-vserver &lt;Svm_name\&gt;'</block>
   <block id="5828bd4572658b3ec60c10c123756d37" category="section-title">用於建立SVM角色和指派權限的CLI命令ONTAP</block>
   <block id="926b7acb0dd0dddac1e9ab03e87150b7" category="paragraph">您應該執行幾ONTAP 個SVM命令來建立SVM角色並指派權限。</block>
-  <block id="3fd8ba893562f342d865571b0059781e" category="list-text">「安全登入角色create -role SVM_SVM_rouse_Name -cmd目錄名稱"SnapMirror list-destinations"-vserver SVM_Name -access all」</block>
-  <block id="038be67ee8a52d8b3eab699d5f7c43d3" category="list-text">「安全登入角色create -role SVM_SVM_role_Name -cmd目錄名稱"EVENT generate-autosup-log"-vserver SVM_Name -access all"</block>
-  <block id="16b2bf2485b29324d1d9c52df65291c4" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_svm_rous_Name -cmd目錄名稱「工作歷程記錄show」-access all」</block>
-  <block id="a0df08dd4d49098e386a72bc7f795b26" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_svm_rous_Name -cmd目錄名稱「工作停止」-access all」</block>
-  <block id="8205a16103582031e200a6f0062cb43d" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_svm_svm_rous_rous_Name -cmd目錄名稱"LUN"-access all」</block>
   <block id="77d14dd229f22e75b140b12306c243d3" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱"LUN cree"-access all"</block>
   <block id="e1591576a5800f25342f1c086407ae01" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱"lun刪除"-access all"</block>
   <block id="fb12f3dd2e8853d45d6a0ea4b329075d" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rou_name -cmd目錄名稱"LUN igroup add"-access all"</block>
@@ -2966,7 +2961,6 @@
   <block id="d86a9f51c3fc7522bd8adde0ec1c5197" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rou_name -cmd目錄名稱"LUN igroup rame"-access all"</block>
   <block id="9b164f1f7736600715be680a2838a2a8" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rou_name -cmd目錄名稱"LUN igroup show"-access all"</block>
   <block id="72d871fffa8a9997809196f91f71162a" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「LUN mapping add-report-nodes」-access all」</block>
-  <block id="daf7b5d2005961b7fd1da6d40f58ecb5" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_svm_rous_Name -cmd目錄名稱"LUN mapping cree"-access all」</block>
   <block id="55ee80641b5e4a7129b766c5f1947cb9" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「LUN mapping delete」-access all」</block>
   <block id="0452c90c862e8bea83d415d798fe7a17" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「LUN mapping remove-reporting節點」-access all」</block>
   <block id="e236a547a0832ed88896e7bd4979e95d" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「LUN mapping show」-access all」</block>
@@ -2977,7 +2971,6 @@
   <block id="cc726ab19c5f6ebad14747bfb9ca2b1d" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「LUN resize」-access all」</block>
   <block id="a358cbd4a618edf90cae23f19bebb285" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱"LUN serial」-access all"</block>
   <block id="ffd0adba3d8a766871862b8166efb08a" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱"LUN show"-access all"</block>
-  <block id="0f0a2ef01be3fa45bc7144749af7247b" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_svm_rous_Name -cmd目錄名稱「網路介面」-access readonly」</block>
   <block id="c7a78c9e0680e33782bcb69c308c2726" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「SnapMirror原則附加規則」-access all」</block>
   <block id="581ff44a24f5961a469602e478f31324" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「SnapMirror原則modify-rRule」-access all」</block>
   <block id="6252c3ab8ec38aa610d862bd24476214" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「SnapMirror原則移除規則」-access all」</block>
@@ -3020,11 +3013,9 @@
   <block id="c2c2354ac74c20c7387d70aa883c0529" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver EXECT-Fpolicy DELETE」-access all」</block>
   <block id="3cdfaff1528e474040e3b89b41b06add" category="list-text">「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver匯出原則規則create」-access all」</block>
   <block id="b05817f4014440d7bfff2409db27e664" category="list-text">「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver匯出原則規則show」-access all」</block>
-  <block id="ed851dfd4557d096974fc08b45d7fe9a" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱"vserver EXPECT-Fpolicy show"-access all"*「安全登入角色create -vserver Svm_Name -role Svm_rouse_Name -cmd」"vserver iSCSI connection show"-access all"</block>
   <block id="f8ab61d03ef9c157f83d8967c5325f72" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_road_Name -cmd目錄名稱"vserver"-access readonly」</block>
   <block id="32b2dd2ad5bcd04617f8049be39f3a4e" category="list-text">「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver EXECT-policy」-access all」</block>
   <block id="070716b587ce6b006f4906a8222fc505" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「vserver iSCSI」-access all」</block>
-  <block id="9c4ec47b74ac2ceb05d2eec75e743a66" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_svm_rous_Name -cmd目錄名稱「Volume clone分割狀態」-access all」</block>
   <block id="6c778a52dc5f13a6dd5e629e65cf1082" category="summary">當儲存系統執行叢集式的動作時、您可以使用安全登入命令來新增ONTAP 一個無法使用的RBAC角色ONTAP 。</block>
   <block id="a69e754efca1b9623b6b0f65a2d8dc73" category="doc">使用ONTAP 安全登入命令新增一個RBAC角色</block>
   <block id="474d9e4d882e646ea038c1c3f1057d2e" category="list-text">在您為ONTAP 執行叢集ONTAP 式功能的儲存系統建立一套不必要的RBAC角色之前、您必須先識別下列項目：</block>
@@ -7263,20 +7254,14 @@
   <block id="61f6987ebe8ac6f46f0b880c5ae59a51" category="summary">您可以使用自訂規範和後製指令碼、作為資料保護作業的一部分。這些指令碼可在資料保護工作之前或之後進行自動化。例如、您可以加入指令碼、自動通知您資料保護工作失敗或警告。在您設定預先編寫和後製指令碼之前、您應該先瞭解建立這些指令碼的部分需求。</block>
   <block id="7322146fa0278b7076d42a67da3ca68f" category="doc">簡報與指令碼</block>
   <block id="435a98a7bde7c8c702ecea454519078b" category="section-title">支援的指令碼類型</block>
-  <block id="11e6b1e8a6ab60d570eefed8daa57bd8" category="paragraph">支援下列指令碼類型：</block>
   <block id="629e171db7b408e3e171f1586f3caf6f" category="list-text">批次檔案</block>
   <block id="9fa24628162fd1328c53cf7accffa4b0" category="list-text">PowerShell指令碼</block>
   <block id="4e25347d36a68a5bcb305fa81271c194" category="list-text">Perl指令碼</block>
   <block id="cb1dcb2d36da486647d1983837107510" category="section-title">指令碼路徑</block>
-  <block id="2bc22da857118b35633e6993a93f9998" category="paragraph">在SnapCenter 非虛擬化和虛擬化儲存系統上執行的所有規範和後指令碼、都會在外掛主機上執行。因此、指令碼必須位於外掛程式主機或外掛程式主機可存取的SMB共用區上。</block>
-  <block id="90b0c56b568dc02463dea1bc976d53d4" category="admonition">指令碼路徑會在指令碼執行時驗證。</block>
   <block id="2ef92c32f18381ca1aac0ef10eb1ed42" category="section-title">指令碼的指定位置</block>
   <block id="74791fd4df03254b423dc68919cf67a3" category="paragraph">指令碼是在備份原則中指定。當備份工作開始時、原則會自動將指令碼與要備份的資源建立關聯。建立備份原則時、您可以指定pretced和postscript引數。</block>
-  <block id="b38a293fb34c1cc09303ec2335385e9e" category="paragraph">若要指定多個指令碼、請在每個指令碼路徑後按* Enter *、以單獨一行列出每個指令碼。不允許使用分號（；）。您可以指定多個預先編寫和多個後製指令碼。單一指令碼可編碼為預先記錄和附有附註的指令碼、並可呼叫其他指令碼。</block>
   <block id="3093ae9f5bdaf1b35b772bada2c6ddc5" category="section-title">指令碼逾時</block>
-  <block id="6e26923a4679c31544b8127ace79f5c4" category="paragraph">備份指令碼的逾時時間為15分鐘、無法修改。</block>
   <block id="a8b41ff3cf6d5a098fc3bc734aaecc1c" category="section-title">指令碼輸出</block>
-  <block id="aab85822b1fb7e074e6646a06f9ae63e" category="paragraph">原始程式編寫和後指令碼輸出檔案的預設目錄為Windows\System32。</block>
   <block id="c30d59401403b986989fc4a149ff2aea" category="summary">利用嚴苛的安全性與驗證功能、確保資料安全無虞。SnapCenter</block>
   <block id="c81d278ed6d59212379f4589585fc795" category="doc">安全功能</block>
   <block id="79333b6bf46efb54b1410de6b731a635" category="paragraph">包含下列安全功能：SnapCenter</block>
@@ -7549,36 +7534,9 @@
   <block id="35702b2ddcae5a0a26dfc495c46421b5" category="list-text">您應該已經備份SnapCenter 所有已在SnapCenter 支援伺服器主機或外掛主機上修改的支援功能組態檔案。</block>
   <block id="77b44cc84c18e6f68f7831889cfc9abd" category="paragraph">例如：SnapDriveService.exe.config、SMCoreServiceHost.exe.config等。SnapCenter</block>
   <block id="8a34c1f412e1e3388d29a41e30823460" category="list-text">升級程序會將Windows、Linux或AIX主機置於「維護」模式、使主機無法執行任何排程工作。</block>
-  <block id="b0d7fc0fc319194e91f66a827df0c05a" category="list-text">支援的升級途徑：</block>
-  <block id="63dba214769467ec95d70f709f506981" category="cell">如果使用的是...</block>
-  <block id="ef8c3ec83a38657dcd15b9735798ad77" category="cell">您可以...</block>
-  <block id="4e17fd3e19df0a7760aabcc920a3a583" category="paragraph">4.4.x</block>
-  <block id="8fb06ada7461bb627377a8ee9a7ccbf6" category="list-text">直接升級至4.1.x</block>
-  <block id="49e209e2198b7351ac4c93318932ae0a" category="list-text">請先升級至4.1.x、然後升級至4.2.x、以升級至4.2.x</block>
-  <block id="2ea52419cec36b53a98c614bc928223f" category="list-text">先升級至4.1.x、然後升級至4.2.x、再升級至4.3.x</block>
-  <block id="a5872ee6e593e85685073da86b16352b" category="list-text">先升級至4.1.x、再升級至4.2.x、再升級至4.3.x、然後升級至4.3.x、再升級至4.4.x</block>
-  <block id="19cd583944e0a968cef282d18043e45a" category="list-text">先升級至4.1.x、再升級至4.2.x、然後升級至4.3.x、再升級至4.3.x、再升級至4.4.x、然後升級至4.5</block>
-  <block id="a15140d49e45f662c60c6bf44b28b4c4" category="list-text">先升級至4.1.x、然後升級至4.2.x、再升級至4.3.x、再升級至4.3.x、然後升級至4.4.x、再升級至4.5.x、然後升級至4.6.x、再升級至4.6</block>
-  <block id="b1ee733d2443984b256ad5beee30d6ca" category="paragraph">4.1.x</block>
-  <block id="046e347178074d7707b5c3da4ea5a61b" category="list-text">直接升級至4.2.x</block>
-  <block id="ba2827429ba898319b96871384020c3a" category="list-text">先升級至4.2.x、然後升級至4.3.x、即可升級至4.3.x</block>
-  <block id="5c27e14af89e6146a66293c13fa6622f" category="list-text">先升級至4.2.x、再升級至4.3.x、然後升級至4.3.x、再升級至4.4.x</block>
-  <block id="2860e58d71ba76950aec5d596990da8a" category="list-text">先升級至4.2.x、再升級至4.3.x、再升級至4.4.x、然後升級至4.4.x、再升級至4.5</block>
-  <block id="d19f71f7d90bf7a5de265505ad86a7b8" category="list-text">先升級至4.2.x、再升級至4.3.x、然後升級至4.4.x、再升級至4.4.x、然後升級至4.5.x、再升級至4.6</block>
-  <block id="9f144f5f546870968ec5ee9301456d60" category="paragraph">4.2.x</block>
-  <block id="b64bd4e14a7ac7ed05ec8eb0313b0288" category="list-text">直接升級至4.3.x</block>
-  <block id="1fc14ad13a22e99797ce2d25fd1bcabb" category="list-text">先升級至4.3.x、然後升級至4.4.x、即可升級至4.4.x</block>
-  <block id="32df7497d27db58e0f9877655c6ad6fb" category="list-text">先升級至4.3.x、然後升級至4.4.x、再升級至4.5</block>
-  <block id="b82ae9b595615838e0e4da9befc559d0" category="list-text">先升級至4.3.x、再升級至4.4.x、再升級至4.4.x、然後升級至4.5.x、再升級至4.6</block>
   <block id="55cbbab091e104a7f3d3dbf6ba99ba61" category="paragraph">4.3.x</block>
-  <block id="0375ceaf49bb68d380ac402fcc55c9ce" category="list-text">直接升級至4.4.x</block>
-  <block id="e83964f4d5096cec3e9f79899b8f9881" category="list-text">先升級至4.4.x、然後升級至4.5、即可升級至4.5</block>
-  <block id="f2ff723377a283be6f489a385be77f13" category="list-text">先升級至4.4.x、再升級至4.5.x、然後升級至4.6.x、再升級至4.6</block>
   <block id="fef826a349ca99b933042ba1dfa73260" category="paragraph">4.4.x</block>
-  <block id="8ffa70fd4aad59373a1c170a9715213e" category="list-text">直接升級至4.5</block>
-  <block id="ae6152fdf638c88998b16f0fae964b24" category="list-text">先升級至4.5.x、然後升級至4.6%、即可升級至4.6%</block>
   <block id="4b1f6cbbab8f5d76a3e1d1b2c562722e" category="paragraph">4.5.x</block>
-  <block id="f8f3d4aadad29017a7c0ed081553f07a" category="paragraph">直接升級至4.6</block>
   <block id="dd9f485e72f96875e028693823f26e70" category="inline-link">升級SnapCenter VMware vSphere的插件</block>
   <block id="25878f69131b31b18aeda7ba36139c1b" category="admonition">如需升級SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式的相關資訊、請參閱<block ref="9fa07c2f7a59d2185d48077e327b705e" category="inline-link-rx"></block>。</block>
   <block id="f957674174a2517cb9b6bb5f34a9d71f" category="list-text">在左側導覽窗格中、按一下*主機*&gt;*受管理主機*。</block>
@@ -7600,22 +7558,6 @@
   <block id="6246f3e3294191ea51e0e29f715acfad" category="list-text">在升級期間、主機會自動進入維護模式、以防止主機執行任何排程的工作。升級後、主機會自動退出維護模式。</block>
   <block id="a6230500cc307e0a76e575726dcf9cdd" category="list-text">在升級期間、會執行SQL指令碼來更新NSM資料庫中的Exchange資料、將DAG和主機簡稱轉換為FQDN。這僅適用於SnapCenter 搭配使用含有Exchange外掛程式的NetApp伺服器。</block>
   <block id="9b8f4a16b159f7670582bbc9d12e5328" category="list-text">在開始升級作業之前、如果您已手動將主機置於維護模式、則升級後、您必須按一下*主機*&gt;*啟動排程*、手動將主機從維護模式中移出。</block>
-  <block id="7fc17decf9554a362d80ff8052528439" category="cell">如果您使用...</block>
-  <block id="484cc1fa3a792ef81da92bac4d6da925" category="list-text">直接升級至4.1.x或4.2.x</block>
-  <block id="fcfd33d072b85651aa4529f8a77ec69e" category="list-text">先升級至4.1.x或4.2.x、然後升級至4.3.x、即可升級至4.3.x</block>
-  <block id="af4ba18efa244f231f7fd0c4483cf443" category="list-text">先升級至4.2.x、然後升級至4.4.x、升級至4.4.x</block>
-  <block id="b85081b787a16b4ec9757708a11143b9" category="list-text">先升級至4.2.x、然後升級至4.4.x、再升級至4.5</block>
-  <block id="51956a3902b95971c29c308dc090cee8" category="list-text">先升級至4.2.x、再升級至4.4.x、然後升級至4.4.x、再升級至4.6</block>
-  <block id="538bc4c4a0100dea348459df2abd822b" category="list-text">直接升級至4.2.x或4.3.x</block>
-  <block id="4eb9a81b6065934fe54be4cbb4e4853c" category="list-text">先升級至4.2.x或4.3.x、然後升級至4.4.x、即可升級至4.4.x</block>
-  <block id="6a0ada299166e4ef0ba4db95ab037aa0" category="list-text">先升級至4.3.x、然後升級至4.5、即可升級至4.5</block>
-  <block id="ef6f1862c0f4d80a09c593805ff3f2bf" category="list-text">先升級至4.3.x、再升級至4.5.x、然後升級至4.6.x、再升級至4.6</block>
-  <block id="179e0b30bcd54c1c40d89dfeb9a7d148" category="list-text">直接升級至4.3.x或4.4.x</block>
-  <block id="79524d2d520f4e0f11429f4feda3b208" category="list-text">先升級至4.3.x或4.4.x、然後升級至4.5、即可升級至4.5</block>
-  <block id="f005205229710f7853a613da5c8259ae" category="list-text">先升級至4.4.x、然後升級至4.6%、即可升級至4.6</block>
-  <block id="17aad294f75d5ee636d86f5635291248" category="list-text">直接升級至4.4.x或4.5</block>
-  <block id="5a1831d1dbc85fe00723563fb086a383" category="list-text">先升級至4.5.x、然後升級至4.6%、即可升級至4.6%</block>
-  <block id="4674c78db9c7c48890d8aa9d1776d5a2" category="paragraph">直接升級至4.5或4.6</block>
   <block id="d6d9056bd3ccaf6f2ea25c46f86b217c" category="list-text">從SnapCenter NetApp支援網站下載《支援伺服器》安裝套件。</block>
   <block id="8e3a959801db0274c8bf2982a663244b" category="paragraph"><block ref="8e3a959801db0274c8bf2982a663244b" category="inline-link-rx"></block></block>
   <block id="b74248c6cef601e9db35af2dd0a5b036" category="list-text">建立網路組態的複本、網址為：C:\Program Files\NetApp\SnapCenter網路應用程式。</block>
@@ -7738,4 +7680,36 @@
   <block id="c16c43065a548034a76faadb18015c27" category="sidebar">以角色為基礎的存取控制（RBAC）SnapCenter</block>
   <block id="fdcd3d6f45be97e0e24b4e793a81fac0" category="sidebar">升級SnapCenter 伺服器和外掛程式</block>
   <block id="8693aef17f2d371968a29ad0e0dff726" category="sidebar">升級工作流程</block>
+  <block id="0fc6896a1941ab3074a525b384b1d103" category="paragraph">。<block ref="1b419d76cc3163a36d36ff494ed65b44" category="inline-link-rx"></block> 包含有關所支援版本的最新資訊。</block>
+  <block id="ace671fcc1d4c5939c3ed0ebf95d2b2c" category="paragraph">Windows支援下列指令碼類型：</block>
+  <block id="29233ecbd2b929a26387627ae9f90bbf" category="paragraph">UNIX支援下列類型的指令碼：</block>
+  <block id="11ab50b04d8cca57ff15c12c97d5679c" category="list-text">Python指令碼</block>
+  <block id="6ed9402e52f305d484cb3e2eee84b210" category="list-text">Shell指令碼</block>
+  <block id="ceb1c56a363e3e946d8da6a79de2b489" category="admonition">除了預設的Bash Shell、也支援諸如sh-shell、k-shell和c-shell等其他Shell。</block>
+  <block id="6b98b59317c1c01b7bc7ca4cd17411bb" category="paragraph">在SnapCenter 非虛擬化和虛擬化儲存系統上執行的所有規範和後指令碼、都會在外掛主機上執行。</block>
+  <block id="6b0556ded1c4e7755a840e42c90a320a" category="list-text">Windows指令碼應位於外掛程式主機或外掛程式主機可存取的SMB共用區上。</block>
+  <block id="c157096c2e47e568177494234a87f0e1" category="list-text">UNIX指令碼應位於外掛程式主機上。</block>
+  <block id="fef867655f1f81bcdd0d00a9356cb04e" category="admonition">指令碼路徑會在執行時驗證。</block>
+  <block id="ef663b0b3b7a27afee6c150520bfb95a" category="paragraph">只有Windows可以指定多個指令碼。您應該在每個指令碼路徑之後按* Enter鍵、將每個指令碼分別列在一行上。不允許使用分號（；）。您可以指定多個預先編寫和多個後製指令碼。單一指令碼可編碼為預先記錄和附有附註的指令碼、並可呼叫其他指令碼。</block>
+  <block id="f857e3b29391e444ec1b7f560c89a1ee" category="admonition">對於UNIX、您無法指定多個指令碼。</block>
+  <block id="90de0033880b7e0780a5ee32f1b401ff" category="paragraph">對於Windows、逾時設定為15分鐘、無法修改。</block>
+  <block id="a9a44363ed14921d094b6371dd75c7f1" category="paragraph">UNIX預設會將逾時設為60秒。您可以修改逾時值。</block>
+  <block id="7d901a35f38f46ac340bf0fcef37cb9d" category="paragraph">Windows預先編寫和後指令碼輸出檔案的預設目錄為Windows\System32。</block>
+  <block id="7a21760d7cbd0896708b77121ef519dc" category="paragraph">UNIX規範和後置指令碼沒有預設位置。您可以將輸出檔案重新導向至任何偏好的位置。</block>
+  <block id="eccc8325175b53fdef9a1846222d4161" category="section-title">支援的升級途徑</block>
+  <block id="521d29d37f5561d4922ece42dc92cb07" category="cell">如果您使用SnapCenter 的是伺服器版本...</block>
+  <block id="7676f59833cee6720de923cfeef21ede" category="cell">您可以直接將SnapCenter 伺服器升級至...</block>
+  <block id="8d0f374d6bbbe36aead49222bc8c909f" category="cell">支援的外掛程式版本</block>
+  <block id="955d0e9747f65e6a6a1963edce3fa678" category="cell">4.6.x</block>
+  <block id="9039ba0f0b3a3b38ef80aa48945fa3c0" category="admonition">例如、如果您使用SnapCenter 的是版本4.3.x且想要升級至4.6.x、您應該先升級至4.5.x、然後再執行4.6.x的循環升級</block>
+  <block id="7864e6541a8699c6dcea2ad2d5e5e78b" category="list-text">「安全登入角色create -role Svm_rouse_Name -cmd目錄名稱「SnapMirror list-destinations」-vserver Svm_Name -access all」</block>
+  <block id="4cd712891b20fcc891bdeef703a3e915" category="list-text">「安全登入角色create -role Svm_role_Name -cmd dirname "EVENT generate-autosup-log"-vserver Svm_Name -access all"</block>
+  <block id="35191da723a7990e2ec356b702112b64" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「jobhistory show」-access all」</block>
+  <block id="950cb25af5f80592c9b230d80411689a" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「jobstop」-access all」</block>
+  <block id="54e321a9e203600e142532be5ad7c700" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱"LUN"-access all"</block>
+  <block id="a9da71cc1d3b73e669689da7c0d74191" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「LUN mapping create」-access all」</block>
+  <block id="6afbab2a305c532b10701b75eef00e06" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_road_Name -cmd目錄名稱「network interface」-access readonly」</block>
+  <block id="d80b7e944064bf3bd382ae2be696ab9e" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver EXECT-Fpolicy show」-access all」</block>
+  <block id="1c1ebdb4d2cea4a9f1b480ef6387ebbd" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「vserver iSCSI connection show」-access all」</block>
+  <block id="2bad882b7fb5945b0373cf8c526cb4ac" category="list-text">「安全性登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「Volume Clone分割狀態」-access all」</block>
 </blocks>

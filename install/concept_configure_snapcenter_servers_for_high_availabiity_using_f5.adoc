@@ -32,7 +32,7 @@ image::../media/sc-F5-configure-workflow.png[SC F5設定工作流程]
 
 
 
-=== 其他的F5組態資訊
+== 其他的F5組態資訊
 
 * 安裝並設定SnapCenter 好高可用度的功能後、請編輯SnapCenter 「不間斷」桌面捷徑、以指向F5叢集IP。
 * 如果SnapCenter 在伺服器之間發生容錯移轉、而且還有現有SnapCenter 的故障恢復工作階段、您必須關閉瀏覽器並SnapCenter 重新登入。
