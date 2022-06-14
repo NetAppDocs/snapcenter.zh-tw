@@ -301,35 +301,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">繁體中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">繁體中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-tw/snapcenter/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-tw/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/snapcenter/protect-sco/task_configure_snapcenter_plug_in_loader_service.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -3205,7 +3197,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/index.html">
         Software 4.6文件SnapCenter
       </a></li><li class=" "><a class="na-navbar-padding" href="/zh-tw/snapcenter/release-notes.html">
@@ -4371,7 +4363,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 06:34:08 +0000">05/03/2022</time>
+    <time datetime="2022-06-14 08:21:54 +0000">06/14/2022</time>
     
   
 
@@ -4516,7 +4508,7 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>SPL_logs_MAX_count</p>
+<p>Logs_MAX_count</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>顯示SnapCenter 保留在_/custom位置/snapcenter/spl/logs_資料夾中的Sf2外掛程式載入器記錄檔數目。</p>
@@ -4546,6 +4538,36 @@
 </div>
 <div class="paragraph">
 <p>此路徑會在安裝期間決定、並作為啟動SPL的一部分。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>log_MAX_SIZE</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>顯示工作記錄檔的最大大小。</p>
+</div>
+<div class="paragraph">
+<p>一旦達到最大大小、記錄檔就會壓縮、而且記錄會寫入該工作的新檔案中。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>保有記錄數</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>顯示記錄保留的天數。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>啟用憑證驗證</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>當主機啟用CA憑證驗證時顯示為true。</p>
+</div>
+<div class="paragraph">
+<p>您可以編輯* spl.properties*檔案、或使用SnapCenter 支援程式的支援GUI或Cmdlet來啟用或停用此參數。</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -4759,4 +4781,5 @@
     </script>
     <script src='/zh-tw/snapcenter/js/www-ntap.js'></script>
     <script src='/zh-tw/snapcenter/js/tabbed-blocks.js'></script>
+    <script src='/zh-tw/snapcenter/js/sidebar.js'></script>
   </body></html>
