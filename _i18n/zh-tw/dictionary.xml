@@ -3881,7 +3881,6 @@
   <block id="0ab847ca1ec1d021003071c720300912" category="paragraph">顯示Keystore檔案的絕對路徑。</block>
   <block id="732ad24112805352918b98d2d2fe992b" category="paragraph">SNAPCENTIER_SERVER_port</block>
   <block id="7aeb909709612da033f3993a0e728a27" category="paragraph">顯示SnapCenter 執行此伺服器的連接埠號碼。</block>
-  <block id="862cd99023ad6510575f8ce1923ec11e" category="paragraph">SPL_logs_MAX_count</block>
   <block id="311a6927001a0f29e0c3f5a5c31d4242" category="paragraph">顯示SnapCenter 保留在_/custom位置/snapcenter/spl/logs_資料夾中的Sf2外掛程式載入器記錄檔數目。</block>
   <block id="543a5f51e636298cf3ed33a0e1d218db" category="paragraph">預設值設為5000。如果計數超過指定值、則會保留最後5000個修改過的檔案。從啟用「還原外掛程式載入程式」服務開始、每24小時自動檢查檔案數量SnapCenter 。</block>
   <block id="763a333a6966604fcf8fe0eee9f23c9f" category="admonition">如果您手動刪除spl.properties檔案、則要保留的檔案數量會設為9999。</block>
@@ -7712,4 +7711,14 @@
   <block id="d80b7e944064bf3bd382ae2be696ab9e" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver EXECT-Fpolicy show」-access all」</block>
   <block id="1c1ebdb4d2cea4a9f1b480ef6387ebbd" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「vserver iSCSI connection show」-access all」</block>
   <block id="2bad882b7fb5945b0373cf8c526cb4ac" category="list-text">「安全性登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「Volume Clone分割狀態」-access all」</block>
+  <block id="af9210ab244187eb84af56c8e51b082c" category="paragraph">您可以在SnapCenter VMware環境中使用適用於Microsoft Windows的解決方案、來建立及管理LUN、以及管理Snapshot複本。</block>
+  <block id="c9956993c3473df3ea1961fead514074" category="paragraph">Logs_MAX_count</block>
+  <block id="9b24859b2a7f9c7d8afb9ec3b025e927" category="paragraph">log_MAX_SIZE</block>
+  <block id="92cb537bc0c912cec1e9669f256ebc89" category="paragraph">顯示工作記錄檔的最大大小。</block>
+  <block id="7618cb309cdd6214baddcc65ec4c89f4" category="paragraph">一旦達到最大大小、記錄檔就會壓縮、而且記錄會寫入該工作的新檔案中。</block>
+  <block id="e9345db0fc7d18cab70b42d9af5c38a2" category="paragraph">保有記錄數</block>
+  <block id="7c8e4d34b8c6cc18e06524f05da1a10d" category="paragraph">顯示記錄保留的天數。</block>
+  <block id="664943be24af2306e90a21dd26536e1c" category="paragraph">啟用憑證驗證</block>
+  <block id="22d8a94cf37cc6d66c941a43b9d79fa8" category="paragraph">當主機啟用CA憑證驗證時顯示為true。</block>
+  <block id="ebda26e1e82bba1d66e8fbdf1eec4b08" category="paragraph">您可以編輯* spl.properties*檔案、或使用SnapCenter 支援程式的支援GUI或Cmdlet來啟用或停用此參數。</block>
 </blocks>
