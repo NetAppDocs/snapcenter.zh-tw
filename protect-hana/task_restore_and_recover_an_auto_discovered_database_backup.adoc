@@ -17,6 +17,17 @@ summary: 您可以使用SnapCenter 效益管理功能、從一或多個備份中
 
 * 您必須備份資源或資源群組。
 * 您必須取消目前正在進行中的任何要還原之資源或資源群組的備份作業。
+* 對於預先還原、POST還原、掛載及卸載命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否存在這些命令：
++
+Windows：_C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_
+
++
+對於Linux：_/var/opt/snapcenter/scc/sited_commands_list.txt_
+
++
+
+NOTE: 如果命令清單中不存在這些命令、則作業將會失敗。
+
 
 
 *關於此工作*

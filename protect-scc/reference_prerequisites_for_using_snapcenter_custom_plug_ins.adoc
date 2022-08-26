@@ -21,7 +21,7 @@ summary: 使用「靜態自訂外掛程式」之前SnapCenter 、系統管理員
 * 如果您有多個資料路徑（lifs）或一個DNFS組態、您可以使用SnapCenter 資料庫主機上的CLI執行下列動作：
 +
 ** 根據預設、資料庫主機的所有IP位址都會新增至複製磁碟區的儲存虛擬機器（SVM）中的NFS儲存匯出原則。如果您想要擁有特定的IP位址、或是限制為IP位址的子集、請執行Set-PreferredHostIPsInStorageExpportPolicy CLI。
-** 如果您在SVM中有多個資料路徑（LIF）、SnapCenter 則選擇適當的資料路徑（LIF）來掛載NFS複製的Volume。不過、如果您要指定特定的資料路徑（LIF）、則必須執行Set-SvmPreferredDataPath CLI。執行_Get-Help命令名稱_可取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725["《軟件命令參考指南》SnapCenter"^]。
+** 如果您在SVM中有多個資料路徑（LIF）、SnapCenter 則選擇適當的資料路徑（LIF）來掛載NFS複製的Volume。不過、如果您要指定特定的資料路徑（LIF）、則必須執行Set-SvmPreferredDataPath CLI。執行_Get-Help命令名稱_可取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["《軟件命令參考指南》SnapCenter"^]。
 
 
 * 如果SnapVault 您想要備份複寫、請設定SnapMirror和SnapMirror。

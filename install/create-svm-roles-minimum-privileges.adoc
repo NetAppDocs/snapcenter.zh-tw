@@ -70,6 +70,7 @@ NOTE: 您應該針對每個權限重複此命令。
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「SnapMirror原則show」-access all」
 * 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「SnapMirror還原」-access all」
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱"SnapMirror show"-access all"
+* 「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「SnapMirror show-history」-access all」
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「SnapMirror update」-access all」
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「SnapMirror update-ls-set」-access all」
 * 「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「version」-access all」

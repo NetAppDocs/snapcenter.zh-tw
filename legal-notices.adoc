@@ -57,4 +57,4 @@ https://www.netapp.com/company/legal/machine-translation/["https://www.netapp.co
 
 提供本產品所使用之協力廠商版權與授權的相關資訊。您的產品不一定會使用下列所有軟體元件。
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2880727["關於此產品的注意事項SnapCenter 4.6%"^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2883298["關於此產品的注意事項SnapCenter 4.7"^]

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: log in, logging, SnapCenter UI, modify timeout, GUI session timeout, disbale SSL 3.0, SSL 3.0, security 
 summary: 支援角色型存取控制（RBAC）SnapCenter 。透過支援資源的RBAC、將角色和資源指派給工作群組或作用中目錄的使用者、或指派給作用中目錄中的群組。SnapCenter SnapCenterRBAC使用者現在可以SnapCenter 使用指派的角色登入至功能表。 
 ---
-= 登入SnapCenter 到
+= 使用RBAC授權登入SnapCenter 到功能表
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,7 +35,7 @@ IMPORTANT: 如果您在網頁瀏覽器中開啟多個索引標籤、只要關閉
 
 若要部署高可用度（HA）、您必須SnapCenter 使用虛擬叢集IP _\ https://Virtual_Cluster_IP_or_FQDN:8146_來存取功能。如果您在Internet Explorer（IE）中瀏覽至_https://Virtual_Cluster_IP_or_FQDN:8146_時沒有看到SnapCenter 此功能、則必須在每個外掛主機的IE中、將虛擬叢集IP位址或FQDN新增為信任的網站、或是在每個外掛主機上停用IE增強安全功能。如需詳細資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["無法從外部網路存取叢集IP位址"^]。
 
-除了使用SnapCenter 還原GUI、您還可以使用PowerShell Cmdlet建立指令碼來執行組態、備份及還原作業。每SnapCenter 個版本的各個版本可能都有一些Cmdlet變更。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^] 有詳細資料。
+除了使用SnapCenter 還原GUI、您還可以使用PowerShell Cmdlet建立指令碼來執行組態、備份及還原作業。每SnapCenter 個版本的各個版本可能都有一些Cmdlet變更。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《軟件指令程式參考指南》SnapCenter"^] 有詳細資料。
 
 
 NOTE: 如果SnapCenter 您是第一次登入到此資訊中心、則必須使用安裝程序中提供的認證登入。
@@ -85,6 +85,44 @@ NOTE: 如果SnapCenter 您是第一次登入到此資訊中心、則必須使用
 初次以SnapCenter RBAC使用者身分登入到支援服務器之後、請重新整理資源清單。
 
 如果您有不受信任的Active Directory網域想SnapCenter 要支援此功能、則必須先以SnapCenter 支援的方式登錄這些網域、然後再為不受信任網域上的使用者設定角色。 link:../install/task_register_untrusted_active_directory_domains.html["深入瞭解"^]
+
+
+
+== 使用多因素驗證（MFA）登入SnapCenter
+
+支援MFA的網域帳戶是作用中目錄的一部分。SnapCenter
+
+*您需要的是什麼*
+
+* 您應該已經啟用MFA。
++
+如需如何啟用MFA的詳細資訊、請參閱 link:../install/enable_multifactor_authentication.html["啟用多因素驗證"]
+
+
+
+*關於此工作*
+
+* 僅支援FQDN
+* 工作群組和跨網域使用者無法使用MFA登入
+
+
+*步驟*
+
+. 從SnapCenter 本機主機桌面上的捷徑、安裝結束時提供的URL、或SnapCenter 從您的管理員提供的URL啟動支援。
+. 在AD FS登入頁面中、輸入使用者名稱和密碼。
++
+當AD FS頁面上顯示使用者名稱或密碼無效錯誤訊息時、您應該檢查下列項目：
+
++
+** 使用者名稱或密碼是否有效
++
+使用者帳戶應存在於Active Directory（AD）中
+
+** 是否超過AD中設定的允許嘗試次數上限
+** AD和AD FS是否已啟動並正在執行
+
+
+
 
 
 

@@ -238,7 +238,7 @@ NOTE: 只有在使用SnapCenter 以VMware控制器為基礎的授權時、才需
 .. 執行Open-SmConnection Cmdlet、針對SnapCenter SnapCenterAdmin帳戶、啟動與該伺服器的連線工作階段。
 .. 執行Set-SmRegitoryPassword以重設MySQL密碼。
 +
-如需Cmdlet的相關資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+如需Cmdlet的相關資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《軟件指令程式參考指南》SnapCenter"^]。
 
 
 

@@ -15,6 +15,6 @@ summary: 如果您不想使用SnapCenter 現象GUI來執行主機資源配置和
 
 如果您是在遠端外掛程式主機上執行Cmdlet、則必須執行SnapCenter 《The支援不中斷連線指令程式」、才能開啟與SnapCenter 該伺服器的連線。
 
-您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《軟件指令程式參考指南》SnapCenter"^]。
 
 如果SnapCenter 由於從SnapDrive 伺服器移除適用於Windows的功能、導致無法使用任何版本的功能、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_cmdlets_broken_when_SnapDrive_for_Windows_is_uninstalled["解除安裝適用於Windows的功能時、無法使用的Cmdlet SnapCenter SnapDrive"^]。

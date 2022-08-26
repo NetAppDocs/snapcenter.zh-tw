@@ -51,6 +51,7 @@ ASM磁碟群組中的資料檔案是SnapCenter 作爲還原複製工作流程的
 
 
 
+** 對於NVMe、應該安裝NVMe util
 
 
 * 資料LUN和記錄LUN的保護類型（例如鏡射、保存庫或鏡射保存庫）應相同、以便在使用記錄備份複製到替代主機期間、探索次要定位器。
@@ -74,4 +75,20 @@ NOTE: 您可以手動將新的複製掛載點登錄至autofs子系統。新的�
 * 您應該在/etc/lvm/lvm.conf中設定use_lvmetad = 0的值、然後停止LVM2-lvmetad服務、以便在Oracle Linux 7或更新版本、或Red Hat Enterprise Linux（RHEL）7或更新版本的儲存區域網路（SAN）環境中成功執行複製。
 * 如果您使用Oracle資料庫11.2.0.3或更新版本、且輔助執行個體的資料庫ID已使用NID指令碼變更、則應安裝13366202 Oracle修補程式。
 * 您應確保託管磁碟區的集合體應位於儲存虛擬機器（SVM）的指派集合體清單中。
+* 對於NVMe、如果必須排除任何目標連接埠的連線、您應該在/var/opt/snapcenter/SCU/etc/nvm.conf檔案中新增目標節點名稱和連接埠名稱。
++
+如果檔案不存在、您應該建立檔案、如下例所示：
+
++
+_黑名單｛_
+
++
+....
+# You can add comments by using the ‘#’ at the beginning of the line
+nn-0x<target_node_name_1>:pn-0x<target_port_name_1>
+nn-0x<target_node_name_2>:pn-0x<target_port_name_2>
+....
++
+_｝_
+
 

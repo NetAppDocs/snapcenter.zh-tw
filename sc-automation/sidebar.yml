@@ -16,10 +16,8 @@ entries:
   url: "/sc-automation/concept_interpreting_an_api_response.html"
 - title: 支援的REST API
   entries:
-  - title: 其他外掛程式支援REST API工作流程
+  - title: 支援REST API以供SnapCenter 支援Sfor Sfor Sfor Sfor Server和外掛程式
     url: "/sc-automation/reference_supported_rest_apis.html"
-  - title: Oracle資料庫支援REST API
-    url: "/sc-automation/refrence_rest_apis_supported_for_oracle_database.html"
   - title: 支援REST API以進行SnapCenter 支援的REST伺服器災難恢復
     url: "/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html"
 - title: 如何使用Swagger API網頁存取REST API

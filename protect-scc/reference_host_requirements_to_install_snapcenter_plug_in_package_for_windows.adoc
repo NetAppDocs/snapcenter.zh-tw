@@ -45,11 +45,13 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
  a| 
 必要的軟體套件
  a| 
-* Microsoft .NET Framework 4.5.2或更新版本
+* Microsoft .NET Framework 4.7.2或更新版本
 * Windows管理架構（WMF4.0或更新版本）
 * PowerShell 4.0或更新版本
 
 
 如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+
+如需.NET疑難排解資訊、請參閱： link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["無法升級或安裝不適用於沒有網際網路連線的舊系統。SnapCenter"]
 
 |===

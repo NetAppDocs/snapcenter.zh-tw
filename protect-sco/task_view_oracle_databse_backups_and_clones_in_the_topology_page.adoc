@@ -66,4 +66,4 @@ NOTE: 您無法重新命名或刪除二線儲存設備上的備份。
 
 您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。
 
-或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725["《軟件命令參考指南》SnapCenter"^] 或 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["《軟件命令參考指南》SnapCenter"^] 或 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《軟件指令程式參考指南》SnapCenter"^]。

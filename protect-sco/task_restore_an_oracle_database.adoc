@@ -160,6 +160,9 @@ NOTE: 非Data Guard資料庫不會備份重作記錄檔。對於非Data Guard資
 
 如果在備份時剪除歸檔記錄、而且您手動掛載了所需的歸檔記錄備份、則必須將掛載的備份路徑指定為外部歸檔記錄位置以供還原。
 
+
+NOTE: 在將掛載路徑列為外部記錄位置之前、您應該先確認其路徑和內容。
+
 ** http://www.netapp.com/us/media/tr-4591.pdf["NetApp技術報告4591：資料庫資料保護備份、恢復、複寫及災難恢復"^]
 ** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["ORA-00308錯誤導致作業失敗"^]
 

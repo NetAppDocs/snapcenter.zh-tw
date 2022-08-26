@@ -36,6 +36,16 @@ summary: 您可以使用SnapCenter 支援功能還原備份的Exchange資料庫�
 如果磁碟包含Exchange檔案（例如用於複寫的檔案）、則Exchange外掛程式不會在磁碟上執行完整還原。當完整還原可能影響Exchange功能時、Exchange外掛程式會執行單一檔案還原作業。
 
 * Exchange的外掛程式無法還原BitLocker加密磁碟機。
+* 可使用外掛主機SMCoreServiceHost.exe.Config檔案中的PredefinedWindows指令碼目錄金鑰來定義指令碼路徑。
++
+如有需要、您可以變更此路徑並重新啟動SMcore服務。建議您使用預設的安全路徑。
+
++
+金鑰的值可透過API：API /4.7/configsettings從交換器顯示
+
++
+您可以使用Get API來顯示金鑰的值。不支援Set API。
+
 
 
 *步驟*
@@ -104,6 +114,10 @@ NOTE: 下拉式清單中顯示的記錄數目是根據UTM。例如、如果完�
 
 +
 您可以執行指令碼來更新SNMP設陷、自動化警示、傳送記錄等等。
+
++
+
+NOTE: 預先編寫或後製指令碼路徑不應包含磁碟機或共用區。路徑應相對於指令碼路徑。
 
 . 在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。
 +

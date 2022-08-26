@@ -126,7 +126,7 @@ RAM
  a| 
 在伺服器主機和外掛主機上需要SnapCenter ：
 
-* Microsoft .NET Framework 4.5.2或更新版本
+* Microsoft .NET Framework 4.7.2或更新版本
 * Windows管理架構（WMF4.0或更新版本）
 * PowerShell 4.0或更新版本
 

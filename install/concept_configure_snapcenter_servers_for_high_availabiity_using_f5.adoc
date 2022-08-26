@@ -26,7 +26,7 @@ image::../media/sc-F5-configure-workflow.png[SC F5設定工作流程]
 * add-SmServer
 * 移除SmServerCluster
 +
-如需詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+如需詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《軟件指令程式參考指南》SnapCenter"^]。
 
 
 
@@ -37,4 +37,5 @@ image::../media/sc-F5-configure-workflow.png[SC F5設定工作流程]
 * 安裝並設定SnapCenter 好高可用度的功能後、請編輯SnapCenter 「不間斷」桌面捷徑、以指向F5叢集IP。
 * 如果SnapCenter 在伺服器之間發生容錯移轉、而且還有現有SnapCenter 的故障恢復工作階段、您必須關閉瀏覽器並SnapCenter 重新登入。
 * 在負載平衡器設定（NLB或F5）中、如果您新增的節點已部分由NLB或F5節點解析、SnapCenter 而且如果此節點無法連線至此節點、SnapCenter 則「支援服務」頁面會頻繁地在主機停機和執行狀態之間切換。若要解決此問題、您應該確定SnapCenter 兩個支援節點都能解決NLB或F5節點中的主機問題。
+* 應在所有節點上執行MFA設定的指令。SnapCenter依賴方組態應在Active Directory Federation Services（AD FS）伺服器中使用F5叢集詳細資料進行。啟用MFA後、節點層級SnapCenter 的支援功能將會遭到封鎖。
 

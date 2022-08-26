@@ -24,7 +24,7 @@ image::../media/scsql_backup_workflow.png[SCSQL備份工作流程]
 
 NOTE: 如果您選取非NetApp LUN、毀損的資料庫或正在還原的資料庫、則「資源」頁面上的「立即備份」、「還原」、「管理備份」及「複製」選項會停用。
 
-您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原、還原、驗證及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"]
+您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原、還原、驗證及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《軟件指令程式參考指南》SnapCenter"]
 
 
 

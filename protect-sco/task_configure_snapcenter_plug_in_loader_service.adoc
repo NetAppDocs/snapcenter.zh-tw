@@ -147,7 +147,7 @@ log_MAX_SIZE
  a| 
 當主機啟用CA憑證驗證時顯示為true。
 
-您可以編輯* spl.properties*檔案、或使用SnapCenter 支援程式的支援GUI或Cmdlet來啟用或停用此參數。
+您可以透過編輯spl.properties或使用SnapCenter 不禁用圖形使用者介面或Cmdlet來啟用或停用此參數。
 
 |===
 如果這些參數中有任何一個未指派給預設值、或者您想指派或變更值、則可以修改spl.properties檔案。您也可以驗證spl.properties檔案並編輯檔案、以疑難排解指派給參數值的任何相關問題。修改spl.properties檔案之後、您應該重新啟動SnapCenter 「更新程式載入程式」服務。

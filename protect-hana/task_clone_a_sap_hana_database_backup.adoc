@@ -19,9 +19,21 @@ summary: 您可以使用SnapCenter 支援功能來複製備份。您可以從主
 * 您應確保託管磁碟區的集合體應位於儲存虛擬機器（SVM）的指派集合體清單中。
 * 您無法複製檔案型備份。
 * 目標實體複製伺服器應具有與目標實體複製SID欄位相同的SAP HANA執行個體SID。
+* 對於preclone或POST clone命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否存在命令：
++
+Windows：_C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_
+
++
+對於Linux：_/var/opt/snapcenter/scc/sited_commands_list.txt_
 
 
-*關於此工作*如需有關複製切割作業限制的資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 9 邏輯儲存管理指南》 ONTAP"^]。
+
+
+NOTE: 如果命令清單中不存在這些命令、則作業將會失敗。
+
+*關於此工作*
+
+如需有關複本切割作業限制的資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 9 邏輯儲存管理指南》 ONTAP"^]。
 
 *步驟*
 
@@ -106,7 +118,7 @@ Linux機器上的Volume或qtree掛載命令：
 NFS範例：
 
 +
- mount VSERVER_DATA_IP:%{VOLUME_NAME_Clone} /mnt
+ mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
 
 
 . 在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。

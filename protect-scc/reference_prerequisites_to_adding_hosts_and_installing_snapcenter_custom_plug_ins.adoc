@@ -27,7 +27,45 @@ link:concept_develop_a_plug_in_for_your_application.html["為應用程式開發�
 
 == 一般
 
-如果您使用iSCSI、則必須執行iSCSI服務。
+如果您使用iSCSI、iSCSI服務應該會執行。
+
+
+
+== SHA512雜湊
+
+* 對於NetApp提供的自訂外掛程式、您應該確定已將自訂外掛程式檔案的SHA512雜湊新增至_custom_plugin_checksum _list_檔案。
++
+** 對於Linux主機、SHA512雜湊位於_/var/opt/snapcenter/scc/cust_plugin_checksum _list.txt_
+** 對於Windows主機、SHA512雜湊位於_C:\Program Files\NetApp\SnapCenter Plug-in Creator\etc\custom_plugin_checksum _list.txt_
++
+對於自訂安裝路徑、SHA512雜湊位於_<CUSTOM路徑>\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\custom_plugin_checksum list.txt_
+
+
+
++
+custom_plugin_checksum清單是主機SnapCenter 上自訂外掛程式安裝的一部分、作者為
+
+* 針對為應用程式建立的自訂外掛程式、您應該已執行下列步驟：
++
+.. 已產生外掛程式壓縮檔的SHA512雜湊。
++
+您可以使用像這樣的線上工具 https://emn178.github.io/online-tools/sha512_file_hash.html["SHA512雜湊"^]。
+
+.. 將產生的SHA512雜湊新增至custom_plugin_checksum清單檔案的新行。
++
+註解以#符號開頭、以識別雜湊所屬的外掛程式。
+
++
+以下是Checksum檔案中SHA512雜湊項目的範例：
+
++
+....
+#ORASCPM
+03721f567a1e4a1cb5569066b9a58af619ee12b1f8713108f81b696cfbdb81c25232fa63d6e6777a2b2a1ec068bb0a93a59a8ade71587182f8bccbe81f7e0ba6
+....
+
+
+
 
 
 

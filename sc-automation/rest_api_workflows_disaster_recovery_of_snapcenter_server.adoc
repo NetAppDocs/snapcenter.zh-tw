@@ -34,7 +34,7 @@ summary: 支援災難恢復功能、使用REST API來備份功能。SnapCenter S
 擷取現有SnapCenter 的伺服器DR備份
 
 
-NOTE: 您必須提供備份名稱和必須儲存災難恢復備份的目標路徑。
+NOTE: 您應該提供儲存災難恢復備份的目標路徑。
  a| 
 「/4.5/disstarrecovery / server/Backup」（伺服器/備份）「TarketPath={path}」（目標路徑=｛path｝）
  a| 
@@ -45,7 +45,7 @@ NOTE: 您必須提供備份名稱和必須儲存災難恢復備份的目標路�
  a| 
 2.
  a| 
-建立新的伺服器災難恢復備份。從SnapCenter 指定的伺服器災難恢復備份還原支援服務器。
+建立新的伺服器災難恢復備份。
  a| 
 /4.5/dissterrecovery / server / Backup（伺服器/備份）
  a| 
@@ -62,7 +62,6 @@ NOTE: 您必須提供備份名稱和必須儲存災難恢復備份的目標路�
 
 * 替代伺服器主機名稱應與主要伺服器相同、但IP位址可能不同。
 * 伺服器版本應與主要伺服器相同。
-* 主機名稱應與主要伺服器相同。
 * 使用SnapCenter 下列命令、確保DR備份檔案已複製到新的支援伺服器：
 +
 「xcopy <SsSOUR_Path>\<DORD_SERVER_IP>\<Folder_Path>/O /X /E /H /K｛ex：xcopy C：\DRBackup \10.225.81.114\c$\DRBackup /O /X /E /H /K｝」
@@ -73,7 +72,7 @@ NOTE: 您必須提供備份名稱和必須儲存災難恢復備份的目標路�
 
 例如10.225.81.35 SCServer1
 
-伺服器etc/host項目將不會還原。您可以從DR備份資料夾手動還原。
+伺服器etc/host檔案將無法還原。您可以從DR備份資料夾手動還原。
  a| 
 /4.5/dissterrecovery / server /還原
  a| 

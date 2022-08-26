@@ -137,6 +137,9 @@ MACs hmac-sha2-256
 * /cust_LOUSE/NetApp/snapcenter/spl/bin/spl
 
 
+
+NOTE: 如果您要管理RAC設定、非root使用者應該是Oracle使用者、而且不能只是任何非root OS使用者。
+
 *步驟*
 
 . 登入您要安裝SnapCenter 適用於Linux的支援套件的Linux主機。
@@ -262,6 +265,9 @@ MACs hmac-sha2-256
 * /custature_location / NetApp/snapcenter/spl/installal/plugins/uninstall
 * /cust_LOUSE/NetApp/snapcenter/spl/bin/spl
 
+
+
+NOTE: 如果您要管理RAC設定、非root使用者應該是Oracle使用者、而且不能只是任何非root OS使用者。
 
 *步驟*
 

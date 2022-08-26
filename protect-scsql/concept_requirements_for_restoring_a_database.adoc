@@ -41,7 +41,7 @@ https://support.microsoft.com/kb/2887595["Microsoft支援文件編號2887595：W
 * 還原資料庫之前、必須先停止所有備份與複製工作。
 * 如果資料庫大小以TB為單位、則還原作業可能會逾時。
 +
-您必須SnapCenter 執行下列命令、將RESTRESTRimeout參數的值增加至20000000 ms：Set-SmConfigSettings -Agent -configSettings @｛"RESttimeout"="20000000"｝。根據資料庫的大小、可以變更逾時值、而您可以設定的最大值為2147483648。
+您必須SnapCenter 執行下列命令、將RESTRESTRimeout參數的值增加至20000000 ms：Set-SmConfigSettings -Agent -configSettings @｛"RESttimeout"="20000000"｝。根據資料庫的大小、可以變更逾時值、而您可以設定的最大值為86400000 ms。
 
 
 

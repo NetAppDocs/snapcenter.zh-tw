@@ -93,7 +93,7 @@ NOTE: 您也可以按一下*來建立原則image:../media/add_policy_from_resour
 
 
 +
-第三方備份排程與SnapCenter 不支援的備份排程重疊時、將不受支援。您不應從Windows工作排程器和SQL Server代理程式修改排程。
+第三方備份排程與SnapCenter 不支援的備份排程重疊時、將不受支援。您不應修改排程、並重新命名在Windows排程器或SQL Server代理程式中建立的備份工作。
 
 . 在「驗證」頁面中、執行下列步驟：
 +

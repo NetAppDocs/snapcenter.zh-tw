@@ -10,7 +10,6 @@
   <block id="622c9e28dad13fa5c04d47d33d343831" category="list-text">如果主機具有與其他主機共享的資源群組、而您刪除了該主機、則資源群組也會一併刪除。</block>
   <block id="759ef57c3be2a273728558ce141e699a" category="list-text">您應該使用_remove-SmHost_ Cmdlet來移除停用或無法連線的外掛程式主機。</block>
   <block id="186767ddfa4a5b30e2b4a7d5eb5fce25" category="inline-link">《軟件指令程式參考指南》SnapCenter</block>
-  <block id="44f89507afec59f4cedb4b405c468c9c" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block></block>
   <block id="40b2be8df06289f2b15c3ba4ee7adb9d" category="list-text">移除主機所需的時間取決於備份數量和保留設定。這是因為Snapshot複本會從每個控制器中刪除、然後清除中繼資料。</block>
   <block id="4839d2f25cc35b249d5db15efa1afd75" category="paragraph">*步驟*</block>
   <block id="e3496f6d2696003cd08139c96386cc45" category="list-text">在左側導覽窗格中、按一下*主機*。</block>
@@ -44,7 +43,6 @@
   <block id="fee0bec9fecb6576229640dcf9eec620" category="paragraph">當您將主機從SnapCenter 支援環境中移除時、SnapCenter 在移除主機之前、將會先在主機上解除安裝所有外掛程式套件。</block>
   <block id="cd9cae3233179ab0aa5b93a449869d50" category="list-text">支援使用者介面可一次從一部主機移除外掛程式。SnapCenter</block>
   <block id="e4b51b04ea7a4e9b027ffb18024a9938" category="paragraph">當您使用SnapCenter Suse GUI時、一次只能在一部主機上解除安裝外掛程式。不過、您可以同時執行數個解除安裝作業。</block>
-  <block id="4c1df4d227c6def4b8391fc8b18a81bf" category="paragraph">您也可以使用_uninstall-SmHostPackage_ Cmdlet和必要的參數、從多個主機解除安裝外掛程式。您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="a4ad00e40c8d026de37f699c1cdc43f2" category="admonition">從SnapCenter 安裝了此功能的主機上解除安裝適用於Windows的功能更新套件SnapCenter 、將會損壞SnapCenter 安裝此功能的支援服務器。除非SnapCenter 您確定不再需要SnapCenter 使用此伺服器、否則請勿解除安裝適用於Windows的功能強大的功能。</block>
   <block id="b431698bc085bcde968e1e3d9582578a" category="list-text">在「受管理的主機」頁面中、選取您要從中解除安裝外掛程式或外掛程式套件的主機。</block>
   <block id="9e8fa339338bb378f91b2bc7b281c6c6" category="list-text">在您要移除的外掛程式旁邊、按一下「*移除*」&gt;「*提交*」。</block>
@@ -58,7 +56,6 @@
   <block id="31ce9f1bb2cc71cb2dc10cfb787f6377" category="list-text">啟動PowerShell。</block>
   <block id="8804fc7cd8650f0fe7f3181b69a373af" category="list-text">在「支援服務器」主機上、輸入：_Open-SMConnection -SMSbasUrl \https://SNAPCENTER_SERVER_NAME/DOMAIN_NAME_命令、然後輸入您的認證資料。SnapCenter</block>
   <block id="0262b115df575f2dc8bf11b8e4a86e10" category="list-text">使用_uninstall-SmHostPackage_ Cmdlet和必要參數來解除安裝Windows外掛程式。</block>
-  <block id="b4a5beb955c5cbaa2aaff47ef253f36d" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="5926d8282fd08537dd7e7090709f2b1a" category="summary">您SnapCenter 可以使用命令列介面來解除安裝適用於Linux的RUNS-外掛程式套件或SnapCenter 適用於AIX的RUNS-外掛程式套件。</block>
   <block id="b67e16350266a218b700f80817e7dec0" category="doc">使用CLI解除安裝適用於Linux或AIX的外掛程式套件</block>
   <block id="c557793771176243e85dc7597d5a2f77" category="list-text">請確定您已刪除排程的工作</block>
@@ -209,7 +206,6 @@
   <block id="074c2f1dacf9047766e7f8d5dce71060" category="paragraph">5 GB</block>
   <block id="a5074b94ccbd0ad683e6ad6eb63da188" category="admonition">您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使用量。所需的記錄空間會因受保護的實體數量和資料保護作業的頻率而有所不同。如果沒有足夠的磁碟空間、將不會針對最近執行的作業建立記錄。</block>
   <block id="c02f07fcd7047bf35e0bb82decca0939" category="paragraph">必要的軟體套件</block>
-  <block id="a6266f6b1ca40a6796a4b7f3fc322dd0" category="list-text">Microsoft .NET Framework 4.5.2或更新版本</block>
   <block id="43de0ba571a51d1adc60e6d05ecf8d70" category="list-text">Windows管理架構（WMF4.0或更新版本）</block>
   <block id="fd6133b32592ca288e63c1b1257f656d" category="list-text">PowerShell 4.0或更新版本</block>
   <block id="6aba9ab9639862100a3f951f105883b5" category="summary">在建立備份工作之前定義備份策略、可確保您擁有成功還原或複製資源所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您的備份策略的主要決定因素。</block>
@@ -226,7 +222,6 @@
   <block id="e174be7156154463517dfe3b864d0329" category="summary">複製工作流程包括規劃、執行複製作業及監控作業。</block>
   <block id="8c922e6a0134954b667b072d00b58ce3" category="doc">使用PowerShell Cmdlet複製備份</block>
   <block id="c90de0347e94ade70c96034e2ffca3ba" category="paragraph">您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。</block>
-  <block id="23c6ff456f76bc0f58f45a9c1f4625f8" category="paragraph">如需PowerShell Cmdlet的相關資訊、請使用SnapCenter 支援程式指令程式、或參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="623aa9b9d36889377a728b1284e5485e" category="list-text">使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。</block>
   <block id="e8afddd41cf3a716324442f7a4538460" category="list-text">列出可使用Get-SmBackup或Get-SmResource Group Cmdlet複製的備份。</block>
   <block id="ca85b74e61d8e4c683f3c66af932ac63" category="paragraph">此範例顯示所有可用備份的相關資訊：</block>
@@ -267,7 +262,6 @@
   <block id="5bdaa230bd223b63ee44dc6865402ddb" category="paragraph">您應該設定CA憑證、並在SnapCenter 伺服器和對應的外掛程式主機上部署CA憑證。您應該為外掛程式啟用CA憑證驗證。</block>
   <block id="260d48875b5f8dd6df118d96f41fae32" category="list-text">您可以使用run _Set-SmCertificateSettings_ Cmdlet來啟用或停用CA憑證。</block>
   <block id="0b8e4c21643d060ddc3ab8b77952d58c" category="list-text">您可以使用_Get-SmCertificateSettings_來顯示外掛程式的憑證狀態。</block>
-  <block id="b8fbe9ceecac57967d305713a64dd36e" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="c59169129dc76fe856feed46d028c5f7" category="list-text">選取單一或多個外掛程式主機。</block>
   <block id="b72c1a4ab7bb6fc983db42dc53c66195" category="list-text">按一下*更多選項*。</block>
   <block id="375a181d7ebb0615169d54c45e53d2bc" category="list-text">選取*啟用憑證驗證*。</block>
@@ -350,7 +344,6 @@
   <block id="131fcad5beed0c840fb92cba21bbb148" category="list-text">以恢復錯誤刪除或變更的資料</block>
   <block id="b37c1f7095772e66402cd084c5dc13a3" category="paragraph">下列工作流程顯示您必須執行複製作業的順序：</block>
   <block id="7f9567749606082611d69fd511d51593" category="image-alt">複製工作流程</block>
-  <block id="3f82ffa7b0ca89997ac00d6ec31712b5" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="0f86a1aee795e1b2600e86eb6b2722ec" category="summary">您應該SnapCenter 使用SnapCenter 「版本資訊」使用者介面（UI）來安裝「版本資訊」自訂外掛程式。如果您的環境不允許從SnapCenter ESIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、以主控台模式或無聲模式安裝自訂外掛程式。</block>
   <block id="b5c24629ead5c583e2208216205af10a" category="doc">使用命令列介面、在SnapCenter Linux主機上安裝《程式集指令集自訂外掛程式」</block>
   <block id="0f18e8aaa7478aae88b697e6b89d15f0" category="paragraph">您應該SnapCenter 使用SnapCenter 「版本資訊」使用者介面（UI）來安裝「版本資訊」自訂外掛程式。如果您的環境不允許從SnapCenter SIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、在主控台模式或無聲模式下安裝自訂外掛程式。</block>
@@ -364,12 +357,10 @@
   <block id="205817910a1a93bf11b2a09ae379895c" category="list-text">-Duser_install_DIR會指定您要安裝SnapCenter 適用於Linux的《SKED Plug-ins套件》的目錄。</block>
   <block id="294b56a283e4d5bb64865a3cf0a721fa" category="list-text">DINSTALL_LOD_NAME指定記錄檔的名稱。</block>
   <block id="550b8e3545b2126ab5138fd027e787fa" category="list-text">使用Add-Smhost Cmdlet和必要參數、將主機新增SnapCenter 至SetcServer。</block>
-  <block id="bdea7e4166f2806596dd5f8a12390b9f" category="paragraph">執行_Get-Help命令名稱_可取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="f96e2a1e803fa28017557015321ddb3a" category="list-text">登入SnapCenter 以供使用者介面或PowerShell Cmdlet上傳自訂外掛程式。</block>
   <block id="d959bbdfecd7dd6a3f75f5a871cbbe02" category="inline-link-macro">新增主機並在遠端主機上安裝外掛程式套件</block>
   <block id="0810f7315ee6a01129962550a5432379" category="paragraph">您可以參考、從UI上傳自訂外掛程式 <block ref="160cc1b049fe5d10ecf41332794586e5" category="inline-link-macro-rx"></block> 區段。</block>
   <block id="6d61da8537780fd23a681da23103b991" category="paragraph">Cmdlet說明及Cmdlet參考資訊包含更多PowerShell Cmdlet的相關資訊。SnapCenter</block>
-  <block id="b48290ffe77e85ded5168aa89f7bd2db" category="paragraph"><block ref="62a3cd23c3c7b74965b1f4da6087788f" category="inline-link-rx"></block>。</block>
   <block id="2ed40d52224af2dfedf93c8eb0550f77" category="summary">您可以使用SnapCenter 支援應用程式資料保護的功能、在主機上安裝所建立的自訂外掛程式。</block>
   <block id="3a08617a6dcc882e91018fc505870b76" category="doc">自訂SnapCenter 插件</block>
   <block id="b5c77f66454d4e3d57521e8099507412" category="paragraph">使用Java、Perl或原生樣式所建立的自訂外掛程式、可以使用SnapCenter 支援應用程式資料保護的功能、安裝在主機上。您必須先匯出外掛程式、SnapCenter 才能使用本教學課程所提供的程序將其安裝在支援主機上。</block>
@@ -785,7 +776,6 @@
   <block id="48b0f0fb43e0a3e1a7bac0922b6b61c9" category="list-text">如果您有多個資料路徑（lifs）或一個DNFS組態、您可以使用SnapCenter 資料庫主機上的CLI執行下列動作：</block>
   <block id="d3af75b5ec004883495ea045fb886b21" category="list-text">根據預設、資料庫主機的所有IP位址都會新增至複製磁碟區的儲存虛擬機器（SVM）中的NFS儲存匯出原則。如果您想要擁有特定的IP位址、或是限制為IP位址的子集、請執行Set-PreferredHostIPsInStorageExpportPolicy CLI。</block>
   <block id="34b88b9f409afc7274c8a769ee450883" category="inline-link">《軟件命令參考指南》SnapCenter</block>
-  <block id="6a37b7fb1b4365a6ae0a4e71cf0086c4" category="list-text">如果您在SVM中有多個資料路徑（LIF）、SnapCenter 則選擇適當的資料路徑（LIF）來掛載NFS複製的Volume。不過、如果您要指定特定的資料路徑（LIF）、則必須執行Set-SvmPreferredDataPath CLI。執行_Get-Help命令名稱_可取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱<block ref="b4ecb018a8c25b10d46f81f82cf1b2b6" category="inline-link-rx"></block>。</block>
   <block id="94a5e03dcafcb993f53258c83811415f" category="list-text">如果SnapVault 您想要備份複寫、請設定SnapMirror和SnapMirror。</block>
   <block id="17f9957a5b4dff4ca41989ac66b4057b" category="list-text">確保主機上的任何其他應用程式都不會使用連接埠9090。</block>
   <block id="4163f599bc524b1d234745caf9826a63" category="paragraph">除了SnapCenter 其他連接埠SnapCenter 之外、連接埠9090也必須保留供選購的插座使用。</block>
@@ -800,7 +790,6 @@
   <block id="33e8da2f20646df222fc0acf35201fe4" category="doc">備份自訂外掛程式資源</block>
   <block id="b9721a35a6c374ded595576ccbd2f789" category="paragraph">下列工作流程顯示您必須執行備份作業的順序：</block>
   <block id="f395a8aee7b6b7007a1b6a64b54468f1" category="image-alt">備份工作流程</block>
-  <block id="7a39768e6fced36f67a92946da3e9eed" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱<block ref="30086a18cf21b3d909c213d70f40a693" category="inline-link-rx"></block></block>
   <block id="09b368e7a40c6562c6eb5235c4eda0ba" category="summary">在安裝SnapCenter 適用於Linux的支援套件之前、您應確保主機符合要求。</block>
   <block id="ac33edef4526164e3c7c9a4df9986310" category="doc">安裝SnapCenter 適用於Linux的支援功能外掛套件的主機需求</block>
   <block id="43574ab73a6cbc674506ff003387dcb1" category="paragraph">作業系統</block>
@@ -1064,7 +1053,6 @@
   <block id="5bfdbe319f93f982db7e2e53d844bd74" category="list-text">建立KDS根金鑰、為GMSA中的每個物件產生唯一的密碼。</block>
   <block id="35c239ad892c492785a568f43643a49b" category="list-text">對於每個網域、請從Windows網域控制器執行下列命令：add-KDSRootKey -EffectiveImmedia</block>
   <block id="4e2c07bd931da6c7ec41ee4923c33de0" category="list-text">建立及設定GMSA：</block>
-  <block id="64f0c9a3329f7826505496e99f5b6257" category="list-text">建立使用者群組帳戶。</block>
   <block id="e9311390b1566f1587fec0689b110903" category="list-text">新增電腦物件至群組。</block>
   <block id="f22d222d43494a76b9ced73084b174f7" category="list-text">使用您剛建立的使用者群組來建立GMSA。</block>
   <block id="cabbc139b7f74771c47e3eb24d94c92b" category="paragraph">例如、</block>
@@ -1179,7 +1167,6 @@
   <block id="d586cfbb655ff9a83e5820c52931584f" category="doc">還原自訂外掛程式資源</block>
   <block id="f221802dd348fa7fec376c674a7bceda" category="paragraph">下列工作流程顯示您必須執行還原作業的順序：</block>
   <block id="e30c3d908a4ed515e16791b672cc0709" category="image-alt">還原工作流程</block>
-  <block id="20069e18e2a94f3347b927725de71769" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需PowerShell Cmdlet的相關資訊、請使用SnapCenter 支援程式指令程式、或參閱<block ref="30086a18cf21b3d909c213d70f40a693" category="inline-link-rx"></block>。</block>
   <block id="5e398ea531b7d56ad433ce2103049eab" category="summary">決定所需備份工作數目的因素包括資源大小、使用的磁碟區數目、資源變更率、以及服務層級協議（SLA）。</block>
   <block id="fee335c3c26419e1b2971157844984a7" category="doc">所需的備份工作數</block>
   <block id="8b3a2edf035fc93730de54663ee89cc2" category="paragraph">決定所需備份工作數目的因素包括資源大小、使用的磁碟區數目、資源變更率、以及服務層級協議（SLA）。</block>
@@ -1189,7 +1176,6 @@
   <block id="bd5309e59a4bca83b633c90ae5daf38b" category="paragraph">您可以使用SnapCenter 支援ONTAP SnapMirror技術的支援功能來在另一個Volume上建立備份集的鏡射複本、ONTAP SnapVault 並使用支援此技術的支援功能來執行磁碟對磁碟備份複寫、以符合標準及其他治理相關用途。在執行這些工作之前、您必須先設定來源與目的地磁碟區之間的資料保護關係、然後初始化關係。</block>
   <block id="9b646613b64beb84f0dd23de8375c5b4" category="admonition">如果您是SnapCenter 從NetApp SnapManager 產品來到這個地方、並且對您設定的資料保護關係感到滿意、您可以跳過本節。</block>
   <block id="6ff146878a4540cb5c56e41c5dc907df" category="paragraph">資料保護關係會將主要儲存設備（來源Volume）上的資料複寫到次要儲存設備（目的地Volume）。當您初始化關係時、ONTAP 將來源磁碟區上參照的資料區塊傳輸到目的地磁碟區。</block>
-  <block id="dd91d992ea162a54fe948382dc6122fb" category="admonition">不支援SnapMirror與支援等量資料（*主要*&gt;*鏡射*&gt;* Vault *）之間的串聯關係。SnapCenter SnapVault僅使用扇出關係（*主*&gt;*鏡射*、*主*&gt;* Vault *）。</block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="inline-link">本文檔 ONTAP</block>
   <block id="85f4322e48905f6a2043ad68d659cc9b" category="paragraph">支援管理版本彈性的SnapMirror關係。SnapCenter如需版本靈活的SnapMirror關係及其設定方式的詳細資訊、請參閱<block ref="8f4b16b80a7cbb7edba7f6aa6efedcf1" category="inline-link-rx"></block>。</block>
   <block id="6ae61d1454f759ea3eb40a95ec0ab1b7" category="admonition">不支援*同步鏡射*複寫。SnapCenter</block>
@@ -1398,7 +1384,6 @@
   <block id="e4eeb55e3e0cd2267e0daa6e20349545" category="list-text">使用Get-SmCloneReport Cmdlet檢視複製工作詳細資料、以驗證備份是否成功複製。</block>
   <block id="46ca186cb22f8dea3bb75049b7f0e17e" category="paragraph">您可以檢視詳細資料、例如複製ID、開始日期和時間、結束日期和時間。</block>
   <block id="8f088fc353589a53b22d09fce118b2a6" category="doc">設定SnapCenter SAP HANA資料庫的效能分析外掛程式認證</block>
-  <block id="d1c9be42188126d7cdb36006987f8674" category="paragraph">請勿在Windows的密碼中使用雙引號（"）。</block>
   <block id="8c7f76f09d0b2b40d4ffd4ef78ab735b" category="paragraph">完成認證設定之後、您可能會想要在「使用者與存取」頁面中指派認證維護給使用者或使用者群組。</block>
   <block id="3983634b494fae1a9edb600d9c4a9292" category="summary">支援實體機器和虛擬機器（VMs）上的各種儲存類型。SnapCenter安裝SnapCenter 適用於SAP HANA資料庫的支援功能之前、您必須先確認儲存類型的支援。</block>
   <block id="0b42d90235dd8ef6ec97a9268c77b113" category="doc">SAP HANA資料庫的支援儲存類型SnapCenter</block>
@@ -1653,7 +1638,6 @@
   <block id="ff9ea1d5d9e34a2e53ae21ce93b5318b" category="list-text">您應該已備份資源或資源群組。</block>
   <block id="44f04e37a47a11aeeedb139b1fbfe8d6" category="list-text">您無法複製檔案型備份。</block>
   <block id="a297443b1c16f57079ed8452e38d60a4" category="list-text">目標實體複製伺服器應具有與目標實體複製SID欄位相同的SAP HANA執行個體SID。</block>
-  <block id="e3c97b7280ee6648e1258a38646e21fe" category="paragraph">*關於此工作*如需有關複製切割作業限制的資訊、請參閱<block ref="3ae98799f9586e965a749204c2b3e8f9" category="inline-link-rx"></block>。</block>
   <block id="03217f5a3bcb2ad8ec13a7298d3c340e" category="paragraph">這些資源會連同類型、主機、相關資源群組和原則、以及狀態等資訊一起顯示。</block>
   <block id="4da4dfc97db1c4c71939b200e576ecc4" category="list-text">在「位置」頁面中、執行下列動作：</block>
   <block id="01b968d19930c6a09e89b9a532f5e28c" category="paragraph">外掛程式主機</block>
@@ -1699,7 +1683,6 @@
   <block id="4716a9a8179e1e4a85b0d1c8b60a95fc" category="doc">備份SAP HANA資源</block>
   <block id="15fda0d23b806181f091668c1c1e55bf" category="paragraph">您可以建立資源（資料庫）或資源群組的備份。備份工作流程包括規劃、識別備份資料庫、管理備份原則、建立資源群組及附加原則、建立備份及監控作業。</block>
   <block id="6a9192ab011aeeddc22793310691a1e4" category="image-alt">SAP_HANA備份工作流程</block>
-  <block id="f46b2f71b2fe9da7f4e43792fb0b9b85" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。Cmdlet說明及Cmdlet參考資訊包含更多PowerShell Cmdlet的相關資訊。SnapCenter<block ref="62a3cd23c3c7b74965b1f4da6087788f" category="inline-link-rx"></block>。</block>
   <block id="59c6ba47781a041c15edfebc84472167" category="summary">利用此解決方案、您可以為SAP HANA資料庫執行不同類型的還原作業。SnapCenter</block>
   <block id="9d7dc02e84845aa22657a3f1578de42e" category="doc">SAP HANA資料庫支援的恢復作業類型</block>
   <block id="a359f2067235b3dbb20ab8b03d63be5a" category="list-text">將資料庫恢復至最新狀態</block>
@@ -1821,7 +1804,6 @@
   <block id="8f0e9744b1000b3672d2bdcf50a74d27" category="list-text">對於Snapshot複製型備份作業、請確定所有租戶資料庫均有效且有效。</block>
   <block id="ae75553103cbeaaaa3b0e4002805ae6f" category="paragraph"><block ref="ae75553103cbeaaaa3b0e4002805ae6f" category="inline-link-macro-rx"></block></block>
   <block id="961e6abd0c7a72786d3641390a4dea5f" category="list-text">如果您想要在一或多個租戶資料庫關閉時建立檔案型備份、請使用「Set-ConfigSmSettings'指令程式」、將HANA內容檔案中的參數參數設定為* Yes*。</block>
-  <block id="942d4608d2f485c3d83b2faf1e7746fc" category="paragraph">您可以執行Get-Help _command_name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="30086a18cf21b3d909c213d70f40a693" category="inline-link-rx"></block></block>
   <block id="a2286f0c6fbfecb0501c43aa965242b6" category="list-text">在「資源」頁面中、根據資源類型篩選*檢視*下拉式清單中的資源。</block>
   <block id="127c10f681ffba1b9fa91c9bf92bcbc8" category="paragraph">按一下*<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*、然後選取主機名稱和資源類型以篩選資源。然後按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
   <block id="0ab7e5f8a6ae4c1833f0606e717b782e" category="list-text">在「資源」頁面中、選取*使用Snapshot COPU*的自訂名稱格式、然後輸入您要用於Snapshot複本名稱的自訂名稱格式。</block>
@@ -2338,7 +2320,6 @@
   <block id="c7f88523eb9618512db4280fed17383f" category="paragraph">此範例會建立新的Exchange資料庫可用度群組（DAG）備份資源群組、其中包含指定的原則和資源：</block>
   <block id="16cb514584e7d79dbe2308dbbf4bbf37" category="paragraph">此範例建立新的次要儲存設備備份：</block>
   <block id="691fa56b0f1b19ab3099a9a59ce15434" category="paragraph">此範例顯示特定工作ID的工作摘要報告：</block>
-  <block id="46f78c3c5614c36770dfae3f22ede549" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、請參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="ec053c308e147d0958e28a0ea54218e5" category="summary">如果您需要重新複本複本複本、例如複本毀損時、您可以使用SnapCenter 更新功能重新複製到最新的備份。</block>
   <block id="aabc88376ed488867dcbd5ebe7ee5f24" category="doc">已重新建立被動式Exchange節點複本</block>
   <block id="95ae09e6950aff657a0ec2b6e13f37f0" category="list-text">您必須使用SnapCenter 的是適用於Exchange 4.1或更新版本的版本、以及外掛程式。</block>
@@ -2352,7 +2333,6 @@
   <block id="3f1f9e5412a3186c0134e9b8b8e5c92e" category="list-text">在「管理複本」頁面中、按一下*重新編製*。</block>
   <block id="8883675804ac5bbba5130e11641b79a5" category="list-text">從重新建立精靈的不良資料庫複本清單中、選取您要重新建立的複本、然後按一下*下一步*。</block>
   <block id="b68a364434a8e03152283d0df0545181" category="list-text">在「Host（主機）」視窗中、選取您要重新連接的備份主機、然後按一下「* Next*（*下一步*）」。</block>
-  <block id="81d75f55d874a1528428add2f9ce0e46" category="list-text">在「指令碼」頁面中、分別輸入在重新加載作業之前或之後應執行的指令碼或指令碼路徑和引數。</block>
   <block id="a6b1b92e7a6b44cfb15470a802c2480a" category="paragraph">例如、您可以執行指令碼來更新SNMP設陷、自動化警示、傳送記錄等等。</block>
   <block id="ef6586c0fa57d6bd830cb6e333716d60" category="list-text">您可以展開頁面底部的「活動」面板來檢視工作狀態。</block>
   <block id="17bc3a06ae36468b0fead1703d635b48" category="admonition">如果被動式資料庫複本位於非NetApp儲存設備上、則不支援重新載入作業。</block>
@@ -2481,7 +2461,6 @@
   <block id="0f14951f7fd1d656890413b5b92b9059" category="summary">您可以將SnapCenter 一或多個備份還原至使用中的檔案系統、使用此功能來還原Exchange資料庫。</block>
   <block id="c37b0bdb3c7a24db287508745921aed4" category="paragraph">下列工作流程顯示您必須執行Exchange資料庫還原作業的順序：</block>
   <block id="2d1eae8ec36b7998c11e835920d1606c" category="paragraph"><block ref="2d1eae8ec36b7998c11e835920d1606c" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="457eb1183b24124ec56f79c4d9de8132" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份與還原作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式指令程式說明或參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="588f36766e9f6a960b4f3c2a83a4a69b" category="summary">您可以取消佇列中的還原工作。</block>
   <block id="ba8cc99b4cfaa3f9d3c3f0a8380082c0" category="doc">取消Exchange資料庫的還原作業</block>
   <block id="291fce3784ace5b5b71f5f0d1a3acecd" category="paragraph">您應以SnapCenter 「管理員」或「工作擁有者」身分登入、以取消還原作業。</block>
@@ -2509,8 +2488,6 @@
   <block id="e51e9b753df6cec73dab9f0a39974009" category="paragraph">「-IsRecoverMount：$true」參數可讓您在還原後掛載資料庫。</block>
   <block id="4507e0d1a42287b926181e4cb9fda1cf" category="summary">提供SnapCenter 此版本的《支援服務器》和SnapCenter 《支援服務器的功能》外掛套件的重要資訊、包括修正問題、已知問題、注意事項及限制。</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">版本資訊</block>
-  <block id="15be0b5e81ab1c2797427268970997ce" category="inline-link">《軟件4.6發行說明》SnapCenter</block>
-  <block id="82cbb548b23f745bef85b6460d2a6566" category="paragraph">如需詳細資訊、請參閱<block ref="fa7633328a95f6eca7e9f1f0db54d87c" category="inline-link-rx"></block>。</block>
   <block id="57cb4604cb5a08f7df53f4664acf802c" category="summary">您可以在Windows伺服器上設定Internet Information Services（iIS\）、以便在需要啟用SnapCenter Active Directory的讀取權限時建立自訂的應用程式集區帳戶。</block>
   <block id="852f965b48b17a73b0751ade963c60d7" category="doc">設定「IIS應用程式集區」以啟用Active Directory讀取權限</block>
   <block id="455df4e09a44d6f772e16ebd873a4ec2" category="paragraph">您可以在Windows伺服器上設定Internet Information Services（IIS）、以便在需要啟用Active Directory的SnapCenter 讀取權限以供使用時建立自訂的應用程式集區帳戶。</block>
@@ -2910,7 +2887,6 @@
   <block id="d9ea666bfbe8444fa88062f4874d0b22" category="list-text">add-SmServerCluster</block>
   <block id="b8313647a63a15fb0ab7d46b778ba618" category="list-text">add-SmServer</block>
   <block id="cd8ca61b82992f73c74f955bf0f47f20" category="list-text">移除SmServerCluster</block>
-  <block id="9bbc77acca4f7d85256ffbd5b29e8f82" category="paragraph">如需詳細資訊、請參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="e79efa970901c1191fca1b278b2ff2d9" category="section-title">其他的F5組態資訊</block>
   <block id="ed9ff4b1a617150f86eae1035449f732" category="list-text">安裝並設定SnapCenter 好高可用度的功能後、請編輯SnapCenter 「不間斷」桌面捷徑、以指向F5叢集IP。</block>
   <block id="d04228e20798411b28cae6cb653df92c" category="list-text">如果SnapCenter 在伺服器之間發生容錯移轉、而且還有現有SnapCenter 的故障恢復工作階段、您必須關閉瀏覽器並SnapCenter 重新登入。</block>
@@ -3088,7 +3064,6 @@
   <block id="59d694aee32de613287d82bc05ca6d1c" category="list-text">應用程式開發功能</block>
   <block id="21d38223d7b05411dcffa3cf951f4951" category="list-text">.NET擴充性4.5</block>
   <block id="4a4a6b90f0cd2faf953337dd66e1ebb5" category="list-text">應用程式初始化</block>
-  <block id="9023e46c166a4b096a3179a30c9854be" category="list-text">ASP.NET 4.5</block>
   <block id="523b9bc8b75666ec69cfaf422f6c2140" category="list-text">伺服器端隨附</block>
   <block id="ab0b54125d50a09e75f3829e7e90b8ea" category="list-text">WebSocket傳輸協定</block>
   <block id="897489f143e2ade13f1fadcd00d4cc7b" category="list-text">管理工具</block>
@@ -3096,9 +3071,6 @@
   <block id="78c975d196302e5a815b5039fb07ae94" category="paragraph">「IIS管理指令碼與工具」</block>
   <block id="c198bc954443adcf11c90c285f3d7c07" category="list-text">IIS管理服務</block>
   <block id="80d3af8b299e19c823acbbffefc4856a" category="list-text">網路管理工具</block>
-  <block id="fdd4a5284f807c2c24b3050d4fc2dfdd" category="paragraph">+.NET Framework 4.5.2功能+</block>
-  <block id="97c2da657b3406a19ef51bb140c13e2d" category="list-text">NET Framework 4.5.2</block>
-  <block id="d4cb69a68c9a18dbda1102ce9740cd6e" category="list-text">ASP.NET 4.5.2</block>
   <block id="623ef35114e69633221d2c9bf99f6cab" category="list-text">Windows Communication Foundation（WCF）HTTP Activation45</block>
   <block id="c38d32373eca3e6335e44b42893f0034" category="list-text">TCP啟動</block>
   <block id="cb6ddd90b08469e2479460ec34538fe2" category="list-text">HTTP啟動</block>
@@ -3210,7 +3182,6 @@
   <block id="059fe1123e48629ed1d6514462f294b2" category="doc">啟用CA認證SnapCenter 以供使用</block>
   <block id="07d333070d0435446600383ad0be9b41" category="list-text">您可以使用Set-SmCertificateSettings Cmdlet來啟用或停用CA憑證。</block>
   <block id="1962fbbcfa72e74639e8c071188af514" category="list-text">您可以SnapCenter 使用Get-SmCertificateSettings Cmdlet來顯示驗證伺服器的憑證狀態。</block>
-  <block id="4280c9202b1c158150f778ee64cbef6f" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="1240073aadeb78a3e72b1cedfb5cec2f" category="list-text">在「設定」頁面中、瀏覽至*設定*&gt;*全域設定*&gt;* CA憑證設定*。</block>
   <block id="a6e94fec2cfcadd0e75ac025786feb7f" category="list-text">*<block ref="ce7f8fe6cf825357e942960470acb5bc" category="inline-image-macro-rx" type="image"></block>*表示沒有啟用CA憑證或指派給外掛程式主機。</block>
   <block id="e4dbf1e5d099c4253a603227e4b3bc08" category="summary">您應該設定儲存系統SnapCenter 、讓您能夠存取ONTAP 不必要的資料儲存設備、以執行資料保護和資源配置作業。您可以新增獨立的SVM或由多個SVM組成的叢集。</block>
@@ -3431,7 +3402,6 @@
   <block id="68dae2573ac7874d6dd234af4fa4c752" category="list-text">在伺服SnapCenter 器上、開啟PowerShell視窗以重設MySQL密碼。</block>
   <block id="aa5c2438bb48bc6f9fc91294d9f5f2c1" category="list-text">執行Open-SmConnection Cmdlet、針對SnapCenter SnapCenterAdmin帳戶、啟動與該伺服器的連線工作階段。</block>
   <block id="677b5668995b5d565b03294fb7b16727" category="list-text">執行Set-SmRegitoryPassword以重設MySQL密碼。</block>
-  <block id="cb3b684dc2864dc05647bd9f8bf212d5" category="paragraph">如需Cmdlet的相關資訊、請參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="bdc5e2c886d9f1d7c2db87ea0140c771" category="list-text">開啟命令提示字元並執行mySQL -u root -p以登入MySQL。</block>
   <block id="4c6cef07724f31f81802bd1558b3066b" category="paragraph">MySQL會提示您輸入密碼。輸入您在重設密碼時提供的認證資料。</block>
   <block id="730761cf69bd21652f5f5b9dc5170f63" category="list-text">從資料庫移除試用授權：</block>
@@ -3576,7 +3546,6 @@
   <block id="1f351ed7a1738376fcd9632d3db7e0dd" category="paragraph">預設的GUI URL是安全連線至SnapCenter 安裝了該伺服器的預設連接埠8146（_\https://server:8146_）。如果您在SnapCenter 安裝過程中提供不同的伺服器連接埠、則會改用該連接埠。</block>
   <block id="e559ce2499d2c5cb24993b681f9f514b" category="inline-link">無法從外部網路存取叢集IP位址</block>
   <block id="59985d4c0ad9df334fed4d44ff0991fa" category="paragraph">若要部署高可用度（HA）、您必須SnapCenter 使用虛擬叢集IP _\ https://Virtual_Cluster_IP_or_FQDN:8146_來存取功能。如果您在Internet Explorer（IE）中瀏覽至_https://Virtual_Cluster_IP_or_FQDN:8146_時沒有看到SnapCenter 此功能、則必須在每個外掛主機的IE中、將虛擬叢集IP位址或FQDN新增為信任的網站、或是在每個外掛主機上停用IE增強安全功能。如需詳細資訊、請參閱<block ref="f89494b555e2d92920e0ac70f10ea089" category="inline-link-rx"></block>。</block>
-  <block id="2a6de9140a0acacd2a86268c3b788677" category="paragraph">除了使用SnapCenter 還原GUI、您還可以使用PowerShell Cmdlet建立指令碼來執行組態、備份及還原作業。每SnapCenter 個版本的各個版本可能都有一些Cmdlet變更。。<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block> 有詳細資料。</block>
   <block id="d6b96565adbb70c53ae14b5070be8651" category="admonition">如果SnapCenter 您是第一次登入到此資訊中心、則必須使用安裝程序中提供的認證登入。</block>
   <block id="31a7d97d557b06d288bae46db80c8d67" category="list-text">從SnapCenter 本機主機桌面上的捷徑、安裝結束時提供的URL、或SnapCenter 從您的管理員提供的URL啟動支援。</block>
   <block id="578cd680813c62df612b39c490acb2bc" category="list-text">輸入使用者認證資料。</block>
@@ -3811,7 +3780,6 @@
   <block id="f19bda06b34cef66f42b2a2700dbd329" category="section-title">監控安裝狀態</block>
   <block id="7a617b0be4f39d4aa3728e5b589f610a" category="doc">使用UNIX命令複製Oracle資料庫備份</block>
   <block id="ea8127768d4129b7c37a087dcade33cf" category="paragraph">您應該執行下列命令、以建立Oracle資料庫實體複製規格檔案、並啟動複製作業。</block>
-  <block id="0545c6ee2fa29cdba737b6d9218f01b1" category="paragraph">您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="b4ecb018a8c25b10d46f81f82cf1b2b6" category="inline-link-rx"></block>。</block>
   <block id="8f13a433d171fd7f3247ac54ccf09c57" category="list-text">從指定的備份建立Oracle資料庫複製規格：_New-SmOracleClonewor__</block>
   <block id="9d7d7be8b1bc025fbe4393721048e1bc" category="admonition">如果次要資料保護原則是統一化的鏡射保存庫、則只需指定-IncludeSecondaryDetails。您不需要指定-SecondaryStorageType。</block>
   <block id="24ef1fcf0ca84aee2e7486698f0aebdc" category="paragraph">此命令會自動為指定的來源資料庫及其備份建立Oracle資料庫複製規格檔案。您也必須提供複製資料庫的SID、以便所建立的規格檔案具有您要建立之複製資料庫的自動產生值。</block>
@@ -3839,9 +3807,7 @@
   <block id="ba616d0f67fed92e5664508021cbd276" category="list-text">支援NFS、iSCSI、Fibre Channel（FC）、RDM、VMDK over NFS和VMFS、以及ASM over NFS、SAN、RDM和VMDK</block>
   <block id="abd96a9e67c87700d0ddbbf79ca1ad42" category="list-text">支援ONTAP 精選LUN地圖（SLM),功能如所述</block>
   <block id="fcc8a219537ae52cbcb4de4b42305ef7" category="paragraph">根據預設、「SLM-功能」會定期探索沒有最佳化路徑的LUN、並加以修正。您可以修改位於/var/opt/snapcenter/SCU/依此類推 的scu.properties檔案中的參數來設定SLM..</block>
-  <block id="71f6e71b686a08a4d00fa109e43bfb73" category="list-text">您可以將啟用午餐路徑監控的值設為假、以停用此功能。</block>
   <block id="1988e9c8cf124cb346a67d52ea613567" category="inline-link">《SAN管理指南》（英文）ONTAP</block>
-  <block id="b930a598345b176aff57041fa5fd987d" category="list-text">您可以指定LUN路徑自動固定的頻率、方法是將lunpath_監 控時間間隔的值（以小時為單位）指派給lunpath_監 控時間間隔。如需有關SLM,請參閱<block ref="cb74c6abbb61537bc6ce7c3d4eb82b8a" category="inline-link-rx"></block>。</block>
   <block id="dae71de3db9b8ca8a505e2ba72dca103" category="summary">還原與還原工作流程包括規劃、執行還原與還原作業、以及監控作業。</block>
   <block id="d75122950244af54ca4e4eec97be936c" category="doc">使用UNIX命令還原及還原Oracle資料庫</block>
   <block id="22b572eba58965669b192b1084592874" category="paragraph">您應該執行下列命令、以建立與SnapCenter 該伺服器的連線、列出備份並擷取其資訊、以及還原備份。</block>
@@ -3920,7 +3886,6 @@
   <block id="d7e2fe8d57177433ec8525953525ce2b" category="list-text">如果已指定主要實體複本規格檔案、但未選取原則的次要更新選項、則會在主要系統上建立備份、並從主要系統建立實體複本。</block>
   <block id="eebf4dbc30cb79473f44b0746798f0d8" category="list-text">執行_Refresh-SmClon_。</block>
   <block id="2dca23ddca1615e63d449ef4dd543431" category="paragraph">如果作業失敗並顯示「PL-SCO-20032：CanExecute operation失敗、並顯示錯誤：PL-SCO-30031：REDO記錄檔+SC_2959770772_clmdb/clmdb/redog/redo01_01.log exists」錯誤訊息、請為「-WaitToTrigerClerClone」指定較高的值。</block>
-  <block id="d33697301f8bc34548c09484ec3d0acc" category="paragraph">如需UNIX命令的詳細資訊、請參閱<block ref="b4ecb018a8c25b10d46f81f82cf1b2b6" category="inline-link-rx"></block>。</block>
   <block id="8d70bdd589ad1d5053591608060dd666" category="summary">資源是SnapCenter 由Oracle管理的主機上的Oracle資料庫。您可以將這些資料庫新增至資源群組、以便在探索可用的資料庫之後執行資料保護作業。</block>
   <block id="b235b91c85e6ff24696d87bf417b2277" category="doc">確定Oracle資料庫是否可供備份</block>
   <block id="14391af03493ba1cebd9404bb5bda74c" category="list-text">如果資料庫位於虛擬機器磁碟（VMDK）或原始裝置對應（RDM）上、您必須部署SnapCenter VMware vSphere的「The VMware Plug-in」、並以SnapCenter 「Sfor VMware vSphere」登錄外掛程式。</block>
@@ -4424,7 +4389,6 @@
   <block id="8c3518e0223eba2a595a920ea1fa79f3" category="list-text">如果需要還原與還原*、請選取*變更資料庫狀態、將資料庫狀態變更為執行還原與還原作業所需的狀態。</block>
   <block id="e542bedc80779f8ba91bf83659fd05f3" category="list-text">在「恢復範圍」頁面中、執行下列其中一項動作：</block>
   <block id="ce901231ab959bb3de1942f73622bbda" category="list-text">如果您要恢復到特定的系統變更編號（SCN）、請選擇*直到SCN*、然後指定SCN和輔助目的地。</block>
-  <block id="212c6ed56e5ffa4096a163864fb51f7c" category="list-text">如果要恢復到特定的日期和時間、請選取*日期和時間*、然後指定日期和時間以及輔助目的地。當您指定SCN或日期和時間時、SnapCenter 功能表會列出執行PIGR所需的備份、但不會對其進行目錄化和掛載。您應該手動掛載及目錄PITR所需的記錄備份。</block>
   <block id="787a758f98c660998f056235d371c22c" category="list-text">在「PreOps」頁面中、輸入您要在還原作業之前執行之預先記錄的路徑和引數。</block>
   <block id="ad068b9fd01b2cf6ac4e86169a89e611" category="paragraph">您應將預先編寫的內容儲存在/var/opt/snapcenter/spl/scripts路徑或此路徑內的任何資料夾中。根據預設、會填入/var/opt/snapcenter/spl/scripts路徑。如果您在此路徑中建立任何資料夾來儲存指令碼、則必須在路徑中指定這些資料夾。</block>
   <block id="172ee52d3388085fcb7367caffd5e053" category="paragraph">利用此功能、您可以在執行pretced和postscript時、使用預先定義的環境變數。SnapCenter <block ref="13fb589382a148f86473ae6fb30d81c9" category="inline-link-macro-rx"></block></block>
@@ -4689,7 +4653,6 @@
   <block id="8d966b8b205c32c6438a2938fdfb039e" category="paragraph">/`opt/NetApp/snapcenter/spl/bin/sccli Set-SmConfigSettings-ConfigSettingsType外掛程式-PluginCode SCO-ConfigSettings "key=oracle_plugin_rman_Catalog_timeout,value=user_defined_value"</block>
   <block id="7a5e7be0933e3148df8c1083de81b020" category="paragraph">修改參數值後SnapCenter 、請執行下列命令、重新啟動「RESTART Plug-in Loader（SPL）」服務：</block>
   <block id="b2db2a6d191f5b90f084ac27e053d277" category="paragraph">/`opt/NetApp/snapcenter/spl/bin/spl recovery（選擇/NetApp/snapcenter/spl/bin / spl重新啟動）</block>
-  <block id="d4cbdb8253dd176060a4d8118de0c9e4" category="paragraph">您可以執行Get-Help命令名稱來取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱<block ref="b4ecb018a8c25b10d46f81f82cf1b2b6" category="inline-link-rx"></block>。</block>
   <block id="7004c590f0cedfca0304271af0b72b63" category="section-title">使用主要或次要儲存磁碟區驗證備份複本</block>
   <block id="b84d1d8c09293020f3483a11ab0dddc9" category="paragraph">您可以在主要儲存磁碟區或SnapMirror或SnapVault 支援的二線儲存磁碟區上驗證備份複本。使用次要儲存磁碟區進行驗證、可降低主要儲存磁碟區的負載。</block>
   <block id="f9265969cb3180ece98659aeee441d5a" category="paragraph">當您驗證主儲存磁碟區或次儲存磁碟區上的備份時、所有的主要與次要Snapshot複本都會標示為已驗證。</block>
@@ -4726,7 +4689,6 @@
   <block id="d832fec799a3a70760ed7fe13bef388d" category="list-text">如果您已使用Oracle Recovery Manager（RMAN）將備份編錄為目錄、則無法重新命名這些已編製目錄的備份。</block>
   <block id="123f58b5f6c3fc41829ae40b968fcda4" category="paragraph">如果指派給Snapmirror狀態更新的值較少、則即使資料和記錄磁碟區已成功保護、拓撲頁面上也不會列出鏡射和Vault備份複本。您應該使用_Set-SmConfigSettings_ PowerShell Cmdlet來增加指派給SnapmiraporStatusUpdateWaitTime的值。</block>
   <block id="11dbb257c91d345a6a0cee430763b610" category="paragraph">您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。</block>
-  <block id="b9c64e3e65f940f13e1b882eb9e11c89" category="paragraph">或者、您也可以參閱<block ref="b4ecb018a8c25b10d46f81f82cf1b2b6" category="inline-link-rx"></block> 或<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="a2c5edfd8fcb805a2b5ef469b4ff750b" category="summary">您必須先定義策略、才能還原及還原資料庫、以便順利執行還原及還原作業。</block>
   <block id="1bd786b247e56e44c613fc332acb579b" category="doc">定義Oracle資料庫的還原與還原策略</block>
   <block id="9530fa5b5c35fa08bcada76c4b0cb7c0" category="section-title">支援還原與還原作業的備份類型</block>
@@ -4855,7 +4817,6 @@
   <block id="6ad0c4eabf145f10088d2d96c2e233bf" category="list-text">您應該已經確認、如果該資料庫已啟用二線保護、則屬於資料庫的所有資料磁碟區和歸檔記錄磁碟區都會受到保護。</block>
   <block id="55abc85a57dc4521b07b9255c349e483" category="list-text">您應該已確認ASM磁碟群組中含有檔案的資料庫應處於「安裝」或「開啟」狀態、以便使用Oracle DBVERIFY公用程式來驗證其備份。</block>
   <block id="3d963ba9da839641b29329d2008be606" category="list-text">您應該已確認Volume掛載點長度不超過240個字元。</block>
-  <block id="a1f54b64432f0747509066434d9b647c" category="list-text">如果要備份的資料庫很大（TB大小）、則應將RESTimeout的值增加至SnapCenter 32伺服器主機中的_C：\Program Files\NetApp \SMCore\SMCoreServiceHost.exe.config_檔案中的86400000秒。</block>
   <block id="7d61484685130c3cdd5533d35c2e1a49" category="paragraph">修改這些值時、請確保沒有執行中的工作、SnapCenter 並在增加值後重新啟動「WSSMCore」服務。</block>
   <block id="9349160e3cfa891f6e3eab62e5e808aa" category="summary">您可以使用SnapCenter 功能介紹來複製應用程式磁碟區備份、分割複本、以及刪除複本。</block>
   <block id="bfea201e67b6d8c8dfeba47e522016aa" category="doc">複製應用程式Volume備份</block>
@@ -4988,7 +4949,6 @@
   <block id="69e42ea21f7ea24c6b6f4e546e5fd834" category="paragraph">Check Alignment of PHs&gt;`/sccli Get-SmBackup -BackupNamediskGroupname_sid_backupid-listmountinfo'</block>
   <block id="bc22dd302511c4acf4836040c65325d5" category="list-text">若要擷取備份ID、請執行下列命令：</block>
   <block id="a00ce87c37f466b173bc4525b9e62be8" category="paragraph">"/sccli Get-Smupde-Backup備份名稱BACKup_name"</block>
-  <block id="23bc5a6e3399df851654a39267787ce8" category="paragraph">您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="b4ecb018a8c25b10d46f81f82cf1b2b6" category="inline-link-rx"></block>。</block>
   <block id="9637bf398b0d618db1f07c6ac29233d8" category="section-title">卸載資料庫備份</block>
   <block id="c4b42b6394982de365aef2dea04b7478" category="paragraph">當您不想再存取備份上的檔案時、可以手動卸載掛載的資料庫備份。</block>
   <block id="5bdcda8fa398715c0e816de58d9f6f32" category="inline-image-macro">卸載圖示</block>
@@ -5207,53 +5167,10 @@
   <block id="53028fa3036b4b4d8b4ba1c27bf5f0f8" category="paragraph"><block ref="53028fa3036b4b4d8b4ba1c27bf5f0f8" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">開放原始碼</block>
   <block id="0d06100a9c9a8a7758a0d58988e99d2f" category="paragraph">提供本產品所使用之協力廠商版權與授權的相關資訊。您的產品不一定會使用下列所有軟體元件。</block>
-  <block id="341b772831859beaa3c9f1cd40c3fdf7" category="inline-link">關於此產品的注意事項SnapCenter 4.6%</block>
-  <block id="dd5dd1e96460227dc587e6a6e0be47d6" category="paragraph"><block ref="dd5dd1e96460227dc587e6a6e0be47d6" category="inline-link-rx"></block></block>
-  <block id="f445f4d2d84fc9dfb8efc6581a18a606" category="summary">說明Oracle資料庫支援的REST API工作流程</block>
-  <block id="13d0fcbff11f6426d60fee29d58afd11" category="doc">Oracle資料庫支援REST API</block>
-  <block id="ce236611b460997be1de994cf780c5fd" category="paragraph">Oracle資料庫使用REST API執行下列作業：</block>
-  <block id="31c143e3db15cbe52635305863bac83a" category="list-text">向SnapCenter 伺服器註冊認證資料</block>
-  <block id="7a43f2eed01358f58eeaa942aa78b413" category="list-text">擷取SnapCenter 以伺服器登錄的認證資料</block>
-  <block id="03f9d522c92a2bdcc16a31ed14bbc51e" category="list-text">依名稱擷取認證資料</block>
-  <block id="56a71d653f796ad12fdb35f76b0a11a0" category="list-text">修改認證資料</block>
-  <block id="4af1ebd28e35b836c10ca602cea24e11" category="list-text">刪除認證資料</block>
-  <block id="af7f8976f175216d1e12ff5be8b68be4" category="list-text">新增主機</block>
-  <block id="d52669c5753e8e6337fd9e1545e13fa1" category="list-text">從SnapCenter 無法辨識的地方移除一或多個主機</block>
-  <block id="cfb73f2916527987dc0d7274afced4d8" category="list-text">依名稱擷取主機</block>
-  <block id="b2e44cde368d4b7adfbcc9cf06e586aa" category="section-title">外掛程式</block>
-  <block id="4639d26c2c313214d6dbed599a4970f8" category="list-text">在現有主機上安裝外掛程式</block>
-  <block id="54b2ce7dbd5abed8d3992ea6fbb62dd0" category="list-text">升級外掛程式</block>
   <block id="51359e8b51c63b87d50cb1bab73380e2" category="section-title">原則</block>
-  <block id="66ba4ef5392c25cdb6bb5de6445b283e" category="list-text">建立新原則</block>
-  <block id="114691631618c729405144f0247369df" category="list-text">依名稱擷取原則</block>
-  <block id="bcac842cedb57b71e6e7fb081b3fad90" category="list-text">修改原則</block>
-  <block id="d79a40e11a30617c0760f2f7c099a4b4" category="list-text">刪除原則</block>
   <block id="14da08d2ea17e978e8b98e0182796723" category="section-title">資源群組</block>
-  <block id="63db1caaa72bfd5bd21530b4461c1121" category="list-text">保護資源群組</block>
-  <block id="79b852a69a6d982107ca7ce87de68f94" category="list-text">修改保護</block>
-  <block id="495685c9e0a33087f4a235b8fe0d5e1c" category="list-text">移除保護</block>
-  <block id="e402e5c276be05d79d8c134f8dea7f56" category="list-text">建立新的資源群組</block>
-  <block id="763327b7b8d49eb7158c4127c609ea10" category="list-text">依名稱擷取資源群組</block>
-  <block id="c81b7b87a829b0e1448d84eb273d2294" category="list-text">修改資源群組</block>
-  <block id="ee2fdf142b4bccbcc0e8da76139a0fff" category="list-text">刪除資源群組</block>
   <block id="ddcf50c29294d4414f3f7c1bbc892cb5" category="section-title">資源</block>
-  <block id="5530b7753347de0e73a5553ca14df9c6" category="list-text">探索資料庫</block>
-  <block id="eb1ba1b092f07428107fc23f0d5b000a" category="list-text">設定資料庫</block>
   <block id="1414cdc093d39dd56d0b0d20049e17fc" category="section-title">備份</block>
-  <block id="4026116d5e6a04b7f369ad765af31bd4" category="list-text">啟動資源備份作業</block>
-  <block id="011fd35749130ce5e54a2277e26fd0cf" category="list-text">開始備份作業</block>
-  <block id="7d781256d4e06c84f350b1105cbdd2e4" category="list-text">依名稱擷取備份</block>
-  <block id="75056f93f5bee898e43cf4a8d1d16309" category="list-text">擷取備份</block>
-  <block id="998814e052655eae00fad63f400d89ec" category="list-text">依名稱刪除備份</block>
-  <block id="981aaaf1ff17dd7b765a0c92501d5ebb" category="list-text">還原備份</block>
-  <block id="4de3b68a21596dbb1bdd952bcd82fc88" category="section-title">Clone重新整理</block>
-  <block id="be77d929f483f2a2ad15b9a5ae1c967a" category="list-text">從指定的備份建立Oracle資料庫複製規格</block>
-  <block id="9ef0b1c2169c112c28f24e29debf491c" category="list-text">顯示、修改及刪除特定的實體複本檔案</block>
-  <block id="fad878b0757bccd8aab5fd94e81ff694" category="section-title">RBAC</block>
-  <block id="af119f1727890b0637ad94c09a1f59e3" category="list-text">將資源指派給使用者或群組</block>
-  <block id="73b061d417dd0fdccdab50f9d93e661b" category="list-text">取消指派資源給使用者或群組</block>
-  <block id="d0d22e03456c3fce1282b8574dfd0c8f" category="section-title">組態設定</block>
-  <block id="bba47efd4bf450d65122b88c29734e9c" category="list-text">擷取及修改組態設定</block>
   <block id="fc004b0a2e525fdc279e93342807a662" category="summary">您可以透過HTTP要求中設定的參數和變數來控制API呼叫的處理方式。</block>
   <block id="ee083ff11ffc430b7230624e8985e88c" category="doc">控制API要求的輸入變數</block>
   <block id="957a8c35c28e967701ff975f1d7182d5" category="section-title">HTTP方法</block>
@@ -5401,22 +5318,18 @@
   <block id="48c7c41b72e1d678923ce3571aa65b2d" category="cell">步驟</block>
   <block id="aba3d4b49c454e1974970e7b5514b001" category="cell">REST API</block>
   <block id="511e67fd33176b5c5df2fcf5169691d4" category="paragraph">擷取現有SnapCenter 的伺服器DR備份</block>
-  <block id="b8cb385c143617344f7e49cc1f81ed90" category="admonition">您必須提供備份名稱和必須儲存災難恢復備份的目標路徑。</block>
   <block id="5683cd95d1258c1198131ee3fde12f8f" category="paragraph">「/4.5/disstarrecovery / server/Backup」（伺服器/備份）「TarketPath={path}」（目標路徑=｛path｝）</block>
   <block id="c81e728d9d4c2f636f067f89cc14862c" category="paragraph">2.</block>
-  <block id="b1d3a3d146274c20903bdd89801afcb1" category="paragraph">建立新的伺服器災難恢復備份。從SnapCenter 指定的伺服器災難恢復備份還原支援服務器。</block>
   <block id="4d5710dee895c5f98e2a36bdeef9d63c" category="paragraph">/4.5/dissterrecovery / server / Backup（伺服器/備份）</block>
   <block id="eccbc87e4b5ce2fe28308fd9f2a7baf3" category="paragraph">3.</block>
   <block id="3d53caca8e9b880190a77914260432ef" category="paragraph">從SnapCenter 指定的伺服器災難恢復備份還原支援服務器。</block>
   <block id="fc01add8dc5e609f9be29c977daabdb7" category="paragraph">*先決條件*</block>
   <block id="119b209f3bca82380d31e9ec34d4997b" category="list-text">替代伺服器主機名稱應與主要伺服器相同、但IP位址可能不同。</block>
   <block id="f052ac36f43bc8a21796f6c4fc5a79e2" category="list-text">伺服器版本應與主要伺服器相同。</block>
-  <block id="82bf1b3ddbe9cb167e5ae63b29fcfc39" category="list-text">主機名稱應與主要伺服器相同。</block>
   <block id="58d4bb8d9e64a51c8e256edf1012afef" category="list-text">使用SnapCenter 下列命令、確保DR備份檔案已複製到新的支援伺服器：</block>
   <block id="9d50f2e9dcf6f8828b93d76e4e348c5c" category="paragraph">「xcopy &lt;SsSOUR_Path&gt;\&lt;DORD_SERVER_IP&gt;\&lt;Folder_Path&gt;/O /X /E /H /K｛ex：xcopy C：\DRBackup \10.225.81.114\c$\DRBackup /O /X /E /H /K｝」</block>
   <block id="6318bc3cec87bcdb03cab32f9670f6dc" category="paragraph">如果外掛程式無法解析伺服器主機名稱、請登入每個外掛程式主機、然後以「&lt;新IP &gt; SC_Server_Name'」格式新增新IP的etc/host項目</block>
   <block id="a09638d3ee7f516207640b2340404009" category="paragraph">例如10.225.81.35 SCServer1</block>
-  <block id="421f836e09d607d08dad463276b0c52e" category="paragraph">伺服器etc/host項目將不會還原。您可以從DR備份資料夾手動還原。</block>
   <block id="4be41a636618a9946610f44cdfd45adf" category="paragraph">/4.5/dissterrecovery / server /還原</block>
   <block id="a87ff679a2f3e71d9181a67b7542122c" category="paragraph">4.</block>
   <block id="de7c2595c4bced19b8869303d92cef7d" category="paragraph">根據備份名稱刪除伺服器DR備份。</block>
@@ -5427,77 +5340,47 @@
   <block id="27e7993c4841ae5fd670cdd945ccb96d" category="inline-link">災難恢復API</block>
   <block id="90840bc3d6109c892e0f709274fdc6b6" category="paragraph">如需詳細資訊、請參閱<block ref="af818973dd6acaf1e28a3bd4ca9bd4a5" category="inline-link-rx"></block> 影片：</block>
   <block id="cc7702d8b061fc4d88f25975ec6ae8c4" category="summary">透過「靜態API」提供的資源SnapCenter 會依照類別進行組織、如SnapCenter 「靜態API」文件頁所示。</block>
-  <block id="bcaeac2d9f681115d1b0e1755c6b1204" category="doc">其他外掛程式支援REST API</block>
   <block id="ba604ae1fca2347dc880080f55bcc2bf" category="paragraph">透過「靜態API」提供的資源SnapCenter 會依照類別進行組織、如SnapCenter 「靜態API」文件頁所示。以下是每個資源與基礎資源路徑的簡短說明、以及其他適當的使用考量。</block>
   <block id="632c9594449737188c71ee1c8534f893" category="section-title">驗證</block>
-  <block id="723db15e07be8fc1ad8fea90ba7ca9ba" category="paragraph">您可以使用此API呼叫來登入SnapCenter 到這個伺服器。此API會傳回用於驗證後續要求的使用者授權權杖。</block>
   <block id="78cd2c7d5422ffdb6d9545211ca49eeb" category="section-title">網域</block>
-  <block id="50a49175a0bd855ad2da0325261931cd" category="paragraph">您可以使用這些API呼叫來執行下列作業：</block>
-  <block id="f2ed81365491b31b2dedc9da883a0153" category="list-text">擷取所有網域</block>
   <block id="c8edb7276b61d197a95696acbf89ba88" category="list-text">擷取特定網域的詳細資料</block>
   <block id="700c639a116811f300243a7732275dec" category="list-text">註冊或取消註冊網域</block>
   <block id="47c96d5ffb12d46ab3f2ee563cac6b8b" category="list-text">修改網域</block>
   <block id="12ceff2290bb9039beaa8f36d5dec226" category="section-title">工作</block>
-  <block id="e9f8a58c94b8b119e24b199c98daf8d7" category="list-text">擷取所有工作</block>
   <block id="f27d84170e540a2588b9ea74e4511641" category="list-text">擷取工作狀態</block>
   <block id="b879dfe9fc0a81a4ab559133178e3d33" category="list-text">取消或停止工作</block>
   <block id="f4f70727dc34561dfde1a3c529b6205c" category="section-title">設定</block>
-  <block id="d6f6353ae58f1eb143a9dbb1ce445f36" category="list-text">註冊、檢視、修改或移除認證</block>
   <block id="0884dfb491b721207498ce7cf032a45e" category="list-text">設定通知設定</block>
   <block id="8124579383e90243e4b06323d2b37f8d" category="section-title">主機</block>
-  <block id="912d09e067879c53d51a428fdf0a459f" category="list-text">擷取主機詳細資料</block>
-  <block id="30f5cceb650b752a1ee3ad603c51324c" category="list-text">擷取已安裝的外掛程式及其資源詳細資料</block>
-  <block id="288218de4260765ce030d407e2728ee4" category="list-text">新增、移除或修改外掛程式主機</block>
-  <block id="62cddfc71dc5509e090500536d2d1b9c" category="list-text">安裝或升級外掛程式</block>
-  <block id="77f21018bddd3539e7ddb0623cfb0b0d" category="list-text">擷取資源</block>
-  <block id="a0bdf40ea141214f88401a6a600516c6" category="list-text">建立、修改或移除資源</block>
-  <block id="16e6689301bbcb04d82b5bf3b90c9903" category="list-text">保護資源</block>
-  <block id="5848b4e48d03862ed7c0ab870e5a49e8" category="list-text">備份、還原或複製資源</block>
   <block id="2feb07b050596808708ba9506cccffec" category="list-text">擷取備份詳細資料</block>
   <block id="522e7f392901395898352f1182154962" category="list-text">重新命名或刪除備份</block>
   <block id="999cc42b236c7aee1157ff02d6f1bcd5" category="section-title">複製</block>
   <block id="8c3d6e35723e7972b266b5b0c438bce9" category="list-text">擷取實體複本詳細資料</block>
   <block id="b610c94f5a160a51bd2239752cc137a3" category="list-text">刪除複本</block>
-  <block id="fdc1dd227cc0513a0b4a791b340a9732" category="section-title">Clonesplit</block>
   <block id="64b0b16f415c9db80e77ff2c35e82a53" category="list-text">擷取實體複本分割作業的狀態</block>
   <block id="51d4730f0a49ab16a88fbea391b495bb" category="list-text">啟動或停止複本分割作業</block>
-  <block id="4cb2209ac6413b248acf33aab240744e" category="list-text">擷取資源群組的詳細資料</block>
-  <block id="2dd592bdcb4be362be2ba106d6290c8e" category="list-text">建立、修改或刪除資源群組</block>
   <block id="45c7df76e8377445c75b768c74002bee" category="list-text">備份資源群組</block>
   <block id="9e476387322a5c250893cf9c5c4ce78c" category="section-title">原則</block>
   <block id="7eacc1e3bd71ffd1432fcc53a4114036" category="list-text">擷取原則詳細資料</block>
-  <block id="02c3788d9749d853c28811062a88f453" category="list-text">建立、修改或刪除原則</block>
   <block id="8c4aa541ee911e8d80451ef8cc304806" category="section-title">儲存設備</block>
   <block id="5b5ff6d18b9fd1cbcaa982bfce913ee4" category="list-text">擷取儲存詳細資料</block>
   <block id="c2904c33fdc1ccdb0f4cdc820a89c6bd" category="list-text">建立、修改或刪除儲存設備</block>
-  <block id="d7ae9a2ac92816ab796d44034ff6e4e9" category="list-text">探索儲存設備上的資源</block>
   <block id="8cd08caecd4d51b36eac251a90639546" category="list-text">在儲存設備上建立或刪除共用區</block>
   <block id="5a95a425f74314a96f13a2f136992178" category="section-title">分享</block>
   <block id="2079e4c6d7f7184bce4219eb4ebb7c5c" category="list-text">擷取共用區的詳細資料</block>
   <block id="bb38096ab39160dc20d44f3ea6b44507" category="section-title">外掛程式</block>
-  <block id="91671f23e5f6b17df8c5b6c2eb184ee6" category="paragraph">您可以使用這些API呼叫來擷取主機上的所有外掛程式、並執行不同的作業。</block>
   <block id="c91c7b93c28cd18741b71f727ee81ee3" category="section-title">報告</block>
-  <block id="3c3ab13796a8fb425eef8f900ee4277c" category="list-text">產生備份、還原、複製及外掛程式報告</block>
   <block id="4d4412a45b7b361eb3683ea29280c938" category="list-text">新增、執行、刪除或修改排程</block>
   <block id="df583ae7ba964fd4806b55904da81813" category="section-title">警示</block>
   <block id="7ec59326aac1e16fc2ff79038af358ec" category="list-text">擷取所有警示</block>
-  <block id="66ffbd94812e87f9b653acf24c35a1f0" category="list-text">刪除警示</block>
   <block id="22fcee71b622b9dcd3d745e835c9e664" category="section-title">RBAC</block>
   <block id="f39468b79ec404172602e55cb8da8b5c" category="list-text">擷取使用者、群組和角色的詳細資料</block>
-  <block id="7207a808a5749f55614f36e586e3e8ad" category="list-text">新增使用者</block>
   <block id="5c0cb6c4339b19ba460b4f6091d91d76" category="list-text">建立、修改或刪除角色</block>
-  <block id="af26b4a4b1a406d6668353bfbc8d5ea1" category="list-text">指派或取消指派角色和群組</block>
   <block id="254f642527b45bc260048e30704edb39" category="section-title">組態</block>
   <block id="cc99151b2e53ada775a5f532ac67a696" category="list-text">檢視組態設定</block>
   <block id="4ff67b7891ef3baecd583a525ffcddfd" category="list-text">修改組態設定</block>
   <block id="92821fc443227caad5fa45657ea0e9f1" category="section-title">認證設定</block>
-  <block id="4ee599d0e636e1aa835a11937f29332e" category="list-text">檢視憑證狀態</block>
-  <block id="f771cabc4aa053e84ec17a85858d9f31" category="list-text">修改憑證設定</block>
   <block id="33fcf2b3ec4686d9cd06051c726d0ba2" category="section-title">儲存庫</block>
-  <block id="d79a495804e8c72e473ca92973eaba10" category="list-text">備份及還原NSM儲存庫</block>
-  <block id="e2a1e671adb5dfbbdec066286e27e28b" category="list-text">保護及取消保護NSM儲存庫</block>
-  <block id="3ad6e9988864aeae2ef386345946dc6d" category="list-text">容錯移轉</block>
-  <block id="2b27aad186443fcc4be74d172d1ec12f" category="list-text">重新建置NSM儲存庫</block>
   <block id="8842d1353eaa8abbc870faaf4769ea1d" category="summary">REST是建立分散式Web應用程式的風格。當套用到Web服務API的設計時、它會建立一套技術和最佳實務做法、以揭露伺服器型資源並管理其狀態。它使用主流傳輸協定和標準、為管理SnapCenter 功能提供靈活的基礎。</block>
   <block id="8ed6428212b41847f33c5db651c2aa70" category="doc">REST Web服務基礎</block>
   <block id="a306b943435e2910e989fe58bffa76be" category="paragraph">代表性狀態傳輸（REST）是建立分散式Web應用程式的風格。當套用到Web服務API的設計時、它會建立一套技術和最佳實務做法、以揭露伺服器型資源並管理其狀態。它使用主流傳輸協定和標準、為管理SnapCenter 功能提供靈活的基礎。</block>
@@ -5605,7 +5488,6 @@
   <block id="6213c4aa6c3d759b708f391038b515e2" category="paragraph">您可以排程在伺服器之間同時執行多個備份。無法同時在同一個資源上執行備份與還原作業。</block>
   <block id="a1a0f86f12eb6f7b0a51545fae87d6ed" category="paragraph">下列工作流程顯示您必須執行備份作業的順序：</block>
   <block id="0d267aa6a5980521c50d3bb9b62d9419" category="image-alt">SCE備份工作流程</block>
-  <block id="c1357d16202e503c127fb33f9105ab7c" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。支援的支援或SnapCenter<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block> 包含PowerShell Cmdlet的詳細資訊。</block>
   <block id="5a4e7986bae0a2c894ba99a3277fcf98" category="summary">如果您不再需要移除SmBackup指令程式來執行其他資料保護作業、可以使用該指令程式來刪除備份。</block>
   <block id="c7abd5797dbf501112fdb42c49a4df92" category="doc">使用PowerShell Cmdlet移除備份</block>
   <block id="a9961b834480ea5a82aff5c0e9cf0da8" category="list-text">使用Remove-SmBackup Cmdlet刪除一或多個備份。</block>
@@ -5813,7 +5695,6 @@
   <block id="4a1235dca49f377ee2531fa84b5a11bf" category="paragraph">在您要安裝SnapCenter 此插件的系統上、指定網域管理員或任何系統管理員群組成員。「使用者名稱」欄位的有效格式如下：</block>
   <block id="a93932dc1af33276251008f69486a0e6" category="list-text">《username@UPN》</block>
   <block id="1f304163a7909c028545d03ae0549ec7" category="paragraph">對於屬於工作群組的系統、請在安裝SnapCenter 此插件的系統上指定內建的本機管理員。如果使用者帳戶擁有較高的權限、或主機系統上的使用者存取控制功能已停用、您可以指定屬於本機系統管理員群組的本機使用者帳戶。使用者名稱欄位的有效格式如下：「UserName」（使用者名稱）</block>
-  <block id="52a731706049956361af4bdd1cdbccc7" category="paragraph">請勿在密碼中使用雙引號（"）。</block>
   <block id="475b0c397d9f036e875b5629bbe88a2e" category="paragraph">完成認證設定之後、您可能會想要在「使用者與存取」頁面上、將認證維護指派給使用者或使用者群組。</block>
   <block id="ddac336280358154ababc34d8448b704" category="summary">您可以從主要儲存設備或次要儲存設備複製檔案系統備份。您也可以選擇支援您需求的目的地：原始備份位置、或是同一主機或不同主機上的不同目的地。目的地必須與複製來源備份位於同一個磁碟區。</block>
   <block id="70ad71185ca59c8324ad10cefb069335" category="doc">Windows檔案系統的複本來源與目的地</block>
@@ -5851,7 +5732,6 @@
   <block id="1bea5939f16f3388c1a175f0af134c13" category="paragraph">此範例可清除次要備份的備份數、而不使用Snapshot複本：</block>
   <block id="7372096d67d7a00d21e644f03bd6b3f6" category="summary">如果無法從Windows GUI遠端安裝外掛程式、您可以SnapCenter 在Windows主機本機上安裝適用於Microsoft Windows的支援功能。SnapCenter您可以SnapCenter 從Windows命令列、以無訊息模式在無人值守的情況下執行Microsoft Windows安裝程式的功能。</block>
   <block id="3065bc79c85488f5e9c34540aa589dee" category="doc">從命令列以無訊息方式安裝SnapCenter 適用於Microsoft Windows的功能</block>
-  <block id="313feb96e8465a1ec14d6a30aacd89a8" category="list-text">您必須安裝Microsoft Net 4.5.2或更新版本。</block>
   <block id="92e6ffea032db8bde3a4e28c14ca76bf" category="list-text">您必須安裝PowerShell 4.0或更新版本。</block>
   <block id="45305b0c2be46c68805c14c7667e37d1" category="list-text">您必須開啟Windows訊息佇列。</block>
   <block id="3f9e658ebdc571b944cc7a6bb94fa2fc" category="list-text">您必須是主機上的本機管理員。</block>
@@ -6422,7 +6302,6 @@
   <block id="200173e810f24d588054234ea90379a4" category="paragraph">新備份旁邊會顯示「I」圖示、表示這些備份是在DR模式期間建立。</block>
   <block id="5e7078fc2c5f11497c9f2a56ffd9b736" category="list-text">您可以使用SnapCenter UI或下列Cmdlet刪除在容錯移轉期間建立的SQL Server備份的現象：「移除SmBackup」</block>
   <block id="b46fdb28b1bf03616f61fcda6f266b96" category="list-text">容錯移轉之後、如果您想讓部分資源處於非DR模式、請使用下列Cmdlet：「移除-短資源DRMode」</block>
-  <block id="2325ed96f22c1b6048f710fb3ef2f0ea" category="paragraph">如需詳細資訊、請參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="7ccaeb1e46c3ede7b5c8c6431b09266a" category="list-text">使用DR模式或非DR模式的個別儲存資源（SQL資料庫）、而非資源群組、將以DR模式或非DR模式的儲存資源來管理。SnapCenter</block>
   <block id="51d95bab000b8bd5e8f9d83c3f25d453" category="summary">重新編頁是還原可用度群組（AG）資料庫的選項。如果次要資料庫無法與AG中的主要資料庫同步、您可以重新建立次要資料庫。</block>
   <block id="951ead00aca07936d7cbe2d0eaf3bdde" category="doc">重新建立可用度群組資料庫</block>
@@ -6435,14 +6314,6 @@
   <block id="e79bc209774c084585c986b76f44f3e4" category="list-text">在左導覽窗格中、按一下*資源*、然後從SnapCenter 清單中選取*適用於SQL Server*的*支援外掛程式。</block>
   <block id="2a469b63ef1458d6f0c779e8b21fb6d6" category="list-text">從清單中選取次要AG資料庫。</block>
   <block id="a952ded3652ff67c9b0646a79093d02d" category="list-text">按一下「*重新編頁*」。</block>
-  <block id="fd27e632e4ffca03add8ef4ed0af0755" category="summary">在您匯入SnapManager 適用於Microsoft SQL Server歸檔備份的支援資料之後、您可以SnapCenter 從「拓撲」頁面檢視這些備份資料。</block>
-  <block id="d5518c2f408f929ace2d131909aed4a2" category="doc">在SnapCenter 還原伺服器中檢視匯入的備份</block>
-  <block id="013a22db3f8116886abce783cd41f0ce" category="list-text">建立包含所有資料庫的資源群組。</block>
-  <block id="650fc61d47780adbad85bfa072c0663d" category="list-text">選取資源群組。</block>
-  <block id="517849ba136afea5e787004dffb20912" category="list-text">保護資源群組。</block>
-  <block id="dda83e7a78cbb5a39ad65f48499b90ee" category="list-text">在「拓撲」頁面的「管理複本」檢視中、按一下「從Vault複本備份」。</block>
-  <block id="fd64ae65e36415bcb508e23c2f81edee" category="paragraph">此時會顯示備份的詳細資料。</block>
-  <block id="243a37ea1abccc4f72cf92c4b36308be" category="admonition">移轉歸檔的Snapshot複本、並將其從儲存設備中清除、作為二線保留的一部分、SnapManager 必須手動清理在其中建立的各個主要Snapshot複本。</block>
   <block id="8ab00376f11ae4d62cc80dab05f617ea" category="doc">SQL Server外掛程式的備份保留選項</block>
   <block id="03aec48a1392a75e035647bb7b9f190b" category="summary">預設會將特定的恢復模式指派給每種資料庫類型。SQL Server資料庫管理員可將每個資料庫重新指派至不同的還原模式。</block>
   <block id="4be39d40645ee3666c8949ae4f085dd9" category="doc">支援的SQL Server恢復模式SnapCenter</block>
@@ -6483,24 +6354,7 @@
   <block id="b14fd9f5ab6e51e7c06988f9fcf9df95" category="paragraph">「*摘要卡*」區段會顯示備份與複本的總數。</block>
   <block id="7da2011e93a96c6ba9279069d693453e" category="list-text">在「*管理複本*」檢視中、按一下主儲存設備或次儲存設備的*備份*或* Clone *、即可查看備份或複製的詳細資料。</block>
   <block id="4352314fc82600fe764ead91091936ed" category="list-text">從表中選擇一個克隆，然後單擊* Clone（克隆）Split*。</block>
-  <block id="0b6e89a13717e73b3df6b2fa120e6c75" category="summary">您只能從SnapVault 命令列介面、將使用支援Microsoft SnapManager SQL Server的支援技術歸檔的備份、匯入SnapCenter 到支援的支援區。</block>
   <block id="aa829ddf1acbdd2a8aa6a61635c33dec" category="doc">匯入歸檔備份</block>
-  <block id="7c085effff5778e37a851b82405fc87f" category="list-text">Microsoft SQL Server的支援功能和Microsoft SQL Server 7.x的支援功能都SnapCenter 必須安裝在同一部主機上。SnapManager</block>
-  <block id="d26022cb2ad880e6dc2f01e5d5074fb0" category="list-text">若要支援叢集、叢集中的每個節點都必須安裝外掛程式和7.x產品。</block>
-  <block id="773d5009e29dab3b9f3d77f9fc89c590" category="list-text">您必須將主機或叢集新增SnapCenter 至支援資源、並在主機或叢集上探索可供備份的資源。</block>
-  <block id="f6436a12398e84c6066d1dccdd8c50f3" category="list-text">您必須已備份SnapManager 適用於Microsoft SQL Server SnapInfo資料夾的功能。</block>
-  <block id="a94b89bed315cebabf4cfd97858f5d9d" category="paragraph">如果匯入作業失敗、您可以從SnapInfo目錄擷取備份中繼資料。</block>
-  <block id="d04a80d920726c7a3aaa1cab2cad3037" category="paragraph">*最佳實務做法：*最佳實務做法是設定SnapCenter 適用於Microsoft SQL Server的《支援Microsoft SQL Server的更新檔》（英文）的記錄備份資料夾。</block>
-  <block id="94e189bdec8a8760936fa4f2c2e523c5" category="paragraph">如需SnapCenter 有關安裝與組態工作的資訊、請參閱SnapCenter 《安裝資訊：如需SnapManager 有關Microsoft SQL Server安裝與組態工作的資訊、請參閱SnapManager 《安裝資訊：</block>
-  <block id="987172898ed64180b4558e20ed51526f" category="paragraph">將歸檔備份從SnapCenter Microsoft SQL Server的支援庫匯入到支援功能庫之後SnapManager 、您可以從SnapCenter 支援庫執行這些備份的還原與複製作業。同時、您也可以使用SnapManager Microsoft SQL Server的支援功能、繼續執行備份、還原及複製作業。</block>
-  <block id="7efc4d8de4adad1b87ca0a405f319f1a" category="list-text">請執行下列步驟、建立類似SnapManager 於以人工SnapCenter 方式在支援的Microsoft SQL Server排程的排程：</block>
-  <block id="c4405e4b5c2148780ddd214dac03cfd3" category="list-text">使用「Get-Smschedule」Cmdlet從SnapManager Microsoft SQL Server的支援資訊中擷取排程資訊。</block>
-  <block id="7199ac0a527ebd5ae5fcd6ed42176119" category="list-text">儲存排程資訊。</block>
-  <block id="1a9e5de433e368b0db8902ee12f143f0" category="paragraph">您可以使用此排程資訊、同時在SnapCenter 功能表中建立原則。</block>
-  <block id="e6cd188c945484b360789279c58d137d" category="list-text">使用SnapManager 「Get-SmSchedule -Hostname &lt;hostname&gt;-PluginCode SMSQL -disableCurrentGenschedule' Cmdlet來停用Microsoft SQL Server排程的支援功能。</block>
-  <block id="ea53ceeb42b32044b0fcb3f809b8be93" category="list-text">使用「Invoke-SmupMigration」指令程式匯入歸檔備份。</block>
-  <block id="f8489a2f9ae8851fc03c0d1d11d53e8e" category="paragraph">例如、若要移轉獨立式SQL主機：「Invoke-SmBackup移轉-Hostname &lt;hostname&gt;'」、「-PluginCode SMSQL」</block>
-  <block id="32fea70da889177b3a90a9f253b60af8" category="paragraph">例如、若要移轉叢集主機：「Invoke-SmBackup移轉-主機名稱&lt;叢集名稱&gt;「-PluginCode SMSQL」</block>
   <block id="962df1822db6404545e093c4f6870a0b" category="doc">監控「活動」窗格中SQL資源的資料保護作業</block>
   <block id="8c2706ff7c5260b28a36b7642f3fdcf7" category="summary">您應該SnapCenter 從SnapCenter 支援功能的使用者介面中安裝適用於Microsoft SQL Server的支援功能。不過、如果您因為某些原因無法執行、您可以從Windows命令列以無訊息模式執行SQL Server外掛程式安裝程式。</block>
   <block id="07fae625128f8e6e897e2445f74b4b56" category="doc">從命令列以無訊息方式安裝SnapCenter 適用於Microsoft SQL Server的功能</block>
@@ -6717,7 +6571,6 @@
   <block id="5ef1f12506dc4d6bf7c9edb9345a5047" category="list-text">新增或指派儲存系統連線、並建立認證資料、以設定SnapCenter 整個靜態環境。</block>
   <block id="42e20be165e590208778cbb0b28a11ce" category="list-text">新增主機、安裝外掛程式、探索（重新整理）資源、以及設定外掛程式。</block>
   <block id="b3721954b25a4acdb3a4229ac3e0b5f8" category="list-text">執行Invoke-SmConfigureResources、將現有的Microsoft SQL Server資料庫從本機磁碟移至NetApp LUN、反之亦然。</block>
-  <block id="ae2d4e7a000e15a609a7942d1d0ff524" category="paragraph">如需執行Cmdlet的資訊、請參閱<block ref="30086a18cf21b3d909c213d70f40a693" category="inline-link-rx"></block></block>
   <block id="eefa922509507f72bc1a8ad3abe353fd" category="list-text">如果您使用SnapCenter VMware vCenter Server來保護位於VMware RDM LUN或VMDK上的SQL資料庫、則必須部署SnapCenter VMware vSphere的「支援VMware vSphere的支援中心」外掛程式、並以SnapCenter 「支援中心」登錄外掛程式。VMware vSphere的《VMware vCenter外掛程式》文件有更多資訊。SnapCenter</block>
   <block id="2d3786cce4bbee81c9852997cc1bef39" category="paragraph"><block ref="2d3786cce4bbee81c9852997cc1bef39" category="inline-link-rx"></block></block>
   <block id="eec7968b53638fab183beb9401255808" category="list-text">將現有資料庫移至NetApp儲存設備。</block>
@@ -6777,7 +6630,6 @@
   <block id="2e4ff567e848a0262685f994307e15fe" category="paragraph">無法同時在同一個資源上執行備份與還原作業。</block>
   <block id="a9a36931adb350bdf3480cb9845a8fc8" category="image-alt">SCSQL備份工作流程</block>
   <block id="780c1b490607a3963a4db9b069dbf1e2" category="admonition">如果您選取非NetApp LUN、毀損的資料庫或正在還原的資料庫、則「資源」頁面上的「立即備份」、「還原」、「管理備份」及「複製」選項會停用。</block>
-  <block id="232608610c48bcb248ab19cf2e276737" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原、還原、驗證及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱<block ref="30086a18cf21b3d909c213d70f40a693" category="inline-link-rx"></block></block>
   <block id="70a3b8963fff53a1f81a125297906687" category="section-title">如何備份資料庫SnapCenter</block>
   <block id="fe38a38405ced1973299d2b175c66a79" category="paragraph">使用Snapshot複製技術來備份位於LUN或VMDK上的SQL Server資料庫。SnapCenter利用建立資料庫的Snapshot複本來建立備份。SnapCenter</block>
   <block id="05e0444569b01c1a835c376c06e5d120" category="paragraph">從「資源」頁面選取資料庫進行完整資料庫備份時SnapCenter 、會自動選取位於同一個儲存磁碟區上的所有其他資料庫。如果LUN或VMDK僅儲存單一資料庫、您可以個別清除或重新選取資料庫。如果LUN或VMDK包含多個資料庫、您必須清除或重新選取資料庫作為群組。</block>
@@ -7107,7 +6959,6 @@
   <block id="c9be9cc5ba5ff68efaa119bed3d4a11a" category="list-text">如果您要將Snapshot複本複製到鏡射或保存庫、SnapCenter 則該管理員必須為來源磁碟區和目的地磁碟區指派儲存虛擬機器（SVM）給您。</block>
   <block id="9ab48724fd891b73fc67de8664319345" category="list-text">還原資料庫之前、必須先停止所有備份與複製工作。</block>
   <block id="10344402be0db5fed4bdb763360d91a4" category="list-text">如果資料庫大小以TB為單位、則還原作業可能會逾時。</block>
-  <block id="2360f57db3f09133639fea2ac5073419" category="paragraph">您必須SnapCenter 執行下列命令、將RESTRESTRimeout參數的值增加至20000000 ms：Set-SmConfigSettings -Agent -configSettings @｛"RESttimeout"="20000000"｝。根據資料庫的大小、可以變更逾時值、而您可以設定的最大值為2147483648。</block>
   <block id="67758aec18021f6235b6a5ed9330f493" category="paragraph">如果您想要在資料庫上線時還原、應在「還原」頁面中啟用線上還原選項。</block>
   <block id="b8c6dc70b911a07b5993d7a98b8d3e37" category="doc">備份SQL資源</block>
   <block id="ff2b6649ea6c62fd43ebb0904af1857f" category="list-text">對於Windows認證驗證、您必須先設定認證、才能安裝外掛程式。</block>
@@ -7181,15 +7032,8 @@
   <block id="49d3d638c72a43de1071ccafc35ba79d" category="doc">相同磁碟區上有多個資料庫</block>
   <block id="4e23a71c353d487c1b39814259994b97" category="paragraph">您可以將所有資料庫放在同一個磁碟區上、因為備份原則有選項可設定每個備份的資料庫上限（預設值為100）。</block>
   <block id="190319f351847bd1023d75c822627133" category="paragraph">例如、如果您在同一個磁碟區中有200個資料庫、則會在兩個Snapshot複本中各建立兩個Snapshot複本、其中每個複本有100個資料庫。</block>
-  <block id="cd4c0772515ac4471d7ba61ee1661c5b" category="summary">在將歸檔備份從SnapManager 適用於Microsoft SQL Server的支援資料匯入SnapCenter 到支援資料中心之前、先瞭解相關限制、將有助於順利完成匯入。這些備份必須已使用SnapVault NetApp技術歸檔。</block>
-  <block id="4fc26936e4921e74ec76743dce11c2b3" category="doc">與匯入功能相關的限制</block>
-  <block id="151c313da02239d6f7e4019aaef77914" category="list-text">您無法管理SnapManager 使用支援SnapCenter Microsoft SQL Server的功能所建立的實體複本。您必須在SnapManager Microsoft SQL Server的支援中管理實體複本。</block>
-  <block id="04887aaeae21e27e6ea309391279010f" category="list-text">您無法從SnapCenter 圖形化使用者介面（GUI）匯入備份。</block>
-  <block id="812b876b1f2f9c6f4a7bf74d7979d76a" category="list-text">您無法從具有VMDK磁碟的虛擬機器匯入資料庫。</block>
   <block id="46c4f3c110b291802e897ca96a3234db" category="doc">取消SQL資源還原作業</block>
   <block id="5c654ca02551a6a3a8886012f5c1fc6e" category="doc">監控SQL資料庫複製作業</block>
-  <block id="9e8da765ee75f7782977c25a6321dadb" category="summary">將資料從SnapManager Microsoft SQL Server的支援中心匯入SnapCenter 至支援中心、可讓您繼續使用舊版的資料。您只能將使用SnapVault 支援Microsoft SnapManager SQL Server的支援技術所歸檔的備份匯入SnapCenter 到</block>
-  <block id="1775c206d933e72952320bc9c39e56a4" category="doc">匯入歸檔備份總覽</block>
   <block id="0ebfc8ee6fcce1769e02ab4f33c1967f" category="summary">資源群組是一個容器、您可以在其中新增要一起備份及保護的資源。資源群組可讓您同時備份與特定應用程式相關聯的所有資料。任何資料保護工作都需要資源群組。您也必須將一或多個原則附加至資源群組、以定義您要執行的資料保護工作類型。</block>
   <block id="8a256fc5affeb3e3570c3c8e73ce682b" category="paragraph">您無需建立新的資源群組、即可個別保護資源。您可以在受保護的資源上進行備份。</block>
   <block id="80b4392036b2c71988077d45b3eedc67" category="paragraph">輸入一或多個標籤、以協助您稍後搜尋資源群組。例如、如果您將HR新增為多個資源群組的標記、則稍後可以找到與HR標記相關聯的所有資源群組。</block>
@@ -7277,7 +7121,6 @@
   <block id="5a9d252685a800ffeee18062aac9e777" category="list-text">登入嘗試不正確5次以上後、登入功能會暫時停用。</block>
   <block id="80fb25677b8df85f97f35720d0f5755b" category="section-title">CA憑證總覽</block>
   <block id="d7c0f46fb7673d8302d28d92b968cbd3" category="paragraph">安裝過程中、支援集中式SSL憑證。SnapCenter為了加強伺服器與外掛程式之間的安全通訊、SnapCenter 支援使用客戶提供的授權CA憑證。</block>
-  <block id="0ff4fbc942cecadf8b215fa3272db57a" category="paragraph">您應該在安裝SnapCenter 完Sing Server和個別外掛程式之後、再部署CA憑證。如需詳細資訊、請參閱 <block ref="de78619abe7dcb7b53be3c4ab98b1283" category="inline-link-macro-rx"></block>。</block>
   <block id="8fbcd736aac5b9c6baba8f4db349f50e" category="inline-link">建立及匯入憑證</block>
   <block id="c0ddbdc2a9782e98d40c313e95e09705" category="paragraph">您也可以部署適用於SnapCenter VMware vSphere的VMware vSphere的VMware認證外掛程式。如需詳細資訊、請參閱<block ref="f5f72b20763af718f23ba7b5cc6b11fa" category="inline-link-rx"></block>。</block>
   <block id="34c24f1d15647adba6dcde96f1a84b95" category="summary">您可以使用REST API來執行多SnapCenter 項功能完善的管理作業。REST API會透過Swagger網頁公開。您可以存取Swagger網頁以顯示REST API文件、以及手動發出API呼叫。您可以使用REST API來協助管理SnapCenter 您的VMware或SnapCenter 您的VMware vSphere主機。</block>
@@ -7513,7 +7356,6 @@
   <block id="6957b567ff1defaf2eef0c1ffe991895" category="list-text">主機與外掛程式資訊</block>
   <block id="208d10ac82cfe46116253733eb2517ca" category="list-text">角色、使用者及權限詳細資料</block>
   <block id="60447d3b3bc038702ae4d3d05aeee01c" category="list-text">儲存系統連線資訊</block>
-  <block id="be433103d405e21d6a74b82050be0cb6" category="summary">說明如何升級SnapCenter Sfor Server和外掛程式</block>
   <block id="5b416e1633d16aad217a2e0fc2d097f8" category="doc">升級工作流程</block>
   <block id="994e8a3ae2b587ba4467292fb5e6ba75" category="paragraph">每個SnapCenter 版本的更新SnapCenter 版本均包含更新的更新版的《伺服器與外掛程式》套件。外掛程式套件更新會隨SnapCenter 更新程式一起發佈。您可以設定SnapCenter 使用此功能來檢查是否有可用的更新。</block>
   <block id="1942fea7712357c67be30cfd20652b93" category="paragraph">工作流程會顯示升級SnapCenter 版的不一樣工作、包括升級版的《伺服器與外掛程式」套件。</block>
@@ -7533,7 +7375,6 @@
   <block id="35702b2ddcae5a0a26dfc495c46421b5" category="list-text">您應該已經備份SnapCenter 所有已在SnapCenter 支援伺服器主機或外掛主機上修改的支援功能組態檔案。</block>
   <block id="77b44cc84c18e6f68f7831889cfc9abd" category="paragraph">例如：SnapDriveService.exe.config、SMCoreServiceHost.exe.config等。SnapCenter</block>
   <block id="8a34c1f412e1e3388d29a41e30823460" category="list-text">升級程序會將Windows、Linux或AIX主機置於「維護」模式、使主機無法執行任何排程工作。</block>
-  <block id="55cbbab091e104a7f3d3dbf6ba99ba61" category="paragraph">4.3.x</block>
   <block id="fef826a349ca99b933042ba1dfa73260" category="paragraph">4.4.x</block>
   <block id="4b1f6cbbab8f5d76a3e1d1b2c562722e" category="paragraph">4.5.x</block>
   <block id="dd9f485e72f96875e028693823f26e70" category="inline-link">升級SnapCenter VMware vSphere的插件</block>
@@ -7575,7 +7416,6 @@
   <block id="fc90f09cdfff4f5016f7c6f232b23261" category="paragraph">如果主機狀態顯示為「已停止」、您可以稍候一段時間、然後執行全新探索。您也可以將*主機重新更新間隔*參數（預設值為3、600秒）的值變更為超過10分鐘的任何值。</block>
   <block id="075ef73eccc4174ca2b3625b875d44d4" category="list-text">如果升級失敗、您應該清理失敗的安裝、重新安裝SnapCenter 舊版的還原功能、然後將NSM資料庫還原至先前的狀態。</block>
   <block id="710bac907aa0f00fd1511155d1d7fe1c" category="list-text">升級SnapCenter 完Szing Server主機之後、您也必須先升級外掛程式、才能新增任何儲存系統。</block>
-  <block id="6658143d8d013b5088fd214f730f807c" category="sidebar">Software 4.6文件SnapCenter</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始使用</block>
   <block id="4b09ab22f471832d6728b6e5b9a09aa8" category="sidebar">深入瞭解SnapCenter</block>
   <block id="f13fe3401f6969cdc9233f418f92df1f" category="sidebar">保護SQL Server資料庫的快速參考</block>
@@ -7654,8 +7494,6 @@
   <block id="7aac9b3cc279350b75cfbec4a3feabe4" category="sidebar">備份應用程式磁碟區</block>
   <block id="01c23a6022de21870627c656bac73ece" category="sidebar">使用REST API自動化</block>
   <block id="255096918c6f39312df4e3ae033d9a5b" category="sidebar">支援的REST API</block>
-  <block id="d08bb023e713ac5ff94f7b3a84332b71" category="sidebar">其他外掛程式支援REST API工作流程</block>
-  <block id="60fb82bb98786b71893de4332fbed808" category="sidebar">Oracle資料庫支援REST API</block>
   <block id="1ddd4c0c643f60a5dd1c48060a99d3b9" category="sidebar">保護Windows檔案系統</block>
   <block id="bb02d89ec46fa9ff65099dc0fc0d1737" category="sidebar">適用於Microsoft Windows概念的元件外掛程式SnapCenter</block>
   <block id="ef2985f3dd99d53cf00e294e4bdbdfdc" category="sidebar">安裝SnapCenter 適用於Microsoft Windows的功能性外掛程式</block>
@@ -7686,7 +7524,6 @@
   <block id="6ed9402e52f305d484cb3e2eee84b210" category="list-text">Shell指令碼</block>
   <block id="ceb1c56a363e3e946d8da6a79de2b489" category="admonition">除了預設的Bash Shell、也支援諸如sh-shell、k-shell和c-shell等其他Shell。</block>
   <block id="6b98b59317c1c01b7bc7ca4cd17411bb" category="paragraph">在SnapCenter 非虛擬化和虛擬化儲存系統上執行的所有規範和後指令碼、都會在外掛主機上執行。</block>
-  <block id="6b0556ded1c4e7755a840e42c90a320a" category="list-text">Windows指令碼應位於外掛程式主機或外掛程式主機可存取的SMB共用區上。</block>
   <block id="c157096c2e47e568177494234a87f0e1" category="list-text">UNIX指令碼應位於外掛程式主機上。</block>
   <block id="fef867655f1f81bcdd0d00a9356cb04e" category="admonition">指令碼路徑會在執行時驗證。</block>
   <block id="ef663b0b3b7a27afee6c150520bfb95a" category="paragraph">只有Windows可以指定多個指令碼。您應該在每個指令碼路徑之後按* Enter鍵、將每個指令碼分別列在一行上。不允許使用分號（；）。您可以指定多個預先編寫和多個後製指令碼。單一指令碼可編碼為預先記錄和附有附註的指令碼、並可呼叫其他指令碼。</block>
@@ -7700,7 +7537,6 @@
   <block id="7676f59833cee6720de923cfeef21ede" category="cell">您可以直接將SnapCenter 伺服器升級至...</block>
   <block id="8d0f374d6bbbe36aead49222bc8c909f" category="cell">支援的外掛程式版本</block>
   <block id="955d0e9747f65e6a6a1963edce3fa678" category="cell">4.6.x</block>
-  <block id="9039ba0f0b3a3b38ef80aa48945fa3c0" category="admonition">例如、如果您使用SnapCenter 的是版本4.3.x且想要升級至4.6.x、您應該先升級至4.5.x、然後再執行4.6.x的循環升級</block>
   <block id="7864e6541a8699c6dcea2ad2d5e5e78b" category="list-text">「安全登入角色create -role Svm_rouse_Name -cmd目錄名稱「SnapMirror list-destinations」-vserver Svm_Name -access all」</block>
   <block id="4cd712891b20fcc891bdeef703a3e915" category="list-text">「安全登入角色create -role Svm_role_Name -cmd dirname "EVENT generate-autosup-log"-vserver Svm_Name -access all"</block>
   <block id="35191da723a7990e2ec356b702112b64" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「jobhistory show」-access all」</block>
@@ -7720,5 +7556,362 @@
   <block id="7c8e4d34b8c6cc18e06524f05da1a10d" category="paragraph">顯示記錄保留的天數。</block>
   <block id="664943be24af2306e90a21dd26536e1c" category="paragraph">啟用憑證驗證</block>
   <block id="22d8a94cf37cc6d66c941a43b9d79fa8" category="paragraph">當主機啟用CA憑證驗證時顯示為true。</block>
-  <block id="ebda26e1e82bba1d66e8fbdf1eec4b08" category="paragraph">您可以編輯* spl.properties*檔案、或使用SnapCenter 支援程式的支援GUI或Cmdlet來啟用或停用此參數。</block>
+  <block id="12979c0044e0f2a4436304e71df2bd9b" category="paragraph">次要SnapCenter 版的伺服器應安裝在與主要SnapCenter 版的伺服器相同的位置和連接埠上。</block>
+  <block id="d1e90d50eb139f0fd560c55b6bf37057" category="paragraph">對於多因素驗證（MFA）、當SnapCenter 針對該伺服器執行DR還原時、請關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器以重新登入。這將清除現有或作用中的工作階段Cookie、並確保更新正確的組態資料。</block>
+  <block id="bf3e76e4f1322979745fbde954cda8f3" category="list-text">支援一組SSL密碼套件、以提供跨網路通訊的安全性。SnapCenter</block>
+  <block id="5d06d972bc910c7d332d38f29622193f" category="inline-link">如何設定支援的SSL加密套件</block>
+  <block id="f63adc493855850c393ed81600d0452d" category="paragraph">如需詳細資訊、請參閱<block ref="30d10745fe88e7ddd3a6030b89647570" category="inline-link-rx"></block>。</block>
+  <block id="9e5309714d9094e413324e0abf1a2c00" category="paragraph">您應該在安裝SnapCenter 完Sing Server和個別外掛程式之後、再部署CA憑證。如需詳細資訊、請參閱 <block ref="e785a19e47d7a7e00436d504e46ce80e" category="inline-link-macro-rx"></block>。</block>
+  <block id="2519e52723b63d73b91fe9567002e2ad" category="section-title">多因素驗證（MFA）</block>
+  <block id="3b657229f02ff903eb873f61703af749" category="paragraph">MFA使用第三方身分識別供應商（IDP）透過安全聲明標記語言（SAML）來管理使用者工作階段。此功能可選擇使用多種因素、例如TOTP、生物辨識、推入通知等、以及現有的使用者名稱和密碼、藉此強化驗證安全性。此外、它也能讓客戶使用自己的使用者身分識別供應商、在整個產品組合中取得統一化的使用者登入（SSO）。</block>
+  <block id="3d687b72d27aa3959c593b27cbc44d4c" category="paragraph">MFA僅適用於SnapCenter 驗證伺服器UI登入。登入會透過IDP Active Directory Federation Services（AD FS）進行驗證。您可以在AD FS設定各種驗證因素。供應服務的供應商應該將效能分析設定為AD FS中的依賴方。SnapCenter SnapCenter若要啟用MFA的SnapCenter 功能、您需要AD FS中繼資料。</block>
+  <block id="12da929293795e5d446c469a5f49440f" category="inline-link-macro">啟用多因素驗證</block>
+  <block id="ead2412064891fbb9b123e509e3e73da" category="paragraph">如需啟用MFA的資訊、請參閱 <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block>。</block>
+  <block id="cb7915cb66b1b1e301d1220e2e017bb5" category="list-text">Windows指令碼應位於外掛程式主機上。</block>
+  <block id="13e879c5832931b24329a65364023ff4" category="admonition">預先編寫或後製指令碼路徑不應包含磁碟機或共用區。路徑應相對於指令碼路徑。</block>
+  <block id="ed00a9e405426a3469fc285a29a849ab" category="list-text">針對Microsoft SQL Server的支援功能、適用於Microsoft Exchange Server的支援功能、以及適用於Microsoft Windows的支援功能、建議您將伺服器和外掛程式主機升級至4.7版、以便運行指令碼路徑。SnapCenter SnapCenter SnapCenter</block>
+  <block id="d707739d912438c4a86ec02ff6529da1" category="paragraph">針對原則中已啟用的預先編寫和後製指令碼的現有備份與驗證排程、備份作業會在升級後繼續運作。</block>
+  <block id="8159134911a3775f77dfaeafb846c0d3" category="paragraph">在「*工作詳細資料*」頁面中、有一則警告訊息建議客戶將指令碼複製到指令碼路徑、然後編輯原則、以提供相對於指令碼路徑的路徑。對於複製生命週期工作、會在子工作層級顯示警告訊息。</block>
+  <block id="adebd9b53fa49781be98cf46c0afc646" category="summary">說明如何升級SnapCenter Sfor Server和外掛程式、以及支援的升級途徑</block>
+  <block id="820341dc67dd887805f2620efabe6669" category="cell">4.7</block>
+  <block id="e581eab69cb147759b9dbeb0af1e93f2" category="admonition">例如、如果您使用SnapCenter 的是4．4．x版、想要升級至4．7版、您應該先升級至4．6．x、然後再執行4.7版的循環升級。</block>
+  <block id="7cbf140d17e0f4c0fe27276252add63e" category="list-text">以下列格式建立使用者群組帳戶：</block>
+  <block id="780fc7bdbc05c3ae8dcfc1e6ea26a283" category="list-text">可使用外掛主機SMCoreServiceHost.exe.Config檔案中的PredefinedWindows指令碼目錄金鑰來定義指令碼路徑。</block>
+  <block id="487a34d280250073f86b353bd430b05b" category="paragraph">如有需要、您可以變更此路徑並重新啟動SMcore服務。建議您使用預設的安全路徑。</block>
+  <block id="cb0f6b6fa4cffa93ac67dd15850cae3d" category="paragraph">金鑰的值可透過API：API /4.7/configsettings從交換器顯示</block>
+  <block id="cf2ded6f4d7ccf880ce7a042e4726b3e" category="paragraph">您可以使用Get API來顯示金鑰的值。不支援Set API。</block>
+  <block id="801129a6382d5583ff918700b1c08bcc" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="990d8375f83595a5ed234c9b7d01d800" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。支援的支援或SnapCenter<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block> 包含PowerShell Cmdlet的詳細資訊。</block>
+  <block id="3bcbed691a828d3bec798c7f504ae72f" category="paragraph">完成Snapshot複製作業後、執行SnapMirror和SnapMirror更新。SnapCenter SnapVaultSnapMirror和SnapVault SnapMirror更新是SnapCenter 執行功能不全的工作之一、請勿建立個別ONTAP 的功能不全。</block>
+  <block id="d332f88a3886e736c322b3643225a6cd" category="admonition">不支援SnapMirror與支援等量資料（*主要*&gt;*鏡射*&gt;* Vault *）之間的串聯關係。SnapCenter SnapVault您應該使用「扇出」關係。</block>
+  <block id="08e9631e1208ded677a67844beb7e0f6" category="list-text">您必須安裝Microsoft Net 4.7.2或更新版本。</block>
+  <block id="f9e40bd22b133e93e9c9d3b4c3adef6e" category="list-text">Microsoft .NET Framework 4.7.2或更新版本</block>
+  <block id="a97c26d42ce7ddd336973734ea88cb27" category="inline-link-macro">無法升級或安裝不適用於沒有網際網路連線的舊系統。SnapCenter</block>
+  <block id="81c513c33c426053d0ffea586847b7ae" category="paragraph">如需.NET疑難排解資訊、請參閱： <block ref="dded983644794c871dd2db9dcf66e032" category="inline-link-macro-rx"></block></block>
+  <block id="76532e7091335c4eb76878af878c5b79" category="paragraph">請勿在密碼中使用雙引號（"）或反引號（"）。請勿使用小於（&lt;）和驚嘆號（！） 密碼中的符號。例如、lessthan&lt;!10、lessthan10&lt;!、backtick'12。</block>
+  <block id="ced7a5b3383b556d1b18d34c718324e0" category="inline-link">Software 4.7版本說明SnapCenter</block>
+  <block id="999d9efd57a168cef0440d07870393a9" category="paragraph">如需詳細資訊、請參閱<block ref="237f55bc8fab90384c3ca78c8a284ce0" category="inline-link-rx"></block>。</block>
+  <block id="07a2a06d39605aa9ff4e7d9c550b1f32" category="admonition">在將掛載路徑列為外部記錄位置之前、您應該先確認其路徑和內容。</block>
+  <block id="75274e3b5c9387e61941a9dbd37f3bda" category="list-text">支援歸檔記錄管理（ALM）以進行還原和複製作業</block>
+  <block id="5bc73a697938fe752e1c9b686f4c9bca" category="list-text">您可以將啟用午餐路徑監控參數的值設為假、以停用此功能。</block>
+  <block id="bb05b6e20b4cf14467757d0be8887ff0" category="list-text">您可以指定LUN路徑自動固定的頻率、方法是將lunpath_監 控時間間隔參數的值（以小時為單位）指派給lunpath_監 控時間間隔參數。如需有關SLM,請參閱<block ref="cb74c6abbb61537bc6ce7c3d4eb82b8a" category="inline-link-rx"></block>。</block>
+  <block id="5773f6440e36169f1e12e5bf94061c09" category="list-text">支援Linux上的非揮發性記憶體Express（NVMe）</block>
+  <block id="258f389f9aaafec4ce1ef8c36ad97497" category="list-text">NVMe使用者必須安裝在主機上。</block>
+  <block id="ab89efb871fba5e381bbef07f0387285" category="paragraph">您必須安裝NVMe util,才能複製或掛載到替代主機。</block>
+  <block id="f82f8d5187ab10ecec9a6d1d0fe7041f" category="list-text">備份、還原、複製、掛載、卸載、 除了VMDK和RDM等虛擬化環境之外、NVMe硬體支援目錄、無目錄和驗證作業。</block>
+  <block id="77e1aff98fab667da904795d94a0856d" category="paragraph">在沒有分割區或單一分割區的裝置上支援上述作業。</block>
+  <block id="3bf355c6205f457fe62af33466b47331" category="admonition">您可以在核心中設定原生多重路徑選項、為NVMe裝置設定多重路徑解決方案。不支援裝置對應表（DM）多重路徑。</block>
+  <block id="313e53f94847871555c0dacdb19532a4" category="paragraph">+如需支援版本的最新資訊、請參閱<block ref="89a335e37ffcb5152f6dbe1ca3dcb8c4" category="inline-link-rx"></block>。</block>
+  <block id="0ac22ed74dd628cec8a2c5e2f64bf612" category="list-text">如果要備份的資料庫很大（TB大小）、則應將RESTimeout的值增加至SnapCenter 32伺服器主機中_C:\Program Files\NetApp \SMCore\SMCoreServiceHost.exe.config_檔案中的86400000 ms。</block>
+  <block id="12030a592b1dcd9007e06eda350e5904" category="list-text">如果要恢復到特定的日期和時間、請選取*日期和時間*、然後指定日期和時間以及輔助目的地。</block>
+  <block id="740364074f07d3ca5c0b017db01d8838" category="paragraph">根據指定的SCN或選取的日期和時間、找出執行PIGR所需的最佳資料和記錄備份數量、然後掛載並編錄目錄。SnapCenter</block>
+  <block id="46eafed7afc11552d8171b2eb6ae91d0" category="section-title">如何防止SnapCenter 不含資料庫的項目被人發現</block>
+  <block id="8bd0906e1408858d04adcc36035359ac" category="paragraph">您可以避免SnapCenter 使用不含資料庫的功能來探索在oratab檔案中新增的非資料庫項目。</block>
+  <block id="a91c1695dbc901f96299c334e515e6b0" category="list-text">安裝Oracle外掛程式之後、root使用者應在目錄//var/capcenter/scop/etc/_下建立* sc_oratab.config*檔案。</block>
+  <block id="e52e8b1290260b6f01eec0c767b91bb9" category="paragraph">將寫入權限授予Oracle二進位擁有者和群組、以便日後能夠維護該檔案。</block>
+  <block id="d83c94491da2aec5a770e18fcee181be" category="list-text">資料庫管理員應在* sc_oratab.config*檔案中新增非資料庫項目。</block>
+  <block id="0e00b9a22286c3518647d7cb30339c75" category="paragraph">建議您在_etc/oratab_檔案中、維持針對非資料庫項目所定義的相同格式、否則使用者只要新增非資料庫實體字串即可。</block>
+  <block id="228af5eac949d9bf66c4fc0f25e68afe" category="admonition">字串區分大小寫。開頭有#的任何文字都會視為註解。註解可以附加在非資料庫名稱之後。</block>
+  <block id="4b82a3a1d094f81718a1335ebea78ebd" category="list-text">探索資源。</block>
+  <block id="220e4e8875d5bfeb100296afce222233" category="paragraph">在「資源」頁面中不會列出在* sc_oratab.config *中新增的非資料庫項目。</block>
+  <block id="7029c5bea579ddb5d0fdbec271a7133d" category="admonition">建議您務必先備份SC_oratab.config檔案、再升級SnapCenter 此外掛程式。</block>
+  <block id="1dd4fbdaa30b28c2614e7e12c52dc73c" category="list-text">對於NVMe、應該安裝NVMe util</block>
+  <block id="cfbef5b174453552f2d4d170dce0dd4a" category="paragraph">您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
+  <block id="72b052d6a4c562079ee16c3d0499607b" category="paragraph">您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
+  <block id="c2dc8716150e6132feb70c1e92a1d958" category="paragraph">您可以執行Get-Help命令名稱來取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
+  <block id="88774565f8cf3008ad5989ee93e3c95a" category="admonition">如果您要管理RAC設定、非root使用者應該是Oracle使用者、而且不能只是任何非root OS使用者。</block>
+  <block id="d28c7ce894468cfd819345b4bf0b5f06" category="paragraph">或者、您也可以參閱<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block> 或<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="f7912f8718a1ef8c305b03f04aa3ed87" category="paragraph">如需UNIX命令的詳細資訊、請參閱<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
+  <block id="f5834ae40c2c791cfe589857bdad345c" category="paragraph">您可以透過編輯spl.properties或使用SnapCenter 不禁用圖形使用者介面或Cmdlet來啟用或停用此參數。</block>
+  <block id="7de59fae501cc41425b292c47c8d9c12" category="list-text">對於NVMe、如果必須排除任何目標連接埠的連線、您應該在/var/opt/snapcenter/SCU/etc/nvm.conf檔案中新增目標節點名稱和連接埠名稱。</block>
+  <block id="71ce3de936c35ae0967019943cb6334a" category="paragraph">如果檔案不存在、您應該建立檔案、如下例所示：</block>
+  <block id="280f5c08d4f27f31b36e59d180eaeae6" category="paragraph">_黑名單｛_</block>
+  <block id="8c6edcef1c9a50bf9ecd0f192cee6137" category="paragraph">_｝_</block>
+  <block id="bf51eb5d79e16ead1ceda527dda582b6" category="doc">支援REST API以供SnapCenter 支援Sfor Sfor Sfor Sfor Server和外掛程式</block>
+  <block id="9ee6893a33efb203b34a11b10f9d01eb" category="paragraph">您可以使用此API登入SnapCenter 到此伺服器。此API會傳回用於驗證後續要求的使用者授權權杖。</block>
+  <block id="f274ae38a991dabe63ac23d64b046496" category="paragraph">您可以使用API執行不同的作業。</block>
+  <block id="6cd7043957b9a6682f685696db2f356e" category="list-text">擷取SnapCenter 所有的網域</block>
+  <block id="b4bdd8878cf246daa97ef4b4a58ae75a" category="list-text">擷取SnapCenter 所有的作業</block>
+  <block id="e489898e0269af325a8afbea7ab25fe0" category="list-text">註冊、修改或移除認證</block>
+  <block id="5cb6df9ff6c48f7ae5659c30c212b8e9" category="list-text">顯示SnapCenter 在「伺服器」中登錄的認證資訊</block>
+  <block id="4f86e5fc8331efa6c37e13f944496095" category="list-text">擷取目前設定為傳送電子郵件通知之SMTP伺服器的相關資訊、並顯示SMTP伺服器的名稱、收件者的名稱及寄件者的名稱</block>
+  <block id="4c406f12a259d359d9a729d69262f4f6" category="list-text">顯示SnapCenter 驗證功能（MFA）組態的多因素驗證功能、以供登入</block>
+  <block id="943f44ed5b8906a3baa52c05f8ec2d08" category="list-text">啟用或停用及設定MFA以供SnapCenter 驗證伺服器登入</block>
+  <block id="99f9ec266829c38b78512ad7393f1bca" category="list-text">建立設定MFA所需的組態檔</block>
+  <block id="f15cb835553557b13f622c3e5fd1d2e8" category="list-text">查詢所有SnapCenter 的主機</block>
+  <block id="cbdfcc78da3ccb29e89eadc8a272d792" category="list-text">從SnapCenter 無法辨識的地方移除一或多個主機</block>
+  <block id="2ae81e62147e54625442f8e432514119" category="list-text">依名稱擷取主機</block>
+  <block id="c4ff68e9c7b2968ca114feecc28a5d6f" category="list-text">擷取主機上的所有資源</block>
+  <block id="340301abdc5a8b3571bdebb1441de325" category="list-text">使用資源ID擷取資源</block>
+  <block id="57ea1e2d0841c183ed96c7e7cff6de7b" category="list-text">擷取外掛程式組態詳細資料</block>
+  <block id="8f49cd4301054062d4803e49eca4fef4" category="list-text">設定外掛程式主機</block>
+  <block id="ef7418910678d868c8ca6692252fb484" category="list-text">擷取Microsoft SQL Server主機外掛程式的所有資源</block>
+  <block id="28e1b18b9f511c92a8b001002c799860" category="list-text">擷取Oracle資料庫主機外掛程式的所有資源</block>
+  <block id="430a0420d43604e9036c194632a5692b" category="list-text">擷取自訂應用程式主機的外掛程式所有資源</block>
+  <block id="9edf578fbbc5b513eb789e8a899f595d" category="list-text">擷取SAP HANA主機外掛程式的所有資源</block>
+  <block id="7621d4d222df8abd7497e702421488c0" category="list-text">擷取安裝的外掛程式</block>
+  <block id="03cdbdae5bdfb225672f62ad7cf27487" category="list-text">在現有主機上安裝外掛程式</block>
+  <block id="b48be013ba7799dd2aaefca8a153d200" category="list-text">升級主機套件</block>
+  <block id="c13fcd12517aac7066c111e7dbdeb497" category="list-text">從現有主機移除外掛程式</block>
+  <block id="40beb93e535bd69ce43e5a87418a280f" category="list-text">在主機上新增外掛程式</block>
+  <block id="54b4a898b204b62db351b8e2b1eb27b4" category="list-text">新增或修改主機</block>
+  <block id="d5c298a9e67db4cf5ea779138d77e27c" category="list-text">取得Linux主機的特徵</block>
+  <block id="9eab19d080e0626a5a3f2b424a5c9c8c" category="list-text">註冊Linux主機的簽名</block>
+  <block id="c6369ce467793732a86566ed08d5af22" category="list-text">將主機置於維護或正式作業模式</block>
+  <block id="ad1f662c3f9a653f46bc1473a96b1860" category="list-text">啟動或重新啟動主機上的外掛程式服務</block>
+  <block id="f897b927586bd6bd028584aba8e31bfb" category="list-text">重新命名主機</block>
+  <block id="1a0d33a6ceb2e17c427b7c566389891d" category="list-text">擷取所有資源</block>
+  <block id="bdd6d606b70db547418beb7cef6dd4c3" category="list-text">使用金鑰擷取Microsoft SQL Server資源</block>
+  <block id="5e0a2a90af5e0ecd0e6861c5bcb5cd4f" category="list-text">使用金鑰擷取自訂資源</block>
+  <block id="acb6b92ea28985b79b15e1f15eb0a3a9" category="list-text">修改自訂應用程式主機的外掛程式資源</block>
+  <block id="d21c51892d4bab99acddd5b3faf511ce" category="list-text">使用金鑰移除自訂應用程式主機的外掛程式資源</block>
+  <block id="7f2b5be06ffd4214b110d7e0680ee857" category="list-text">使用金鑰擷取SAP HANA資源</block>
+  <block id="4dd5f4f33d1d9331f7f621a6218ae48d" category="list-text">修改SAP HANA主機外掛程式的資源</block>
+  <block id="eb7eb399076135756ecbac9224df0d6c" category="list-text">使用金鑰移除SAP HANA主機外掛程式的資源</block>
+  <block id="cb006ad1cf159f1b83b3b8378736280c" category="list-text">使用金鑰擷取Oracle資源</block>
+  <block id="b34dd3e16c8dfaa9ac7b61ae93525d41" category="list-text">建立Oracle應用程式Volume資源</block>
+  <block id="28eb775ee204ea61985e15b268bb59ed" category="list-text">修改Oracle應用程式Volume資源</block>
+  <block id="6c9da6f3ecf19ca8d30c9fff6a383aa5" category="list-text">使用金鑰移除Oracle應用程式Volume資源</block>
+  <block id="eb823505e4c69113fbec4f18b362b2ca" category="list-text">擷取Oracle資源的次要詳細資料</block>
+  <block id="742eb625c3142767d7ac4d6387ecb727" category="list-text">使用Microsoft SQL Server的外掛程式備份Microsoft SQL Server資源</block>
+  <block id="409f39bd91981cd57095fb5229cdf7ac" category="list-text">使用Oracle資料庫的外掛程式備份Oracle資源</block>
+  <block id="43fde9b0560b6c89d1e0cc70e9f202e9" category="list-text">使用自訂應用程式的外掛程式備份自訂資源</block>
+  <block id="272ade203dfd1ba963a109a5a4baafa0" category="list-text">設定SAP HANA資料庫</block>
+  <block id="4e8b558d6a7fb66c71ba92accbda6f57" category="list-text">設定Oracle資料庫</block>
+  <block id="d4c6b8eab0d95c64db4fab0b39d86dca" category="list-text">還原SQL資料庫備份</block>
+  <block id="7b55eb37603aaec85de642c9761138e1" category="list-text">還原Oracle資料庫備份</block>
+  <block id="b2a27804c27c83e05c725b342e1b42b3" category="list-text">還原自訂的應用程式備份</block>
+  <block id="1f99ce4c7ce86789f3d81cc35f531f17" category="list-text">建立自訂外掛程式資源</block>
+  <block id="b867b97647a809df3c6e5231f0bef598" category="list-text">建立SAP HANA資源</block>
+  <block id="cbc56a4c2ad51ccea1242d4d4d348ae1" category="list-text">使用自訂應用程式的外掛程式來保護自訂資源</block>
+  <block id="2b42cb8c0a099907ef8a3de2f16f80a4" category="list-text">使用Microsoft SQL Server的外掛程式來保護Microsoft SQL Server資源</block>
+  <block id="726597499ee1c33cc7640464ae0590df" category="list-text">修改受保護的Microsoft SQL Server資源</block>
+  <block id="7fdbb0922f598a6fba37467e1f24115f" category="list-text">移除對Microsoft SQL Server資源的保護</block>
+  <block id="72ea27883163bd0bdc62807005d464da" category="list-text">使用Oracle資料庫的外掛程式來保護Oracle資源</block>
+  <block id="05c647545c72357fd0b5dffba1d35289" category="list-text">修改受保護的Oracle資源</block>
+  <block id="12fb0bf4998c48ca0abd0f86ab941e5d" category="list-text">移除Oracle資源的保護</block>
+  <block id="50e3acc05ead87df26323df8866a9c79" category="list-text">使用自訂應用程式的外掛程式、從備份複製資源</block>
+  <block id="faba3e9d6813ff290d8294f11c7e0d7f" category="list-text">使用Oracle資料庫的外掛程式、從備份複製Oracle應用程式磁碟區</block>
+  <block id="a27848c7bc2a58d2a5ae37b589b83a51" category="list-text">使用Microsoft SQL Server的外掛程式、從備份複製Microsoft SQL Server資源</block>
+  <block id="2984877599af2db006dbd231ed5df083" category="list-text">建立Microsoft SQL Server資源的複製生命週期</block>
+  <block id="74f5acaf06c2a402bca1fe02f0675109" category="list-text">修改Microsoft SQL Server資源的複製生命週期</block>
+  <block id="8598a6f810ecb0510b07e02f5bf93ed6" category="list-text">刪除Microsoft SQL Server資源的複製生命週期</block>
+  <block id="0b4a225eb95e5c6ef133862515719bea" category="list-text">將現有的Microsoft SQL Server資料庫從本機磁碟移至NetApp LUN</block>
+  <block id="0ebb05c8321e07bd11f5a94340bae1de" category="list-text">為Oracle資料庫建立複製規格檔案</block>
+  <block id="1ed22386115912653d77c692978b6b73" category="list-text">啟動Oracle資源的隨需複製重新整理工作</block>
+  <block id="0bdbe2178cd7c46236b999ea610362d4" category="list-text">使用Clone規格檔案從備份建立Oracle資源</block>
+  <block id="3f82e515545fbbe002b95227e24d7848" category="list-text">將資料庫還原至次要複本、並將資料庫加入可用度群組</block>
+  <block id="fc4ba98946aed58195aaffb31b74939a" category="list-text">依備份名稱、類型、外掛程式、資源或日期擷取備份詳細資料</block>
+  <block id="193db667b6853cbb23de730e368f6054" category="list-text">擷取所有備份</block>
+  <block id="54b90e42029781477b24de1b21cfae3a" category="list-text">掛載Oracle備份</block>
+  <block id="965486093695eabc54e4ae1f22596b80" category="list-text">卸載Oracle備份</block>
+  <block id="2bf1541a065965ff76301e89903e438e" category="list-text">目錄Oracle備份</block>
+  <block id="7dff870ebe8ca35e70a2f0a296bc31d2" category="list-text">取消Oracle備份目錄</block>
+  <block id="b26efdb320271783247fcf230eb862a8" category="list-text">取得執行時間點還原所需的所有備份</block>
+  <block id="a0031b50aef8bedd7e7bd7e66480b505" category="list-text">建立、顯示、修改及刪除Oracle資料庫複製規格檔案</block>
+  <block id="8459f225cc1b2cbdf1583c85b1f32064" category="list-text">顯示Oracle資料庫複製階層架構</block>
+  <block id="f4d8091650f9c519f34b3be8061e1709" category="list-text">擷取所有複本</block>
+  <block id="b6e18667a0b55e3c268c3768455a7805" category="list-text">依ID擷取複製詳細資料</block>
+  <block id="745f9c6f2cb93107f25aa37097b88f0b" category="list-text">使用複製規格檔案、從備份中複製Oracle資源</block>
+  <block id="0ed6cf43eac9e52e09ff101db70aab13" category="section-title">實體複本分割</block>
+  <block id="a6e6abb324f79cf91c78dd54ff18ce66" category="list-text">預估複製資源的實體複本分割作業</block>
+  <block id="88e599d3cafcce385ce06be132da1a72" category="list-text">擷取所有資源群組的詳細資料</block>
+  <block id="2183a58cb68c9890674bd1618a059745" category="list-text">依名稱擷取資源群組</block>
+  <block id="4e1d037b18de7a7e0816e1012f933557" category="list-text">為自訂應用程式的外掛程式建立資源群組</block>
+  <block id="4f3e9348a014d50b756de8b8c7231162" category="list-text">建立Microsoft SQL Server外掛程式的資源群組</block>
+  <block id="98753c90c286b829ce93604710ef23d9" category="list-text">為Oracle資料庫的外掛程式建立資源群組</block>
+  <block id="060dbb0a8824db9ea7ac2a906d0256bc" category="list-text">修改自訂應用程式外掛程式的資源群組</block>
+  <block id="168b93336f03666d3c9b5d7bbc06fb7c" category="list-text">修改Microsoft SQL Server外掛程式的資源群組</block>
+  <block id="8cb721d92b9dc1e81a000c4cf1e800c7" category="list-text">修改Oracle資料庫外掛程式的資源群組</block>
+  <block id="b76f4a135e62f9803ebcae40eb079ea3" category="list-text">為Microsoft SQL Server外掛程式建立、修改或刪除資源群組的複製生命週期</block>
+  <block id="eaed56a99e51dcc86d7d26d5fe9657bc" category="list-text">將資源群組置於維護或正式作業模式</block>
+  <block id="1148f24345516b4dde3cdeebb7cfcc85" category="list-text">移除資源群組</block>
+  <block id="7f755901d60ec8837d5f3607a70c285a" category="list-text">依名稱擷取原則詳細資料</block>
+  <block id="5db964fe501124d07b6efbf69ef26832" category="list-text">刪除原則</block>
+  <block id="b334dc581770f5921d751bb5fe0ff007" category="list-text">建立現有原則的複本</block>
+  <block id="f26315edda53fe80961c4cd0f3260d88" category="list-text">建立或修改自訂應用程式外掛程式的原則</block>
+  <block id="52e31b14c31d712b9cee0d71a8b7e58e" category="list-text">建立或修改Microsoft SQL Server外掛程式的原則</block>
+  <block id="5a618d98fcd97df6826f488da1d4dc04" category="list-text">建立或修改Oracle資料庫外掛程式的原則</block>
+  <block id="b410be3836ec5cc561d966124bf5a9ca" category="list-text">建立或修改SAP HANA資料庫外掛程式的原則</block>
+  <block id="1143bcbfb12745612fa5e7259c295a09" category="list-text">擷取所有共用</block>
+  <block id="e85f60f96106619dc93c94f8fd196bae" category="list-text">依名稱擷取共用區</block>
+  <block id="16d48f08379bda675db15f5973bc52b9" category="list-text">建立或刪除共用區</block>
+  <block id="349d976bbf616d09fd2a555f44bbf5c9" category="list-text">依名稱擷取儲存設備詳細資料</block>
+  <block id="1f5ddce00e9f1ec15e0ea39f91bb3ddc" category="list-text">探索儲存叢集上的資源</block>
+  <block id="a0e13786ff8de6c36eb086c2940b2eb9" category="list-text">擷取儲存叢集上的資源</block>
+  <block id="678eff57a13293e80fcc19fb3b62a672" category="list-text">擷取所有共用的詳細資料</block>
+  <block id="0cd3a9666f21167a2545201bc822f356" category="list-text">列出主機的所有外掛程式</block>
+  <block id="9587f6292c260b01edcf105bd92d3f25" category="list-text">使用金鑰修改自訂資源</block>
+  <block id="a34abb01c3939001bf48481dc603b80c" category="list-text">使用金鑰移除自訂資源</block>
+  <block id="5a3f70ac775c3812ce06cfac0d1c37ba" category="list-text">使用金鑰修改SAP HANA資源</block>
+  <block id="9caabe22c9c1e24e64d0998e655719a5" category="list-text">使用金鑰移除SAP HANA資源</block>
+  <block id="ffa1674a2741f607824fff0fba7b5c54" category="list-text">使用金鑰修改Oracle應用程式Volume資源</block>
+  <block id="fe3c7bd53de01837f8467d847ba48d96" category="list-text">使用Microsoft SQL Server的外掛程式和金鑰來備份Microsoft SQL Server資源</block>
+  <block id="e8fe1a759187bc98651e0ea76c329e86" category="list-text">使用Oracle資料庫的外掛程式和金鑰來備份Oracle資源</block>
+  <block id="94369d0083bed9a2ff75a9369347569a" category="list-text">使用自訂應用程式的外掛程式和金鑰來備份自訂應用程式資源</block>
+  <block id="4f4d3d7404cecd1761bed3ece7a658f6" category="list-text">使用金鑰設定SAP HANA資料庫</block>
+  <block id="c84cfd111294ebb4941b35d52bbe469d" category="list-text">使用金鑰設定Oracle資料庫</block>
+  <block id="3abd608ccf3fc64710a2c862df427f31" category="list-text">使用金鑰還原自訂的應用程式備份</block>
+  <block id="31176983fab528830808f4e0d5e0a051" category="list-text">啟動Oracle資源的隨需複製生命週期</block>
+  <block id="e64aeb7d92479d1c410ff07a62127254" category="list-text">擷取個別外掛程式的備份、還原及複製作業報告</block>
+  <block id="631d151cb4117606f1fbc14b43ad00f8" category="list-text">擷取排程報告的資料</block>
+  <block id="1c1e738416b1d9e73a8d5ea9565dcac9" category="list-text">依ID擷取警示</block>
+  <block id="1c7d74c9de1c8e6bd892d1caa66de551" category="list-text">刪除多個警示、或依ID刪除警示</block>
+  <block id="7cdeafec35bbc1fc42e4ebb9fb71c7a1" category="list-text">新增或刪除使用者</block>
+  <block id="31b585aa42883518a14cd719cc223fa9" category="list-text">將使用者指派給角色</block>
+  <block id="a5630e0f86f75d14b125744245c4e217" category="list-text">取消指派角色的使用者</block>
+  <block id="e3f99edb2d840fe355968f5fe3a45643" category="list-text">將群組指派給角色</block>
+  <block id="58a2718d6e23601e903ea8e0b0a03a8c" category="list-text">取消指派角色的群組</block>
+  <block id="70407d23256543e8fe943603041c424e" category="list-text">新增或刪除群組</block>
+  <block id="27f4c5b341910fe1362e749113db3938" category="list-text">建立現有角色的複本</block>
+  <block id="abf8b44e024fc8efe8c8ead5d610c20b" category="list-text">指派或取消指派資源給使用者或群組</block>
+  <block id="990a0bde74d6ed2f45dc4fd6f4cca24d" category="list-text">檢視SnapCenter 驗證伺服器或外掛程式主機的憑證狀態</block>
+  <block id="779baaa220d01ad78f2f40f91e1ccc48" category="list-text">修改SnapCenter 適用於整個伺服器或外掛程式主機的憑證設定</block>
+  <block id="b8aaf3d63284e930a273b6b5f9ed926f" category="list-text">擷取儲存庫備份</block>
+  <block id="2109509bbf1e9c41d0e0d3f8dbf58b9a" category="list-text">檢視儲存庫的組態資訊</block>
+  <block id="d88a49618eee776f8ceab0375f7531af" category="list-text">保護SnapCenter 並還原此資訊庫</block>
+  <block id="6f1fe448ebeae4418308aff3901358e1" category="list-text">取消保護SnapCenter 不受影響的儲存庫</block>
+  <block id="c674e3477c7696a2aecd6f87c1be9736" category="list-text">重新建置及容錯移轉儲存庫</block>
+  <block id="7a39a5111b0101ad3147c54ee235c183" category="paragraph">您可以使用此API來檢視SnapCenter 此版本的功能。</block>
+  <block id="c3117c33abd012814d4b2d7b924c1f8d" category="admonition">您應該提供儲存災難恢復備份的目標路徑。</block>
+  <block id="2012ae142f225323da2a6e6b42372bd8" category="paragraph">建立新的伺服器災難恢復備份。</block>
+  <block id="6d4bea151109003c5e0920bae84073a0" category="paragraph">伺服器etc/host檔案將無法還原。您可以從DR備份資料夾手動還原。</block>
+  <block id="7a8511ac66e8ad507e84e1b59fb8c137" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block></block>
+  <block id="911e666bb69c0269db366306dcba920d" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="355ab8d4b3c8bcfd96ba2c083cf60281" category="paragraph">您也可以使用_uninstall-SmHostPackage_ Cmdlet和必要的參數、從多個主機解除安裝外掛程式。您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="08d73a168fe24a5b54b3d9999dc177a0" category="paragraph">如需Cmdlet的相關資訊、請參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="e42dff8645643bcf58420492d58f8cda" category="paragraph">如需詳細資訊、請參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="5cfcff9080dfd6a0b46f31dd889d7691" category="list-text">應在所有節點上執行MFA設定的指令。SnapCenter依賴方組態應在Active Directory Federation Services（AD FS）伺服器中使用F5叢集詳細資料進行。啟用MFA後、節點層級SnapCenter 的支援功能將會遭到封鎖。</block>
+  <block id="88b8c728864c341ef14637e289839640" category="list-text">ASP.NET 4.7.2</block>
+  <block id="8098ea3ff2e42300d1835034eb9f2ad7" category="paragraph">+.NET Framework 4.7.2功能+</block>
+  <block id="266e3e529821464e265179afab77cc0e" category="list-text">NET Framework 4.7.2</block>
+  <block id="606d5e037822a442727a528828b14a45" category="doc">啟用多因素驗證（MFA）</block>
+  <block id="ef3ab6fc872d21b146098f5850df64c9" category="paragraph">若要啟用MFA功能、您應該在Active Directory Federation Service（AD FS）Server和SnapCenter SView Server中執行一些步驟。</block>
+  <block id="b2f9ddbfbf0bb6739ee75e8c2a6ac138" category="list-text">Windows Active Directory Federation Service（AD FS）應在各自的網域中啟動並執行。</block>
+  <block id="ff213a826598e59e3839e9ee5713eb9a" category="list-text">您應該擁有任何AD FS支援的多因素驗證服務、例如Azure MFA、Cisco DuoTM等。</block>
+  <block id="cb7f79bbeb52e82fa7926e0724dba11e" category="list-text">無論時區為何、均應使用相同的資訊區和AD FS伺服器時間戳記。SnapCenter</block>
+  <block id="0ee03cd1523961dfa875fac5c6817350" category="list-text">取得SnapCenter 並設定驗證伺服器的授權CA憑證。</block>
+  <block id="4090d0adfa0a73ca248f3a29df56f147" category="paragraph">CA憑證為必填、原因如下：</block>
+  <block id="e26a403b5bc4392b06e59bf0ea5f3734" category="list-text">確保不會中斷ADFS-F5通訊、因為自我簽署的憑證在節點層級是唯一的。</block>
+  <block id="3e3aa2cc7dad01d563ee8f2059cd8120" category="list-text">確保在獨立式或高可用度組態的升級、修復或災難恢復（DR）期間、不會重新建立自我簽署的憑證、因此可避免重新設定MFA。</block>
+  <block id="6c09b2d713717656ff82620da0253eb5" category="list-text">確保IP FQDN解析度。</block>
+  <block id="760bd9baa4b7633c0843cb714f00a44e" category="paragraph">如需CA憑證的相關資訊、請參閱 <block ref="de78619abe7dcb7b53be3c4ab98b1283" category="inline-link-macro-rx"></block>。</block>
+  <block id="c746671a4c0cb7e7a37abe538fe2107e" category="list-text">在相同的AD FS中設定其他應用程式時、支援SSO型登入。SnapCenter在某些AD FS組態中、SnapCenter 由於安全原因、可能需要使用者驗證、視AD FS工作階段持續性而定。</block>
+  <block id="0d432c3383a301d652dc61c7708c5724" category="list-text">您可以執行Get-Help命令名稱來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
+  <block id="0470044badbfb7d0d8a4ec5bab24ebb3" category="list-text">連線至Active Directory Federation Services（AD FS）主機。</block>
+  <block id="6ef1300bebff7801c85a1789a6c0790a" category="list-text">從下載AD FS聯盟中繼資料檔案 <block ref="a9571343becbc81f25857902551c1e72" category="inline-link-rx"></block> Fqd&gt;&gt;/資料中繼資料/2007/06/FedationMetadata。XML」</block>
+  <block id="cc53a56f022408c7c918dae3f5120646" category="list-text">將下載的檔案複製到SnapCenter 支援MFA功能的伺服器。</block>
+  <block id="9ecfd57c67ca8b2d27e87284ca6755c3" category="list-text">透過PowerShell以「管理員」使用者身分登入SnapCenter 到「伺服器」SnapCenter 。</block>
+  <block id="696ac2aea44e94108d138faca1e6061a" category="list-text">使用PowerShell工作階段SnapCenter 、使用_New-SmMultifactorAuthenticationMetadata -path_ Cmdlet來產生FismFA中繼資料檔案。</block>
+  <block id="c82bb0422af1b29a8b9694bbfe3ebe9e" category="paragraph">path參數指定將MFA中繼資料檔案儲存到SnapCenter Sof the Server主機的路徑。</block>
+  <block id="56fcee91de3134d2db0d32a05335e432" category="list-text">將產生的檔案複製到AD FS主機、以設定SnapCenter 將SURE做為用戶端實體。</block>
+  <block id="9268a48919705f415838693aa4146e28" category="list-text">使用_Set-SmMultiFactorAuthentication -Enable -Path_ Cmdlet啟用MFA for SnapCenter SectorServer。</block>
+  <block id="588a899e5cfd7ee10458176f79204605" category="paragraph">path參數指定AD FS MFA中繼資料XML檔案的位置、SnapCenter 該檔案已在步驟3複製到SetfServer。</block>
+  <block id="b47bdbc8d57f844fea0134ffbecf2242" category="list-text">（選用）使用_Get-SmMultiFactorAuthentication_ Cmdlet檢查MFA組態狀態和設定。</block>
+  <block id="9e93c22d2a1e4426ec1fd94bd4ac31b3" category="list-text">前往Microsoft管理主控台（MMC）並執行下列步驟：</block>
+  <block id="9bcb5adfefb899867ed5b11f042b98db" category="list-text">按一下*檔案*&gt;*新增/移除Snapin *。</block>
+  <block id="cf424f2e43207d2c78b3d27a5dc0fda2" category="list-text">按一下*主控台根目錄*&gt;*憑證–本機電腦*&gt;*個人*&gt;*憑證*。</block>
+  <block id="b245a32518063d47ab60cd9ae65b7937" category="list-text">在繫結SnapCenter 至SUn供 參考的CA憑證上按一下滑鼠右鍵、然後選取*所有工作*&gt;*管理私密金鑰*。</block>
+  <block id="39b5fcc1b0398cd4cdbf088d9851aa36" category="list-text">在權限精靈上執行下列步驟：</block>
+  <block id="cd55bfd42602b8f720a9d41caf148f78" category="list-text">按一下「*新增*」</block>
+  <block id="fc4f9883b30f507feb5ab0b4d42267cd" category="list-text">按一下*位置*、然後選取相關主機（階層頂端）</block>
+  <block id="198e6981b37af309244a71441c5344c9" category="list-text">在*位置*快顯視窗中按一下*確定*。</block>
+  <block id="80f7b3672de7c3d1051cd5ee2c883f05" category="list-text">在物件名稱欄位中、輸入「IIS_IUSRS」、然後按一下*檢查名稱*、再按一下*確定*。</block>
+  <block id="576824a9a44254550a67ab8aab39ac32" category="paragraph">如果檢查成功、請按一下「*確定*」。</block>
+  <block id="f66df63be5b59de9c83fe5b9af91718b" category="list-text">在AD FS主機中、開啟AD FS管理精靈、然後執行下列步驟：</block>
+  <block id="90fa18d048bbd4d789b594ebceeb2490" category="list-text">右鍵點選*信賴廠商信任*&gt;*新增信賴廠商信任*&gt;*開始*。</block>
+  <block id="0179eedc054410462409658b0bad268c" category="list-text">選取第二個選項、然後瀏覽SnapCenter 「Some MFA中繼資料」檔案、然後按一下「* Next*（*下一步*）」。</block>
+  <block id="b6312d7d51f31ed2e0c8dc5372435335" category="list-text">指定顯示名稱、然後按一下*「下一步*」。</block>
+  <block id="0e94f80e83724112f00526866ff5106f" category="list-text">根據需要選擇並存取控制原則、然後按一下*下一步*。</block>
+  <block id="148d7f6f40daf98c2955bdd9fe18e6c1" category="list-text">將下一個索引標籤中的設定設為預設值。</block>
+  <block id="0c43eee88d95f645135455225ef45492" category="paragraph">目前以依賴方的形式呈現提供的顯示名稱。SnapCenter</block>
+  <block id="72636fa45db48574ba9c546fdd1db0a8" category="list-text">選取名稱並執行下列步驟：</block>
+  <block id="fcfb637a4b496a9a140b628cdb573932" category="list-text">按一下*編輯請款發放政策*。</block>
+  <block id="082c51e92370324bc62e7c80c44d8941" category="list-text">單擊* Add Rule（添加規則）*，然後單擊* Next*（下一步*）。</block>
+  <block id="6def5028f1988fc94fac52ad11230808" category="list-text">指定宣告規則的名稱</block>
+  <block id="894da100f84831f7c70c6bfa7616298a" category="list-text">選擇* Active Directory *作為屬性儲存區。</block>
+  <block id="7fdc58355431a6a3d9515f7519f55a21" category="list-text">選取「*使用者-主要名稱*」屬性、並選取傳出的報銷類型為*名稱- ID*。</block>
+  <block id="adfd9f210cddba9223539ba1793c20cb" category="list-text">在ADFS伺服器上執行下列PowerShell命令。</block>
+  <block id="ac4be3bbcd220f4cca6269e289646cd3" category="paragraph">_Set-AdfsRelyingPartyTrust -目標名稱「&lt;信賴方的顯示名稱&gt;」-註冊憑證重新註冊檢查無_</block>
+  <block id="573e4455d62a0e745b09afd6c4db34f0" category="paragraph">_Set-AdfsRelyingPartyTrust -targetName「&lt;依賴方的顯示名稱&gt;」-EncryptionCertificateRevocationCheck None_</block>
+  <block id="06a6a46ff24f4c0f682d4804aaf90175" category="list-text">請執行下列步驟、確認中繼資料已成功匯入。</block>
+  <block id="c3613ef2b11238bd320ee942d11e6fe4" category="list-text">在依賴方信任上按一下滑鼠右鍵、然後選取*內容*。</block>
+  <block id="35602ea96136092b8b885fe1ef749873" category="list-text">確認已填入端點、識別項和簽名欄位。</block>
+  <block id="907fe6bfcd498fe3e561f7fb3ee67c89" category="paragraph">也可使用REST API來啟用「支援MFA」功能。SnapCenter</block>
+  <block id="1958e9c22cb352dba19d476e05b4a53b" category="paragraph">啟用、更新或停用SnapCenter 完效益管理系統中的MFA設定後、請關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器以重新登入。這將清除現有或作用中的工作階段Cookie。</block>
+  <block id="442ed19a31ac1f651ba7bf07effe122c" category="inline-link-macro">在多個索引標籤中登入顯示MFA錯誤SnapCenter</block>
+  <block id="b07f8a55d09983494694fca31fee6b35" category="paragraph">如需疑難排解資訊、請參閱 <block ref="46642a8ad62fd1a061e94d6b7bf62dc5" category="inline-link-macro-rx"></block></block>
+  <block id="aeb89440d41f10fd9cc43ab75d800138" category="section-title">更新AD FS MFA中繼資料</block>
+  <block id="19b3ff63dd3f3b6c1e3e48e8b3be6141" category="paragraph">只要AD FS伺服器有任何修改、例如升級、CA憑證續約、DR等、您就應該更新SnapCenter 位於支援區的AD FS MFA中繼資料。</block>
+  <block id="2a18eff05051b9c720a786193ade4742" category="list-text">將下載的檔案複製SnapCenter 到「伺服器」以更新MFA組態。</block>
+  <block id="0129ab4e23da78e3b3d44732592d15ea" category="list-text">執行下列Cmdlet來更新SnapCenter Sf1中的AD FS中繼資料：</block>
+  <block id="16c05d08e46f0d446d2623a535219dd1" category="paragraph">_Set-SmMultiFactorAuthentication -Path &lt; ADFS MFA中繼資料XML檔案的位置&gt;_</block>
+  <block id="97088f26ec75cb4d55c4fe5eeb3b62b4" category="section-title">更新SnapCenter 功能不支援MFA中繼資料</block>
+  <block id="ac82039d46e3be923c813d3d4c5456e4" category="paragraph">每當有任何修改ADFS伺服器（例如修復、CA憑證續約、DR等）時、您就應該更新SnapCenter AD FS中的功能完善的MFA中繼資料。</block>
+  <block id="56ec825045a003fc115765658ea8b639" category="list-text">按一下*信賴廠商信任*。</block>
+  <block id="83e84b83a6a686044df5e13021693e95" category="list-text">在建立SnapCenter 的依賴方信任上按一下滑鼠右鍵、然後按一下「*刪除*」。</block>
+  <block id="d929cc2f30ed7ebb91266d0b79b5f2cf" category="paragraph">隨即顯示使用者定義的信賴關係人信任名稱。</block>
+  <block id="18231d11def74e66e747d2eb30fc1c50" category="list-text">啟用多因素驗證（MFA）。</block>
+  <block id="7c83e4b143b42aa42696c765109a8cc2" category="paragraph">請參閱 <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block></block>
+  <block id="a606674f3f6a9cee6f0ddf2eef03b07b" category="section-title">停用多因素驗證（MFA）</block>
+  <block id="3ed7d0eb5098b6db6af6c5b3eb2ce30f" category="paragraph">停用MFA、並使用_Set-SmMultiFactorAuthentication -Disable_Cmdlet清除在啟用MFA時建立的組態檔案。</block>
+  <block id="fe46b74f13369d6c44d60eb009d09999" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「SnapMirror show-history」-access all」</block>
+  <block id="3ff2f50a0428ccd330fd2b2e2baa3b97" category="doc">使用RBAC授權登入SnapCenter 到功能表</block>
+  <block id="fa5e0ef5462c888da7fe991f9bcf5da9" category="paragraph">除了使用SnapCenter 還原GUI、您還可以使用PowerShell Cmdlet建立指令碼來執行組態、備份及還原作業。每SnapCenter 個版本的各個版本可能都有一些Cmdlet變更。。<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block> 有詳細資料。</block>
+  <block id="8674ed970a497f68c8817c2f50e67e43" category="section-title">使用多因素驗證（MFA）登入SnapCenter</block>
+  <block id="87f394d82c9a69653bdcd732b405a220" category="paragraph">支援MFA的網域帳戶是作用中目錄的一部分。SnapCenter</block>
+  <block id="4ec1436ddb22128657c95d226f087159" category="list-text">您應該已經啟用MFA。</block>
+  <block id="09a4da19a51d287ce207dae789ecae48" category="paragraph">如需如何啟用MFA的詳細資訊、請參閱 <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block></block>
+  <block id="3c48cbcc7e635cd5b49ae0bb34585acb" category="list-text">僅支援FQDN</block>
+  <block id="2da45b9ae7393a39164f98eb0d6733f1" category="list-text">工作群組和跨網域使用者無法使用MFA登入</block>
+  <block id="57668cd160f4a88e501e4fc1d458e972" category="list-text">在AD FS登入頁面中、輸入使用者名稱和密碼。</block>
+  <block id="956a11e2298b4495848a2dee41f3211f" category="paragraph">當AD FS頁面上顯示使用者名稱或密碼無效錯誤訊息時、您應該檢查下列項目：</block>
+  <block id="e00216ddce4b49d4cc8b7724c9ed7f92" category="list-text">使用者名稱或密碼是否有效</block>
+  <block id="df83de2f1142c69999c260b19f81239e" category="paragraph">使用者帳戶應存在於Active Directory（AD）中</block>
+  <block id="f7d89272be4f4a54f90ac672c9001efc" category="list-text">是否超過AD中設定的允許嘗試次數上限</block>
+  <block id="00bb96dadf000907b7f5bff0ae2a1a57" category="list-text">AD和AD FS是否已啟動並正在執行</block>
+  <block id="b72b363fb9a595ad28aabe930bb28366" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="c70464b7e0f2ad9d136a0cce124b524e" category="inline-link">關於此產品的注意事項SnapCenter 4.7</block>
+  <block id="4be462fcf740489c25950b8da5069ee8" category="paragraph"><block ref="4be462fcf740489c25950b8da5069ee8" category="inline-link-rx"></block></block>
+  <block id="773a4c1c97f6070d698ee85302dc51cf" category="list-text">對於預先還原、POST還原、掛載及卸載命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否存在這些命令：</block>
+  <block id="19650f12fd9f269a497d4edc60754137" category="paragraph">Windows：_C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_</block>
+  <block id="e7b4efc5dd5b16a36c26e91652b78194" category="paragraph">對於Linux：_/var/opt/snapcenter/scc/sited_commands_list.txt_</block>
+  <block id="2dd7c4421097b3d796ff9bf355ebaa6e" category="admonition">如果命令清單中不存在這些命令、則作業將會失敗。</block>
+  <block id="e61e5d73b3b042b28dcdf96a5c438a4e" category="list-text">對於preclone或POST clone命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否存在命令：</block>
+  <block id="4a80bf6e28aaba8782d26fd8348ce6e1" category="paragraph">您可以執行Get-Help _command_name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="9af97e8a01b20be8df7443d0a4ef81ca" category="inline-link-rx"></block></block>
+  <block id="d5d9a4c4e51c27e556fb89bfdd11f0b0" category="list-text">對於靜止、Snapshot複製及靜止作業的前置和POST命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否有這些命令：</block>
+  <block id="9ac9a1a16b9b854c3b9c883b63a5f7a8" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。Cmdlet說明及Cmdlet參考資訊包含更多PowerShell Cmdlet的相關資訊。SnapCenter<block ref="5e7d1ae427cf89aac03ab8d36d50c405" category="inline-link-rx"></block>。</block>
+  <block id="83a6f3b236b04c53983a7b4c375e880b" category="paragraph">執行_Get-Help命令名稱_可取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="f1a3e7d70788bebca070b29762dc37eb" category="paragraph"><block ref="5e7d1ae427cf89aac03ab8d36d50c405" category="inline-link-rx"></block>。</block>
+  <block id="a4db0151065a2ee1abfaef83c4ceb68c" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱<block ref="9af97e8a01b20be8df7443d0a4ef81ca" category="inline-link-rx"></block></block>
+  <block id="f3f2079e0fc30d00110219dabf6ef6ce" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="44cd542095ed7517091dbb356fe6673c" category="paragraph">如需PowerShell Cmdlet的相關資訊、請使用SnapCenter 支援程式指令程式、或參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="3c8f1b708d97734299340f633acf1b28" category="paragraph">如果您使用iSCSI、iSCSI服務應該會執行。</block>
+  <block id="9415aa73bf3f3a2a034e0e07c5d506cf" category="section-title">SHA512雜湊</block>
+  <block id="aeff1fc8cacc5ff5c9b086664b2f5560" category="list-text">對於NetApp提供的自訂外掛程式、您應該確定已將自訂外掛程式檔案的SHA512雜湊新增至_custom_plugin_checksum _list_檔案。</block>
+  <block id="c0d35e9a1cb18fc944b55e22f446f2b2" category="list-text">對於Linux主機、SHA512雜湊位於_/var/opt/snapcenter/scc/cust_plugin_checksum _list.txt_</block>
+  <block id="d0f01849d252d5215ffa795d5e7a4791" category="list-text">對於Windows主機、SHA512雜湊位於_C:\Program Files\NetApp\SnapCenter Plug-in Creator\etc\custom_plugin_checksum _list.txt_</block>
+  <block id="f362104a88b92368af76c609011528ab" category="paragraph">對於自訂安裝路徑、SHA512雜湊位於_&lt;CUSTOM路徑&gt;\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\custom_plugin_checksum list.txt_</block>
+  <block id="a05404237ea51ddb4ea1e7c6debd0079" category="paragraph">custom_plugin_checksum清單是主機SnapCenter 上自訂外掛程式安裝的一部分、作者為</block>
+  <block id="8af2774827e3e07de108382c962be1a0" category="list-text">針對為應用程式建立的自訂外掛程式、您應該已執行下列步驟：</block>
+  <block id="f550adf3d7f52f3afc0e6e45b71e2055" category="list-text">已產生外掛程式壓縮檔的SHA512雜湊。</block>
+  <block id="9e4265226dcf4f703d217f82220d17ea" category="paragraph">您可以使用像這樣的線上工具<block ref="4aa52332da75b2ec4912a713935bc342" category="inline-link-rx"></block>。</block>
+  <block id="94e0e32bde2e2ee99521f81221ceee7a" category="list-text">將產生的SHA512雜湊新增至custom_plugin_checksum清單檔案的新行。</block>
+  <block id="17bc29e04b5123febcd35bdbc90142b4" category="paragraph">註解以#符號開頭、以識別雜湊所屬的外掛程式。</block>
+  <block id="7867996900fccc9a8502aad8682cccfe" category="paragraph">以下是Checksum檔案中SHA512雜湊項目的範例：</block>
+  <block id="3c346bb5f93f34966ee965302e263b4b" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需PowerShell Cmdlet的相關資訊、請使用SnapCenter 支援程式指令程式、或參閱<block ref="9af97e8a01b20be8df7443d0a4ef81ca" category="inline-link-rx"></block>。</block>
+  <block id="d08251d66235a8f6a65aacb7fbdc43ec" category="list-text">如果您在SVM中有多個資料路徑（LIF）、SnapCenter 則選擇適當的資料路徑（LIF）來掛載NFS複製的Volume。不過、如果您要指定特定的資料路徑（LIF）、則必須執行Set-SvmPreferredDataPath CLI。執行_Get-Help命令名稱_可取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
+  <block id="49e317595cf8eea53ae1d965b4173dbc" category="list-text">您應該是指派給角色的使用者、該角色具有外掛程式安裝和解除安裝權限、例如SnapCenter 「支援管理員」角色。</block>
+  <block id="fba8e16f3f22c15c55085aa461b4a879" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、請參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="71f18f8813db5be2902a244346744c57" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份與還原作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式指令程式說明或參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="fb6661786b7d5b1cfb5df7ffe94a3009" category="paragraph">第三方備份排程與SnapCenter 不支援的備份排程重疊時、將不受支援。您不應修改排程、並重新命名在Windows排程器或SQL Server代理程式中建立的備份工作。</block>
+  <block id="5891deda92209d1d45144775b7d5c20d" category="admonition">您不應重新命名在Windows排程器或SQL Server代理程式中建立的備份工作。</block>
+  <block id="6cd1a141ceeb4cee6a85c4a31c4aeb35" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原、還原、驗證及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱<block ref="9af97e8a01b20be8df7443d0a4ef81ca" category="inline-link-rx"></block></block>
+  <block id="e98179401fffdbe49af0925735c4e9d0" category="paragraph">如需詳細資訊、請參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="b4681b9eaef5652378ef9426e99a8f63" category="paragraph">您必須SnapCenter 執行下列命令、將RESTRESTRimeout參數的值增加至20000000 ms：Set-SmConfigSettings -Agent -configSettings @｛"RESttimeout"="20000000"｝。根據資料庫的大小、可以變更逾時值、而您可以設定的最大值為86400000 ms。</block>
+  <block id="2bdfb7ceab741b8d183afcf3b24c6f17" category="list-text">Clone生命週期精靈頁面上的大部分欄位都是不言自明的。下列資訊說明您可能需要指引的欄位。</block>
+  <block id="59080c688ea671f9f0cc2eed3afb7bf8" category="paragraph">請勿在密碼中使用雙引號（"）或反引號（"）。請勿使用小於（&lt;）和驚嘆號（！） 密碼中的符號。例如、lessthan&lt;!10、lessthan10&lt;!、backtick'12。</block>
+  <block id="29a6d4ddcd28e22d7ba6ab65da50bf6f" category="paragraph">如需執行Cmdlet的資訊、請參閱<block ref="9af97e8a01b20be8df7443d0a4ef81ca" category="inline-link-rx"></block></block>
+  <block id="0352418be0d30e5f0f0b3f664c74e1aa" category="admonition">在外掛程式的容錯移轉或容錯回復期間、外掛程式的整體狀態不會立即重新整理。主機和外掛程式的整體狀態會在後續的主機重新整理作業期間更新。</block>
+  <block id="d7b3c4517cc189c6cdd986195fa3f33f" category="sidebar">Software 4.7文件SnapCenter</block>
 </blocks>

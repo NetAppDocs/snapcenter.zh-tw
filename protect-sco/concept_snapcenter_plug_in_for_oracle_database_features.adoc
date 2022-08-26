@@ -36,6 +36,7 @@ summary: 適用於Oracle資料庫的外掛程式可與Linux或AIX主機上的Ora
 +
 您也可以設定認證資料、讓獲授權SnapCenter 的功能驗證使用者擁有應用程式層級的權限。
 
+* 支援歸檔記錄管理（ALM）以進行還原和複製作業
 * 建立線上資料庫的空間效率與時間點複本、以便使用NetApp FlexClone技術進行測試或資料擷取
 +
 您要建立複本的儲存系統需要FlexClone授權。
@@ -53,8 +54,25 @@ summary: 適用於Oracle資料庫的外掛程式可與Linux或AIX主機上的Ora
 根據預設、「SLM-功能」會定期探索沒有最佳化路徑的LUN、並加以修正。您可以修改位於/var/opt/snapcenter/SCU/依此類推 的scu.properties檔案中的參數來設定SLM..
 
 +
-** 您可以將啟用午餐路徑監控的值設為假、以停用此功能。
-** 您可以指定LUN路徑自動固定的頻率、方法是將lunpath_監 控時間間隔的值（以小時為單位）指派給lunpath_監 控時間間隔。如需有關SLM,請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["《SAN管理指南》（英文）ONTAP"^]。
+** 您可以將啟用午餐路徑監控參數的值設為假、以停用此功能。
+** 您可以指定LUN路徑自動固定的頻率、方法是將lunpath_監 控時間間隔參數的值（以小時為單位）指派給lunpath_監 控時間間隔參數。如需有關SLM,請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["《SAN管理指南》（英文）ONTAP"^]。
+
+
+* 支援Linux上的非揮發性記憶體Express（NVMe）
++
+** NVMe使用者必須安裝在主機上。
++
+您必須安裝NVMe util,才能複製或掛載到替代主機。
+
+** 備份、還原、複製、掛載、卸載、 除了VMDK和RDM等虛擬化環境之外、NVMe硬體支援目錄、無目錄和驗證作業。
++
+在沒有分割區或單一分割區的裝置上支援上述作業。
 
 
 
+
+
+
+NOTE: 您可以在核心中設定原生多重路徑選項、為NVMe裝置設定多重路徑解決方案。不支援裝置對應表（DM）多重路徑。
+
++如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。

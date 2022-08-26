@@ -1,7 +1,7 @@
 ---
 permalink: protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html 
 sidebar: sidebar 
-keywords: credentials,SnapCenter Plug-in for Oracle Databases 
+keywords: credentials,SnapCenter Plug-in for Oracle Databases, non-database entries, oratab 
 summary: 資源是SnapCenter 由Oracle管理的主機上的Oracle資料庫。您可以將這些資料庫新增至資源群組、以便在探索可用的資料庫之後執行資料保護作業。 
 ---
 = 確定Oracle資料庫是否可供備份
@@ -62,3 +62,45 @@ IMPORTANT: 如果資料庫重新命名為SnapCenter 不屬於支援範圍、您�
 
 
 NOTE: 如果您已啟用Oracle資料庫驗證、資源檢視中會顯示紅色的掛鎖圖示。您必須設定資料庫認證、才能保護資料庫或將其新增至資源群組、以執行資料保護作業。
+
+
+
+== 如何防止SnapCenter 不含資料庫的項目被人發現
+
+您可以避免SnapCenter 使用不含資料庫的功能來探索在oratab檔案中新增的非資料庫項目。
+
+*步驟*
+
+. 安裝Oracle外掛程式之後、root使用者應在目錄//var/capcenter/scop/etc/_下建立* sc_oratab.config*檔案。
++
+將寫入權限授予Oracle二進位擁有者和群組、以便日後能夠維護該檔案。
+
+. 資料庫管理員應在* sc_oratab.config*檔案中新增非資料庫項目。
++
+建議您在_etc/oratab_檔案中、維持針對非資料庫項目所定義的相同格式、否則使用者只要新增非資料庫實體字串即可。
+
++
+
+NOTE: 字串區分大小寫。開頭有#的任何文字都會視為註解。註解可以附加在非資料庫名稱之後。
+
++
+....
+For example:
+--------------------------------------------
+# Sample entries
+# Each line can have only one non-database name
+# These are non-database name
+oratar  # Added by the admin group -1
+#Added by the script team
+NEWSPT
+DBAGNT:/ora01/app/oracle/product/agent:N
+-----------------------------------------------
+....
+. 探索資源。
++
+在「資源」頁面中不會列出在* sc_oratab.config *中新增的非資料庫項目。
+
+
+
+
+IMPORTANT: 建議您務必先備份SC_oratab.config檔案、再升級SnapCenter 此外掛程式。

@@ -1,0 +1,179 @@
+---
+permalink: install/enable_multifactor_authentication.html 
+sidebar: sidebar 
+keywords: mfa, authentication, multifactor authentication 
+summary: 利用嚴苛的安全性與驗證功能、確保資料安全無虞。SnapCenter 
+---
+= 啟用多因素驗證（MFA）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要啟用MFA功能、您應該在Active Directory Federation Service（AD FS）Server和SnapCenter SView Server中執行一些步驟。
+
+*您需要的是什麼*
+
+* Windows Active Directory Federation Service（AD FS）應在各自的網域中啟動並執行。
+* 您應該擁有任何AD FS支援的多因素驗證服務、例如Azure MFA、Cisco DuoTM等。
+* 無論時區為何、均應使用相同的資訊區和AD FS伺服器時間戳記。SnapCenter
+* 取得SnapCenter 並設定驗證伺服器的授權CA憑證。
++
+CA憑證為必填、原因如下：
+
++
+** 確保不會中斷ADFS-F5通訊、因為自我簽署的憑證在節點層級是唯一的。
+** 確保在獨立式或高可用度組態的升級、修復或災難恢復（DR）期間、不會重新建立自我簽署的憑證、因此可避免重新設定MFA。
+** 確保IP FQDN解析度。
++
+如需CA憑證的相關資訊、請參閱 link:../install/reference_generate_CA_certificate_CSR_file.html["產生CA認證CSR檔案"^]。
+
+
+
+
+
+*關於此工作*
+
+* 在相同的AD FS中設定其他應用程式時、支援SSO型登入。SnapCenter在某些AD FS組態中、SnapCenter 由於安全原因、可能需要使用者驗證、視AD FS工作階段持續性而定。
+* 您可以執行Get-Help命令名稱來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+
+
+*步驟*
+
+. 連線至Active Directory Federation Services（AD FS）主機。
+. 從下載AD FS聯盟中繼資料檔案 "https://<host[] Fqd>>/資料中繼資料/2007/06/FedationMetadata。XML」
+. 將下載的檔案複製到SnapCenter 支援MFA功能的伺服器。
+. 透過PowerShell以「管理員」使用者身分登入SnapCenter 到「伺服器」SnapCenter 。
+. 使用PowerShell工作階段SnapCenter 、使用_New-SmMultifactorAuthenticationMetadata -path_ Cmdlet來產生FismFA中繼資料檔案。
++
+path參數指定將MFA中繼資料檔案儲存到SnapCenter Sof the Server主機的路徑。
+
+. 將產生的檔案複製到AD FS主機、以設定SnapCenter 將SURE做為用戶端實體。
+. 使用_Set-SmMultiFactorAuthentication -Enable -Path_ Cmdlet啟用MFA for SnapCenter SectorServer。
++
+path參數指定AD FS MFA中繼資料XML檔案的位置、SnapCenter 該檔案已在步驟3複製到SetfServer。
+
+. （選用）使用_Get-SmMultiFactorAuthentication_ Cmdlet檢查MFA組態狀態和設定。
+. 前往Microsoft管理主控台（MMC）並執行下列步驟：
++
+.. 按一下*檔案*>*新增/移除Snapin *。
+.. 在「新增或移除嵌入式管理單元」視窗中、選取「*憑證*」、然後按一下「*新增*」。
+.. 在「憑證」嵌入式管理單元視窗中、選取「*電腦帳戶*」選項、然後按一下「*完成*」。
+.. 按一下*主控台根目錄*>*憑證–本機電腦*>*個人*>*憑證*。
+.. 在繫結SnapCenter 至SUn供 參考的CA憑證上按一下滑鼠右鍵、然後選取*所有工作*>*管理私密金鑰*。
+.. 在權限精靈上執行下列步驟：
++
+... 按一下「*新增*」
+... 按一下*位置*、然後選取相關主機（階層頂端）
+... 在*位置*快顯視窗中按一下*確定*。
+... 在物件名稱欄位中、輸入「IIS_IUSRS」、然後按一下*檢查名稱*、再按一下*確定*。
++
+如果檢查成功、請按一下「*確定*」。
+
+
+
+
+
+. 在AD FS主機中、開啟AD FS管理精靈、然後執行下列步驟：
++
+.. 右鍵點選*信賴廠商信任*>*新增信賴廠商信任*>*開始*。
+.. 選取第二個選項、然後瀏覽SnapCenter 「Some MFA中繼資料」檔案、然後按一下「* Next*（*下一步*）」。
+.. 指定顯示名稱、然後按一下*「下一步*」。
+.. 根據需要選擇並存取控制原則、然後按一下*下一步*。
+.. 將下一個索引標籤中的設定設為預設值。
+.. 單擊*完成*。
++
+目前以依賴方的形式呈現提供的顯示名稱。SnapCenter
+
+
+
+. 選取名稱並執行下列步驟：
++
+.. 按一下*編輯請款發放政策*。
+.. 單擊* Add Rule（添加規則）*，然後單擊* Next*（下一步*）。
+.. 指定宣告規則的名稱
+.. 選擇* Active Directory *作為屬性儲存區。
+.. 選取「*使用者-主要名稱*」屬性、並選取傳出的報銷類型為*名稱- ID*。
+.. 單擊*完成*。
+
+
+. 在ADFS伺服器上執行下列PowerShell命令。
++
+_Set-AdfsRelyingPartyTrust -目標名稱「<信賴方的顯示名稱>」-註冊憑證重新註冊檢查無_
+
++
+_Set-AdfsRelyingPartyTrust -targetName「<依賴方的顯示名稱>」-EncryptionCertificateRevocationCheck None_
+
+. 請執行下列步驟、確認中繼資料已成功匯入。
++
+.. 在依賴方信任上按一下滑鼠右鍵、然後選取*內容*。
+.. 確認已填入端點、識別項和簽名欄位。
+
+
+
+
+也可使用REST API來啟用「支援MFA」功能。SnapCenter
+
+*完成後*
+
+啟用、更新或停用SnapCenter 完效益管理系統中的MFA設定後、請關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器以重新登入。這將清除現有或作用中的工作階段Cookie。
+
+如需疑難排解資訊、請參閱 link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_login_in_multiple_tabs_shows_MFA_error%3A_The_SAML_message_response_(1)_doesn%E2%80%99t_match_the_expected_response_(2)["在多個索引標籤中登入顯示MFA錯誤SnapCenter"]
+
+
+
+== 更新AD FS MFA中繼資料
+
+只要AD FS伺服器有任何修改、例如升級、CA憑證續約、DR等、您就應該更新SnapCenter 位於支援區的AD FS MFA中繼資料。
+
+*步驟*
+
+. 從下載AD FS聯盟中繼資料檔案 "https://<host[] Fqd>>/資料中繼資料/2007/06/FedationMetadata。XML」
+. 將下載的檔案複製SnapCenter 到「伺服器」以更新MFA組態。
+. 執行下列Cmdlet來更新SnapCenter Sf1中的AD FS中繼資料：
++
+_Set-SmMultiFactorAuthentication -Path < ADFS MFA中繼資料XML檔案的位置>_
+
+
+
+*完成後*
+
+啟用、更新或停用SnapCenter 完效益管理系統中的MFA設定後、請關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器以重新登入。這將清除現有或作用中的工作階段Cookie。
+
+
+
+== 更新SnapCenter 功能不支援MFA中繼資料
+
+每當有任何修改ADFS伺服器（例如修復、CA憑證續約、DR等）時、您就應該更新SnapCenter AD FS中的功能完善的MFA中繼資料。
+
+*步驟*
+
+. 在AD FS主機中、開啟AD FS管理精靈、然後執行下列步驟：
++
+.. 按一下*信賴廠商信任*。
+.. 在建立SnapCenter 的依賴方信任上按一下滑鼠右鍵、然後按一下「*刪除*」。
++
+隨即顯示使用者定義的信賴關係人信任名稱。
+
+.. 啟用多因素驗證（MFA）。
++
+請參閱 link:../install/enable_multifactor_authentication.html["啟用多因素驗證"]
+
+
+
+
+
+*完成後*
+
+啟用、更新或停用SnapCenter 完效益管理系統中的MFA設定後、請關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器以重新登入。這將清除現有或作用中的工作階段Cookie。
+
+
+
+== 停用多因素驗證（MFA）
+
+停用MFA、並使用_Set-SmMultiFactorAuthentication -Disable_Cmdlet清除在啟用MFA時建立的組態檔案。
+
+*完成後*
+
+啟用、更新或停用SnapCenter 完效益管理系統中的MFA設定後、請關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器以重新登入。這將清除現有或作用中的工作階段Cookie。

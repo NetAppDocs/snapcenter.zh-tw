@@ -38,6 +38,7 @@ NOTE: 如需如何編輯asm_diskstring參數的資訊、請參閱 https://kb.net
 ** 與原始主機相同的UID和GID
 ** 與原始主機相同的Oracle版本
 ** 與原始主機相同的作業系統發佈與版本
+** 對於NVMe、應該安裝NVMe util
 
 
 
@@ -77,7 +78,7 @@ Check Alignment of PHs>`/sccli Get-SmBackup -BackupNamediskGroupname_sid_backupi
 "/sccli Get-Smupde-Backup備份名稱BACKup_name"
 
 +
-您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880725["《軟件命令參考指南》SnapCenter"^]。
+您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["《軟件命令參考指南》SnapCenter"^]。
 
 
 

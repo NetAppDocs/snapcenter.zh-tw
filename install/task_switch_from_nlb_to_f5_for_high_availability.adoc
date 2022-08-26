@@ -20,6 +20,6 @@ summary: 您可以將SnapCenter 您的「叢集HA」組態從「網路負載平�
 . 使用Open-SmConnection Cmdlet啟動工作階段、然後輸入認證資料。
 . 使用SnapCenter update-SmServerCluster Cmdlet更新支援服務器、使其指向F5叢集IP位址。
 +
-您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《軟件指令程式參考指南》SnapCenter"^]。
 
 

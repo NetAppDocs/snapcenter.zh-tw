@@ -63,12 +63,14 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
  a| 
 必要的軟體套件
  a| 
-* Microsoft .NET Framework 4.5.2或更新版本
+* Microsoft .NET Framework 4.7.2或更新版本
 * Windows管理架構（WMF4.0或更新版本）
 * PowerShell 4.0或更新版本
 
 
 如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+
+如需.NET疑難排解資訊、請參閱： link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["無法升級或安裝不適用於沒有網際網路連線的舊系統。SnapCenter"]
 
 |===
 
@@ -122,7 +124,7 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
 對於屬於工作群組的系統、請在安裝SnapCenter 此插件的系統上指定內建的本機管理員。如果使用者帳戶擁有較高的權限、或主機系統上的使用者存取控制功能已停用、您可以指定屬於本機系統管理員群組的本機使用者帳戶。使用者名稱欄位的有效格式如下：「UserName」（使用者名稱）
 
 +
-請勿在密碼中使用雙引號（"）。
+請勿在密碼中使用雙引號（"）或反引號（"）。請勿使用小於（<）和驚嘆號（！） 密碼中的符號。例如、lessthan<!10、lessthan10<!、backtick'12。
 
 
 
@@ -158,7 +160,9 @@ Windows Server 2012或更新版本可讓您建立群組託管服務帳戶（GMSA
 . 對於每個網域、請從Windows網域控制器執行下列命令：add-KDSRootKey -EffectiveImmedia
 . 建立及設定GMSA：
 +
-.. 建立使用者群組帳戶。
+.. 以下列格式建立使用者群組帳戶：
++
+ domainName\accountName$
 .. 新增電腦物件至群組。
 .. 使用您剛建立的使用者群組來建立GMSA。
 +

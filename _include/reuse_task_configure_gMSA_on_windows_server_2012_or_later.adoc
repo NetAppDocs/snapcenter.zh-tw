@@ -16,7 +16,9 @@ Windows Server 2012或更新版本可讓您建立群組託管服務帳戶（GMSA
 . 對於每個網域、請從Windows網域控制器執行下列命令：add-KDSRootKey -EffectiveImmedia
 . 建立及設定GMSA：
 +
-.. 建立使用者群組帳戶。
+.. 以下列格式建立使用者群組帳戶：
++
+ domainName\accountName$
 .. 新增電腦物件至群組。
 .. 使用您剛建立的使用者群組來建立GMSA。
 +

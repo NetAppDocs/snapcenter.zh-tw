@@ -24,6 +24,8 @@ entries:
     url: "/install/concept_authentication_methods_for_your_credentials.html"
   - title: 儲存虛擬機器連線與認證
     url: "/install/concept_svm_connections_and_credentials.html"
+  - title: 啟用多因素驗證（MFA）
+    url: "/install/enable_multifactor_authentication.html"
 - title: 安裝SnapCenter 此伺服器
   url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
 - title: 登入SnapCenter 到

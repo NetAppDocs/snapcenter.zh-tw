@@ -13,6 +13,20 @@ summary: 任何資料保護工作都需要資源群組。您也必須將一或�
 [role="lead"]
 任何資料保護工作都需要資源群組。您也必須將一或多個原則附加至資源群組、以定義您要執行的資料保護工作類型和保護排程。
 
+*關於此工作*
+
+* 可使用外掛主機SMCoreServiceHost.exe.Config檔案中的PredefinedWindows指令碼目錄金鑰來定義指令碼路徑。
++
+如有需要、您可以變更此路徑並重新啟動SMcore服務。建議您使用預設的安全路徑。
+
++
+金鑰的值可透過API：API /4.7/configsettings從交換器顯示
+
++
+您可以使用Get API來顯示金鑰的值。不支援Set API。
+
+
+
 *步驟*
 
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取Microsoft Exchange Server外掛程式。
@@ -112,7 +126,7 @@ NOTE: 如果原則包含*在備份工作建立時間*選取的伺服器上備份
 對於電子郵件通知、您必須使用GUI或PowerShell命令「et-SmtpServer」來指定SMTP伺服器詳細資料。
 
 +
-您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《軟件指令程式參考指南》SnapCenter"^]。
 
 . 檢閱摘要、然後按一下「*完成*」。
 
