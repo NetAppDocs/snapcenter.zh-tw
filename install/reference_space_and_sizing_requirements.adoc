@@ -24,7 +24,7 @@ Microsoft Windows
 
 僅支援英文、德文、日文及簡體中文版的作業系統。
 
-如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=105046;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 
@@ -75,6 +75,6 @@ NOTE: 附註：如果SnapCenter 您在SnapCenter 安裝了該系統資訊庫的�
 
 如需.NET疑難排解資訊、請參閱： link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["無法升級或安裝不適用於沒有網際網路連線的舊系統。SnapCenter"]
 
-如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=105046;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 |===

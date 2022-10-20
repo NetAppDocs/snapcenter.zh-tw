@@ -34,7 +34,7 @@ summary: 新增主機並安裝外掛程式套件之前、您必須先完成所�
 http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=105284;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
 
 
@@ -48,7 +48,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src
 http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=105284;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
 * 對於在Linux主機上執行的SAP HANA資料庫、在安裝SAP HANA資料庫外掛程式時SnapCenter 、會自動安裝適用於UNIX的整套外掛程式。
 

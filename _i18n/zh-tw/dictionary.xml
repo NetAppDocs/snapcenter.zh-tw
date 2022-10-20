@@ -455,7 +455,6 @@
   <block id="a4e3a610e00b4c12463fae493d4a60a0" category="paragraph">如果SnapCenter 您使用Windows 2019或Windows 2016作為支援此功能的伺服器主機、則必須安裝Java 1.8（64位元）。互通性對照表工具IMT （英文）包含有關需求的最新資訊。</block>
   <block id="6919c26b69875a76335f5a1dd643e508" category="inline-link">適用於所有作業系統的Java下載</block>
   <block id="9226092112d9484949841b47e3b0500e" category="paragraph"><block ref="9226092112d9484949841b47e3b0500e" category="inline-link-rx"></block></block>
-  <block id="9edee40c6e1ff30ec157f230e3d5f5d9" category="paragraph"><block ref="722d79c89bed8ce7aee52c7798452e1f" category="inline-link-rx"></block></block>
   <block id="37a4cc09c312ec6afaacfc25056bc091" category="list-text">您必須為非root使用者設定Sudo權限、才能存取多個路徑。使用visudo Linux公用程式、將下列行新增至/etc/udoers檔案。例如、</block>
   <block id="68c649f38a72af40607349aa57e26c9f" category="paragraph">非root使用者是您所建立的非root使用者名稱。</block>
   <block id="04a9cf8066f01cc2ca9e6a6e6b25a340" category="summary">所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter</block>
@@ -799,7 +798,6 @@
   <block id="083ad21990802d20fc5fdefdb7255565" category="paragraph">2 GB</block>
   <block id="e1c05a94a3712659051eb07eafa04bd4" category="paragraph">Java 1.8（64位元）Oracle Java或OpenJDK Flavors</block>
   <block id="bac8e3a852c936b4db89afd35d4d962a" category="paragraph">如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。</block>
-  <block id="b3ffee37db8c555449d0068b62ebb22f" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="1b419d76cc3163a36d36ff494ed65b44" category="inline-link-rx"></block></block>
   <block id="883f217b99bc288ae19aa7d6d60b021f" category="summary">您SnapCenter 可以使用「工作」頁面來監控不同的還原作業進度。您可能需要檢查作業進度、以判斷作業何時完成或是否有問題。</block>
   <block id="78d6b4b75546fc8aa5983130521da2da" category="doc">監控自訂外掛程式資源還原作業</block>
   <block id="ee9237c14a6c4cc7b6b4a10fbf38aa79" category="paragraph">還原後的狀態說明還原作業之後的資源狀況、以及您可以採取的任何進一步還原動作。</block>
@@ -2920,7 +2918,6 @@
   <block id="cc788b7e72b2a734dd0985bd1e0e9fe3" category="inline-link">Amazon FSX for NetApp ONTAP 的支援文件</block>
   <block id="6ae4072dd3f83211384c8e5499a7935c" category="paragraph">如需Amazon FSX for NetApp ONTAP 功能的相關資訊、請參閱<block ref="6acd76e3ffef3be13d939109e0593e26" category="inline-link-rx"></block>。</block>
   <block id="cf12f1baaed2b3c195374322d8d857bc" category="list-text">支援不同應用程式和資料庫的保護。SnapCenter</block>
-  <block id="f04a38723eca96ec9e60d19902a556e5" category="paragraph">如需支援的應用程式和資料庫詳細資訊、請參閱<block ref="89a335e37ffcb5152f6dbe1ca3dcb8c4" category="inline-link-rx"></block>。</block>
   <block id="b822295e51d5429c426ab9c2787523da" category="summary">如果您將SVM設定ONTAP 為搭配SanpCenter使用、但不想使用vsadmin角色、則應該建立SVM角色。</block>
   <block id="56e14ee5960cfe37cfc3964b6597babb" category="doc">以最低權限建立SVM角色</block>
   <block id="5394acdbb7aa09ee20a7bb0640ea03bf" category="paragraph">在這個功能中為新的SVM使用者建立角色時、您必須執行幾ONTAP 個SfCLI命令ONTAP 。如果您將SVM設定ONTAP 為搭配SnapCenter 使用、但不想使用vsadmin角色、則需要此角色。</block>
@@ -3938,7 +3935,6 @@
   <block id="06efaedb12cf6d7a7aa6bcea7d53a166" category="paragraph">不支援以7-Mode運作的功能。SnapCenter Data ONTAP您可以使用7-Mode Transition Tool、將儲存在Data ONTAP 以7-Mode運作的系統上的資料和組態移轉到ONTAP 一個支援VMware的系統。</block>
   <block id="91048ee9b28431a0b8417fc6aca22a53" category="section-title">支援匯入資料的組態</block>
   <block id="b136948fc75470b29a82776a9d289413" category="paragraph">在您將資料從SnapManager 適用於Oracle的物件3.4.x和SnapManager 適用於SAP的物件3.4.x匯入SnapCenter 到物件之前、您應該先瞭解SnapCenter 適用於Oracle資料庫的支援使用此功能的組態。</block>
-  <block id="92222a3fa1663d14d5f222993666e586" category="paragraph">《Oracle資料庫適用的支援使用支援的組態SnapCenter 》（英文）列於中<block ref="89a335e37ffcb5152f6dbe1ca3dcb8c4" category="inline-link-rx"></block>。</block>
   <block id="c11806b444e73d136144652a83923eba" category="section-title">哪些內容會匯入SnapCenter 到無法解的地方</block>
   <block id="d80d91babef4edbe3aa5ac78f57b8cbc" category="paragraph">您可以匯入使用設定檔執行的設定檔、排程和作業。</block>
   <block id="e3fde9f3aff3294492c93c044790a79f" category="cell">從SnapManager Oracle的支援到SnapManager SAP的支援</block>
@@ -4229,7 +4225,6 @@
   <block id="8770246977269a639c8c2818412dc3ac" category="list-text">如果您使用SnapManager 的是適用於Oracle的支援功能、而且想要移轉至SnapCenter 適用於Oracle資料庫的支援功能、您可以SnapCenter 使用sccli命令sc-migrate、將設定檔移轉至適用於Oracle資料庫的原則和資源群組。</block>
   <block id="4c893189fecc8b6e5c41ae931ffd7f89" category="list-text">如果SnapVault 您想要備份複寫、請設定ONTAP SnapMirror和支援功能</block>
   <block id="918d32b75f0ab883abba3a8dc0c3ae8d" category="inline-link">互通性對照表工具</block>
-  <block id="f0858d52541a7ad3eeb536bfddff4459" category="list-text"><block ref="292ae4b085fa15d429fc53821bef8949" category="inline-link-rx"></block></block>
   <block id="50295902d444d01e41805e9bc1b0598e" category="list-text"><block ref="50295902d444d01e41805e9bc1b0598e" category="inline-link-rx"></block></block>
   <block id="a909d5db254f7262bb93275a07812330" category="inline-link">在RHEL 7及更新版本的非多重路徑環境中、資料保護作業會失敗</block>
   <block id="637e979b90ef1f6ab2dd922a7436fbec" category="list-text"><block ref="637e979b90ef1f6ab2dd922a7436fbec" category="inline-link-rx"></block></block>
@@ -4588,7 +4583,6 @@
   <block id="750b10574c7c5ac05afa7817be89a63e" category="list-text">Oracle ASM篩選器驅動程式（ASMFD）</block>
   <block id="da02aa1448f6bd34e97b4d20a7b5bdcf" category="admonition">不支援pdb移轉和pdb複製作業。</block>
   <block id="0483f292b9712b967df26187e876eb45" category="list-text">Oracle Flex ASM</block>
-  <block id="b05284393d78b482f708946df4cf0209" category="paragraph">如需受支援Oracle版本的最新資訊、請參閱<block ref="89a335e37ffcb5152f6dbe1ca3dcb8c4" category="inline-link-rx"></block>。</block>
   <block id="2e00e783f5f2412a8f09c782c23524f4" category="section-title">Oracle資料庫支援的備份類型</block>
   <block id="63a9fc894d971ef7a1fef2e8bafbd8d4" category="paragraph">備份類型指定您要建立的備份類型。支援Oracle資料庫的線上和離線備份類型。SnapCenter</block>
   <block id="cd9177f3a112508cd1d4ef7ec5499433" category="section-title">線上備份</block>
@@ -6784,10 +6778,8 @@
   <block id="faf896433eeb20fca1eb114937251b50" category="paragraph">額外授權（選用）</block>
   <block id="9d09cebdc5095408e7e5f8bc09c08c42" category="paragraph">請參閱 <block ref="6de8516502145d64739d69762f4898a1" category="inline-link-macro-rx"></block>。</block>
   <block id="89a71adc7ceff2f08a2162d1abfd9de6" category="paragraph">*額外需求*</block>
-  <block id="b8a9ed6469f62c8937ce80d84ec8d1f7" category="paragraph">如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱<block ref="951d8153a11e103ff4de247b28991efc" category="inline-link-rx"></block></block>
   <block id="a55b17d8324fe50e023be8010d4b5474" category="cell">最低要求</block>
   <block id="a0315547f70da02dc3ae867b333d7a34" category="paragraph">作業系統（64位元）</block>
-  <block id="e624c30d3beef6cbd03a548e7bce7186" category="paragraph">請參閱<block ref="951d8153a11e103ff4de247b28991efc" category="inline-link-rx"></block></block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="paragraph">CPU</block>
   <block id="0e6a971ec5306b612f39cb5f57db7161" category="list-text">伺服器主機：4核心</block>
   <block id="30a4532a5bee2de6dedd7d0dd519c56c" category="list-text">外掛程式主機：1核心</block>
@@ -7517,7 +7509,6 @@
   <block id="c16c43065a548034a76faadb18015c27" category="sidebar">以角色為基礎的存取控制（RBAC）SnapCenter</block>
   <block id="fdcd3d6f45be97e0e24b4e793a81fac0" category="sidebar">升級SnapCenter 伺服器和外掛程式</block>
   <block id="8693aef17f2d371968a29ad0e0dff726" category="sidebar">升級工作流程</block>
-  <block id="0fc6896a1941ab3074a525b384b1d103" category="paragraph">。<block ref="1b419d76cc3163a36d36ff494ed65b44" category="inline-link-rx"></block> 包含有關所支援版本的最新資訊。</block>
   <block id="ace671fcc1d4c5939c3ed0ebf95d2b2c" category="paragraph">Windows支援下列指令碼類型：</block>
   <block id="29233ecbd2b929a26387627ae9f90bbf" category="paragraph">UNIX支援下列類型的指令碼：</block>
   <block id="11ab50b04d8cca57ff15c12c97d5679c" category="list-text">Python指令碼</block>
@@ -7556,7 +7547,6 @@
   <block id="7c8e4d34b8c6cc18e06524f05da1a10d" category="paragraph">顯示記錄保留的天數。</block>
   <block id="664943be24af2306e90a21dd26536e1c" category="paragraph">啟用憑證驗證</block>
   <block id="22d8a94cf37cc6d66c941a43b9d79fa8" category="paragraph">當主機啟用CA憑證驗證時顯示為true。</block>
-  <block id="12979c0044e0f2a4436304e71df2bd9b" category="paragraph">次要SnapCenter 版的伺服器應安裝在與主要SnapCenter 版的伺服器相同的位置和連接埠上。</block>
   <block id="d1e90d50eb139f0fd560c55b6bf37057" category="paragraph">對於多因素驗證（MFA）、當SnapCenter 針對該伺服器執行DR還原時、請關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器以重新登入。這將清除現有或作用中的工作階段Cookie、並確保更新正確的組態資料。</block>
   <block id="bf3e76e4f1322979745fbde954cda8f3" category="list-text">支援一組SSL密碼套件、以提供跨網路通訊的安全性。SnapCenter</block>
   <block id="5d06d972bc910c7d332d38f29622193f" category="inline-link">如何設定支援的SSL加密套件</block>
@@ -7914,4 +7904,19 @@
   <block id="29a6d4ddcd28e22d7ba6ab65da50bf6f" category="paragraph">如需執行Cmdlet的資訊、請參閱<block ref="9af97e8a01b20be8df7443d0a4ef81ca" category="inline-link-rx"></block></block>
   <block id="0352418be0d30e5f0f0b3f664c74e1aa" category="admonition">在外掛程式的容錯移轉或容錯回復期間、外掛程式的整體狀態不會立即重新整理。主機和外掛程式的整體狀態會在後續的主機重新整理作業期間更新。</block>
   <block id="d7b3c4517cc189c6cdd986195fa3f33f" category="sidebar">Software 4.7文件SnapCenter</block>
+  <block id="ad2df38df99c722f88cf142744758e07" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="f05f98f17d4e0568e31244784ca320bd" category="inline-link-rx"></block></block>
+  <block id="d91808c8a4d610ed99302113da2f85d2" category="paragraph"><block ref="0eee65cb82c15fd964b7785d5f117a10" category="inline-link-rx"></block></block>
+  <block id="e306f8020786d4a39801b24a0c26a65d" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱<block ref="26d76f2e486b882ba3b23e9b38f63829" category="inline-link-rx"></block>。</block>
+  <block id="b6353e58a793ffb65b97fb54ed68ff89" category="paragraph">如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block></block>
+  <block id="cfcb453ff70ad933cab89769866a7ca8" category="paragraph">請參閱<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block></block>
+  <block id="0675325e7eaef3f6ab445bb6f63484b1" category="list-text"><block ref="3f0414c37a83af730261bc95d9d01546" category="inline-link-rx"></block></block>
+  <block id="a0b646a3488d81d565a66dfa155ab64f" category="paragraph">。<block ref="acbd4d43b54b8ece885d46b425b04ecf" category="inline-link-rx"></block> 包含有關所支援版本的最新資訊。</block>
+  <block id="d9f5c0652a9a0f5a632c2b39950788b1" category="paragraph">如需受支援Oracle版本的最新資訊、請參閱<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>。</block>
+  <block id="f774d1f4e0076ce76f72417458eea1a5" category="paragraph">《Oracle資料庫適用的支援使用支援的組態SnapCenter 》（英文）列於中<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>。</block>
+  <block id="bbba754ddb8dc1ad1e612a5ec76136db" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>。</block>
+  <block id="db73b4bff7f9b92f00d36e2a3fa01152" category="paragraph">次要SnapCenter 版的伺服器應安裝在相同的安裝目錄中、並與主SnapCenter 版的SURL伺服器安裝在同一個連接埠上。</block>
+  <block id="9ed4d117d7b8f3381a2011b69e6dfef2" category="paragraph">如需支援的應用程式和資料庫詳細資訊、請參閱<block ref="4d75397e7ff03528228bfd2c042ee164" category="inline-link-rx"></block>。</block>
+  <block id="097869dcfdfea94a43eab778d57a4e83" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="102c8b4f5323d57ed48904a1ba94c2de" category="inline-link-rx"></block>。</block>
+  <block id="bf14f1703af6af8b51300dc61dc1594c" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="4d75397e7ff03528228bfd2c042ee164" category="inline-link-rx"></block>。</block>
+  <block id="02f8c9fac34de290666ccfe51e19b761" category="paragraph"><block ref="c86a29400a88b8541473f7e26922bd2f" category="inline-link-rx"></block></block>
 </blocks>
