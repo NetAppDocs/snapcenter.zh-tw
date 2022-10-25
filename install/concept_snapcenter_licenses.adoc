@@ -98,7 +98,7 @@ NOTE: 我們建議您將SnapCenter 不需要的「不二用」授權新增至次
 
 NOTE: 不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenter
 
-您應該安裝一SnapCenter 或多個版本的不二授權。如需如何新增授權的資訊、請參閱 link:..//install/concept_snapcenter_standard_controller_based_licenses.html["新增SnapCenter 以控制器為基礎的功能"] 或 link:..//install/concept_snapcenter_standard_capacity_based_licenses.html["新增SnapCenter 以功能為基礎的「功能型標準」授權"^]。
+您應該安裝一SnapCenter 或多個版本的不二授權。如需如何新增授權的資訊、請參閱 link:../install/concept_snapcenter_standard_controller_based_licenses.html["新增SnapCenter 以控制器為基礎的功能"] 或 link:../install/concept_snapcenter_standard_capacity_based_licenses.html["新增SnapCenter 以功能為基礎的「功能型標準」授權"]。
 
 
 

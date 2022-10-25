@@ -51,6 +51,9 @@ summary: 支援簡單、集中化、可擴充的平台、可為在混合雲任�
 +
 其他標準或自訂應用程式和資料庫也支援資料保護、提供架構以建立使用者定義SnapCenter 的功能表外掛程式。如此一來、其他應用程式和資料庫就能從同一個單一窗口進行資料保護。藉由運用此架構、NetApp已在SnapCenter NetApp Automation Store上針對IBM DB2、MongoDB、MySQL等發佈了適用的功能不全的外掛程式。
 
++
+https://automationstore.netapp.com/home.shtml["NetApp儲存自動化商店"^]
+
 * 原則型備份
 +
 以原則為基礎的備份運用NetApp Snapshot複製技術、建立快速、節省空間、應用程式一致、磁碟型的備份。或者、您也可以更新現有的保護關係、將這些備份作業自動化至二線儲存設備。
@@ -74,6 +77,15 @@ summary: 支援簡單、集中化、可擴充的平台、可為在混合雲任�
 * REST API、Windows Cmdlet、UNIX命令
 +
 包含REST API的大部分功能可與任何協調軟體整合、以及使用Windows PowerShell Cmdlet和命令列介面。SnapCenter
+
++
+如需REST API的詳細資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["REST API總覽"]。
+
++
+如需Windows Cmdlet的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《軟件指令程式參考指南》SnapCenter"^]。
+
++
+如需UNIX命令的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["《軟件命令參考指南》SnapCenter"^]。
 
 * 集中式資料保護儀表板與報告
 * 角色型存取控制（RBAC）、以確保安全性和委派。
@@ -143,7 +155,7 @@ NOTE: 適用於UNIX的DB2外掛程式不是獨立式外掛程式、無法獨立�
 
 * 不適用的自訂外掛程式SnapCenter
 +
-自訂外掛程式受到社群支援、可從下載 https://automationstore.netapp.com/home.shtml["NetApp儲存自動化商店"]。
+自訂外掛程式受到社群支援、可從下載 https://automationstore.netapp.com/home.shtml["NetApp儲存自動化商店"^]。
 
 
 
@@ -340,7 +352,7 @@ NOTE: MySQL、DB2和MongoDB自訂外掛程式僅透過NetApp社群提供支援�
 
 NetApp支援建立及使用自訂外掛程式的功能、但NetApp不支援您所建立的自訂外掛程式。
 
-如需詳細資訊、請參閱 link:../protect-scc/concept_develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"^]
+如需詳細資訊、請參閱 link:../protect-scc/concept_develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"]
 
 
 

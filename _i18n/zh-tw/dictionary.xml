@@ -3311,7 +3311,6 @@
   <block id="7dbd4083dc9a93160940c1e53d03999f" category="admonition">我們建議您將SnapCenter 不需要的「不二用」授權新增至次要目的地。如果SnapCenter 在次要目的地上未啟用「支援支援功能」、SnapCenter 則在執行容錯移轉作業之後、您將無法使用「支援功能」在次要目的地上備份資源。不過、次要目的地需要FlexClone授權才能執行複製與驗證作業。</block>
   <block id="cdc31d96c535e9b4d0a4c97b0340372f" category="admonition">不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenter</block>
   <block id="f011a01ebc3350e546311efaf71140bc" category="inline-link-macro">新增SnapCenter 以控制器為基礎的功能</block>
-  <block id="d0487d3c65933c7dda38325ae975026b" category="paragraph">您應該安裝一SnapCenter 或多個版本的不二授權。如需如何新增授權的資訊、請參閱 <block ref="0ca3149bbd09cc6482f3e5921aad891d" category="inline-link-macro-rx"></block> 或 <block ref="daae28e1483ad0a51ebe8ba1b52cdeb5" category="inline-link-macro-rx"></block>。</block>
   <block id="59746a4c33021bdc9cb716ea91eadbb0" category="section-title">單一信箱恢復（SMBR）授權</block>
   <block id="8119a3fca1d141f0d7a8e7156604c296" category="paragraph">如果您使用SnapCenter Exchange的還原外掛程式來管理Microsoft Exchange Server資料庫和單一信箱恢復（SMBR）、則您需要額外的SMBR授權、而此授權必須根據使用者信箱另行購買。</block>
   <block id="0d5e6d352f8f3217e51e0df5fe981349" category="inline-link">SMBR版本說明</block>
@@ -3470,7 +3469,6 @@
   <block id="91ca015b30de2a05aff2f16ec93231dd" category="paragraph">MySQL連接埠</block>
   <block id="ced7e40a06bd114bdd410398e025c7bd" category="paragraph">3306（HTTPS）、雙向</block>
   <block id="efe50212c612e0d762535b54fd67befd" category="paragraph">連接埠用於SnapCenter 在不同時執行的情況下、與MySQL儲存庫資料庫進行通訊。</block>
-  <block id="2fd902191e98265318221699b71a7bbc" category="paragraph">您可以建立安全的連線、從SnapCenter 「伺服器」到MySQL伺服器。 <block ref="98294cf010405bdb856636ffa91b07b6" category="inline-link-macro-rx"></block></block>
   <block id="4abc501abe98e95144eba2c4d17174ad" category="paragraph">Windows外掛程式主機</block>
   <block id="0d1c7f3b029cde2163a99c08de7fc3c3" category="paragraph">135、445（TCP）</block>
   <block id="9ce593479d7ce75e23fe1f85463ed78d" category="paragraph">除了連接埠135和445之外、Microsoft指定的動態連接埠範圍也應該開啟。遠端安裝作業使用Windows Management Instrumentation（WMI）服務、此服務會動態搜尋此連接埠範圍。</block>
@@ -3493,14 +3491,12 @@
   <block id="48552dce4d9810446c70f66f21f08120" category="paragraph">叢集或SVM通訊連接埠ONTAP</block>
   <block id="0e2baf6e148be111338e84354edd4364" category="paragraph">443（HTTPS）、biddirectional80（HTTP）、雙向</block>
   <block id="a26bff28c23606c7396b4619af8af1bd" category="paragraph">此連接埠由SAL（Storage Abstraction Layer、Storage Abstraction Layer）使用、用於執行SnapCenter 支援服務器和SVM的主機之間的通訊。此連接埠目前也用於SnapCenter Windows外掛程式主機上的SAL、用於SnapCenter 在支援該外掛程式的主機和SVM之間進行通訊。</block>
-  <block id="657328b06bb4725d5cf327593551d8d6" category="paragraph">SAP HANA資料庫連接埠適用的插件SnapCenter</block>
   <block id="a703a5f03b1b230925e5a7bef766ea84" category="paragraph">3執行個體編號13或3執行個體編號15、HTTP或HTTPS、雙向且可自訂</block>
   <block id="5afe34fece774db451a111901841c2f9" category="paragraph">對於多租戶資料庫容器（MDC）單一租戶、連接埠編號以13結尾；對於非MDC、連接埠編號以15結尾。</block>
   <block id="f79f66ef0d80eeeac5a8a3b2f86e2d84" category="paragraph">例如、32013是連接埠編號、例如20、31015是連接埠編號、例如10。</block>
   <block id="16e7597f6d1a1595520060010a775409" category="paragraph">網域控制器通訊連接埠</block>
   <block id="fa51be75ce838b88fdd3475b507591a3" category="paragraph">請參閱Microsoft文件以識別應在網域控制器防火牆中開啟的連接埠、以便驗證正常運作。</block>
   <block id="c659718bc9e53e4da63cb36d6025798c" category="paragraph">您必須開啟網域控制器上的Microsoft必要連接埠、SnapCenter 才能讓支援服務器、外掛程式主機或其他Windows用戶端驗證使用者。</block>
-  <block id="8bd83f1f314ef9e02c70e66cc9fb845c" category="paragraph">若要修改連接埠詳細資料、請參閱<block ref="50723147440c13da7c31ceaceb52ba16" category="inline-link-rx"></block> [修改外掛程式主機^]。</block>
   <block id="4c7a5eef4043ff1b8837e34761c5a044" category="summary">您應向SnapCenter 支援此功能的伺服器登錄Active Directory、以管理來自多個不受信任Active Directory網域的主機、使用者和群組。</block>
   <block id="378f0ed69bcfd27611f3fb3d8d53ebde" category="doc">登錄不受信任的Active Directory網域</block>
   <block id="94c2b7958941d951841e81064297ae50" category="paragraph">* LDAP與LDAPS傳輸協定*</block>
@@ -7269,7 +7265,6 @@
   <block id="41055e583e58ee1a92771580cdfe9b3f" category="list-text">適用於AIX的程式集外掛套件、包含下列外掛程式：SnapCenter</block>
   <block id="f131ab7559cf49d32373fdff9b7cbaaa" category="admonition">適用於UNIX的DB2外掛程式不是獨立式外掛程式、無法獨立安裝。SnapCenter當您安裝SnapCenter 適用於Oracle資料庫的支援功能時、會自動安裝此外掛程式。</block>
   <block id="ad41f7a9e85843a998743e132424a395" category="list-text">不適用的自訂外掛程式SnapCenter</block>
-  <block id="4d85577b7a29bc5d237d7c7beb5ebc7c" category="paragraph">自訂外掛程式受到社群支援、可從下載<block ref="14adb94a4faec9ea0e0992d90e98b640" category="inline-link-rx"></block>。</block>
   <block id="4bfa416280fc4f5037348c904859e18f" category="paragraph">VMware vSphere的VMware vSphere外掛程式（前身為NetApp Data Broker）是獨立式虛擬應用裝置、可在虛擬化資料庫和檔案系統上支援資料保護作業。SnapCenter SnapCenter</block>
   <block id="2aa0571a478e7d0fecaba7f94c88bf25" category="section-title">伺服器SnapCenter</block>
   <block id="e4b70dc0a2377b7bbef832a55b2d603c" category="paragraph">此伺服器SnapCenter 包括Web伺服器、集中式HTML5使用者介面、PowerShell Cmdlet、REST API及SnapCenter 此資訊庫。</block>
@@ -7337,7 +7332,6 @@
   <block id="bef4d00fa5327b323d516fbe5c1bce99" category="paragraph">MySQL、DB2和MongoDB自訂插件範例SnapCenter 可從下載<block ref="554f546cf121f440c6cfd97d643765df" category="inline-link-rx"></block>。</block>
   <block id="dbe26f725743679de01e440c2e7697ad" category="admonition">MySQL、DB2和MongoDB自訂外掛程式僅透過NetApp社群提供支援。</block>
   <block id="a84dab656bf020b14be7a5c3596b4288" category="paragraph">NetApp支援建立及使用自訂外掛程式的功能、但NetApp不支援您所建立的自訂外掛程式。</block>
-  <block id="e0348137514c6fa588f7dc1c018f38d7" category="paragraph">如需詳細資訊、請參閱 <block ref="42bf949f5c33c0da2d19dcdbdfcd8185" category="inline-link-macro-rx"></block></block>
   <block id="3012455ba6e0ba02dfa333bdecc83c57" category="section-title">系統儲存庫SnapCenter</block>
   <block id="cc1d85843af98a2ce08e58f1408e6364" category="paragraph">此系統庫有時也稱為NSM資料庫、可儲存每個環節的資訊和中繼資料。SnapCenter SnapCenter</block>
   <block id="b795272c033653aa88e12f8f4fd442ca" category="paragraph">MySQL Server儲存庫資料庫預設會在您安裝SnapCenter 此伺服器時安裝。如果已經安裝MySQL Server、而且您正在執行SnapCenter 全新安裝的功能、則應該解除安裝MySQL Server。</block>
@@ -7919,4 +7913,14 @@
   <block id="097869dcfdfea94a43eab778d57a4e83" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="102c8b4f5323d57ed48904a1ba94c2de" category="inline-link-rx"></block>。</block>
   <block id="bf14f1703af6af8b51300dc61dc1594c" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="4d75397e7ff03528228bfd2c042ee164" category="inline-link-rx"></block>。</block>
   <block id="02f8c9fac34de290666ccfe51e19b761" category="paragraph"><block ref="c86a29400a88b8541473f7e26922bd2f" category="inline-link-rx"></block></block>
+  <block id="b6b7e7973fe70256b1b775baf8ac7261" category="paragraph">您應該安裝一SnapCenter 或多個版本的不二授權。如需如何新增授權的資訊、請參閱 <block ref="978050eb868e07441781781da059ebc5" category="inline-link-macro-rx"></block> 或 <block ref="47cf8583fc17afccfc8268b2830ab680" category="inline-link-macro-rx"></block>。</block>
+  <block id="13aef2b62d8736d22562e85c99ca60eb" category="paragraph">您可以建立安全的連線、從SnapCenter 「伺服器」到MySQL伺服器。 <block ref="cd7568118ad87382648cb2133a315ffd" category="inline-link-macro-rx"></block></block>
+  <block id="6529e3cc72b3980f54f2d2ad982c79c2" category="paragraph">SAP HANA資料庫適用的插件vCode Spell Checkerport SnapCenter</block>
+  <block id="0cfe29479bcdd52d04233cb07867b8dc" category="paragraph">若要修改連接埠詳細資料、請參閱 <block ref="e76f469a4971f2c04dd83de4f8464750" category="inline-link-macro-rx"></block>。</block>
+  <block id="66ee30700091538587a27acf4ecad692" category="inline-link">REST API總覽</block>
+  <block id="9a9a51f1993f5461829d8466a8fb013e" category="paragraph">如需REST API的詳細資訊、請參閱<block ref="ea5c19f623f4ce0e4a3a37a512890f94" category="inline-link-rx"></block>。</block>
+  <block id="ac82cdc7de65b45fb896f54ac6f878a6" category="paragraph">如需Windows Cmdlet的詳細資訊、請參閱<block ref="d4c5c0570d011aab6fdb5c260e0a26e0" category="inline-link-rx"></block>。</block>
+  <block id="9381fc6f6aaa8ab22b178a15c78fbc00" category="paragraph">如需UNIX命令的詳細資訊、請參閱<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
+  <block id="c41cef29e8776e4670cacce5775ec017" category="paragraph">自訂外掛程式受到社群支援、可從下載<block ref="554f546cf121f440c6cfd97d643765df" category="inline-link-rx"></block>。</block>
+  <block id="0403e11795fb79ba2a2b089e5837948f" category="paragraph">如需詳細資訊、請參閱 <block ref="5d3441c720944f2bfbf67dc2b7c68bf1" category="inline-link-macro-rx"></block></block>
 </blocks>

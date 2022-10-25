@@ -61,7 +61,7 @@ MySQL連接埠
 
 連接埠用於SnapCenter 在不同時執行的情況下、與MySQL儲存庫資料庫進行通訊。
 
-您可以建立安全的連線、從SnapCenter 「伺服器」到MySQL伺服器。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["深入瞭解"^]
+您可以建立安全的連線、從SnapCenter 「伺服器」到MySQL伺服器。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["深入瞭解"]
 
 
 
@@ -128,7 +128,7 @@ Oracle的外掛程式會使用預設的JDBC連接埠來連線至Oracle資料庫�
 
 
  a| 
-SAP HANA資料庫連接埠適用的插件SnapCenter
+SAP HANA資料庫適用的插件vCode Spell Checkerport SnapCenter
  a| 
 3執行個體編號13或3執行個體編號15、HTTP或HTTPS、雙向且可自訂
 
@@ -146,4 +146,4 @@ SAP HANA資料庫連接埠適用的插件SnapCenter
 您必須開啟網域控制器上的Microsoft必要連接埠、SnapCenter 才能讓支援服務器、外掛程式主機或其他Windows用戶端驗證使用者。
 
 |===
-若要修改連接埠詳細資料、請參閱 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html#modify-plug-in-hosts[] [修改外掛程式主機^]。
+若要修改連接埠詳細資料、請參閱 link:../admin/concept_manage_hosts.html#modify-plug-in-hosts["修改外掛程式主機"]。
