@@ -55,13 +55,13 @@ ASM磁碟群組中的資料檔案是SnapCenter 作爲還原複製工作流程的
 
 
 * 資料LUN和記錄LUN的保護類型（例如鏡射、保存庫或鏡射保存庫）應相同、以便在使用記錄備份複製到替代主機期間、探索次要定位器。
-* 您應該在來源資料庫參數檔中將exclude _seed_cdb_view的值設為假、以擷取與複製12_c__資料庫備份相關的種子pdb資訊。
+* 您應該在來源資料庫參數檔中將exclude _seed_cdb_view的值設為假、以擷取與複製12_c_資料庫備份相關的種子pdb資訊。
 +
 SEED pdb是系統提供的範本、CDB可用來建立PDF。SEED（子）pdb的名稱為pdB$seed。如需PDB$SEED的相關資訊、請參閱Oracle文件ID 1940806.1。
 
 +
 
-NOTE: 備份12_c__資料庫之前、應先設定值。
+NOTE: 備份12_c_資料庫之前、應先設定值。
 
 * 支援由autofs子系統管理的檔案系統備份。SnapCenter如果您要複製資料庫、請確定資料掛載點不在autofs掛載點的根目錄下、因為外掛程式主機的根使用者無權在autofs掛載點的根目錄下建立目錄。
 +
@@ -80,15 +80,10 @@ NOTE: 您可以手動將新的複製掛載點登錄至autofs子系統。新的�
 如果檔案不存在、您應該建立檔案、如下例所示：
 
 +
-_黑名單｛_
-
-+
 ....
-# You can add comments by using the ‘#’ at the beginning of the line
+blacklist {
 nn-0x<target_node_name_1>:pn-0x<target_port_name_1>
 nn-0x<target_node_name_2>:pn-0x<target_port_name_2>
+}
 ....
-+
-_｝_
-
 

@@ -3005,7 +3005,6 @@
   <block id="5f1f3816baaf1ae27261430125d83764" category="admonition">如果您稍後升級SnapCenter 了版本的功能、ONTAP 應該重新執行RBAC User Creator for Data ONTAP BIOS工具、以更新您先前建立的使用者角色。為SnapCenter 舊版的版本的使用者角色無法ONTAP 在升級版本中正常運作。當您重新執行此工具時、它會自動處理升級作業。您不需要重新建立角色。</block>
   <block id="9dc5053bca32e6394932747f3adab2c4" category="inline-link">《Administrator驗證與RBAC電源指南》（英文）ONTAP</block>
   <block id="cf450319b4b50a20dcf243d6273acbf4" category="paragraph">如需設定ONTAP RBAC角色的詳細資訊、請參閱<block ref="4054a3747c1ed1604c443c75434e693a" category="inline-link-rx"></block>。</block>
-  <block id="2e8490dc7bdf2a0cd98dea04491763dc" category="admonition">為了保持一致性、SnapCenter 本文檔將角色稱為使用權限。此功能使用「'attribute'」一詞、而非「'privation.」一詞。OnCommand 在設定ONTAP 支援RBAC角色時、這兩個詞彙代表相同的意義。</block>
   <block id="eaa07c06fe679751494bfd4b2951b580" category="list-text">在儲存系統上、輸入下列命令以建立新角色：</block>
   <block id="2c7e6d2877f857f126c24c7742e84098" category="paragraph">「安全登入角色create &lt;role名稱&gt;&gt;-cmd目錄名稱"command"-access all–vserver &lt;Svm_name\&gt;'」</block>
   <block id="af7e38d09fe8c21a2365c6a2c6e9bafe" category="list-text">SVM_name是SVM的名稱。如果您將此欄位保留空白、則預設為叢集管理員。</block>
@@ -4550,9 +4549,7 @@
   <block id="b7a9dc8480c6c9ddaf18628dd79ad61c" category="list-text">您可以設定資料磁碟群組的名稱、但請確保執行實體複本之主機上的任何其他ASM磁碟群組不會使用該名稱。</block>
   <block id="c014ba7a65ae579a2708beb53f5cb976" category="paragraph">ASM磁碟群組中的資料檔案是SnapCenter 作爲還原複製工作流程的一部分進行配置的。</block>
   <block id="24aa4d1e777d4325bd7a1077e581f96f" category="list-text">資料LUN和記錄LUN的保護類型（例如鏡射、保存庫或鏡射保存庫）應相同、以便在使用記錄備份複製到替代主機期間、探索次要定位器。</block>
-  <block id="d75efecf969e318e8631aa633aad8a12" category="list-text">您應該在來源資料庫參數檔中將exclude _seed_cdb_view的值設為假、以擷取與複製12_c__資料庫備份相關的種子pdb資訊。</block>
   <block id="b110267fdfa8216b83e8bc846b22d07d" category="paragraph">SEED pdb是系統提供的範本、CDB可用來建立PDF。SEED（子）pdb的名稱為pdB$seed。如需PDB$SEED的相關資訊、請參閱Oracle文件ID 1940806.1。</block>
-  <block id="62b66450faeba3ebd26d4c69a00d90b2" category="admonition">備份12_c__資料庫之前、應先設定值。</block>
   <block id="940b5af8a20e62b932b6d5f2cb0da283" category="list-text">支援由autofs子系統管理的檔案系統備份。SnapCenter如果您要複製資料庫、請確定資料掛載點不在autofs掛載點的根目錄下、因為外掛程式主機的根使用者無權在autofs掛載點的根目錄下建立目錄。</block>
   <block id="baa3ce4e65add470c5afafe3bbd7cb96" category="paragraph">如果控制項和重作記錄檔位於資料裝載點之下、您應該修改控制檔路徑、然後相應地重作記錄檔路徑。</block>
   <block id="e49a081ca61f3da79922a289670f328d" category="admonition">您可以手動將新的複製掛載點登錄至autofs子系統。新的複製掛載點不會自動登錄。</block>
@@ -5643,7 +5640,6 @@
   <block id="7f317bbc8e2277ae3359d00f7b3b697b" category="paragraph">選取*永遠*或*失敗*或*失敗或警告*、即可在建立備份資源群組、附加原則及設定排程之後、將電子郵件傳送給收件者。</block>
   <block id="abf0bd9dec5ed840cac7798ec293ff16" category="paragraph">輸入SMTP伺服器資訊、預設電子郵件主旨行、以及「收件人」和「寄件者」電子郵件地址。</block>
   <block id="247652df99b4d20119ac1c9851ca09ce" category="list-text">如果您已將多個原則套用至資源、請從「原則」下拉式清單中、選取您要用於備份的原則。</block>
-  <block id="a303765ccf8e62e799f0ecddd5246086" category="summary">在建立備份之前定義備份策略、可提供您成功還原或複製檔案系統所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您的備份策略的主要決定因素。</block>
   <block id="256a24bb2bbfd11bdbce6eda99d9c9f4" category="doc">定義Windows檔案系統的備份策略</block>
   <block id="f39d4c826787f2bc363e01f37833b893" category="paragraph">在建立備份之前定義備份策略、可提供您成功還原或複製檔案系統所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您備份策略的主要決定因素。</block>
   <block id="49a469761aa5e6bfe27af78b7c460d38" category="section-title">Windows檔案系統的備份排程</block>
@@ -7609,8 +7605,6 @@
   <block id="f5834ae40c2c791cfe589857bdad345c" category="paragraph">您可以透過編輯spl.properties或使用SnapCenter 不禁用圖形使用者介面或Cmdlet來啟用或停用此參數。</block>
   <block id="7de59fae501cc41425b292c47c8d9c12" category="list-text">對於NVMe、如果必須排除任何目標連接埠的連線、您應該在/var/opt/snapcenter/SCU/etc/nvm.conf檔案中新增目標節點名稱和連接埠名稱。</block>
   <block id="71ce3de936c35ae0967019943cb6334a" category="paragraph">如果檔案不存在、您應該建立檔案、如下例所示：</block>
-  <block id="280f5c08d4f27f31b36e59d180eaeae6" category="paragraph">_黑名單｛_</block>
-  <block id="8c6edcef1c9a50bf9ecd0f192cee6137" category="paragraph">_｝_</block>
   <block id="bf51eb5d79e16ead1ceda527dda582b6" category="doc">支援REST API以供SnapCenter 支援Sfor Sfor Sfor Sfor Server和外掛程式</block>
   <block id="9ee6893a33efb203b34a11b10f9d01eb" category="paragraph">您可以使用此API登入SnapCenter 到此伺服器。此API會傳回用於驗證後續要求的使用者授權權杖。</block>
   <block id="f274ae38a991dabe63ac23d64b046496" category="paragraph">您可以使用API執行不同的作業。</block>
@@ -7923,4 +7917,7 @@
   <block id="9381fc6f6aaa8ab22b178a15c78fbc00" category="paragraph">如需UNIX命令的詳細資訊、請參閱<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
   <block id="c41cef29e8776e4670cacce5775ec017" category="paragraph">自訂外掛程式受到社群支援、可從下載<block ref="554f546cf121f440c6cfd97d643765df" category="inline-link-rx"></block>。</block>
   <block id="0403e11795fb79ba2a2b089e5837948f" category="paragraph">如需詳細資訊、請參閱 <block ref="5d3441c720944f2bfbf67dc2b7c68bf1" category="inline-link-macro-rx"></block></block>
+  <block id="74fec6bb431ffa93b327d4933607ec3f" category="admonition">為了保持一致性、SnapCenter 本文檔將角色稱為使用權限。這個「系統管理員GUI」OnCommand 使用術語_attributes_而非_privation_。在設定ONTAP 支援RBAC角色時、這兩個詞彙代表相同的意義。</block>
+  <block id="654c0ff0573689496c47502d09cfe7a8" category="list-text">您應該在來源資料庫參數檔中將exclude _seed_cdb_view的值設為假、以擷取與複製12_c_資料庫備份相關的種子pdb資訊。</block>
+  <block id="dfb3e8f24407538f95c7f42d27411d1b" category="admonition">備份12_c_資料庫之前、應先設定值。</block>
 </blocks>

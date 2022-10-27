@@ -2,7 +2,7 @@
 permalink: protect-scw/task_define_a_backup_strategy_for_windows_file_systems.html 
 sidebar: sidebar 
 keywords:  
-summary: 在建立備份之前定義備份策略、可提供您成功還原或複製檔案系統所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您的備份策略的主要決定因素。 
+summary: 在建立備份之前定義備份策略、可提供您成功還原或複製檔案系統所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您備份策略的主要決定因素。 
 ---
 = 定義Windows檔案系統的備份策略
 :allow-uri-read: 

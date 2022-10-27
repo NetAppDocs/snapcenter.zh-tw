@@ -48,7 +48,7 @@ NOTE: 如果您稍後升級SnapCenter 了版本的功能、ONTAP 應該重新執
 如需設定ONTAP RBAC角色的詳細資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["《Administrator驗證與RBAC電源指南》（英文）ONTAP"^]。
 
 
-NOTE: 為了保持一致性、SnapCenter 本文檔將角色稱為使用權限。此功能使用「'attribute'」一詞、而非「'privation.」一詞。OnCommand 在設定ONTAP 支援RBAC角色時、這兩個詞彙代表相同的意義。
+NOTE: 為了保持一致性、SnapCenter 本文檔將角色稱為使用權限。這個「系統管理員GUI」OnCommand 使用術語_attributes_而非_privation_。在設定ONTAP 支援RBAC角色時、這兩個詞彙代表相同的意義。
 
 *步驟*
 
