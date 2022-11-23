@@ -39,12 +39,13 @@ NOTE: 您應該針對每個權限重複此命令。
 
 您應該執行幾ONTAP 個CLI命令來建立叢集角色並指派權限。
 
-* 「安全登入角色create -role rose_Name -cmd dirname「cluster identity modify」-vserver Cluster_name或cluster名稱-access all」
-* 「安全性登入角色create -role rose_Name -cmd目錄名稱「cluster identity show」-vserver Cluster_name -access all」
-* 「安全登入角色create -role rose_Name -cmd dirname "cluster modify"-vserver Cluster_name -access all"
-* 「安全性登入角色create -role rose_Name -cmd目錄名稱「cluster peer show」-vserver Cluster_name -access all」
-* 「安全登入角色create -role rose_Name -cmd dirname "cluster show"-vserver Cluster_name -access all"
-* 「安全登入角色create -role role_Name -cmd dirname "EVENT generate-autosup-log"-vserver Cluster_name -access all"
+* `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "metrocluster show" -access readonly`
+* `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "cluster identity modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster identity show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster peer show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "event generate-autosupport-log" -access all`
 * 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「jobhistory show」-access all」
 * 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "jobstop」-access all」
 * 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱"LUN"-access all"

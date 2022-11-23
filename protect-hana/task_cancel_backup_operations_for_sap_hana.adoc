@@ -1,14 +1,9 @@
----
-permalink: protect-hana/task_cancel_backup_operations_for_sap_hana.html 
-sidebar: sidebar 
-keywords:  
-summary: 您可以取消佇列中的備份作業。 
----
-= 取消SAP HANA的備份作業
+= 
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
+
+'''
+Permalink：Protect - Hana / task_cancel_backup_operations_for_sap_hana.html側欄：側欄關鍵字：摘要：「您可以取消佇列中的備份作業。」--=取消SAP HANA的備份作業：圖示：字型：imagesdir：../media/
 
 您可以取消佇列中的備份作業。
 

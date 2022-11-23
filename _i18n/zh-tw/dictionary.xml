@@ -143,7 +143,6 @@
   <block id="91817a3c4feab4788ad5f16317cd2b5e" category="paragraph">指定匯出憑證所使用的新密碼、然後按一下*「下一步*」。</block>
   <block id="262ae19666f55b8c3fbe02b43c8f93b8" category="paragraph">完成「憑證匯入精靈」</block>
   <block id="addd3f74b675e28bf71a9fb679c0fac1" category="paragraph">檢閱摘要、然後按一下「*完成*」開始匯入。</block>
-  <block id="00f1ae92d58286283bc965b1952157af" category="admonition">匯入憑證應與私密金鑰搭售（支援的格式為：*。pfx、* p12、*。p7b）。</block>
   <block id="104bdf61dc45d8330dd81b72891ea1ad" category="list-text">對「Personal」資料夾重複步驟5。</block>
   <block id="15af88bae18a779b0123b601ed1f33b1" category="summary">在使用SnapCenter 支援功能來備份自訂外掛程式特定資源之前、您必須先為要備份的資源或資源群組建立備份原則。</block>
   <block id="45ff3f433bdb1ede8743b649a4ecb7c3" category="doc">建立自訂外掛程式資源的原則</block>
@@ -1771,7 +1770,6 @@
   <block id="bf66d767375071f33bf2189c36a4c30d" category="paragraph">備份頻率也稱為某些外掛程式的排程類型、是原則組態的一部分。例如、您可以將備份頻率設定為每小時、每日、每週或每月。</block>
   <block id="e4a66fdeb97530f93b6abd40f37cabf6" category="list-text">備份排程（準確的備份時間</block>
   <block id="99cfce1788abdce92fe7f446ec8d1da4" category="paragraph">備份排程是資源或資源群組組組態的一部分。例如、如果您的資源群組已設定每週備份原則、您可以設定每週四下午10：00進行備份的排程</block>
-  <block id="ffaafcbad8fa7abfb6f9166b4bc76388" category="doc">取消SAP HANA的備份作業</block>
   <block id="bb24de3098becb559d31066692208382" category="summary">在使用SnapCenter 支援功能來備份SAP HANA資料庫資源之前、您必須先為要備份的資源或資源群組建立備份原則。備份原則是一組規則、可管理您管理、排程及保留備份的方式。</block>
   <block id="2dad511118029c962a70a1aac4b16b52" category="doc">為SAP HANA資料庫建立備份原則</block>
   <block id="ed740a0593e2888b4f41c0fd5c5e3ca9" category="list-text">您必須已定義備份策略。</block>
@@ -2770,12 +2768,6 @@
   <block id="e36c8512e3778b0a83d27f616b9ba1ff" category="paragraph">「安全登入解除鎖定-使用者&lt;使用者名稱&gt;-vserver &lt;叢集名稱&gt;」</block>
   <block id="d96a08e21a2a6f654ce7bfb34d9c3bf4" category="section-title">用於建立叢集角色和指派權限的CLI命令ONTAP</block>
   <block id="166504d6fb19fa3fcbbf622275eef589" category="paragraph">您應該執行幾ONTAP 個CLI命令來建立叢集角色並指派權限。</block>
-  <block id="41d7ade3381c454a1329620f9f658b8b" category="list-text">「安全登入角色create -role rose_Name -cmd dirname「cluster identity modify」-vserver Cluster_name或cluster名稱-access all」</block>
-  <block id="6fb89d73c4a5ac47fffbb74dfa2e83f1" category="list-text">「安全性登入角色create -role rose_Name -cmd目錄名稱「cluster identity show」-vserver Cluster_name -access all」</block>
-  <block id="065992cd0013f37f03b4e13303b9ba92" category="list-text">「安全登入角色create -role rose_Name -cmd dirname "cluster modify"-vserver Cluster_name -access all"</block>
-  <block id="6cf57dddc7246be83fead826cd2d488b" category="list-text">「安全性登入角色create -role rose_Name -cmd目錄名稱「cluster peer show」-vserver Cluster_name -access all」</block>
-  <block id="09835700a8ab8639649722dc18579f0c" category="list-text">「安全登入角色create -role rose_Name -cmd dirname "cluster show"-vserver Cluster_name -access all"</block>
-  <block id="9d566854ec7ef14de553dc0b2222fae0" category="list-text">「安全登入角色create -role role_Name -cmd dirname "EVENT generate-autosup-log"-vserver Cluster_name -access all"</block>
   <block id="cd2a321672946fd6e39976559e1e72a9" category="list-text">「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「jobhistory show」-access all」</block>
   <block id="bb513c5a705eb742be0e75eb7c864f5b" category="list-text">「安全登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "jobstop」-access all」</block>
   <block id="6435842f20dddcddfd00a9e7ec2f3111" category="list-text">「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱"LUN"-access all"</block>
@@ -3280,7 +3272,6 @@
   <block id="794df3791a8c800841516007427a2aa3" category="cell">授權</block>
   <block id="b428bd66304bced88a8f85c2e42e2a8d" category="cell">必要時</block>
   <block id="932a86c21601cea5fd4dd8e8496f1347" category="paragraph">以標準控制器為基礎SnapCenter</block>
-  <block id="699f1c0496b9360a6686498114b0be37" category="paragraph">需要支援的功能包括FAS ：功能不全、AFF 功能不全和Amazon FSX</block>
   <block id="fd1eaac7fcf946084f0e116a9bbd7697" category="paragraph">不含不含控制器型授權的優質套裝組合。SnapCenter如果您擁有SnapManager 此產品的不支援功能、您也可以取得SnapCenter 「不支援即用」的授權。如果您想SnapCenter 要以試用版的FAS 方式安裝含有VMware或AFF VMware的儲存設備、您可以聯絡銷售代表、取得Premium產品組合評估授權。</block>
   <block id="54e6e66bc0a69ef86d9bb0b63900793e" category="admonition">此外、也提供資料保護套裝組合的一部分。SnapCenter如果您已購買A400或更新版本、則應購買資料保護套裝組合。</block>
   <block id="0bc041414fb0e08ee535e7a621899918" category="paragraph">以容量為基礎的標準SnapCenter</block>
@@ -5135,25 +5126,12 @@
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律聲明提供版權聲明、商標、專利等存取權限。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律聲明</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版權</block>
-  <block id="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link"><block ref="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link-rx"></block></block>
-  <block id="bb66384fc72d3c628df8a5f0f82af691" category="paragraph"><block ref="bb66384fc72d3c628df8a5f0f82af691" category="inline-link-rx"></block></block>
   <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商標</block>
   <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 標誌及 NetApp 商標頁面上列出的標章均為 NetApp 、 Inc. 的商標。其他公司與產品名稱可能為其各自所有者的商標。</block>
-  <block id="a93bc0a57623c2facaa010825c808507" category="inline-link"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
-  <block id="e895a12067be0bbd74a4e8b2b0aa1151" category="paragraph"><block ref="e895a12067be0bbd74a4e8b2b0aa1151" category="inline-link-rx"></block></block>
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">專利</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">如需最新的 NetApp 擁有專利清單、請參閱：</block>
-  <block id="547ea2e305891e64d8e744949b0aca2c" category="inline-link"><block ref="547ea2e305891e64d8e744949b0aca2c" category="inline-link-rx"></block></block>
-  <block id="f48d97bbf0d920d837c970ab54fcbf14" category="paragraph"><block ref="f48d97bbf0d920d837c970ab54fcbf14" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隱私權政策</block>
-  <block id="50921fca0d376fca62102a5e608994e2" category="inline-link"><block ref="50921fca0d376fca62102a5e608994e2" category="inline-link-rx"></block></block>
-  <block id="3440f69304b6f0194e5502be93aede3f" category="paragraph"><block ref="3440f69304b6f0194e5502be93aede3f" category="inline-link-rx"></block></block>
-  <block id="b4de17ead867a3cf0b9d11e57e562672" category="section-title">機器翻譯</block>
-  <block id="19d4bd8b5bc76a91b74c1aa69ecea894" category="paragraph">本地化內容的重要資訊。</block>
-  <block id="db9bfd81e26275c9db26e2db3ac172c3" category="inline-link"><block ref="db9bfd81e26275c9db26e2db3ac172c3" category="inline-link-rx"></block></block>
-  <block id="53028fa3036b4b4d8b4ba1c27bf5f0f8" category="paragraph"><block ref="53028fa3036b4b4d8b4ba1c27bf5f0f8" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">開放原始碼</block>
-  <block id="0d06100a9c9a8a7758a0d58988e99d2f" category="paragraph">提供本產品所使用之協力廠商版權與授權的相關資訊。您的產品不一定會使用下列所有軟體元件。</block>
   <block id="51359e8b51c63b87d50cb1bab73380e2" category="section-title">原則</block>
   <block id="14da08d2ea17e978e8b98e0182796723" category="section-title">資源群組</block>
   <block id="ddcf50c29294d4414f3f7c1bbc892cb5" category="section-title">資源</block>
@@ -7921,4 +7899,21 @@
   <block id="654c0ff0573689496c47502d09cfe7a8" category="list-text">您應該在來源資料庫參數檔中將exclude _seed_cdb_view的值設為假、以擷取與複製12_c_資料庫備份相關的種子pdb資訊。</block>
   <block id="dfb3e8f24407538f95c7f42d27411d1b" category="admonition">備份12_c_資料庫之前、應先設定值。</block>
   <block id="98084b9b354e4b46189c9b89dc98527a" category="list-text"><block ref="e083e217410d0cc67271c8e1828e715a" prefix="" category="inline-code"></block></block>
+  <block id="0d51371cbb850772d2130a36f4368df4" category="list-text">展示MetroCluster</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。</block>
+  <block id="1dee04b6f048297be6da9f8740c99b6d" category="admonition">匯入憑證應與私密金鑰搭售（支援的格式為：*。pfx、*。p12和*。p7b）。</block>
+  <block id="ad6e610d08a861e343805ef4cb444552" category="paragraph">Permalink：Protect - scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html側欄：側欄關鍵字：Clone Summary：「The Clone Workflow containing plempling、Performing the Clone operation and Monitoring the operation」（複製工作流程包括規劃、執行複製作業及監控作業）。--=使用PowerShell Cmdlet複製備份：圖示：字型：imagesdir：../media/</block>
+  <block id="bd259d74a88fa9ae4cdb9c027643d76a" category="paragraph">需要進行支援才能進行AFF FAS</block>
+  <block id="56b5155701c0c0dd57595a6dd3daf917" category="list-text"><block ref="336b55519098bef0384fc43c7f43f47b" prefix="" category="inline-code"></block></block>
+  <block id="eda6105c4f159883b951dcd044964c6f" category="list-text"><block ref="2c9674954a47108e373e077d3bcb8357" prefix="" category="inline-code"></block></block>
+  <block id="4cf7cdb80a69806b961d32bc57f3ac26" category="list-text"><block ref="ad3921143a52d77fc513fd3dae33e149" prefix="" category="inline-code"></block></block>
+  <block id="7b7a10c598084df58b9da02c47af7a60" category="list-text"><block ref="f6adba9e3b22137c40b1d75ee2b37e75" prefix="" category="inline-code"></block></block>
+  <block id="d8135ce9a2bd17b9c659e4605801a778" category="list-text"><block ref="f659aa294fff6eaecdf95876c173adf6" prefix="" category="inline-code"></block></block>
+  <block id="dde541c94f2b033571de6bfe76fcf3c3" category="list-text"><block ref="234efccf9d477e939eeae95c37c1803f" prefix="" category="inline-code"></block></block>
+  <block id="e2bb7a9783ce9c6c02e6001911562e16" category="list-text"><block ref="2e72f8b3689961923dec66f94cdf620f" prefix="" category="inline-code"></block></block>
+  <block id="91ae9720ac69723481c4de57234c575e" category="paragraph">Permalink：Protect - Hana / task_cancel_backup_operations_for_sap_hana.html側欄：側欄關鍵字：摘要：「您可以取消佇列中的備份作業。」--=取消SAP HANA的備份作業：圖示：字型：imagesdir：../media/</block>
 </blocks>

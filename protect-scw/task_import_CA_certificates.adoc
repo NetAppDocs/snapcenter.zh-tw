@@ -54,7 +54,7 @@ summary: 匯入SnapCenter 支援物件的CA認證和Windows主機外掛程式
 |===
 +
 
-NOTE: 匯入憑證應與私密金鑰搭售（支援的格式為：*。pfx、* p12、*。p7b）。
+NOTE: 匯入憑證應與私密金鑰搭售（支援的格式為：*。pfx、*。p12和*。p7b）。
 
 . 對「Personal」資料夾重複步驟5。
 

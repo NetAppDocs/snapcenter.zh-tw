@@ -20,7 +20,7 @@ summary: 支援資料保護作業需要數個授權。SnapCenter安裝的不完�
  a| 
 以標準控制器為基礎SnapCenter
  a| 
-需要支援的功能包括FAS ：功能不全、AFF 功能不全和Amazon FSX
+需要進行支援才能進行AFF FAS
 
 不含不含控制器型授權的優質套裝組合。SnapCenter如果您擁有SnapManager 此產品的不支援功能、您也可以取得SnapCenter 「不支援即用」的授權。如果您想SnapCenter 要以試用版的FAS 方式安裝含有VMware或AFF VMware的儲存設備、您可以聯絡銷售代表、取得Premium產品組合評估授權。
 

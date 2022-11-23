@@ -184,9 +184,6 @@ Vserver iSCSI
 
 Vserver展示
 
-|===
-|===
-| 唯讀命令：ONTAP 要求具備最低權限才能執行支援 
 
 
  a| 
@@ -195,5 +192,7 @@ Vserver展示
 網路介面顯示
 
 Vserver
+
+展示MetroCluster
 
 |===

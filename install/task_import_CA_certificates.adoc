@@ -55,7 +55,7 @@ summary: 您必須SnapCenter 使用Microsoft管理主控台（MMC）、將CA憑�
 |===
 +
 
-NOTE: 匯入憑證應與私密金鑰搭售（支援的格式為：*。pfx、* p12、*。p7b）。
+NOTE: 匯入憑證應與私密金鑰搭售（支援的格式為：*。pfx、*。p12和*。p7b）。
 
 . 對「Personal」資料夾重複步驟5。
 
