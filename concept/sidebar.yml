@@ -15,7 +15,7 @@ entries:
   - title: 預先定義SnapCenter 的功能和權限
     url: "/concept/reference_pre_defined_snapcenter_roles_and_permissions.html"
 - title: 災難恢復
-  url: "/protect-concept/concept_disaster_recovery.html"
+  url: "/concept/concept_disaster_recovery.html"
 - title: 資源、資源群組和原則
   url: "/concept/concept_resources_resource_groups_and_policies.html"
 - title: 簡報與指令碼

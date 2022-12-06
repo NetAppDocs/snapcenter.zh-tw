@@ -314,7 +314,7 @@ IMPORTANT: 此範例只能做為建立自己資料的參考。
 
 系統會為root使用者或具有Sudo權限的非root使用者建立認證、以安裝及啟動外掛程式程序。
 
-如需相關資訊、請參閱：  sudo privileges for non-root users for Linux host 或  sudo privileges for non-root users for AIX host
+如需相關資訊、請參閱： <<為Linux主機的非root使用者設定Sudo權限>> 或 <<為非root使用者設定適用於AIX主機的Sudo權限>>
 
 |===
 
