@@ -76,6 +76,8 @@ entries:
     url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
   - title: 設定「IIS應用程式集區」以啟用Active Directory讀取權限
     url: "/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html"
+- title: 設定稽核日誌設定
+  url: "/install/task_configure_audit_log_settings.html"
 - title: 新增儲存系統
   url: "/install/task_add_storage_systems.html"
 - title: 新增SnapCenter 以控制器為基礎的功能

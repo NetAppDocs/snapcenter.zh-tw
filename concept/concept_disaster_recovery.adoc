@@ -33,6 +33,9 @@ summary: 如果發生資源毀損或伺服器當機等災難、您可以SnapCent
 +
 link:../sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["REST API工作流程、可用於SnapCenter 支援還原至支援的伺服器災難恢復"]
 
++
+與稽核設定相關的組態檔不會備份在DR備份中、也不會在還原作業之後備份在DR伺服器上。您應該手動重複稽核記錄設定。
+
 * *《外掛程式與儲存災難恢復*》SnapCenter
 +
 DR僅支援SnapCenter SQL Server的不支援的程式。當適用於SQL Server的解決方案不正常時、請切換至其他SQL主機、然後執行幾個步驟來恢復資料。SnapCenter

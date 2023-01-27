@@ -21,7 +21,7 @@ summary: 如果您想SnapCenter 要同時在多個主機上安裝適用於Micros
 . 在支援服務器主機上SnapCenter 、使用「Open-SmConnection」指令程式建立工作階段、然後輸入您的認證資料。
 . 使用「Add-SmHost」Cmdlet和必要參數、將獨立主機或叢集新增SnapCenter 至支援功能。
 +
-您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《軟件指令程式參考指南》SnapCenter"^]。
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]。
 
 . 使用「Install-SmHostPackage」Cmdlet和必要參數、在多個主機上安裝外掛程式。
 +

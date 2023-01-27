@@ -18,7 +18,7 @@ summary: 在新增主機並安裝外掛程式套件之前、您必須先完成�
 link:concept_develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"]
 
 * 如果您想要管理MySQL或DB2應用程式、必須下載NetApp提供的MySQL和DB2自訂外掛程式。
-* 您必須在Linux或Windows主機上安裝Java 1.8、64位元。
+* 您必須在Linux或Windows主機上安裝Java 1.8或Java 11（64位元）。
 * 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.
 * 自訂外掛程式必須在執行新增主機作業的用戶端主機上可用。
 
@@ -80,9 +80,9 @@ custom_plugin_checksum清單是主機SnapCenter 上自訂外掛程式安裝的�
 == Linux主機
 
 * 您必須為root或非root使用者啟用密碼型SSH連線。
-* 您必須在Linux主機上安裝Java 1.8 64位元。
+* 您必須在Linux主機上安裝Java 1.8或Java 11（64位元）。
 +
-如果SnapCenter 您使用Windows 2019或Windows 2016作為支援此功能的伺服器主機、則必須安裝Java 1.8（64位元）。互通性對照表工具IMT （英文）包含有關需求的最新資訊。
+如果您將Windows Server 2019或Windows Server 2016用於SnapCenter 支援此功能的伺服器主機、則必須安裝Java 1.8或Java 11（64位元）。互通性對照表工具IMT （英文）包含有關需求的最新資訊。
 
 +
 http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
@@ -90,13 +90,31 @@ http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java�
 +
 https://imt.netapp.com/matrix/imt.jsp?components=105308;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
-* 您必須為非root使用者設定Sudo權限、才能存取多個路徑。使用visudo Linux公用程式、將下列行新增至/etc/udoers檔案。例如、
+* 您必須為非root使用者設定Sudo權限、才能存取多個路徑。使用visudo Linux公用程式、將下列行新增至/etc/udoers檔案。
 +
-[listing]
+
+NOTE: 請確定您使用的是Sudo 1.8.7版或更新版本。
+
++
+[listing, subs="+quotes"]
 ----
-Cmnd_Alias SCCMD = /opt/NetApp/snapcenter/scc/bin/scc <non_root_user> ALL=(ALL) NOPASSWD:SETENV: SCCMD
+Cmnd_Alias HPPLCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin, /opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl, /opt/NetApp/snapcenter/scc/bin/scc
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/Linux_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+Cmnd_Alias SCCCMDEXECUTOR =checksum_value== /opt/NetApp/snapcenter/scc/bin/sccCommandExecutor
+_LINUX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPLCMD, PRECHECKCMD, CONFIGCHECKCMD, SCCCMDEXECUTOR, SCCMD
+Defaults: _LINUX_USER_ !visiblepw
+Defaults: _LINUX_USER_ !requiretty
 ----
 +
-非root使用者是您所建立的非root使用者名稱。
+_Linux使用者_是您所建立的非root使用者名稱。
+
++
+您可以從* oracle_checksum．txt*檔案取得_checksum值_、該檔案位於_C：\ProgramData \NetApp\SnapCenter\Package_。
+
++
+
+IMPORTANT: 此範例只能做為建立自己資料的參考。
 
 

@@ -75,4 +75,18 @@ summary: 適用於Oracle資料庫的外掛程式可與Linux或AIX主機上的Ora
 
 NOTE: 您可以在核心中設定原生多重路徑選項、為NVMe裝置設定多重路徑解決方案。不支援裝置對應表（DM）多重路徑。
 
-+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=103047;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+* 支援任何非預設使用者、而非Oracle和Grid。
++
+若要支援非預設使用者、您應該修改位於_file /var/opt/snapcenter/scop/etc/_的* sco.properties*檔案中的參數值、以設定非預設使用者。
+
++
+參數的預設值設為Oracle和GRID。
+
++
+** DB_USER=Oracle
+** db_group = oinstall
+** Gi使用者=網格
+** gi_group = oinstall
+
+
+

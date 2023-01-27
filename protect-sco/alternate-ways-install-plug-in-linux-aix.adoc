@@ -10,6 +10,20 @@ summary: 您也可以使用其他替代方法來安裝SnapCenter 適用於Linux�
 :imagesdir: ../media/
 
 
+[role="lead"]
+您也可以使用Cmdlet或CLI手動安裝適用於Linux或AIX的外掛程式套件。
+
+在手動安裝外掛程式之前、您應該先使用索引鍵* snapcenter_public_key.pub *和* snapcenter_Linux _host_plugin.bin.sig*（位於_C：\ProgramData \NetApp\SnapCenter\Package_）來驗證二進位套件的簽名。
+
+
+NOTE: 確保要安裝外掛程式的主機上已安裝* OpenSSL 1.0.2G/*。
+
+執行下列命令來驗證二進位套件的簽名：
+
+* 對於Linux主機： `openssl dgst -sha256 -verify snapcenter_public_key.pub -signature snapcenter_linux_host_plugin.bin.sig snapcenter_linux_host_plugin.bin`
+* 對於AIX主機： `openssl dgst -sha256 -verify snapcenter_public_key.pub -signature snapcenter_linux_host_plugin.bsx.sig snapcenter_linux_host_plugin.bsx`
+
+
 
 
 == 使用Cmdlet在多個遠端主機上安裝
@@ -35,7 +49,7 @@ NOTE: 如果在防火牆拒絕規則中指定外掛程式連接埠防火牆狀�
 . 輸入遠端安裝的認證資料。
 
 
-您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《軟件指令程式參考指南》SnapCenter"^]。
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]。
 
 
 
@@ -65,9 +79,9 @@ NOTE: 如果容錯移轉發生在SnapCenter 執行任何其他的動作時、則
 
 
 
-== 以無聲模式或主控台模式安裝適用於Linux的外掛程式套件
+== 以無聲模式安裝適用於Linux的外掛程式套件
 
-您可以SnapCenter 使用命令列介面（CLI）、在主控台模式或無聲模式下安裝適用於Linux的Sf2外掛程式套件。
+您可以SnapCenter 使用命令列介面（CLI）、以無聲模式安裝適用於Linux的支援功能。
 
 *您需要的是什麼*
 
@@ -89,32 +103,10 @@ NOTE: 如果容錯移轉發生在SnapCenter 執行任何其他的動作時、則
 預設安裝路徑為_C：\ProgramData\NetApp\SnapCenter\PackageInfrastructure_。此路徑可從SnapCenter 安裝了此伺服器的主機存取。
 
 . 在命令提示字元中、瀏覽至您下載安裝檔案的目錄。
-. 視您偏好的安裝模式而定、請執行下列步驟之一。
+. 執行
 +
-|===
-| 安裝模式 | 步驟 
-
-
- a| 
-主控台模式
- a| 
-.. 執行：
-+
-如：/SnapCenter_linux_host_plugin.bin–i Console
-
-.. 依照畫面上的提示完成安裝。
-
-
-
-
- a| 
-無聲模式
- a| 
-執行：
-
 「/SnapCenter_Linux/host_plugin.bin-i silent-DPORT=8145-dserver_ip=SnapCenter_Server_FQDN：dserver_HTTPS連接埠=SnapCenter_Server_Port-Duser_install_DIR=/opt/custom路徑」
 
-|===
 . 編輯位於_/var/opt/snapcenter/spl/etc/_的spl.properties檔案、新增SPL_enabled_plugins=sco、scc、然後重新啟動SnapCenter 「支援此功能的程式集載入器」服務。
 
 

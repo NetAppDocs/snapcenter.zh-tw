@@ -19,7 +19,7 @@ summary: 在資料遺失的情況下、SnapCenter 您可以使用效益管理功
 
 如果您將ASM資料庫從ASMLIB移轉至ASMFD、則無法使用以ASMLIB建立的備份來還原資料庫。您應該在ASMFD組態中建立備份、然後使用這些備份來還原。同樣地、如果ASM資料庫是從ASMFD移轉至ASMLIB、您應該在ASMLIB組態中建立備份以進行還原。
 
-還原資料庫時、會在$Oracle_home/DBS目錄的Oracle資料庫主機上建立作業鎖定檔案（.sm_Lock_dbsid）、以避免在資料庫上執行多項作業。還原資料庫之後、會自動移除作業鎖定檔案。
+當您還原資料庫時、會在位於_/var/opt/snapcenter/scop/lock_目錄的Oracle資料庫主機上建立一個作業鎖定檔案（.sm_lock_dbsid）、以避免在資料庫上執行多項作業。還原資料庫之後、會自動移除作業鎖定檔案。
 
 
 NOTE: 不支援還原SPFILE和密碼檔案。

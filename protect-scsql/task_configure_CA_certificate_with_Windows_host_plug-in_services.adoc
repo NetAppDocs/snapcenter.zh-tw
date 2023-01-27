@@ -27,14 +27,11 @@ summary: 使用Windows主機外掛程式服務設定CA憑證
  > netsh http delete sslcert ipport=0.0.0.0:8145
 . 執行下列命令、將新安裝的憑證與Windows主機外掛程式服務連結：
 +
-$cert =「_」
-
-+
-$guid =[guid]::NewGuid().ToString("B")'
-
-+
-'netsh http add slcert ipport=0.00.0：_<SMCore Port>_ certhash=$cert AppID="$guid"
-
+....
+> $cert = “_<certificate thumbprint>_”
+> $guid = [guid]::NewGuid().ToString("B")
+> netsh http add sslcert ipport=0.0.0.0: _<SMCore Port>_ certhash=$cert appid="$guid"
+....
 +
 例如：
 
@@ -42,6 +39,6 @@ $guid =[guid]::NewGuid().ToString("B")'
 ....
 > $cert = “a909502dd82ae41433e6f83886b00d4277a32a7b”
 > $guid = [guid]::NewGuid().ToString("B")
-> netsh http add sslcert ipport=0.0.0.0:8145 certhash=$cert appid="$guid"
+> netsh http add sslcert ipport=0.0.0.0: _<SMCore Port>_ certhash=$cert appid="$guid"
 ....
 

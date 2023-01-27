@@ -224,7 +224,7 @@ NOTE: 當您強制刪除SnapCenter 該主機時、不會移除與該主機相關
 
 /`opt/NetApp/snapcenter/spl/bin/spl recovery（選擇/NetApp/snapcenter/spl/bin / spl重新啟動）
 
-您可以執行Get-Help命令名稱來取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["《軟件命令參考指南》SnapCenter"^]。
+您可以執行Get-Help命令名稱來取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["《軟件命令參考指南》SnapCenter"^]。
 
 
 

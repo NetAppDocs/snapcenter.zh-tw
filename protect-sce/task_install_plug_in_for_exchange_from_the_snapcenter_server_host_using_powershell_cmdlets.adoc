@@ -27,7 +27,7 @@ summary: 您應該從SnapCenter 無法使用的GUI安裝Exchange外掛程式。�
 . 在支援服務器主機上SnapCenter 、使用_Open-SmConnection_ Cmdlet建立工作階段、然後輸入您的認證資料。
 . 使用_Add-SmHost_ Cmdlet搭配必要的參數、新增您要安裝外掛程式for Exchange的主機。
 +
-您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《軟件指令程式參考指南》SnapCenter"^]。
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]。
 
 +
 主機可以是獨立主機或DAG。如果您指定DAG、則必須輸入-IsDAG_參數。

@@ -1,0 +1,72 @@
+---
+permalink: install/task_configure_audit_log_settings.html 
+sidebar: sidebar 
+keywords: audit, log, configure 
+summary: 您可以設定記錄軟體平台的安全性事件、以及在這些平台上執行的所有軟體。 
+---
+= 設定稽核日誌設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+稽核日誌會針對SnapCenter 每項活動產生。根據預設、稽核記錄會受到預設安裝位置_C:\Program Files\NetApp\SnapCenter webapp\Audit的保護。
+
+稽核記錄的安全機制是針對每個稽核事件產生數位簽署的摘要、以防止未經授權的修改。所產生的摘要會保留在個別的稽核Checksum檔案中、並會進行定期完整性檢查、以確保內容的完整性。
+
+您應該以「SnapCenterAdmin」角色登入。
+
+*關於此工作*
+
+* 警示會在下列案例中傳送：
++
+** 稽核記錄完整性檢查排程或Syslog伺服器已啟用或停用
+** 稽核記錄完整性檢查、稽核記錄或Syslog伺服器記錄失敗
+** 磁碟空間不足
+
+
+* 只有在完整性檢查失敗時、才會傳送電子郵件。
+* 您應該同時修改稽核記錄目錄和稽核Checksum記錄目錄路徑。您無法只修改其中一項。
+* 修改稽核記錄目錄和稽核Checksum記錄目錄路徑時、無法對先前位置的稽核記錄執行完整性檢查。
+* 稽核記錄目錄和稽核Checksum記錄目錄路徑應位於SnapCenter 支援服務器的本機磁碟機上。
++
+不支援共用或網路掛載的磁碟機。
+
+* 如果在Syslog伺服器設定中使用了udp傳輸協定、則連接埠關閉或無法使用所造成的錯誤將無法擷取為SnapCenter 錯誤或是在列舉時發出警示。
+* 您可以使用Set-SmAuditSettings和Get-SmAuditSettings命令來設定稽核記錄。
++
+您可以執行Get-Help命令名稱來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]。
+
+
+
+*步驟*
+
+. 在「*設定*」頁面中、瀏覽至*設定*>*全域設定*>*稽核記錄設定*。
+. 在「稽核記錄」區段中、輸入詳細資料。
+. 輸入*稽核記錄目錄*和*稽核Checksum記錄目錄*
++
+.. 輸入檔案大小上限
+.. 輸入最大記錄檔數
+.. 輸入要傳送警示的磁碟空間使用量百分比
+
+
+. （選用）啟用*記錄UTC時間*。
+. （選用）啟用*稽核記錄完整性檢查排程*、然後按一下*啟動完整性檢查*以進行隨需完整性檢查。
++
+您也可以執行* Start-SmAuditIntegrityCheck*命令、開始隨需完整性檢查。
+
+. （選用）啟用轉送稽核記錄至遠端syslog伺服器、然後輸入Syslog伺服器詳細資料。
++
+您應該將憑證從Syslog伺服器匯入TLS 1.2傳輸協定的「信任根」。
+
++
+.. 輸入Syslog伺服器主機
+.. 輸入Syslog伺服器連接埠
+.. 輸入Syslog伺服器傳輸協定
+.. 輸入RFC格式
+
+
+. 按一下「 * 儲存 * 」。
+. 您可以按一下「*監控*>*工作*」、查看稽核完整性檢查和磁碟空間檢查。
+

@@ -16,14 +16,18 @@ summary: 在新增主機並安裝外掛程式套件之前、您必須先完成�
 * 如果您使用iSCSI、則必須執行iSCSI服務。
 * 您必須為root或非root使用者啟用密碼型SSH連線。
 +
-非root使用者可以安裝適用於Oracle資料庫的支援程式外掛程式。SnapCenter不過、您應該設定非root使用者的Sudo權限、以便安裝和啟動外掛程式程序。安裝外掛程式之後、程序將以有效的root使用者身分執行。
+非root使用者可以安裝適用於Oracle資料庫的支援程式外掛程式。SnapCenter不過、您應該設定非root使用者的Sudo權限、以便安裝和啟動外掛程式程序。安裝外掛程式之後、程序將以有效的非root使用者身分執行。
 
 * 如果您要在SnapCenter AIX主機上安裝適用於AIX的Sfor AIX外掛程式套件、您應該已經手動解析目錄層級符號連結。
 +
 適用於AIX的程式庫外掛套件會自動解析檔案層級符號連結、但不會解析目錄層級符號連結、以取得Java_Home絕對路徑。SnapCenter
 
 * 以驗證模式建立認證、做為安裝使用者的Linux或AIX。
-* 您必須在Linux或AIX主機上安裝Java 1.8.x（64位元）。
+* 您必須在Linux或AIX主機上安裝Java 1.8.x或Java 11（64位元）。
++
+
+NOTE: 請確定您只在Linux主機上安裝認證版本的Java 11。
+
 +
 如需下載Java的資訊、請參閱：
 
@@ -87,7 +91,12 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
  a| 
 必要的軟體套件
  a| 
-Java 1.8.x（64位元）Oracle Java和OpenJDKFlavors
+* Java 1.8.x（64位元）Oracle Java和OpenJDKFlavors
+* Java 11（64位元）Oracle Java和OpenJDTM Flavors
+
+
+
+NOTE: 請確定您只在Linux主機上安裝認證版本的Java 11。
 
 如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。
 
@@ -98,12 +107,11 @@ Java 1.8.x（64位元）Oracle Java和OpenJDKFlavors
 
 === 為Linux主機的非root使用者設定Sudo權限
 
-非root使用者可利用發行版本的更新版本安裝適用於Linux的《SUSE外掛程式套件」、並開始外掛程序。SnapCenter SnapCenter您應該為非root使用者設定Sudo權限、以提供對多個路徑的存取權。
+非root使用者可利用發行版本的更新版本安裝適用於Linux的《SUSE外掛程式套件」、並開始外掛程序。SnapCenter SnapCenter外掛程式程序將以有效的非root使用者身分執行。您應該為非root使用者設定Sudo權限、以提供對多個路徑的存取權。
 
 *您需要的是什麼*
 
-* Sudo版本介於1.8.7與1.8.19P2之間。
-* 確保非root使用者是Oracle安裝群組的一部分。
+* Sudo 1.8.7版或更新版本。
 * 編輯_/etc/ssh / sshd_config_檔案、以設定訊息驗證代碼演算法：Macs HMAC - SHA2-256和MAC HMAC - SHA2-512。
 +
 更新組態檔後、重新啟動sshd服務。
@@ -132,13 +140,10 @@ MACs hmac-sha2-256
 
 您應該為非root使用者設定Sudo權限、以便存取下列路徑：
 
-* /home/_Sudo使用者_/.sc_NetApp/snapcenter_linux_host_plugin.bin
+* /home/_Linux使用者_/.sc_NetApp/snapcenter_linux_host_plugin.bin
 * /custature_location / NetApp/snapcenter/spl/installal/plugins/uninstall
 * /cust_LOUSE/NetApp/snapcenter/spl/bin/spl
 
-
-
-NOTE: 如果您要管理RAC設定、非root使用者應該是Oracle使用者、而且不能只是任何非root OS使用者。
 
 *步驟*
 
@@ -147,35 +152,32 @@ NOTE: 如果您要管理RAC設定、非root使用者應該是Oracle使用者、�
 +
 [listing, subs="+quotes"]
 ----
-Cmnd_Alias SCCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin,
-/opt/NetApp/snapcenter/spl/installation/plugins/uninstall,
-/opt/NetApp/snapcenter/spl/bin/spl
-Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_SUDO_USER_/.sc_netapp/Linux_Prechecks.sh
-_SUDO_USER_ ALL=(ALL) NOPASSWD:SETENV: SCCMD, PRECHECKCMD
-Defaults: _SUDO_USER_ env_keep=JAVA_HOME
-Defaults: _SUDO_USER_ !visiblepw
-Defaults: _SUDO_USER_ !requiretty
+Cmnd_Alias HPPLCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin, /opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl, /opt/NetApp/snapcenter/scc/bin/scc
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/Linux_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+Cmnd_Alias SCCCMDEXECUTOR =checksum_value== /opt/NetApp/snapcenter/scc/bin/sccCommandExecutor
+_LINUX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPLCMD, PRECHECKCMD, CONFIGCHECKCMD, SCCCMDEXECUTOR, SCCMD
+Defaults: _LINUX_USER_ !visiblepw
+Defaults: _LINUX_USER_ !requiretty
 ----
 +
-_Susu_user_是您所建立的非root使用者名稱。
 
-+
-您可以從* oracle_checksum．txt*檔案取得Checksum值、該檔案位於_C：\ProgramData \NetApp\SnapCenter\Package儲存庫_。
+NOTE: 如果您有RAC設定、以及其他允許的命令、您應該將下列項目新增至/etc/udoers檔案：「/setc/bin/olsnodes <crs_home> 」
 
-+
+
+
+您可以從/etc/oracle/OLR.loc_檔案取得_crs_home_的 值。
+
+_Linux使用者_是您所建立的非root使用者名稱。
+
+您可以從* oracle_checksum．txt*檔案取得_checksum值_、該檔案位於_C：\ProgramData \NetApp\SnapCenter\Package_。
+
 如果您已指定自訂位置、則位置將是_custom_path\NetApp\SnapCenter\Package_。
 
-+
 
 IMPORTANT: 此範例只能做為建立自己資料的參考。
 
-
-
-|===
-
-
-| *最佳實務做法：*基於安全考量、您應在完成每次安裝或升級後移除Sudo項目。 
-|===
 
 
 == AIX主機需求
@@ -216,7 +218,9 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
  a| 
 必要的軟體套件
  a| 
-Java 1.8.x（64位元）IBM Java
+* Java 1.8.x（64位元）IBM Java
+* Java 11（64位元）IBM Java
+
 
 如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。
 
@@ -227,12 +231,11 @@ Java 1.8.x（64位元）IBM Java
 
 === 為非root使用者設定適用於AIX主機的Sudo權限
 
-支援非root使用者安裝適用於AIX的支援套件、並啟動外掛程式的程序。SnapCenter SnapCenter您應該為非root使用者設定Sudo權限、以提供對多個路徑的存取權。
+支援非root使用者安裝適用於AIX的支援套件、並啟動外掛程式的程序。SnapCenter SnapCenter外掛程式程序將以有效的非root使用者身分執行。您應該為非root使用者設定Sudo權限、以提供對多個路徑的存取權。
 
 *您需要的是什麼*
 
-* Sudo版本介於1.8.7與1.8.19P2之間。
-* 確保非root使用者是Oracle安裝群組的一部分。
+* Sudo 1.8.7版或更新版本。
 * 編輯_/etc/ssh / sshd_config_檔案、以設定訊息驗證代碼演算法：Macs HMAC - SHA2-256和MAC HMAC - SHA2-512。
 +
 更新組態檔後、重新啟動sshd服務。
@@ -266,9 +269,6 @@ MACs hmac-sha2-256
 * /cust_LOUSE/NetApp/snapcenter/spl/bin/spl
 
 
-
-NOTE: 如果您要管理RAC設定、非root使用者應該是Oracle使用者、而且不能只是任何非root OS使用者。
-
 *步驟*
 
 . 登入您要在其中安裝SnapCenter 適用於AIX的整套件的AIX主機。
@@ -276,34 +276,32 @@ NOTE: 如果您要管理RAC設定、非root使用者應該是Oracle使用者、�
 +
 [listing, subs="+quotes"]
 ----
-Cmnd_Alias SCCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/snapcenter_aix_host_plugin.bsx,
-/opt/NetApp/snapcenter/spl/installation/plugins/uninstall,
-/opt/NetApp/snapcenter/spl/bin/spl
+Cmnd_Alias HPPACMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/snapcenter_aix_host_plugin.bsx,
+/opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl
 Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_AIX_USER_/.sc_netapp/AIX_Prechecks.sh
-_AIX_USER_ ALL=(ALL) NOPASSWD:SETENV: SCCMD, PRECHECKCMD
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+_AIX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPACMD, PRECHECKCMD, CONFIGCHECKCMD, SCCMD
 Defaults: _AIX_USER_ !visiblepw
 Defaults: _AIX_USER_ !requiretty
 ----
 +
+
+NOTE: 如果您有RAC設定、以及其他允許的命令、您應該將下列項目新增至/etc/udoers檔案：「/setc/bin/olsnodes <crs_home> 」
+
+
+
+您可以從/etc/oracle/OLR.loc_檔案取得_crs_home_的 值。
+
 _AIX_USER_是您所建立的非root使用者名稱。
 
-+
-您可以從* oracle_checksum．txt*檔案取得Checksum值、該檔案位於_C：\ProgramData \NetApp\SnapCenter\Package儲存庫_。
+您可以從* oracle_checksum．txt*檔案取得_checksum值_、該檔案位於_C：\ProgramData \NetApp\SnapCenter\Package_。
 
-+
 如果您已指定自訂位置、則位置將是_custom_path\NetApp\SnapCenter\Package_。
 
-+
 
 IMPORTANT: 此範例只能做為建立自己資料的參考。
 
-
-
-|===
-
-
-| *最佳實務做法：*基於安全考量、您應在完成每次安裝或升級後移除Sudo項目。 
-|===
 
 
 == 設定認證資料

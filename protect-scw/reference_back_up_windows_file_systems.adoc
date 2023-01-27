@@ -19,4 +19,4 @@ summary: 當SnapCenter 您在環境中安裝適用於Microsoft Windows的還原�
 
 image::../media/sce_backup_workflow.gif[SCE備份工作流程]
 
-您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。支援的支援或SnapCenter https://library.netapp.com/ecm/ecm_download_file/ECMLP2883300["《軟件指令程式參考指南》SnapCenter"^] 包含PowerShell Cmdlet的詳細資訊。
+您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。支援的支援或SnapCenter https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^] 包含PowerShell Cmdlet的詳細資訊。

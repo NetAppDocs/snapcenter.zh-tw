@@ -1,7 +1,7 @@
 ---
 permalink: protect-sco/add-application-volume.html 
 sidebar: sidebar 
-keywords: application volume, overview, add, modify, delete 
+keywords: application volume, overview, add, modify, delete, Oracle database 
 summary: 您應該手動新增應用程式磁碟區。 
 ---
 = 新增應用程式磁碟區
