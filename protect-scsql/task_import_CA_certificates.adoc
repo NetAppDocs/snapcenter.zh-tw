@@ -10,6 +10,7 @@ summary: 匯入SnapCenter 支援物件的CA認證和Windows主機外掛程式
 :imagesdir: ../media/
 
 
+[role="lead"]
 您必須SnapCenter 使用Microsoft管理主控台（MMC）、將CA憑證匯入到S倚賴 者支援的伺服器和Windows主機外掛程式。
 
 *步驟*

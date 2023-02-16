@@ -10,6 +10,7 @@ summary: 您可以取消佇列中的複製作業。
 :imagesdir: ../media/
 
 
+[role="lead"]
 您可以取消佇列中的複製作業。
 
 您應以SnapCenter 「管理員」或「工作擁有者」身分登入、以取消複製作業。

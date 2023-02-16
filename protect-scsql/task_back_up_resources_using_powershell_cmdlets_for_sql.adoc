@@ -10,6 +10,7 @@ summary: 您可以使用PowerShell Cmdlet來備份SQL Server資料庫或Windows�
 :imagesdir: ../media/
 
 
+[role="lead"]
 您可以使用PowerShell Cmdlet來備份SQL Server資料庫或Windows檔案系統。這包括備份SQL Server資料庫或Windows檔案系統、包括與SnapCenter 該伺服器建立連線、探索SQL Server資料庫執行個體或Windows檔案系統、新增原則、建立備份資源群組、備份及驗證備份。
 
 *您需要的是什麼*

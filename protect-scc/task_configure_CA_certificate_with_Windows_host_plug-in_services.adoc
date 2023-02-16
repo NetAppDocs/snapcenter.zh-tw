@@ -10,6 +10,7 @@ summary: 使用Windows主機外掛程式服務設定CA憑證
 :imagesdir: ../media/
 
 
+[role="lead"]
 您應該使用Windows主機外掛程式服務來設定CA憑證、以啟動安裝的數位憑證。
 
 請在SnapCenter 已部署CA憑證的所有插件主機上執行下列步驟。

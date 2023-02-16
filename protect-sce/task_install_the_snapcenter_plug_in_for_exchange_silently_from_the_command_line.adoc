@@ -32,7 +32,7 @@ summary: 您應該從SnapCenter 「版本資訊」使用者介面中安裝Exchan
 
 . 將安裝檔案複製到您要安裝外掛程式的主機。
 . 從本機主機上的Windows命令提示字元、瀏覽至您儲存外掛程式安裝檔案的目錄。
-. 輸入下列命令、安裝以資料取代變數：
+. 輸入下列命令以安裝外掛程式。
 +
 _snapcenter_windows_host_plugin.exe"/silent /debuglog"<debug_Log_Path>"/log"<Log_Path>" BI_SNAPCENTER_port=<Num>套件_Install_Directory路徑>" BI_ServiceAccount=<domain\manager> BI_SERVER_SERVERICEPW=<FSCW_<SCPW_<SCPW>
 
@@ -46,8 +46,6 @@ _C：\ProgramData\NetApp\SnapCenter\Package儲存庫\snapcenter_windows_host_plu
 
 NOTE: 安裝Exchange外掛程式時所傳遞的所有參數都區分大小寫。
 
-+
-.. __無聲/debuglog" C：\Installdebug.log"/log" C：\temp" BI_SNAPCENTE_port=8145 site_InstallLDIR="C：\Program Files" BI_ServiceAccount=DEMO：管理員BI_SERVERICEPWD=Netapp1！ISfeatureInstall=HPPW、SCW_
 +
 輸入下列變數值：
 
@@ -99,8 +97,6 @@ ISfeatureInstall
 指定SnapCenter 要在遠端主機上部署的解決方案。
 
 |===
-
-
 . 監控Windows工作排程器、主要安裝記錄檔_C：\Installdebug.log_、以及_C：\Temp _中的其他安裝檔案。
 . 監控_%temp%_目錄、檢查_MSIexe.exe_安裝程式是否在安裝軟體時沒有錯誤。
 +

@@ -2,7 +2,7 @@
 permalink: protect-scc/task_install_the_snapcenter_custom_plug_ins_on_linux_hosts_using_the_command_line_interface.html 
 sidebar: sidebar 
 keywords:  
-summary: 您應該SnapCenter 使用SnapCenter 「版本資訊」使用者介面（UI）來安裝「版本資訊」自訂外掛程式。如果您的環境不允許從SnapCenter ESIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、以主控台模式或無聲模式安裝自訂外掛程式。 
+summary: 您應該SnapCenter 使用SnapCenter 「版本資訊」使用者介面（UI）來安裝「版本資訊」自訂外掛程式。如果您的環境不允許從SnapCenter SIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、在主控台模式或無聲模式下安裝自訂外掛程式。 
 ---
 = 使用命令列介面、在SnapCenter Linux主機上安裝《程式集指令集自訂外掛程式」
 :allow-uri-read: 

@@ -10,6 +10,7 @@ summary: 您可以使用SnapCenterJobs頁面監控不同備份作業的進度。
 :imagesdir: ../media/
 
 
+[role="lead"]
 您可以使用SnapCenterJobs頁面監控不同備份作業的進度。您可能需要檢查進度、以判斷何時完成或是否有問題。
 
 *關於此工作*

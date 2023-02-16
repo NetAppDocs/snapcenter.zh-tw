@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-  <block id="80e29bd8c63d2e1543e65e2db033a6a4" category="summary">支援簡單、集中化、可擴充的平台、可為在混合雲中任何位置的不間斷系統上執行的應用程式、資料庫、主機檔案系統及VM提供應用程式一致的資料保護。SnapCenter ONTAP</block>
   <block id="7608e75619cff3eeb4e8bce40481b456" category="doc">軟件文檔SnapCenter</block>
   <block id="087af862ce66495658dd0b639b76b8e8" category="summary">當支援對象移除主機時、它會先移除「資源庫」頁面上所列該主機的備份、複製、複製工作、資源群組和資源、然後在主機上解除安裝外掛程式套件。SnapCenter SnapCenter</block>
   <block id="2425983d8196e314ffb29c49e451ba2e" category="doc">移除主機</block>
@@ -198,7 +197,6 @@
   <block id="aab338915e32b60e92c8de3a23aa5c5d" category="paragraph">作業系統</block>
   <block id="bb79f96acbff544ded541446c9c7c894" category="paragraph">Microsoft Windows</block>
   <block id="9ed4a475dd3705157a9fed8811f63ce2" category="inline-link">NetApp 互通性對照表工具</block>
-  <block id="6550bb9a1ccfa490eafbe428de0a4d91" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="89a335e37ffcb5152f6dbe1ca3dcb8c4" category="inline-link-rx"></block>。</block>
   <block id="97d747ad5d4878c60364b9ba961fd5a4" category="paragraph">主機上安裝的不需使用的RAM SnapCenter</block>
   <block id="0d642755e7f12f7563e3db33bd0c39cb" category="paragraph">1 GB</block>
   <block id="94ca5bd1fc6971f402b85442105f093f" category="paragraph">主機上安裝及記錄SnapCenter 插件的最低空間</block>
@@ -343,7 +341,6 @@
   <block id="131fcad5beed0c840fb92cba21bbb148" category="list-text">以恢復錯誤刪除或變更的資料</block>
   <block id="b37c1f7095772e66402cd084c5dc13a3" category="paragraph">下列工作流程顯示您必須執行複製作業的順序：</block>
   <block id="7f9567749606082611d69fd511d51593" category="image-alt">複製工作流程</block>
-  <block id="0f86a1aee795e1b2600e86eb6b2722ec" category="summary">您應該SnapCenter 使用SnapCenter 「版本資訊」使用者介面（UI）來安裝「版本資訊」自訂外掛程式。如果您的環境不允許從SnapCenter ESIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、以主控台模式或無聲模式安裝自訂外掛程式。</block>
   <block id="b5c24629ead5c583e2208216205af10a" category="doc">使用命令列介面、在SnapCenter Linux主機上安裝《程式集指令集自訂外掛程式」</block>
   <block id="0f18e8aaa7478aae88b697e6b89d15f0" category="paragraph">您應該SnapCenter 使用SnapCenter 「版本資訊」使用者介面（UI）來安裝「版本資訊」自訂外掛程式。如果您的環境不允許從SnapCenter SIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、在主控台模式或無聲模式下安裝自訂外掛程式。</block>
   <block id="ef5b54514d2bc2cec099dbe31b43d400" category="list-text">將SnapCenter 適用於Linux的支援功能套件安裝檔案（snapcenter_Linux _host_plugin.bin）從C：\ProgramData \NetApp\SnapCenter\Package儲存庫複製到您要安裝自訂外掛程式的主機。</block>
@@ -1374,7 +1371,6 @@
   <block id="46ca186cb22f8dea3bb75049b7f0e17e" category="paragraph">您可以檢視詳細資料、例如複製ID、開始日期和時間、結束日期和時間。</block>
   <block id="8f088fc353589a53b22d09fce118b2a6" category="doc">設定SnapCenter SAP HANA資料庫的效能分析外掛程式認證</block>
   <block id="8c7f76f09d0b2b40d4ffd4ef78ab735b" category="paragraph">完成認證設定之後、您可能會想要在「使用者與存取」頁面中指派認證維護給使用者或使用者群組。</block>
-  <block id="3983634b494fae1a9edb600d9c4a9292" category="summary">支援實體機器和虛擬機器（VMs）上的各種儲存類型。SnapCenter安裝SnapCenter 適用於SAP HANA資料庫的支援功能之前、您必須先確認儲存類型的支援。</block>
   <block id="0b42d90235dd8ef6ec97a9268c77b113" category="doc">SAP HANA資料庫的支援儲存類型SnapCenter</block>
   <block id="478593976233dfc3e57256f78404f939" category="paragraph">支援實體機器和虛擬機器（VM）上的各種儲存類型。SnapCenter安裝SnapCenter 適用於SAP HANA資料庫的支援功能之前、您必須先確認儲存類型的支援。</block>
   <block id="faa63149f52ece978423f5b04c274cf6" category="paragraph">實體與虛擬伺服器</block>
@@ -1405,7 +1401,6 @@
   <block id="bcb0136ee3c09e3ce7ec64c7148608dd" category="list-text">您必須在Windows主機上安裝Java 1.8 64位元。</block>
   <block id="b838812df6d8e06f0e9a3796d4a00149" category="list-text">您必須在Linux主機上安裝Java 1.8 64位元。</block>
   <block id="f551df54591f7eef7409f694b7b0cc08" category="list-text">對於在Linux主機上執行的SAP HANA資料庫、在安裝SAP HANA資料庫外掛程式時SnapCenter 、會自動安裝適用於UNIX的整套外掛程式。</block>
-  <block id="f278e708e20d1033739d8d371741422d" category="summary">您應該SnapCenter 使用SnapCenter 穩定使用者介面（UI）來安裝適用於SAP HANA資料庫的功能。如果您的環境不允許從SnapCenter ESIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、以主控台模式或無聲模式安裝SAP HANA資料庫外掛程式。</block>
   <block id="2577ba74b42ec952e03432cac7d57a04" category="doc">使用命令列介面、在SnapCenter Linux主機上安裝適用於SAP HANA資料庫的功能</block>
   <block id="d444fb67779b9c8a26850d1ce6c0e031" category="paragraph">您應該SnapCenter 使用SnapCenter 穩定使用者介面（UI）來安裝適用於SAP HANA資料庫的功能。如果您的環境不允許從SnapCenter SIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、在主控台模式或無聲模式下安裝SAP HANA資料庫的外掛程式。</block>
   <block id="c20d8d729a2cb1909e6c92aa4b0635a1" category="list-text">您應該在HDBSQL用戶端所在的每個Linux主機上安裝SAP HANA資料庫外掛程式。</block>
@@ -1442,7 +1437,6 @@
   <block id="349cd6d8e61213a447b8c5adb6059071" category="summary">在環境中安裝SAP HANA資料庫外掛程式時、SnapCenter 您可以使用支援還原、還原及複製SAP HANA資料庫及其資源。您也可以執行支援這些作業的工作。</block>
   <block id="d7e57286a93aa6e133dea4119815f1e5" category="doc">使用SAP HANA資料庫的《不穩定》外掛程式可以做什麼SnapCenter</block>
   <block id="753bcb78018d8547668b0dda3334e5a2" category="list-text">新增資料庫。</block>
-  <block id="be01d3c0f38b7c272a7bcc851764b821" category="summary">您必須先建立儲存虛擬機器（SVM）連線和認證、才能使用PowerShell Cmdlet備份、還原或複製SAP HANA資料庫。</block>
   <block id="cc33ddff1a25485bc2416a9b57a9f8c5" category="doc">使用適用於SAP HANA資料庫的PowerShell Cmdlet建立儲存系統連線和認證</block>
   <block id="391b68bcb3d6f9d643ee0cb78ff1dfde" category="paragraph">您必須先建立儲存虛擬機器（SVM）連線和認證、才能使用PowerShell Cmdlet備份、還原或複製SAP HANA資料庫。</block>
   <block id="70991649072f70fdb060c64c2144c8c8" category="paragraph">不支援在不同叢集上使用相同名稱的多個儲存系統。SnapCenter每個SnapCenter 受支援的儲存系統都應有唯一的名稱和唯一的資料LIF IP位址。</block>
@@ -1813,7 +1807,6 @@
   <block id="98a7c2294306ddb514e683daa919fd16" category="paragraph">支援單一容器和多租戶資料庫容器（MDC）SnapCenter 。您可以在Windows和Linux環境中使用SAP HANA資料庫的外掛程式。未安裝在HANA資料庫主機上的外掛程式稱為集中式主機外掛程式。集中式主機外掛程式可跨不同主機管理多個HANA資料庫。</block>
   <block id="5897e96cd2d6eeae5ae099c0709f3831" category="paragraph">安裝SAP HANA資料庫外掛程式時、您可以使用SnapCenter 搭配NetApp SnapMirror技術的功能來建立另一個磁碟區上備份集的鏡射複本。您也可以使用外掛程式搭配NetApp SnapVault 支援技術來執行磁碟對磁碟備份複寫、以符合標準。</block>
   <block id="47d403518b5a7a92c3f199666b9bade9" category="summary">在安裝SnapCenter 適用於Linux的支援功能套件之前、您應該先熟悉一些基本的主機系統空間和規模需求。</block>
-  <block id="56dd6d218b0a2db6d61393ca74894094" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="1b419d76cc3163a36d36ff494ed65b44" category="inline-link-rx"></block>。</block>
   <block id="1ec72ff98c807b748e55dd0ff1dbf757" category="admonition">您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使用量。所需的記錄空間會因受保護實體數量和資料保護作業頻率而異。如果沒有足夠的磁碟空間、將不會針對最近執行的作業建立記錄。</block>
   <block id="3a955e6f54e73fa288537f456087e118" category="paragraph">Java 1.8.x（64位元）Oracle Java和OpenJDKFlavors</block>
   <block id="45cfde3246d77aae99351b410b97c7c0" category="doc">SAP HANA外掛程式所需的ONTAP 最低需求權限</block>
@@ -2340,7 +2333,6 @@
   <block id="ce9e3c5c963bac674c89f1f251d1b0af" category="paragraph">選取Windows作為驗證模式。</block>
   <block id="a418089089559a000c49aa3b9a686667" category="summary">支援實體機器和虛擬機器上的各種儲存類型。SnapCenter在安裝主機套件之前、您必須先確認儲存類型是否支援。</block>
   <block id="4ca48d63db1547d2aa6b271f22219b7b" category="doc">適用於Microsoft Windows和Microsoft Exchange Server的解決方案SnapCenter 支援的儲存類型</block>
-  <block id="32c108c9b7cfa56c6dc0cc4e31e083d6" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱<block ref="89a335e37ffcb5152f6dbe1ca3dcb8c4" category="inline-link-rx"></block>。</block>
   <block id="2bfe08a4f62392e52d13ca1c380c81d4" category="cell">資源配置使用</block>
   <block id="df6a8597815322c8f7bb6463d78f2f2c" category="cell">支援附註</block>
   <block id="ca54d3965d23826e2a4bb8d10764da21" category="paragraph">圖形化使用者介面（GUI）或PowerShell Cmdlet SnapCenter</block>
@@ -2367,11 +2359,9 @@
   <block id="034c5f14c518f47816188b94e9a8c076" category="paragraph">此路徑可從SnapCenter 安裝了此伺服器的主機存取。</block>
   <block id="5bab9653208d5b37a0eac3869bbd0887" category="list-text">將安裝檔案複製到您要安裝外掛程式的主機。</block>
   <block id="d9c2b6a27937feb2af3cfc648ba30664" category="list-text">從本機主機上的Windows命令提示字元、瀏覽至您儲存外掛程式安裝檔案的目錄。</block>
-  <block id="b529419e355f9145d46838b39d3dfb36" category="list-text">輸入下列命令、安裝以資料取代變數：</block>
   <block id="e96211aaefa5c5acb9e8a5937f5834a6" category="paragraph">_snapcenter_windows_host_plugin.exe"/silent /debuglog"&lt;debug_Log_Path&gt;"/log"&lt;Log_Path&gt;" BI_SNAPCENTER_port=&lt;Num&gt;套件_Install_Directory路徑&gt;" BI_ServiceAccount=&lt;domain\manager&gt; BI_SERVER_SERVERICEPW=&lt;FSCW_&lt;SCPW_&lt;SCPW&gt;</block>
   <block id="866a71ae8c421f4ad7c84acad9063476" category="paragraph">_C：\ProgramData\NetApp\SnapCenter\Package儲存庫\snapcenter_windows_host_plugin.exe"/無聲/debuglog" C：\HPPW_SCSQL_Install.log"/log" C：\臨時" BI_SNAPCENTR_port=8145套件_INSTALLDIR="C：\Program Files\NetApp_Snap_SCWA_SCW=W_SCWAITY="ICW_SCWAITY="_SERVER_SCWAITY=_SCWAITY="/sec_SCWAITY="/sec_SCWAITY="/sec_SARITY=</block>
   <block id="f9921358f0106db02cf91d4489d50754" category="admonition">安裝Exchange外掛程式時所傳遞的所有參數都區分大小寫。</block>
-  <block id="dcc26f618fea2daac13c09181df79902" category="list-text">__無聲/debuglog" C：\Installdebug.log"/log" C：\temp" BI_SNAPCENTE_port=8145 site_InstallLDIR="C：\Program Files" BI_ServiceAccount=DEMO：管理員BI_SERVERICEPWD=Netapp1！ISfeatureInstall=HPPW、SCW_</block>
   <block id="25139d942390294a2d96f47497ee4155" category="paragraph">輸入下列變數值：</block>
   <block id="47c14840d8e15331fa420b9b2f757cd9" category="cell">變動</block>
   <block id="689202409e48743b914713f96d93947c" category="cell">價值</block>
@@ -3396,7 +3386,6 @@
   <block id="5fd3d0b8e71c4f64cfbad31e3fde1863" category="summary">安裝SnapCenter 完此伺服器之前、您應該先熟悉空間和規模需求。您也應該套用可用的系統和安全性更新。</block>
   <block id="18cd7192921dd5ac27a1a7c5ef795c20" category="doc">空間與規模需求</block>
   <block id="3dbe205a1db3f8f677f2e971edc8976d" category="paragraph">僅支援英文、德文、日文及簡體中文版的作業系統。</block>
-  <block id="dbe4caa8e0aee7f310fe50e7cb384a50" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="89a335e37ffcb5152f6dbe1ca3dcb8c4" category="inline-link-rx"></block>。</block>
   <block id="44e5a606cb3fbfaed79ce8eb853ed886" category="paragraph">最小CPU數</block>
   <block id="39d305d656d2efca941f50ce8253a426" category="paragraph">4核心</block>
   <block id="a88605ea0ad2e6919ae06fa5bb9e26d2" category="paragraph">最低RAM</block>
@@ -7797,21 +7786,7 @@
   <block id="2bdfb7ceab741b8d183afcf3b24c6f17" category="list-text">Clone生命週期精靈頁面上的大部分欄位都是不言自明的。下列資訊說明您可能需要指引的欄位。</block>
   <block id="59080c688ea671f9f0cc2eed3afb7bf8" category="paragraph">請勿在密碼中使用雙引號（"）或反引號（"）。請勿使用小於（&lt;）和驚嘆號（！） 密碼中的符號。例如、lessthan&lt;!10、lessthan10&lt;!、backtick'12。</block>
   <block id="0352418be0d30e5f0f0b3f664c74e1aa" category="admonition">在外掛程式的容錯移轉或容錯回復期間、外掛程式的整體狀態不會立即重新整理。主機和外掛程式的整體狀態會在後續的主機重新整理作業期間更新。</block>
-  <block id="ad2df38df99c722f88cf142744758e07" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="f05f98f17d4e0568e31244784ca320bd" category="inline-link-rx"></block></block>
-  <block id="d91808c8a4d610ed99302113da2f85d2" category="paragraph"><block ref="0eee65cb82c15fd964b7785d5f117a10" category="inline-link-rx"></block></block>
-  <block id="e306f8020786d4a39801b24a0c26a65d" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱<block ref="26d76f2e486b882ba3b23e9b38f63829" category="inline-link-rx"></block>。</block>
-  <block id="b6353e58a793ffb65b97fb54ed68ff89" category="paragraph">如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block></block>
-  <block id="cfcb453ff70ad933cab89769866a7ca8" category="paragraph">請參閱<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block></block>
-  <block id="0675325e7eaef3f6ab445bb6f63484b1" category="list-text"><block ref="3f0414c37a83af730261bc95d9d01546" category="inline-link-rx"></block></block>
-  <block id="a0b646a3488d81d565a66dfa155ab64f" category="paragraph">。<block ref="acbd4d43b54b8ece885d46b425b04ecf" category="inline-link-rx"></block> 包含有關所支援版本的最新資訊。</block>
-  <block id="d9f5c0652a9a0f5a632c2b39950788b1" category="paragraph">如需受支援Oracle版本的最新資訊、請參閱<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>。</block>
-  <block id="f774d1f4e0076ce76f72417458eea1a5" category="paragraph">《Oracle資料庫適用的支援使用支援的組態SnapCenter 》（英文）列於中<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>。</block>
-  <block id="bbba754ddb8dc1ad1e612a5ec76136db" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>。</block>
   <block id="db73b4bff7f9b92f00d36e2a3fa01152" category="paragraph">次要SnapCenter 版的伺服器應安裝在相同的安裝目錄中、並與主SnapCenter 版的SURL伺服器安裝在同一個連接埠上。</block>
-  <block id="9ed4d117d7b8f3381a2011b69e6dfef2" category="paragraph">如需支援的應用程式和資料庫詳細資訊、請參閱<block ref="4d75397e7ff03528228bfd2c042ee164" category="inline-link-rx"></block>。</block>
-  <block id="097869dcfdfea94a43eab778d57a4e83" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="102c8b4f5323d57ed48904a1ba94c2de" category="inline-link-rx"></block>。</block>
-  <block id="bf14f1703af6af8b51300dc61dc1594c" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="4d75397e7ff03528228bfd2c042ee164" category="inline-link-rx"></block>。</block>
-  <block id="02f8c9fac34de290666ccfe51e19b761" category="paragraph"><block ref="c86a29400a88b8541473f7e26922bd2f" category="inline-link-rx"></block></block>
   <block id="b6b7e7973fe70256b1b775baf8ac7261" category="paragraph">您應該安裝一SnapCenter 或多個版本的不二授權。如需如何新增授權的資訊、請參閱 <block ref="978050eb868e07441781781da059ebc5" category="inline-link-macro-rx"></block> 或 <block ref="47cf8583fc17afccfc8268b2830ab680" category="inline-link-macro-rx"></block>。</block>
   <block id="13aef2b62d8736d22562e85c99ca60eb" category="paragraph">您可以建立安全的連線、從SnapCenter 「伺服器」到MySQL伺服器。 <block ref="cd7568118ad87382648cb2133a315ffd" category="inline-link-macro-rx"></block></block>
   <block id="6529e3cc72b3980f54f2d2ad982c79c2" category="paragraph">SAP HANA資料庫適用的插件vCode Spell Checkerport SnapCenter</block>
@@ -7831,7 +7806,6 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。</block>
   <block id="1dee04b6f048297be6da9f8740c99b6d" category="admonition">匯入憑證應與私密金鑰搭售（支援的格式為：*。pfx、*。p12和*。p7b）。</block>
-  <block id="ad6e610d08a861e343805ef4cb444552" category="paragraph">Permalink：Protect - scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html側欄：側欄關鍵字：Clone Summary：「The Clone Workflow containing plempling、Performing the Clone operation and Monitoring the operation」（複製工作流程包括規劃、執行複製作業及監控作業）。--=使用PowerShell Cmdlet複製備份：圖示：字型：imagesdir：../media/</block>
   <block id="bd259d74a88fa9ae4cdb9c027643d76a" category="paragraph">需要進行支援才能進行AFF FAS</block>
   <block id="56b5155701c0c0dd57595a6dd3daf917" category="list-text"><block ref="336b55519098bef0384fc43c7f43f47b" prefix="" category="inline-code"></block></block>
   <block id="eda6105c4f159883b951dcd044964c6f" category="list-text"><block ref="2c9674954a47108e373e077d3bcb8357" prefix="" category="inline-code"></block></block>
@@ -7840,7 +7814,6 @@
   <block id="d8135ce9a2bd17b9c659e4605801a778" category="list-text"><block ref="f659aa294fff6eaecdf95876c173adf6" prefix="" category="inline-code"></block></block>
   <block id="dde541c94f2b033571de6bfe76fcf3c3" category="list-text"><block ref="234efccf9d477e939eeae95c37c1803f" prefix="" category="inline-code"></block></block>
   <block id="e2bb7a9783ce9c6c02e6001911562e16" category="list-text"><block ref="2e72f8b3689961923dec66f94cdf620f" prefix="" category="inline-code"></block></block>
-  <block id="91ae9720ac69723481c4de57234c575e" category="paragraph">Permalink：Protect - Hana / task_cancel_backup_operations_for_sap_hana.html側欄：側欄關鍵字：摘要：「您可以取消佇列中的備份作業。」--=取消SAP HANA的備份作業：圖示：字型：imagesdir：../media/</block>
   <block id="6c27677d6e913bc79948a8f54acbd25c" category="list-text">資料位於ONTAP FAS 不完整或AFF 不完整的一線與二線系統、並受到保護、可儲存至本機StorageGRID 的物件（使用NetApp BlueXP雲端備份整合）</block>
   <block id="88ff864aa61d80e2b8a79a0f91b36f3b" category="list-text">資料位於ONTAP FAS 不實或AFF 不實的系統上、並複寫至Cloud Volumes ONTAP 不實</block>
   <block id="4715420841b96150a5fff8e31c55eeb2" category="list-text">資料位於ONTAP FAS 不完整或AFF 不完整的一線和二線系統上、並受到保護、可在雲端中進行物件化和歸檔儲存（使用NetApp BlueXP Cloud Backup整合）</block>
@@ -7960,4 +7933,27 @@
   <block id="7a86ee54e2df90d7a4109938e53c1deb" category="list-text">輸入RFC格式</block>
   <block id="ace31f9e5f442121e5c3914671ec85d3" category="list-text">您可以按一下「*監控*&gt;*工作*」、查看稽核完整性檢查和磁碟空間檢查。</block>
   <block id="d251696f5e122ef9209620841c14e519" category="sidebar">Software 4.8文件SnapCenter</block>
+  <block id="3c07dcecb29c0d53519899b31b85fb61" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱 <block ref="0777b5ea2405197c6a0ed1eeb8c4cc9a" category="inline-link-rx"></block>。</block>
+  <block id="dfaba282a50c2055e70279d05523fba2" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="0777b5ea2405197c6a0ed1eeb8c4cc9a" category="inline-link-rx"></block>。</block>
+  <block id="775fcd440db131b498769960f53ac310" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="9b2c9c657bf3e52183d3c1f767265001" category="inline-link-rx"></block>。</block>
+  <block id="384ecb62d880a9048cd6ee500f8ffcdb" category="summary">您應該SnapCenter 使用SnapCenter 穩定使用者介面（UI）來安裝適用於SAP HANA資料庫的功能。如果您的環境不允許從SnapCenter Oracle UI遠端安裝外掛程式、您可以使用命令列介面（CLI1）、在主控台模式或無聲模式下安裝SAP HANA資料庫的外掛程式。</block>
+  <block id="23760d8f892e346ebd63fac3623b2dc5" category="paragraph"><block ref="2fc9f2abb842b420f8ecb28df62e8563" category="inline-link-rx"></block></block>
+  <block id="ffaafcbad8fa7abfb6f9166b4bc76388" category="doc">取消SAP HANA的備份作業</block>
+  <block id="b2e1462cde70f9661bba1f1be6a19b4c" category="admonition">應用程式磁碟區僅支援直接NFS和直接iSCSI連線。</block>
+  <block id="11b0f8f84dad84d83f62b94ccfa1b29c" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="6acebae1875d0d6142cdf2d6c44ca5c9" category="inline-link-rx"></block>。</block>
+  <block id="5a796427718586fb90b0404a63c79380" category="list-text"><block ref="fabd53b99023376bd3ff2670d534d874" category="inline-link-rx"></block></block>
+  <block id="d02b4aec015712043efb147f73173ce0" category="paragraph">《Oracle資料庫適用的支援使用支援的組態SnapCenter 》（英文）列於中<block ref="6acebae1875d0d6142cdf2d6c44ca5c9" category="inline-link-rx"></block>。</block>
+  <block id="8c23b286e970d7aba3f0ba4cac55a3ce" category="paragraph">。<block ref="1bc5f97517692552b0fc613a6280d44d" category="inline-link-rx"></block> 包含支援版本的最新資訊。</block>
+  <block id="b10fc427c86b36d441f4bfabc9179bfd" category="paragraph">如需受支援Oracle版本的最新資訊、請參閱<block ref="6acebae1875d0d6142cdf2d6c44ca5c9" category="inline-link-rx"></block>。</block>
+  <block id="afd32bd411643d7b80e9795732fc2190" category="list-text">輸入下列命令以安裝外掛程式。</block>
+  <block id="27881336d2ff10b5a1baa10f7bca34a1" category="list-text">針對Microsoft SQL Server的支援功能、適用於Microsoft Exchange Server的支援功能、以及適用於Microsoft Windows的支援功能、建議您將伺服器和外掛程式主機升級至最新版本、以便執行指令碼路徑SnapCenter SnapCenter SnapCenter 。</block>
+  <block id="8ab368eff7e361869ef717b446f7ec1b" category="paragraph">所有相關服務都會在外掛程式升級期間重新啟動。</block>
+  <block id="07a646d112ec3924e97a5c5bd588d4c2" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="b7a3cb4f690df02dff49048f9cc465b2" category="inline-link-rx"></block></block>
+  <block id="44dcf11fb80178db211421840242c071" category="summary">您應該SnapCenter 使用SnapCenter 「版本資訊」使用者介面（UI）來安裝「版本資訊」自訂外掛程式。如果您的環境不允許從SnapCenter SIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、在主控台模式或無聲模式下安裝自訂外掛程式。</block>
+  <block id="f779fc9eb5facb1b4cb7f109a2d58be2" category="paragraph"><block ref="063c6867f0d5dcf21978239569098f3b" category="inline-link-rx"></block></block>
+  <block id="ed27eadf4ae8e8750cfd2fbc61ad72d7" category="paragraph">如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱<block ref="c50d85e9b4db596cb2a135c4e622135b" category="inline-link-rx"></block></block>
+  <block id="6128abac450b413be3b6d65797422307" category="paragraph">請參閱<block ref="c50d85e9b4db596cb2a135c4e622135b" category="inline-link-rx"></block></block>
+  <block id="62daf6a07ef62b5f47d64602451886c4" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
+  <block id="8b64c44e24e9cf1c59554cf2c41479bf" category="paragraph">如需支援的應用程式和資料庫詳細資訊、請參閱<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
+  <block id="026ab5d2853d1f0c92bc7f3703d62e90" category="sidebar">支援簡單、集中化、可擴充的平台、可為在混合雲中任何位置的不間斷系統上執行的應用程式、資料庫、主機檔案系統及VM提供應用程式一致的資料保護。SnapCenter ONTAP本文件庫包含4.8版的相關資訊。</block>
 </blocks>

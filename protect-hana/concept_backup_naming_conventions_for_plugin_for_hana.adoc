@@ -10,6 +10,7 @@ summary: 您可以使用預設的Snapshot複本命名慣例、也可以使用自
 :imagesdir: ../media/
 
 
+[role="lead"]
 您可以使用預設的Snapshot複本命名慣例、也可以使用自訂的命名慣例。預設的備份命名慣例會在Snapshot複本名稱中新增時間戳記、協助您識別複本的建立時間。
 
 Snapshot複本使用下列預設命名慣例：

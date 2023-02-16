@@ -2,7 +2,7 @@
 permalink: protect-hana/task_install_the_snapcenter_plug_in_for_sap_hana_database_on_linux_hosts_using_the_command_line_interface.html 
 sidebar: sidebar 
 keywords:  
-summary: 您應該SnapCenter 使用SnapCenter 穩定使用者介面（UI）來安裝適用於SAP HANA資料庫的功能。如果您的環境不允許從SnapCenter ESIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、以主控台模式或無聲模式安裝SAP HANA資料庫外掛程式。 
+summary: 您應該SnapCenter 使用SnapCenter 穩定使用者介面（UI）來安裝適用於SAP HANA資料庫的功能。如果您的環境不允許從SnapCenter Oracle UI遠端安裝外掛程式、您可以使用命令列介面（CLI1）、在主控台模式或無聲模式下安裝SAP HANA資料庫的外掛程式。 
 ---
 = 使用命令列介面、在SnapCenter Linux主機上安裝適用於SAP HANA資料庫的功能
 :allow-uri-read: 
@@ -21,7 +21,7 @@ summary: 您應該SnapCenter 使用SnapCenter 穩定使用者介面（UI）來�
 互通性對照表工具IMT （Interoperability Matrix Tool、簡稱「互通性對照表工具」）包含有關支援組態的最新資訊。
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=105284;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
 * 適用於SAP HANA資料庫的功能就是適用於Linux的功能性外掛套件的一部分。SnapCenter SnapCenter在安裝SnapCenter 適用於Linux的支援功能套件之前、您應該已經在SnapCenter Windows主機上安裝了支援功能。
 

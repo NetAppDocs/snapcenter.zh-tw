@@ -10,6 +10,7 @@ summary: 您可以使用Remove-SmBackup Cmdlet來清除無Snapshot複本之次�
 :imagesdir: ../media/
 
 
+[role="lead"]
 您可以使用Remove-SmBackup Cmdlet來清除無Snapshot複本之次要備份的備份計數。當管理複本拓撲中顯示的Snapshot複本總數與次要儲存Snapshot複本保留設定不符時、您可能會想要使用此Cmdlet。
 
 您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。

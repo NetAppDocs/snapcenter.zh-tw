@@ -78,7 +78,7 @@ NOTE: 我們建議您將SnapCenter 不需要的「不二用」授權新增至次
 |===
 *額外需求*
 
-如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["互通性對照表工具"^]
+如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["互通性對照表工具"^]
 
 |===
 | 主機 | 最低要求 
@@ -87,7 +87,7 @@ NOTE: 我們建議您將SnapCenter 不需要的「不二用」授權新增至次
  a| 
 作業系統（64位元）
  a| 
-請參閱 https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["互通性對照表工具"^]
+請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["互通性對照表工具"^]
 
 
 

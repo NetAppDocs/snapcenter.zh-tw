@@ -88,7 +88,7 @@ custom_plugin_checksum清單是主機SnapCenter 上自訂外掛程式安裝的�
 http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=105308;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=108393;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
 * 您必須為非root使用者設定Sudo權限、才能存取多個路徑。使用visudo Linux公用程式、將下列行新增至/etc/udoers檔案。
 +

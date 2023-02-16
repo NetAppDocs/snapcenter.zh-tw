@@ -10,6 +10,7 @@ summary: 您SnapCenter 可以使用「工作」頁面來監控不同的還原作
 :imagesdir: ../media/
 
 
+[role="lead"]
 您SnapCenter 可以使用「工作」頁面來監控不同的還原作業進度。您可能需要檢查作業進度、以判斷作業何時完成或是否有問題。
 
 *關於此工作*

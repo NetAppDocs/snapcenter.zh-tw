@@ -10,6 +10,7 @@ summary: 您SnapCenter 可以使用「工作」頁面來監控安裝過程。您
 :imagesdir: ../media/
 
 
+[role="lead"]
 您SnapCenter 可以使用「工作」頁面來監控安裝過程。您可能需要檢查安裝進度、以判斷何時完成或是否有問題。
 
 *關於此工作*

@@ -10,6 +10,7 @@ summary: Windows Server 2012或更新版本可讓您建立群組託管服務帳�
 :imagesdir: ../media/
 
 
+[role="lead"]
 Windows Server 2012或更新版本可讓您建立群組託管服務帳戶（GMSA）、以便從託管網域帳戶提供自動化服務帳戶密碼管理。
 
 *您需要的是什麼*

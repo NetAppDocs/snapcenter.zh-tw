@@ -10,6 +10,7 @@ summary: 所需的最低限度驗證權限會因您使用的資料保護功能�
 :imagesdir: ../media/
 
 
+[role="lead"]
 所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter
 
 |===

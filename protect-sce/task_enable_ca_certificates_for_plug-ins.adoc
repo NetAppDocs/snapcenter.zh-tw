@@ -10,6 +10,7 @@ summary: 您應該設定CA憑證、並在SnapCenter 伺服器和對應的外掛�
 :imagesdir: ../media/
 
 
+[role="lead"]
 您應該設定CA憑證、並在SnapCenter 伺服器和對應的外掛程式主機上部署CA憑證。您應該為外掛程式啟用CA憑證驗證。
 
 *您需要的是什麼*

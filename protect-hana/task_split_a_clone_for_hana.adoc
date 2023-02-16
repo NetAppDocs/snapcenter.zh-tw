@@ -10,6 +10,7 @@ summary: 您可以使用SnapCenter 此功能從父資源分割複製的資源。
 :imagesdir: ../media/
 
 
+[role="lead"]
 您可以使用SnapCenter 此功能從父資源分割複製的資源。分割的實體複本會變成獨立於父資源的實體複本。
 
 *關於此工作*

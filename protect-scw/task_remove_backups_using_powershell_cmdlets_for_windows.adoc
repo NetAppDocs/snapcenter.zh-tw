@@ -10,6 +10,7 @@ summary: 如果您不再需要移除SmBackup指令程式來執行其他資料保
 :imagesdir: ../media/
 
 
+[role="lead"]
 如果您不再需要移除SmBackup指令程式來執行其他資料保護作業、可以使用該指令程式來刪除備份。
 
 您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。

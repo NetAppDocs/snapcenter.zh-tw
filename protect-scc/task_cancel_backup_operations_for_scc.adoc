@@ -10,6 +10,7 @@ summary: 您可以取消佇列中的備份作業。
 :imagesdir: ../media/
 
 
+[role="lead"]
 您可以取消佇列中的備份作業。
 
 *您需要的是什麼*
