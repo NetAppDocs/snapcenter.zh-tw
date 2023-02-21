@@ -6,7 +6,7 @@ indexpage:
   - title: 開始使用
     links:
     - title: 版本資訊
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2883299
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481
     - title: 深入瞭解SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: 保護SQL Server資料庫的快速參考
