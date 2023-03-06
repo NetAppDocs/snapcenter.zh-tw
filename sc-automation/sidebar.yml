@@ -9,7 +9,7 @@ entries:
 - title: REST Web服務基礎
   url: "/sc-automation/concept_rest_web_services_foundation.html"
 - title: 基本營運特性
-  url: "/sc-automation/concept_basic_operational_characterstics.html"
+  url: "/sc-automation/concept_basic_operational_characteristics.html"
 - title: 控制API要求的輸入變數
   url: "/sc-automation/concept_input_variables_controlling_an_api_request.html"
 - title: API回應的解讀
