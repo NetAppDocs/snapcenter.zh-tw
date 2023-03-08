@@ -5234,29 +5234,16 @@
   <block id="607ae7a08e1d8da9ed8df0e56a63095d" category="summary">支援災難恢復功能、使用REST API來備份功能。SnapCenter SnapCenter</block>
   <block id="78a063ff38d2b793d6d796023bf46a0c" category="doc">支援REST API以進行SnapCenter 支援的REST伺服器災難恢復</block>
   <block id="0e8b55402d6627c0f8102010e3494744" category="inline-link-macro">如何使用Swagger API網頁存取REST API</block>
-  <block id="91ab0f2c983023d0027fbe07aa0f3fe7" category="paragraph">支援災難恢復（DR）功能、使用REST API來備份支援。SnapCenter SnapCenter使用REST API、您可以在REST API Swagger頁面上執行下列作業。如需存取Swagger頁面的資訊、請參閱 <block ref="2025c045f65fe4c2f57ea8e2f34bc22a" category="inline-link-macro-rx"></block>。</block>
   <block id="c3801e49df2e57ee5488d512e1cf02b0" category="list-text">應啟動並執行此伺服器SnapCenter 以執行DR還原API。</block>
   <block id="a58600f18618dccbf582ceb82520f1ae" category="paragraph">支援所有外掛程式的Sfor Server DR。SnapCenter</block>
-  <block id="48c7c41b72e1d678923ce3571aa65b2d" category="cell">步驟</block>
   <block id="aba3d4b49c454e1974970e7b5514b001" category="cell">REST API</block>
   <block id="511e67fd33176b5c5df2fcf5169691d4" category="paragraph">擷取現有SnapCenter 的伺服器DR備份</block>
   <block id="5683cd95d1258c1198131ee3fde12f8f" category="paragraph">「/4.5/disstarrecovery / server/Backup」（伺服器/備份）「TarketPath={path}」（目標路徑=｛path｝）</block>
-  <block id="c81e728d9d4c2f636f067f89cc14862c" category="paragraph">2.</block>
   <block id="4d5710dee895c5f98e2a36bdeef9d63c" category="paragraph">/4.5/dissterrecovery / server / Backup（伺服器/備份）</block>
-  <block id="eccbc87e4b5ce2fe28308fd9f2a7baf3" category="paragraph">3.</block>
   <block id="3d53caca8e9b880190a77914260432ef" category="paragraph">從SnapCenter 指定的伺服器災難恢復備份還原支援服務器。</block>
-  <block id="fc01add8dc5e609f9be29c977daabdb7" category="paragraph">*先決條件*</block>
-  <block id="119b209f3bca82380d31e9ec34d4997b" category="list-text">替代伺服器主機名稱應與主要伺服器相同、但IP位址可能不同。</block>
-  <block id="f052ac36f43bc8a21796f6c4fc5a79e2" category="list-text">伺服器版本應與主要伺服器相同。</block>
-  <block id="58d4bb8d9e64a51c8e256edf1012afef" category="list-text">使用SnapCenter 下列命令、確保DR備份檔案已複製到新的支援伺服器：</block>
-  <block id="9d50f2e9dcf6f8828b93d76e4e348c5c" category="paragraph">「xcopy &lt;SsSOUR_Path&gt;\&lt;DORD_SERVER_IP&gt;\&lt;Folder_Path&gt;/O /X /E /H /K｛ex：xcopy C：\DRBackup \10.225.81.114\c$\DRBackup /O /X /E /H /K｝」</block>
-  <block id="6318bc3cec87bcdb03cab32f9670f6dc" category="paragraph">如果外掛程式無法解析伺服器主機名稱、請登入每個外掛程式主機、然後以「&lt;新IP &gt; SC_Server_Name'」格式新增新IP的etc/host項目</block>
-  <block id="a09638d3ee7f516207640b2340404009" category="paragraph">例如10.225.81.35 SCServer1</block>
   <block id="4be41a636618a9946610f44cdfd45adf" category="paragraph">/4.5/dissterrecovery / server /還原</block>
-  <block id="a87ff679a2f3e71d9181a67b7542122c" category="paragraph">4.</block>
   <block id="de7c2595c4bced19b8869303d92cef7d" category="paragraph">根據備份名稱刪除伺服器DR備份。</block>
   <block id="13914c16a90c0b0c44e99f78ba2183b2" category="paragraph">（如：/4.5/dissterrecovery / server / Backup）</block>
-  <block id="e4da3b7fbbce2345d7772b0674a318d5" category="paragraph">5.</block>
   <block id="9aa96933bdaa05ec27830a1517e54f9a" category="paragraph">啟用或停用儲存災難恢復</block>
   <block id="9bb6ced642f1be37b6ad58e85292fffa" category="paragraph">/4.5/dissterrecovery /儲存設備</block>
   <block id="27e7993c4841ae5fd670cdd945ccb96d" category="inline-link">災難恢復API</block>
@@ -7671,7 +7658,6 @@
   <block id="7a39a5111b0101ad3147c54ee235c183" category="paragraph">您可以使用此API來檢視SnapCenter 此版本的功能。</block>
   <block id="c3117c33abd012814d4b2d7b924c1f8d" category="admonition">您應該提供儲存災難恢復備份的目標路徑。</block>
   <block id="2012ae142f225323da2a6e6b42372bd8" category="paragraph">建立新的伺服器災難恢復備份。</block>
-  <block id="6d4bea151109003c5e0920bae84073a0" category="paragraph">伺服器etc/host檔案將無法還原。您可以從DR備份資料夾手動還原。</block>
   <block id="5cfcff9080dfd6a0b46f31dd889d7691" category="list-text">應在所有節點上執行MFA設定的指令。SnapCenter依賴方組態應在Active Directory Federation Services（AD FS）伺服器中使用F5叢集詳細資料進行。啟用MFA後、節點層級SnapCenter 的支援功能將會遭到封鎖。</block>
   <block id="88b8c728864c341ef14637e289839640" category="list-text">ASP.NET 4.7.2</block>
   <block id="8098ea3ff2e42300d1835034eb9f2ad7" category="paragraph">+.NET Framework 4.7.2功能+</block>
@@ -7956,4 +7942,28 @@
   <block id="62daf6a07ef62b5f47d64602451886c4" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
   <block id="8b64c44e24e9cf1c59554cf2c41479bf" category="paragraph">如需支援的應用程式和資料庫詳細資訊、請參閱<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
   <block id="026ab5d2853d1f0c92bc7f3703d62e90" category="sidebar">支援簡單、集中化、可擴充的平台、可為在混合雲中任何位置的不間斷系統上執行的應用程式、資料庫、主機檔案系統及VM提供應用程式一致的資料保護。SnapCenter ONTAP本文件庫包含4.8版的相關資訊。</block>
+  <block id="3f02fb62bfeb289d4be1d20d610004f0" category="doc">災難恢復（DR）REST API</block>
+  <block id="d32779bdd599ffb81c5a1d466000d56e" category="paragraph">支援災難恢復（DR）功能、使用REST API來備份支援。SnapCenter SnapCenter在使用DR REST API之前、請先執行下列步驟。</block>
+  <block id="c78f6c96db76c1f69e91b5487e704f43" category="list-text">建立新的伺服器災難恢復備份、SnapCenter 使用DR備份REST API從指定的伺服器災難恢復備份中還原一個R地 靜止伺服器：<block ref="fe172164c0bbfbb71439d4e0d42883f5" prefix=" " category="inline-code"></block></block>
+  <block id="f72771614abb57fc7a16f6aa264da665" category="list-text">啟動次要伺服器機器、但SnapCenter 在次要伺服器上安裝完整套必要條件之前、您應該先完成這些先決條件。</block>
+  <block id="494f2693f3776d355700eeab7dd75821" category="list-text">替代伺服器主機名稱/主機FQDN應與主要伺服器主機名稱相同、但IP位址可能不同。</block>
+  <block id="31f27d6daa5ab50a1011f7c910c6e5d3" category="list-text">次要伺服器版本應與主要伺服器相同。</block>
+  <block id="7aafedae29efa6e49e3abbb250243837" category="list-text">次要SnapCenter 版應該安裝在與主要版相同的位置和連接埠上。</block>
+  <block id="8490b635a4e468a237b8b257d031011c" category="list-text">在觸發伺服器DR還原作業之前、您應該先叫出災難恢復備份之後儲存的目標路徑或路徑。</block>
+  <block id="8972c05484753254a6f948a4962b6811" category="list-text">請務必SnapCenter 使用下列命令、將DR備份檔案複製到新的支援服務器：<block ref="f9683fa16c9d437a04d3664577ef2872" prefix=" " category="inline-code"></block></block>
+  <block id="4939134c976f3894f29e1ce445b76428" category="list-text">在SnapCenter 次要機器上安裝此伺服器。</block>
+  <block id="dc75347cc15e78823bdaadb0ea654097" category="list-text">執行DR還原作業時、您應確保沒有任何與SnapCenter 該伺服器相關的工作正在執行。</block>
+  <block id="9a4130dee8443d03bcdf62bae505136e" category="list-text">將次要SnapCenter 的SURL伺服器安裝在與主要伺服器相同的位置和連接埠上。</block>
+  <block id="5753398a53564a3efa071ab4a2a25e75" category="list-text">使用DR還原API執行伺服器DR還原作業： <block ref="60709718d7a794a4b06a075a7df6ad86" prefix=" " category="inline-code"></block></block>
+  <block id="e729f7885b63addbf250ef2f33329efb" category="paragraph">如果外掛程式無法解析伺服器主機名稱、請登入每個外掛程式主機、然後以&lt;New IP&gt; 「更新SC_SERVER_Name」格式新增新IP的etc/host項目。例如、<block ref="787ca03a3d14e5cce46cedf0bba7ac2b" prefix=" " category="inline-code"></block></block>
+  <block id="421f836e09d607d08dad463276b0c52e" category="paragraph">伺服器etc/host項目將不會還原。您可以從DR備份資料夾手動還原。</block>
+  <block id="cf6d86307a7decebf79e2175ef2bc96f" category="inline-link">如何將SnapCenter 解決方法移轉至其他伺服器</block>
+  <block id="40b06602d6310e9f595ec07f57b84775" category="admonition">如果是使用F5設定、還原作業會以獨立執行、您應該執行一組命令來再次建立F5。請參閱連結：<block ref="fb5c34144d693d79610d99e63e5e4e12" category="inline-link-rx"></block></block>
+  <block id="d51a9a84121a4ca319f6f0b5d481f073" category="admonition">災難恢復還原之後、將會新增主機、但您應該手動安裝外掛程式。</block>
+  <block id="2dce035ff36be1c01663c842167acf77" category="admonition">只有當您安裝SnapCenter 適用於Windows的還原外掛程式、並將NetApp LUN附加至伺服器機器時、儲存庫備份排程才會還原。</block>
+  <block id="d894da67863cc5e9abfa9afc40b47771" category="paragraph">使用REST API、您可以在REST API Swagger頁面上執行下列作業。如需存取Swagger頁面的資訊、請參閱 <block ref="2025c045f65fe4c2f57ea8e2f34bc22a" category="inline-link-macro-rx"></block>。</block>
+  <block id="04f76259e3406e39f106d09b85354906" category="inline-link">Exchange備份僅將一半快照保留在Vault目的地記錄磁碟區上SnapCenter</block>
+  <block id="67e1d332319e6fe55fd35967c2ec989e" category="admonition">處理Exchange磁碟區（LUN）時、請為記錄和資料庫建立個別的資料保存原則、並使用相同的標籤、將記錄原則的保留（保留）設定為每個標籤的兩倍數量作為資料庫原則。如需詳細資訊、請參閱：<block ref="069d987d34ba2a5b3f4862b42bb7f849" category="inline-link-rx"></block></block>
+  <block id="b885eb831c1b0ea66dc957240ef0bacd" category="admonition">還原控制檔時、請確定目錄結構存在、或是應以正確的使用者和群組擁有者（如果有）建立、以允許還原程序將檔案複製到目標位置。如果目錄不存在、還原工作將會失敗。</block>
+  <block id="3a6eb59ee064b09b020c1a87c5de4988" category="admonition">不支援IBM Java。</block>
 </blocks>

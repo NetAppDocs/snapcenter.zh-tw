@@ -14,6 +14,10 @@ summary: 新增主機並安裝外掛程式套件之前、您必須先完成所�
 新增主機並安裝外掛程式套件之前、您必須先完成所有需求。SAP HANA資料庫的支援套件可在Windows和Linux環境中使用。SnapCenter
 
 * 您必須在主機上安裝Java 1.8 64位元。
++
+
+NOTE: 不支援IBM Java。
+
 * 您必須在主機上安裝SAP HANA資料庫互動終端機（HDBSQL用戶端）。
 * 對於Windows、外掛程式Creator Service應使用「'LocalSystem'」Windows使用者執行、這是以網域管理員身分安裝SAP HANA資料庫外掛程式時的預設行為。
 * 對於Windows、應以系統使用者身分建立使用者儲存金鑰。
