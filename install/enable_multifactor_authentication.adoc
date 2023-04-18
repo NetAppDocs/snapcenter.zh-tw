@@ -119,7 +119,7 @@ _Set-AdfsRelyingPartyTrust -targetName「<依賴方的顯示名稱>」-Encryptio
 
 啟用、更新或停用SnapCenter 完效益管理系統中的MFA設定後、請關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器以重新登入。這將清除現有或作用中的工作階段Cookie。
 
-如需疑難排解資訊、請參閱 link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_login_in_multiple_tabs_shows_MFA_error%3A_The_SAML_message_response_(1)_doesn%E2%80%99t_match_the_expected_response_(2)["在多個索引標籤中登入顯示MFA錯誤SnapCenter"]
+如需疑難排解資訊、請參閱 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["在多個索引標籤中登入顯示MFA錯誤SnapCenter"^]。
 
 
 

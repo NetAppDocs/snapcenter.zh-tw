@@ -30,13 +30,6 @@ NOTE: 不支援在不同叢集上使用相同名稱的多個SVM。SnapCenter每�
 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["VMware vSphere文件的VMware外掛程式SnapCenter"]
 
 * 使用SnapCenter 適用於Microsoft Windows的《支援Microsoft Windows的功能不實的外掛程式」來執行主機端儲存資源配置。
-* 將現有資料庫移至NetApp儲存設備。
-+
-如需詳細資訊、請參閱SnapCenter 「資訊的資料來源」。
-
-+
-link:concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["將歸檔的備份從SnapManager Microsoft SQL Server的支援功能匯入SnapCenter 到支援功能"]
-
 * 如果SnapVault 您想要備份複寫、請設定SnapMirror和不相關性。
 
 

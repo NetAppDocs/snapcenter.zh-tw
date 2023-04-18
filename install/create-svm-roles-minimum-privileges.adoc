@@ -39,8 +39,8 @@ NOTE: 您應該針對每個權限重複此命令。
 
 您應該執行幾ONTAP 個SVM命令來建立SVM角色並指派權限。
 
-* 「安全登入角色create -role Svm_rouse_Name -cmd目錄名稱「SnapMirror list-destinations」-vserver Svm_Name -access all」
-* 「安全登入角色create -role Svm_role_Name -cmd dirname "EVENT generate-autosup-log"-vserver Svm_Name -access all"
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "snapmirror list-destinations" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "event generate-autosupport-log" -access all`
 * 「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「jobhistory show」-access all」
 * 「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「jobstop」-access all」
 * 「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱"LUN"-access all"
@@ -113,5 +113,5 @@ NOTE: 您應該針對每個權限重複此命令。
 * 「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver EXECT-policy」-access all」
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「vserver iSCSI」-access all」
 * 「安全性登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「Volume Clone分割狀態」-access all」
-* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname “volume managed-feature” -access all`
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume managed-feature" -access all`
 

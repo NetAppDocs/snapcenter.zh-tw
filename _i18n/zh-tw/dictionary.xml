@@ -6261,7 +6261,6 @@
   <block id="b14fd9f5ab6e51e7c06988f9fcf9df95" category="paragraph">「*摘要卡*」區段會顯示備份與複本的總數。</block>
   <block id="7da2011e93a96c6ba9279069d693453e" category="list-text">在「*管理複本*」檢視中、按一下主儲存設備或次儲存設備的*備份*或* Clone *、即可查看備份或複製的詳細資料。</block>
   <block id="4352314fc82600fe764ead91091936ed" category="list-text">從表中選擇一個克隆，然後單擊* Clone（克隆）Split*。</block>
-  <block id="aa829ddf1acbdd2a8aa6a61635c33dec" category="doc">匯入歸檔備份</block>
   <block id="962df1822db6404545e093c4f6870a0b" category="doc">監控「活動」窗格中SQL資源的資料保護作業</block>
   <block id="8c2706ff7c5260b28a36b7642f3fdcf7" category="summary">您應該SnapCenter 從SnapCenter 支援功能的使用者介面中安裝適用於Microsoft SQL Server的支援功能。不過、如果您因為某些原因無法執行、您可以從Windows命令列以無訊息模式執行SQL Server外掛程式安裝程式。</block>
   <block id="07fae625128f8e6e897e2445f74b4b56" category="doc">從命令列以無訊息方式安裝SnapCenter 適用於Microsoft SQL Server的功能</block>
@@ -6480,10 +6479,6 @@
   <block id="b3721954b25a4acdb3a4229ac3e0b5f8" category="list-text">執行Invoke-SmConfigureResources、將現有的Microsoft SQL Server資料庫從本機磁碟移至NetApp LUN、反之亦然。</block>
   <block id="eefa922509507f72bc1a8ad3abe353fd" category="list-text">如果您使用SnapCenter VMware vCenter Server來保護位於VMware RDM LUN或VMDK上的SQL資料庫、則必須部署SnapCenter VMware vSphere的「支援VMware vSphere的支援中心」外掛程式、並以SnapCenter 「支援中心」登錄外掛程式。VMware vSphere的《VMware vCenter外掛程式》文件有更多資訊。SnapCenter</block>
   <block id="2d3786cce4bbee81c9852997cc1bef39" category="paragraph"><block ref="2d3786cce4bbee81c9852997cc1bef39" category="inline-link-rx"></block></block>
-  <block id="eec7968b53638fab183beb9401255808" category="list-text">將現有資料庫移至NetApp儲存設備。</block>
-  <block id="782b2e16a66c054ba5d75c3a3345abfe" category="paragraph">如需詳細資訊、請參閱SnapCenter 「資訊的資料來源」。</block>
-  <block id="3a5bf11a9dfcb97482357af03217e45f" category="inline-link-macro">將歸檔的備份從SnapManager Microsoft SQL Server的支援功能匯入SnapCenter 到支援功能</block>
-  <block id="f87b26dbb302ad8c2fe31750b897cc6f" category="paragraph"><block ref="f87b26dbb302ad8c2fe31750b897cc6f" category="inline-link-macro-rx"></block></block>
   <block id="697a526808255bffff4fb836c66f8996" category="paragraph">如需詳細資訊、請參閱SnapCenter 《關於安裝的資訊：</block>
   <block id="43bd5db5bd3f4be62400e5e4a8b1b32f" category="doc">設定SnapCenter 適用於Windows的效能不整套件認證</block>
   <block id="9cd6241dd2e62c7fa6662789a4fc266f" category="list-text">Windows主機上的SQL驗證</block>
@@ -6717,37 +6712,29 @@
   <block id="353c85d985312d2d61ab0aeb4ee52759" category="paragraph">*適用於Microsoft SQL Server需求的外掛程式* SnapCenter</block>
   <block id="4bd535cc745449316aa463a5f52133d6" category="paragraph">您的使用者應具備本機系統管理員權限、並具有遠端主機的本機登入權限。如果您管理叢集節點、則需要擁有叢集中所有節點管理權限的使用者。</block>
   <block id="cf94e6be5912bb698bcc03d64c605bc4" category="paragraph">您應該擁有SQL Server上具有Sysadmin權限的使用者。外掛程式使用Microsoft VDI Framework、需要系統管理員存取權。</block>
-  <block id="b06af5128852d56366a94b0a3584c1a6" category="paragraph">如果您使用SnapManager 的是Microsoft SQL Server的支援功能、而且想要將資料從SnapManager Microsoft SQL Server的支援中心匯入SnapCenter 到支援中心、請參閱 <block ref="0079f46f6850618db9fdf32f5f6051e0" category="inline-link-macro-rx"></block></block>
-  <block id="228c8a7d638433f7182edc100efa8234" category="paragraph">*下載並安裝SnapCenter 《Sile Server*》</block>
   <block id="72de9cea28a7cca58f8423279c68e8c6" category="list-text">從下載SnapCenter 《the》的《the》（英文）《the》（英文<block ref="d4fdc92072f5257471f3139636068769" category="inline-link-rx"></block> 然後按兩下exe。</block>
   <block id="f3202cac117dff2d56e44da0f9a51af3" category="paragraph">在您啟動安裝之後、會執行所有預先檢查、如果未達到最低要求、則會顯示適當的錯誤或警告訊息。您可以忽略警告訊息並繼續安裝、但錯誤應予以修正。</block>
   <block id="e33036e6b56fd2a33a6a10030cb94299" category="admonition">自訂安裝路徑不支援特殊字元「%」。如果您在路徑中加入「%」、安裝將會失敗。</block>
-  <block id="8b9fac445810d76285dc8784754a7932" category="paragraph">*登入SnapCenter 到S編*</block>
   <block id="852f5d8fb35ebdb357cf3bc24e003d7b" category="list-text">從SnapCenter 主機桌面上的捷徑或安裝所提供的URL啟動支援（預設連接埠8146安裝SnapCenter 了支援支援服務器的端口為_\https://server:8146_）。</block>
   <block id="61f012eff86118543feffb3e0c63fba5" category="list-text">輸入認證資料。</block>
   <block id="47459be4bca5ade3cc059a063f2917cd" category="paragraph">如需內建的網域管理使用者名稱格式、請使用：_netbios\&lt;使用者名稱&gt;_或@&lt;網域&gt;_或_&lt;網域FQDN &gt;\&lt;使用者名稱&gt;_。</block>
   <block id="283cf02b37e194a97bc09e5143839de4" category="paragraph">如需內建的本機管理使用者名稱格式、請使用_。</block>
   <block id="639377ecc4f9660d152b47ac6257004c" category="list-text">按一下*登入*。</block>
-  <block id="e1f81661cd0bea5ccd9534377e99c64a" category="paragraph">*新增SnapCenter 一套以控制器為基礎的功能*</block>
   <block id="a4e7093c6cc2e4ee72e50b2a954be3f3" category="list-text">使用ONTAP 下列命令列登入控制器：</block>
   <block id="a2f9f72a3753905e11a8704d1d64ef7e" category="paragraph">「系統授權新增-授權碼&lt;license_key&gt;」</block>
   <block id="cb7e3c5033b506aed36b6425ab46d746" category="list-text">驗證授權：</block>
-  <block id="aea6d02e0336b9393572481e8b251988" category="paragraph">*加入SnapCenter 以功能為基礎的授權*</block>
   <block id="75d426bedc5bc7dbac82eeea5b7205cc" category="list-text">在「S16GUI」左窗格中、按一下「*設定&gt;軟體*」、然後在「授權」區段中、按一下「*+*」SnapCenter 。</block>
   <block id="3ac6ac17d67bf3a5fa25634ee8e5ee29" category="list-text">選取兩種取得授權的方法之一：</block>
   <block id="1ec58aebb04dc06c65218ee0a1ec395c" category="list-text">輸入您的NetApp Support網站登入認證資料以匯入授權。</block>
   <block id="8d1ce47f5c181adbba927f4ce22dbb2a" category="list-text">瀏覽至NetApp授權檔案的位置、然後按一下*「Open*（開啟*）」。</block>
   <block id="7b7d58eae7c1c48c220ea2cf5f2754c6" category="list-text">在精靈的「通知」頁面中、使用90%的預設容量臨界值。</block>
-  <block id="d088a4855be9bea0603e2e2116f75d0c" category="paragraph">*設定儲存系統連線*</block>
   <block id="4e47abeee8d7eb5a872182a350fecedb" category="list-text">在左窗格中、按一下*儲存系統&gt;新增*。</block>
   <block id="610cac9ef97d97974dfcf5de0b7e0f1e" category="list-text">在「Add Storage System（新增儲存系統）」頁面中、執行下列步驟：</block>
   <block id="2384730978fb31977e9e4d8d6cd269a1" category="list-text">輸入儲存系統的名稱或IP位址。</block>
   <block id="cc264bb31c32343deef41c8d3130ed2c" category="list-text">輸入用於存取儲存系統的認證資料。</block>
   <block id="270527cce60385f686064c6eef36e8dd" category="list-text">勾選核取方塊以啟用事件管理系統（EMS）和AutoSupport 功能表。</block>
   <block id="1b536db2490e46d75b679a68d1866ff2" category="section-title">安裝Microsoft SQL Server外掛程式</block>
-  <block id="9012b08f82451db8332daddae84d55f0" category="paragraph">*設定「執行身分證明」以安裝Microsoft SQL Server*的外掛程式</block>
   <block id="edb3f96af88f92a47b3be973152729fe" category="list-text">在左窗格中、按一下*設定&gt;認證&gt;新增*。</block>
-  <block id="31dc3f2be294ba75640afa6caeb0b782" category="paragraph">*新增主機並安裝Microsoft SQL Server*的外掛程式</block>
   <block id="585cc1564f4cb6953e8c9f28c1437b7a" category="list-text">在「S16GUI」左窗格中、按一下SnapCenter 「*主機&gt;託管主機&gt;新增*」。</block>
   <block id="391f0cfb81e64e89ce06d9fb74afdee6" category="list-text">在精靈的「主機」頁面中、執行下列步驟：</block>
   <block id="7200cb512c65b6adfa2cab18de8e420d" category="list-text">主機類型：選取Windows主機類型。</block>
@@ -7434,8 +7421,6 @@
   <block id="7676f59833cee6720de923cfeef21ede" category="cell">您可以直接將SnapCenter 伺服器升級至...</block>
   <block id="8d0f374d6bbbe36aead49222bc8c909f" category="cell">支援的外掛程式版本</block>
   <block id="955d0e9747f65e6a6a1963edce3fa678" category="cell">4.6.x</block>
-  <block id="7864e6541a8699c6dcea2ad2d5e5e78b" category="list-text">「安全登入角色create -role Svm_rouse_Name -cmd目錄名稱「SnapMirror list-destinations」-vserver Svm_Name -access all」</block>
-  <block id="4cd712891b20fcc891bdeef703a3e915" category="list-text">「安全登入角色create -role Svm_role_Name -cmd dirname "EVENT generate-autosup-log"-vserver Svm_Name -access all"</block>
   <block id="35191da723a7990e2ec356b702112b64" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「jobhistory show」-access all」</block>
   <block id="950cb25af5f80592c9b230d80411689a" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「jobstop」-access all」</block>
   <block id="54e321a9e203600e142532be5ad7c700" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱"LUN"-access all"</block>
@@ -7481,7 +7466,6 @@
   <block id="08e9631e1208ded677a67844beb7e0f6" category="list-text">您必須安裝Microsoft Net 4.7.2或更新版本。</block>
   <block id="f9e40bd22b133e93e9c9d3b4c3adef6e" category="list-text">Microsoft .NET Framework 4.7.2或更新版本</block>
   <block id="a97c26d42ce7ddd336973734ea88cb27" category="inline-link-macro">無法升級或安裝不適用於沒有網際網路連線的舊系統。SnapCenter</block>
-  <block id="81c513c33c426053d0ffea586847b7ae" category="paragraph">如需.NET疑難排解資訊、請參閱： <block ref="dded983644794c871dd2db9dcf66e032" category="inline-link-macro-rx"></block></block>
   <block id="76532e7091335c4eb76878af878c5b79" category="paragraph">請勿在密碼中使用雙引號（"）或反引號（"）。請勿使用小於（&lt;）和驚嘆號（！） 密碼中的符號。例如、lessthan&lt;!10、lessthan10&lt;!、backtick'12。</block>
   <block id="07a2a06d39605aa9ff4e7d9c550b1f32" category="admonition">在將掛載路徑列為外部記錄位置之前、您應該先確認其路徑和內容。</block>
   <block id="75274e3b5c9387e61941a9dbd37f3bda" category="list-text">支援歸檔記錄管理（ALM）以進行還原和複製作業</block>
@@ -7717,7 +7701,6 @@
   <block id="907fe6bfcd498fe3e561f7fb3ee67c89" category="paragraph">也可使用REST API來啟用「支援MFA」功能。SnapCenter</block>
   <block id="1958e9c22cb352dba19d476e05b4a53b" category="paragraph">啟用、更新或停用SnapCenter 完效益管理系統中的MFA設定後、請關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器以重新登入。這將清除現有或作用中的工作階段Cookie。</block>
   <block id="442ed19a31ac1f651ba7bf07effe122c" category="inline-link-macro">在多個索引標籤中登入顯示MFA錯誤SnapCenter</block>
-  <block id="b07f8a55d09983494694fca31fee6b35" category="paragraph">如需疑難排解資訊、請參閱 <block ref="46642a8ad62fd1a061e94d6b7bf62dc5" category="inline-link-macro-rx"></block></block>
   <block id="aeb89440d41f10fd9cc43ab75d800138" category="section-title">更新AD FS MFA中繼資料</block>
   <block id="19b3ff63dd3f3b6c1e3e48e8b3be6141" category="paragraph">只要AD FS伺服器有任何修改、例如升級、CA憑證續約、DR等、您就應該更新SnapCenter 位於支援區的AD FS MFA中繼資料。</block>
   <block id="2a18eff05051b9c720a786193ade4742" category="list-text">將下載的檔案複製SnapCenter 到「伺服器」以更新MFA組態。</block>
@@ -7784,7 +7767,6 @@
   <block id="74fec6bb431ffa93b327d4933607ec3f" category="admonition">為了保持一致性、SnapCenter 本文檔將角色稱為使用權限。這個「系統管理員GUI」OnCommand 使用術語_attributes_而非_privation_。在設定ONTAP 支援RBAC角色時、這兩個詞彙代表相同的意義。</block>
   <block id="654c0ff0573689496c47502d09cfe7a8" category="list-text">您應該在來源資料庫參數檔中將exclude _seed_cdb_view的值設為假、以擷取與複製12_c_資料庫備份相關的種子pdb資訊。</block>
   <block id="dfb3e8f24407538f95c7f42d27411d1b" category="admonition">備份12_c_資料庫之前、應先設定值。</block>
-  <block id="98084b9b354e4b46189c9b89dc98527a" category="list-text"><block ref="e083e217410d0cc67271c8e1828e715a" prefix="" category="inline-code"></block></block>
   <block id="0d51371cbb850772d2130a36f4368df4" category="list-text">展示MetroCluster</block>
   <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
   <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
@@ -7966,4 +7948,17 @@
   <block id="67e1d332319e6fe55fd35967c2ec989e" category="admonition">處理Exchange磁碟區（LUN）時、請為記錄和資料庫建立個別的資料保存原則、並使用相同的標籤、將記錄原則的保留（保留）設定為每個標籤的兩倍數量作為資料庫原則。如需詳細資訊、請參閱：<block ref="069d987d34ba2a5b3f4862b42bb7f849" category="inline-link-rx"></block></block>
   <block id="b885eb831c1b0ea66dc957240ef0bacd" category="admonition">還原控制檔時、請確定目錄結構存在、或是應以正確的使用者和群組擁有者（如果有）建立、以允許還原程序將檔案複製到目標位置。如果目錄不存在、還原工作將會失敗。</block>
   <block id="3a6eb59ee064b09b020c1a87c5de4988" category="admonition">不支援IBM Java。</block>
+  <block id="bb92d00cc055d1fa0c3023946870bfd5" category="paragraph">如需 .NET 特定疑難排解資訊、請參閱<block ref="d20f19fe60cd205f06739b1a5caeb450" category="inline-link-rx"></block></block>
+  <block id="cf846ac585e82924ea1ad8c03b4b9bdf" category="section-title">下載並安裝 SnapCenter 伺服器</block>
+  <block id="9575d89eee3d9cea045cdf8003c58424" category="section-title">新增 SnapCenter 標準控制器型授權</block>
+  <block id="9859b0644d4667764577eb03a1fcda53" category="section-title">新增 SnapCenter 容量型授權</block>
+  <block id="cc12c6014b5ec85f58b6fb31a26a66f7" category="section-title">設定儲存系統連線</block>
+  <block id="1d765f352f6f5ec7cfa899be682026d8" category="section-title">設定 Run as Credentials 以安裝 Microsoft SQL Server 外掛程式</block>
+  <block id="10976e15f1cbbbbb65eaf072d358489b" category="section-title">新增主機並安裝 Microsoft SQL Server 的外掛程式</block>
+  <block id="a066d76a64fcb852398ad527b862a806" category="paragraph">如需疑難排解資訊、請參閱<block ref="f832f6c8f890b8aacf5c6ca5adeb731b" category="inline-link-rx"></block>。</block>
+  <block id="9756c6d75626032c8da05d425c1d0ca9" category="inline-link">對於沒有網際網路連線的舊版系統、 SnapCenter 升級或安裝失敗</block>
+  <block id="462fbac4d281be78bedf063a9dbd9f61" category="paragraph">如需 .NET 特定疑難排解資訊、請參閱<block ref="b173f6267e94bec8cf82a1d95b991ed7" category="inline-link-rx"></block>。</block>
+  <block id="0cf3e7b313a6954f7aed921dae42be39" category="list-text"><block ref="36ad9b98fe40ea7db5d149de26f34551" prefix="" category="inline-code"></block></block>
+  <block id="72cadc86fec7539ff25b27cc5baed79b" category="list-text"><block ref="e63bba1cea64ca5fd1cd450d7e67f3d6" prefix="" category="inline-code"></block></block>
+  <block id="158e3fb1c7bf72fb1db969f281a7a097" category="list-text"><block ref="f5ba209e62536d23f7b5fe25e81421e2" prefix="" category="inline-code"></block></block>
 </blocks>

@@ -196,13 +196,13 @@ Windows外掛程式主機
 
 您應該擁有SQL Server上具有Sysadmin權限的使用者。外掛程式使用Microsoft VDI Framework、需要系統管理員存取權。
 
-如果您使用SnapManager 的是Microsoft SQL Server的支援功能、而且想要將資料從SnapManager Microsoft SQL Server的支援中心匯入SnapCenter 到支援中心、請參閱 link:../protect-scsql/concept_import_archived_backups_from_snapmanager_for_sql_to_snapcenter.html["匯入歸檔備份"^]
-
 
 
 == 安裝SnapCenter 伺服器
 
-*下載並安裝SnapCenter 《Sile Server*》
+
+
+=== 下載並安裝 SnapCenter 伺服器
 
 *步驟*
 
@@ -221,7 +221,9 @@ NOTE: 自訂安裝路徑不支援特殊字元「%」。如果您在路徑中加�
 . 按一下*立即安裝*。
 
 
-*登入SnapCenter 到S編*
+
+
+=== 登入SnapCenter 到
 
 *步驟*
 
@@ -236,7 +238,9 @@ NOTE: 自訂安裝路徑不支援特殊字元「%」。如果您在路徑中加�
 . 按一下*登入*。
 
 
-*新增SnapCenter 一套以控制器為基礎的功能*
+
+
+=== 新增 SnapCenter 標準控制器型授權
 
 *步驟*
 
@@ -250,7 +254,9 @@ NOTE: 自訂安裝路徑不支援特殊字元「%」。如果您在路徑中加�
 
 
 
-*加入SnapCenter 以功能為基礎的授權*
+
+
+=== 新增 SnapCenter 容量型授權
 
 *步驟*
 
@@ -265,7 +271,9 @@ NOTE: 自訂安裝路徑不支援特殊字元「%」。如果您在路徑中加�
 . 單擊*完成*。
 
 
-*設定儲存系統連線*
+
+
+=== 設定儲存系統連線
 
 *步驟*
 
@@ -285,7 +293,9 @@ NOTE: 自訂安裝路徑不支援特殊字元「%」。如果您在路徑中加�
 
 == 安裝Microsoft SQL Server外掛程式
 
-*設定「執行身分證明」以安裝Microsoft SQL Server*的外掛程式
+
+
+=== 設定 Run as Credentials 以安裝 Microsoft SQL Server 外掛程式
 
 *步驟*
 
@@ -299,7 +309,9 @@ NOTE: 自訂安裝路徑不支援特殊字元「%」。如果您在路徑中加�
 
 
 
-*新增主機並安裝Microsoft SQL Server*的外掛程式
+
+
+=== 新增主機並安裝 Microsoft SQL Server 的外掛程式
 
 *步驟*
 
