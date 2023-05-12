@@ -24,7 +24,7 @@ summary: 在複製Oracle資料庫之前、您應確保已完成先決條件。
 * 如果您使用的是ASM over NFS、則應將//var/capcenter/SCU/Clone /*/*新增至在asm_diskstring參數中定義的現有路徑。
 * 在asm_diskstring參數中，如果使用ASMfd，則應配置_afd:*_；如果使用ASMLIB，則應配置_ORCL:*_。
 +
-如需如何編輯asm_diskstring參數的資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["如何將磁碟路徑新增至asm_diskstring"^]。
+如需如何編輯asm_diskstring參數的資訊、請參閱 https://["如何將磁碟路徑新增至asm_diskstring"^]。
 
 * 如果要在備用主機上建立複本、備用主機應符合下列需求：
 +
@@ -33,8 +33,8 @@ summary: 在複製Oracle資料庫之前、您應確保已完成先決條件。
 +
 *** 如果您要從主要儲存設備或次要（Vault或Mirror）儲存設備複製到替代主機、請確定iSCSI工作階段是建立在次要儲存設備和備用主機之間、或是適當地分區用於FC。
 +
-**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["《Linux主機公用程式安裝與設定指南》"^]
-**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["《AIX主機公用程式安裝與設定指南》"^]
+**** https://["《Linux主機公用程式安裝與設定指南》"^]
+**** https://["《AIX主機公用程式安裝與設定指南》"^]
 
 
 *** 如果您要從Vault或Mirror儲存設備複製到同一主機、請確定iSCSI工作階段是在Vault或Mirror儲存設備與主機之間建立、或是適當地分區用於FC。

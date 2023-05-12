@@ -30,4 +30,4 @@ VMware vSphere的插件SnapCenter
 |===
 如需SnapCenter 有關靜態API的資訊、請參閱 link:../sc-automation/overview_rest_apis.html["REST API總覽"^]
 
-如需SnapCenter VMware vSphere REST API的靜態外掛程式資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_rest_apis_overview.html["VMware vSphere REST API的VMware外掛程式SnapCenter"^]
+如需SnapCenter VMware vSphere REST API的靜態外掛程式資訊、請參閱 https://["VMware vSphere REST API的VMware外掛程式SnapCenter"^]

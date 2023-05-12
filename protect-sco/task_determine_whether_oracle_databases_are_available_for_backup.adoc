@@ -18,7 +18,7 @@ summary: 資源是SnapCenter 由Oracle管理的主機上的Oracle資料庫。您
 * 您必須已完成安裝SnapCenter 完「支援服務器」、新增主機、建立儲存系統連線、以及新增認證等工作。
 * 如果資料庫位於虛擬機器磁碟（VMDK）或原始裝置對應（RDM）上、您必須部署SnapCenter VMware vSphere的「The VMware Plug-in」、並以SnapCenter 「Sfor VMware vSphere」登錄外掛程式。
 +
-如需詳細資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["部署SnapCenter VMware vSphere的VMware vCenter外掛程式"^]。
+如需詳細資訊、請參閱 https://["部署SnapCenter VMware vSphere的VMware vCenter外掛程式"^]。
 
 * 如果資料庫位於VMDK檔案系統、您必須登入vCenter並瀏覽至* VM選項*>*進階*>*編輯組態*、才能將VM的_disk.enableUUUUID_值設為true。
 * 您必須檢閱SnapCenter 下列程序、才能探索不同類型和版本的Oracle資料庫。

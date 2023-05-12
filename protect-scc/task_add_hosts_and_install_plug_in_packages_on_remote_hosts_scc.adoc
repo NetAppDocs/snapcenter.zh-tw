@@ -131,7 +131,7 @@ NOTE: 如果您手動安裝外掛程式並指定自訂連接埠、則必須指�
 會列出上傳至SnapCenter Sfor the Sfor the Sfor the Server的自訂外掛程式。
 
 +
-如果您想要管理MySQL或DB2應用程式、可以使用NetApp提供的MySQL和DB2自訂外掛程式。MySQL和DB2自訂外掛程式可從取得 https://automationstore.netapp.com/home.shtml["NetApp Automation Store"]
+如果您想要管理MySQL或DB2應用程式、可以使用NetApp提供的MySQL和DB2自訂外掛程式。MySQL和DB2自訂外掛程式可從取得 https://["NetApp Automation Store"]
 
 
 

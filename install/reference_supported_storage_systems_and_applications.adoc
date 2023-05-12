@@ -19,10 +19,10 @@ summary: 您應該知道支援的儲存系統、應用程式和資料庫。
 如果您使用Amazon FSX for NetApp ONTAP Sfor NetApp的話、請確保SnapCenter 將支援此功能的支援伺服器主機外掛程式升級至4.5 P1或更新版本、以執行資料保護作業。
 
 +
-如需Amazon FSX for NetApp ONTAP 功能的相關資訊、請參閱 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP 的支援文件"^]。
+如需Amazon FSX for NetApp ONTAP 功能的相關資訊、請參閱 https://["Amazon FSX for NetApp ONTAP 的支援文件"^]。
 
 * 支援不同應用程式和資料庫的保護。SnapCenter
 +
-如需支援的應用程式和資料庫詳細資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援的應用程式和資料庫詳細資訊、請參閱 https://["NetApp 互通性對照表工具"^]。
 
 

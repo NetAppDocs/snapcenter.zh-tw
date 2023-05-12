@@ -334,7 +334,7 @@ stderr
 此清單包含外掛程式要傳回伺服器的所有訊息。該伺服器會在CLI或GUI中顯示這些訊息。SnapCenter
 
 |===
-此功能可為建置者提供支援SnapCenter (https://en.wikipedia.org/wiki/Builder_pattern["建構者模式"]）的所有結果類型。這讓使用者變得非常簡單：
+此功能可為建置者提供支援SnapCenter (https://["建構者模式"]）的所有結果類型。這讓使用者變得非常簡單：
 
 ....
 Result result = Result.builder()

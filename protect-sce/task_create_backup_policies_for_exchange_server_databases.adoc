@@ -110,7 +110,7 @@ NOTE: 您應該根據完整備份保留、而非根據最新（UTM）保留來�
 
 +
 
-NOTE: 處理Exchange磁碟區（LUN）時、請為記錄和資料庫建立個別的資料保存原則、並使用相同的標籤、將記錄原則的保留（保留）設定為每個標籤的兩倍數量作為資料庫原則。如需詳細資訊、請參閱： https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_for_Exchange_Backups_only_keep_half_the_Snapshots_on_the_Vault_destination_log_volume["Exchange備份僅將一半快照保留在Vault目的地記錄磁碟區上SnapCenter"^]
+NOTE: 處理Exchange磁碟區（LUN）時、請為記錄和資料庫建立個別的資料保存原則、並使用相同的標籤、將記錄原則的保留（保留）設定為每個標籤的兩倍數量作為資料庫原則。如需詳細資訊、請參閱： https://["Exchange備份僅將一半快照保留在Vault目的地記錄磁碟區上SnapCenter"^]
 
 .. 在Database Availability Group Settings（資料庫可用度群組設定）區段中、選取一個動作：
 +

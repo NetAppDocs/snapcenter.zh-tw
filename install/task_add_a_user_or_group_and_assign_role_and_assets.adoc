@@ -90,7 +90,7 @@ NOTE: 從S32 4.5開始SnapCenter 、您只能在使用者名稱和群組名稱�
 
 
 
-IMPORTANT: 如果您使用SnapCenter VMware vSphere的VMware vSphere功能的VMware vCenter外掛程式來保護VM、VMDK或資料存放區、則應使用VMware vSphere GUI將vCenter使用者新增至SnapCenter VMware vSphere的「VMware vSphere的VMware vSphere插件」角色。如需VMware vSphere角色的相關資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_predefined_roles_packaged_with_snapcenter.html["VMware SnapCenter vSphere隨附於VMware vSphere的VMware vCenter外掛程式的預先定義角色"^]。
+IMPORTANT: 如果您使用SnapCenter VMware vSphere的VMware vSphere功能的VMware vCenter外掛程式來保護VM、VMDK或資料存放區、則應使用VMware vSphere GUI將vCenter使用者新增至SnapCenter VMware vSphere的「VMware vSphere的VMware vSphere插件」角色。如需VMware vSphere角色的相關資訊、請參閱 https://["VMware SnapCenter vSphere隨附於VMware vSphere的VMware vCenter外掛程式的預先定義角色"^]。
 
 *步驟*
 

@@ -17,7 +17,7 @@ summary: 資源是由您安裝的外掛程式所維護的資料庫、Exchange資
 
 * 您必須已經完成安裝SnapCenter 支援服務器、新增主機、建立儲存系統連線、新增認證、以及安裝Exchange外掛程式等工作。
 * 若要善用單一信箱恢復軟體功能、您必須在安裝單一信箱恢復軟體的Exchange Server上找到作用中資料庫。
-* 如果資料庫位於VMware RDM LUN上、您必須部署SnapCenter VMware vSphere的VMware vCenter外掛程式、並使用SnapCenter VMware vCenter登錄外掛程式。。 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["VMware vSphere文件的VMware外掛程式SnapCenter"] 有更多資訊。
+* 如果資料庫位於VMware RDM LUN上、您必須部署SnapCenter VMware vSphere的VMware vCenter外掛程式、並使用SnapCenter VMware vCenter登錄外掛程式。。 https://["VMware vSphere文件的VMware外掛程式SnapCenter"] 有更多資訊。
 
 
 *關於此工作*

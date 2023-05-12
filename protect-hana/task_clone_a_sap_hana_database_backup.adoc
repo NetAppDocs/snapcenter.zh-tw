@@ -33,7 +33,7 @@ NOTE: 如果命令清單中不存在這些命令、則作業將會失敗。
 
 *關於此工作*
 
-如需有關複本切割作業限制的資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 9 邏輯儲存管理指南》 ONTAP"^]。
+如需有關複本切割作業限制的資訊、請參閱 http://["《 9 邏輯儲存管理指南》 ONTAP"^]。
 
 *步驟*
 

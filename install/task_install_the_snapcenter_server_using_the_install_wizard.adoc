@@ -24,7 +24,7 @@ NOTE: 不支援從SnapCenter 命令列無聲安裝支援。
 * 您應該已確定MySQL Server未安裝在您計畫安裝SnapCenter 此伺服器的主機上。
 * 您應該已啟用Windows安裝程式偵錯功能。
 +
-如需啟用的相關資訊、請參閱Microsoft網站 https://support.microsoft.com/kb/223300["Windows安裝程式記錄"^]。
+如需啟用的相關資訊、請參閱Microsoft網站 https://["Windows安裝程式記錄"^]。
 
 +
 
@@ -34,7 +34,7 @@ NOTE: 您不應在SnapCenter 擁有Microsoft Exchange Server、Active Directory�
 
 *步驟*
 
-. 請SnapCenter 從下載《停止更新》安裝套件 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支援網站"^]。
+. 請SnapCenter 從下載《停止更新》安裝套件 https://["NetApp 支援網站"^]。
 . 連按兩下下載的.exe檔案、即可啟動SnapCenter 安裝程式。
 +
 在您啟動安裝之後、會執行所有預先檢查、如果未達到最低要求、則會顯示適當的錯誤或警告訊息。

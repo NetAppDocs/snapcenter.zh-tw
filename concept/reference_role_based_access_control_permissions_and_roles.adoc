@@ -40,7 +40,7 @@ summary: 利用角色型存取控制（RBAC）、您可以建立角色並新增�
 * 選擇控制閥客體檔案還原
 
 
-如需詳細資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["VMware vSphere使用者適用的RBAC外掛程式類型SnapCenter"^]
+如需詳細資訊、請參閱 https://["VMware vSphere使用者適用的RBAC外掛程式類型SnapCenter"^]
 
 |===
 

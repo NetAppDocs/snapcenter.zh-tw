@@ -53,7 +53,7 @@ IMPORTANT: 如果您使用的是Windows檔案系統內容、請勿備份資料�
 設定的排程會列在「設定所選原則的排程」區段的「套用的排程」欄中。
 
 +
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Scheduled_data_protection_operations_fail_if_the_number_of_operations_running_reaches_maximum_limit["排程的作業可能會失敗"]
+https://["排程的作業可能會失敗"]
 
 
 

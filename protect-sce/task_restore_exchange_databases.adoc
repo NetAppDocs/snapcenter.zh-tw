@@ -23,7 +23,7 @@ summary: 您可以使用SnapCenter 支援功能還原備份的Exchange資料庫�
 執行「移動ActiveMailboxDatabase」命令、將被動式資料庫複本做為主動式資料庫複本。
 
 +
-。 https://docs.microsoft.com/en-us/powershell/module/exchange/move-activemailboxdatabase?view=exchange-ps["Microsoft文件"^] 包含此命令的相關資訊。
+。 https://["Microsoft文件"^] 包含此命令的相關資訊。
 
 
 

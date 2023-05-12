@@ -28,8 +28,6 @@ entries:
     url: "/protect-scw/concept_install_snapcenter_plug_in_for_microsoft_windows.html"
   - title: 適用於Microsoft Windows的安裝需求SnapCenter
     url: "/protect-scw/reference_installation_requirements_for_snapcenter_plug_in_for_microsoft_windows.html"
-  - title: 在Windows Server 2012或更新版本上設定GMSA
-    url: "/protect-scw/task_configure_gMSA_on_windows_server_2012_or_later.html"
   - title: 新增主機並安裝SnapCenter 適用於Microsoft Windows的解決方案
     url: "/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html"
   - title: 使用PowerShell Cmdlet在SnapCenter 多個遠端主機上安裝適用於Microsoft Windows的支援功能外掛程式

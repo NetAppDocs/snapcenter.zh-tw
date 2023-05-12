@@ -13,7 +13,7 @@ summary: 您可以使用SnapCenter 支援功能來設定FC連接或iSCSI連接�
 [role="lead"]
 您可以使用SnapCenter 支援功能來設定FC連接或iSCSI連接的LUN。您也可以使用SnapCenter 支援功能將現有的LUN連線至Windows主機。
 
-LUN是SAN組態中的基本儲存單元。Windows主機將系統上的LUN視為虛擬磁碟。如需詳細資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanconf/home.html["《支援SAN組態指南》（英文）ONTAP"^]。
+LUN是SAN組態中的基本儲存單元。Windows主機將系統上的LUN視為虛擬磁碟。如需詳細資訊、請參閱 http://["《支援SAN組態指南》（英文）ONTAP"^]。
 
 
 
@@ -24,7 +24,7 @@ LUN是SAN組態中的基本儲存單元。Windows主機將系統上的LUN視為�
 *開始之前*
 
 * 您必須將儲存系統節點定義為iSCSI目標。
-* 您必須已在儲存系統上啟動iSCSI服務。 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["深入瞭解"^]
+* 您必須已在儲存系統上啟動iSCSI服務。 http://["深入瞭解"^]
 
 
 *關於此工作*

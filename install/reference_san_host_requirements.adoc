@@ -17,7 +17,7 @@ summary: 如果SnapCenter 您的支援主機是FC/iSCSI環境的一部分、您�
 
 * 主機公用程式
 +
-主機公用程式支援FC和iSCSI、可讓您在Windows伺服器上使用MPIO。如需相關資訊、請參閱 https://docs.netapp.com/us-en/ontap-sanhost/["主機公用程式文件"^]。
+主機公用程式支援FC和iSCSI、可讓您在Windows伺服器上使用MPIO。如需相關資訊、請參閱 https://["主機公用程式文件"^]。
 
 * 適用於Windows MPIO的Microsoft DSM
 +
@@ -28,6 +28,6 @@ summary: 如果SnapCenter 您的支援主機是FC/iSCSI環境的一部分、您�
 
 +
 
-NOTE: 如果您使用ONTAP 的是功能不實的DSM、則應移轉至Microsoft DSM。如需詳細資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Data_ONTAP_DSM_for_Windows_MPIO/How_to_migrate_from_Data_ONTAP_DSM_4.1p1_to_Microsoft_native_DSM["如何從ONTAP 功能需求DSM移轉至Microsoft DSM"^]。
+NOTE: 如果您使用ONTAP 的是功能不實的DSM、則應移轉至Microsoft DSM。如需詳細資訊、請參閱 https://["如何從ONTAP 功能需求DSM移轉至Microsoft DSM"^]。
 
 

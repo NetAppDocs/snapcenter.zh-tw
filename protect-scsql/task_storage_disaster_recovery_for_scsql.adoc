@@ -48,7 +48,7 @@ VMDK和RDM組態不支援災難恢復（DR）。
 * 您可以使用SnapCenter UI或下列Cmdlet刪除在容錯移轉期間建立的SQL Server備份的現象：「移除SmBackup」
 * 容錯移轉之後、如果您想讓部分資源處於非DR模式、請使用下列Cmdlet：「移除-短資源DRMode」
 +
-如需詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]。
+如需詳細資訊、請參閱 https://["《軟件指令程式參考指南》SnapCenter"^]。
 
 * 使用DR模式或非DR模式的個別儲存資源（SQL資料庫）、而非資源群組、將以DR模式或非DR模式的儲存資源來管理。SnapCenter
 

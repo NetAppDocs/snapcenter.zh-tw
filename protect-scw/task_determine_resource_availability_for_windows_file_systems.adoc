@@ -16,7 +16,7 @@ summary: 資源是您檔案系統中的LUN和類似元件、這些元件是由�
 *您需要的是什麼*
 
 * 您必須已經完成安裝SnapCenter SfzServer、新增主機、建立儲存虛擬機器（SVM）連線、以及新增認證等工作。
-* 如果檔案位於VMware RDM LUN或VMDK上、您必須部署SnapCenter VMware vSphere的VMware vCenter外掛程式、並使用SnapCenter VMware vCenter登錄外掛程式。如需詳細資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["VMware vSphere文件的VMware外掛程式SnapCenter"^]。
+* 如果檔案位於VMware RDM LUN或VMDK上、您必須部署SnapCenter VMware vSphere的VMware vCenter外掛程式、並使用SnapCenter VMware vCenter登錄外掛程式。如需詳細資訊、請參閱 https://["VMware vSphere文件的VMware外掛程式SnapCenter"^]。
 
 
 *步驟*

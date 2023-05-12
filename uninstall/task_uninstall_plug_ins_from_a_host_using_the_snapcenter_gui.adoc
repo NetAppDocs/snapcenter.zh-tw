@@ -32,7 +32,7 @@ summary: 當您決定不再需要個別的外掛程式或外掛程式套件時�
 當您使用SnapCenter Suse GUI時、一次只能在一部主機上解除安裝外掛程式。不過、您可以同時執行數個解除安裝作業。
 
 +
-您也可以使用_uninstall-SmHostPackage_ Cmdlet和必要的參數、從多個主機解除安裝外掛程式。您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]。
+您也可以使用_uninstall-SmHostPackage_ Cmdlet和必要的參數、從多個主機解除安裝外掛程式。您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://["《軟件指令程式參考指南》SnapCenter"^]。
 
 
 

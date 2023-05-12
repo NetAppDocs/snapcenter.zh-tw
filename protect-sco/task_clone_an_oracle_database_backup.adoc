@@ -341,7 +341,7 @@ NOTE: 如果您在複製時尚未執行還原、則複製資料庫的備份可�
 
 *瞭解更多資訊*
 
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["還原或複製失敗、並顯示ORA-00308錯誤訊息"^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_recover_a_cloned_database["無法恢復複製的資料庫"^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["可自訂的參數、用於在AIX系統上進行備份、還原和複製作業"^]
+* https://["還原或複製失敗、並顯示ORA-00308錯誤訊息"^]
+* https://["無法恢復複製的資料庫"^]
+* https://["可自訂的參數、用於在AIX系統上進行備份、還原和複製作業"^]
 

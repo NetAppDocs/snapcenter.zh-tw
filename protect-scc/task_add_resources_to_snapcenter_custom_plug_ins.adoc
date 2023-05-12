@@ -25,7 +25,7 @@ link:concept_develop_a_plug_in_for_your_application.html["為應用程式開發�
 
 *關於此工作*
 
-您也可以新增MySQL和DB2應用程式的資源。這些外掛程式可從下載 https://automationstore.netapp.com/home.shtml["NetApp儲存自動化商店"]。
+您也可以新增MySQL和DB2應用程式的資源。這些外掛程式可從下載 https://["NetApp儲存自動化商店"]。
 
 *步驟*
 

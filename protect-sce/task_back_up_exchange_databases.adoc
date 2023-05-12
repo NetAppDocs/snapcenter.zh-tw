@@ -108,7 +108,7 @@ NOTE: 對於電子郵件通知、您必須使用GUI或PowerShell命令Set-SmtpSe
 +
 ** 在不完整的組態中MetroCluster 、SnapCenter 在容錯移轉之後、可能無法偵測到保護關係。
 +
-如需相關資訊、請參閱： https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["無法偵測SnapVault 到SnapMirror或在MetroCluster 進行不復原容錯移轉之後的不協調關係"^]
+如需相關資訊、請參閱： https://["無法偵測SnapVault 到SnapMirror或在MetroCluster 進行不復原容錯移轉之後的不協調關係"^]
 
 ** 如果您在VMDK上備份應用程式資料、SnapCenter 而針對VMware vSphere的VMware vSphere的Java堆疊大小不夠大、則備份可能會失敗。
 +

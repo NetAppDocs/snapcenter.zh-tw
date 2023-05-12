@@ -72,7 +72,7 @@ Windows外掛程式主機
 
 除了連接埠135和445之外、Microsoft指定的動態連接埠範圍也應該開啟。遠端安裝作業使用Windows Management Instrumentation（WMI）服務、此服務會動態搜尋此連接埠範圍。
 
-如需支援的動態連接埠範圍資訊、請參閱 https://support.microsoft.com/kb/832017["Windows的服務總覽和網路連接埠需求"^]
+如需支援的動態連接埠範圍資訊、請參閱 https://["Windows的服務總覽和網路連接埠需求"^]
 
 連接埠可用於SnapCenter 在安裝外掛程式的伺服器與主機之間進行通訊。若要將外掛程式套件二進位檔推送至Windows外掛程式主機、連接埠只能在外掛程式主機上開啟、而且可以在安裝後關閉。
 

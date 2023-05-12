@@ -17,7 +17,7 @@ summary: 還原與還原工作流程包括規劃、執行還原與還原作業�
 
 您應該執行下列命令、以建立與SnapCenter 該伺服器的連線、列出備份並擷取其資訊、以及還原備份。
 
-您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["《軟件命令參考指南》SnapCenter"^]。
+您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱 https://["《軟件命令參考指南》SnapCenter"^]。
 
 *步驟*
 

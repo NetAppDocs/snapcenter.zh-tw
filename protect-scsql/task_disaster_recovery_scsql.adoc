@@ -29,4 +29,4 @@ link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["�
 . 從SnapCenter DR備份的「SQL Server適用的支援程式」資料夾匯入Windows和SQL排程。
 
 
-如需詳細資訊、請參閱 https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["災難恢復API"^] 影片：
+如需詳細資訊、請參閱 https://["災難恢復API"^] 影片：

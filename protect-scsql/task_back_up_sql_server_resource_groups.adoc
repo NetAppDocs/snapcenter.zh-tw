@@ -45,6 +45,6 @@ link:task_create_resource_groups_and_attach_policies_for_sql_server.html["建立
 
 link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["使用PowerShell Cmdlet備份資源"]
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["由於TCP_timeout延遲、導致MySQL連線錯誤導致備份作業失敗"]
+https://["由於TCP_timeout延遲、導致MySQL連線錯誤導致備份作業失敗"]
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["Windows排程器錯誤導致備份失敗"]
+https://["Windows排程器錯誤導致備份失敗"]

@@ -51,7 +51,7 @@ NOTE: 針對Oracle資料庫的支援功能外掛程式、如果您有一個具�
 +
 ** 在不完整的組態中MetroCluster 、SnapCenter 在容錯移轉之後、可能無法偵測到保護關係。
 +
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["無法偵測SnapVault 到SnapMirror或在MetroCluster 進行不復原容錯移轉之後的不協調關係"^]
+https://["無法偵測SnapVault 到SnapMirror或在MetroCluster 進行不復原容錯移轉之後的不協調關係"^]
 
 ** 如果您在VMDK上備份應用程式資料、SnapCenter 而針對VMware vSphere的VMware vSphere的Java堆疊大小不夠大、則備份可能會失敗。若要增加Java堆大小、請找出指令碼檔案「/opt / netapp/init_scripts/scvservice」。在該指令碼中、「do_start方法」命令會啟動SnapCenter VMware插件服務。將該命令更新為：「java -jar -Xmx8192M -Xms4096M」。
 

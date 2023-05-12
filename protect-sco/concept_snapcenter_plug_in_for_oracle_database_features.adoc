@@ -55,7 +55,7 @@ summary: 適用於Oracle資料庫的外掛程式可與Linux或AIX主機上的Ora
 
 +
 ** 您可以將啟用午餐路徑監控參數的值設為假、以停用此功能。
-** 您可以指定LUN路徑自動固定的頻率、方法是將lunpath_監 控時間間隔參數的值（以小時為單位）指派給lunpath_監 控時間間隔參數。如需有關SLM,請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["《SAN管理指南》（英文）ONTAP"^]。
+** 您可以指定LUN路徑自動固定的頻率、方法是將lunpath_監 控時間間隔參數的值（以小時為單位）指派給lunpath_監 控時間間隔參數。如需有關SLM,請參閱 http://["《SAN管理指南》（英文）ONTAP"^]。
 
 
 * 支援Linux上的非揮發性記憶體Express（NVMe）

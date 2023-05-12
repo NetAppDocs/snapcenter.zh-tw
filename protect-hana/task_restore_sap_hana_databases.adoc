@@ -19,4 +19,4 @@ image::../media/restore_workflow.gif[還原工作流程]
 
 您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。此指令程式說明及Cmdlet參考資訊包含PowerShell Cmdlet的詳細資訊。SnapCenter
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]。
+https://["《軟件指令程式參考指南》SnapCenter"^]。

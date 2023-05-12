@@ -30,7 +30,7 @@ summary: 如果您想要在SnapCenter 獨立組態或網路負載平衡（NLB）
 
 . 使用openssl命令在Windows上設定MySQL伺服器和用戶端的SSL憑證和金鑰檔。
 +
-如需相關資訊、請參閱 https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL版本5.7：使用opensl建立SSL憑證和金鑰"^]
+如需相關資訊、請參閱 https://["MySQL版本5.7：使用opensl建立SSL憑證和金鑰"^]
 
 +
 
@@ -146,7 +146,7 @@ CA憑證會在其中一個HA節點上產生、而此CA憑證會複製到另一�
 
 . 對於第一個HA節點、請使用openssl命令、在Windows上設定MySQL伺服器和用戶端的SSL憑證和金鑰檔。
 +
-如需相關資訊、請參閱 https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL版本5.7：使用opensl建立SSL憑證和金鑰"^]
+如需相關資訊、請參閱 https://["MySQL版本5.7：使用opensl建立SSL憑證和金鑰"^]
 
 +
 
@@ -221,7 +221,7 @@ NOTE: 您不得再次建立CA憑證。您應該只建立伺服器公開憑證、
 
 .. 對於第一個HA節點、請使用openssl命令、在Windows上設定MySQL伺服器和用戶端的SSL憑證和金鑰檔。
 +
-https://dev.mysql.com/doc/refman/5.7/en/creating-ssl-files-using-openssl.html["MySQL版本5.7：使用opensl建立SSL憑證和金鑰"]
+https://["MySQL版本5.7：使用opensl建立SSL憑證和金鑰"]
 
 +
 

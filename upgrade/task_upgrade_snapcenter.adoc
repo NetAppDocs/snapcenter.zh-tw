@@ -45,7 +45,7 @@ summary: 您可以使用SnapCenter 「伺服器安裝程式執行檔」來升級
 
 . 從SnapCenter NetApp支援網站下載《支援伺服器》安裝套件。
 +
-https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab[]
+https://[]
 
 . 建立網路組態的複本、網址為：C:\Program Files\NetApp\SnapCenter網路應用程式。
 . 從SnapCenter Windows工作排程中匯出與外掛程式主機相關的支援排程、以便在升級失敗時使用此排程來還原排程。

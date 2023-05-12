@@ -166,8 +166,8 @@ NOTE: 非Data Guard資料庫不會備份重作記錄檔。對於非Data Guard資
 
 NOTE: 在將掛載路徑列為外部記錄位置之前、您應該先確認其路徑和內容。
 
-** http://www.netapp.com/us/media/tr-4591.pdf["NetApp技術報告4591：資料庫資料保護備份、恢復、複寫及災難恢復"^]
-** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["ORA-00308錯誤導致作業失敗"^]
+** http://["NetApp技術報告4591：資料庫資料保護備份、恢復、複寫及災難恢復"^]
+** https://["ORA-00308錯誤導致作業失敗"^]
 
 
 |===
@@ -228,8 +228,8 @@ NOTE: 對於電子郵件通知、您必須使用GUI或PowerShell命令Set-SmtpSe
 
 *瞭解更多資訊*
 
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Oracle_RAC_One_Node_database_is_skipped_for_performing_SnapCenter_operations["Oracle RAC單節點資料庫會跳過以執行SnapCenter 功能不整的作業"^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_from_a_secondary_SnapMirror_or_SnapVault_location["無法從次要SnapMirror或SnapVault 不包含任何資料的位置還原"^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_restore_when_a_backup_of_an_orphan_incarnation_is_selected["無法從孤立轉世的備份還原"^]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["可自訂的參數、用於在AIX系統上進行備份、還原和複製作業"^]
+* https://["Oracle RAC單節點資料庫會跳過以執行SnapCenter 功能不整的作業"^]
+* https://["無法從次要SnapMirror或SnapVault 不包含任何資料的位置還原"^]
+* https://["無法從孤立轉世的備份還原"^]
+* https://["可自訂的參數、用於在AIX系統上進行備份、還原和複製作業"^]
 

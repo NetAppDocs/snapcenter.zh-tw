@@ -32,8 +32,8 @@ NOTE: 請確定您只在Linux主機上安裝認證版本的Java 11。
 如需下載Java的資訊、請參閱：
 
 +
-** http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"^]
-** https://www.ibm.com/support/pages/java-sdk-aix["IBM Java for AIX"^]
+** http://["適用於所有作業系統的Java下載"^]
+** https://["IBM Java for AIX"^]
 
 
 * 對於在Linux或AIX主機上執行的Oracle資料庫、您應該同時安裝SnapCenter 適用於Oracle資料庫的支援功能、SnapCenter 以及適用於UNIX的支援功能。
@@ -46,6 +46,9 @@ NOTE: 您也可以使用Oracle資料庫的外掛程式來管理Oracle資料庫fo
 
 
 NOTE: 不支援SnapCenter 位於/etc/stab檔案中的UUID對應。
+
+* 您應該將 * bash* 作為外掛程式安裝的預設 Shell 。
+
 
 
 
@@ -101,7 +104,7 @@ NOTE: 請確定您只在Linux主機上安裝認證版本的Java 11。
 如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。
 
 |===
-如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊、請參閱 https://["NetApp 互通性對照表工具"^]。
 
 
 
@@ -225,7 +228,7 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
 如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。
 
 |===
-如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊、請參閱 https://["NetApp 互通性對照表工具"^]。
 
 
 
