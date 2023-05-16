@@ -13,6 +13,10 @@ summary: 您可以使用SnapCenter 功能介紹來複製應用程式磁碟區備
 [role="lead"]
 您可以使用SnapCenter 功能區來複製應用程式Volume備份。
 
+*開始之前*
+
+如果您以非 root 使用者的身分安裝外掛程式、則應該手動將執行權限指派給 prescScript 和 PostScript 目錄。
+
 *步驟*
 
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取Oracle資料庫外掛程式。

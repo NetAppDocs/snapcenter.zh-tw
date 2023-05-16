@@ -7963,4 +7963,5 @@
   <block id="158e3fb1c7bf72fb1db969f281a7a097" category="list-text"><block ref="f5ba209e62536d23f7b5fe25e81421e2" prefix="" category="inline-code"></block></block>
   <block id="198803c71459bc222adc91a3d7048f01" category="paragraph">只有在您選擇了 * 將資料庫還原至其他主機 * 或 * 使用現有資料庫檔案還原資料庫 * 時、才能使用 * 使用自訂記錄目錄 * 選項。您也可以使用共用路徑、但請確定 SQL 使用者可以存取該路徑。</block>
   <block id="17049c1cdf73c2b4b41219f99ace3f81" category="list-text">您應該將 * bash* 作為外掛程式安裝的預設 Shell 。</block>
+  <block id="b3fae7a36581789e46e17a83505c11b3" category="paragraph">如果您以非 root 使用者的身分安裝外掛程式、則應該手動將執行權限指派給 prescScript 和 PostScript 目錄。</block>
 </blocks>
