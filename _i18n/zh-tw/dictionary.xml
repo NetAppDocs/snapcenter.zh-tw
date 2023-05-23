@@ -6246,12 +6246,8 @@
   <block id="0cd607c6c3ab41f1a5532b188171495c" category="paragraph"><block ref="0cd607c6c3ab41f1a5532b188171495c" category="inline-link-rx"></block></block>
   <block id="c473dc65af16d92c688e88cffad5b825" category="inline-link">Windows排程器錯誤導致備份失敗</block>
   <block id="ee70f525f7b0b70b3e7de9d8f872cbe4" category="paragraph"><block ref="ee70f525f7b0b70b3e7de9d8f872cbe4" category="inline-link-rx"></block></block>
-  <block id="93cc1cc2daa04d11bc708425a3170d4d" category="summary">當適用於SQL Server的解決方案不支援時、您只需執行幾個手動步驟即可恢復。SnapCenter</block>
   <block id="dc894d281805d8d1c222c04f94404928" category="doc">SQL Server適用的支援功能SnapCenter</block>
-  <block id="37ffa79bbd2952586645cff30d8eba05" category="paragraph">當適用於SQL Server的解決方案不正常時、請切換至其他SQL主機、然後執行幾個步驟來恢復資料。SnapCenter</block>
   <block id="7a1a91fe74f7d2f66d8eabb50e547d5f" category="list-text">次要主機的作業系統、應用程式和主機名稱應與主要主機相同。</block>
-  <block id="6ed11385ad389d901916b25a0b21aef9" category="list-text">使用「*新增主機*」或「*修改主機*」頁面、將SnapCenter 適用於SQL Server的「功能不全」外掛程式推送到替代主機。</block>
-  <block id="fc11fadbfb2b2b87f8c260a133d75ad2" category="paragraph"><block ref="fc11fadbfb2b2b87f8c260a133d75ad2" category="inline-link-macro-rx"></block></block>
   <block id="8bcdd66a940ad127d312a11316df6669" category="list-text">從「*主機*」頁面選取主機、以修改及安裝SnapCenter 適用於SQL Server的「支援SQL Server的支援程式」。</block>
   <block id="2a1a78f96ec6b03f3ccdd06b708e6f1a" category="list-text">（選用）將SnapCenter SQL Server組態檔案的支援範本從災難恢復（DR）備份取代為新機器。</block>
   <block id="9f2c74676fb5b339a2fd4a0ccd75bd1e" category="list-text">從SnapCenter DR備份的「SQL Server適用的支援程式」資料夾匯入Windows和SQL排程。</block>
@@ -7085,17 +7081,7 @@
   <block id="969d7fda8acd2ab121789be3a975bbb4" category="paragraph">基礎架構管理員角色已啟用主機管理、儲存管理、資源配置、資源群組、遠端安裝報告、 並存取儀表板。</block>
   <block id="3d94bcd4444e768c821c4af7214a7a73" category="summary">如果發生資源毀損或伺服器當機等災難、您可以SnapCenter 使用SnapCenter 「還原災難恢復」功能來還原此伺服器。</block>
   <block id="e413eba49b15917b0c9dbf2620f3e66e" category="doc">災難恢復</block>
-  <block id="948b4d6914f4248c5e96a053c1d7ae63" category="paragraph">如果發生資源毀損或伺服器當機等災難、您可以SnapCenter 使用SnapCenter 「還原災難恢復」功能來還原此伺服器。您可以恢復SnapCenter 不中斷的儲存庫、伺服器排程和伺服器組態元件。</block>
-  <block id="685c106cf385da9da7d774e7b6cddea8" category="paragraph">您也可以恢復SnapCenter 適用於SQL Server的支援功能、SnapCenter 以及適用於SQL Server儲存設備的支援功能。</block>
-  <block id="7b7cd2b9067ed1c82323fb382c11f370" category="paragraph">以下是災難恢復（DR）的類型：</block>
-  <block id="1636245b9e25bb600e733929465df761" category="list-text">*《伺服器災難恢復*》SnapCenter</block>
-  <block id="8fa1aa495cfe5fdc95202bda34adafcd" category="paragraph">無論是否有任何外掛程式是由支援伺服器新增或管理、均可備份及恢復支援的伺服器資料。SnapCenter SnapCenter</block>
   <block id="eb3b9ec963eb618621a779602a309514" category="inline-link-macro">REST API工作流程、可用於SnapCenter 支援還原至支援的伺服器災難恢復</block>
-  <block id="e667e897b20b02966f899ad38ce1ba39" category="paragraph"><block ref="e667e897b20b02966f899ad38ce1ba39" category="inline-link-macro-rx"></block></block>
-  <block id="30c24db21140190d4033af17ccd83090" category="list-text">*《外掛程式與儲存災難恢復*》SnapCenter</block>
-  <block id="0554390053842752b7d1d3059c743b32" category="paragraph">DR僅支援SnapCenter SQL Server的不支援的程式。當適用於SQL Server的解決方案不正常時、請切換至其他SQL主機、然後執行幾個步驟來恢復資料。SnapCenter</block>
-  <block id="47046db67c1574cb29142c431fb68f1f" category="paragraph"><block ref="47046db67c1574cb29142c431fb68f1f" category="inline-link-macro-rx"></block></block>
-  <block id="196a4a3e452864b82a133adc0c1c5228" category="paragraph">使用支援支援的SnapMirror技術來複寫資料。SnapCenter ONTAP它可用於將資料複寫至次要站台以進行災難恢復、並保持同步。故障切換可透過中斷SnapMirror中的複寫關係來啟動。在容錯回復期間、可以反轉同步處理、並將DR站台的資料複寫回主要位置。</block>
   <block id="12c254b6e514e7d479282efdf4ebc497" category="doc">資源、資源群組和原則</block>
   <block id="bcf3bda2b735386ee88e07d933ef93af" category="list-text">*資源*通常是資料庫、Windows檔案系統或檔案共用、您可以使用SnapCenter 還原進行備份或複製。</block>
   <block id="b5715ff44476a6af909e5b70490a8701" category="paragraph">不過、視您的環境而定、資源可能是資料庫執行個體、Microsoft SQL Server可用度群組、Oracle資料庫、Oracle RAC資料庫、Windows檔案系統或一組自訂應用程式。</block>
@@ -7438,7 +7424,6 @@
   <block id="7c8e4d34b8c6cc18e06524f05da1a10d" category="paragraph">顯示記錄保留的天數。</block>
   <block id="664943be24af2306e90a21dd26536e1c" category="paragraph">啟用憑證驗證</block>
   <block id="22d8a94cf37cc6d66c941a43b9d79fa8" category="paragraph">當主機啟用CA憑證驗證時顯示為true。</block>
-  <block id="d1e90d50eb139f0fd560c55b6bf37057" category="paragraph">對於多因素驗證（MFA）、當SnapCenter 針對該伺服器執行DR還原時、請關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器以重新登入。這將清除現有或作用中的工作階段Cookie、並確保更新正確的組態資料。</block>
   <block id="bf3e76e4f1322979745fbde954cda8f3" category="list-text">支援一組SSL密碼套件、以提供跨網路通訊的安全性。SnapCenter</block>
   <block id="5d06d972bc910c7d332d38f29622193f" category="inline-link">如何設定支援的SSL加密套件</block>
   <block id="f63adc493855850c393ed81600d0452d" category="paragraph">如需詳細資訊、請參閱<block ref="30d10745fe88e7ddd3a6030b89647570" category="inline-link-rx"></block>。</block>
@@ -7646,19 +7631,14 @@
   <block id="88b8c728864c341ef14637e289839640" category="list-text">ASP.NET 4.7.2</block>
   <block id="8098ea3ff2e42300d1835034eb9f2ad7" category="paragraph">+.NET Framework 4.7.2功能+</block>
   <block id="266e3e529821464e265179afab77cc0e" category="list-text">NET Framework 4.7.2</block>
-  <block id="606d5e037822a442727a528828b14a45" category="doc">啟用多因素驗證（MFA）</block>
-  <block id="ef3ab6fc872d21b146098f5850df64c9" category="paragraph">若要啟用MFA功能、您應該在Active Directory Federation Service（AD FS）Server和SnapCenter SView Server中執行一些步驟。</block>
   <block id="b2f9ddbfbf0bb6739ee75e8c2a6ac138" category="list-text">Windows Active Directory Federation Service（AD FS）應在各自的網域中啟動並執行。</block>
-  <block id="ff213a826598e59e3839e9ee5713eb9a" category="list-text">您應該擁有任何AD FS支援的多因素驗證服務、例如Azure MFA、Cisco DuoTM等。</block>
   <block id="cb7f79bbeb52e82fa7926e0724dba11e" category="list-text">無論時區為何、均應使用相同的資訊區和AD FS伺服器時間戳記。SnapCenter</block>
   <block id="0ee03cd1523961dfa875fac5c6817350" category="list-text">取得SnapCenter 並設定驗證伺服器的授權CA憑證。</block>
   <block id="4090d0adfa0a73ca248f3a29df56f147" category="paragraph">CA憑證為必填、原因如下：</block>
-  <block id="e26a403b5bc4392b06e59bf0ea5f3734" category="list-text">確保不會中斷ADFS-F5通訊、因為自我簽署的憑證在節點層級是唯一的。</block>
   <block id="3e3aa2cc7dad01d563ee8f2059cd8120" category="list-text">確保在獨立式或高可用度組態的升級、修復或災難恢復（DR）期間、不會重新建立自我簽署的憑證、因此可避免重新設定MFA。</block>
   <block id="6c09b2d713717656ff82620da0253eb5" category="list-text">確保IP FQDN解析度。</block>
   <block id="760bd9baa4b7633c0843cb714f00a44e" category="paragraph">如需CA憑證的相關資訊、請參閱 <block ref="de78619abe7dcb7b53be3c4ab98b1283" category="inline-link-macro-rx"></block>。</block>
   <block id="c746671a4c0cb7e7a37abe538fe2107e" category="list-text">在相同的AD FS中設定其他應用程式時、支援SSO型登入。SnapCenter在某些AD FS組態中、SnapCenter 由於安全原因、可能需要使用者驗證、視AD FS工作階段持續性而定。</block>
-  <block id="0d432c3383a301d652dc61c7708c5724" category="list-text">您可以執行Get-Help命令名稱來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
   <block id="0470044badbfb7d0d8a4ec5bab24ebb3" category="list-text">連線至Active Directory Federation Services（AD FS）主機。</block>
   <block id="6ef1300bebff7801c85a1789a6c0790a" category="list-text">從下載AD FS聯盟中繼資料檔案 <block ref="a9571343becbc81f25857902551c1e72" category="inline-link-rx"></block> Fqd&gt;&gt;/資料中繼資料/2007/06/FedationMetadata。XML」</block>
   <block id="cc53a56f022408c7c918dae3f5120646" category="list-text">將下載的檔案複製到SnapCenter 支援MFA功能的伺服器。</block>
@@ -7666,16 +7646,12 @@
   <block id="696ac2aea44e94108d138faca1e6061a" category="list-text">使用PowerShell工作階段SnapCenter 、使用_New-SmMultifactorAuthenticationMetadata -path_ Cmdlet來產生FismFA中繼資料檔案。</block>
   <block id="c82bb0422af1b29a8b9694bbfe3ebe9e" category="paragraph">path參數指定將MFA中繼資料檔案儲存到SnapCenter Sof the Server主機的路徑。</block>
   <block id="56fcee91de3134d2db0d32a05335e432" category="list-text">將產生的檔案複製到AD FS主機、以設定SnapCenter 將SURE做為用戶端實體。</block>
-  <block id="9268a48919705f415838693aa4146e28" category="list-text">使用_Set-SmMultiFactorAuthentication -Enable -Path_ Cmdlet啟用MFA for SnapCenter SectorServer。</block>
   <block id="588a899e5cfd7ee10458176f79204605" category="paragraph">path參數指定AD FS MFA中繼資料XML檔案的位置、SnapCenter 該檔案已在步驟3複製到SetfServer。</block>
-  <block id="b47bdbc8d57f844fea0134ffbecf2242" category="list-text">（選用）使用_Get-SmMultiFactorAuthentication_ Cmdlet檢查MFA組態狀態和設定。</block>
   <block id="9e93c22d2a1e4426ec1fd94bd4ac31b3" category="list-text">前往Microsoft管理主控台（MMC）並執行下列步驟：</block>
   <block id="9bcb5adfefb899867ed5b11f042b98db" category="list-text">按一下*檔案*&gt;*新增/移除Snapin *。</block>
   <block id="cf424f2e43207d2c78b3d27a5dc0fda2" category="list-text">按一下*主控台根目錄*&gt;*憑證–本機電腦*&gt;*個人*&gt;*憑證*。</block>
   <block id="b245a32518063d47ab60cd9ae65b7937" category="list-text">在繫結SnapCenter 至SUn供 參考的CA憑證上按一下滑鼠右鍵、然後選取*所有工作*&gt;*管理私密金鑰*。</block>
   <block id="39b5fcc1b0398cd4cdbf088d9851aa36" category="list-text">在權限精靈上執行下列步驟：</block>
-  <block id="cd55bfd42602b8f720a9d41caf148f78" category="list-text">按一下「*新增*」</block>
-  <block id="fc4f9883b30f507feb5ab0b4d42267cd" category="list-text">按一下*位置*、然後選取相關主機（階層頂端）</block>
   <block id="198e6981b37af309244a71441c5344c9" category="list-text">在*位置*快顯視窗中按一下*確定*。</block>
   <block id="80f7b3672de7c3d1051cd5ee2c883f05" category="list-text">在物件名稱欄位中、輸入「IIS_IUSRS」、然後按一下*檢查名稱*、再按一下*確定*。</block>
   <block id="576824a9a44254550a67ab8aab39ac32" category="paragraph">如果檢查成功、請按一下「*確定*」。</block>
@@ -7683,38 +7659,29 @@
   <block id="90fa18d048bbd4d789b594ebceeb2490" category="list-text">右鍵點選*信賴廠商信任*&gt;*新增信賴廠商信任*&gt;*開始*。</block>
   <block id="0179eedc054410462409658b0bad268c" category="list-text">選取第二個選項、然後瀏覽SnapCenter 「Some MFA中繼資料」檔案、然後按一下「* Next*（*下一步*）」。</block>
   <block id="b6312d7d51f31ed2e0c8dc5372435335" category="list-text">指定顯示名稱、然後按一下*「下一步*」。</block>
-  <block id="0e94f80e83724112f00526866ff5106f" category="list-text">根據需要選擇並存取控制原則、然後按一下*下一步*。</block>
-  <block id="148d7f6f40daf98c2955bdd9fe18e6c1" category="list-text">將下一個索引標籤中的設定設為預設值。</block>
   <block id="0c43eee88d95f645135455225ef45492" category="paragraph">目前以依賴方的形式呈現提供的顯示名稱。SnapCenter</block>
   <block id="72636fa45db48574ba9c546fdd1db0a8" category="list-text">選取名稱並執行下列步驟：</block>
   <block id="fcfb637a4b496a9a140b628cdb573932" category="list-text">按一下*編輯請款發放政策*。</block>
   <block id="082c51e92370324bc62e7c80c44d8941" category="list-text">單擊* Add Rule（添加規則）*，然後單擊* Next*（下一步*）。</block>
-  <block id="6def5028f1988fc94fac52ad11230808" category="list-text">指定宣告規則的名稱</block>
   <block id="894da100f84831f7c70c6bfa7616298a" category="list-text">選擇* Active Directory *作為屬性儲存區。</block>
   <block id="7fdc58355431a6a3d9515f7519f55a21" category="list-text">選取「*使用者-主要名稱*」屬性、並選取傳出的報銷類型為*名稱- ID*。</block>
   <block id="adfd9f210cddba9223539ba1793c20cb" category="list-text">在ADFS伺服器上執行下列PowerShell命令。</block>
-  <block id="ac4be3bbcd220f4cca6269e289646cd3" category="paragraph">_Set-AdfsRelyingPartyTrust -目標名稱「&lt;信賴方的顯示名稱&gt;」-註冊憑證重新註冊檢查無_</block>
-  <block id="573e4455d62a0e745b09afd6c4db34f0" category="paragraph">_Set-AdfsRelyingPartyTrust -targetName「&lt;依賴方的顯示名稱&gt;」-EncryptionCertificateRevocationCheck None_</block>
   <block id="06a6a46ff24f4c0f682d4804aaf90175" category="list-text">請執行下列步驟、確認中繼資料已成功匯入。</block>
   <block id="c3613ef2b11238bd320ee942d11e6fe4" category="list-text">在依賴方信任上按一下滑鼠右鍵、然後選取*內容*。</block>
   <block id="35602ea96136092b8b885fe1ef749873" category="list-text">確認已填入端點、識別項和簽名欄位。</block>
   <block id="907fe6bfcd498fe3e561f7fb3ee67c89" category="paragraph">也可使用REST API來啟用「支援MFA」功能。SnapCenter</block>
-  <block id="1958e9c22cb352dba19d476e05b4a53b" category="paragraph">啟用、更新或停用SnapCenter 完效益管理系統中的MFA設定後、請關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器以重新登入。這將清除現有或作用中的工作階段Cookie。</block>
   <block id="442ed19a31ac1f651ba7bf07effe122c" category="inline-link-macro">在多個索引標籤中登入顯示MFA錯誤SnapCenter</block>
   <block id="aeb89440d41f10fd9cc43ab75d800138" category="section-title">更新AD FS MFA中繼資料</block>
   <block id="19b3ff63dd3f3b6c1e3e48e8b3be6141" category="paragraph">只要AD FS伺服器有任何修改、例如升級、CA憑證續約、DR等、您就應該更新SnapCenter 位於支援區的AD FS MFA中繼資料。</block>
   <block id="2a18eff05051b9c720a786193ade4742" category="list-text">將下載的檔案複製SnapCenter 到「伺服器」以更新MFA組態。</block>
   <block id="0129ab4e23da78e3b3d44732592d15ea" category="list-text">執行下列Cmdlet來更新SnapCenter Sf1中的AD FS中繼資料：</block>
-  <block id="16c05d08e46f0d446d2623a535219dd1" category="paragraph">_Set-SmMultiFactorAuthentication -Path &lt; ADFS MFA中繼資料XML檔案的位置&gt;_</block>
   <block id="97088f26ec75cb4d55c4fe5eeb3b62b4" category="section-title">更新SnapCenter 功能不支援MFA中繼資料</block>
   <block id="ac82039d46e3be923c813d3d4c5456e4" category="paragraph">每當有任何修改ADFS伺服器（例如修復、CA憑證續約、DR等）時、您就應該更新SnapCenter AD FS中的功能完善的MFA中繼資料。</block>
   <block id="56ec825045a003fc115765658ea8b639" category="list-text">按一下*信賴廠商信任*。</block>
   <block id="83e84b83a6a686044df5e13021693e95" category="list-text">在建立SnapCenter 的依賴方信任上按一下滑鼠右鍵、然後按一下「*刪除*」。</block>
   <block id="d929cc2f30ed7ebb91266d0b79b5f2cf" category="paragraph">隨即顯示使用者定義的信賴關係人信任名稱。</block>
   <block id="18231d11def74e66e747d2eb30fc1c50" category="list-text">啟用多因素驗證（MFA）。</block>
-  <block id="7c83e4b143b42aa42696c765109a8cc2" category="paragraph">請參閱 <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block></block>
   <block id="a606674f3f6a9cee6f0ddf2eef03b07b" category="section-title">停用多因素驗證（MFA）</block>
-  <block id="3ed7d0eb5098b6db6af6c5b3eb2ce30f" category="paragraph">停用MFA、並使用_Set-SmMultiFactorAuthentication -Disable_Cmdlet清除在啟用MFA時建立的組態檔案。</block>
   <block id="fe46b74f13369d6c44d60eb009d09999" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「SnapMirror show-history」-access all」</block>
   <block id="3ff2f50a0428ccd330fd2b2e2baa3b97" category="doc">使用RBAC授權登入SnapCenter 到功能表</block>
   <block id="8674ed970a497f68c8817c2f50e67e43" category="section-title">使用多因素驗證（MFA）登入SnapCenter</block>
@@ -7955,7 +7922,6 @@
   <block id="cc12c6014b5ec85f58b6fb31a26a66f7" category="section-title">設定儲存系統連線</block>
   <block id="1d765f352f6f5ec7cfa899be682026d8" category="section-title">設定 Run as Credentials 以安裝 Microsoft SQL Server 外掛程式</block>
   <block id="10976e15f1cbbbbb65eaf072d358489b" category="section-title">新增主機並安裝 Microsoft SQL Server 的外掛程式</block>
-  <block id="a066d76a64fcb852398ad527b862a806" category="paragraph">如需疑難排解資訊、請參閱<block ref="f832f6c8f890b8aacf5c6ca5adeb731b" category="inline-link-rx"></block>。</block>
   <block id="9756c6d75626032c8da05d425c1d0ca9" category="inline-link">對於沒有網際網路連線的舊版系統、 SnapCenter 升級或安裝失敗</block>
   <block id="462fbac4d281be78bedf063a9dbd9f61" category="paragraph">如需 .NET 特定疑難排解資訊、請參閱<block ref="b173f6267e94bec8cf82a1d95b991ed7" category="inline-link-rx"></block>。</block>
   <block id="0cf3e7b313a6954f7aed921dae42be39" category="list-text"><block ref="36ad9b98fe40ea7db5d149de26f34551" prefix="" category="inline-code"></block></block>
@@ -7964,4 +7930,44 @@
   <block id="198803c71459bc222adc91a3d7048f01" category="paragraph">只有在您選擇了 * 將資料庫還原至其他主機 * 或 * 使用現有資料庫檔案還原資料庫 * 時、才能使用 * 使用自訂記錄目錄 * 選項。您也可以使用共用路徑、但請確定 SQL 使用者可以存取該路徑。</block>
   <block id="17049c1cdf73c2b4b41219f99ace3f81" category="list-text">您應該將 * bash* 作為外掛程式安裝的預設 Shell 。</block>
   <block id="b3fae7a36581789e46e17a83505c11b3" category="paragraph">如果您以非 root 使用者的身分安裝外掛程式、則應該手動將執行權限指派給 prescScript 和 PostScript 目錄。</block>
+  <block id="a8d03bc12fa704a66e02c6802c0766f8" category="summary">當 SnapCenter Plug-in for SQL Server 當機時、請執行下列手動步驟來恢復外掛程式。</block>
+  <block id="4846f8fb7f3c4d1460329ca7b77ea8ea" category="paragraph">SnapCenter Plug-in for SQL Server 當機時、請執行下列步驟切換至不同的 SQL 主機並恢復資料。</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="list-title">您需要的產品</block>
+  <block id="112fa4c1243fe1af31b4cf57c26ced23" category="list-text">使用「*新增主機*」或「*修改主機*」頁面、將SnapCenter 適用於SQL Server的「功能不全」外掛程式推送到替代主機。請參閱 <block ref="fc11fadbfb2b2b87f8c260a133d75ad2" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步驟</block>
+  <block id="d13de4a83d7b44c2e65495def8ef1c7b" category="paragraph-title">以取得更多資訊</block>
+  <block id="ab9238ca6f628634f6f6f2cf63502cdb" category="paragraph">請參閱 <block ref="44de5c9fafab2e4e76e19e3717abc2e2" category="inline-link-macro-rx"></block> 影片：</block>
+  <block id="94c4200231b3891f27561beda5d4e31f" category="doc">SnapCenter 災難恢復</block>
+  <block id="1da5a00a663269fc81a2098b0d91e4d6" category="paragraph">您可以使用 SnapCenter 災難恢復（ DR ）功能、在發生資源毀損或伺服器損毀等災難時恢復 SnapCenter 伺服器。您可以恢復SnapCenter 不中斷的儲存庫、伺服器排程和伺服器組態元件。您也可以恢復SnapCenter 適用於SQL Server的支援功能、SnapCenter 以及適用於SQL Server儲存設備的支援功能。</block>
+  <block id="68e856b5be6554a8e4ee8b393b327b0b" category="paragraph">本節說明 SnapCenter 中的兩種災難恢復（ DR ）類型：</block>
+  <block id="4bafae51c760477df325c1b3815da1aa" category="list-title">SnapCenter 伺服器災難恢復</block>
+  <block id="4561e7fcd617a663505d8992af88d242" category="list-text">SnapCenter 伺服器資料已備份、可在不新增任何外掛程式或由 SnapCenter 伺服器管理的情況下進行還原。</block>
+  <block id="3dbcd484a9ede0a6feaf76cb9d8a6868" category="list-text">針對多因素驗證（ MFA ）、請在 SnapCenter 伺服器 DR 期間、關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器、再次登入。這會清除現有或作用中的工作階段 Cookie 、並更新正確的組態資料。</block>
+  <block id="20383b74f2f17a4c5b8bc914455eed3d" category="list-text">支援災難恢復功能、使用REST API來備份功能。SnapCenter SnapCenter請參閱 <block ref="e667e897b20b02966f899ad38ce1ba39" category="inline-link-macro-rx"></block>。</block>
+  <block id="717bb61127675bdfbac9d09d06c4bd89" category="paragraph-title">SnapCenter 外掛程式與儲存災難恢復</block>
+  <block id="a3c30c25a1e544471bac224e74207425" category="paragraph">DR僅支援SnapCenter SQL Server的不支援的程式。當適用於SQL Server的解決方案不正常時、請切換至其他SQL主機、然後執行幾個步驟來恢復資料。SnapCenter請參閱 <block ref="47046db67c1574cb29142c431fb68f1f" category="inline-link-macro-rx"></block>。</block>
+  <block id="9fbd6c9c898d3b24f2f3cfa67bb8c2b2" category="paragraph">使用支援支援的SnapMirror技術來複寫資料。SnapCenter ONTAP它可用於將資料複寫至次要站台以進行災難恢復、並保持同步。故障切換可透過中斷SnapMirror中的複寫關係來啟動。在容錯回復期間、可以反轉同步處理、並將DR站台的資料複寫回主要位置。</block>
+  <block id="d4dbc002513d2615e9e9009874835b86" category="doc">管理多因素驗證（ MFA ）</block>
+  <block id="eba5e183c4f404bb057076dc4ea10e64" category="paragraph">本主題說明如何管理 Active Directory Federation Service （ AD FS ）伺服器和 SnapCenter 伺服器中的多因素驗證（ MFA ）功能。</block>
+  <block id="8e5ca8947d2ccd889e10c25276502da0" category="section-title">啟用多因素驗證（ MFA ）</block>
+  <block id="cf9e251e098e2f47bcb8e04e9e5ff28a" category="paragraph">本主題說明如何在 Active Directory Federation Service （ AD FS ）伺服器和 SnapCenter 伺服器中啟用 MFA 功能。</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">關於這項工作</block>
+  <block id="1f6600010f63592c168af66c387c499f" category="list-text">執行即可取得可搭配 Cmdlet 使用之參數的相關資訊及其說明<block ref="b306feeed6ddda97d08ef1f2a0ba62d9" prefix=" " category="inline-code"></block>。或者、您也可以參閱<block ref="5df59c30e631270dc31bf843919ab849" category="inline-link-rx"></block>。</block>
+  <block id="4ceb1d36799251586ba061a0c2b9a7a8" category="list-text">您應該擁有 AD FS 支援的多因素驗證服務、例如 Azure MFA 、 Cisco Duo 等。</block>
+  <block id="090c9bbbd344aa7f6441901f2b8792f8" category="list-text">確保 ADFS-F5 通訊不會中斷、因為自我簽署的憑證在節點層級是唯一的。</block>
+  <block id="30c7dffa036eadcc0342139cec28fa70" category="list-text">從下載AD FS聯盟中繼資料檔案 <block ref="a9571343becbc81f25857902551c1e72" category="inline-link-rx"></block> fqfq&gt;/ 聯邦中繼資料 /2007/06/Federation中繼 資料 .xml" 。</block>
+  <block id="aae311364aff04070e63a86b4fe0296f" category="list-text">使用為 SnapCenter 伺服器啟用 MFA<block ref="1254f269a5dd80690678b4df201e88a5" prefix=" " category="inline-code"></block> Cmdlet。</block>
+  <block id="13cb11c142fa4483919ae32dd2a04113" category="list-text">（選用）使用檢查 MFA 組態狀態和設定<block ref="d99b90475295700e9775deadcb723ac6" prefix=" " category="inline-code"></block> Cmdlet。</block>
+  <block id="67fadfdbaf1af58c1560a82586252863" category="list-text">按一下 * 位置 * 、然後選取相關主機（階層架構頂端）。</block>
+  <block id="35adcaf3c3f08c3b4becd894c0fafea3" category="list-text">視需要選擇存取控制原則、然後按一下 * 下一步 * 。</block>
+  <block id="ba119cc36777aa5836242da63619667d" category="list-text">在下一個索引標籤中選取預設值。</block>
+  <block id="55257e6ccdd63f9f4ab886869cbbf5cf" category="list-text">指定宣告規則的名稱。</block>
+  <block id="6e98d99dca8f4518c9e7567d19ce708c" category="paragraph"><block ref="513dca79729c465b5c3001bf26148c0c" prefix="" category="inline-code"></block></block>
+  <block id="a339a650564d067ea1ade511a61340e3" category="paragraph"><block ref="9111d0f1b6d8fdece369a21eacf0663f" prefix="" category="inline-code"></block></block>
+  <block id="e5111e1a8d09cf3b9cc87da0144221fb" category="list-text">關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器、以清除現有或作用中的工作階段 Cookie 、然後再次登入。</block>
+  <block id="4df2c26ea6368491393f05baf8841e6d" category="paragraph">以取得疑難排解資訊。請參閱 <block ref="46642a8ad62fd1a061e94d6b7bf62dc5" category="inline-link-macro-rx"></block>。</block>
+  <block id="f668cd2acef670f8b213c6c785ddf8d6" category="paragraph"><block ref="7da21d8fe0787a3171af06722db1ee6f" prefix="" category="inline-code"></block></block>
+  <block id="0f5b112cebb37022dbfe2c80e388d605" category="paragraph">請參閱 <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block>。</block>
+  <block id="a8d67928879d7cbd7d3c5d1b6d797736" category="list-text">停用 MFA 、並清除使用啟用 MFA 時所建立的組態檔案<block ref="3f459b2c524cc44ef57664fd75d5c093" prefix=" " category="inline-code"></block> Cmdlet。</block>
+  <block id="6bcc192d7209e867a0f8afd8938c62eb" category="sidebar">管理多因素驗證（ MFA ）</block>
 </blocks>
