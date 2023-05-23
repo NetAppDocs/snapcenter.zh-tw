@@ -55,7 +55,13 @@ entries:
   - title: 定義SQL Server的複製策略
     url: "/protect-scsql/task_define_a_clone_strategy_for_sql_server.html"
 - title: 快速安裝SnapCenter 適用於Microsoft SQL Server的解決方案外掛程式
-  url: "/protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html"
+  entries:
+  - title: 準備安裝 SnapCenter 伺服器和外掛程式
+    url: "/protect-scsql/quick-start-to-prepare-for-snapcenter-plug-in-install-for-sql-server.html"
+  - title: 安裝 SnapCenter Server for Microsoft SQL Server
+    url: "/protect-scsql/task-install-snapcenter-server-for-sql-server.html"
+  - title: 安裝SnapCenter 適用於Microsoft SQL Server的功能性外掛程式
+    url: "/protect-scsql/task-install-snapcenter-plug-in-for-sql-server.html"
 - title: 準備安裝SnapCenter 適用於Microsoft SQL Server的支援功能
   entries:
   - title: 適用於Microsoft SQL Server的安裝工作流程SnapCenter

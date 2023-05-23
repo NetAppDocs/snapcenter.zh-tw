@@ -542,7 +542,6 @@
   <block id="aa5531c2ecb8be9440f8c1f83b8e7d4f" category="summary">資源群組是您必須新增要備份及保護之資源的容器。</block>
   <block id="7f9a1e0f8fc64e3f207d5cd83dd8e67f" category="doc">建立資源群組並附加原則</block>
   <block id="a04d5d44d1dc39ffabb036a653aa3bd2" category="paragraph">資源群組是您必須新增要備份及保護之資源的容器。資源群組可讓您同時備份與特定應用程式相關的所有資料。任何資料保護工作都需要資源群組。您也必須將一或多個原則附加至資源群組、以定義您要執行的資料保護工作類型。</block>
-  <block id="f316f1145e3342e626b49461ffc2ab89" category="list-text">在「資源」頁面中、按一下「新增資源群組」。</block>
   <block id="2577791612c938dc7bd356c695b38b81" category="list-text">在「名稱」頁面中、執行下列動作：</block>
   <block id="fa4d1c967d467deb12174bc6b1b3355b" category="paragraph">輸入資源群組的名稱。</block>
   <block id="1d04752f728a1a0076882979b222e962" category="admonition">資源群組名稱不得超過250個字元。</block>
@@ -556,7 +555,6 @@
   <block id="667a5a1d21c8b2c591be7bfcf5d1b5ae" category="paragraph">這有助於篩選螢幕上的資訊。</block>
   <block id="c7e757b993a892f1adbc4d9d429ada9a" category="list-text">從「*可用資源*」區段中選取資源、然後按一下向右箭頭、將其移至「*選取的資源*」區段。</block>
   <block id="08b935061f93c6a0dff0b7e6979bd0d5" category="list-text">選用：在「應用程式設定」頁面中、執行下列動作：</block>
-  <block id="b681aca5ebc16cfa17fba43067418799" category="list-text">按一下備份箭頭以設定其他備份選項：</block>
   <block id="8cc859910effe8112e2912d3644f0bc8" category="paragraph">啟用一致性群組備份並執行下列工作：</block>
   <block id="a99f0aeaf38081c20a7370fb0f80e5fb" category="paragraph">等待一致性群組快照作業完成的時間</block>
   <block id="16bfcf20ed729d5958d62a1310952406" category="paragraph">選取「緊急」、「中」或「輕鬆」、以指定完成Snapshot複本作業的等待時間。</block>
@@ -564,8 +562,6 @@
   <block id="33d8fc89984b399b5f14da8a76d58c5a" category="paragraph">停用WAFL Sync</block>
   <block id="27a16d7d61f6682ceaf4d8022ffa250f" category="paragraph">選擇此選項可避免強制WAFL 使用不一致點。</block>
   <block id="129db5e4908943c18847d24dd577782f" category="paragraph"><block ref="129db5e4908943c18847d24dd577782f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b23b98054bcf29cc3dd1bd3464052bcb" category="list-text">按一下「指令碼」箭頭、然後輸入「靜止」、「Snapshot複本」和「靜止」作業的「POST前」命令。您也可以輸入要在發生故障時結束之前執行的預先命令。</block>
-  <block id="18c6405661af0f133718c3a6c6e5b2b9" category="list-text">按一下「自訂組態」箭頭、然後輸入使用此資源進行所有資料保護作業所需的自訂金鑰值配對。</block>
   <block id="83f499a540b1323009c200d6f8cc9396" category="cell">參數</block>
   <block id="51ac4bf63a0c6a9cefa7ba69b4154ef1" category="cell">設定</block>
   <block id="96611acf5bf8bf22163153db770f7f60" category="paragraph">archive記錄啟用</block>
@@ -598,8 +594,6 @@
   <block id="70c30c71587e2d0c71b7f9e97a8aad7d" category="list-text">從下拉式清單中選取一或多個原則。</block>
   <block id="e27c3f444b9f74c83a643ba11ed3a83e" category="admonition">您也可以按一下*來建立原則<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*。</block>
   <block id="bfd0e05a188a0885b5397fae78f649b8" category="paragraph">原則列於「*設定所選原則的排程*」區段。</block>
-  <block id="7968dcde042f7f2966214a9d3b89b418" category="list-text">在「*設定排程*」欄中、按一下*<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*針對您要設定的原則。</block>
-  <block id="1e414da00e22b0ba0fa519e7325b7ea9" category="list-text">在"新增原則的排程_policy_name_"對話方塊中,設定排程,然後按一下"確定"。</block>
   <block id="2a7c4561536268cef70578e0e4124a6c" category="paragraph">其中policy_name是您選取的原則名稱。</block>
   <block id="6041b17ee877813c3440ee714e48b911" category="paragraph">已設定的排程會列在「已套用的排程」欄中。第三方備份排程與SnapCenter 不支援的備份排程重疊時、將不受支援。</block>
   <block id="572a352f5f18989eb8c33a0e36d194c3" category="paragraph">您也必須指定寄件者和接收者的電子郵件地址、以及電子郵件的主旨。必須在*設定*&gt;*全域設定*中設定SMTP伺服器。</block>
@@ -892,10 +886,8 @@
   <block id="48f5a315d78b006c306e66d7b35fa6f4" category="summary">您必須新增要備份或複製的資源。視您的環境而定、資源可能是您要備份或複製的資料庫執行個體或集合。</block>
   <block id="5acceba2cee4fe40d121e90d997fa439" category="doc">將資源新增至SnapCenter 「支援自訂外掛程式」</block>
   <block id="04e793c2d8facdc933edd3335c890a34" category="list-text">您必須已完成安裝SnapCenter 完「支援服務器」、新增主機、建立儲存系統連線、以及新增認證等工作。</block>
-  <block id="09f1a1e976c751f8b861a75492f30752" category="list-text">您必須已建立自訂外掛程式。</block>
   <block id="797f1e031962d70e46335925184febf4" category="list-text">您必須已將外掛程式上傳至SnapCenter 更新伺服器。</block>
   <block id="eb609425665410a2e3cc5d5000880798" category="paragraph">您也可以新增MySQL和DB2應用程式的資源。這些外掛程式可從下載<block ref="14adb94a4faec9ea0e0992d90e98b640" category="inline-link-rx"></block>。</block>
-  <block id="134848154c843b2b7ebbc0c3bf4c17a4" category="list-text">在「資源」頁面中、按一下「*新增資源*」。</block>
   <block id="14fdd328e53552c727d0f36c3d306b64" category="list-text">在「提供資源詳細資料」頁面中、執行下列動作：</block>
   <block id="0750f05e0542388153777a63b5fa887c" category="paragraph">輸入資源名稱。</block>
   <block id="dae4a538d4ca7b6c0789932062fe718d" category="paragraph">主機名稱</block>
@@ -908,7 +900,6 @@
   <block id="16e83f7e57633cd58a4377b7c1b63e8b" category="paragraph">掛載路徑</block>
   <block id="1b77d8b94cdc028e50a0681f82c70f25" category="paragraph">輸入掛載資源的掛載路徑。這僅適用於Windows主機。</block>
   <block id="44dab87fe2da08cd26ee4f07dbdf1d56" category="list-text">在「提供儲存設備佔用空間」頁面中、選取儲存系統、然後選擇一或多個磁碟區、LUN和qtree、然後按一下「*儲存*」。</block>
-  <block id="dc502ecfca6ae1ebeee4b624e9b44123" category="paragraph">選用：按一下 <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block> 圖示、可從其他儲存系統新增更多磁碟區、LUN及qtree。</block>
   <block id="e0a8c4d2ea78ad79b3f4ddb809734576" category="admonition">不支援自動探索實體和虛擬環境的資源和儲存詳細資料、而支援使用「自訂外掛程式」SnapCenter 。您必須在建立資源的同時、提供實體和虛擬環境的儲存資訊。</block>
   <block id="e855bfeca424d5d865b9bac0eaf01f53" category="image-alt">儲存設備佔用空間</block>
   <block id="d98e943b0122d016274bcbbeba1d647d" category="list-text">在「資源設定」頁面中、提供資源的自訂金鑰值配對。</block>
@@ -3055,7 +3046,6 @@
   <block id="b1c94ca2fbc3e78fc30069c8d0f01680" category="paragraph">全部</block>
   <block id="f8a549c5d60e74034419845623f5c51a" category="summary">您可以使用SnapCenter 「支援支援支援功能」的支援、來保護ONTAP Select 在支援功能性和Cloud Volumes ONTAP 功能性等平台上的資料。</block>
   <block id="247c902b5f932e2e47b98b966ab41a08" category="doc">新增SnapCenter 以功能為基礎的「功能型標準」授權</block>
-  <block id="a6f6b8e1900f201c352d37d7ad4eee46" category="paragraph">授權具有下列特性：</block>
   <block id="1e1ad6d102344db746935e8ae7b4053a" category="list-text">由九位數序號組成、格式為51xxxxxxx</block>
   <block id="8df6c319bc0dd3bc17034d6f7b0b0d01" category="paragraph">您可以使用授權序號和有效的NetApp Support網站登入認證資料、來啟用SnapCenter 使用此驗證GUI的授權。</block>
   <block id="f8b3fa2bcdc37eb746dd0ca2b1318a58" category="list-text">以獨立的永久授權形式提供、其成本取決於使用的儲存容量或您要保護的資料大小（取較低者）、而且資料由SnapCenter 效益管理</block>
@@ -3064,9 +3054,6 @@
   <block id="ec72ca404ef39d44f067aaaae39cf0e4" category="list-text">以90天試用授權形式提供、容量為100 TB</block>
   <block id="07cdb1cc7dcc527060e65d98659cb1d4" category="inline-link-macro">不需要授權SnapCenter</block>
   <block id="eb55a5732c8239cbf4f476df49cc20a3" category="paragraph">如需所需授權的相關資訊、請參閱 <block ref="6de8516502145d64739d69762f4898a1" category="inline-link-macro-rx"></block>。</block>
-  <block id="b7045e270f9ec5cdf3d4a2f1516dd0fd" category="section-title">新增容量型授權的先決條件</block>
-  <block id="fc839d90b395c50c0f0c94028073c2fc" category="paragraph">在新增容量型授權之前、您應該先計算容量需求、擷取容量型授權的序號、以及選擇性地產生授權檔案。</block>
-  <block id="b0c7f3b2e1c49f12743f8681bad9f4d9" category="section-title">計算容量需求</block>
   <block id="b253c383592a32db835b060dd347fb51" category="paragraph">在取得SnapCenter 以功能為基礎的認證之前、您應該先計算SnapCenter 要由支援的主機容量。</block>
   <block id="fff248d88b8e6fe585098d0e2e47af26" category="paragraph">您應該是Cloud Volumes ONTAP 一個叢集管理員、位在整個作業系統上。ONTAP Select</block>
   <block id="b3ce93a0fdb481ef23214dbe76f20fbd" category="paragraph">此函數可計算實際使用的容量。SnapCenter如果檔案系統或資料庫的大小為1 TB、但僅使用500 GB空間、SnapCenter 則會計算500 GB的已用容量。磁碟區容量是在重複資料刪除和壓縮之後計算、而且是根據整個磁碟區的已用容量來計算。</block>
@@ -3074,19 +3061,12 @@
   <block id="7a8bc63ce0be9d70f65ff4bebb9b433c" category="list-text">若要檢視使用的Volume容量、請輸入命令。</block>
   <block id="c52aa08e4b032ad1666772ea0c44119c" category="paragraph">兩個磁碟區的合併使用容量低於5 TB；因此、如果您想要保護所有5 TB的資料、SnapCenter 最低的基於容量的授權需求為5 TB。</block>
   <block id="9efbb933648d3e7cf5a18b9babea2e3b" category="paragraph">不過、如果您只想保護5 TB總使用容量中的2 TB、您可以取得2 TB容量型授權。</block>
-  <block id="8653cfd71a4452fb9ae4b9ab1e4f43c5" category="section-title">擷取容量型授權的序號</block>
   <block id="2743dc2e5d64cfecd6d65ef69f417e95" category="paragraph">您可以在訂單確認或文件套件中找到您的以容量為基礎的授權序號、但是如果您沒有此序號、可以從NetApp支援網站擷取。SnapCenter</block>
   <block id="8e4be97b92b5d685df7ecc1adcda7baf" category="paragraph">您應該擁有有效的NetApp Support網站登入認證資料。</block>
-  <block id="0373910e51252c7b97dcbea9f4942604" category="inline-link">mysupport.netapp.com</block>
-  <block id="260c486181bff01291b08f4368caf4e0" category="list-text">登入NetApp支援網站：<block ref="28649c93049a329043d206ec7fa0c6f8" category="inline-link-rx"></block>。</block>
   <block id="55b506dcddf68638833e19d289e73897" category="list-text">瀏覽至* Systems *&gt;* Software Licenses*。</block>
   <block id="a83a5d4a0177a0501c4a3ed3bc37cd53" category="list-text">在「選取條件」區域中、從「全部顯示：序號與授權」下拉式功能表中選擇「* SC_Standard*」。</block>
-  <block id="afdb1414f39146e968c3e38bd864c000" category="image-alt">選擇NSS授權</block>
-  <block id="969166d70500094403472cee53c7eb80" category="list-text">輸入您的公司名稱、然後按一下「*執行！*」。</block>
   <block id="072c7ce9ef654fbadd39bfb8d07dd1f6" category="paragraph">畫面會顯示九位SnapCenter 數的版本號、格式為51xxxxxxx。</block>
   <block id="2be4e86fec9db8038212e41252f1f190" category="list-text">記錄序號。</block>
-  <block id="aec2fa195585d5a55c735b267231ecf8" category="section-title">產生NetApp授權檔案</block>
-  <block id="7ab335ae0eb6b3dd5aa9c839cf5ead00" category="paragraph">如果您不想在SnapCenter 該程式碼GUI中輸入NetApp支援網站認證和該產品的支援序號SnapCenter 、或是無法從SnapCenter 網際網路存取NetApp支援網站、您可以產生NetApp授權檔案（NLF）、 然後將檔案下載並儲存在SnapCenter 可從該主機存取的位置。</block>
   <block id="b38bcb46a26616707e57598919123e4f" category="list-text">您應該SnapCenter 搭配ONTAP Select 使用含有「不」或Cloud Volumes ONTAP 「不」功能的「不」功能的「不」。</block>
   <block id="26e6565b87611c0e2e61e424bbf253a8" category="list-text">您應該擁有有效的NetApp支援網站登入認證資料。</block>
   <block id="ef37f690ac766ca61a4b063851b90274" category="list-text">您應該擁有九位數的授權序號、格式為51xxxxxxx。</block>
@@ -3095,9 +3075,7 @@
   <block id="cc5aaa62ea65ba445a0ca28e684ec137" category="list-text">輸入所需資訊。</block>
   <block id="aa96972d8a9d395572c58293f4cfc359" category="list-text">在Product Line（產品線）欄位SnapCenter 中、從下拉式功能表中選取*《*》（以容量為基礎）*。</block>
   <block id="abd5fbd31eb442bc0a035e9cad7fe8f3" category="list-text">在「產品序號」欄位中、輸入SnapCenter 「不含此功能的授權」序號</block>
-  <block id="32b485c6c6f806ed5cacdc290d9f46ae" category="list-text">閱讀並接受NetApp資料隱私權政策、然後按一下*提交*。</block>
   <block id="352b74507f3abbcaae93745904ef3f5a" category="list-text">儲存授權檔案、然後記錄檔案位置。</block>
-  <block id="2fab191a54d328d06a3a746dee5bbad2" category="section-title">新增容量型授權</block>
   <block id="8c1f23f212262c3300e93f874826f6e5" category="paragraph">如果您使用SnapCenter 的是搭配ONTAP Select 使用的支援功能、則Cloud Volumes ONTAP 應安裝一SnapCenter 或多個以功能為基礎的支援服務。</block>
   <block id="7497c6eb5b40c317a0e3ac59d973ce6b" category="list-text">您應該以SnapCenter 「管理員」使用者的身分登入。</block>
   <block id="55f664ebb6051a6a8020142e125c7571" category="paragraph">如果您使用NetApp授權檔案（NLF）來新增授權、您應該知道授權檔案的位置。</block>
@@ -3108,7 +3086,6 @@
   <block id="fd6d824ad448d73f9d1f6b3c5509232a" category="list-text">當您想要取代現有授權或不再需要授權時、請刪除授權。</block>
   <block id="ba2f4fc969f990edea2a0f9e7c17885f" category="admonition">試用版授權（以50結尾的序號）無法使用SnapCenter VMware GUI刪除。當您新增已採購SnapCenter 的以VMware身分為基礎的授權版本時、試用授權會自動覆寫。</block>
   <block id="20788a45506cca03e1c2a88f6259baa6" category="list-text">在「設定」頁面中、按一下「*軟體*」。</block>
-  <block id="0b5bbb1f8e9316f184ffc46a55fde594" category="list-text">在「軟體」頁面的「授權」區段中、按一下「*新增*」（<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>）。</block>
   <block id="d72c1df6aa761e08a22ad7e68c16406d" category="list-text">在「新增SnapCenter 不含任何授權」精靈中、選取下列其中一種方法來取得您要新增的授權：</block>
   <block id="a1d8662559bac2669232432df90e6db3" category="paragraph">輸入您的NetApp支援網站（NSS）登入認證資料以匯入授權</block>
   <block id="a426e2b1ae7b2ed68b622079636cb9f8" category="list-text">輸入您的NSS使用者名稱。</block>
@@ -3116,10 +3093,8 @@
   <block id="d6cd0a28d068c868d81bfecd02276ee3" category="list-text">輸入控制器型授權的序號。</block>
   <block id="07cb62e97402d6f5f7ae164e960f673c" category="paragraph">NetApp授權檔案</block>
   <block id="358adfd23e97ae6d9631faacdf38349f" category="list-text">瀏覽至授權檔案的位置、然後選取該檔案。</block>
-  <block id="31d9f23fbb53d2787e021e33f512537e" category="list-text">按一下「*開啟*」。</block>
   <block id="139acbc75e1fdf242ad639e953306c0d" category="list-text">在「通知」頁面中、輸入SnapCenter 功能臨界值、以供選擇以傳送電子郵件、EMS和AutoSupport 資訊通知。</block>
   <block id="ca8d06ca31fa65de1d7fa189cbd9053a" category="paragraph">預設臨界值為90%。</block>
-  <block id="c5ac91f9d71868d67600ac6e3d555ce9" category="list-text">若要設定用於電子郵件通知的SMTP伺服器、請按一下*設定*&gt;*全域設定*&gt;*通知伺服器設定*、然後輸入下列詳細資料：</block>
   <block id="fe7c6832f02e9c6d619cf94f17ad3887" category="paragraph">電子郵件偏好設定</block>
   <block id="a4e7a8fc83bab6b154d5ea518f9f930c" category="paragraph">選擇*永遠*或*永遠*。</block>
   <block id="0ea82c1bf7269950e927586b6dba0eac" category="paragraph">提供電子郵件設定</block>
@@ -3128,11 +3103,6 @@
   <block id="a70a5bbea3c1a0732c3b119e34ac958c" category="list-text">接收者電子郵件地址</block>
   <block id="d97e109d66d82a3998e928297ea76bdc" category="list-text">選用：編輯預設主旨行</block>
   <block id="fb929cc1541d57b8296794b2a588840d" category="paragraph">預設主旨如下：SnapCenter 「不含授權容量通知」。</block>
-  <block id="8440ad9407c2e5813eaab7eb5fa92051" category="list-text">如果您想要將事件管理系統（EMS）訊息傳送至儲存系統系統的系統記錄、或是AutoSupport 將不正常作業的相關資訊傳送至儲存系統、請選取適當的核取方塊。</block>
-  <block id="3327dba9ffd8c9c2d9846fc889607703" category="cell">*最佳實務做法*：AutoSupport 建議啟用此功能、以協助疑難排解您可能遇到的問題。</block>
-  <block id="b15a52a99ef14861ba148ae197add182" category="section-title">如何計算容量使用量SnapCenter</block>
-  <block id="33e4a71d44495d6f1fd89da8547d2ff8" category="paragraph">由其管理的整個過程中、每天午夜自動計算一次容量使用量。SnapCenter ONTAP Select Cloud Volumes ONTAP為了確保您已SnapCenter 正確設定好用的功能、您應該瞭解SnapCenter 如何使用NetApp來計算容量。</block>
-  <block id="b49e5091a9fa2af83579f7097033c636" category="paragraph">當您使用標準容量授權時SnapCenter 、透過從總授權容量中扣除所有Volume的已用容量、即可計算未使用的容量。如果已用容量超過授權容量、SnapCenter 則會在「畫面資訊儀表板」上顯示過度使用警告。如果您已在SnapCenter 功能區中設定容量臨界值和通知、當使用的容量達到您指定的臨界值時、系統會傳送電子郵件。</block>
   <block id="4132caaeec30f6b487cec84f7d869518" category="summary">當Windows Active Directory LDAPS設定為使用CA憑證時、您應該在SnapCenter 列舉伺服器上設定LDAPS的CA用戶端憑證。</block>
   <block id="00e951b7db736ab04c403ede9ffcf398" category="doc">設定LDAPS的CA用戶端憑證</block>
   <block id="c9f3f49f993cbb32ca86319abe11e4c0" category="paragraph">在精靈的第二頁</block>
@@ -3320,39 +3290,27 @@
   <block id="b867b5a0cc0e8c022da3fb526dbf2e0d" category="list-text">可透過FAS 使用「支援系統管理程式」或儲存叢集命令列、將其直接新增至功能區或AFF 功能區ONTAP</block>
   <block id="c0919ecf5802c65bf773794b7af70540" category="admonition">您不需要在SnapCenter 「介紹GUI」中輸入SnapCenter 任何授權資訊、以取得以控制器為基礎的授權。</block>
   <block id="17449a90a0d7161db56cba83fa4f2728" category="list-text">鎖定至控制器的序號</block>
-  <block id="20284ac6e2b70536e661c28917c1f549" category="section-title">新增控制器型授權的先決條件</block>
-  <block id="caaa0ad9310c0a99138c911b96b968e3" category="paragraph">在您新增控制器型授權之前、您應該先確認SnapManager 是否已安裝此套件授權、識別控制器上安裝的授權、擷取控制器的序號、以及擷取控制器型授權的序號。</block>
-  <block id="3a6c1a3709f142da8374f25ad7aabeda" category="section-title">確認SnapManager 是否已安裝此驗證套件授權</block>
   <block id="b7bbc11caf1a65c77460de0469d40f7d" category="paragraph">您可以使用SnapCenter 效益圖GUI來檢視SnapManager 是否在FAS 鏡面AFF 或非主儲存系統上安裝了一套功能證、以及識別哪些儲存系統可能需要SnapManager 使用此功能的套件授權。僅適用於主儲存系統上的SVM和SVM或叢集。SnapManager FAS AFF</block>
   <block id="6aa5717c99b34de9980debfbe3c6fa76" category="admonition">如果SnapManager 您的控制器上已經有一個用作支援的版本、SnapCenter 則會自動提供以支援控制器為基礎的支援服務。SnapManagerSuite授權和SnapCenter 以控制器為基礎的SESS-授權名稱可互換使用、但它們指的是相同的授權。</block>
   <block id="05f4bbedc7296e63af5610bfc33574b5" category="list-text">在「儲存系統」頁面的「*類型*」下拉式清單中、選取是否要檢視所有新增的SVM或叢集：</block>
   <block id="9ba45610f0250c3f3d93d968194d341c" category="list-text">若要檢視所有新增的SVM、請選取* ONTAP 《SVMS*》。</block>
   <block id="91fd94b5750743b0b4db66d235c0cab9" category="list-text">若要檢視所有已新增的叢集、請選取* ONTAP 《叢集》*。</block>
-  <block id="784f9d2e91aebe7dc2a98209e667372a" category="paragraph">當您按一下叢集名稱時、屬於叢集一部分的所有SVM都會顯示在「儲存虛擬機器」區段中。</block>
   <block id="98670eb8cc95dd053ed921df2975cefe" category="list-text">在Storage Connections（儲存連線）清單中、找到Controller License（控制器授權）欄。</block>
   <block id="56ea331cb0dea9dc3bddc3e0e2f3ef88" category="paragraph">「Controller License」（控制器授權）欄會顯示下列狀態：</block>
-  <block id="2522d4d4da08f9de2686d2c18e41a94b" category="list-text"><block ref="da9849daa2aa04218f87948a7256713b" category="inline-image-macro-rx" type="image"></block> 表示SnapManager 將某個版本的不含功能的套件授權安裝在FAS 一個不含功能的主AFF 儲存系統上。</block>
-  <block id="3064686d0324adfa86cb183026ea8a66" category="list-text"><block ref="355b5886443669e7ad5ff1741a77218f" category="inline-image-macro-rx" type="image"></block> 表示SnapManager 未在FAS 一個僅有的儲存AFF 系統上安裝一個不含功能的套裝軟體授權。</block>
   <block id="a909f2df296012a51dc7da77f9e20dc6" category="list-text">不適用表示SnapManager 由於儲存控制器位於Cloud Volumes ONTAP 不適用的地方、所以不適用某個不適用的功能。ONTAP Select</block>
-  <block id="3991b99f14bb81b2f89217b235be9e25" category="section-title">識別控制器上安裝的授權</block>
   <block id="6709a231567d24784eb3e160f2720365" category="paragraph">您可以使用ONTAP 效益指令列來檢視控制器上安裝的所有授權。您應該是FAS 一個叢集管理員、位在整個作業系統上。AFF</block>
   <block id="e7590fb47d0f1f083a0a8a323aa643a0" category="admonition">以控制器為基礎的「以程式控制器為基礎」授權會顯示為SnapManagerSuite授權。SnapCenter</block>
   <block id="9865599458fea2a88fc4f94d29ab5c4e" category="list-text">輸入license show命令、然後檢視輸出以判斷是否已安裝SnapManagerSuite授權。</block>
   <block id="5b12cbd18ef5bbd432e4411b45e422ad" category="paragraph">在此範例中、SnapManagerSuite授權已安裝、因此不SnapCenter 需要執行其他的功能驗證動作。</block>
-  <block id="9c665690c697cc93e5a897a8a63d25c2" category="section-title">擷取控制器序號</block>
   <block id="aa9f3e3dd8188fb5cf1d9979b4a7a787" category="paragraph">您需要有控制器序號、才能擷取控制器型授權的序號。您可以使用ONTAP 下列命令列擷取控制器序號：您應該是FAS 一個叢集管理員、位在整個作業系統上。AFF</block>
   <block id="ed996e97427b9382e039c0a5dde5d493" category="list-text">使用ONTAP flexfline命令列登入控制器。</block>
   <block id="1220394f5402b4332338e11150062d91" category="list-text">輸入system show -instance命令、然後檢閱輸出以找出控制器序號。</block>
   <block id="065b83de49a875bb4bd71dbe16fad428" category="list-text">記錄序號。</block>
-  <block id="8903a54a74657bc9f41f9375ea9d6adc" category="section-title">擷取控制器型授權的序號</block>
   <block id="da68fe81ae35bfda8d512b213d4ea64f" category="paragraph">如果您使用FAS 的是功能不全或AFF 功能不全的儲存設備、您可以先SnapCenter 從NetApp支援網站擷取以支援控制器為基礎的授權、然後再使用ONTAP 功能不全的命令列進行安裝。</block>
   <block id="315713e21026e04eaaa2b9a3821e4c3d" category="paragraph">如果您未輸入有效的認證資料、則不會傳回任何資訊供您搜尋。</block>
   <block id="253fa4a7008b4934e4b20001065ef254" category="list-text">您應該有控制器序號。</block>
-  <block id="371319a0c9817abb98eea29d4567a795" category="list-text">在「選取條件」區域中、確認已選取「序號」（位於裝置背面）、輸入控制器序號、然後按一下「*執行！*」。</block>
-  <block id="d9996bb23744ed1a95dc297c99d45d4d" category="image-alt">選擇NSS控制器授權</block>
   <block id="b5ddaee766816307a016e7736f50313d" category="paragraph">隨即顯示指定控制器的授權清單。</block>
   <block id="5da6f07d19afc1937b1b5b064152d98e" category="list-text">找出SnapCenter 並記錄《不實的標準版」或SnapManagerSuite授權。</block>
-  <block id="f11c7003376367fce75352e6129d04ca" category="section-title">新增控制器型授權</block>
   <block id="9c53e7ba342b700373ad570a7701ac93" category="paragraph">當您使用的是NetApp或是NetApp系統時、您可以使用ONTAP 此指令行來新增SnapCenter 以程式集控制器為基礎的授權、FAS 而且您有一個「功能集」或「SnapManagerSuite」授權。AFF SnapCenter</block>
   <block id="8109f2b1a2b4fcb7f972be2b07c29c46" category="list-text">您應該是FAS 一個叢集管理員、位在整個作業系統上。AFF</block>
   <block id="9a935baf19dae6c50cae12b831745abd" category="list-text">您應該擁有SnapCenter 「不含任何功能的標準版」或「SnapManagerSuite」授權。</block>
@@ -3364,7 +3322,6 @@
   <block id="f19a479c9a38f158a358148b2b6e17cc" category="paragraph">此命令可在管理權限層級使用。</block>
   <block id="a138b0f06f247274d2e4ba8de6e7bf8d" category="list-text">確認SnapManagerSuite授權已安裝：</block>
   <block id="8822a9cc146d06e4ec77936054fb11ca" category="paragraph">《許可證展示》</block>
-  <block id="a2e769316816cc255f9f37fbed415c69" category="section-title">移除試用授權</block>
   <block id="f01f22cfc141e64ad20b64a9b3f2ac85" category="paragraph">如果您使用的SnapCenter 是以控制器為基礎的VMware認證、而且需要移除容量型試用授權（以「50」結尾的序號）、您應該使用MySQL命令手動移除試用版授權。試用版授權無法使用SnapCenter VMware GUI刪除。</block>
   <block id="87d0fa08c99bcc9a194b85ddcbe3da26" category="admonition">只有在使用SnapCenter 以VMware控制器為基礎的授權時、才需要手動移除試用授權。如果您購買SnapCenter 了以功能為基礎的VMware測試版授權、並將其新增SnapCenter 至VMware應用程式介面、則試用版授權會自動覆寫。</block>
   <block id="68dae2573ac7874d6dd234af4fa4c752" category="list-text">在伺服SnapCenter 器上、開啟PowerShell視窗以重設MySQL密碼。</block>
@@ -6377,40 +6334,26 @@
   <block id="14310a3e36aca9ee4f8ae01ecce176f6" category="paragraph">如需系統管理員如何指派資源給使用者的詳細資訊、請參閱SnapCenter 《關於安裝的資訊：</block>
   <block id="ee2f9fb0aa9e8c0cc118a5f3a67a4b15" category="paragraph">備份原則是一組規則、可控制您管理及保留備份的方式、以及資源或資源群組的備份頻率。此外、您也可以指定複寫和指令碼設定。在原則中指定選項可節省您想要重複使用其他資源群組原則的時間。</block>
   <block id="567ee5fafb197286f35c17cbadbca640" category="paragraph">這些精靈頁面上的大部分欄位都是不言自明的。下列資訊說明您可能需要指引的部分欄位。</block>
-  <block id="1fbcfaad372de4aa8c4263630714d810" category="list-text">選擇備份類型：</block>
-  <block id="881a5cadbf2af4892868c95a8925ecdd" category="paragraph">備份資料庫檔案和交易記錄、並縮短交易記錄</block>
   <block id="18d4675bdba207949ceb7f704c54e620" category="list-text">輸入每個Snapshot複本應備份的資料庫數量上限。</block>
   <block id="b0c8f062df15022a6331b14e3bf5591e" category="admonition">如果您想要同時執行多個備份作業、則必須增加此值。</block>
-  <block id="21b100df4a632d596f4e051c57940f20" category="paragraph">備份資料庫檔案</block>
   <block id="846c94f31178e6465f3c62be3f42cb3d" category="list-text">輸入每個Snapshot複本應備份的資料庫數量上限。預設值為100</block>
-  <block id="fa9adcfe2bdc31067811e93485d16b7e" category="paragraph">備份交易記錄</block>
   <block id="f16fca991ae99058ce41f2b4b1614852" category="list-text">如果您使用其他備份應用程式來備份資源、請選取*僅複製備份*。</block>
   <block id="619da134802c3fcab97a2b7c6d14c4ec" category="paragraph">保持交易記錄不變、可讓任何備份應用程式還原資料庫。在任何其他情況下、您通常都不應使用「僅複本」選項。</block>
   <block id="31bbc81dcc68057ff34be7ba42a87cf4" category="admonition">Microsoft SQL不支援*僅複製備份*選項、以及*完整備份與記錄備份*選項、用於次要儲存設備。</block>
   <block id="e55dcbdf8fe92f0410aacdc7a5cf00d7" category="list-text">在「可用度群組設定」區段中、執行下列動作：</block>
-  <block id="ed9c1af05d86fe993f785a78cddb82d4" category="paragraph">僅在偏好的備份複本上備份</block>
   <block id="6ebdb233abe23750440d3e587915a892" category="paragraph">選取此選項、僅在偏好的備份複本上進行備份。偏好的備份複本是由為SQL Server中的AG設定的備份喜好設定所決定。</block>
-  <block id="f5c39ada6d74538eb8f8540a5b0f8397" category="paragraph">選取複本進行備份</block>
   <block id="0a87197768544d35cfd757d20f1dab26" category="paragraph">選擇主要AG複本或次要AG複本進行備份。</block>
-  <block id="e7ee0e14cb9b3655f5828c64aa7cc0e9" category="paragraph">備份優先順序（最小和最大備份優先順序）</block>
   <block id="fb8750264c3bbfea89908048e10ef06c" category="paragraph">指定最小備份優先順序編號、以及決定AG複本進行備份的最大備份優先順序編號。例如、您的最低優先順序為10、最高優先順序為50。在這種情況下、所有優先順序超過10且低於50的AG複本都會納入備份考量。</block>
   <block id="4035686675283d0f53d4a20e3a9588f0" category="admonition">根據預設、最低優先順序為1、最高優先順序為100。</block>
   <block id="95f62fbbdd8b59bc3cdee3bd3e382046" category="admonition">在叢集組態中、備份會根據原則中設定的保留設定保留在叢集的每個節點上。如果AG的擁有者節點變更、則會根據保留設定進行備份、並保留先前擁有者節點的備份。AG保留僅適用於節點層級。</block>
-  <block id="17c27964395af2cc0989da0544595045" category="list-text">如果您要使用此原則排程要建立的備份、請選取*隨需*、*每小時*、*每日*、*每週*或*每月*來指定排程類型。</block>
-  <block id="e6383c275762841518a895807d340c7f" category="paragraph">您可以為原則選取一個排程類型。</block>
   <block id="1947481e76eb40f4adf8f5246fa95ff6" category="admonition">您可以在建立資源群組時、指定備份作業的排程（開始日期、結束日期和頻率）。這可讓您建立共用相同原則和備份頻率的資源群組、但可讓您為每個原則指派不同的備份排程。</block>
   <block id="886ea91e68cf0b81982d756722488f4e" category="list-text">在「保留」頁面中、視備份類型頁面中選取的備份類型而定、執行下列一或多項動作：</block>
   <block id="73d1997538c5c2799ee681d5e59023ad" category="list-text">在「最新還原作業的保留設定」區段中、執行下列其中一項動作：</block>
-  <block id="5556fc25e3c9c42cb802a3ec13aa865f" category="paragraph">選取*保留記錄備份適用於最後的&lt;number&gt;天*選項、然後指定保留天數。如果您接近此限制、可能會想要刪除舊版複本。</block>
   <block id="9bbf41d74c8f89f293d3299ea7bebf83" category="paragraph">選取*保留記錄備份適用於上次的完整備份天數*選項、並指定保留記錄備份複本的天數。</block>
   <block id="9de90deec5302da2195d39aecfada280" category="list-text">在「隨需保留」設定的*完整備份保留設定*區段中、執行下列動作：</block>
-  <block id="e1282ba4f34b11ff282fb7d9970b2736" category="paragraph">要保留的Snapshot複本總數</block>
-  <block id="206b2713043077c94ab3e4473a9897d7" category="paragraph">如果要指定要保留的Snapshot複本數目、請選取*要保留的Snapshot複本總數*。</block>
   <block id="a0257f49f5547a6ef191dd6c2f9b4c75" category="admonition">根據預設、保留計數的值設為2。如果您將保留數設為1、則保留作業可能會失敗、因為第一個Snapshot複本是SnapVault 參考Snapshot複本、用於進行此關係、直到將較新的Snapshot複本複寫到目標為止。</block>
-  <block id="890049ee281f6f438392008ad804b79b" category="paragraph">保留Snapshot複本</block>
   <block id="6d8af80369897e48f5d0073fb1d5235e" category="paragraph">如果要指定刪除Snapshot複本之前保留Snapshot複本的天數、請選取*保留Snapshot複本*。</block>
   <block id="058ebe875bccef9354f43eaa6facdc04" category="list-text">在「*完整備份保留設定*」區段中、針對「每小時」、「每日」、「每週」和「每月」保留設定、指定「備份類型」頁面中所選排程類型的保留設定。</block>
-  <block id="827a94fd354ba8465165672c359a430d" category="paragraph">如果要指定要保留的Snapshot複本數目、請選取*要保留的Snapshot複本總數*。如果Snapshot複本數量超過指定數量、則會刪除Snapshot複本、並先刪除最舊的複本。</block>
   <block id="efa04a2e0b433b54ed88de4c3b1b5a79" category="paragraph">記錄Snapshot複本保留預設為7天。使用Set-SmPolicy Cmdlet變更記錄Snapshot複本保留。</block>
   <block id="723fe9aea6dfe1a0a822f218095c1c11" category="paragraph">此範例將記錄Snapshot複本保留設為2：</block>
   <block id="f2d35fb96ac070e63c88b1b43cf8c70b" category="inline-link">可保留資料庫的Snapshot複本SnapCenter</block>
@@ -6420,7 +6363,6 @@
   <block id="78b5b7c604c7bf8d28d141a67b26385f" category="list-text">在Database Consistency Check options（資料庫一致性檢查選項）區段中、執行下列動作：</block>
   <block id="369cd91c3e11b99e6fa5850b92b3090a" category="paragraph">將完整性結構限制為資料庫的實體結構（僅限實體）</block>
   <block id="0de87de3224e64a78ce1093052a47d1d" category="paragraph">選取*將完整性結構限制為資料庫的實體結構（僅限實體）*、將完整性檢查限制在資料庫的實體結構上、並偵測毀損的頁面、Checksum故障及影響資料庫的常見硬體故障。</block>
-  <block id="fdfc39464fafdd6ce6b729e0738e48a3" category="paragraph">抑制所有資訊訊息（無INFOMSGS）</block>
   <block id="82f15136daedc726dba1051c43c28284" category="paragraph">選擇*抑制所有資訊訊息（no_INFOMSGS）*以隱藏所有資訊訊息。預設為選取。</block>
   <block id="a01ae415547e2368a45ed1cc209949a9" category="paragraph">顯示每個物件所有回報的錯誤訊息（all_ERRORMSGS）</block>
   <block id="afac60f293b05dc186f67c671aabe6bc" category="paragraph">選取*顯示每個物件所有報告的錯誤訊息（all_ERRORMSGS）*、以顯示每個物件所有報告的錯誤。</block>
@@ -6657,18 +6599,15 @@
   <block id="303271a6fa371310673fc55e65bf3af0" category="doc">快速安裝SnapCenter 適用於SQL Server的解決方法</block>
   <block id="e05bc1fb0d09110d2709b8329ca82a1f" category="paragraph">提供一套精簡的安裝說明、以安裝SnapCenter 適用於SnapCenter Microsoft SQL Server的支援功能、以及支援Microsoft SQL Server的支援功能。</block>
   <block id="67f289221dc2b8315be57c85a28e0619" category="section-title">準備安裝</block>
-  <block id="e03ce187e39230106155230cb020dfa3" category="paragraph">*網域與工作群組需求*</block>
   <block id="c85265a6c5841b0f019403a50b63c44d" category="paragraph">可在網域或工作群組中的系統上安裝。SnapCenter</block>
   <block id="43727cf7c1f0b9055bad0d2c9c2e19ea" category="paragraph">如果您使用的是Active Directory網域、則應使用具有本機系統管理員權限的網域使用者。網域使用者應該是Windows主機上本機系統管理員群組的成員。</block>
   <block id="2632504d1b7b1f77434679b6906040dd" category="paragraph">如果您使用的是工作群組、則應使用具有本機系統管理員權限的本機帳戶。</block>
-  <block id="8091c23d0ce9e48e2abcbbcf443c75a5" category="paragraph">*授權要求*</block>
   <block id="d5c59f9587c1784732bff8ebcc03f9fb" category="paragraph">您安裝的授權類型取決於您的環境。</block>
   <block id="d170a0ae7cce61c29600d85d29b948ca" category="paragraph">不適用於功能不一的儲存控制器FAS AFF</block>
   <block id="e561227291ef5b9583ca35f38b3d1d62" category="paragraph">不含不含控制器型授權的優質套裝組合。SnapCenter如果您擁有SnapManager 此產品的不支援功能、您也可以取得SnapCenter 「不支援即用」的授權。如果您想SnapCenter 要以試用版的FAS 方式安裝含有VMware或AFF VMware的儲存設備、您可以聯絡銷售代表、取得Premium產品組合評估授權。</block>
   <block id="bfe13921f79216b9bb6e5d536a381777" category="paragraph">如果Cloud Volumes ONTAP 您是一個不知道或ONTAP Select 不知道的客戶、您必須根據SnapCenter 由支援的資料、購買每TB容量型授權。根據預設SnapCenter 、不含內建90天100 TB SnapCenter 的功能型試用授權。如需其他詳細資料、請聯絡銷售代表。</block>
   <block id="faf896433eeb20fca1eb114937251b50" category="paragraph">額外授權（選用）</block>
   <block id="9d09cebdc5095408e7e5f8bc09c08c42" category="paragraph">請參閱 <block ref="6de8516502145d64739d69762f4898a1" category="inline-link-macro-rx"></block>。</block>
-  <block id="89a71adc7ceff2f08a2162d1abfd9de6" category="paragraph">*額外需求*</block>
   <block id="a55b17d8324fe50e023be8010d4b5474" category="cell">最低要求</block>
   <block id="a0315547f70da02dc3ae867b333d7a34" category="paragraph">作業系統（64位元）</block>
   <block id="2b55387dd066c5bac646ac61543d152d" category="paragraph">CPU</block>
@@ -6692,7 +6631,6 @@
   <block id="5ae5c2db7baad917cb8389420693266d" category="paragraph">適用於Windows的插件SnapCenter</block>
   <block id="de80df6466db891ed7d7a31d71335ae1" category="paragraph">443（HTTPS）、雙向；80（HTTP）、雙向</block>
   <block id="228eb7fa9d28577ec427d7baedfa7ded" category="paragraph">連接埠可用於SnapCenter 在SVM主機、外掛主機和SVM或ONTAP S叢 集之間進行通訊。</block>
-  <block id="353c85d985312d2d61ab0aeb4ee52759" category="paragraph">*適用於Microsoft SQL Server需求的外掛程式* SnapCenter</block>
   <block id="4bd535cc745449316aa463a5f52133d6" category="paragraph">您的使用者應具備本機系統管理員權限、並具有遠端主機的本機登入權限。如果您管理叢集節點、則需要擁有叢集中所有節點管理權限的使用者。</block>
   <block id="cf94e6be5912bb698bcc03d64c605bc4" category="paragraph">您應該擁有SQL Server上具有Sysadmin權限的使用者。外掛程式使用Microsoft VDI Framework、需要系統管理員存取權。</block>
   <block id="72de9cea28a7cca58f8423279c68e8c6" category="list-text">從下載SnapCenter 《the》的《the》（英文）《the》（英文<block ref="d4fdc92072f5257471f3139636068769" category="inline-link-rx"></block> 然後按兩下exe。</block>
@@ -6794,19 +6732,12 @@
   <block id="3a1dd416224e7a96b7d4be1dfc9536cf" category="list-text">當符合下列條件時、您必須將認證指派給不具備Sysadmin存取權限的角色型存取控制（RBAC）使用者：</block>
   <block id="7a16850a47fecec0d6cb2c66daae6fca" category="list-text">認證資料會指派給SQL執行個體。</block>
   <block id="6707464a5871a6aa26dcf785bea4052c" category="list-text">SQL執行個體或主機會指派給RBAC使用者。</block>
-  <block id="4970872b4e7e80683035b5383cddcfad" category="paragraph">使用者必須同時擁有資源群組和備份權限</block>
   <block id="afebb28fd320ef1336620e367e1e9af9" category="list-text">若要新增認證資料、請按一下*「新增*」。</block>
   <block id="4ef7e21a631ca3e8e53bd58d8f6a3dd8" category="list-text">在「認證」頁面中、設定認證資料：</block>
-  <block id="e98129085674125eccfb10fdf1a8b903" category="paragraph">*認證名稱*</block>
-  <block id="22a9d94cc3dd3f3f504402ee57041a90" category="paragraph">*使用者名稱*</block>
   <block id="2babd6364b44c08eef5ab4738c3db862" category="paragraph">輸入用於SQL Server驗證的使用者名稱。</block>
   <block id="2532aba4399cff0e09437703bc91a9d4" category="list-text">網域管理員或系統管理員群組的任何成員、都會在您要安裝SnapCenter 此插件的系統上、指定網域管理員或系統管理員群組的任何成員。*使用者名稱*欄位的有效格式為：</block>
   <block id="b2634f07b0a3a46ef7a5b2fe1993d6e2" category="list-text">本機系統管理員（僅適用於工作群組）若為屬於某工作群組的系統、請在安裝SnapCenter 此程式的系統上指定內建本機系統管理員。如果使用者帳戶擁有較高的權限、或主機系統上的使用者存取控制功能已停用、您可以指定屬於本機系統管理員群組的本機使用者帳戶。「*使用者名稱*」欄位的有效格式為：_username_</block>
-  <block id="519a06883e7db4dbb9a21eeecb16986a" category="paragraph">*密碼*</block>
-  <block id="95d647afc6713e290a68698e8521e757" category="paragraph">*驗證模式*</block>
   <block id="66c5f2a1877b1e04cfa2731f1e12aa5e" category="paragraph">選取SQL Server驗證模式。如果Windows使用者在SQL Server上具有Sysadmin權限、您也可以選擇Windows驗證。</block>
-  <block id="34a7588e855afcffbec3ec292d335369" category="paragraph">*主機*</block>
-  <block id="e1f1f62be4a53aaecc160ddb197e5ecd" category="paragraph">* SQL Server執行個體*</block>
   <block id="1c6aec216640420d37199ef0555beab9" category="paragraph">選取SQL Server執行個體。</block>
   <block id="a52c72cddb788a0e54ae847cfde710d9" category="list-text">按一下「*確定*」以新增認證資料。</block>
   <block id="9cfc80fa5227a423a76220ce430d990c" category="list-text">在左側導覽窗格中、按一下*資源*。</block>
@@ -7872,7 +7803,6 @@
   <block id="07a646d112ec3924e97a5c5bd588d4c2" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="b7a3cb4f690df02dff49048f9cc465b2" category="inline-link-rx"></block></block>
   <block id="44dcf11fb80178db211421840242c071" category="summary">您應該SnapCenter 使用SnapCenter 「版本資訊」使用者介面（UI）來安裝「版本資訊」自訂外掛程式。如果您的環境不允許從SnapCenter SIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、在主控台模式或無聲模式下安裝自訂外掛程式。</block>
   <block id="f779fc9eb5facb1b4cb7f109a2d58be2" category="paragraph"><block ref="063c6867f0d5dcf21978239569098f3b" category="inline-link-rx"></block></block>
-  <block id="ed27eadf4ae8e8750cfd2fbc61ad72d7" category="paragraph">如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱<block ref="c50d85e9b4db596cb2a135c4e622135b" category="inline-link-rx"></block></block>
   <block id="6128abac450b413be3b6d65797422307" category="paragraph">請參閱<block ref="c50d85e9b4db596cb2a135c4e622135b" category="inline-link-rx"></block></block>
   <block id="62daf6a07ef62b5f47d64602451886c4" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
   <block id="8b64c44e24e9cf1c59554cf2c41479bf" category="paragraph">如需支援的應用程式和資料庫詳細資訊、請參閱<block ref="78bb88f9abe535c4182359f981c4d0d5" category="inline-link-rx"></block>。</block>
@@ -7902,12 +7832,6 @@
   <block id="b885eb831c1b0ea66dc957240ef0bacd" category="admonition">還原控制檔時、請確定目錄結構存在、或是應以正確的使用者和群組擁有者（如果有）建立、以允許還原程序將檔案複製到目標位置。如果目錄不存在、還原工作將會失敗。</block>
   <block id="3a6eb59ee064b09b020c1a87c5de4988" category="admonition">不支援IBM Java。</block>
   <block id="bb92d00cc055d1fa0c3023946870bfd5" category="paragraph">如需 .NET 特定疑難排解資訊、請參閱<block ref="d20f19fe60cd205f06739b1a5caeb450" category="inline-link-rx"></block></block>
-  <block id="cf846ac585e82924ea1ad8c03b4b9bdf" category="section-title">下載並安裝 SnapCenter 伺服器</block>
-  <block id="9575d89eee3d9cea045cdf8003c58424" category="section-title">新增 SnapCenter 標準控制器型授權</block>
-  <block id="9859b0644d4667764577eb03a1fcda53" category="section-title">新增 SnapCenter 容量型授權</block>
-  <block id="cc12c6014b5ec85f58b6fb31a26a66f7" category="section-title">設定儲存系統連線</block>
-  <block id="1d765f352f6f5ec7cfa899be682026d8" category="section-title">設定 Run as Credentials 以安裝 Microsoft SQL Server 外掛程式</block>
-  <block id="10976e15f1cbbbbb65eaf072d358489b" category="section-title">新增主機並安裝 Microsoft SQL Server 的外掛程式</block>
   <block id="9756c6d75626032c8da05d425c1d0ca9" category="inline-link">對於沒有網際網路連線的舊版系統、 SnapCenter 升級或安裝失敗</block>
   <block id="462fbac4d281be78bedf063a9dbd9f61" category="paragraph">如需 .NET 特定疑難排解資訊、請參閱<block ref="b173f6267e94bec8cf82a1d95b991ed7" category="inline-link-rx"></block>。</block>
   <block id="0cf3e7b313a6954f7aed921dae42be39" category="list-text"><block ref="36ad9b98fe40ea7db5d149de26f34551" prefix="" category="inline-code"></block></block>
@@ -8073,4 +7997,131 @@
   <block id="75b8e448161fa30feba883267dc81521" category="sidebar">使用 UNIX 命令進行備份</block>
   <block id="de148ec1fc3c9bb7b03f1506761bed93" category="sidebar">檢視備份</block>
   <block id="020a36deb114af1bb518c70d5975e940" category="sidebar">建立資源群組</block>
+  <block id="0a02bf5b6e4ef63d70216baaf241dd57" category="paragraph">使用者必須同時擁有資源群組和備份權限。</block>
+  <block id="476db1bd23910410216ee3e35ccd94a9" category="section-title">步驟 1 ：新增及設定認證</block>
+  <block id="8471bcaa60af0da808996bbee1cb49ed" category="paragraph">驗證模式</block>
+  <block id="b814c14851890120c8936eb5b4e76601" category="paragraph">SQL Server 執行個體</block>
+  <block id="57dec0d5fea8ca9066aa74005656dde3" category="section-title">步驟 2 ：設定執行個體</block>
+  <block id="dddaf244cf1e3908c97cc243765422db" category="summary">提供安裝 SnapCenter Server for Microsoft SQL Server 的指示。</block>
+  <block id="5bb995f2cea5f09b3870d6cba0a2bff4" category="doc">安裝 SnapCenter Server for Microsoft SQL Server</block>
+  <block id="696fdc5b81985319a8afbf8c7c554de1" category="paragraph">提供安裝 SnapCenter Server for Microsoft SQL Server 的一組精簡安裝指示。</block>
+  <block id="44d77fb23ef94aa2e99acffb06349cce" category="section-title">步驟 1 ：下載並安裝 SnapCenter 伺服器</block>
+  <block id="182fe557d952dd099523bf0f0a12a03d" category="section-title">步驟 2 ：登入 SnapCenter</block>
+  <block id="6dbb525493b617ed15acb54f48a1fb80" category="section-title">步驟 3 ：新增 SnapCenter 標準控制器型授權</block>
+  <block id="1e6838af3ca39fb21a3ce673d779549e" category="section-title">步驟 4 ：新增 SnapCenter 容量型授權</block>
+  <block id="a1e54ab14313eddc39c36f7ae4c3bdbf" category="section-title">步驟 5 ：設定儲存系統連線</block>
+  <block id="e7080d37366699598c6a93289cf833a8" category="summary">提供安裝 Microsoft SQL Server SnapCenter 外掛程式的指示。</block>
+  <block id="665256d7cf5062280fa2126edee4e9ed" category="paragraph">提供適用於 Microsoft SQL Server 的 SnapCenter 外掛程式的一組精簡安裝指示。</block>
+  <block id="13c41a91e51556266f1446c3f3118575" category="section-title">步驟 1 ：設定執行身分證明以安裝 Microsoft SQL Server 外掛程式</block>
+  <block id="50e45622cbe6ba6b72a9cba939e77623" category="section-title">步驟 2 ：新增主機並安裝 Microsoft SQL Server 外掛程式</block>
+  <block id="3f205e124554b1be0d5f3a4955ed598c" category="paragraph">預設值為假。</block>
+  <block id="398199fedb54e43a278fa46313e8a350" category="section-title">步驟 1 ：建立原則名稱</block>
+  <block id="efb5373e3d8e2817008f63857d38a814" category="section-title">步驟 2 ：設定備份選項</block>
+  <block id="f7b8f416ca34a425d97e1cba3100233c" category="list-text">選擇您的備份類型</block>
+  <block id="c4dee4ab1e265b9beacb9e140fafa516" category="open-title">完整備份與記錄備份</block>
+  <block id="7e26a626a8bd9210daa716e7391b1a91" category="paragraph">備份資料庫檔案和交易記錄、並截斷交易記錄。</block>
+  <block id="daf1071588d67be46c2b3881de2b7f3e" category="open-title">完整備份</block>
+  <block id="a06cb63b4e5676ff4993e87c5a096590" category="paragraph">備份資料庫檔案。</block>
+  <block id="4357e1f197bec05bc87b0ef0557cd533" category="open-title">記錄備份</block>
+  <block id="9bc97b084411adbb231ca53ca80640b7" category="paragraph">備份交易記錄。。選擇*記錄備份*。</block>
+  <block id="197904dc82a19f6818f66048a61e90f9" category="open-title">僅複製備份</block>
+  <block id="17d5127f9f01a5ee99467658118a5e9b" category="list-text">僅在偏好的備份複本上備份。</block>
+  <block id="c61f65bb5aa14eca9140c3d0e7ece927" category="list-text">選取要備份的複本。</block>
+  <block id="868b11998351ef690a54ffedfc194731" category="list-text">選取備份優先順序（最小和最大備份優先順序）</block>
+  <block id="a9e3835459894cca73ddb217d50af0db" category="list-text">排程此原則的備份頻率。選擇 * 隨需 * 、 * 每小時 * 、 * 每日 * 、 * 每週 * 或 * 每月 * 來指定排程類型。</block>
+  <block id="016bcd6d9710c9d2dde84a3ff020b0de" category="paragraph">您只能為原則選取一種排程類型。</block>
+  <block id="ef077dad77fac08deaf5fe61aced7bc3" category="section-title">步驟 3 ：設定保留設定</block>
+  <block id="d8d914bba3878c80c4a43efb4e1ce72c" category="open-title">特定份數</block>
+  <block id="5a0290e9f5b4a432c42379432ee6f5c8" category="paragraph">僅保留特定數量的 Snapshot 複本。</block>
+  <block id="619f22faf39c2dfe9a11af29647bb1a6" category="list-text">選取*保留記錄備份適用於最後的&lt;number&gt;天*選項、然後指定保留天數。如果您接近此限制、可能會想要刪除舊版複本。</block>
+  <block id="fe9e179b8597c5b1e7f1e2ff0644a5c8" category="open-title">特定天數</block>
+  <block id="82c2224d099110596a9863d056598afe" category="paragraph">將備份複本保留一段特定天數。</block>
+  <block id="805b73e03f8c3c7c7a8238ed9766dee3" category="list-text">指定要保留的 Snapshot 複本總數</block>
+  <block id="ffe60c98392393713d4e1d365c27b6be" category="list-text">若要指定要保留的 Snapshot 複本數量、請選取 * 要保留的 Snapshot 複本總數 * 。</block>
+  <block id="d4f0bf88ec19106300653daff553435f" category="list-text">保留 Snapshot 複本的時間長度</block>
+  <block id="7fcb4d3ce02337b7e14c71c970e6aa6e" category="list-text">若要指定要保留的 Snapshot 複本數量、請選取 * 要保留的 Snapshot 複本總數 * 。如果Snapshot複本數量超過指定數量、則會刪除Snapshot複本、並先刪除最舊的複本。</block>
+  <block id="6618a5f84aa25633e669aa723e59a0cd" category="list-text">若要指定刪除 Snapshot 複本之前要保留的天數、請選取 * 保留 Snapshot 複本 * 。</block>
+  <block id="92ac5fc0212c94ee50e6dc85913caeec" category="example-title">範例</block>
+  <block id="8047dd542f0833c625160d18deaef831" category="paragraph">Set-SmPolicy -PolicyName 'newpol' -PolicyType 'Backup' -PluginPolicyType 'SSQL' -sqlbackuptype 'FullBackupAndLogBackup' -RetentionSettings @{BackupType='Data';ScheduleType='Hour';RetentionschedulerCount=2}@{BackupType='Log_ScheduleType=Retenthoure2;RetenteType='Type='LogOnClinthouring@'</block>
+  <block id="b1cf83519efa64342d0b96985ded3691" category="section-title">步驟 4 ：設定複寫設定</block>
+  <block id="df5624cba097e4a1613f2162cfe02d72" category="open-title">更新 SnapMirror</block>
+  <block id="4fbf861fa73d7c46a9d919de9dba7f88" category="paragraph">在建立本機 Snapshot 複本之後更新 SnapMirror 。</block>
+  <block id="721dcaba6ffe06898a1264f811fd7874" category="open-title">更新 SnapVault</block>
+  <block id="aafae6ead4b01f0afa9e2d2dcfc5ecdd" category="paragraph">建立 Snapshot 複本後更新 SnapVault 。</block>
+  <block id="c174e73377b0caee145d55a594cd4122" category="open-title">次要原則標籤</block>
+  <block id="103ff4d651f40a22f8ac13b7d439054e" category="open-title">錯誤重試計數</block>
+  <block id="d9179dd8d5b7e66714a9152a60aff94d" category="section-title">步驟 5 ：設定指令碼設定</block>
+  <block id="a6e367864d05c1235a3dc068e29fb052" category="section-title">步驟 6 ：設定驗證設定</block>
+  <block id="e11807f1f1cff5721f85802ddac261ed" category="list-text">隱藏所有資訊訊息（無 INFOMSGS ）</block>
+  <block id="79418e51dfe3ef30c9d30317f30d19e2" category="section-title">步驟 7 ：檢視摘要</block>
+  <block id="96ccca164f6b65c860546bba66a6485a" category="summary">提供準備安裝 SnapCenter Server 和 SnapCenter Plug-in for Microsoft SQL Server 的說明。</block>
+  <block id="bb7367ec62fb74511977df150181bc7f" category="doc">準備安裝 SnapCenter 伺服器和外掛程式</block>
+  <block id="63408836354c40518fc610de2ff61aef" category="paragraph">提供安裝 SnapCenter Server 和 SnapCenter Plug-in for Microsoft SQL Server 的一組精簡準備指示。</block>
+  <block id="7527dcedb498a9e111f7eb26b4f075a6" category="section-title">授權需求</block>
+  <block id="7a98b5f499da77fa6e09b98a638328d7" category="section-title">主機和連接埠需求</block>
+  <block id="1cd526ed887ba66c61f02b843ef02d9d" category="paragraph">如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block>。</block>
+  <block id="cfcb453ff70ad933cab89769866a7ca8" category="paragraph">請參閱<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block></block>
+  <block id="bc6cdf099cec9fa3dce7fb43c644e659" category="section-title">適用於 Microsoft SQL Server 的 SnapCenter 外掛程式需求</block>
+  <block id="aa829ddf1acbdd2a8aa6a61635c33dec" category="inline-link-macro">匯入歸檔備份</block>
+  <block id="b06af5128852d56366a94b0a3584c1a6" category="paragraph">如果您使用SnapManager 的是Microsoft SQL Server的支援功能、而且想要將資料從SnapManager Microsoft SQL Server的支援中心匯入SnapCenter 到支援中心、請參閱 <block ref="0079f46f6850618db9fdf32f5f6051e0" category="inline-link-macro-rx"></block></block>
+  <block id="96a63fe0cf1de573b75ba5f458cbdc60" category="doc">在 SnapCenter 中建立資源群組和附加原則</block>
+  <block id="3b6d3b427a92116014d4ee868e0f04ba" category="paragraph">資源群組是您必須新增要備份及保護之資源的容器。它可讓您同時備份與指定應用程式相關聯的所有資料、而且是任何資料保護工作所需的資料。您也必須將一或多個原則附加至資源群組、以定義您要執行的資料保護工作類型。</block>
+  <block id="0b5045b3b137ebb25cf08b5081075426" category="list-text">在左側導覽窗格中、選取 * 資源 * 、然後從清單中選取適當的外掛程式。</block>
+  <block id="b68b243f9420806e3cfb840322caf2eb" category="list-text">在「資源」頁面中、選取「新資源群組」。</block>
+  <block id="2ace8412659382e8d9b1bc3d644b1428" category="paragraph">附註：資源群組名稱不應超過 250 個字元。</block>
+  <block id="4cf0a65bb5f9d16da67277436248fba9" category="list-text">從「 * 可用資源 * 」區段中選取資源、然後選取向右箭頭、將其移至「 * 選取的資源 * 」區段。</block>
+  <block id="7bc2103c2a80cd91e9a026c0f2b3f943" category="list-text">選取備份箭頭以設定其他備份選項：</block>
+  <block id="6ab7eeea8e6b1dcd3c8360b245f0e3c0" category="inline-image-macro">一致性群組備份選項的螢幕擷取畫面：緊急、中或放鬆。</block>
+  <block id="072de5e2138004f9a67883cb0ff2aaa6" category="paragraph"><block ref="072de5e2138004f9a67883cb0ff2aaa6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e92d78d72bbcff05469cd98c282ac8c4" category="list-text">選取「指令碼」箭頭、然後輸入用於停止、 Snapshot 複本和取消停止作業的前置和後置命令。您也可以輸入要在發生故障時結束之前執行的預先命令。</block>
+  <block id="3328b0dbde4c99683e19eca586842ffb" category="list-text">選取「自訂組態」箭頭、然後輸入使用此資源的所有資料保護作業所需的自訂金鑰值配對。</block>
+  <block id="dfa18f81ec763693ffdac89624763ae3" category="list-text">選擇 * Snapshot Copy Tool* （快照複製工具）箭頭以選擇用於創建 Snapshot 副本的工具：</block>
+  <block id="7f368ffa9ab4869382c31a28f17f3a4a" category="inline-image-macro">加號圖示</block>
+  <block id="f79b4ba47e778727c1290b36487ea0bc" category="admonition">您也可以選取 * 來建立原則<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>*。</block>
+  <block id="b11a42908bee80055dfed2bb0e9a583a" category="list-text">在 * 設定排程 * 欄中、選取 *<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>*針對您要設定的原則。</block>
+  <block id="729d9de2082bbc8f839869a30daadc5d" category="list-text">在新增原則 _policy_name_ 排程對話方塊中、設定排程並選取確定。</block>
+  <block id="f389a38ece1c258dbc71da8826870236" category="paragraph">其中 policy_name 是您選取的原則名稱。</block>
+  <block id="8417b61ea6ac680285a40b7f679829a2" category="list-text">從「通知」頁面的 * 電子郵件偏好設定 * 下拉式清單中、選取您要傳送電子郵件的情境。</block>
+  <block id="7444cb400c788a3d3aad71fb264fbbee" category="list-text">檢閱摘要、然後選取 * 完成 * 。</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">開始之前</block>
+  <block id="be2d786365162f9949969e2f176ef13a" category="inline-link-macro">已為您的應用程式建立自訂外掛程式</block>
+  <block id="86de8a90b3fba9ddc4880b8903987555" category="list-text">您必須擁有 <block ref="4ad0bd1144546248adc0fb1c490ceec4" category="inline-link-macro-rx"></block>。</block>
+  <block id="b828f6db4e08909e879dfbf229208eff" category="list-text">在「資源」頁面中、選取 * 新增資源 * 。</block>
+  <block id="20fc40c342831a6dee50cd66efb74566" category="list-text">在「提供儲存空間」頁面中、選取儲存系統、然後選擇一或多個磁碟區、 LUN 和 qtree 、然後選取 * 儲存 * 。</block>
+  <block id="1e5544d55f6c9334a30e6a4bef8c3c4a" category="inline-image-macro">加號圖示</block>
+  <block id="a28f52bcf0c820558e017ed65d61bbc4" category="paragraph">選用：選取 <block ref="0f5cf3219ae11ea795d8e8abf4dbc7f0" category="inline-image-macro-rx" type="image"></block> 圖示、可從其他儲存系統新增更多磁碟區、LUN及qtree。</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
+  <block id="da13ae3255e491cec106772af9fdae44" category="paragraph">容量授權具有下列特性：</block>
+  <block id="f5dfa5a7bae196d1dd8c957d9f4d6ee5" category="paragraph">由其管理的整個過程中、每天午夜自動計算一次容量使用量。SnapCenter ONTAP Select Cloud Volumes ONTAP當您使用標準容量授權時SnapCenter 、透過從總授權容量中扣除所有Volume的已用容量、即可計算未使用的容量。如果已用容量超過授權容量、SnapCenter 則會在「畫面資訊儀表板」上顯示過度使用警告。如果您已在SnapCenter 功能區中設定容量臨界值和通知、當使用的容量達到您指定的臨界值時、系統會傳送電子郵件。</block>
+  <block id="2406c708606f0c3c933decdd65dc3b7d" category="section-title">步驟 1 ：計算容量需求</block>
+  <block id="44cdaaa6b20a4237e33563c8be0bf929" category="section-title">步驟 2 ：擷取容量型授權的序號</block>
+  <block id="9340114ddf8bf8ff75303afd847a3076" category="list-text">登入<block ref="1850de052c61829b534b07ba1a2ca402" category="inline-link-rx"></block>。</block>
+  <block id="c6faeb7fe853ef1d638674945ae59142" category="image-alt">授權選擇 UI 的螢幕擷取畫面、其中序號和授權下拉式功能表會反白顯示。</block>
+  <block id="765c7784df072a40de94af7161fbb973" category="list-text">輸入您的公司名稱、然後選取 *Go!* 。</block>
+  <block id="ef8acdd4fcda9cad2a21f3a15c796340" category="section-title">步驟 3 ：產生 NetApp 授權檔案</block>
+  <block id="97ccd9ecd4ac0cb4ebb4d3d991db3790" category="paragraph">如果您不想在 SnapCenter GUI 中輸入 NetApp 支援網站 認證和 SnapCenter 授權序號、或者如果您無法從 SnapCenter 透過網際網路存取 NetApp 支援網站 、您可以產生 NetApp 授權檔案（ NLF ）。接著、您可以從 SnapCenter 主機存取的位置下載並儲存檔案。</block>
+  <block id="af8501c4af7bf18d1d41ad63b494028d" category="list-text">閱讀並接受 NetApp 資料隱私權政策、然後選擇 * 提交 * 。</block>
+  <block id="a70eeba6b0a5bfca6c7904fd0edc9fd2" category="section-title">步驟 4 ：新增容量型授權</block>
+  <block id="a79d31012252514c1817004ac27f6c78" category="list-text">在左導覽窗格中、選取 * 設定 * 。</block>
+  <block id="a646fca044aab578f560ca4fc105e766" category="list-text">在「設定」頁面中、選取 * 軟體 * 。</block>
+  <block id="494d74fe2d3b6e8b71d672a1143d6aa0" category="list-text">在「軟體」頁面的「授權」區段中、選取 * 新增 * （<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>）。</block>
+  <block id="91dd66dbbc7bcb9ff2accc62e548e2fa" category="list-text">選取*「Open*（開啟*）」。</block>
+  <block id="cd9fa57ea794c74666a3c676c5f7a179" category="list-text">若要設定 SMTP 伺服器以接收電子郵件通知、請選取 * 設定 * &gt; * 全域設定 * &gt; * 通知伺服器設定 * 、然後輸入下列詳細資料：</block>
+  <block id="ae309cefe1783b2d190dcaf0c63c7f17" category="list-text">如果您想要將事件管理系統（EMS）訊息傳送至儲存系統系統的系統記錄、或是AutoSupport 將不正常作業的相關資訊傳送至儲存系統、請選取適當的核取方塊。建議您啟用 AutoSupport 、以協助疑難排解您可能遇到的問題。</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">選擇*下一步*。</block>
+  <block id="19a8e13fe92c770e7ed404e67e6bec99" category="section-title">步驟 1 ：確認是否已安裝 SnapManager 套件授權</block>
+  <block id="cc9c449ada243c7f7945df60c3bb511a" category="list-text">在左導覽窗格中、選取 * 儲存系統 * 。</block>
+  <block id="d232915b5e459729c2ebb05cce4351c3" category="paragraph">當您選取叢集名稱時、屬於叢集一部分的所有 SVM 都會顯示在儲存虛擬機器區段中。</block>
+  <block id="b334c2fd16b2dbb1653525b0da09940d" category="inline-image-macro">核取圖示</block>
+  <block id="b708e8602f17540d711c077ef6ce5bb6" category="list-text"><block ref="1b6b7d2df953b943aed63061cd428e2b" category="inline-image-macro-rx" type="image"></block> 表示SnapManager 將某個版本的不含功能的套件授權安裝在FAS 一個不含功能的主AFF 儲存系統上。</block>
+  <block id="8e9f59a7ba19ac78a77252b5cc8530f6" category="inline-image-macro">取消圖示</block>
+  <block id="72acec0d06c1d26aeb0b87907c970c31" category="list-text"><block ref="1ca20f925112adf63235e58f0e4483cd" category="inline-image-macro-rx" type="image"></block> 表示SnapManager 未在FAS 一個僅有的儲存AFF 系統上安裝一個不含功能的套裝軟體授權。</block>
+  <block id="778623bf565f3d8f537019c7e81b0948" category="section-title">步驟 2 ：識別安裝在控制器上的授權</block>
+  <block id="587b796170a9abac4701cd8aa1bb38cb" category="example-title">輸出範例</block>
+  <block id="09bfdac33144afac4f96f313740dc959" category="section-title">步驟 3 ：擷取控制器序號</block>
+  <block id="4fb6996a4b0fc33cbed31ac896875422" category="section-title">步驟 4 ：擷取控制器型授權的序號</block>
+  <block id="681132950ecc3ff0338e2bc9f5253c4e" category="list-text">在「選擇條件」區域中、確認已選取序號（位於裝置背面）、輸入控制器序號、然後選取「 *Go!* 」。</block>
+  <block id="6c0673b42ebb5475d507b9bee432a6e1" category="image-alt">選擇條件和序號輸入的螢幕擷取畫面。</block>
+  <block id="e54115ab5aedb070ef9c763b003e67f1" category="section-title">步驟 5 ：新增控制器型授權</block>
+  <block id="392e651b70e91641288713738f526ce0" category="section-title">步驟 6 ：移除試用授權</block>
 </blocks>

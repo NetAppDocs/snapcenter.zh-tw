@@ -1,0 +1,93 @@
+---
+permalink: protect-scsql/task-install-snapcenter-server-for-sql-server.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 提供安裝 SnapCenter Server for Microsoft SQL Server 的指示。 
+---
+= 安裝 SnapCenter Server for Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+提供安裝 SnapCenter Server for Microsoft SQL Server 的一組精簡安裝指示。
+
+
+
+== 步驟 1 ：下載並安裝 SnapCenter 伺服器
+
+. 從下載SnapCenter 《the》的《the》（英文）《the》（英文 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支援網站"^] 然後按兩下exe。
++
+在您啟動安裝之後、會執行所有預先檢查、如果未達到最低要求、則會顯示適當的錯誤或警告訊息。您可以忽略警告訊息並繼續安裝、但錯誤應予以修正。
+
+. 檢閱SnapCenter 安裝此功能所需的預先填入值、並視需要進行修改。
++
+您不需要指定MySQL Server儲存庫資料庫的密碼。在安裝過程中、會自動產生密碼。SnapCenter
+
++
+
+NOTE: 自訂安裝路徑不支援特殊字元「%」。如果您在路徑中加入「%」、安裝將會失敗。
+
+. 按一下*立即安裝*。
+
+
+
+
+== 步驟 2 ：登入 SnapCenter
+
+. 從SnapCenter 主機桌面上的捷徑或安裝所提供的URL啟動支援（預設連接埠8146安裝SnapCenter 了支援支援服務器的端口為_\https://server:8146_）。
+. 輸入認證資料。
++
+如需內建的網域管理使用者名稱格式、請使用：_netbios\<使用者名稱>_或@<網域>_或_<網域FQDN >\<使用者名稱>_。
+
++
+如需內建的本機管理使用者名稱格式、請使用_。
+
+. 按一下*登入*。
+
+
+
+
+== 步驟 3 ：新增 SnapCenter 標準控制器型授權
+
+. 使用ONTAP 下列命令列登入控制器：
++
+「系統授權新增-授權碼<license_key>」
+
+. 驗證授權：
++
+《許可證展示》
+
+
+
+
+
+== 步驟 4 ：新增 SnapCenter 容量型授權
+
+. 在「S16GUI」左窗格中、按一下「*設定>軟體*」、然後在「授權」區段中、按一下「*+*」SnapCenter 。
+. 選取兩種取得授權的方法之一：
++
+** 輸入您的NetApp Support網站登入認證資料以匯入授權。
+** 瀏覽至NetApp授權檔案的位置、然後按一下*「Open*（開啟*）」。
+
+
+. 在精靈的「通知」頁面中、使用90%的預設容量臨界值。
+. 單擊*完成*。
+
+
+
+
+== 步驟 5 ：設定儲存系統連線
+
+. 在左窗格中、按一下*儲存系統>新增*。
+. 在「Add Storage System（新增儲存系統）」頁面中、執行下列步驟：
++
+.. 輸入儲存系統的名稱或IP位址。
+.. 輸入用於存取儲存系統的認證資料。
+.. 勾選核取方塊以啟用事件管理系統（EMS）和AutoSupport 功能表。
+
+
+. 如果要修改指派給平台、傳輸協定、連接埠和逾時的預設值、請按一下*「更多選項」*。
+. 按一下*提交*。
+
