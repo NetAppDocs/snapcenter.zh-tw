@@ -8065,13 +8065,12 @@
   <block id="8d6dff35d77be2858cb012c9525717f5" category="sidebar">預先定義的環境變數</block>
   <block id="d275b6dbfd1b9b66915ebb6018551bec" category="sidebar">備份保留</block>
   <block id="12e6d0dc88f359dcf5383de2e7e9270d" category="sidebar">命名慣例</block>
-  <block id="e9dd934a8e85b48c6d3946a93f06f678" category="sidebar">定義備份策略</block>
   <block id="2f914c665c66ccefda5991dcf0a8eea3" category="sidebar">檢閱備份需求</block>
   <block id="a9f304050cba6c177490ec2a73015cbe" category="sidebar">探索 Oracle 資料庫</block>
   <block id="0a4a3719bc7519d1162060e0f0e08f8a" category="sidebar">建立備份原則</block>
-  <block id="53a051ccb17163d7cd9ed3432619fb1d" category="sidebar">建立資源群組（選用）</block>
   <block id="dc99555922001c1adae2d9d4baee2217" category="sidebar">監控備份進度</block>
   <block id="cfe10065fd0fa721a87935a2eac20f7b" category="sidebar">其他備份作業</block>
   <block id="75b8e448161fa30feba883267dc81521" category="sidebar">使用 UNIX 命令進行備份</block>
   <block id="de148ec1fc3c9bb7b03f1506761bed93" category="sidebar">檢視備份</block>
+  <block id="020a36deb114af1bb518c70d5975e940" category="sidebar">建立資源群組</block>
 </blocks>
