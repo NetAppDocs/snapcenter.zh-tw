@@ -1,0 +1,65 @@
+---
+permalink: protect-sco/discover-oracle-database.html 
+sidebar: sidebar 
+keywords: oracle databases discover 
+summary: SnapCenter 如何探索 Oracle 資料庫。 
+---
+= 如何探索Oracle資料庫SnapCenter
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+資源是由 SnapCenter 維護的主機上的 Oracle 資料庫。您可以將這些資料庫新增至資源群組、以便在探索可用的資料庫之後執行資料保護作業。
+
+以下各節說明 SnapCenter 探索不同類型和版本的 Oracle 資料庫時所使用的程序。
+
+
+
+== 適用於Oracle版本11_g__至12_c_R1
+
+.RAC 資料庫
+RAC 資料庫只會根據 /etc/oratab`entries 來探索。您應該在/etc/oratab檔案中有資料庫項目。
+
+.獨立式
+獨立資料庫只會根據 /etc/oratab 項目來探索。
+
+.ASM
+ASM 執行個體項目應可在 /etc/oratab 檔案中使用。
+
+.RAC One Node
+RAC One Node 資料庫只會根據 /etc/oratab 項目來探索。資料庫應處於 nomount 、 mount 或 open 狀態。您應該在/etc/oratab檔案中有資料庫項目。
+
+如果資料庫已探索且備份與資料庫相關聯、則RAC單一節點資料庫狀態會標示為已重新命名或刪除。
+
+如果資料庫重新放置、您應該執行下列步驟：
+
+. 在容錯移轉RAC節點的/etc/oratab檔案中、手動新增重新放置的資料庫項目。
+. 手動重新整理資源。
+. 從資源頁面中選取 RAC One Node 資料庫、然後按一下 Database Settings （資料庫設定）。
+. 設定資料庫、將偏好的叢集節點設為目前裝載資料庫的RAC節點。
+. 執行SnapCenter 不中斷作業。
+. 如果您已將資料庫從一個節點重新定位至另一個節點、且先前節點中的 oratab 項目未刪除、請手動刪除 oratab 項目、以避免相同的資料庫顯示兩次。
+
+
+
+
+== 適用於 Oracle 版本 12cR2 至 18c
+
+.RAC 資料庫
+RAC 資料庫是使用 srvctl config 命令來探索。您應該在/etc/oratab檔案中有資料庫項目。
+
+.獨立式
+獨立的資料庫是根據 /etc/oratab 檔案中的項目和 srvctl config 命令的輸出來探索。
+
+.ASM
+ASM 執行個體項目不需要位於 /etc/oratab 檔案中。
+
+.RAC One Node
+RAC One Node 資料庫只能使用 srvctl config 命令來探索。資料庫應處於 nomount 、 mount 或 open 狀態。如果資料庫已探索且備份與資料庫相關聯、則RAC單一節點資料庫狀態會標示為已重新命名或刪除。
+
+如果資料庫已重新放置，您應該執行下列步驟：。手動重新整理資源。。從資源頁面中選取 RAC One Node 資料庫、然後按一下 Database Settings （資料庫設定）。。設定資料庫、將偏好的叢集節點設為目前裝載資料庫的RAC節點。。執行SnapCenter 不中斷作業。
+
+
+NOTE: 如果/etc/oratab檔案中有任何Oracle 12__c_R2和18_c__資料庫項目、且同一個資料庫已使用srvctl config命令登錄、SnapCenter 則無法使用此功能刪除重複的資料庫項目。如果有過時的資料庫項目、則會探索資料庫、但資料庫將無法連線、且狀態將為離線。

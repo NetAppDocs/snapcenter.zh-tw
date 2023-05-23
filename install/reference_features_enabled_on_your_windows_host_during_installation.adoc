@@ -100,7 +100,7 @@ Web伺服器
 
 
 
-如需 .NET 特定疑難排解資訊、請參閱 https://["對於沒有網際網路連線的舊版系統、 SnapCenter 升級或安裝失敗"^]。
+如需 .NET 特定疑難排解資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["對於沒有網際網路連線的舊版系統、 SnapCenter 升級或安裝失敗"^]。
 
 
 

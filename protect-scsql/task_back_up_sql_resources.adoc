@@ -140,7 +140,7 @@ NOTE: 您不應重新命名在Windows排程器或SQL Server代理程式中建立
 
 * 在不完整的組態中MetroCluster 、SnapCenter 在容錯移轉之後、可能無法偵測到保護關係。
 +
-https://["無法偵測SnapVault 到SnapMirror或在MetroCluster 進行不復原容錯移轉之後的不協調關係"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["無法偵測SnapVault 到SnapMirror或在MetroCluster 進行不復原容錯移轉之後的不協調關係"]
 
 * 如果您在VMDK上備份應用程式資料、SnapCenter 而針對VMware vSphere的VMware vSphere的Java堆疊大小不夠大、則備份可能會失敗。若要增加Java堆大小、請找出指令碼檔案/opp/netapp/init_scripts/scvservice。在該指令碼中、「do_start方法」命令會啟動SnapCenter VMware插件服務。將該命令更新為：「java -jar -Xmx8192M -Xms4096M」。
 
@@ -151,8 +151,8 @@ link:task_create_backup_policies_for_sql_server_databases.html["建立SQL Server
 
 link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["使用PowerShell Cmdlet備份資源"]
 
-https://["由於TCP_timeout延遲、導致MySQL連線錯誤導致備份作業失敗"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["由於TCP_timeout延遲、導致MySQL連線錯誤導致備份作業失敗"]
 
-https://["Windows排程器錯誤導致備份失敗"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["Windows排程器錯誤導致備份失敗"]
 
-https://["靜止或分組資源作業失敗"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["靜止或分組資源作業失敗"]

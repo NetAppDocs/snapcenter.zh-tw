@@ -51,7 +51,7 @@ summary: 支援災難恢復功能、使用REST API來備份功能。SnapCenter S
 
 
 
-NOTE: 如果是使用F5設定、還原作業會以獨立執行、您應該執行一組命令來再次建立F5。請參閱連結： https://["如何將SnapCenter 解決方法移轉至其他伺服器"^]
+NOTE: 如果是使用F5設定、還原作業會以獨立執行、您應該執行一組命令來再次建立F5。請參閱連結： https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Migrate_SnapCenter_migrate_to_another_Server["如何將SnapCenter 解決方法移轉至其他伺服器"^]
 
 
 NOTE: 災難恢復還原之後、將會新增主機、但您應該手動安裝外掛程式。
@@ -126,4 +126,4 @@ NOTE: 您應該提供儲存災難恢復備份的目標路徑。
 貼文
 
 |===
-如需詳細資訊、請參閱 https://["災難恢復API"^] 影片：
+如需詳細資訊、請參閱 https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["災難恢復API"^] 影片：

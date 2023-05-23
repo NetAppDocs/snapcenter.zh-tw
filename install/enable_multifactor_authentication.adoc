@@ -21,7 +21,7 @@ summary: 利用嚴苛的安全性與驗證功能、確保資料安全無虞。Sn
 
 .關於這項工作
 * 在相同的AD FS中設定其他應用程式時、支援SSO型登入。SnapCenter在某些AD FS組態中、SnapCenter 由於安全原因、可能需要使用者驗證、視AD FS工作階段持續性而定。
-* 執行即可取得可搭配 Cmdlet 使用之參數的相關資訊及其說明 `Get-Help command_name`。或者、您也可以參閱 https://["《軟件指令程式參考指南》SnapCenter"^]。
+* 執行即可取得可搭配 Cmdlet 使用之參數的相關資訊及其說明 `Get-Help command_name`。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
 
 
 .您需要的產品
@@ -45,7 +45,7 @@ CA憑證為必填、原因如下：
 
 .步驟
 . 連線至Active Directory Federation Services（AD FS）主機。
-. 從下載AD FS聯盟中繼資料檔案 "https://[] fqfq>/ 聯邦中繼資料 /2007/06/Federation中繼 資料 .xml" 。
+. 從下載AD FS聯盟中繼資料檔案 "https://<host[] fqfq>/ 聯邦中繼資料 /2007/06/Federation中繼 資料 .xml" 。
 . 將下載的檔案複製到SnapCenter 支援MFA功能的伺服器。
 . 透過PowerShell以「管理員」使用者身分登入SnapCenter 到「伺服器」SnapCenter 。
 . 使用PowerShell工作階段SnapCenter 、使用_New-SmMultifactorAuthenticationMetadata -path_ Cmdlet來產生FismFA中繼資料檔案。
@@ -128,7 +128,7 @@ path參數指定AD FS MFA中繼資料XML檔案的位置、SnapCenter 該檔案�
 只要AD FS伺服器有任何修改、例如升級、CA憑證續約、DR等、您就應該更新SnapCenter 位於支援區的AD FS MFA中繼資料。
 
 .步驟
-. 從下載AD FS聯盟中繼資料檔案 "https://[] Fqd>>/資料中繼資料/2007/06/FedationMetadata。XML」
+. 從下載AD FS聯盟中繼資料檔案 "https://<host[] Fqd>>/資料中繼資料/2007/06/FedationMetadata。XML」
 . 將下載的檔案複製SnapCenter 到「伺服器」以更新MFA組態。
 . 執行下列Cmdlet來更新SnapCenter Sf1中的AD FS中繼資料：
 +

@@ -22,7 +22,7 @@ summary: 新增主機並安裝外掛程式套件之前、您必須先完成所�
 * 如果SnapManager 已SnapDrive 安裝適用於Microsoft Exchange Server和Windows的Sfor、則必須先取消登錄SnapDrive 適用於Windows的VSS硬體供應商、才能在同一部Exchange Server上安裝Exchange外掛程式、以確保使用SnapCenter WALL成功保護資料。
 * 如果SnapManager 同一部伺服器上安裝了適用於Microsoft Exchange Server和Exchange外掛程式、則您必須暫停或刪除Windows排程器SnapManager 中所有由Microsoft Exchange Server的更新排程。
 * 主機必須可解析為伺服器的完整網域名稱（FQDN）。如果已修改hosts檔案以使其可解析、且在hosts檔案中同時指定了簡短名稱和FQDN、請在SnapCenter 下列格式的Sesfhosts檔案中建立項目：_<ip_address><host_fqd><host_name>_。
-* 請確定下列連接埠未在防火牆中遭到封鎖、否則新增主機作業會失敗。若要解決此問題、您必須設定動態連接埠範圍。如需詳細資訊、請參閱 https://["Microsoft文件"^]。
+* 請確定下列連接埠未在防火牆中遭到封鎖、否則新增主機作業會失敗。若要解決此問題、您必須設定動態連接埠範圍。如需詳細資訊、請參閱 https://docs.microsoft.com/en-us/troubleshoot/windows-server/networking/configure-rpc-dynamic-port-allocation-with-firewalls["Microsoft文件"^]。
 +
 ** 適用於Windows 2016和Exchange 2016的連接埠範圍為50000 - 51000
 ** 適用於Windows 2012 R2和Exchange 2013的連接埠範圍為6000 - 6500
@@ -57,7 +57,7 @@ summary: 新增主機並安裝外掛程式套件之前、您必須先完成所�
  a| 
 Microsoft Windows
 
-如需支援版本的最新資訊、請參閱 https://["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 
@@ -86,9 +86,9 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
 * PowerShell 4.0或更新版本
 
 
-如需支援版本的最新資訊、請參閱 https://["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
-如需 .NET 特定疑難排解資訊、請參閱 https://["無法升級或安裝不適用於沒有網際網路連線的舊系統。SnapCenter"]
+如需 .NET 特定疑難排解資訊、請參閱 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["無法升級或安裝不適用於沒有網際網路連線的舊系統。SnapCenter"]
 
 |===
 
@@ -141,7 +141,7 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
  a| 
 Microsoft Windows
 
-如需支援版本的最新資訊、請參閱 https://["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 
@@ -170,8 +170,8 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
 * PowerShell 4.0或更新版本
 
 
-如需支援版本的最新資訊、請參閱 https://["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108395;&solution=1258&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
-如需 .NET 特定疑難排解資訊、請參閱 https://["無法升級或安裝不適用於沒有網際網路連線的舊系統。SnapCenter"]
+如需 .NET 特定疑難排解資訊、請參閱 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_upgrade_or_install_fails_with_This_KB_is_not_related_to_the_OS["無法升級或安裝不適用於沒有網際網路連線的舊系統。SnapCenter"]
 
 |===

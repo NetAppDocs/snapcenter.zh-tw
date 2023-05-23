@@ -13,13 +13,13 @@ summary: 如果資料庫儲存在虛擬機器（VM）上、或是想要保護VM�
 [role="lead"]
 如果資料庫儲存在虛擬機器（VM）上、或是想要保護VM和資料存放區、則必須部署SnapCenter VMware vSphere虛擬應用裝置的《支援VMware vSphere的還原外掛程式》。
 
-如需部署資訊、請參閱 https://["部署總覽"^]。
+如需部署資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["部署總覽"^]。
 
 
 
 == 部署CA憑證
 
-若要使用SnapCenter VMware vSphere的VMware vSphere的VMware認證外掛程式來設定CA認證、請參閱 https://["建立或匯入SSL憑證"^]。
+若要使用SnapCenter VMware vSphere的VMware vSphere的VMware認證外掛程式來設定CA認證、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere_(SCV)["建立或匯入SSL憑證"^]。
 
 
 

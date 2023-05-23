@@ -176,7 +176,7 @@ All-Flash Optimized: false
 
 *步驟*
 
-. 登入NetApp支援網站： http://["mysupport.netapp.com"^]。
+. 登入NetApp支援網站： http://mysupport.netapp.com/["mysupport.netapp.com"^]。
 . 瀏覽至* Systems *>* Software Licenses*。
 . 在「選取條件」區域中、確認已選取「序號」（位於裝置背面）、輸入控制器序號、然後按一下「*執行！*」。
 +
@@ -238,7 +238,7 @@ NOTE: 只有在使用SnapCenter 以VMware控制器為基礎的授權時、才需
 .. 執行Open-SmConnection Cmdlet、針對SnapCenter SnapCenterAdmin帳戶、啟動與該伺服器的連線工作階段。
 .. 執行Set-SmRegitoryPassword以重設MySQL密碼。
 +
-如需Cmdlet的相關資訊、請參閱 https://["《軟件指令程式參考指南》SnapCenter"^]。
+如需Cmdlet的相關資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]。
 
 
 

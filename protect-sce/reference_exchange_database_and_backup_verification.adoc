@@ -20,4 +20,4 @@ Microsoft Exchange Eseutil工具是Exchange伺服器隨附的命令列公用程�
 
 | *最佳實務做法：*不需要對資料庫可用度群組（DAG）組態中至少有兩個複本的資料庫執行一致性檢查。 
 |===
-如需其他資訊、請參閱 https://["Microsoft Exchange Server文件"^]。
+如需其他資訊、請參閱 https://docs.microsoft.com/en-us/exchange/exchange-server?view=exchserver-2019["Microsoft Exchange Server文件"^]。

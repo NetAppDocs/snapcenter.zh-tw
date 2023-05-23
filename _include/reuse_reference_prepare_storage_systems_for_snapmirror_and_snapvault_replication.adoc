@@ -14,7 +14,7 @@ NOTE: 如果您是SnapCenter 從NetApp SnapManager 產品來到這個地方、�
 
 NOTE: 不支援SnapMirror與支援等量資料（*主要*>*鏡射*>* Vault *）之間的串聯關係。SnapCenter SnapVault您應該使用「扇出」關係。
 
-支援管理版本彈性的SnapMirror關係。SnapCenter如需版本靈活的SnapMirror關係及其設定方式的詳細資訊、請參閱 http://["本文檔 ONTAP"^]。
+支援管理版本彈性的SnapMirror關係。SnapCenter如需版本靈活的SnapMirror關係及其設定方式的詳細資訊、請參閱 http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.ic-base%2Fresources%2Fhome.html["本文檔 ONTAP"^]。
 
 
 NOTE: 不支援*同步鏡射*複寫。SnapCenter

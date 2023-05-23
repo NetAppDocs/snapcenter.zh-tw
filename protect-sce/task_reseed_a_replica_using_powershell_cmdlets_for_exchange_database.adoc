@@ -13,7 +13,7 @@ summary: 您可以使用PowerShell Cmdlet還原不正常的複本、方法是使
 [role="lead"]
 您可以使用PowerShell Cmdlet還原不正常的複本、方法是使用相同主機上的最新複本、或使用替代主機的最新複本。
 
-您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://["《軟件指令程式參考指南》SnapCenter"^]。
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]。
 
 *步驟*
 

@@ -45,7 +45,7 @@ NOTE: 不支援VMDK。
 
 針對VMware vSphere 4.1.1版的《VMware vSphere 4.1.1版》（《VMware vSphere 4.1.1版》）文件提供有關保護虛擬化資料庫和檔案系統的資訊。SnapCenter SnapCenter對於NetApp Data Broker 1.0和1.0.1、NetApp Data Broker 4.2.x使用者而言、文件中包含使用以Linux為基礎的NetApp Data Broker虛擬應用裝置（開放式虛擬應用裝置格式）所提供的VMware vSphere版《支援VMware vSphere的VMware外掛程式》來保護虛擬化資料庫和檔案系統的相關資訊。SnapCenter SnapCenter針對VMware vSphere 4.3的《VMware vSphere 4.3的VMware vCenter外掛程式》文件、提供SnapCenter 使用VMware vSphere虛擬應用裝置的Linux版《VMware vSphere的VMware vSphere虛擬應用程式》（開放式虛擬應用裝置格式）來保護虛擬化資料庫和檔案系統的相關資訊。SnapCenter SnapCenter
 
-https://["VMware vSphere文件的VMware外掛程式SnapCenter"^]
+https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["VMware vSphere文件的VMware外掛程式SnapCenter"^]
 
 
 

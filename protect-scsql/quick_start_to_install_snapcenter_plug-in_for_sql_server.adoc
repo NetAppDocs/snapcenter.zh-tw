@@ -78,7 +78,7 @@ NOTE: 我們建議您將SnapCenter 不需要的「不二用」授權新增至次
 |===
 *額外需求*
 
-如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱 https://["互通性對照表工具"^]
+如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["互通性對照表工具"^]
 
 |===
 | 主機 | 最低要求 
@@ -87,7 +87,7 @@ NOTE: 我們建議您將SnapCenter 不需要的「不二用」授權新增至次
  a| 
 作業系統（64位元）
  a| 
-請參閱 https://["互通性對照表工具"^]
+請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108408;&solution=1259&isHWU&src=IMT["互通性對照表工具"^]
 
 
 
@@ -171,7 +171,7 @@ Windows外掛程式主機
 
 除了連接埠135和445之外、Microsoft指定的動態連接埠範圍也應該開啟。遠端安裝作業使用Windows Management Instrumentation（WMI）服務、此服務會動態搜尋此連接埠範圍。
 
-如需支援的動態連接埠範圍資訊、請參閱 https://["Windows的服務總覽和網路連接埠需求"^]。
+如需支援的動態連接埠範圍資訊、請參閱 https://docs.microsoft.com/en-US/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements["Windows的服務總覽和網路連接埠需求"^]。
 
 
 
@@ -206,7 +206,7 @@ Windows外掛程式主機
 
 *步驟*
 
-. 從下載SnapCenter 《the》的《the》（英文）《the》（英文 https://["NetApp 支援網站"^] 然後按兩下exe。
+. 從下載SnapCenter 《the》的《the》（英文）《the》（英文 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支援網站"^] 然後按兩下exe。
 +
 在您啟動安裝之後、會執行所有預先檢查、如果未達到最低要求、則會顯示適當的錯誤或警告訊息。您可以忽略警告訊息並繼續安裝、但錯誤應予以修正。
 

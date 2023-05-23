@@ -14,7 +14,7 @@
 分割clone2之後、您可以在clone1上執行實體複本分割作業、因為clone1不再是中繼複本。
 
 * 當您分割複本時、複本的備份複本和複製工作將會刪除。
-* 如需有關複本切割作業限制的資訊、請參閱 http://["《 9 邏輯儲存管理指南》 ONTAP"^]。
+* 如需有關複本切割作業限制的資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 9 邏輯儲存管理指南》 ONTAP"^]。
 * 確保儲存系統上的磁碟區或Aggregate已上線。
 
 
@@ -68,4 +68,4 @@
 
 *瞭解更多資訊*
 
-https://["使用Aggregate時無法進行實體複製或驗證SnapCenter"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["使用Aggregate時無法進行實體複製或驗證SnapCenter"]

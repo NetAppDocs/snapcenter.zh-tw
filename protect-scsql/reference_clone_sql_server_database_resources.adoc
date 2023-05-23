@@ -19,7 +19,7 @@ summary: 從備份複製資料庫資源之前、您必須先使用SnapCenter 支
 
 image::../media/scsql_clone_workflow.png[複製工作流程圖]
 
-您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原、還原、驗證及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱 https://["《軟件指令程式參考指南》SnapCenter"]
+您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原、還原、驗證及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"]
 
 *瞭解更多資訊*
 

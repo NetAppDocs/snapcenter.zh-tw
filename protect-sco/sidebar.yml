@@ -38,32 +38,52 @@ entries:
   url: "/protect-sco/concept_prepare_for_protecting_oracle_databases.html"
 - title: 備份Oracle資料庫
   entries:
-  - title: 備份工作流程
+  - title: 備份概述
     url: "/protect-sco/backup-workflow.html"
-  - title: 定義Oracle資料庫的備份策略
+  - title: 備份組態資訊
+    entries:
+    - title: 支援的備份組態
+      url: "/protect-sco/supported_backup_configs.html"
+    - title: 備份類型
+      url: "/protect-sco/backup_types.html"
+    - title: 如何探索Oracle資料庫SnapCenter
+      url: "/protect-sco/discover-oracle-database.html"
+    - title: 要使用的偏好節點
+      url: "/protect-sco/preferred-nodes.html"
+    - title: 目錄備份
+      url: "/protect-sco/catalog-backups.html"
+    - title: 預先定義的環境變數
+      url: "/protect-sco/predefined-environment-variables-prescript-postscript-backup.html"
+    - title: 備份保留
+      url: "/protect-sco/retention-backups.html"
+    - title: 備份排程
+      url: "/protect-sco/schedule-backups.html"
+    - title: 命名慣例
+      url: "/protect-sco/naming-backups.html"
+  - title: 定義備份策略
     url: "/protect-sco/task_define_a_backup_strategy_for_oracle_databases.html"
-  - title: 預先定義的環境變數、用於備份特定的pretced和postscript
-    url: "/protect-sco/predefined-environment-variables-prescript-postscript-backup.html"
-  - title: 確定Oracle資料庫是否可供備份
-    url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
-  - title: 為Oracle資料庫建立備份原則
-    url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
-  - title: 建立Oracle資料庫的資源群組及附加原則
-    url: "/protect-sco/task_create_resource_groups_and_attaching_policies_for_oracle_databases.html"
-  - title: 備份Oracle資料庫的需求
+  - title: 檢閱備份需求
     url: "/protect-sco/reference_requirements_for_backing_up_an_oracle_database.html"
+  - title: 探索 Oracle 資料庫
+    url: "/protect-sco/task_determine_whether_oracle_databases_are_available_for_backup.html"
+  - title: 建立備份原則
+    url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
+  - title: 建立資源群組（選用）
+    url: "/protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html"
   - title: 備份Oracle資源
     url: "/protect-sco/task_back_up_oracle_resources.html"
-  - title: 備份Oracle資料庫資源群組
+  - title: 備份資源群組
     url: "/protect-sco/task_back_up_oracle_database_resource_groups.html"
-  - title: 使用UNIX命令備份Oracle資料庫
-    url: "/protect-sco/task_back_up_oracle_databases_using_unix_commands.html"
-  - title: 監控Oracle資料庫備份作業
+  - title: 監控備份進度
     url: "/protect-sco/task_monitor_oracle_database_backup_operations.html"
-  - title: 取消Oracle資料庫的備份作業
-    url: "/protect-sco/task_cancel_the_snapcenter_plug_in_for_oracle_database_backup_operations.html"
-  - title: 在「拓撲」頁面中檢視Oracle資料庫備份與複製
-    url: "/protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html"
+  - title: 其他備份作業
+    entries:
+    - title: 使用 UNIX 命令進行備份
+      url: "/protect-sco/task_back_up_oracle_databases_using_unix_commands.html"
+    - title: 取消備份作業
+      url: "/protect-sco/task_cancel_the_snapcenter_plug_in_for_oracle_database_backup_operations.html"
+    - title: 檢視備份
+      url: "/protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html"
 - title: 掛載及卸載資料庫備份
   url: "/protect-sco/task_mount_and_unmount_databases_backups.html"
 - title: 還原及還原Oracle資料庫

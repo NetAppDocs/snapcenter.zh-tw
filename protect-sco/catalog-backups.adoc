@@ -1,0 +1,71 @@
+---
+permalink: protect-sco/catalog-backups.html 
+sidebar: sidebar 
+keywords: oracle databases discover 
+summary: SnapCenter 如何探索 Oracle 資料庫。 
+---
+= 如何使用Oracle Recovery Manager對備份進行目錄編錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Oracle Recovery Manager （ RMAN ）來編錄 Oracle 資料庫的備份、以便將備份資訊儲存在 Oracle RMAN 儲存庫中。
+
+目錄式備份稍後可用於區塊層級還原或表格空間時間點還原作業。當您不需要這些已編製目錄的備份時、可以移除目錄資訊。
+
+資料庫必須處於掛載狀態或更高狀態、才能進行分類。您可以對資料備份、歸檔記錄備份及完整備份執行目錄化。如果已啟用資源群組的目錄建立備份、且該資源群組具有多個資料庫、則會針對每個資料庫執行目錄建立。對於Oracle RAC資料庫、目錄會在資料庫至少處於掛載狀態的偏好節點上執行。
+
+如果您想要編錄RAC資料庫的備份目錄、請確定該資料庫沒有執行其他工作。如果另一個工作正在執行中、則目錄作業會失敗、而非排入佇列。
+
+
+
+== 外部目錄資料庫
+
+根據預設、目標資料庫控制檔會用於分類。如果您想要新增外部目錄資料庫、可以使用SnapCenter 「資料庫設定」精靈、從圖形化使用者介面（GUI）指定外部目錄的認證和透明網路基底（TNS）名稱來設定。您也可以從CLI中設定外部目錄資料庫、方法是使用-OracleRmanCatalogCredentialName和-OracleRmanCatalogTnsName選項執行「Configure - SmOracleDatabase」命令。
+
+
+
+== RMAN 命令
+
+如果您在SnapCenter 從還原GUI建立Oracle備份原則時啟用目錄選項、則備份會使用Oracle RMAN進行目錄化、作為備份作業的一部分。您也可以執行來執行備份的延後目錄 `Catalog-SmBackupWithOracleRMAN` 命令。
+
+在建立備份目錄之後、您可以執行 `Get-SmBackupDetails` 命令以取得已編錄的備份資訊、例如已編錄資料檔案的標記、控制檔目錄路徑、以及已編錄的歸檔記錄位置。
+
+
+
+== 命名格式
+
+如果ASM磁碟群組名稱大於或等於16個字元、則SnapCenter 用於備份的命名格式為SC_HASHCODEofDISKKKROUP_DBSID_BACKUPID。不過、如果磁碟群組名稱少於16個字元、則用於備份的命名格式為DISKKROUPNAM_DBSID_BACKUPID、其格式與SnapCenter 在S16 2.0中使用的格式相同。
+
+HASHCODEofDISKKROUP是每個ASM磁碟群組自動產生的數字（2到10位數）。
+
+
+
+== 交叉檢查作業
+
+您可以執行交叉檢查、以更新過時的RMAN儲存庫資訊、瞭解儲存庫記錄與其實體狀態不符的備份。例如、如果使用者使用作業系統命令從磁碟移除已歸檔的記錄、控制檔仍會指出記錄是在磁碟上、實際上並不是。
+
+交叉檢查作業可讓您使用資訊來更新控制檔。您可以執行Set-SmConfigSettings命令來啟用交叉檢查、並將值true指派給啟用交叉檢查參數。預設值設為假。
+
+「ccli Set-SmConfigSettings-ConfigSettingsTYPEPluginCodeSCO-ConfigSettings」「key=enable_scCrossCheck、Value=true」
+
+
+
+== 移除目錄資訊
+
+您可以執行Uncategor-SmBackupWithOracleRMAN命令來移除目錄資訊。您無法使用SnapCenter 無法使用程式庫GUI移除目錄資訊。不過、刪除備份或刪除與該目錄備份相關的保留與資源群組時、會移除已編製備份的資訊。
+
+
+NOTE: 當您強制刪除SnapCenter 該主機時、不會移除與該主機相關聯的已分類備份資訊。強制刪除主機之前、您必須先移除該主機所有已編製目錄的備份資訊。
+
+如果由於作業時間超過為oracle_plugin_RMAN目錄逾時參數指定的逾時值、而導致目錄分類和取消目錄失敗、您應該執行下列命令來修改參數值：
+
+/`opt/NetApp/snapcenter/spl/bin/sccli Set-SmConfigSettings-ConfigSettingsType外掛程式-PluginCode SCO-ConfigSettings "key=oracle_plugin_rman_Catalog_timeout,value=user_defined_value"
+
+修改參數值後SnapCenter 、請執行下列命令、重新啟動「RESTART Plug-in Loader（SPL）」服務：
+
+/`opt/NetApp/snapcenter/spl/bin/spl recovery（選擇/NetApp/snapcenter/spl/bin / spl重新啟動）
+
+您可以執行Get-Help命令名稱來取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2883301["《軟件命令參考指南》SnapCenter"^]。

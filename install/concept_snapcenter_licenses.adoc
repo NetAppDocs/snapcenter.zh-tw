@@ -106,6 +106,6 @@ NOTE: 不再提供「進階」和「不適用的NAS檔案服務」授權。SnapC
 
 如果您使用SnapCenter Exchange的還原外掛程式來管理Microsoft Exchange Server資料庫和單一信箱恢復（SMBR）、則您需要額外的SMBR授權、而此授權必須根據使用者信箱另行購買。
 
-請聯絡您的NetApp銷售代表、以購買SMBR授權、此授權以1000、5000、15000及25000個信箱的套裝組合形式提供。購買SKU之後、您可以依照中的指示取得授權 https://["SMBR版本說明"^]。
+請聯絡您的NetApp銷售代表、以購買SMBR授權、此授權以1000、5000、15000及25000個信箱的套裝組合形式提供。購買SKU之後、您可以依照中的指示取得授權 https://library.netapp.com/ecm/ecm_download_file/ECMLP2863893["SMBR版本說明"^]。
 
 當您提交授權金鑰申請時、Kroll Ontrack會核發50個信箱授權金鑰。根據您的授權、Kroll Ontrack會在驗證後升級信箱的授權。

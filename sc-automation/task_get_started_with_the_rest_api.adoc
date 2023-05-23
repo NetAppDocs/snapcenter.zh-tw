@@ -33,8 +33,8 @@ NOTE: 如果您的認證資料包含特殊字元、您必須根據您使用的Sh
 
 在命令列介面上執行下列命令、以擷取外掛程式資訊：
 
-"curl -X Get -u username:password -k "https://[]
+"curl -X Get -u username:password -k "https://<ip_address>/api/hosts?fields=IncludePluginInfo"`[]
 
 範例：
 
-「curl -X Get -u admin: password -k」'https://[]
+「curl -X Get -u admin: password -k」'https://10.225.87.97/api/hosts?fields=IncludePluginInfo"`[]

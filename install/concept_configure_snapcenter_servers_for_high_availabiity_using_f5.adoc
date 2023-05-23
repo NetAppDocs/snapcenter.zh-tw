@@ -16,7 +16,7 @@ summary: 若要在SnapCenter 支援方面支援高可用度（HA）、您可以�
 
 IMPORTANT: 如果您已從SnapCenter 更新版的版本為版本4.2.x、而且之前使用的是網路負載平衡（NLB）、則可以繼續使用該組態或切換至F5。
 
-工作流程影像會列出使用SnapCenter F5負載平衡器設定高可用度的功能步驟。如需詳細指示、請參閱 https://["如何使用SnapCenter F5負載平衡器設定高可用度的功能"^]。
+工作流程影像會列出使用SnapCenter F5負載平衡器設定高可用度的功能步驟。如需詳細指示、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["如何使用SnapCenter F5負載平衡器設定高可用度的功能"^]。
 
 image::../media/sc-F5-configure-workflow.png[SC F5設定工作流程]
 
@@ -26,7 +26,7 @@ image::../media/sc-F5-configure-workflow.png[SC F5設定工作流程]
 * add-SmServer
 * 移除SmServerCluster
 +
-如需詳細資訊、請參閱 https://["《軟件指令程式參考指南》SnapCenter"^]。
+如需詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]。
 
 
 

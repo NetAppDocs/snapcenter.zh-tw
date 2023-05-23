@@ -51,7 +51,7 @@ summary: 您可以使用SnapCenterAdd Host頁面來新增Windows主機。Exchang
 |===
 Exchange的外掛程式取決SnapCenter 於適用於Windows的包裹、且版本必須相同。在Exchange外掛程式安裝期間、SnapCenter 依預設會選取適用於Windows的功能不全的外掛程式套件、並與VSS硬體供應商一起安裝。
 
-如果SnapManager 已經SnapDrive 安裝適用於Microsoft Exchange Server和適用於Windows的功能、 而且您想要在同一個Exchange Server上安裝外掛程式、必須取消登錄SnapDrive 由Windows版的VSS硬體供應商、因為它與隨Windows版Exchange和SnapCenter 更新外掛程式套件一起安裝的VSS硬體供應商不相容。如需詳細資訊、請參閱 https://["如何手動登錄Data ONTAP 《SolidvVSS Hardware Provider》"]。
+如果SnapManager 已經SnapDrive 安裝適用於Microsoft Exchange Server和適用於Windows的功能、 而且您想要在同一個Exchange Server上安裝外掛程式、必須取消登錄SnapDrive 由Windows版的VSS硬體供應商、因為它與隨Windows版Exchange和SnapCenter 更新外掛程式套件一起安裝的VSS硬體供應商不相容。如需詳細資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_manually_register_the_Data_ONTAP_VSS_Hardware_Provider["如何手動登錄Data ONTAP 《SolidvVSS Hardware Provider》"]。
 
 *步驟*
 

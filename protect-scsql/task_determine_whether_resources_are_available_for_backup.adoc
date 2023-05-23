@@ -25,7 +25,7 @@ summary: 資源是資料庫、應用程式執行個體、可用度群組、以�
 * 若要探索Windows叢集中的Microsoft SQL資料庫、您必須解除封鎖容錯移轉叢集執行個體（FCI）TCP/IP連接埠。
 * 如果資料庫位於VMware RDM LUN或VMDK上、您必須部署SnapCenter VMware vSphere的VMware vCenter外掛程式、並使用SnapCenter VMware vCenter登錄外掛程式。
 +
-如需詳細資訊、請參閱 https://["部署SnapCenter VMware vSphere的VMware vCenter外掛程式"^]
+如需詳細資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html["部署SnapCenter VMware vSphere的VMware vCenter外掛程式"^]
 
 * 如果使用GMSA新增主機、且GMSA具有登入和系統管理權限、則會使用GMSA連線至SQL執行個體。
 

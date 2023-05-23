@@ -4,13 +4,19 @@ sidebar: sidebar
 keywords: SnapCenter Server, monitor, backup, activity pane, data protection 
 summary: 您可以使用SnapCenter 「更新工作」頁面來監控不同備份作業的進度。您可能需要檢查進度、以判斷何時完成或是否有問題。 
 ---
-= 監控Oracle資料庫備份作業
+= 監控 Oracle 資料庫備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
+瞭解如何監控備份作業和資料保護作業的進度。
+
+
+
+== 監控Oracle資料庫備份作業
+
 您可以使用SnapCenterJobs頁面監控不同備份作業的進度。您可能需要檢查進度、以判斷何時完成或是否有問題。
 
 *關於此工作*

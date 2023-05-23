@@ -80,7 +80,7 @@ VS1     Marketing    2.62TB
 
 *步驟*
 
-. 登入NetApp支援網站： http://["mysupport.netapp.com"^]。
+. 登入NetApp支援網站： http://mysupport.netapp.com/["mysupport.netapp.com"^]。
 . 瀏覽至* Systems *>* Software Licenses*。
 . 在「選取條件」區域中、從「全部顯示：序號與授權」下拉式功能表中選擇「* SC_Standard*」。
 +
@@ -108,7 +108,7 @@ image::../media/nss_license_selection.gif[選擇NSS授權]
 
 *步驟*
 
-. 瀏覽至 https://["NetApp 授權檔案產生器"^]。
+. 瀏覽至 https://register.netapp.com/register/eclg.xwic["NetApp 授權檔案產生器"^]。
 . 輸入所需資訊。
 . 在Product Line（產品線）欄位SnapCenter 中、從下拉式功能表中選取*《*》（以容量為基礎）*。
 . 在「產品序號」欄位中、輸入SnapCenter 「不含此功能的授權」序號

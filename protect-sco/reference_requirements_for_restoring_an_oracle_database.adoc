@@ -23,7 +23,7 @@ summary: 在還原Oracle資料庫之前、您應確保已完成先決條件。
 * 在asm_diskstring參數中，如果使用ASMfd，則應配置_afd:*_；如果使用ASMLIB，則應配置_ORCL:*_。
 +
 
-NOTE: 如需如何編輯asm_diskstring參數的資訊、請參閱 https://["如何將磁碟路徑新增至asm_diskstring"^]
+NOTE: 如需如何編輯asm_diskstring參數的資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Disk_paths_are_not_added_to_the_asm_diskstring_database_parameter["如何將磁碟路徑新增至asm_diskstring"^]
 
 * 如果您已停用OS驗證並啟用Oracle資料庫的Oracle資料庫驗證、且想要還原該資料庫的資料檔和控制檔、則應在非ASM資料庫的* listener.ora*檔案中設定靜態接聽程式、該檔案位於：_$oracle_home/network/admin_、以及ASM資料庫的$grid_home/network/admin_。
 * 如果資料庫大小是以TB（TB）為單位、您應該執行Set- SmConfigSettings命令來增加SCORestoretimeout參數的值。

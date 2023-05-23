@@ -2,7 +2,7 @@
 permalink: protect-sco/task_define_a_backup_strategy_for_oracle_databases.html 
 sidebar: sidebar 
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
-summary: 在建立備份工作之前定義備份策略、可確保您擁有成功還原或複製資料庫所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您備份策略的主要決定因素。 
+summary: 定義備份策略可確保您擁有成功還原或複製資料庫的方法。 
 ---
 = 定義Oracle資料庫的備份策略
 :allow-uri-read: 
@@ -11,9 +11,14 @@ summary: 在建立備份工作之前定義備份策略、可確保您擁有成�
 
 
 [role="lead"]
-在建立備份工作之前定義備份策略、可確保您擁有成功還原或複製資料庫所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您備份策略的主要決定因素。
+定義備份策略、確保您有辦法成功還原或複製資料庫。
 
-SLA定義預期的服務層級、並解決許多與服務相關的問題、包括服務的可用度和效能。RTO是指在服務中斷後、必須還原業務程序的時間。RPO定義了檔案的存留期策略、這些檔案必須從備份儲存設備中恢復、以便在故障後恢復正常作業。SLA、RTO及RPO有助於資料保護策略。
+您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您備份策略的主要決定因素。
+
+* SLA 定義預期的服務層級、並解決服務可用度和效能等服務相關問題。
+* RTO 定義業務程序在服務中斷後必須還原的時間。
+* RPO 定義了必須從備份儲存設備恢復的檔案存留期、以便在故障後恢復正常作業。
+
 
 
 
@@ -55,7 +60,7 @@ NOTE: 不支援pdb移轉和pdb複製作業。
 
 
 
-如需受支援Oracle版本的最新資訊、請參閱 https://["NetApp 互通性對照表工具"^]。
+如需受支援Oracle版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108392;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 
@@ -224,7 +229,7 @@ NOTE: 當您強制刪除SnapCenter 該主機時、不會移除與該主機相關
 
 /`opt/NetApp/snapcenter/spl/bin/spl recovery（選擇/NetApp/snapcenter/spl/bin / spl重新啟動）
 
-您可以執行Get-Help命令名稱來取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://["《軟件命令參考指南》SnapCenter"^]。
+您可以執行Get-Help命令名稱來取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["《軟件命令參考指南》SnapCenter"^]。
 
 
 

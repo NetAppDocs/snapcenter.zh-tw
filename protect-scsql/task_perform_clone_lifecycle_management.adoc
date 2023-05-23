@@ -112,7 +112,7 @@ NOTE: 預先編寫或後製指令碼路徑不應包含磁碟機或共用區。�
 NOTE: 對於電子郵件通知、您必須使用GUI或PowerShell命令Set-SmtpServer來指定SMTP伺服器詳細資料。
 
 +
-如需EMS、請參閱 https://["管理EMS資料收集"]
+如需EMS、請參閱 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["管理EMS資料收集"]
 
 . 檢閱摘要、然後按一下「*完成*」。
 

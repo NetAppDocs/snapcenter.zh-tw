@@ -1,0 +1,43 @@
+---
+permalink: protect-sco/backup_types.html 
+sidebar: sidebar 
+keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
+summary: 支援 Oracle 資料庫的備份類型。 
+---
+= Oracle資料庫支援的備份類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+備份類型指定您要建立的備份類型。支援Oracle資料庫的線上和離線備份類型。SnapCenter
+
+
+
+== 線上備份
+
+當資料庫處於線上狀態時所建立的備份稱為線上備份。線上備份也稱為熱備份、可讓您在不關閉資料庫的情況下建立資料庫備份。
+
+在線上備份中、您可以建立下列檔案的備份：
+
+* 僅限資料檔案和控制檔
+* 僅歸檔記錄檔（在此案例中、資料庫不會進入備份模式）
+* 完整資料庫、包含資料檔案、控制檔及歸檔記錄檔
+
+
+
+
+== 離線備份
+
+當資料庫處於掛載或關機狀態時所建立的備份稱為離線備份。離線備份也稱為冷備份。您只能在離線備份中包含資料檔案和控制檔。您可以建立離線掛載或離線關機備份。
+
+* 建立離線掛載備份時、您必須確保資料庫處於掛載狀態。
++
+如果資料庫處於任何其他狀態、則備份作業會失敗。
+
+* 建立離線關機備份時、資料庫可以處於任何狀態。
++
+資料庫狀態會變更為建立備份所需的狀態。建立備份之後、資料庫狀態會還原為原始狀態。
+
+

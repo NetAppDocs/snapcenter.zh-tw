@@ -31,7 +31,7 @@ summary: 從SnapCenter 適用於Microsoft SQL Server備份的還原外掛程式�
 * 如果您要將自訂記錄目錄備份還原至其他主機、SnapCenter 則必須SnapCenter 安裝相同的版本支援功能。
 * 您必須安裝Microsoft熱修復程式、KB2887595。Microsoft支援網站包含更多關於KB2887595的資訊。
 +
-https://["Microsoft支援文件編號2887595：Windows RT 8.1、Windows 8.1和Windows Server 2012 R2更新彙總套件：2013年11月"]
+https://support.microsoft.com/kb/2887595["Microsoft支援文件編號2887595：Windows RT 8.1、Windows 8.1和Windows Server 2012 R2更新彙總套件：2013年11月"]
 
 * 您必須備份資源群組或資料庫。
 * 如果您要將Snapshot複本複製到鏡射或保存庫、SnapCenter 則該管理員必須為來源磁碟區和目的地磁碟區指派儲存虛擬機器（SVM）給您。

@@ -108,7 +108,7 @@ _keytool-keypasswd -alias "alias name_in_CA_cert "-keystore keyKeystore .jks_
 
 *關於此工作*
 
-* 若要下載相關CA憑證的最新CRL檔案、請參閱 https://["如何更新SnapCenter 「驗證CA憑證」中的憑證撤銷清單檔案"]。
+* 若要下載相關CA憑證的最新CRL檔案、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_update_certificate_revocation_list_file_in_SnapCenter_CA_Certificate["如何更新SnapCenter 「驗證CA憑證」中的憑證撤銷清單檔案"]。
 * 「自訂外掛程式」會在預先設定的目錄中搜尋CRL檔案。SnapCenter
 * 適用於「不適用自訂外掛程式」的CRL檔案預設目錄SnapCenter 為：_C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\ etc\crl__。
 

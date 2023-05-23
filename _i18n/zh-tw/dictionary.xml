@@ -3851,7 +3851,6 @@
   <block id="eebf4dbc30cb79473f44b0746798f0d8" category="list-text">執行_Refresh-SmClon_。</block>
   <block id="2dca23ddca1615e63d449ef4dd543431" category="paragraph">如果作業失敗並顯示「PL-SCO-20032：CanExecute operation失敗、並顯示錯誤：PL-SCO-30031：REDO記錄檔+SC_2959770772_clmdb/clmdb/redog/redo01_01.log exists」錯誤訊息、請為「-WaitToTrigerClerClone」指定較高的值。</block>
   <block id="8d70bdd589ad1d5053591608060dd666" category="summary">資源是SnapCenter 由Oracle管理的主機上的Oracle資料庫。您可以將這些資料庫新增至資源群組、以便在探索可用的資料庫之後執行資料保護作業。</block>
-  <block id="b235b91c85e6ff24696d87bf417b2277" category="doc">確定Oracle資料庫是否可供備份</block>
   <block id="14391af03493ba1cebd9404bb5bda74c" category="list-text">如果資料庫位於虛擬機器磁碟（VMDK）或原始裝置對應（RDM）上、您必須部署SnapCenter VMware vSphere的「The VMware Plug-in」、並以SnapCenter 「Sfor VMware vSphere」登錄外掛程式。</block>
   <block id="04e7bb0411c1c8f56ca4fc8000c62ad8" category="inline-link">部署SnapCenter VMware vSphere的VMware vCenter外掛程式</block>
   <block id="2ab45cdd9c7a68b490dde7ff87978512" category="paragraph">如需詳細資訊、請參閱<block ref="147b933388a6511d6c294a95b67dd2ec" category="inline-link-rx"></block>。</block>
@@ -3868,10 +3867,7 @@
   <block id="c35e2fd793dc0d11efe1b1acc5987013" category="list-text">如果資料庫位於NetApp儲存系統上且未受到保護、則使用者介面會在「整體狀態」欄中顯示未受保護的訊息。</block>
   <block id="ce438204568fcaa814a04d849f2721e2" category="list-text">如果資料庫位於NetApp儲存系統上且受到保護、則使用者介面會在「整體狀態」欄中顯示可供備份的訊息。</block>
   <block id="cf686ffff8ea29364c4dec5580ebd633" category="admonition">如果您已啟用Oracle資料庫驗證、資源檢視中會顯示紅色的掛鎖圖示。您必須設定資料庫認證、才能保護資料庫或將其新增至資源群組、以執行資料保護作業。</block>
-  <block id="6b33644191204350f20a3a84f6152f47" category="summary">資源群組是您必須新增要備份及保護之資源的容器。資源群組可讓您同時備份與特定應用程式相關的所有資料。</block>
   <block id="a79101df6f2655709b2aa6b2ec32c488" category="doc">建立Oracle資料庫的資源群組及附加原則</block>
-  <block id="e525da83465049bad6a7bf2676a73ce2" category="paragraph">您應確保在ASM磁碟群組中有檔案的資料庫應處於「掛載」或「開啟」狀態、以便使用Oracle DBVERIFY公用程式來驗證其備份。</block>
-  <block id="c58481c5b8cfb4b2b7162b1b1cf5c8dd" category="paragraph">您應該將一或多個原則附加到資源群組、以定義您要執行的資料保護工作類型。</block>
   <block id="9c124c0fc8c6cc2725dad57b45c85eb0" category="paragraph">下圖說明資料庫的資源、資源群組和原則之間的關係：</block>
   <block id="c3bc5ff261b700cf2f6140bad7454c1c" category="image-alt">SCO資源群組原則</block>
   <block id="056af176267461e7d6a2a9e357208bd7" category="paragraph">從備份中排除歸檔記錄目的地</block>
@@ -3882,7 +3878,6 @@
   <block id="16a4d8b6ed11330e0e6e2c8f2b58a1b0" category="admonition">您可以在單一資源群組中同時新增Linux和AIX主機的資料庫。</block>
   <block id="a263a024ecfc193325fde48303936fd7" category="list-text">在「驗證」頁面上、執行下列步驟：</block>
   <block id="aa60fb0ff9f13cd254813c318d11d1bf" category="list-text">按一下*載入定位器*以載入SnapMirror或SnapVault SnapMirror磁碟區、以便在二線儲存設備上執行驗證。</block>
-  <block id="52fb8cc6d977f4b0c5a28fca774e1265" category="list-text">按一下*<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*在「設定排程」欄中、為原則的所有排程類型設定驗證排程。</block>
   <block id="defd6c77f4ca043c4de9b65e954e7937" category="list-text">在「新增驗證排程policy_name」對話方塊中、執行下列動作：</block>
   <block id="5ddfe5d3f436393022d0a111c1f2b429" category="paragraph">備份後執行驗證</block>
   <block id="5fc49d26bbb3bab9fc2e2c6fc0490216" category="paragraph">選擇*備份後執行驗證*。</block>
@@ -4086,15 +4081,11 @@
   <block id="d8e872fb73120498da08d2eb2e952e1f" category="paragraph">例如、customtext_policy_hostnameor resource_hostname.根據預設、快照複本名稱會附加時間戳記。</block>
   <block id="b34b9f5decf78eb62a8145da0940d7d1" category="paragraph">_policy_name_是您選取的原則名稱。</block>
   <block id="8aad6e1ddba0855250f3f027cd30ba41" category="list-text">在「驗證」頁面中、執行下列步驟：</block>
-  <block id="60819b0f333a60a877f3b241274ddbfd" category="list-text">按一下 <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block> 在「設定排程」欄中、設定原則所有排程類型的驗證排程。</block>
   <block id="73d5c45d8fe4cd81e69573ed4a382644" category="list-text">在「新增驗證排程_policy_name_」對話方塊中、執行下列動作：</block>
-  <block id="d3fbced85b7ea3c853c32d56707ed82f" category="paragraph">選取*執行排程驗證*、然後從下拉式清單中選取排程類型。</block>
   <block id="014b5d6fbe7be4e31085d3f8a60c9445" category="admonition">在Flex ASM設定中、如果基數小於RAC叢集中的節點數、則無法在葉節點上執行驗證作業。</block>
   <block id="86d0a1c0a1c24b3fd3e7c61cd7b71901" category="list-text">選取*在次要位置驗證*以驗證您在次要儲存設備上的備份。</block>
   <block id="f1959398bc1be9959fe83a99b07fd5d3" category="paragraph">您也必須指定寄件者和接收者的電子郵件地址、以及電子郵件的主旨。如果您要附加在資源上執行的備份作業報告、請選取*附加工作報告*。</block>
-  <block id="259d3ed1b70f5247f9e2fc2be475381a" category="list-text">在AIX安裝程式中、您可以使用lkDev命令來鎖定、使用rendev命令來重新命名備份資料庫所在的磁碟。</block>
   <block id="8a1c4d8854ab495e687e6155302b5e31" category="paragraph">使用該備份還原時、裝置的鎖定或重新命名不會影響還原作業。</block>
-  <block id="0c2aa1683107d10f559e2505dfb5befc" category="list-text">如果由於資料庫查詢執行時間超過逾時值而導致備份作業失敗、您應該執行Set-SmConfigSettings Cmdlet來變更Oracle_SQL_query_timeout和Oracle_plugin_SQL_query_timeout參數的值：</block>
   <block id="31bbfd3d5f153e5da05f4114737ea2cd" category="paragraph">修改參數值後、SnapCenter 請執行下列命令「/opt /NetApp/snapcenter/spl/bin/spl recrt」、重新啟動「停止插件載入器（SPL）」服務</block>
   <block id="14894175a6559422772ab07b7e553342" category="list-text">如果無法存取檔案、且掛載點在驗證程序期間無法使用、則作業可能會失敗、並顯示錯誤代碼DBV-00100指定檔案。您應該修改sco.properties中的verifying_delay和verifying_reture_counts參數值。</block>
   <block id="01f2a62b214f28f5c6d9606a809ec72f" category="paragraph">若要增加Java堆大小、請找出指令碼檔案_/opt/netapp/init_scripts/scvservice_。在該指令碼中、「do_start方法」命令會啟動SnapCenter VMware插件服務。將該命令更新為：「java -jar -Xmx8192M -Xms4096M」。</block>
@@ -4117,7 +4108,6 @@
   <block id="543eb3b9143ccc1ed273dbc9f064ffa2" category="summary">資源群組是主機或叢集上的資源集合。資源群組上的備份作業會對資源群組中定義的所有資源執行。</block>
   <block id="7fac35e2e64a179ee0279256e1dc195f" category="doc">備份Oracle資料庫資源群組</block>
   <block id="e169c75993af25a436c2276ecc3bbdda" category="paragraph">您可以在搜尋方塊中輸入資源群組名稱、或按一下*來搜尋資源群組<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*、然後選取標記。然後按一下*<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*關閉篩選窗格。</block>
-  <block id="ab266f443637649193c14fb7a9370e7e" category="admonition">如果您的聯盟資源群組有兩個資料庫、而其中一個資料庫在非NetApp儲存設備上有資料檔案、則即使另一個資料庫位於NetApp儲存設備上、備份作業仍會中止。</block>
   <block id="2c4f60cdfab4e71a27e2dfbd9362e411" category="summary">在使用SnapCenter 支援功能來備份Oracle資料庫資源之前、您必須先為要備份的資源或資源群組建立備份原則。備份原則是一組規則、可管理您管理、排程及保留備份的方式。您也可以指定複寫、指令碼及備份類型設定。當您想要在其他資源或資源群組上重複使用原則時、建立原則可節省時間。</block>
   <block id="a3a63bd1ddab3e696228b7b61878c09d" category="doc">為Oracle資料庫建立備份原則</block>
   <block id="e457b5ee7ca69de08b3486e30ef1d570" category="list-text">您必須完成安裝SnapCenter 、新增主機、探索資料庫及建立儲存系統連線等工作、準備好保護資料。</block>
@@ -4291,9 +4281,7 @@
   <block id="7f2ecaff75d6f07915dd7be5cead4901" category="list-text">SPL的CRL檔案預設目錄為：_/var/opt/snapcenter/spl/etc/crl_。</block>
   <block id="807770aa37e60f7f72db94fdcfd3247c" category="list-text">您可以修改並更新spl.properties檔案中的預設目錄、使其符合SPL_CRL_path金鑰。</block>
   <block id="160c0afc78008acd5e27a47466223006" category="summary">您可以建立資源（資料庫）或資源群組的備份。</block>
-  <block id="cb21f64b7aa1d58307ba1cfcc254fb77" category="paragraph">您可以建立資源（資料庫）或資源群組的備份。備份工作流程包括規劃、識別備份資源、建立備份原則、建立資源群組及附加原則、建立備份及監控作業。</block>
   <block id="fb21695f6b72866357b3e3381a3dd8d4" category="image-alt">Oracle的備份工作流程</block>
-  <block id="74be1413d8c1294602864c1d9e25f626" category="paragraph">但是、如果先前的備份已完成並出現警告、則可能不會刪除作業鎖定檔案、而下一個備份作業會進入等待佇列。如果未刪除*。sm_lock_dbsid*檔案、最終可能會取消。在此情況下、您必須手動刪除作業鎖定檔案、方法是執行下列步驟：</block>
   <block id="3ab07b443e5100312a8428cab6f6a083" category="list-text">刪除作業鎖定：'rm -rf .sm_lock_dbsid.`</block>
   <block id="bc9f89729bc570541b5b790a7dc8c706" category="summary">您可以還原及還原已毀損或遺失的可插拔資料庫（pdb）、而不會影響容器資料庫（CDB）中的其他PDF。使用RMAN執行pdb的時間點恢復（PITR\）SnapCenter 。</block>
   <block id="d1af1ec910f75c39d71a8c724311cf70" category="doc">使用時間點還原來還原及還原可插拔的資料庫</block>
@@ -4505,7 +4493,6 @@
   <block id="1557c15b3dbccec29a8c1666ec549177" category="list-text">如果您有TDE（自動登入）、且想要複製同一或備用主機上的資料庫、則應將來源資料庫中的//etc/oracle/wallet/$oracle_SID_下的錢包（主要檔案）複製到複製的資料庫。</block>
   <block id="d80214d2bee819ffe96b11b6af4643e9" category="list-text">您應該在/etc/lvm/lvm.conf中設定use_lvmetad = 0的值、然後停止LVM2-lvmetad服務、以便在Oracle Linux 7或更新版本、或Red Hat Enterprise Linux（RHEL）7或更新版本的儲存區域網路（SAN）環境中成功執行複製。</block>
   <block id="30dca629b8dd44dcc3eb42720281eefa" category="list-text">如果您使用Oracle資料庫11.2.0.3或更新版本、且輔助執行個體的資料庫ID已使用NID指令碼變更、則應安裝13366202 Oracle修補程式。</block>
-  <block id="0b467061f52733da68bf2a4d7726c3f9" category="summary">在建立備份工作之前定義備份策略、可確保您擁有成功還原或複製資料庫所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您備份策略的主要決定因素。</block>
   <block id="4aad6a55b7d830fe36a2a075e0a60363" category="doc">定義Oracle資料庫的備份策略</block>
   <block id="837133a617997f77e41ae32488daeff9" category="section-title">支援的Oracle資料庫備份組態</block>
   <block id="c099310b5ff326a16534f7447f14aa9a" category="paragraph">支援不同Oracle資料庫組態的備份。SnapCenter</block>
@@ -7465,7 +7452,6 @@
   <block id="0ac22ed74dd628cec8a2c5e2f64bf612" category="list-text">如果要備份的資料庫很大（TB大小）、則應將RESTimeout的值增加至SnapCenter 32伺服器主機中_C:\Program Files\NetApp \SMCore\SMCoreServiceHost.exe.config_檔案中的86400000 ms。</block>
   <block id="12030a592b1dcd9007e06eda350e5904" category="list-text">如果要恢復到特定的日期和時間、請選取*日期和時間*、然後指定日期和時間以及輔助目的地。</block>
   <block id="740364074f07d3ca5c0b017db01d8838" category="paragraph">根據指定的SCN或選取的日期和時間、找出執行PIGR所需的最佳資料和記錄備份數量、然後掛載並編錄目錄。SnapCenter</block>
-  <block id="46eafed7afc11552d8171b2eb6ae91d0" category="section-title">如何防止SnapCenter 不含資料庫的項目被人發現</block>
   <block id="8bd0906e1408858d04adcc36035359ac" category="paragraph">您可以避免SnapCenter 使用不含資料庫的功能來探索在oratab檔案中新增的非資料庫項目。</block>
   <block id="a91c1695dbc901f96299c334e515e6b0" category="list-text">安裝Oracle外掛程式之後、root使用者應在目錄//var/capcenter/scop/etc/_下建立* sc_oratab.config*檔案。</block>
   <block id="e52e8b1290260b6f01eec0c767b91bb9" category="paragraph">將寫入權限授予Oracle二進位擁有者和群組、以便日後能夠維護該檔案。</block>
@@ -7970,4 +7956,122 @@
   <block id="0f5b112cebb37022dbfe2c80e388d605" category="paragraph">請參閱 <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block>。</block>
   <block id="a8d67928879d7cbd7d3c5d1b6d797736" category="list-text">停用 MFA 、並清除使用啟用 MFA 時所建立的組態檔案<block ref="3f459b2c524cc44ef57664fd75d5c093" prefix=" " category="inline-code"></block> Cmdlet。</block>
   <block id="6bcc192d7209e867a0f8afd8938c62eb" category="sidebar">管理多因素驗證（ MFA ）</block>
+  <block id="d9372adbc1bed6681e74cd02004081f0" category="summary">SnapCenter 如何探索 Oracle 資料庫。</block>
+  <block id="f3c021a5eae937a13601d397b792c2d2" category="paragraph">您可以使用 Oracle Recovery Manager （ RMAN ）來編錄 Oracle 資料庫的備份、以便將備份資訊儲存在 Oracle RMAN 儲存庫中。</block>
+  <block id="084690c33c7b29b1780ab8f409fb8650" category="section-title">外部目錄資料庫</block>
+  <block id="c5c4e8f374f512a056ca1205e002a1fd" category="section-title">RMAN 命令</block>
+  <block id="f49c2881ffbdaf870ec7ed9ea88f4343" category="paragraph">如果您在SnapCenter 從還原GUI建立Oracle備份原則時啟用目錄選項、則備份會使用Oracle RMAN進行目錄化、作為備份作業的一部分。您也可以執行來執行備份的延後目錄<block ref="a0b1ab6ae251c2e9971158956eaa5c76" prefix=" " category="inline-code"></block> 命令。</block>
+  <block id="b0d14c022e51c262621e79e943a3b6d0" category="paragraph">在建立備份目錄之後、您可以執行<block ref="c307f2fb096a201d2b32b2d18a240364" prefix=" " category="inline-code"></block> 命令以取得已編錄的備份資訊、例如已編錄資料檔案的標記、控制檔目錄路徑、以及已編錄的歸檔記錄位置。</block>
+  <block id="5e5ff61214eb4873285663f81049ec20" category="section-title">命名格式</block>
+  <block id="059297ebf3935d6b4bcb000628a9d653" category="section-title">交叉檢查作業</block>
+  <block id="8e03216fb8576194a8567507d59c56b7" category="paragraph">您可以執行交叉檢查、以更新過時的RMAN儲存庫資訊、瞭解儲存庫記錄與其實體狀態不符的備份。例如、如果使用者使用作業系統命令從磁碟移除已歸檔的記錄、控制檔仍會指出記錄是在磁碟上、實際上並不是。</block>
+  <block id="7944aae88fbc469a9edfc7d9ae22e633" category="paragraph">交叉檢查作業可讓您使用資訊來更新控制檔。您可以執行Set-SmConfigSettings命令來啟用交叉檢查、並將值true指派給啟用交叉檢查參數。預設值設為假。</block>
+  <block id="14fbb4ba3858c107f2599916d3b51cbb" category="section-title">移除目錄資訊</block>
+  <block id="3fc370e9504ca2ebb69ee1e9030a971f" category="paragraph">您可以執行Get-Help命令名稱來取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱<block ref="f0a304dd5eda28bc5cad0e10ba143e0a" category="inline-link-rx"></block>。</block>
+  <block id="4c4d4c133d15d97bf3bef74ffeeeb66a" category="list-text">在左側導覽窗格中、選取 * 資源 * 、然後從清單中選取適當的外掛程式。</block>
+  <block id="ba4484b740822363967ef7dbb090de6a" category="inline-image-macro">篩選圖示</block>
+  <block id="bdf18e1416fb037a66cb2e8b6bf34e50" category="list-text">按一下 <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>，然後選取主機名稱和資料庫類型以篩選資源。</block>
+  <block id="36fae2ba23dbe8fc737f85fdffde333e" category="paragraph">然後按一下 <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
+  <block id="90db41db3c301da492422a8fbb244c83" category="list-text">在「資源」頁面中、您可以執行下列步驟：</block>
+  <block id="00f0529a96533b63a21705811e1addce" category="list-text">選取核取方塊、然後輸入您要用於 Snapshot 複本名稱的自訂名稱格式。</block>
+  <block id="8319f5e3f98fcec5a71bd43e8454a8fd" category="paragraph">例如、<block ref="6d242f6ac938ffb13709f54d68cd3c4a" prefix=" " category="inline-code"></block> 或<block ref="90ea7aa0cb61dd49e32f6dcf8afac143" prefix=" " category="inline-code"></block>。根據預設、 Snapshot 複本名稱會附加時間戳記。</block>
+  <block id="e0af3bf36c9535530ed431b3358aa176" category="inline-image-macro">新增符號</block>
+  <block id="a2fbabd2b5fd55db991eb64739e8189a" category="admonition">您可以按一下建立原則 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="a04dff3ca18f5d27eeb205537402b01c" category="list-text">按一下 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> 在 " 設定排程 " 欄位中 , 為您要的原則設定排程。</block>
+  <block id="37f44ce16715c2bf101710578d0cdd78" category="list-text">在新增原則 _policy_name_ 排程視窗中、設定排程、然後選取<block ref="e0aa021e21dddbd6d8cecec71e9cf564" prefix=" " category="inline-code"></block>。</block>
+  <block id="8152b7fd31613e401469a6547fe7ab3f" category="list-text">按一下 * 載入定位器 * 來載入 SnapMirror 或 SnapVault 磁碟區、以驗證次要儲存設備。</block>
+  <block id="b4795af650dd450875d0affec7e81c42" category="list-text">按一下 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> 在「設定排程」欄中、設定原則所有排程類型的驗證排程。+ 在「新增驗證排程 _ 原則名稱 _ 」對話方塊中、您可以執行下列步驟：</block>
+  <block id="2226a89f0e569aafd7ff5ef91e17aca2" category="list-text">選取 * 執行排程驗證 * 、然後從下拉式清單中選取排程類型。</block>
+  <block id="a40e69276b6e9ce163d85fd729a42eae" category="list-text">在「通知」頁面中、從「 * 電子郵件偏好設定 * 」下拉式清單中選取您要傳送電子郵件的案例。</block>
+  <block id="d7a872f323113f381eb79316af450829" category="paragraph">您必須指定寄件者和收件者電子郵件地址、以及電子郵件主旨。如果您要附加在資源上執行的備份作業報告、請選取*附加工作報告*。</block>
+  <block id="56f30e0902c1ab371ccae5be347a631e" category="admonition">對於電子郵件通知、您必須使用 GUI 或 PowerShell 命令來指定 SMTP 伺服器詳細資料<block ref="997c102f406bdf4b18d046c49ffaa8f9" prefix=" " category="inline-code"></block>。</block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="list-title">完成後</block>
+  <block id="b27045f6d55975ea692f5ae0a715da51" category="list-text">在 AIX 安裝程式中、您可以使用<block ref="9c24f53e48c98577b16ec56f199c0106" prefix=" " category="inline-code"></block> 用於鎖定的命令和<block ref="6fec2b39344b576b753af3936b8b4491" prefix=" " category="inline-code"></block> 用於重新命名備份資料庫所在磁碟的命令。</block>
+  <block id="407eab8241b7b3d334f9f6b403d230f9" category="list-text">如果備份作業因為資料庫查詢執行時間超過逾時值而失敗、您應該執行來變更 oracle_sql_query_timeout 和 oracle_plugin_sql_query_timeout 參數的值<block ref="c49971dbd0f66cf4e6b62fc441967947" prefix=" " category="inline-code"></block> Cmdlet ：</block>
+  <block id="9c83e144e5481ac6766f4055e566594d" category="list-title">如需詳細資訊、請參閱</block>
+  <block id="8dc85b73e2cb5020859a39480b17009c" category="list-text"><block ref="802c82c89baa4a09096a77864bb21fb2" category="inline-link-rx"></block> （需要登入）</block>
+  <block id="40a2df546d9e9d7c560fe96c630c6c74" category="doc">備份程序總覽</block>
+  <block id="e5325159577ee33e354dc9b247eb5a41" category="paragraph">您可以建立資源（資料庫）或資源群組的備份。備份程序包括規劃、識別備份資源、建立備份原則、建立資源群組及附加原則、建立備份及監控作業。</block>
+  <block id="380f9875e9dac40e8c0bc082d654be88" category="paragraph">但是、如果先前的備份已完成並出現警告、則可能不會刪除作業鎖定檔案、而下一個備份作業會進入等待佇列。如果未刪除*。sm_lock_dbsid*檔案、最終可能會取消。在這種情況下、您必須執行下列步驟、手動刪除操作鎖定檔案：</block>
+  <block id="bcbd15ff750a5bdd0a69b69272c96224" category="doc">探索可供備份的 Oracle 資料庫</block>
+  <block id="6e511cfe87a95df884e3eeb9f86e7f6c" category="paragraph">*您需要的是什麼*</block>
+  <block id="43a1b5ca6be8bdd76245bbef93eb42c3" category="section-title">步驟 1 ：防止 SnapCenter 探索非資料庫項目</block>
+  <block id="6ff7029ca2037b63aa334483b3f6dbd1" category="section-title">步驟 2 ：探索資源</block>
+  <block id="afe43493934ee712f4ff5ce8418fc255" category="paragraph">在 Oracle Real Application Clusters （ RAC ）設定中、您可以指定 SnapCenter 用來執行備份作業的偏好節點。如果您未指定偏好的節點、SnapCenter 則會自動將節點指派為偏好的節點、並在該節點上建立備份。</block>
+  <block id="9cf00451682ac5fbc7ad037c5033fbe7" category="paragraph">偏好的節點可能是存在RAC資料庫執行個體的一個或所有叢集節點。只有在這些偏好的節點上、才會依偏好順序觸發備份作業。</block>
+  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="paragraph-title">範例</block>
+  <block id="c9328c682f9cde36ed9275b8d6076776" category="paragraph">RAC 資料庫 cdrac 有三個執行個體： node1 上的 cdrcbra1 、 node2 上的 cdrbcbra2 、 node3 上的 cdrbcbra3 。</block>
+  <block id="ef86a82fdcc178a3727d5487d64da0f7" category="paragraph">節點1和節點2執行個體已設定為慣用節點、節點2為第一個偏好選項、節點1為第二個偏好選項。當您執行備份作業時、會先在節點2上嘗試此作業、因為節點2是第一個慣用節點。</block>
+  <block id="b9a9b52da26d376bae745caa147a52ef" category="paragraph">如果節點2未處於備份狀態、這可能是因為主機上未執行外掛程式代理程式等多種原因、則主機上的資料庫執行個體不會處於指定備份類型所需的狀態、 或是FlexASM組態中節點2上的資料庫執行個體未由本機ASM執行個體提供服務、則會在節點1上嘗試執行該作業。</block>
+  <block id="4002c4b6b0a844b5972c38c7594c4329" category="paragraph">節點3不會用於備份、因為它不在偏好的節點清單中。</block>
+  <block id="b250d1148a21c87bd22c0e130bc63078" category="section-title">Flex ASM 設定</block>
+  <block id="4ea8079fa2f37d718bf02e968bee364b" category="paragraph">資源是由 SnapCenter 維護的主機上的 Oracle 資料庫。您可以將這些資料庫新增至資源群組、以便在探索可用的資料庫之後執行資料保護作業。</block>
+  <block id="35cd5d3812d5d01441ea27f0cc23e846" category="paragraph">以下各節說明 SnapCenter 探索不同類型和版本的 Oracle 資料庫時所使用的程序。</block>
+  <block id="c3840e3ab25ce9f30ec697c152655f28" category="paragraph-title">RAC 資料庫</block>
+  <block id="fde91ef302aa0e3bbe841036968b5490" category="paragraph">RAC 資料庫只會根據 /etc/oratab`entries 來探索。您應該在/etc/oratab檔案中有資料庫項目。</block>
+  <block id="5c80f101108a356211fcb26b3f83eabb" category="paragraph-title">獨立式</block>
+  <block id="bea76d34a87d4264ca025e2d88b3350d" category="paragraph">獨立資料庫只會根據 /etc/oratab 項目來探索。</block>
+  <block id="7ccbb03cb795734415a0b6924a8d7aed" category="paragraph-title">ASM</block>
+  <block id="10d2161a02aedfc95234b3a3456eb306" category="paragraph">ASM 執行個體項目應可在 /etc/oratab 檔案中使用。</block>
+  <block id="2e870bce056fbce1cb37f62a4e47660e" category="paragraph-title">RAC One Node</block>
+  <block id="14eaca04b4e6fa17b6fb76a780747d7b" category="paragraph">RAC One Node 資料庫只會根據 /etc/oratab 項目來探索。資料庫應處於 nomount 、 mount 或 open 狀態。您應該在/etc/oratab檔案中有資料庫項目。</block>
+  <block id="0490fa938898aedef2dc7269ec3361ba" category="list-text">從資源頁面中選取 RAC One Node 資料庫、然後按一下 Database Settings （資料庫設定）。</block>
+  <block id="141229b009a397273fc34bf2467990b8" category="list-text">如果您已將資料庫從一個節點重新定位至另一個節點、且先前節點中的 oratab 項目未刪除、請手動刪除 oratab 項目、以避免相同的資料庫顯示兩次。</block>
+  <block id="b6b2be55c51c8c3e0d58ffcc788b57d0" category="section-title">適用於 Oracle 版本 12cR2 至 18c</block>
+  <block id="138ac8a924ba70371a9fccc55eeffc50" category="paragraph">RAC 資料庫是使用 srvctl config 命令來探索。您應該在/etc/oratab檔案中有資料庫項目。</block>
+  <block id="bdc631ac0c61f623f88a03e50eb10d04" category="paragraph">獨立的資料庫是根據 /etc/oratab 檔案中的項目和 srvctl config 命令的輸出來探索。</block>
+  <block id="065a682f6e2ff04149d8f73d3a4f075e" category="paragraph">ASM 執行個體項目不需要位於 /etc/oratab 檔案中。</block>
+  <block id="d9fa3141119141b68b1c5d32ed6a8e02" category="paragraph">RAC One Node 資料庫只能使用 srvctl config 命令來探索。資料庫應處於 nomount 、 mount 或 open 狀態。如果資料庫已探索且備份與資料庫相關聯、則RAC單一節點資料庫狀態會標示為已重新命名或刪除。</block>
+  <block id="3d4a391fad87ee2d69bf0079369db6c0" category="paragraph">如果資料庫已重新放置，您應該執行下列步驟：。手動重新整理資源。。從資源頁面中選取 RAC One Node 資料庫、然後按一下 Database Settings （資料庫設定）。。設定資料庫、將偏好的叢集節點設為目前裝載資料庫的RAC節點。。執行SnapCenter 不中斷作業。</block>
+  <block id="036a4f113c3f6512ad117bb7e1be7b43" category="summary">定義備份策略可確保您擁有成功還原或複製資料庫的方法。</block>
+  <block id="6444121a0917776aa4b9274dfa1ee288" category="paragraph">定義備份策略、確保您有辦法成功還原或複製資料庫。</block>
+  <block id="6716420f42ba61453a4039a2a57b594e" category="paragraph">您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您備份策略的主要決定因素。</block>
+  <block id="da336ad1b4deba370d6b260076b2dcd0" category="list-text">SLA 定義預期的服務層級、並解決服務可用度和效能等服務相關問題。</block>
+  <block id="a17429e26b7d75928370e09d647110b1" category="list-text">RTO 定義業務程序在服務中斷後必須還原的時間。</block>
+  <block id="7b83aa0b7e4a5f3e6532d57158f7e601" category="list-text">RPO 定義了必須從備份儲存設備恢復的檔案存留期、以便在故障後恢復正常作業。</block>
+  <block id="3e2d2f6a646250c8b750be0ca26e5b46" category="summary">使用主要或次要儲存磁碟區驗證備份複本。</block>
+  <block id="77536321746ee899d10dbbec054c87ce" category="doc">驗證備份複本的位置</block>
+  <block id="de7c468dab6738fd4fc26a1bc2e0b578" category="doc">監控 Oracle 資料庫備份</block>
+  <block id="65cd6f58b54a9ee1b5e15bdbfdbaa326" category="paragraph">瞭解如何監控備份作業和資料保護作業的進度。</block>
+  <block id="1656f43643ea92a562ccdd7e31691e03" category="summary">支援 Oracle 資料庫的備份類型。</block>
+  <block id="92d3f2f0912d79a31442f669496dcfa5" category="list-text">僅限資料檔案和控制檔</block>
+  <block id="5894ddcf494ce28f1eb272ca5e723710" category="list-text">完整資料庫、包含資料檔案、控制檔及歸檔記錄檔</block>
+  <block id="2d92b3df61f86e9074ba4418a26c533e" category="paragraph">當資料庫處於掛載或關機狀態時所建立的備份稱為離線備份。離線備份也稱為冷備份。您只能在離線備份中包含資料檔案和控制檔。您可以建立離線掛載或離線關機備份。</block>
+  <block id="fd9859cb151774e34b52a6d747daab3d" category="list-text">在搜尋方塊中輸入資源群組名稱、或按一下 <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>，然後選擇標記。</block>
+  <block id="6baaca80281eda4a251e4e932a39cd4b" category="paragraph">按一下 <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
+  <block id="50aa129d52e712ab3c9a0f93f956d9e2" category="list-text">在「資源群組」頁面中、選取要備份的資源群組。</block>
+  <block id="3ce47918d2033ed0d68d1e7c6a9b1c45" category="admonition">如果您有兩個資料庫的聯合資源群組、其中一個資料庫在非 NetApp 儲存設備上有資料、則即使另一個資料庫在 NetApp 儲存設備上、備份作業仍會中止。</block>
+  <block id="5655480ae4615b223f1d67d63b4ee784" category="list-text">如果您有多個與資源群組相關聯的原則、請從 * 原則 * 下拉式清單中選取您要使用的備份原則。</block>
+  <block id="fec2251f36365f1f041be06f3809bae9" category="list-text">選擇*備份*。</block>
+  <block id="005c73b58486c2584da03a7d43bff568" category="list-text">選取 * 監控 &gt; 工作 * 來監控進度。</block>
+  <block id="1a48e10f2aae9eca9186a1b6176fb05a" category="list-text">如果無法存取檔案、且掛載點在驗證程序期間無法使用、則作業可能會失敗、並顯示錯誤代碼DBV-00100指定檔案。您應該修改 sco.properties 中 verify_delay 及 verify_retry 計數參數的值。</block>
+  <block id="510a95fea4bba025da5889c50cbbd219" category="summary">備份保留選項。</block>
+  <block id="47360f25b760514cfd5222ea8efb3fca" category="list-text">在原始裝置對應（ RDM ）上使用 ASM 獨立式和 ASM RAC + 您可以在 ASM 上的 Oracle 資料庫上執行備份、還原和複製作業、無論是否使用 ASMLib 。</block>
+  <block id="d9f5c0652a9a0f5a632c2b39950788b1" category="paragraph">如需受支援Oracle版本的最新資訊、請參閱<block ref="ad50fcde58174eb161421bebd1f28ec8" category="inline-link-rx"></block>。</block>
+  <block id="a725ff47fefe45fbde2b714b9bee12db" category="summary">資源群組是一個容器、您可以在其中新增要備份和保護的資源。資源群組可讓您同時備份與指定應用程式相關的所有資料。</block>
+  <block id="75d10fc733cbe6199ca2e7cebf31fe9c" category="paragraph">在 ASM 磁碟群組中有檔案的資料庫必須處於「掛載」或「開啟」狀態、才能使用 Oracle DBVERIFY 公用程式驗證其備份。</block>
+  <block id="471e47d90bffd9838cf1d00548360b40" category="paragraph">將一或多個原則附加到資源群組、以定義您要執行的資料保護工作類型。</block>
+  <block id="8acf498a277189bb79aa36e916139901" category="list-text">在名稱欄位中輸入資源群組的名稱。</block>
+  <block id="47389d06ffe3699c36bdd3b61cbdf438" category="list-text">在「標記」欄位中輸入一或多個標籤、以協助您稍後搜尋資源群組。</block>
+  <block id="ff3276d4a1ffa99a43f3ee9d1c3033ae" category="admonition">您也可以按一下建立原則 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="21a93b161e735360df0b1231bd93b5fa" category="list-text">按一下 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> 在您要為其設定排程的原則之「設定排程」欄中。</block>
+  <block id="4fbbc0d543d28393f6ded666ac8879d5" category="list-text">按一下 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> 在「設定排程」欄中、為原則的所有排程類型設定驗證排程。</block>
+  <block id="86091b14782c404e5145daaead644698" category="sidebar">備份概述</block>
+  <block id="af46c480ec54c1f970bfe4a7284749a5" category="sidebar">備份組態資訊</block>
+  <block id="eb241a142f75605588c77651c591cbd7" category="sidebar">支援的備份組態</block>
+  <block id="7b5fc8f40436e2a3bd39d3f81c4d938f" category="sidebar">備份類型</block>
+  <block id="4116ef53488b8262b4f31ee9190138d3" category="sidebar">要使用的偏好節點</block>
+  <block id="43b06239a1de902160f64efacd46fd64" category="sidebar">目錄備份</block>
+  <block id="8d6dff35d77be2858cb012c9525717f5" category="sidebar">預先定義的環境變數</block>
+  <block id="d275b6dbfd1b9b66915ebb6018551bec" category="sidebar">備份保留</block>
+  <block id="12e6d0dc88f359dcf5383de2e7e9270d" category="sidebar">命名慣例</block>
+  <block id="e9dd934a8e85b48c6d3946a93f06f678" category="sidebar">定義備份策略</block>
+  <block id="2f914c665c66ccefda5991dcf0a8eea3" category="sidebar">檢閱備份需求</block>
+  <block id="a9f304050cba6c177490ec2a73015cbe" category="sidebar">探索 Oracle 資料庫</block>
+  <block id="0a4a3719bc7519d1162060e0f0e08f8a" category="sidebar">建立備份原則</block>
+  <block id="53a051ccb17163d7cd9ed3432619fb1d" category="sidebar">建立資源群組（選用）</block>
+  <block id="dc99555922001c1adae2d9d4baee2217" category="sidebar">監控備份進度</block>
+  <block id="cfe10065fd0fa721a87935a2eac20f7b" category="sidebar">其他備份作業</block>
+  <block id="75b8e448161fa30feba883267dc81521" category="sidebar">使用 UNIX 命令進行備份</block>
+  <block id="de148ec1fc3c9bb7b03f1506761bed93" category="sidebar">檢視備份</block>
 </blocks>

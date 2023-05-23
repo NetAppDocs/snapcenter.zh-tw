@@ -24,7 +24,7 @@ summary: 在安裝SnapCenter 適用於Linux的支援功能套件之前、您應�
 * SUSE Linux Enterprise Server（SLES）
 
 
-如需支援版本的最新資訊、請參閱 https://["NetApp 互通性對照表工具"]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"]。
 
 
 
@@ -52,6 +52,6 @@ Java 1.8.x（64位元）Oracle Java和OpenJDKFlavors
 
 如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。
 
-如需支援版本的最新資訊、請參閱 https://["NetApp 互通性對照表工具"]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"]。
 
 |===

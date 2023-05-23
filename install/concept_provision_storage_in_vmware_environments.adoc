@@ -31,7 +31,7 @@ summary: 您可以在SnapCenter VMware環境中使用適用於Microsoft Windows�
 
 
 
-如需支援版本的最新資訊、請參閱 https://["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 
@@ -136,4 +136,4 @@ NOTE: ESX 5.5i之前的版本不支援此功能。
 
 在使用FC RDM LUN在Microsoft叢集中的節點之間共用儲存設備之前、您必須先建立共用仲裁磁碟和共用儲存磁碟、然後將它們新增至叢集中的兩個虛擬機器。
 
-共用磁碟並非使用Windows的外掛程式建立。您應該建立共享LUN、然後將其新增至叢集中的每個虛擬機器。如需相關資訊、請參閱 https://["跨實體主機叢集虛擬機器"^]。
+共用磁碟並非使用Windows的外掛程式建立。您應該建立共享LUN、然後將其新增至叢集中的每個虛擬機器。如需相關資訊、請參閱 https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.mscs.doc/GUID-1A2476C0-CA66-4B80-B6F9-8421B6983808.html["跨實體主機叢集虛擬機器"^]。

@@ -35,10 +35,10 @@ NOTE: 不支援IBM Java。
 * 您必須為root或非root使用者啟用密碼型SSH連線。
 * 您必須在Windows主機上安裝Java 1.8 64位元。
 +
-http://["適用於所有作業系統的Java下載"]
+http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
 
 +
-https://["NetApp 互通性對照表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
 
 
@@ -49,10 +49,10 @@ https://["NetApp 互通性對照表工具"]
 * 您必須為root或非root使用者啟用密碼型SSH連線。
 * 您必須在Linux主機上安裝Java 1.8 64位元。
 +
-http://["適用於所有作業系統的Java下載"]
+http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
 
 +
-https://["NetApp 互通性對照表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
 * 對於在Linux主機上執行的SAP HANA資料庫、在安裝SAP HANA資料庫外掛程式時SnapCenter 、會自動安裝適用於UNIX的整套外掛程式。
 

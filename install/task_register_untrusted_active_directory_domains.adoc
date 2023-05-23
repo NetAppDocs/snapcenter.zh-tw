@@ -77,7 +77,7 @@ link:task_configure_CA_client_certificate_for_LDAPS.html["設定LDAPS的CA用戶
  a| 
 如果網域FQDN無法從SnapCenter 無法從無法解析的伺服器、請指定一個或多個網域控制器IP位址。
 
-如需詳細資訊、請參閱 https://["從GUI新增不受信任網域的網域控制器IP"^]。
+如需詳細資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_does_not_allow_to_add_Domain_Controller_IP_for_untrusted_domain_from_GUI["從GUI新增不受信任網域的網域控制器IP"^]。
 
 |===
 .. 如果您選取* LDAPS*、請指定登錄LDAPS不受信任網域所需的資訊：

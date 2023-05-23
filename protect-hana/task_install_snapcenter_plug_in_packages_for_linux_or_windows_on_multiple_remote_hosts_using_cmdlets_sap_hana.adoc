@@ -23,7 +23,7 @@ summary: 您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、同
 . 在支援服務器主機上SnapCenter 、使用Open-SmConnection Cmdlet建立工作階段、然後輸入您的認證資料。
 . 使用Install-SmHostPackage Cmdlet和必要參數、在多個主機上安裝外掛程式。
 +
-您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://["《軟件指令程式參考指南》SnapCenter"^]。
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]。
 
 +
 您可以在手動安裝外掛程式時使用-skipprecheck選項、而且不想驗證主機是否符合安裝外掛程式的需求。
