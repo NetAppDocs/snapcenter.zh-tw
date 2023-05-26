@@ -86,4 +86,5 @@ nn-0x<target_node_name_1>:pn-0x<target_port_name_1>
 nn-0x<target_node_name_2>:pn-0x<target_port_name_2>
 }
 ....
+* 您應確保 LUN 未使用由混合式傳輸協定 iSCSI 和 FC 組成的 iGroup 、對應至 AIX 主機。如需詳細資訊、請參閱 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_Plug-in_for_Oracle_operations_fail_with_error_Unable_to_discover_the_device_for_LUN_LUN_PATH["作業失敗、錯誤無法探索 LUN 的裝置"^]。
 

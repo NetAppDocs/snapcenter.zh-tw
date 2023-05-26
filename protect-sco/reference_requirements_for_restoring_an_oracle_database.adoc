@@ -31,4 +31,5 @@ NOTE: 如需如何編輯asm_diskstring參數的資訊、請參閱 https://kb.net
 +
 如果未安裝或未更新授權、則會顯示警告訊息。如果您忽略警告並繼續、從RDM還原就會失敗。
 
+* 您應確保 LUN 未使用由混合式傳輸協定 iSCSI 和 FC 組成的 iGroup 、對應至 AIX 主機。如需詳細資訊、請參閱 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_Plug-in_for_Oracle_operations_fail_with_error_Unable_to_discover_the_device_for_LUN_LUN_PATH["作業失敗、錯誤無法探索 LUN 的裝置"^]。
 

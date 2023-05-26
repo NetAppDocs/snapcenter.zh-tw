@@ -8124,4 +8124,6 @@
   <block id="6c0673b42ebb5475d507b9bee432a6e1" category="image-alt">選擇條件和序號輸入的螢幕擷取畫面。</block>
   <block id="e54115ab5aedb070ef9c763b003e67f1" category="section-title">步驟 5 ：新增控制器型授權</block>
   <block id="392e651b70e91641288713738f526ce0" category="section-title">步驟 6 ：移除試用授權</block>
+  <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">作業失敗、錯誤無法探索 LUN 的裝置</block>
+  <block id="24642a08e354f43168ca4f1178850f84" category="list-text">您應確保 LUN 未使用由混合式傳輸協定 iSCSI 和 FC 組成的 iGroup 、對應至 AIX 主機。如需詳細資訊、請參閱<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>。</block>
 </blocks>
