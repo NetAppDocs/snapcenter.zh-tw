@@ -25,19 +25,6 @@ image::../media/upgrade_workflow.png[升級工作流程]
 | 如果您使用SnapCenter 的是伺服器版本... | 您可以直接將SnapCenter 伺服器升級至... | 支援的外掛程式版本 
 
 
-.2+| 4.4.x | 4.5.x  a| 
-* 4.4.x
-* 4.5.x
-
-
-
-
-| 4.6.x  a| 
-* 4.6.x
-
-
-
-
 .2+| 4.5.x | 4.6.x  a| 
 * 4.5.x
 * 4.6.x
@@ -51,18 +38,29 @@ image::../media/upgrade_workflow.png[升級工作流程]
 
 
 
- a| 
-4.6.x
- a| 
-4.7
- a| 
+.2+| 4.6.x | 4.7  a| 
 * 4.6.x
 * 4.7
 
 
+
+
+| 4.8.  a| 
+* 4.8.
+
+
+
+
+| 4.7  a| 
+4.8.
+ a| 
+* 4.7
+* 4.8.
+
+
 |===
 
-IMPORTANT: 例如、如果您使用SnapCenter 的是4．4．x版、想要升級至4．7版、您應該先升級至4．6．x、然後再執行4.7版的循環升級。
+IMPORTANT: 例如、如果您使用的是 SnapCenter 4.5.x 版、而且想要升級至 4.8 版、則應先升級至 4.6.x 、然後再進行復原升級至 4.8 。
 
 
 NOTE: 如需升級SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式的相關資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["升級SnapCenter VMware vSphere的插件"^]。

@@ -7168,7 +7168,6 @@
   <block id="35702b2ddcae5a0a26dfc495c46421b5" category="list-text">您應該已經備份SnapCenter 所有已在SnapCenter 支援伺服器主機或外掛主機上修改的支援功能組態檔案。</block>
   <block id="77b44cc84c18e6f68f7831889cfc9abd" category="paragraph">例如：SnapDriveService.exe.config、SMCoreServiceHost.exe.config等。SnapCenter</block>
   <block id="8a34c1f412e1e3388d29a41e30823460" category="list-text">升級程序會將Windows、Linux或AIX主機置於「維護」模式、使主機無法執行任何排程工作。</block>
-  <block id="fef826a349ca99b933042ba1dfa73260" category="paragraph">4.4.x</block>
   <block id="4b1f6cbbab8f5d76a3e1d1b2c562722e" category="paragraph">4.5.x</block>
   <block id="dd9f485e72f96875e028693823f26e70" category="inline-link">升級SnapCenter VMware vSphere的插件</block>
   <block id="25878f69131b31b18aeda7ba36139c1b" category="admonition">如需升級SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式的相關資訊、請參閱<block ref="9fa07c2f7a59d2185d48077e327b705e" category="inline-link-rx"></block>。</block>
@@ -7358,7 +7357,6 @@
   <block id="8159134911a3775f77dfaeafb846c0d3" category="paragraph">在「*工作詳細資料*」頁面中、有一則警告訊息建議客戶將指令碼複製到指令碼路徑、然後編輯原則、以提供相對於指令碼路徑的路徑。對於複製生命週期工作、會在子工作層級顯示警告訊息。</block>
   <block id="adebd9b53fa49781be98cf46c0afc646" category="summary">說明如何升級SnapCenter Sfor Server和外掛程式、以及支援的升級途徑</block>
   <block id="820341dc67dd887805f2620efabe6669" category="cell">4.7</block>
-  <block id="e581eab69cb147759b9dbeb0af1e93f2" category="admonition">例如、如果您使用SnapCenter 的是4．4．x版、想要升級至4．7版、您應該先升級至4．6．x、然後再執行4.7版的循環升級。</block>
   <block id="7cbf140d17e0f4c0fe27276252add63e" category="list-text">以下列格式建立使用者群組帳戶：</block>
   <block id="780fc7bdbc05c3ae8dcfc1e6ea26a283" category="list-text">可使用外掛主機SMCoreServiceHost.exe.Config檔案中的PredefinedWindows指令碼目錄金鑰來定義指令碼路徑。</block>
   <block id="487a34d280250073f86b353bd430b05b" category="paragraph">如有需要、您可以變更此路徑並重新啟動SMcore服務。建議您使用預設的安全路徑。</block>
@@ -8126,4 +8124,6 @@
   <block id="392e651b70e91641288713738f526ce0" category="section-title">步驟 6 ：移除試用授權</block>
   <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">作業失敗、錯誤無法探索 LUN 的裝置</block>
   <block id="24642a08e354f43168ca4f1178850f84" category="list-text">您應確保 LUN 未使用由混合式傳輸協定 iSCSI 和 FC 組成的 iGroup 、對應至 AIX 主機。如需詳細資訊、請參閱<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>。</block>
+  <block id="4fb437564892944d73f87c822342e2bb" category="cell">4.8.</block>
+  <block id="7d9be6a6877ece66779a3e8834d493df" category="admonition">例如、如果您使用的是 SnapCenter 4.5.x 版、而且想要升級至 4.8 版、則應先升級至 4.6.x 、然後再進行復原升級至 4.8 。</block>
 </blocks>
