@@ -1,0 +1,208 @@
+---
+permalink: install/configure_mfa_using_powershell_sccli_restapi.html 
+sidebar: sidebar 
+keywords: mfa, authentication, multifactor authentication 
+summary: 您可以使用 REST API 、 PowerShell 和 sccli 介面來設定 MFA 。 
+---
+= 使用 PowerShell 、 sccli 和 REST API 在 SnapCenter 伺服器中設定 MFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 PowerShell 、 sccli 和 REST API 在 SnapCenter 伺服器中設定 MFA 。
+
+
+
+== SnapCenter MFA CLI 驗證
+
+在 PowerShell 和 sccli 中、現有的 Cmdlet （ Open-SmConnection ）會以另一個稱為「 AccessToken 」的欄位來延伸、以使用承載權杖來驗證使用者。
+
+`Open-SmConnection -Credential <PSCredential> [-SMSbaseUrl <String>] [-Port <String>] [-RoleName <String>] [ -AccessToken <string>]`
+
+執行上述 Cmdlet 之後 , 會建立工作階段 , 讓個別使用者進一步執行 SnapCenter Cmdlet 。
+
+
+
+== SnapCenter MFA REST API 驗證
+
+在 REST API 用戶端（例如 Postman 或 swagger ）中使用 _Authorization=B承載 <access token> 格式的承載權杖、並在標頭中提及使用者 RoleName 、以取得 SnapCenter 的成功回應。
+
+
+
+== MFA REST API 工作流程
+
+當 MFA 設定為 AD FS 時、您應該使用存取（承載）權杖進行驗證、以便透過任何 REST API 存取 SnapCenter 應用程式。
+
+*關於此工作*
+
+* 您可以使用任何 REST 用戶端、例如 Postman 、 Swagger UI 或 Fireplane 。
+* 取得存取權杖、並使用它來驗證後續要求（ SnapCenter REST API ）以執行任何作業。
+
+
+*步驟*
+
+* 透過 AD FS MFA * 驗證
+
+. 設定 REST 用戶端呼叫 AD FS 端點以取得存取權杖。
++
+當您按下按鈕以取得應用程式的存取權杖時、系統會將您重新導向至 AD FS SSO 頁面、您必須在其中提供 AD 認證並驗證 MFA 。
+1. 在 AD FS SSO 頁面的「使用者名稱」文字方塊中、輸入您的使用者名稱或電子郵件。
+
++
++
+使用者名稱必須格式化為 user@domain 或 domain\user 。
+
+. 在密碼文字方塊中、輸入您的密碼。
+. 按一下*登入*。
+. 在 * 登入選項 * 區段中、選取驗證選項並進行驗證（視您的組態而定）。
++
+** 推播：核准傳送至手機的推播通知。
+** QR 代碼：使用驗證點行動應用程式掃描 QR 代碼、然後輸入應用程式中顯示的驗證代碼
+** 一次性密碼：輸入 Token 的一次性密碼。
+
+
+. 驗證成功後、會開啟一個快顯視窗、其中包含存取權、 ID 和重新整理 Token 。
++
+複製存取權杖、並在 SnapCenter REST API 中使用它來執行作業。
+
+. 在 REST API 中、您應該在標頭區段中傳遞存取權杖和角色名稱。
+. SnapCenter 會從 AD FS 驗證此存取權杖。
++
+如果它是有效的權杖、 SnapCenter 會將其解碼、並取得使用者名稱。
+
+. SnapCenter 會使用使用者名稱和角色名稱來驗證使用者執行 API 。
++
+如果驗證成功、 SnapCenter 會傳回結果、否則會顯示錯誤訊息。
+
+
+
+
+
+== 啟用或停用 REST API 、 CLI 和 GUI 的 SnapCenter MFA 功能
+
+* 圖形使用者介面 *
+
+*步驟*
+
+. 以 SnapCenter 管理員身分登入 SnapCenter Server 。
+. 按一下 * 設定 * > * 全域設定 * > * 多重資料驗證（ MFA ）設定 *
+. 選取介面（ GUI/RST API/CLI ）以啟用或停用 MFA 登入。
+
+
+* PowerShell 介面 *
+
+*步驟*
+
+. 執行 PowerShell 或 CLI 命令、以啟用 MFA for GUI 、 REST API 、 PowerShell 和 sccli 。
++
+`Set-SmMultiFactorAuthentication -IsGuiMFAEnabled -IsRestApiMFAEnabled`
+`-IsCliMFAEnabled -Path`
+
++
+path 參數會指定 AD FS MFA 中繼資料 XML 檔案的位置。
+
++
+啟用 MFA 以使用指定的 AD FS 中繼資料檔案路徑來設定 SnapCenter GUI 、 REST API 、 PowerShell 和 sccli 。
+
+. 使用檢查 MFA 組態狀態和設定 `Get-SmMultiFactorAuthentication` Cmdlet。
+
+
+*sccli 介面 *
+
+*步驟*
+
+. `# sccli Set-SmMultiFactorAuthentication -IsGuiMFAEnabled true -IsRESTAPIMFAEnabled true -IsCliMFAEnabled true  -Path "C:\ADFS_metadata\abc.xml"`
+. `# sccli Get-SmMultiFactorAuthentication`
+
+
+* REST API*
+
+. 執行下列 POST API 以啟用 MFA for GUI 、 REST API 、 PowerShell 和 sccli 。
++
+|===
+
+
+| 參數 | 價值 
+
+
+ a| 
+要求的 URL
+ a| 
+/API/4.9/settings/multitactorauthentication
+
+
+
+ a| 
+HTTP方法
+ a| 
+貼文
+
+
+
+ a| 
+要求主體
+ a| 
+｛
+  "IsGuiMFAEnabled" ：錯誤、
+  "IsRestApiMFAEnabled" ：對、
+  "IsClicMFAEnabled" ：錯、
+  "ADFSConfigFilePath" ： "C:\\ADFS_中繼 資料 \\abc.xml "
+}
+
+
+
+ a| 
+回應本文
+ a| 
+｛
+  "MFAConfiguration" ： {
+    "IsGuiMFAEnabled" ：錯誤、
+    "ADFSConfigFilePath" ： "C:\\ADFS_中繼 資料 \\abc.xml 、
+    "SCConfigFilePath" ： null 、
+    "IsRestApiMFAEnabled" ：對、
+    "IsClicMFAEnabled" ：錯、
+    "ADFSHostName" ： "win-adfs-sc49.winscedom2.com
+  }
+}
+
+|===
+. 使用下列 API 檢查 MFA 組態狀態和設定。
++
+|===
+
+
+| 參數 | 價值 
+
+
+ a| 
+要求的 URL
+ a| 
+/API/4.9/settings/multitactorauthentication
+
+
+
+ a| 
+HTTP方法
+ a| 
+取得
+
+
+
+ a| 
+回應本文
+ a| 
+｛
+  "MFAConfiguration" ： {
+    "IsGuiMFAEnabled" ：錯誤、
+    "ADFSConfigFilePath" ： "C:\\ADFS_中繼 資料 \\abc.xml 、
+    "SCConfigFilePath" ： null 、
+    "IsRestApiMFAEnabled" ：對、
+    "IsClicMFAEnabled" ：錯、
+    "ADFSHostName" ： "win-adfs-sc49.winscedom2.com
+  }
+}
+
+|===
+

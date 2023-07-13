@@ -1,0 +1,270 @@
+---
+permalink: install/enable_multifactor_authentication_using_RestAPI_PowerShell_SCCLI.html 
+sidebar: sidebar 
+keywords: mfa, authentication, multifactor authentication 
+summary: 您可以使用 REST API 、 PowerShell 和 sccli 介面來管理 MFA 。 
+---
+= 使用 REST API 、 PowerShell 和 sccli 來管理多因素驗證（ MFA ）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瀏覽器、 REST API 、 PowerShell 和 sccli 支援 MFA 登入。MFA 可透過 AD FS 身分識別管理員提供支援。您可以從 GUI 、 REST API 、 PowerShell 和 sccli 啟用 MFA 、停用 MFA 、以及設定 MFA 。
+
+
+
+== 將 AD FS 設定為 OAUTH/OIDC
+
+* 使用 Windows GUI 精靈 * 設定 AD FS
+
+. 瀏覽至 * 伺服器管理員儀表板 * > * 工具 * > * ADFS 管理 * 。
+. 瀏覽至 *ADFS* > * 應用程式群組 * 。
++
+.. 在 * 應用程式群組 * 上按一下滑鼠右鍵。
+.. 選取 * 新增應用程式群組 * 、然後輸入 * 應用程式名稱 * 。
+.. 選取 * 伺服器應用程式 * 。
+.. 單擊 * 下一步 * 。
+
+
+. 複本 * 用戶端識別碼 * 。
++
+這是用戶端 ID 。
+...在重新導向 URL 中新增回撥 URL （ SnapCenter 伺服器 URL ）。
+...單擊 * 下一步 * 。
+
+. 選取 * 產生共用密碼 * 。
++
+複製機密值。這是用戶端的秘密。
+...單擊 * 下一步 * 。
+
+. 在 * 摘要 * 頁面上、按一下 * 下一步 * 。
++
+.. 在 * 完整 * 頁面上、按一下 * 關閉 * 。
+
+
+. 右鍵單擊新添加的 * 應用程序組 * ，然後選擇 * 屬性 * 。
+. 從應用程式內容中選取 * 新增應用程式 * 。
+. 按一下 * 新增應用程式 * 。
++
+選取「網路 API 」、然後按一下「 * 下一步 * 」。
+
+. 在「設定 Web API 」頁面上、在「識別碼」區段中、輸入上一步所建立的 SnapCenter 伺服器 URL 和用戶端識別碼。
++
+.. 按一下「 * 新增 * 」。
+.. 單擊 * 下一步 * 。
+
+
+. 在 * 選擇存取控制原則 * 頁面上、根據您的需求選擇控制原則（例如、允許所有人並要求 MFA ）、然後按一下 * 下一步 * 。
+. 在「 * 設定應用程式權限 * 」頁面上、依預設會選取 OpenID 作為範圍、按一下 * 下一步 * 。
+. 在 * 摘要 * 頁面上、按一下 * 下一步 * 。
++
+在 * 完整 * 頁面上、按一下 * 關閉 * 。
+
+. 在 * 範例應用程式內容 * 頁面上、按一下 * 確定 * 。
+. 由授權伺服器（ AD FS ）發出的 JWT 權杖、並打算由資源使用。
++
+此權杖的「 aud 」或「 Audience 」宣告必須符合資源或 Web API 的識別碼。
+
+. 編輯選取的 WebAPI 、並檢查回撥 URL （ SnapCenter 伺服器 URL ）和用戶端識別碼是否正確新增。
++
+設定 OpenID Connect 以提供宣告的使用者名稱。
+
+. 開啟位於伺服器管理員右上角 * 工具 * 功能表下的 * AD FS 管理 * 工具。
++
+.. 從左側側欄中選擇 * 應用程式群組 * 資料夾。
+.. 選取 Web API 、然後按一下 * 編輯 * 。
+.. 前往「發行轉換規則」標籤
+
+
+. 按一下*新增規則*。
++
+.. 在請款規則範本下拉式清單中、選取 * 將 LDAP 屬性傳送為請款 * 。
+.. 單擊 * 下一步 * 。
+
+
+. 輸入 * 請款規則 * 名稱。
++
+.. 在屬性儲存區下拉式清單中選取 * Active Directory* 。
+.. 在 *LDAP Attribute* 下拉列表中選擇 *User-Princie-Name* ，在 o*utGo Claim Type* 下拉列表中選擇 *UPN* 。
+.. 單擊*完成*。
+
+
+
+
+
+
+== 使用 PowerShell 命令建立應用程式群組
+
+您可以使用 PowerShell 命令建立應用程式群組、 Web API 、並新增範圍和宣告。這些命令以自動指令碼格式提供。如需詳細資訊、請參閱 <link to KB article> 。
+
+. 使用下列組合在 AD FS 中建立新的應用程式群組。
++
+`New-AdfsApplicationGroup -Name $ClientRoleIdentifier -ApplicationGroupIdentifier $ClientRoleIdentifier`
+
++
+`ClientRoleIdentifier` 應用程式群組的名稱
+
++
+`redirectURL` 授權後重新導向的有效 URL
+
+. 建立 AD FS 伺服器應用程式並產生用戶端機密。
++
+`Add-AdfsServerApplication -Name "$ClientRoleIdentifier - Server app" -ApplicationGroupIdentifier` `$ClientRoleIdentifier -RedirectUri $redirectURL  -Identifier $identifier -GenerateClientSecret`
+
+. 建立 ADFS Web API 應用程式、並設定其應使用的原則名稱。
++
+`$identifier = (New-Guid).Guid`
+
++
+`Add-AdfsWebApiApplication -ApplicationGroupIdentifier $ClientRoleIdentifier  -Name "App Web API"`
+
++
+`-Identifier $identifier -AccessControlPolicyName "Permit everyone"`
+
+. 從下列命令的輸出中取得用戶端 ID 和用戶端機密、因為只會顯示一次。
++
+`"client_id = $identifier"`
+
++
+`"client_secret: "$($ADFSApp.ClientSecret)`
+
+. 將 allats補助 和 OpenID 權限授予 AD FS 應用程式。
++
+`Grant-AdfsApplicationPermission -ClientRoleIdentifier $identifier -ServerRoleIdentifier $identifier -ScopeNames @('openid')`
+
++
+`$transformrule = @"`
+
++
+`@RuleTemplate = "LdapClaims"`
+
++
+`@RuleName = "AD User properties and Groups"`
+
++
+`c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer ==`
+
++
+`"AD AUTHORITY"]`
+
++
+`=> issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"), query = ";userPrincipalName;{0}", param = c.Value);`
+
++
+`"@`
+
+. 寫出轉換規則檔案。
++
+`$transformrule |Out-File -FilePath .\issueancetransformrules.tmp -force -Encoding ascii`
+`$relativePath = Get-Item .\issueancetransformrules.tmp`
+
+. 命名 Web API 應用程式、並使用外部檔案定義其「發行轉換規則」。
++
+`Set-AdfsWebApiApplication -Name "$ClientRoleIdentifier - Web API" -TargetIdentifier`
+
++
+`$identifier -Identifier $identifier,$redirectURL -IssuanceTransformRulesFile`
+
++
+`$relativePath`
+
+
+
+
+
+== 更新存取權杖到期時間
+
+您可以使用 PowerShell 命令更新存取權杖到期時間。
+
+*關於此工作*
+
+* 存取權杖只能用於使用者、用戶端和資源的特定組合。存取權杖無法撤銷、且在過期前有效。
+* 依預設、存取權杖的到期時間為 60 分鐘。  這段最短的到期時間已足夠且已調整。您必須提供足夠的價值、以避免任何持續進行的業務關鍵工作。
+
+
+*步驟*
+
+若要更新應用程式群組 WebApi 的存取權杖到期時間、請在 AD FS 伺服器中使用下列命令。
+
++
+`Set-AdfsWebApiApplication -TokenLifetime 3600 -TargetName "<Web API>"`
+
+
+
+== 從 AD FS 取得承載權杖
+
+您應該在任何 REST 用戶端（例如 Postman ）中填入下列參數、並提示您填寫使用者認證。此外、您應該輸入第二因素驗證（您擁有的東西和您的東西）來取得承載權杖。
+
++
+承載權杖的有效性可從 AD FS 伺服器根據應用程式進行設定、預設的有效期為 60 分鐘。
+
+|===
+
+
+| 欄位 | 價值 
+
+
+ a| 
+授與類型
+ a| 
+授權代碼
+
+
+
+ a| 
+回撥 URL
+ a| 
+如果您沒有回撥 URL 、請輸入應用程式的基礎 URL 。
+
+
+
+ a| 
+驗證 URL
+ a| 
+[ADFS- 網域名稱 ]/ADFS/OAuth2/Authorize
+
+
+
+ a| 
+存取權杖 URL
+ a| 
+[ADFS- 網域名稱 ]/ADFS/OAuth2/token
+
+
+
+ a| 
+用戶端ID
+ a| 
+輸入 AD FS 用戶端 ID
+
+
+
+ a| 
+用戶端機密
+ a| 
+輸入 AD FS 用戶端機密
+
+
+
+ a| 
+範圍
+ a| 
+OpenID
+
+
+
+ a| 
+用戶端驗證
+ a| 
+以基本驗證標頭傳送
+
+
+
+ a| 
+資源
+ a| 
+在 *Advance Options* 標籤中、新增與 Callback URL 值相同的資源欄位、此值在 JWT Token 中會顯示為「 aud 」值。
+
+|===

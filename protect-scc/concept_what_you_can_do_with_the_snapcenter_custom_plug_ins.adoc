@@ -35,7 +35,7 @@ summary: 您可以使用SnapCenter 「不一樣的自訂外掛程式」來執行
 
 * 利用ONTAP 現有的複寫關係（Snapvault / SnapMirror /統一複寫）、使用SnapCenter 「更新一線快照」複本至「二線」複本
 +
-主資料和二線資料可以是「不二」、「不二」、「不二」、「不二」或「雲端」ONTAP ONTAP FAS AFF ONTAP 。
+ONTAP 主要和次要可以是 ONTAP FAS 、 AFF 、 All SAN Array （ ASA ）、 Select 或 Cloud ONTAP 。
 
 * 恢復完整ONTAP 的實體磁碟區、LUN或檔案。
 +

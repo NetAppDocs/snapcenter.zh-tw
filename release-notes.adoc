@@ -13,4 +13,4 @@ summary: 提供SnapCenter 此版本的《支援服務器》和SnapCenter 《支�
 [role="lead"]
 提供SnapCenter 此版本的《支援服務器》和SnapCenter 《支援服務器的功能》外掛套件的重要資訊、包括修正問題、已知問題、注意事項及限制。
 
-如需詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481["Software 4.8發行說明SnapCenter"^]。
+如需詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886204["SnapCenter 軟體 4.9 版本資訊"^]。

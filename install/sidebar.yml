@@ -24,8 +24,14 @@ entries:
     url: "/install/concept_authentication_methods_for_your_credentials.html"
   - title: 儲存虛擬機器連線與認證
     url: "/install/concept_svm_connections_and_credentials.html"
-  - title: 管理多因素驗證（ MFA ）
-    url: "/install/enable_multifactor_authentication.html"
+  - title: 多因素驗證（MFA）
+    entries:
+    - title: 管理多因素驗證（ MFA ）
+      url: "/install/enable_multifactor_authentication.html"
+    - title: 使用 REST API 、 PowerShell 和 sccli 來管理多因素驗證（ MFA ）
+      url: "/install/enable_multifactor_authentication_using_RestAPI_PowerShell_SCCLI.html"
+    - title: 使用 PowerShell 、 sccli 和 REST API 在 SnapCenter 伺服器中設定 MFA
+      url: "/install/configure_mfa_using_powershell_sccli_restapi.html"
 - title: 安裝SnapCenter 此伺服器
   url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
 - title: 登入SnapCenter 到
@@ -44,6 +50,26 @@ entries:
     url: "/install/task_configure_CA_certificate_with_snapcenter_site.html"
   - title: 啟用SnapCenter 適用於伺服器的CA憑證
     url: "/install/task_enable_ca_certificates_for_snapcenter.html"
+- title: 設定並啟用雙向 SSL 通訊
+  entries:
+  - title: 設定雙向 SSL 通訊
+    url: "/install/task_configure_two_way_ssl.html"
+  - title: 啟用雙向 SSL 通訊
+    url: "/install/task_enable_two_way_ssl.html"
+- title: 設定憑證型驗證
+  entries:
+  - title: 從 SnapCenter 伺服器匯出憑證授權單位（ CA ）憑證
+    url: "/install/task_export_ca_certificates_from_snapcenter_server.html"
+  - title: 將 CA 憑證匯入 Windows 主機外掛程式
+    url: "/install/task_import_ca_certificate_to_windows_plugin_hosts.html"
+  - title: 將 CA 憑證匯入 UNIX 主機外掛程式、並將根或中繼憑證設定為 SPL 信任存放區
+    entries:
+    - title: 將 CA 憑證匯入 UNIX 主機外掛程式
+      url: "/install/task_import_ca_certificate_to_unix_plugin_hosts.html"
+    - title: 將根或中繼憑證設定為SPL信任存放區
+      url: "/install/task_configure_root_or_intermediate_certificates_to_trust_store.html"
+  - title: 啟用憑證型驗證
+    url: "/install/task_enable_certificate_based_authentication.html"
 - title: 設定Active Directory、LDAP和LDAPS
   entries:
   - title: 登錄不受信任的Active Directory網域

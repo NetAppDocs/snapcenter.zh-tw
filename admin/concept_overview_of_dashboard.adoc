@@ -2,7 +2,7 @@
 permalink: admin/concept_overview_of_dashboard.html 
 sidebar: sidebar 
 keywords:  
-summary: 儀表板可從SnapCenter 左側導覽窗格、讓您一覽系統的健全狀況、包括最近的工作活動、警示、保護摘要、儲存效率與使用率、SnapCenter 不中斷作業狀態（備份、複製、還原）、獨立式和Windows叢集主機的組態狀態、 由SnapCenter VMware管理的儲存虛擬機器數（SVMs）、以及授權容量。 
+summary: 從 SnapCenter 左側瀏覽窗格中、儀表板可讓您一覽系統的健全狀況、包括最近的工作活動、警示、保護摘要、儲存效率和使用量、 SnapCenter 工作的狀態（備份、複製、還原）、獨立式和 Windows 叢集主機的組態狀態、 由 SnapCenter 管理的儲存虛擬機器（ SVM ）數量、以及授權容量。 
 ---
 = 儀表板總覽
 :allow-uri-read: 
@@ -263,7 +263,7 @@ NOTE: 如果您使用SnapCenter 還原伺服器4.2和舊版外掛程式（4.2之
 「已授權容量」方塊會顯示SnapCenter 有關「已授權容量總計」、「已使用容量」、「容量臨界值警示」及「以非標準容量為基礎的授權」授權之授權到期警示的資訊。
 
 
-NOTE: 只有SnapCenter 在Cloud Volumes ONTAP 使用以功能為基礎的支援時、才會顯示此畫面。ONTAP Select對於支援不受限容量的支援平台、不需取得容量授權、即可透過FAS 控制器取得不受限容量的支援、而不需取得容量授權。AFF SnapCenter
+NOTE: 只有SnapCenter 在Cloud Volumes ONTAP 使用以功能為基礎的支援時、才會顯示此畫面。ONTAP Select對於 FAS 、 AFF 或所有 SAN 陣列（ ASA ）平台、 SnapCenter 授權是以控制器為基礎、並獲得無限容量授權、不需要容量授權。
 
 |===
 | 授權狀態 | 說明 

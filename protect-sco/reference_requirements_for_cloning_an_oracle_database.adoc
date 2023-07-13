@@ -32,13 +32,11 @@ summary: 在複製Oracle資料庫之前、您應確保已完成先決條件。
 ** 實體複本主機應該能夠從主要或次要儲存設備探索LUN。
 +
 *** 如果您要從主要儲存設備或次要（Vault或Mirror）儲存設備複製到替代主機、請確定iSCSI工作階段是建立在次要儲存設備和備用主機之間、或是適當地分區用於FC。
-+
-**** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["《Linux主機公用程式安裝與設定指南》"^]
-**** https://library.netapp.com/ecm/ecm_download_file/ECMP1119223["《AIX主機公用程式安裝與設定指南》"^]
-
-
 *** 如果您要從Vault或Mirror儲存設備複製到同一主機、請確定iSCSI工作階段是在Vault或Mirror儲存設備與主機之間建立、或是適當地分區用於FC。
 *** 如果是在虛擬化環境中進行複製、請確定iSCSI工作階段是在主要或次要儲存設備與裝載備用主機的ESX伺服器之間建立、或是適當地分區以供FC使用。
++
+如需相關資訊、請參閱 https://docs.netapp.com/us-en/ontap-sanhost/["主機公用程式文件"]。
+
 
 
 ** 如果來源資料庫是ASM資料庫：

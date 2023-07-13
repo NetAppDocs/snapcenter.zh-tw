@@ -11,20 +11,20 @@ summary: 利用嚴苛的安全性與驗證功能、確保資料安全無虞。Sn
 
 
 [role="lead"]
-本主題說明如何管理 Active Directory Federation Service （ AD FS ）伺服器和 SnapCenter 伺服器中的多因素驗證（ MFA ）功能。
+您可以在 Active Directory Federation Service （ AD FS ）伺服器和 SnapCenter 伺服器中管理多因素驗證（ MFA ）功能。
 
 
 
 == 啟用多因素驗證（ MFA ）
 
-本主題說明如何在 Active Directory Federation Service （ AD FS ）伺服器和 SnapCenter 伺服器中啟用 MFA 功能。
+您可以使用 PowerShell 命令為 SnapCenter 伺服器啟用 MFA 功能。
 
 .關於這項工作
 * 在相同的AD FS中設定其他應用程式時、支援SSO型登入。SnapCenter在某些AD FS組態中、SnapCenter 由於安全原因、可能需要使用者驗證、視AD FS工作階段持續性而定。
-* 執行即可取得可搭配 Cmdlet 使用之參數的相關資訊及其說明 `Get-Help command_name`。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2880726["《軟件指令程式參考指南》SnapCenter"^]。
+* 執行即可取得可搭配 Cmdlet 使用之參數的相關資訊及其說明 `Get-Help command_name`。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。
 
 
-.您需要的產品
+.開始之前
 * Windows Active Directory Federation Service（AD FS）應在各自的網域中啟動並執行。
 * 您應該擁有 AD FS 支援的多因素驗證服務、例如 Azure MFA 、 Cisco Duo 等。
 * 無論時區為何、均應使用相同的資訊區和AD FS伺服器時間戳記。SnapCenter
@@ -53,10 +53,7 @@ CA憑證為必填、原因如下：
 path參數指定將MFA中繼資料檔案儲存到SnapCenter Sof the Server主機的路徑。
 
 . 將產生的檔案複製到AD FS主機、以設定SnapCenter 將SURE做為用戶端實體。
-. 使用為 SnapCenter 伺服器啟用 MFA `Set-SmMultiFactorAuthentication -Enable -Path` Cmdlet。
-+
-path參數指定AD FS MFA中繼資料XML檔案的位置、SnapCenter 該檔案已在步驟3複製到SetfServer。
-
+. 使用為 SnapCenter 伺服器啟用 MFA `Set-SmMultiFactorAuthentication` Cmdlet。
 . （選用）使用檢查 MFA 組態狀態和設定 `Get-SmMultiFactorAuthentication` Cmdlet。
 . 前往Microsoft管理主控台（MMC）並執行下列步驟：
 +
@@ -119,7 +116,7 @@ path參數指定AD FS MFA中繼資料XML檔案的位置、SnapCenter 該檔案�
 
 也可使用REST API來啟用「支援MFA」功能。SnapCenter
 
-以取得疑難排解資訊。請參閱 link:..https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_login_in_multiple_tabs_shows_MFA_error%3A_The_SAML_message_response_(1)_doesn%E2%80%99t_match_the_expected_response_(2)["在多個索引標籤中登入顯示MFA錯誤SnapCenter"]。
+如需疑難排解資訊、請參閱 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["在多個索引標籤中同時嘗試登入會顯示 MFA 錯誤"]。
 
 
 
@@ -165,6 +162,6 @@ path參數指定AD FS MFA中繼資料XML檔案的位置、SnapCenter 該檔案�
 == 停用多因素驗證（MFA）
 
 .步驟
-. 停用 MFA 、並清除使用啟用 MFA 時所建立的組態檔案 `Set-SmMultiFactorAuthentication -Disable` Cmdlet。
+. 停用 MFA 、並清除使用啟用 MFA 時所建立的組態檔案 `Set-SmMultiFactorAuthentication` Cmdlet。
 . 關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器、以清除現有或作用中的工作階段 Cookie 、然後再次登入。
 

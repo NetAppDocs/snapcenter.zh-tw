@@ -56,7 +56,7 @@ NOTE: 如果您變更儲存系統密碼、排程工作、隨需備份和還原�
 輸入儲存系統名稱或IP位址。
 
 
-NOTE: 儲存系統名稱（不含網域名稱）必須包含15個或更少字元、且名稱必須可解析。若要建立名稱超過15個字元的儲存系統連線、您可以使用Add-SmStorageConnectionPowerShell Cmdlet。
+NOTE: 儲存系統名稱（不包括網域名稱）必須有 15 個或更少的字元、而且名稱必須可解析。若要建立名稱超過15個字元的儲存系統連線、您可以使用Add-SmStorageConnectionPowerShell Cmdlet。
 
 
 NOTE: 對於MetroCluster 採用非破壞性組態（MCC）的儲存系統、建議同時登錄本機和對等叢集、以進行不中斷營運。
@@ -91,6 +91,9 @@ NOTE: 如果SVM是以簡短名稱或FQDN新增、則必須同時從SnapCenter �
 .. 在平台中、從下拉式清單中選取其中一個選項。
 +
 如果SVM是備份關係中的次要儲存系統、請選取「*次要*」核取方塊。如果選擇*二線*選項、SnapCenter 則無法立即執行授權檢查。
+
++
+如果您在 SnapCenter 中新增了 SVM 、則使用者需要從下拉式清單中手動選取平台類型。
 
 .. 在「傳輸協定」中、選取在SVM或叢集設定期間設定的傳輸協定、通常是HTTPS。
 .. 輸入儲存系統接受的連接埠。
@@ -127,6 +130,9 @@ NOTE: 如果SVM是以簡短名稱或FQDN新增、則必須同時從SnapCenter �
 如果ONTAP 使用ONTAP RefesGUI將新的SVM新增至Refes叢 集、請按一下*重新探索*以檢視新增的SVM。
 
 
+
+
+NOTE: 如果您已將 FAS 或 AFF 儲存系統升級至 All SAN Array （ ASA ）、則必須重新整理 SnapCenter 伺服器中的儲存連線、以反映 SnapCenter 中的新儲存類型。
 
 *完成後*
 

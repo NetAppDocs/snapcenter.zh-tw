@@ -16,3 +16,6 @@ summary: 適用於Microsoft Exchange Server的功能區外掛程式是NetAppSnap
 安裝Exchange外掛程式時、您可以使用SnapCenter 搭配NetApp SnapMirror技術的功能來建立另一個磁碟區上備份集的鏡射複本、並使用NetApp SnapVault 支援技術來執行磁碟對磁碟備份複寫、以符合標準或用於歸檔。
 
 如果您想要還原及還原郵件或信箱、而非完整的Exchange資料庫、可以使用單一信箱恢復（SMBR）軟體。
+NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA ）。NetApp 將持續支援已於 2020 年 6 月 24 日推出的行銷零件編號、以支援購買信箱容量、維護和支援的客戶。
+
+NetApp 單一信箱恢復是 Ontrack 提供的合作夥伴產品。Ontrack PowerControl 提供的功能與 NetApp 單一信箱恢復功能類似。客戶可從 Ontrack 購買全新 Ontrack PowerControl 軟體授權、以及 Ontrack PowerControl 的維護與支援續約（透過 licensingteam@ontrack.com ）、以進行精細的信箱恢復。

@@ -1,0 +1,62 @@
+---
+permalink: install/task_export_ca_certificates_from_snapcenter_server.html 
+sidebar: sidebar 
+keywords: security,authentication, export CA certificates 
+summary: 您應該將 CA 憑證從 SnapCenter 伺服器匯出至外掛主機。 
+---
+= 從 SnapCenter 伺服器匯出憑證授權單位（ CA ）憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該使用 Microsoft 管理主控台（ MMC ）、將 CA 憑證從 SnapCenter 伺服器匯出至外掛主機。
+
+*您需要的是什麼*
+
+您應該已設定雙向 SSL 。
+
+*步驟*
+
+. 移至Microsoft管理主控台（MMC）、然後按一下*檔案*>*新增/移除Snapin *。
+. 在「新增或移除嵌入式管理單元」視窗中、選取「*憑證*」、然後按一下「*新增*」。
+. 在「憑證嵌入式管理單元」視窗中，選取 * 電腦帳戶 * 選項，然後按一下 * 完成 * 。
+. 按一下 * 主控台根目錄 * > * 憑證 - 本機電腦 * > * 個人 * > * 憑證 * 。
+. 以滑鼠右鍵按一下用於 SnapCenter 伺服器的已取得 CA 憑證、然後選取 * 所有工作 * > * 匯出 * 以啟動匯出精靈。
+. 在精靈中執行下列動作。
+
+
+|===
+| 針對此選項 ... | 請執行下列動作... 
+
+
+ a| 
+匯出私密金鑰
+ a| 
+選擇 * 否、不要匯出私密金鑰 * 、然後按一下 * 下一步 * 。
+
+
+
+ a| 
+匯出檔案格式
+ a| 
+單擊 * 下一步 * 。
+
+
+
+ a| 
+檔案名稱
+ a| 
+按一下 * 瀏覽 * 並指定儲存憑證的檔案路徑、然後按一下 * 下一步 * 。
+
+
+
+ a| 
+完成憑證匯出精靈
+ a| 
+檢閱摘要、然後按一下「*完成*」開始匯出。
+
+|===
+
+NOTE: SnapCenter HA 組態和 SnapCenter Plug-in for VMware vSphere 不支援憑證型驗證。

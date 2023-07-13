@@ -50,4 +50,4 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2884814["關於本產品的注意事項SnapCenter 4.8."^]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2886209["SnapCenter 4.9 注意事項"^]

@@ -43,6 +43,8 @@ summary: 在安裝SnapCenter 完還原伺服器和應用程式或資料庫外掛
 
 用於SnapCenter 在客戶端（SnapCenter 不知使用者）和SnapCenter 伺服器之間進行通訊。也可用於從外掛程式主機到SnapCenter 該伺服器的通訊。
 
+若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安裝精靈安裝 SnapCenter 伺服器。"]
+
 
 
  a| 
@@ -51,6 +53,8 @@ WSSMCore通訊連接埠SnapCenter
 8145（HTTPS）、雙向、可自訂
 
 連接埠用於SnapCenter 在Sfor the Sfor Server和SnapCenter 安裝了該插件的主機之間進行通訊。
+
+若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安裝精靈安裝 SnapCenter 伺服器。"]
 
 
 
@@ -62,6 +66,8 @@ MySQL連接埠
 連接埠用於SnapCenter 在不同時執行的情況下、與MySQL儲存庫資料庫進行通訊。
 
 您可以建立安全的連線、從SnapCenter 「伺服器」到MySQL伺服器。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["深入瞭解"]
+
+若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安裝精靈安裝 SnapCenter 伺服器。"]
 
 
 
@@ -96,6 +102,8 @@ Linux或AIX外掛程式主機
 
 SVM管理LIF與SnapCenter SVM管理伺服器之間的通訊路徑也必須開放。
 
+若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html["新增主機並安裝SnapCenter 適用於Microsoft Windows的解決方案"] 或 https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["新增主機並安裝適用於 Linux 或 AIX 的 SnapCenter 外掛程式套件。"]
+
 
 
  a| 
@@ -104,6 +112,8 @@ Oracle資料庫的支援外掛程式SnapCenter
 27216、可自訂
 
 Oracle的外掛程式會使用預設的JDBC連接埠來連線至Oracle資料庫。
+
+若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["新增主機並安裝適用於 Linux 或 AIX 的 SnapCenter 外掛程式套件。"]
 
 
 
@@ -135,6 +145,8 @@ SAP HANA資料庫適用的插件vCode Spell Checkerport SnapCenter
 對於多租戶資料庫容器（MDC）單一租戶、連接埠編號以13結尾；對於非MDC、連接埠編號以15結尾。
 
 例如、32013是連接埠編號、例如20、31015是連接埠編號、例如10。
+
+若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html["新增主機並在遠端主機上安裝外掛程式套件。"]
 
 
 

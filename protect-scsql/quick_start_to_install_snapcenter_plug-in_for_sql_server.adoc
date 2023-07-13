@@ -41,9 +41,10 @@ summary: 提供安裝SnapCenter 適用於SnapCenter Microsoft SQL Server的支�
  a| 
 以標準控制器為基礎SnapCenter
  a| 
-不適用於功能不一的儲存控制器FAS AFF
+FAS 、 AFF 或所有 SAN 陣列（ ASA ）儲存控制器所需
 
-不含不含控制器型授權的優質套裝組合。SnapCenter如果您擁有SnapManager 此產品的不支援功能、您也可以取得SnapCenter 「不支援即用」的授權。如果您想SnapCenter 要以試用版的FAS 方式安裝含有VMware或AFF VMware的儲存設備、您可以聯絡銷售代表、取得Premium產品組合評估授權。
+不含不含控制器型授權的優質套裝組合。SnapCenter如果您擁有SnapManager 此產品的不支援功能、您也可以取得SnapCenter 「不支援即用」的授權。
+如果您想要試用 FAS 、 AFF 或 ASA 儲存設備來安裝 SnapCenter 、請聯絡銷售代表以取得優質產品組合評估授權。
 
 
 
@@ -85,7 +86,7 @@ NOTE: 我們建議您將SnapCenter 不需要的「不二用」授權新增至次
 
 === 主機和連接埠需求
 
-如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=105961;&solution=1259&isHWU&src=IMT["互通性對照表工具"^]。
+如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1259&isHWU&src=IMT["互通性對照表工具"^]。
 
 [cols="1,3"]
 |===

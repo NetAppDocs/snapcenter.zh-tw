@@ -1,0 +1,31 @@
+---
+permalink: install/task_import_ca_certificate_to_unix_plugin_hosts.html 
+sidebar: sidebar 
+keywords: security,authentication,import CA certificates 
+summary: 您應該將 CA 憑證匯入 UNIX 外掛主機。 
+---
+= 將 CA 憑證匯入 UNIX 外掛主機
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該將 CA 憑證匯入 UNIX 外掛主機。
+
+*關於此工作*
+
+* 您可以管理 SPL Keystore 的密碼、以及使用中的 CA 簽署金鑰配對別名。
+* SPL 密鑰庫和私鑰的所有關聯別名密碼應相同。
+
+
+*步驟*
+
+. 您可以從SPL內容檔擷取SPL Keystore預設密碼。它是對應於金鑰的值 `SPL_KEYSTORE_PASS`。
+. 變更Keystore密碼：
+`$ keytool -storepasswd -keystore keystore.jks`
+. 將Keystore中私密金鑰項目的所有別名密碼變更為與Keystore相同的密碼：
+`$ keytool -keypasswd -alias "<alias_name>" -keystore keystore.jks`
+. 請針對 SPL_Keystore 密碼進行相同的更新 `spl.properties`` 檔案：
+. 變更密碼後重新啟動服務。
+

@@ -1,0 +1,56 @@
+---
+permalink: install/task_import_ca_certificate_to_windows_plugin_hosts.html 
+sidebar: sidebar 
+keywords: security,authentication, export CA certificates 
+summary: 若要使用匯出的 SnapCenter 伺服器 CA 憑證、您應該將相關的憑證匯入 SnapCenter Windows 外掛主機 
+---
+= 將憑證授權單位（ CA ）憑證匯入 Windows 外掛主機
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要使用匯出的 SnapCenter 伺服器 CA 憑證、您應該使用 Microsoft 管理主控台（ MMC ）、將相關的憑證匯入 SnapCenter Windows 外掛主機。
+
+*步驟*
+
+. 移至Microsoft管理主控台（MMC）、然後按一下*檔案*>*新增/移除Snapin *。
+. 在「新增或移除嵌入式管理單元」視窗中、選取「*憑證*」、然後按一下「*新增*」。
+. 在「憑證嵌入式管理單元」視窗中，選取 * 電腦帳戶 * 選項，然後按一下 * 完成 * 。
+. 按一下 * 主控台根目錄 * > * 憑證 - 本機電腦 * > * 個人 * > * 憑證 * 。
+. 在資料夾「個人」上按一下滑鼠右鍵、然後選取 * 所有工作 * > * 匯入 * 以啟動匯入精靈。
+. 在精靈中執行下列動作。
+
+
+|===
+| 針對此選項 ... | 請執行下列動作... 
+
+
+ a| 
+零售店位置
+ a| 
+單擊 * 下一步 * 。
+
+
+
+ a| 
+要匯入的檔案
+ a| 
+選取以 .cer 副檔名結尾的 SnapCenter 伺服器憑證。
+
+
+
+ a| 
+憑證存放區
+ a| 
+單擊 * 下一步 * 。
+
+
+
+ a| 
+完成憑證匯出精靈
+ a| 
+檢閱摘要、然後按一下「*完成*」開始匯入。
+
+|===

@@ -21,7 +21,7 @@ summary: 您應該SnapCenter 使用SnapCenter 穩定使用者介面（UI）來�
 互通性對照表工具IMT （Interoperability Matrix Tool、簡稱「互通性對照表工具」）包含有關支援組態的最新資訊。
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=112393;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
 * 適用於SAP HANA資料庫的功能就是適用於Linux的功能性外掛套件的一部分。SnapCenter SnapCenter在安裝SnapCenter 適用於Linux的支援功能套件之前、您應該已經在SnapCenter Windows主機上安裝了支援功能。
 
@@ -50,6 +50,6 @@ https://imt.netapp.com/matrix/imt.jsp?components=108391;&solution=1259&isHWU&src
 . 編輯//NetApp/snapcenter/scc/etc/SC_SMS_Services.properties檔案、然後新增plugins_enabled = HANA：3.0參數。
 . 使用Add-Smhost Cmdlet和必要參數、將主機新增SnapCenter 至SetcServer。
 +
-執行_Get-Help命令名稱_可取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]。
+執行_Get-Help命令名稱_可取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。
 
 

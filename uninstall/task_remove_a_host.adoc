@@ -20,7 +20,7 @@ summary: 當支援對象移除主機時、它會先移除「資源庫」頁面�
 * 如果主機具有與其他主機共享的資源群組、而您刪除了該主機、則資源群組也會一併刪除。
 * 您應該使用_remove-SmHost_ Cmdlet來移除停用或無法連線的外掛程式主機。
 +
-您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]
 
 * 移除主機所需的時間取決於備份數量和保留設定。這是因為Snapshot複本會從每個控制器中刪除、然後清除中繼資料。
 

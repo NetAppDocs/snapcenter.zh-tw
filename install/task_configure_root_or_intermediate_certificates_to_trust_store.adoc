@@ -1,0 +1,56 @@
+---
+permalink: install/task_configure_root_or_intermediate_certificates_to_trust_store.html 
+sidebar: sidebar 
+keywords: enable certificate-based authentication,configure CA signed key pair,configure root, configure intermediate certificates 
+summary: 您應該將根或中繼憑證設定為 SPL 信任存放區。 
+---
+= 將根或中繼憑證設定為SPL信任存放區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該將根或中繼憑證設定為 SPL 信任存放區。您應該先新增根CA憑證、然後再新增中繼CA憑證。
+
+*步驟*
+
+. 瀏覽至包含 SPL Keystore 的資料夾： `/var/opt/snapcenter/spl/etc`。
+. 找到檔案 `keystore.jks`。
+. 在Keystore中列出新增的憑證：
+`$ keytool -list -v -keystore keystore.jks`
+. 新增根或中繼憑證：
+`$ keytool -import -trustcacerts -alias <AliasNameForCerticateToBeImported> -file /<CertificatePath> -keystore` `keystore.jks`
+. 將根或中繼憑證設定為SPL信任存放區之後、請重新啟動服務。
+
+
+
+
+== 將CA簽署金鑰配對設定為SPL信任存放區
+
+您應該將 CA 簽署金鑰配對設定為 SPL 信任存放區。
+
+*步驟*
+
+. 瀏覽至包含 SPL Keystore 的資料夾 `/var/opt/snapcenter/spl/etc`。
+. 找到檔案 `keystore.jks``。
+. 在Keystore中列出新增的憑證：
+`$ keytool -list -v -keystore keystore.jks`
+. 新增具有私密金鑰和公開金鑰的CA憑證。
+`$ keytool -importkeystore -srckeystore <CertificatePathToImport> -srcstoretype pkcs12 -destkeystore keystore.jks` `-deststoretype JKS`
+. 在Keystore中列出新增的憑證。
+`$ keytool -list -v -keystore keystore.jks`
+. 驗證密鑰庫是否包含與新CA憑證對應的別名、該CA憑證已新增至金鑰庫。
+. 將CA憑證的新增私密金鑰密碼變更為金鑰庫密碼。
++
+預設的 SPL 金鑰庫密碼是金鑰 SPL_Keystore 密碼的值 `spl.properties` 檔案：
+
++
+`$ keytool -keypasswd -alias "<aliasNameOfAddedCertInKeystore>" -keystore keystore.jks``
+
+. 如果CA憑證中的別名很長且包含空格或特殊字元（「*」、「」、」）、請將別名變更為簡單名稱：
+`$ keytool -changealias -alias "<OrignalAliasName>" -destalias "<NewAliasName>" -keystore keystore.jks``
+. 從中的 Keystore 設定別名 `spl.properties` 檔案：
+請根據SPL_PRO證 書別名更新此值。
+. 將CA簽署金鑰配對設定為SPL信任存放區後、請重新啟動服務。
+

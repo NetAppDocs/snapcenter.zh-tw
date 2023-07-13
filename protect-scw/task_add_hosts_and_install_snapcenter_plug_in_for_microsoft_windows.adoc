@@ -47,6 +47,10 @@ link:task_configure_gMSA_on_windows_server_2012_or_later.html["在Windows Server
 
 
 
+
+NOTE: 如果主機已經是工作群組的一部分、並且變更為另一個網域、則 SnapCenter 不支援將相同的主機（外掛主機）新增至 SnapCenter 。
+如果您想要新增相同的主機、您應該從 SnapCenter 移除該主機、然後重新新增該主機。
+
 *步驟*
 
 . 在左側導覽窗格中、按一下*主機*。

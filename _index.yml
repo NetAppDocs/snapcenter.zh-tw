@@ -1,12 +1,12 @@
 ---
 indexpage:
   lead: 支援簡單、集中化、可擴充的平台、可為在混合雲中任何位置的不間斷系統上執行的應用程式、資料庫、主機檔案系統及VM提供應用程式一致的資料保護。SnapCenter
-    ONTAP本文件庫包含4.8版的相關資訊。
+    ONTAP此文件庫包含 4.9 版的資訊。
   tiles:
   - title: 開始使用
     links:
     - title: 版本資訊
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2885481
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886204
     - title: 深入瞭解SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: 保護SQL Server資料庫的快速參考

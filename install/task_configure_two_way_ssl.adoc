@@ -1,0 +1,171 @@
+---
+permalink: install/task_configure_two_way_ssl.html 
+sidebar: sidebar 
+keywords: security,two-way ssl,configure two-way ssl 
+summary: 您應該設定雙向 SSL 通訊、以確保 SnapCenter 伺服器與外掛程式之間的相互通訊安全無虞。   
+---
+= 設定雙向 SSL 通訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該設定雙向 SSL 通訊、以確保 SnapCenter 伺服器與外掛程式之間的相互通訊安全無虞。
+
+*開始之前*
+
+* 您應該已產生 CA 憑證 CSR 檔案、其支援金鑰長度下限為 3072 。
+* CA 憑證應支援伺服器驗證和用戶端驗證。
+* 您應該擁有內含私密金鑰和指紋詳細資料的 CA 憑證。
+* 您應該已啟用單向 SSL 組態。
++
+如需詳細資料、請參閱 https://docs.netapp.com/us-en/snapcenter/install/reference_generate_CA_certificate_CSR_file.html["設定 CA 憑證區段。"]
+
+* 您必須在所有外掛主機和 SnapCenter 伺服器上啟用雙向 SSL 通訊。
++
+不支援某些主機或伺服器未啟用雙向 SSL 通訊的環境。
+
+
+
+*步驟*
+
+. 若要繫結連接埠、請在 SnapCenter 伺服器主機上針對 SnapCenter IIS 網頁伺服器連接埠 8146 （預設）執行下列步驟、並使用 PowerShell 命令再次為 SMCore 連接埠 8145 （預設）執行下列步驟。
++
+.. 使用下列 PowerShell 命令移除現有的 SnapCenter 自我簽署憑證連接埠繫結。
++
+`> netsh http delete sslcert ipport=0.0.0.0:<SMCore port/IIS port>`
+
++
+例如、
+
++
+`> netsh http delete sslcert ipport=0.0.0.0:8145`
+
++
+`> netsh http delete sslcert ipport=0.0.0.0:8146`
+
+.. 將新取得的 CA 憑證與 SnapCenter 伺服器和 SMCore 連接埠繫結。
++
+`> $cert = “<CA_certificate thumbprint>”`
+
++
+`> $guid = [guid]::NewGuid().ToString("B")`
+
++
+`> netsh http add sslcert ipport=0.0.0.0: <SMCore Port/IIS port> certhash=$cert appid="$guid"` `clientcertnegotiation=enable verifyclientcertrevocation=disable`
+
++
+`> netsh http show sslcert ipport=0.0.0.0:<SMCore Port/IIS port>`
+
++
+例如、
+
++
+`> $cert = “abc123abc123abc123abc123”`
+
++
+`> $guid = [guid]::NewGuid().ToString("B")`
+
++
+`> netsh http add sslcert ipport=0.0.0.0:8146 certhash=$cert appid="$guid"` `clientcertnegotiation=enable verifyclientcertrevocation=disable`
+
++
+`> $guid = [guid]::NewGuid().ToString("B")`
+
++
+`> netsh http add sslcert ipport=0.0.0.0:8145 certhash=$cert appid="$guid"` `clientcertnegotiation=enable verifyclientcertrevocation=disable`
+
++
+`> netsh http show sslcert ipport=0.0.0.0:8146`
+
++
+`> netsh http show sslcert ipport=0.0.0.0:8145`
+
+
+
+. 若要存取 CA 憑證的權限、請執行下列步驟、在憑證權限清單中新增 SnapCenter 的預設 IIS Web 伺服器使用者 "*IIS AppPool 、 SnapCenter* " 、以存取新取得的 CA 憑證。
++
+.. 移至 Microsoft 管理主控台（ MMC ）、然後按一下 * 檔案 * > * 新增 / 移除 Snapin * 。
+.. 在「新增或移除嵌入式管理單元」視窗中、選取「*憑證*」、然後按一下「*新增*」。
+.. 在「憑證」嵌入式管理單元視窗中、選取「*電腦帳戶*」選項、然後按一下「*完成*」。
+.. 按一下*主控台根目錄*>*憑證–本機電腦*>*個人*>*憑證*。
+.. 選取 SnapCenter 憑證。
+.. 若要啟動新增使用者 \ 權限精靈、請在 CA 憑證上按一下滑鼠右鍵、然後選取 * 所有工作 * > * 管理私密金鑰 * 。
+.. 按一下 * 新增 * 、在「 Select Users and Groups 」（選取使用者和群組）精靈上、將位置變更為本機電腦名稱（階層架構中最上層）。
+.. 新增 IIS AppPool \ SnapCenter 使用者、賦予完全控制權限。
+
+
+. 對於 *CA 證書 IIS 權限 * ，請從以下路徑在 SnapCenter 服務器中添加新的雙字節註冊表項：
++
+在 Windows 登錄編輯器中、遍歷下列路徑：
+
++
+`HKey_Local_Machine\SYSTEM\CurrentControlSet\Control\SecurityProv
+ ders\SCHANNEL`
+
+. 在 SChannel 登錄組態的內容下建立新的 DWORD 登錄機碼項目。
++
+`SendTrustedIssuerList = 0`
+
++
+`ClientAuthTrustMode = 2`
+
+
+
+
+
+== 設定 SnapCenter Windows 外掛程式進行雙向 SSL 通訊
+
+您應該使用 PowerShell 命令設定 SnapCenter Windows 外掛程式、以進行雙向 SSL 通訊。
+
+*開始之前*
+
+確保 CA 憑證指紋可用。
+
+*步驟*
+
+. 若要連結連接埠、請在 SMCore 連接埠 8145 的 Windows 外掛主機上執行下列動作（預設）。
++
+.. 使用下列 PowerShell 命令移除現有的 SnapCenter 自我簽署憑證連接埠繫結。
++
+`> netsh http delete sslcert ipport=0.0.0.0:<SMCore port>`
+
++
+例如、
+
++
+`> netsh http delete sslcert ipport=0.0.0.0:8145`
+
+.. 將新取得的 CA 憑證與 SMCore 連接埠繫結。
++
+`> $cert = “<CA_certificate thumbprint>”`
+
++
+`> $guid = [guid]::NewGuid().ToString("B")`
+
++
+`> netsh http add sslcert ipport=0.0.0.0: <SMCore Port> certhash=$cert appid="$guid"`
+`clientcertnegotiation=enable verifyclientcertrevocation=disable`
+
++
+`> netsh http show sslcert ipport=0.0.0.0:<SMCore Port>`
+
++
+例如、
+
++
+`> $cert = “abc123abc123abc123abc123”`
+
++
+`> $guid = [guid]::NewGuid().ToString("B")`
+
++
+`> netsh http add sslcert ipport=0.0.0.0:8145 certhash=$cert appid="$guid"` `clientcertnegotiation=enable verifyclientcertrevocation=disable`
+
++
+`> netsh http show sslcert ipport=0.0.0.0:8145`
+
+
+
+

@@ -1,0 +1,72 @@
+---
+permalink: install/task_enable_two_way_ssl.html 
+sidebar: sidebar 
+keywords: security,disable two-way SSL,enable two-way SSL 
+summary: 您可以啟用雙向 SSL 通訊、以使用 PowerShell 命令保護 SnapCenter 伺服器與外掛程式之間的相互通訊。 
+---
+= 啟用雙向 SSL 通訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以啟用雙向 SSL 通訊、以使用 PowerShell 命令保護 SnapCenter 伺服器與外掛程式之間的相互通訊。
+
+*開始之前*
+
+先執行所有外掛程式和 SMCore 代理程式的命令、然後再執行伺服器的命令。
+
+*步驟*
+
+. 若要啟用雙向 SSL 通訊、請在 SnapCenter 伺服器上針對外掛程式、伺服器以及需要雙向 SSL 通訊的每個代理程式執行下列命令。
++
+`> Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="true"} -HostName <Plugin_HostName>`
+
++
+`> Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="true"} -HostName localhost`
+
++
+`> Set-SmConfigSettings -Server -configSettings @{"EnableTwoWaySSL"="true"}`
+
+. 使用下列命令執行 IIS SnapCenter 應用程式集區資源回收作業。
+`> Restart-WebAppPool -Name "SnapCenter"`
+. 對於 Windows 外掛程式、請執行下列 PowerShell 命令、重新啟動 SMCore 服務：
++
+`> Restart-Service -Name SnapManagerCoreService`
+
+
+
+
+
+== 停用雙向 SSL 通訊
+
+您可以使用 PowerShell 命令停用雙向 SSL 通訊。
+
+*關於此工作*
+
+* 先執行所有外掛程式和 SMCore 代理程式的命令、然後再執行伺服器的命令。
+* 停用雙向 SSL 通訊時、 CA 憑證及其組態不會移除。
+* 若要將新主機新增至 SnapCenter 伺服器、您必須停用所有外掛主機的雙向 SSL 。
+* NLB 和 F5 不受支援。
+
+
+*步驟*
+
+. 若要停用雙向 SSL 通訊、請在 SnapCenter 伺服器上針對所有外掛主機和 SnapCenter 主機執行下列命令。
++
+`> Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="false"} -HostName <Agent_HostName>`
+
++
+`> Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="false"} -HostName localhost`
+
++
+`> Set-SmConfigSettings -Server -configSettings @{"EnableTwoWaySSL"="false"}`
+
+. 使用下列命令執行 IIS SnapCenter 應用程式集區資源回收作業。
+`> Restart-WebAppPool -Name "SnapCenter"`
+. 對於 Windows 外掛程式、請執行下列 PowerShell 命令、重新啟動 SMCore 服務：
++
+`> Restart-Service -Name SnapManagerCoreService`
+
+

@@ -60,6 +60,15 @@ NOTE: 災難恢復還原之後、將會新增主機、但您應該手動安裝�
 NOTE: 只有當您安裝SnapCenter 適用於Windows的還原外掛程式、並將NetApp LUN附加至伺服器機器時、儲存庫備份排程才會還原。
 
 
+NOTE: 如果 DLL 毀損、您可以嘗試修復 SnapCenter 伺服器或修正錯誤的安裝。
+
+
+NOTE: 如果 NSM 或組態檔案毀損、您可以使用相同版本解除安裝並重新安裝 SnapCenter 伺服器。
+
+
+NOTE: 如果 VM 毀損、請開啟另一個 VM 或名稱相同的機器、並以相同版本安裝 SnapCenter Server 。
+
+
 
 == 支援REST API以進行SnapCenter 支援的REST伺服器災難恢復
 

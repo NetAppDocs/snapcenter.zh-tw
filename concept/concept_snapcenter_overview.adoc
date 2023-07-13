@@ -26,15 +26,15 @@ summary: 支援簡單、集中化、可擴充的平台、可為在混合雲任�
 
 * 內部部署以保護下列項目：
 +
-** 資料位於ONTAP FAS 不二元或AFF 不二元系統上、並複製到ONTAP FAS 不二元系統或不AFF 二元系統
+** 位於 ONTAP FAS 、 AFF 或所有 SAN 陣列（ ASA ）主要系統上、並複寫到 ONTAP FAS 、 AFF 或 ASA 次要系統的資料
 ** 資料位於不整系統上ONTAP Select
-** 資料位於ONTAP FAS 不完整或AFF 不完整的一線與二線系統、並受到保護、可儲存至本機StorageGRID 的物件（使用NetApp BlueXP雲端備份整合）
+** 位於 ONTAP FAS 、 AFF 或 ASA 主要與次要系統上、並受本機 StorageGRID 物件儲存保護的資料（使用 NetApp BlueXP 雲端備份整合）
 
 
 * 內部部署於混合雲中、以保護下列項目：
 +
-** 資料位於ONTAP FAS 不實或AFF 不實的系統上、並複寫至Cloud Volumes ONTAP 不實
-** 資料位於ONTAP FAS 不完整或AFF 不完整的一線和二線系統上、並受到保護、可在雲端中進行物件化和歸檔儲存（使用NetApp BlueXP Cloud Backup整合）
+** ONTAP FAS 、 AFF 或 ASA 主要系統上的資料、並複寫至 Cloud Volumes ONTAP
+** 位於 ONTAP FAS 、 AFF 或 ASA 主要和次要系統上、並受雲端物件和歸檔儲存保護的資料（使用 NetApp BlueXP 雲端備份整合）
 
 
 * 在公有雲中保護下列項目：
@@ -85,10 +85,10 @@ https://automationstore.netapp.com/home.shtml["NetApp儲存自動化商店"^]
 如需REST API的詳細資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["REST API總覽"]。
 
 +
-如需Windows Cmdlet的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885482["《軟件指令程式參考指南》SnapCenter"^]。
+如需Windows Cmdlet的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。
 
 +
-如需UNIX命令的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2885486["《軟件命令參考指南》SnapCenter"^]。
+如需UNIX命令的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["《軟件命令參考指南》SnapCenter"^]。
 
 * 集中式資料保護儀表板與報告
 * 角色型存取控制（RBAC）、以確保安全性和委派。
