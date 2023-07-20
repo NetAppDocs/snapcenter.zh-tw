@@ -3726,7 +3726,6 @@
   <block id="03101d2d05b95aa8395d372be971ceec" category="cell">參數名稱</block>
   <block id="e2072f9dd36121658dfb70db997cac48" category="paragraph">log_level</block>
   <block id="27ef522d71e1457c1d75f1a9fbdffdb9" category="paragraph">顯示支援的記錄層級。</block>
-  <block id="9dec2839914c450a2eba38fd6ed0037d" category="paragraph">可能的值包括資訊、偵錯、追蹤、錯誤、嚴重、 並發出警告。</block>
   <block id="54e3ff300a85eed4faafba9e929fcc68" category="paragraph">SPL_Protocol</block>
   <block id="7af9608cb14f57495b1335e877ee3b0e" category="paragraph">顯示SnapCenter 支援的傳輸協定、以供支援。</block>
   <block id="36c24cffc745e8682deaec9e2c0960f8" category="paragraph">僅支援HTTPS傳輸協定。如果缺少預設值、您可以新增該值。</block>
@@ -8443,4 +8442,5 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="dc085c0453f245659c31e067671c65b0" category="sidebar">將 CA 憑證匯入 UNIX 主機外掛程式、並將根或中繼憑證設定為 SPL 信任存放區</block>
   <block id="78a044d413487b3c49b37567f8df9e4f" category="sidebar">將 CA 憑證匯入 UNIX 主機外掛程式</block>
   <block id="7fbe6e40125b7d1b2f5c5c05044e7526" category="sidebar">啟用憑證型驗證</block>
+  <block id="20c5c92c0148a7ebef737c442e93b7ec" category="paragraph">可能的值包括追蹤、除錯、資訊、警告、錯誤、 而且致命。</block>
 </blocks>
