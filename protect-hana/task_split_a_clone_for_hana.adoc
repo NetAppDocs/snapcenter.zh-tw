@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_split_a_clone_for_hana.html 
 sidebar: sidebar 
-keywords:  
+keywords: split clone, snapcenter 
 summary: 您可以使用SnapCenter 此功能從父資源分割複製的資源。分割的實體複本會變成獨立於父資源的實體複本。 
 ---
 = 分割實體複本

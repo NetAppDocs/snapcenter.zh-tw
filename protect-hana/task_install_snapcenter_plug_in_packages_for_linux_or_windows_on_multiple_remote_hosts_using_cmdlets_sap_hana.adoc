@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets_sap_hana.html 
 sidebar: sidebar 
-keywords: credentials 
+keywords: SnapCenter Plug-in Packages for Linux, SnapCenter Plug-in Packages for Windows 
 summary: 您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、同時在多個主機上安裝適用於Linux或Windows的VMware®更新套件。 
 ---
 = 使用Cmdlet在SnapCenter 多個遠端主機上安裝適用於Linux或Windows的支援功能外掛套件
@@ -13,12 +13,10 @@ summary: 您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、同
 [role="lead"]
 您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、同時在多個主機上安裝適用於Linux或Windows的VMware®更新套件。
 
-*您需要的是什麼*
-
+.您需要的產品
 您必須以SnapCenter 網域使用者的身分登入到支援安裝外掛程式套件的每個主機、並具有本機系統管理員權限。
 
-*步驟*
-
+.步驟
 . 啟動PowerShell。
 . 在支援服務器主機上SnapCenter 、使用Open-SmConnection Cmdlet建立工作階段、然後輸入您的認證資料。
 . 使用Install-SmHostPackage Cmdlet和必要參數、在多個主機上安裝外掛程式。

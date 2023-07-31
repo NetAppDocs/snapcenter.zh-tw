@@ -13,14 +13,12 @@ summary: 備份資料庫包括建立SnapCenter 與該伺服器的連線、新增
 [role="lead"]
 備份資料庫包括建立SnapCenter 與該伺服器的連線、新增資源、新增原則、建立備份資源群組、以及備份。
 
-*您需要的是什麼*
-
+.您需要的產品
 * 您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。
 * 您必須新增儲存系統連線並建立認證。
 
 
-*步驟*
-
+.步驟
 . 使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。
 +
 [listing]

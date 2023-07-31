@@ -13,8 +13,7 @@ summary: 您可以使用SnapCenter 支援功能來複製備份。您可以從主
 [role="lead"]
 您可以使用SnapCenter 支援功能來複製備份。您可以從主要或次要備份複製。
 
-*您需要的是什麼*
-
+.您需要的產品
 * 您應該已備份資源或資源群組。
 * 您應確保託管磁碟區的集合體應位於儲存虛擬機器（SVM）的指派集合體清單中。
 * 您無法複製檔案型備份。
@@ -31,12 +30,10 @@ Windows：_C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\all
 
 NOTE: 如果命令清單中不存在這些命令、則作業將會失敗。
 
-*關於此工作*
-
+.關於這項工作
 如需有關複本切割作業限制的資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 9 邏輯儲存管理指南》 ONTAP"^]。
 
-*步驟*
-
+.步驟
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
 . 在「資源」頁面中、根據資源類型篩選*檢視*下拉式清單中的資源。
 +

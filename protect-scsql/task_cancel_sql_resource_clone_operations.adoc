@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_cancel_sql_resource_clone_operations.html 
 sidebar: sidebar 
-keywords:  
+keywords: clone, cancel 
 summary: 您可以取消佇列中的複製作業。 
 ---
 = 取消SQL資源複製作業

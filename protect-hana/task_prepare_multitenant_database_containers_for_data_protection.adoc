@@ -13,8 +13,7 @@ summary: 若SAP HANA主機直接登錄SnapCenter 到位、安裝或升級SnapCen
 [role="lead"]
 若SAP HANA主機直接登錄SnapCenter 到位、安裝或升級SnapCenter 適用於SAP HANA資料庫的整套功能、將會觸發自動探索主機上的資源。安裝或升級外掛程式之後、對於外掛程式主機上的每個多租戶資料庫容器（MDC）資源、系統會自動以不同的GUID格式探索另一個的MDC資源、並在SnapCenter 其中進行登錄。新資源將處於「鎖定」狀態。
 
-*關於此工作*
-
+.關於這項工作
 例如SnapCenter 、在支援功能4.2中、如果E90的MDC資源位於外掛主機上、並手動登錄、則在升級SnapCenter 至支援功能4.3之後、SnapCenter 將會發現另一個具有不同GUID的E90的MDC資源、並在該功能中進行登錄。
 
 
@@ -24,8 +23,7 @@ NOTE: 與資源相關的備份SnapCenter 必須保留到保留期間結束為止
 
 請執行下列步驟、開始使用SnapCenter 在功能完善的更新資源進行資料保護作業：
 
-*步驟*
-
+.步驟
 . 在「Resources（資源）」頁面中、選取新增備份至先前SnapCenter 版本的舊版MDC資源、然後將其置於「拓撲」頁面中的「維護模式」。
 +
 如果資源是資源群組的一部分、請將資源群組置於「維護模式」。
@@ -43,8 +41,7 @@ NOTE: 與資源相關的備份SnapCenter 必須保留到保留期間結束為止
 
 
 
-*瞭解更多資訊*
-
+.相關資訊
 link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["針對SAP HANA資料庫設定HDB使用者儲存金鑰和HDBSQL OS使用者"]
 
 link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["在「拓撲」頁面中檢視SAP HANA資料庫備份與複製"]

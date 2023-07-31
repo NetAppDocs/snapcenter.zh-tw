@@ -1,7 +1,7 @@
 ---
 permalink: sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: REST API, disaster recovery, DR 
 summary: 支援災難恢復功能、使用REST API來備份功能。SnapCenter SnapCenter 
 ---
 = 災難恢復（DR）REST API
@@ -74,14 +74,12 @@ NOTE: 如果 VM 毀損、請開啟另一個 VM 或名稱相同的機器、並以
 
 使用REST API、您可以在REST API Swagger頁面上執行下列作業。如需存取Swagger頁面的資訊、請參閱 link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["如何使用Swagger API網頁存取REST API"]。
 
-*您需要的是什麼*
-
+.您需要的產品
 * 您應該以SnapCenter 「管理員」使用者的身分登入。
 * 應啟動並執行此伺服器SnapCenter 以執行DR還原API。
 
 
-*關於此工作*
-
+.關於這項工作
 支援所有外掛程式的Sfor Server DR。SnapCenter
 
 |===
@@ -91,8 +89,7 @@ NOTE: 如果 VM 毀損、請開啟另一個 VM 或名稱相同的機器、並以
  a| 
 擷取現有SnapCenter 的伺服器DR備份
 
-
-NOTE: 您應該提供儲存災難恢復備份的目標路徑。
+您應該提供儲存災難恢復備份的目標路徑。
  a| 
 「/4.5/disstarrecovery / server/Backup」（伺服器/備份）「TarketPath={path}」（目標路徑=｛path｝）
  a| 
@@ -135,4 +132,5 @@ NOTE: 您應該提供儲存災難恢復備份的目標路徑。
 貼文
 
 |===
-如需詳細資訊、請參閱 https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["災難恢復API"^] 影片：
+.以取得更多資訊
+請參閱 link:https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["災難恢復API"^] 影片：

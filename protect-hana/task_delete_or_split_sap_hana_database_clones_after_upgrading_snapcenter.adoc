@@ -13,12 +13,10 @@ summary: 升級SnapCenter 至完Flash 4.3之後、您將無法再看到複本。
 [role="lead"]
 升級SnapCenter 至完Flash 4.3之後、您將無法再看到複本。您可以從建立複本的資源的「拓撲」頁面刪除複本或分割複本。
 
-*關於此工作*
-
+.關於這項工作
 如果您要找出隱藏複本的儲存設備實體、請執行下列命令：「Get-SmClone -ListStorageFootprint」
 
-*步驟*
-
+.步驟
 . 使用remove-smbackup Cmdlet刪除複製資源的備份。
 . 使用remove-smresourcegrogroup Cmdlet刪除複製資源的資源群組。
 . 使用remove-smprotectresource Cmdlet移除複製資源的保護。

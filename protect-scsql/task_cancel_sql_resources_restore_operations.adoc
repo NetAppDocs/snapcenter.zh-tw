@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_cancel_sql_resources_restore_operations.html 
 sidebar: sidebar 
-keywords:  
+keywords: cancel, restore 
 summary: 您可以取消佇列中的還原工作。 
 ---
 = 取消SQL資源還原作業

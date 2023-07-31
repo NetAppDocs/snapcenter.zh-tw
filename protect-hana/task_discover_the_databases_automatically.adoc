@@ -13,8 +13,7 @@ summary: 資源包括SAP HANA資料庫和SnapCenter 非資料Volume、位於由�
 [role="lead"]
 資源包括SAP HANA資料庫和SnapCenter 非資料Volume、位於由支援的Linux主機上。探索可用的SAP HANA資料庫之後、您可以將這些資源新增至資源群組、以執行資料保護作業。
 
-*您需要的是什麼*
-
+.您需要的產品
 * 您必須已經完成安裝SnapCenter 完《支援服務器》、新增HDB使用者儲存金鑰、新增主機、以及設定儲存系統連線等工作。
 * 您必須在Linux主機上設定HDB Secure User Store Key和HDB SQL OS使用者。
 +
@@ -24,14 +23,12 @@ summary: 資源包括SAP HANA資料庫和SnapCenter 非資料Volume、位於由�
 * SAP HANA資料庫的支援SAP HANA外掛程式不支援自動探索Rdm/VMDK虛擬環境中的資源。SnapCenter您必須在手動新增資料庫的同時、提供虛擬環境的儲存資訊。
 
 
-*關於此工作*
-
+.關於這項工作
 安裝外掛程式之後、該Linux主機上的所有資源都會自動探索並顯示在「資源」頁面上。
 
 無法修改或刪除自動探索的資源。
 
-*步驟*
-
+.步驟
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取SAP HANA資料庫的外掛程式。
 . 在「資源」頁面中、從「檢視」清單中選取資源類型。
 . （選用）按一下*image:../media/filter_icon.gif[""]*、然後選取主機名稱。
@@ -55,8 +52,7 @@ NOTE: 如果SAP HANA資料庫未設定HDB Secure User Store金鑰、則資源旁
 
 IMPORTANT: 如果資料庫重新命名為SnapCenter 不屬於支援範圍、您必須重新整理資源。
 
-*完成後*
-
+.接下來呢？
 您必須設定HDB安全使用者儲存金鑰和HDBSQL OS使用者、才能保護資料庫或將其新增至資源群組、以執行資料保護作業。
 
 link:task_configure_hdb_user_store_key_and_hdbsql_os_user_for_the_sap_hana_database.html["針對SAP HANA資料庫設定HDB使用者儲存金鑰和HDBSQL OS使用者"]

@@ -13,8 +13,7 @@ summary: 您應該SnapCenter 使用SnapCenter 穩定使用者介面（UI）來�
 [role="lead"]
 您應該SnapCenter 使用SnapCenter 穩定使用者介面（UI）來安裝適用於SAP HANA資料庫的功能。如果您的環境不允許從SnapCenter SIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、在主控台模式或無聲模式下安裝SAP HANA資料庫的外掛程式。
 
-*您需要的是什麼*
-
+.您需要的產品
 * 您應該在HDBSQL用戶端所在的每個Linux主機上安裝SAP HANA資料庫外掛程式。
 * 您要安裝SnapCenter 適用於SAP HANA資料庫的支援功能的Linux主機、必須符合相依的軟體、資料庫和作業系統需求。
 +
@@ -26,8 +25,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=112393;&solution=1259&isHWU&src
 * 適用於SAP HANA資料庫的功能就是適用於Linux的功能性外掛套件的一部分。SnapCenter SnapCenter在安裝SnapCenter 適用於Linux的支援功能套件之前、您應該已經在SnapCenter Windows主機上安裝了支援功能。
 
 
-*步驟*
-
+.步驟
 . 將SnapCenter 適用於Linux的支援功能套件安裝檔案（snapcenter_Linux _host_plugin.bin）從C：\ProgramData \NetApp\SnapCenter\Package儲存庫複製到您要安裝SAP HANA資料庫外掛程式的主機。
 +
 您可以從SnapCenter 安裝了該伺服器的主機存取此路徑。

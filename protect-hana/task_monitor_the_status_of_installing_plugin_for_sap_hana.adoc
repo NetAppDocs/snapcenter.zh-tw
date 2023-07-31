@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/task_monitor_the_status_of_installing_plugin_for_sap_hana.html 
 sidebar: sidebar 
-keywords:  
+keywords: monitor, install, snapCenter plug-in for SAP HANA 
 summary: 您SnapCenter 可以使用「工作」頁面來監控安裝過程。您可能需要檢查安裝進度、以判斷何時完成或是否有問題。 
 ---
 = 監控SAP HANA外掛程式的安裝狀態
