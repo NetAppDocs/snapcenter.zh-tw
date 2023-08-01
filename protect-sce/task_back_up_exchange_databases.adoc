@@ -39,7 +39,7 @@ summary: 如果資料庫不是任何資源群組的一部分、您可以從「�
 NOTE: 在DAG中、如果主動式資料庫複本位於非NetApp儲存設備上、且至少有一個被動式資料庫複本位於NetApp儲存設備上、則您可以保護資料庫。
 
 +
-按一下*image:../media/filter_icon.gif[""]*、然後選取主機名稱和資料庫類型以篩選資源。然後按一下*image:../media/filter_icon.gif[""]*關閉篩選窗格。
+按一下*image:../media/filter_icon.png[""]*、然後選取主機名稱和資料庫類型以篩選資源。然後按一下*image:../media/filter_icon.png[""]*關閉篩選窗格。
 
 +
 ** 如果您要備份資料庫、請按一下資料庫名稱。

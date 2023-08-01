@@ -28,13 +28,13 @@ summary: 支援簡單、集中化、可擴充的平台、可為在混合雲任�
 +
 ** 位於 ONTAP FAS 、 AFF 或所有 SAN 陣列（ ASA ）主要系統上、並複寫到 ONTAP FAS 、 AFF 或 ASA 次要系統的資料
 ** 資料位於不整系統上ONTAP Select
-** 位於 ONTAP FAS 、 AFF 或 ASA 主要與次要系統上、並受本機 StorageGRID 物件儲存保護的資料（使用 NetApp BlueXP 雲端備份整合）
+** 位於 ONTAP FAS 、 AFF 或 ASA 主要和次要系統上、並受本機 StorageGRID 物件儲存保護的資料
 
 
 * 內部部署於混合雲中、以保護下列項目：
 +
 ** ONTAP FAS 、 AFF 或 ASA 主要系統上的資料、並複寫至 Cloud Volumes ONTAP
-** 位於 ONTAP FAS 、 AFF 或 ASA 主要和次要系統上、並受雲端物件和歸檔儲存保護的資料（使用 NetApp BlueXP 雲端備份整合）
+** 位於 ONTAP FAS 、 AFF 或 ASA 主要和次要系統上、並受雲端物件和歸檔儲存保護的資料（使用 BlueXP 備份和還原整合）
 
 
 * 在公有雲中保護下列項目：
@@ -184,9 +184,10 @@ VMware vSphere的VMware vSphere外掛程式（前身為NetApp Data Broker）是�
 
 
 
-支援使用HTTPS的支援伺服器和外掛程式與主機代理程式通訊。SnapCenter
+支援使用HTTPS的支援伺服器和外掛程式與主機代理程式通訊。SnapCenter關於功能的資訊SnapCenter 會儲存在SnapCenter 資訊庫中。
 
-關於功能的資訊SnapCenter 會儲存在SnapCenter 資訊庫中。
+
+NOTE: SnapCenter 支援 Windows 主機的不聯合命名空間。如果您在使用不聯合命名空間時遇到問題、請參閱 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_is_unable_to_discover_resources_when_using_disjoint_namespace["SnapCenter 在使用不聯合命名空間時無法探索資源"]。
 
 
 

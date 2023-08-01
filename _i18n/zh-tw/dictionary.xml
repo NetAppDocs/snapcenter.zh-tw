@@ -245,7 +245,6 @@
   <block id="b40a6c0b08ac99c86eb676e2689c6996" category="list-text">在左導覽窗格中、按一下*監控*。</block>
   <block id="c0a63413cafa6a465f587d5835701c87" category="list-text">在「監控」頁面中、按一下「*工作*」。</block>
   <block id="3160f4991d365988a865df5567f2147f" category="list-text">在「工作」頁面中、執行下列步驟：</block>
-  <block id="6044156c6f0da8e8ec296448fa2d5fa5" category="list-text">按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 以篩選清單、僅列出備份作業。</block>
   <block id="7407325f29b504f9c8b87ec8da503815" category="list-text">指定開始和結束日期。</block>
   <block id="e10f73b33c1a0725b8812f08089e7788" category="list-text">從*類型*下拉式清單中、選取*備份*。</block>
   <block id="1f8a6ebe3d4d002c37961084ee957772" category="list-text">從*狀態*下拉式清單中、選取備份狀態。</block>
@@ -323,7 +322,6 @@
   <block id="92ae04a417b2b1bf95cb914953f21cce" category="list-text">您必須已建立附加原則的資源群組。</block>
   <block id="0dd1baa389f6493ff89ba4f1d23f127b" category="list-text">如果您要備份與二線儲存設備有SnapMirror關係的資源、ONTAP 指派給儲存設備使用者的「還原角色」應包含「全部快照」權限。不過、如果您使用「vsadmin」角色、則不需要「全部快照鏡像」權限。</block>
   <block id="5188766c2c9e07184bb642e31a6d1193" category="list-text">在「資源」頁面中、從*檢視*清單中選取*資源群組*。</block>
-  <block id="862569d2dbddc7f68305bb1aa73accec" category="paragraph">您可以在搜尋方塊中輸入資源群組名稱、或按一下、來搜尋資源群組 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 並選取標記。然後按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
   <block id="6c22568aa6116c11fda42febcf7b796a" category="list-text">在「資源群組」頁面中、選取您要備份的資源群組、然後按一下*立即備份*。</block>
   <block id="4a1c51520bfb3d170a967d4c218b52bf" category="list-text">在「備份」頁面中、執行下列步驟：</block>
   <block id="44119ab6cb16491e354c029de67b6782" category="list-text">如果您已將多個原則與資源群組建立關聯、請從* Policy*下拉式清單中選取要用於備份的原則。</block>
@@ -784,7 +782,6 @@
   <block id="78d6b4b75546fc8aa5983130521da2da" category="doc">監控自訂外掛程式資源還原作業</block>
   <block id="ee9237c14a6c4cc7b6b4a10fbf38aa79" category="paragraph">還原後的狀態說明還原作業之後的資源狀況、以及您可以採取的任何進一步還原動作。</block>
   <block id="ec0ce2a8340fde4668c9c369e1e0a781" category="paragraph">「工作」頁面上會出現下列圖示、並指出作業狀態：</block>
-  <block id="1bfa745c5533e2551a662571c60d9a71" category="list-text">按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 可篩選列表以便僅列出還原操作。</block>
   <block id="72703ba150df91059707035aef45dd74" category="list-text">從*類型*下拉式清單中、選取*還原*。</block>
   <block id="a28133afd7846d1e77aa696930846108" category="list-text">從*狀態*下拉式清單中、選取還原狀態。</block>
   <block id="e12538143afda34a18dc094aa39a01ff" category="list-text">按一下「*套用*」以檢視已成功完成的作業。</block>
@@ -839,7 +836,6 @@
   <block id="08a3d5b2eaf4018edc7c9931318d54df" category="paragraph">傳入的憑證會根據每個CRL進行驗證。</block>
   <block id="18c6c7b07148849996bd7da366d6bf60" category="summary">您SnapCenter 可以使用「工作」頁面來監控「實體複製」作業的進度。您可能需要檢查作業進度、以判斷作業何時完成或是否有問題。</block>
   <block id="322752ebdea85a56b4a5d899f24c4325" category="doc">監控自訂外掛程式資源複製作業</block>
-  <block id="62db5b4d65c0cdab012121187a77e764" category="list-text">按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 可篩選列表以便僅列出克隆操作。</block>
   <block id="4cfa68aad234b91494e417f8012ca40d" category="list-text">從*類型*下拉式清單中、選取*完整複製*。</block>
   <block id="7c18f9fe3e82229bbf88d4133dde72bd" category="list-text">從*狀態*下拉式清單中、選取實體複本狀態。</block>
   <block id="33edcafc3b101b5da89793db6c9151a5" category="list-text">按一下「*套用*」以檢視成功完成的作業。</block>
@@ -911,7 +907,6 @@
   <block id="8ffa4ba0dd2df5995fd397c72a149679" category="doc">備份個別的自訂外掛程式資源</block>
   <block id="bb9d7068e92869688b6abcc02fa7e603" category="list-text">您必須已建立備份原則。</block>
   <block id="08c86005ddd32599a5beea4c7b9ff4ad" category="list-text">如果您想要備份與二線儲存設備有SnapMirror關係的資源、ONTAP 指派給儲存設備使用者的這個角色應該包含「全部快照鏡射」權限。不過、如果您使用「vsadmin」角色、則不需要「全部快照鏡像」權限。</block>
-  <block id="d9519d94a3a4c5d7cfd38a6562e76409" category="paragraph">按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>，然後選取主機名稱和資源類型以篩選資源。然後按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
   <block id="085ab917326888bb9fd0378b5efb84b9" category="list-text">按一下您要備份的資源。</block>
   <block id="80cb8ef1d01a491a4a563ec56f39cedc" category="list-text">在「資源」頁面中、如果您想要使用自訂名稱、請選取「*使用Snapshot COP*的自訂名稱格式」核取方塊、然後輸入Snapshot複本名稱的自訂名稱格式。</block>
   <block id="8deb8aa93ea3b02fc36610daf36edad9" category="paragraph">例如、_customtext_policy_hostname_或_resource_hostname_。根據預設、快照複本名稱會附加時間戳記。</block>
@@ -1323,8 +1318,6 @@
   <block id="a9d0e12f10920c999cb78960286bd82a" category="paragraph">無法修改或刪除自動探索的資源。</block>
   <block id="ea6799b398e3200b6531e1aa5a544d0c" category="list-text">在左導覽窗格中、按一下*資源*、然後從清單中選取SAP HANA資料庫的外掛程式。</block>
   <block id="3e025b4a685d145a938552cff1a33612" category="list-text">在「資源」頁面中、從「檢視」清單中選取資源類型。</block>
-  <block id="275739dcbd0826cc4a0ad3c63d35359a" category="list-text">（選用）按一下*<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*、然後選取主機名稱。</block>
-  <block id="811422b4eb759583a4051504db293f64" category="paragraph">然後按一下*<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*關閉篩選窗格。</block>
   <block id="0f034106893faef4643a4f2e45058c52" category="list-text">按一下*重新整理資源*以探索主機上可用的資源。</block>
   <block id="eb037ec78f327455a8e36a07871d70c6" category="paragraph">這些資源會連同資源類型、主機名稱、相關資源群組、備份類型、原則和整體狀態等資訊一起顯示。</block>
   <block id="d960a78735f8828146abd7c7f897adb9" category="list-text">如果資料庫位於NetApp儲存設備上且未受到保護、則「整體狀態」欄中會顯示「未受保護」。</block>
@@ -1361,7 +1354,6 @@
   <block id="e042e676706d93b3b14ce12e4d00a002" category="paragraph">實體伺服器</block>
   <block id="4580f4b818b00829ad833fee80f6f773" category="summary">資源群組是主機上的資源集合。資源群組上的備份作業會對資源群組中定義的所有資源執行。</block>
   <block id="dbc89dfae1c6c8ad4eb43878b9171ca6" category="doc">備份資源群組</block>
-  <block id="21364d4ce43113190e1c8a9ca29e8c66" category="paragraph">您可以在搜尋方塊中輸入資源群組名稱、或按一下、來搜尋資源群組 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>，然後選取標記。然後按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
   <block id="38daee81aaf3af99133cf03d753b6a86" category="list-text">如果您已將多個原則與資源群組建立關聯、請從* Policy*下拉式清單中選取要用於備份的原則。</block>
   <block id="b82e91ec04ff8005a130fb3f67788852" category="summary">如果資料庫儲存在虛擬機器（VM）上、或是想要保護VM和資料存放區、則必須部署SnapCenter VMware vSphere虛擬應用裝置的《支援VMware vSphere的還原外掛程式》。</block>
   <block id="6f01b59c00a65f99d3b7a7226c0e4472" category="doc">安裝SnapCenter VMware vSphere的VMware vCenter外掛程式</block>
@@ -1712,8 +1704,6 @@
   <block id="eebed0ac34228e0e0f38c9d860604c29" category="list-text">您必須設定HDB SQL OS使用者、才能存取系統資料庫。如果HDB SQL OS使用者設定為只存取租戶資料庫、探索作業將會失敗。</block>
   <block id="883766d38a60b014b1f295ce741d2078" category="list-text">在左側導覽窗格中、按一下* Resources（資源）*、然後從SnapCenter 清單中選取「SAP HANA資料庫適用的插件」。</block>
   <block id="4be65a5ea46b3e2f23ace622863d9afc" category="list-text">在「資源」頁面中、從*檢視*清單中選取資源類型。</block>
-  <block id="214914d9549015d63d4b86758e66e1aa" category="list-text">（選用）按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 然後選取主機名稱。</block>
-  <block id="e6b04dca8731f73a6232df543bed1168" category="paragraph">然後按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
   <block id="39e3c69c6f9d80e017de1f541e1670ca" category="list-text">選取資料庫、然後按一下「*設定資料庫*」。</block>
   <block id="7549e4590c51e2808eff73abfe0bfd99" category="list-text">在「Configure databasing settings（設定資料庫設定）」區段中、輸入HDB Secure User Store Key。</block>
   <block id="41119aa704f7776e425d802cc1efdd26" category="admonition">外掛程式主機名稱隨即顯示、HDB SQL OS使用者會自動填入&lt;SID&gt;adm。</block>
@@ -1771,13 +1761,9 @@
   <block id="ae75553103cbeaaaa3b0e4002805ae6f" category="paragraph"><block ref="ae75553103cbeaaaa3b0e4002805ae6f" category="inline-link-macro-rx"></block></block>
   <block id="961e6abd0c7a72786d3641390a4dea5f" category="list-text">如果您想要在一或多個租戶資料庫關閉時建立檔案型備份、請使用「Set-ConfigSmSettings'指令程式」、將HANA內容檔案中的參數參數設定為* Yes*。</block>
   <block id="a2286f0c6fbfecb0501c43aa965242b6" category="list-text">在「資源」頁面中、根據資源類型篩選*檢視*下拉式清單中的資源。</block>
-  <block id="127c10f681ffba1b9fa91c9bf92bcbc8" category="paragraph">按一下*<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*、然後選取主機名稱和資源類型以篩選資源。然後按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
   <block id="0ab7e5f8a6ae4c1833f0606e717b782e" category="list-text">在「資源」頁面中、選取*使用Snapshot COPU*的自訂名稱格式、然後輸入您要用於Snapshot複本名稱的自訂名稱格式。</block>
   <block id="50ce6bc02d574c2cab1fc82a19854cf8" category="paragraph">等待「一致性群組快照」作業完成的時間</block>
-  <block id="35d7ec08143354023f987fa79b9fde69" category="paragraph">選擇*緊急*或*中型*或*休閒*以指定Snapshot複製作業完成的等待時間。「緊急」= 5秒、「中」= 7秒、「輕鬆」= 20秒。</block>
-  <block id="78bc1eb0c9c9c6c68e04d6b93f620e64" category="list-text">按一下「*指令碼*」箭頭以執行「靜止」、「Snapshot複本」和「靜止」作業的「預先」和「POST」命令。</block>
   <block id="419f55f97321a95d51e21f7ca2e9b02d" category="paragraph">您也可以在結束備份作業之前執行pres命令。指令碼和指令碼會在SnapCenter 支援服務器上執行。</block>
-  <block id="e03984f57a97abb4f741022763efa39f" category="list-text">按一下「自訂組態」箭頭、然後輸入使用此資源之所有工作所需的自訂值配對。</block>
   <block id="2ca1729f14a40401626e0eaac1397926" category="paragraph">建立儲存層級Snapshot複本SnapCenter</block>
   <block id="106e549635779a49f4846a54f63000c8" category="paragraph">使用Windows外掛程式將檔案系統置於一致狀態、然後建立Snapshot複本SnapCenter</block>
   <block id="d9efe8cd3b84ef411469a4acc1e9bb8a" category="list-text">按一下*<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*在您要為其設定排程的原則的「設定排程」欄中。</block>
@@ -1869,7 +1855,6 @@
   <block id="96b6fde24fc45821a7c8c021ba21b20b" category="list-text">在左導覽窗格中、按一下*資源*、然後從「資源」頁面左上角的外掛程式下拉式清單中選取* Microsoft Exchange Server*。</block>
   <block id="71edd90271636e3f12b43102371d4d7d" category="list-text">在「資源」頁面中、從「*檢視*」下拉式清單中選取「*資料庫*」或「*資料庫可用度群組*」或「*資源群組*」。</block>
   <block id="322a7c54d7c7799de3e202746d568ea4" category="paragraph">所有資料庫和DAG都會以FQDN格式顯示其DAG或主機名稱、以便區分多個資料庫。</block>
-  <block id="db8c73281f0636096f5bd11fbb13289a" category="paragraph">按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 然後選取主機名稱和Exchange Server以篩選資源。然後按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
   <block id="a52716605edda155f499cf4c4572c6d5" category="list-text">按一下*重新整理資源*。</block>
   <block id="e447517e5ec13b3c9e98a7c686d29ac7" category="paragraph">新新增、重新命名或刪除的資源會更新SnapCenter 至「支援服務器」目錄。</block>
   <block id="100eb6faf67bf674d493eae8a5daad8d" category="paragraph">這些資源會連同資源名稱、資料庫可用度群組名稱、資料庫目前使用中的伺服器、複本伺服器、上次備份時間及整體狀態等資訊一起顯示。</block>
@@ -2049,7 +2034,6 @@
   <block id="56211ba6636186607e13945dac559a10" category="list-text">在「資源」頁面中、從*檢視*清單中選取*資料庫*或*資料庫可用度群組*。</block>
   <block id="6da272f1d69c440674470ba19591ba05" category="paragraph">在「資源」頁面中 <block ref="362bbfc4e46b557d6a4f1f7a4cbeaf25" category="inline-image-macro-rx" type="image"></block> 圖示表示資料庫位於非NetApp儲存設備上。</block>
   <block id="0ad1c36a6c3e0a80135136739263c1d7" category="admonition">在DAG中、如果主動式資料庫複本位於非NetApp儲存設備上、且至少有一個被動式資料庫複本位於NetApp儲存設備上、則您可以保護資料庫。</block>
-  <block id="f4fccf161b5e67001656d817cbe815c9" category="paragraph">按一下*<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*、然後選取主機名稱和資料庫類型以篩選資源。然後按一下*<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*關閉篩選窗格。</block>
   <block id="bb40ccbb928b274cb38a895aef70f856" category="list-text">如果您要備份資料庫、請按一下資料庫名稱。</block>
   <block id="8373034f279dfd1570ec179c090b858c" category="list-text">如果顯示「拓撲」檢視、請按一下「*保護*」。</block>
   <block id="c5f4c29439aa6c78216cfa3f9865548c" category="list-text">如果顯示Database - Protect Resource（資料庫-保護資源）精靈、請繼續執行步驟3。</block>
@@ -2261,7 +2245,6 @@
   <block id="1bbe027c3f1875faca6a0e19b110374a" category="list-text">如果某個資源群組有來自不同主機的多個資料庫、某些主機上的備份作業可能會因為網路問題而延遲啟動。您應該使用「Set-SmConfigSettings' PowerShell Cmdlet來設定「web.config」中的「MaxRetryForUninitalizedHops」值。</block>
   <block id="a1d7cae473cc035fb76e1540b76e2763" category="list-text">在資源群組中、如果您在NetApp和非NetApp儲存設備上加入具有主動/被動資料庫複本的資料庫或資料庫可用度群組、且您已在原則中選取*備份主動複本*或*備份在備份工作建立時間*期間要選取的伺服器上的複本、 然後備份工作會進入警告狀態。</block>
   <block id="b9c7ed41d7e2f0a91ab873b63037fa09" category="paragraph">在NetApp儲存設備上成功備份主動/被動資料庫複本、而非NetApp儲存設備上主動/被動資料庫複本的備份將會失敗。</block>
-  <block id="d9ad3509ed74d62d9925203b0b85cc8b" category="paragraph">您可以在搜尋方塊中輸入資源群組名稱、或按一下*來搜尋資源群組<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*、然後選取標記。然後按一下*<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*關閉篩選窗格。</block>
   <block id="5e312685e47c74b5ee2a4102a18ee03f" category="doc">Exchange外掛程式所需的ONTAP 最低需求權限</block>
   <block id="c542c48c5883f05c53ef29a5ecb69599" category="summary">如果您不再需要移除SmBackup指令程式來執行其他資料保護作業、可以使用該指令程式來刪除Exchange備份。</block>
   <block id="c67cf2b105f14a1f28e583dd29d713ba" category="doc">使用PowerShell Cmdlet移除Exchange備份</block>
@@ -3790,7 +3773,6 @@
   <block id="ea206b55c8e872afeab89e937623ab63" category="paragraph">安裝外掛程式之後、該主機上的所有資料庫都會自動探索並顯示在「資源」頁面中。</block>
   <block id="6987bf979aa46f2f012544689e530ba8" category="paragraph">資料庫至少應處於掛載狀態或以上、才能成功探索資料庫。在Oracle Real Application叢集（RAC）環境中、執行探索的主機上的RAC資料庫執行個體至少應處於掛載狀態或以上、以便成功探索資料庫執行個體。只有成功探索的資料庫才能新增至資源群組。</block>
   <block id="719fa5cf3cf0a0fd65399dc0b9ba9597" category="paragraph">如果您已刪除主機上的Oracle資料庫、SnapCenter 則無法感知到該資料庫、並會列出刪除的資料庫。您應該手動重新整理資源、以更新SnapCenter 「資源更新清單」。</block>
-  <block id="ddb5eb0de214c4f8ca63b100be025650" category="paragraph">按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>，然後選取主機名稱和資料庫類型以篩選資源。然後按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 圖示以關閉篩選窗格。</block>
   <block id="ffe07db18130be1419f3e22efa2b9af9" category="paragraph">在RAC單節點案例中、資料庫會被視為目前裝載該資料庫的節點上的RAC資料庫。</block>
   <block id="8cc1dfb0736def133fbfcac21e33e8c2" category="paragraph">資料庫會連同資料庫類型、主機或叢集名稱、相關資源群組和原則、以及狀態等資訊一起顯示。</block>
   <block id="488808c65c8210343fe174817606fae0" category="list-text">如果資料庫位於非NetApp儲存系統上、則使用者介面會在「整體狀態」欄中顯示「不可用於備份」訊息。</block>
@@ -3987,7 +3969,6 @@
   <block id="242cdc11ae22f217c93ae40e14e96194" category="paragraph">如果您為個別資源群組設定認證、且使用者名稱沒有完整的管理權限、則使用者名稱至少必須具有資源群組和備份權限。</block>
   <block id="7b13621f41f0146d0ffd2434af94438a" category="paragraph">如果您已啟用Oracle資料庫驗證、資源檢視中會顯示紅色的掛鎖圖示。您必須設定資料庫認證、才能保護資料庫或將其新增至資源群組、以執行資料保護作業。</block>
   <block id="9d84c90ce04a969ca09498823506ba1f" category="admonition">如果您在建立認證時指定不正確的詳細資料、則會顯示錯誤訊息。您必須按一下*「取消」*、然後重試。</block>
-  <block id="f8cbfb3254bb5bd20533e8d1e586899c" category="list-text">按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>，然後選取主機名稱和資料庫類型以篩選資源。</block>
   <block id="5de6e0a70b653c8dab85d2d2bccf04ae" category="list-text">選取資料庫、然後按一下*資料庫設定*&gt;*設定資料庫*。</block>
   <block id="6df18cfefa59a0d65ea120d8247b7ba8" category="list-text">在「設定資料庫設定」區段的「使用現有認證*」下拉式清單中、選取應該用來在Oracle資料庫上執行資料保護工作的認證。</block>
   <block id="bc36b053b483bc3f05afdf22b15ab4cf" category="admonition">Oracle使用者應該擁有Sysdba權限。</block>
@@ -4004,7 +3985,6 @@
   <block id="b73216514e4678fde5a5aea6c63626c9" category="paragraph">如需詳細資訊、請參閱 <block ref="8f2b39531f2b3f3e4e9667f4d7ba23f5" category="inline-link-macro-rx"></block>。</block>
   <block id="381bb74dcb857609537acee4a3539bed" category="summary">如果資源不屬於任何資源群組、您可以從「資源」頁面備份資源。</block>
   <block id="bb3bb922fc2fe1b5851c8c139e13f07b" category="doc">備份Oracle資源</block>
-  <block id="520f85e55e2b17285c39b1ad458556a0" category="list-text">按一下*<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*、然後選取主機名稱和資料庫類型以篩選資源。</block>
   <block id="d8e3db119b7cf9c31602a2121bfa4365" category="list-text">選取您要備份的資料庫。</block>
   <block id="d24902f60cccf9a4d0ef979587d1d4fd" category="paragraph">此時會顯示「資料庫保護」頁面。</block>
   <block id="8d2ba99665e114b5e2a9d74a31cdf554" category="list-text">在「資源」頁面中、執行下列動作：</block>
@@ -4038,7 +4018,6 @@
   <block id="e20055e9e346b7f7cc8d7daf8a91a17d" category="paragraph">隨即顯示「應用程式Volume拓撲」頁面。</block>
   <block id="543eb3b9143ccc1ed273dbc9f064ffa2" category="summary">資源群組是主機或叢集上的資源集合。資源群組上的備份作業會對資源群組中定義的所有資源執行。</block>
   <block id="7fac35e2e64a179ee0279256e1dc195f" category="doc">備份Oracle資料庫資源群組</block>
-  <block id="e169c75993af25a436c2276ecc3bbdda" category="paragraph">您可以在搜尋方塊中輸入資源群組名稱、或按一下*來搜尋資源群組<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*、然後選取標記。然後按一下*<block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block>*關閉篩選窗格。</block>
   <block id="2c4f60cdfab4e71a27e2dfbd9362e411" category="summary">在使用SnapCenter 支援功能來備份Oracle資料庫資源之前、您必須先為要備份的資源或資源群組建立備份原則。備份原則是一組規則、可管理您管理、排程及保留備份的方式。您也可以指定複寫、指令碼及備份類型設定。當您想要在其他資源或資源群組上重複使用原則時、建立原則可節省時間。</block>
   <block id="a3a63bd1ddab3e696228b7b61878c09d" category="doc">為Oracle資料庫建立備份原則</block>
   <block id="e457b5ee7ca69de08b3486e30ef1d570" category="list-text">您必須完成安裝SnapCenter 、新增主機、探索資料庫及建立儲存系統連線等工作、準備好保護資料。</block>
@@ -6661,7 +6640,6 @@
   <block id="3bb68819532539f48f629ba62348a6c6" category="paragraph">例如、如果使用者只有資料庫的檢視存取權、就無法識別資料庫的檔案和內容、因此無法進行備份。</block>
   <block id="7d48eed4487109a3829d0196f297a492" category="admonition">如果SQL Server Standard Edition上有可用度群組組組態、則僅能備份主要資料庫。SnapCenter</block>
   <block id="8057ae87eee7a0579409f47c9591745e" category="list-text">在「資源」頁面中、從「*檢視*」下拉式清單中選取「*資料庫*」或「*執行個體*」或「*可用度群組*」。</block>
-  <block id="c3a876612603db3849e76480edcc8121" category="paragraph">按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 然後選取主機名稱和SQL Server執行個體以篩選資源。然後按一下 <block ref="fec415d0a77b873d1abe850650ad2d07" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
   <block id="b8b5141218dbfab4fdbf5b5063dfa880" category="paragraph">這些資源會連同資源類型、主機或叢集名稱、相關資源群組、備份類型、原則和整體狀態等資訊一起顯示。</block>
   <block id="e47a2cdbd770e8e20b9c7261dcf67926" category="list-text">如果資料庫位於非NetApp儲存設備上、「Not Available for Backup」（無法備份）會顯示在「*整體狀態*」欄中。</block>
   <block id="6a0af518fc735246e3518bed22c2fa48" category="paragraph">您無法在非NetApp儲存設備上的資料庫上執行資料保護作業。</block>
@@ -7030,8 +7008,6 @@
   <block id="760e4ac18c61344254ca2b2ea3da745a" category="list-text">如果您使用SnapCenter 的是適用於Linux的Singes外掛程式套件或SnapCenter 適用於AIX的Singe-Plug-ins套件、排程SnapCenter 會在Windows工作排程中於該伺服器上執行。</block>
   <block id="34491d7c290ea91e85fff45d101c134f" category="list-text">針對Oracle資料庫的支援功能、在支援Oracle資料庫的支援中心主機上執行的主機代理程式會與在Linux或AIX主機上執行的支援程式（SPL）通訊、以執行不同的資料保護作業。SnapCenter SnapCenter SnapCenter</block>
   <block id="a45f8ebdad00cd1e18e59d75c2e10a6e" category="list-text">針對SAP HANA資料庫和更新版的SAP HANA外掛程式、透過主機上執行的SCCore代理程式、讓支援這些外掛程式的支援能力更高。SnapCenter SnapCenter SnapCenter</block>
-  <block id="7f09afa1cce264e8c737c6b7357d5bd8" category="paragraph">支援使用HTTPS的支援伺服器和外掛程式與主機代理程式通訊。SnapCenter</block>
-  <block id="920ebfc1b280e5aee6295e39f4823b55" category="paragraph">關於功能的資訊SnapCenter 會儲存在SnapCenter 資訊庫中。</block>
   <block id="a6d093f66e362f8852d5b0ce5d1adf5a" category="section-title">實體外掛程式SnapCenter</block>
   <block id="e1087bd8c9bab7e111508724bff61f97" category="paragraph">每SnapCenter 個支援特定環境、資料庫和應用程式的支援。</block>
   <block id="9a8bf4c46d108a9dadf51b9b7637621f" category="cell">外掛程式名稱</block>
@@ -7777,8 +7753,6 @@
   <block id="14fbb4ba3858c107f2599916d3b51cbb" category="section-title">移除目錄資訊</block>
   <block id="4c4d4c133d15d97bf3bef74ffeeeb66a" category="list-text">在左側導覽窗格中、選取 * 資源 * 、然後從清單中選取適當的外掛程式。</block>
   <block id="ba4484b740822363967ef7dbb090de6a" category="inline-image-macro">篩選圖示</block>
-  <block id="bdf18e1416fb037a66cb2e8b6bf34e50" category="list-text">按一下 <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>，然後選取主機名稱和資料庫類型以篩選資源。</block>
-  <block id="36fae2ba23dbe8fc737f85fdffde333e" category="paragraph">然後按一下 <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
   <block id="90db41db3c301da492422a8fbb244c83" category="list-text">在「資源」頁面中、您可以執行下列步驟：</block>
   <block id="00f0529a96533b63a21705811e1addce" category="list-text">選取核取方塊、然後輸入您要用於 Snapshot 複本名稱的自訂名稱格式。</block>
   <block id="8319f5e3f98fcec5a71bd43e8454a8fd" category="paragraph">例如、<block ref="6d242f6ac938ffb13709f54d68cd3c4a" prefix=" " category="inline-code"></block> 或<block ref="90ea7aa0cb61dd49e32f6dcf8afac143" prefix=" " category="inline-code"></block>。根據預設、 Snapshot 複本名稱會附加時間戳記。</block>
@@ -7844,8 +7818,6 @@
   <block id="92d3f2f0912d79a31442f669496dcfa5" category="list-text">僅限資料檔案和控制檔</block>
   <block id="5894ddcf494ce28f1eb272ca5e723710" category="list-text">完整資料庫、包含資料檔案、控制檔及歸檔記錄檔</block>
   <block id="2d92b3df61f86e9074ba4418a26c533e" category="paragraph">當資料庫處於掛載或關機狀態時所建立的備份稱為離線備份。離線備份也稱為冷備份。您只能在離線備份中包含資料檔案和控制檔。您可以建立離線掛載或離線關機備份。</block>
-  <block id="fd9859cb151774e34b52a6d747daab3d" category="list-text">在搜尋方塊中輸入資源群組名稱、或按一下 <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block>，然後選擇標記。</block>
-  <block id="6baaca80281eda4a251e4e932a39cd4b" category="paragraph">按一下 <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
   <block id="50aa129d52e712ab3c9a0f93f956d9e2" category="list-text">在「資源群組」頁面中、選取要備份的資源群組。</block>
   <block id="3ce47918d2033ed0d68d1e7c6a9b1c45" category="admonition">如果您有兩個資料庫的聯合資源群組、其中一個資料庫在非 NetApp 儲存設備上有資料、則即使另一個資料庫在 NetApp 儲存設備上、備份作業仍會中止。</block>
   <block id="5655480ae4615b223f1d67d63b4ee784" category="list-text">如果您有多個與資源群組相關聯的原則、請從 * 原則 * 下拉式清單中選取您要使用的備份原則。</block>
@@ -8056,9 +8028,7 @@
   <block id="48462a95fd8685081e58f7c123971e5b" category="section-title">憑證型驗證概觀</block>
   <block id="dbb44863e91bacd01eafa49136b071d2" category="paragraph">憑證型驗證可驗證嘗試存取 SnapCenter 外掛主機之個別使用者的真實性。使用者應匯出不含私密金鑰的 SnapCenter 伺服器憑證、並將其匯入外掛程式主機信任存放區。只有啟用雙向 SSL 功能時、憑證型驗證才會生效。</block>
   <block id="f6ce44442588fc16e1d7cc2d3995eff2" category="list-text">位於 ONTAP FAS 、 AFF 或所有 SAN 陣列（ ASA ）主要系統上、並複寫到 ONTAP FAS 、 AFF 或 ASA 次要系統的資料</block>
-  <block id="616472bd1da01c2fe1a46ec002e57f2b" category="list-text">位於 ONTAP FAS 、 AFF 或 ASA 主要與次要系統上、並受本機 StorageGRID 物件儲存保護的資料（使用 NetApp BlueXP 雲端備份整合）</block>
   <block id="f5c37d824040662f50cbb8a32d77182d" category="list-text">ONTAP FAS 、 AFF 或 ASA 主要系統上的資料、並複寫至 Cloud Volumes ONTAP</block>
-  <block id="394619b29d62ebea0cecaad9129df0ea" category="list-text">位於 ONTAP FAS 、 AFF 或 ASA 主要和次要系統上、並受雲端物件和歸檔儲存保護的資料（使用 NetApp BlueXP 雲端備份整合）</block>
   <block id="b250098e069eb54d9e5d847baeeca541" category="paragraph">如需Windows Cmdlet的詳細資訊、請參閱<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
   <block id="c10c466f5857ce0ebc5a5f9e3130411a" category="paragraph">如需UNIX命令的詳細資訊、請參閱<block ref="1f7a49a613b7c2dfb834cc80b3b923ce" category="inline-link-rx"></block>。</block>
   <block id="0dfbdfeadf3f1f407a28e4f77517f070" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block></block>
@@ -8472,4 +8442,40 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="28d224f5fce20ca21cc66cf83832a2b1" category="list-text">選取您要設定驗證排程的原則、然後選取 *<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*。</block>
   <block id="3d1c64d2c8b1e4058225a78c3ef09fa6" category="list-text">選擇*確定*。</block>
   <block id="5477ea177e290e8ac1c03a7ee8f2a92b" category="list-text">選擇 * 立即備份 * 。</block>
+  <block id="e871dec81bbb55999bfb71a61279d374" category="paragraph">按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>，然後選取主機名稱和資源類型以篩選資源。然後按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
+  <block id="7b467581fdc2f1a9bc98397eaf9411b4" category="list-text">按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 以篩選清單、僅列出備份作業。</block>
+  <block id="8e5cdb93ac42ad2c2b35814060435396" category="paragraph">您可以在搜尋方塊中輸入資源群組名稱、或按一下、來搜尋資源群組 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 並選取標記。然後按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
+  <block id="748e365a5533cec3628919b992bc25fa" category="list-text">按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 可篩選列表以便僅列出還原操作。</block>
+  <block id="f5cb0104f9d25cac663152187398a069" category="list-text">按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 可篩選列表以便僅列出克隆操作。</block>
+  <block id="5968d7d6aa7eca121c1a6ecc9d1f9bd1" category="paragraph">按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 然後選取主機名稱和SQL Server執行個體以篩選資源。然後按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
+  <block id="3f897d901d24f02777ff0994b7823d1a" category="list-text">位於 ONTAP FAS 、 AFF 或 ASA 主要和次要系統上、並受本機 StorageGRID 物件儲存保護的資料</block>
+  <block id="f7b38c62b0e74d318a255bc3094cf531" category="list-text">位於 ONTAP FAS 、 AFF 或 ASA 主要和次要系統上、並受雲端物件和歸檔儲存保護的資料（使用 BlueXP 備份和還原整合）</block>
+  <block id="b62cae9c23cf035ec4b43fec7f0697d6" category="paragraph">支援使用HTTPS的支援伺服器和外掛程式與主機代理程式通訊。SnapCenter關於功能的資訊SnapCenter 會儲存在SnapCenter 資訊庫中。</block>
+  <block id="91e3724846bcc53dbc1d1e5a3296e15f" category="inline-link">SnapCenter 在使用不聯合命名空間時無法探索資源</block>
+  <block id="0c6faa7f360e593d37b8a98e5281e4e7" category="admonition">SnapCenter 支援 Windows 主機的不聯合命名空間。如果您在使用不聯合命名空間時遇到問題、請參閱<block ref="96bf41c45768bfb194201403aea10b84" category="inline-link-rx"></block>。</block>
+  <block id="b9d10a11f62e11b503698c7bbbb76969" category="list-text">按一下*<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*、然後選取主機名稱和資料庫類型以篩選資源。</block>
+  <block id="c09c3cc5c352ec79b573a0262d4a9909" category="paragraph">然後按一下*<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*關閉篩選窗格。</block>
+  <block id="27141c09e4c3729538eed268f4984f0a" category="paragraph">按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>，然後選取主機名稱和資料庫類型以篩選資源。然後按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 圖示以關閉篩選窗格。</block>
+  <block id="895c7c73b51f1f88870ff5bc421d66ff" category="paragraph">您可以在搜尋方塊中輸入資源群組名稱、或按一下*來搜尋資源群組<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*、然後選取標記。然後按一下*<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*關閉篩選窗格。</block>
+  <block id="8772efe51abd031bf2630ddf99b43a79" category="list-text">按一下 <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>，然後選取主機名稱和資料庫類型以篩選資源。</block>
+  <block id="2120056b5c6b43acb41f77a74a912128" category="paragraph">然後按一下 <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
+  <block id="456dd0163d1a1c34c74efc809cf6363b" category="list-text">按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>，然後選取主機名稱和資料庫類型以篩選資源。</block>
+  <block id="b5e4628eb9cb2cd7efab86c10d19965c" category="paragraph">然後按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
+  <block id="6920404cf085bab5be2132dbc275f33b" category="paragraph">資源群組是主機或叢集上的資源集合。備份作業會在資源群組中定義的所有資源上執行。</block>
+  <block id="a833804e6b707a2a653d8b6273573c9f" category="paragraph">您可以從「資源」頁面隨需備份資源群組。如果資源群組已附加原則且已設定排程、則會根據排程建立備份。</block>
+  <block id="b2ad47c7842f5e26da4387acfcdb5046" category="list-text">在搜尋方塊中輸入資源群組名稱、或按一下 <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block>，然後選擇標記。</block>
+  <block id="313b973ed20ae0f32242d787d703216d" category="paragraph">按一下 <block ref="2df6cc2e237d722aa6244879c70fd2d2" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
+  <block id="8ec049c5812d131f3e960eb36acfe281" category="paragraph">按一下*<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*、然後選取主機名稱和資料庫類型以篩選資源。然後按一下*<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*關閉篩選窗格。</block>
+  <block id="a4da2725fd201053d7a850500b404971" category="paragraph">按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 然後選取主機名稱和Exchange Server以篩選資源。然後按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
+  <block id="3a16a5fe7a351d2059010bdd627dffd9" category="paragraph">您可以在搜尋方塊中輸入資源群組名稱、或按一下*來搜尋資源群組<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*、然後選取標記。然後按一下*<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*關閉篩選窗格。</block>
+  <block id="90e14cd7255b5121e0c223d30a2cd3b7" category="list-text">（選用）按一下 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 然後選取主機名稱。</block>
+  <block id="f2ae288f937b356dff24c08f0c1a6ec3" category="list-text">（選用）按一下*<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*、然後選取主機名稱。</block>
+  <block id="9eb8278143c5b25686cc1b6c525a9b8d" category="paragraph">選取*<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*、然後選取主機名稱和資源類型以篩選資源。然後您可以選取 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
+  <block id="45b6721b8137bd82de1f2497a525d57a" category="list-text">選取您要備份的資源。</block>
+  <block id="0666d07a296860de6e0a6f6e4fd0425e" category="list-text">選擇 * 備份 * 箭頭以設定其他備份選項：</block>
+  <block id="cd713ffb7f8ebc1fd9a44fb5ef40eefe" category="paragraph">選擇*緊急*或*中型*或*休閒*以指定Snapshot複製作業完成的等待時間。「緊急」= 5秒、「中」= 7秒、「輕鬆」= 20秒。</block>
+  <block id="8dd7963568a06d004b4a54b651ec862f" category="list-text">選取 * 指令碼 * 箭頭以執行停止、 Snapshot 複本和取消停止作業的前置和後置命令。</block>
+  <block id="0644babb03e5024dbc898ead17e21f90" category="list-text">選取「 ** 自訂組態 ** 」箭頭、然後輸入使用此資源的所有工作所需的自訂值配對。</block>
+  <block id="100eb4bb64628d6bc8890851c8173103" category="list-text">在 [ 新增原則 _policy_name_ 的排程 ] 對話方塊中，設定排程，然後選取 *OK* 。</block>
+  <block id="7dd7da1b07a05d1000eeeecb05ce4ee5" category="paragraph">您可以在搜尋方塊中輸入資源群組名稱、或是選取來搜尋資源群組 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>，然後選取標記。然後您可以選取 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
 </blocks>
