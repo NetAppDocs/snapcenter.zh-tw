@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/concept_develop_a_plug_in_for_your_application.html 
 sidebar: sidebar 
-keywords:  
+keywords: overview snapcenter 
 summary: 利用此伺服器SnapCenter 、您可以將應用程式部署及管理為SnapCenter 支援的外掛程式。 
 ---
 = 總覽

@@ -15,8 +15,7 @@ summary: 您可以使用SnapCenter 支援於支援服務器主機命令列介面
 
 您應該SnapCenter 已經以網域使用者的身分登入到這個系統、並在您想要解除安裝外掛程式的每個主機上擁有本機系統管理員權限。
 
-*步驟*
-
+.步驟
 . 啟動PowerShell。
 . 在「支援服務器」主機上、輸入：_Open-SMConnection -SMSbasUrl \https://SNAPCENTER_SERVER_NAME/DOMAIN_NAME_命令、然後輸入您的認證資料。SnapCenter
 . 使用_uninstall-SmHostPackage_ Cmdlet和必要參數來解除安裝Windows外掛程式。

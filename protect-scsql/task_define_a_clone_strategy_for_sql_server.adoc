@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_define_a_clone_strategy_for_sql_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: clone strategy 
 summary: 定義複製策略可讓您成功複製資料庫。 
 ---
 = 定義SQL Server的複製策略

@@ -17,8 +17,7 @@ REST API會透過Swagger網頁公開。您可以存取Swagger網頁以顯示Snap
 
 您不需要特殊權限即可執行REST API用戶端。任何使用者都可以存取Swagger網頁。透過REST API存取之物件的個別權限、取決於產生權杖以登入REST API的使用者。
 
-*步驟*
-
+.步驟
 . 從瀏覽器輸入URL、以_\ https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_格式存取Swagger網頁。
 +
 

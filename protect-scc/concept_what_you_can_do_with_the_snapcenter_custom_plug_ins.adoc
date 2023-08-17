@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/concept_what_you_can_do_with_the_snapcenter_custom_plug_ins.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Custom Plug-ins 
 summary: 您可以使用SnapCenter 「不一樣的自訂外掛程式」來執行資料保護作業。 
 ---
 = 您可以使用SnapCenter 「不一樣的自訂外掛程式」和「儲存外掛程式」來做什麼

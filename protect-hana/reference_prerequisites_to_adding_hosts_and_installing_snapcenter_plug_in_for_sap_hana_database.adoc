@@ -57,3 +57,47 @@ https://imt.netapp.com/matrix/imt.jsp?components=112393;&solution=1259&isHWU&src
 * 對於在Linux主機上執行的SAP HANA資料庫、在安裝SAP HANA資料庫外掛程式時SnapCenter 、會自動安裝適用於UNIX的整套外掛程式。
 * 您應該將 * bash* 作為外掛程式安裝的預設 Shell 。
 
+
+
+
+== 補充命令
+
+若要在 SnapCenter Plug-in for SAP HANA 上執行補充命令、您必須將其包含在中 `allowed_commands.config` 檔案：
+
+`allowed_commands.config` 檔案位於 SnapCenter Plug-in for SAP HANA 目錄的「 etc 」子目錄中。
+
+.Windows主機
+預設： `C:\Program Files\NetApp\SnapCenter\HANA\etc\allowed_commands.config`
+
+自訂路徑： `<Custome_Directory>\NetApp\SnapCenter\HANA\etc\allowed_commands.config`
+Windows 主機：
+
+.Linux主機
+預設： `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
+
+自訂路徑： `<Custome_Directory>/NetApp/snapcenter/scc/etc/allowed_commands.config`
+
+若要允許在外掛主機上執行補充命令、請開啟 `allowed_commands.config` 編輯器中的檔案。在單獨的行中輸入每個命令。它不區分大小寫。
+例如、
+
+命令： mount
+
+命令： umount
+
+請務必指定完整路徑名稱。如果路徑名稱包含空格、請以引號（ " ）括住路徑名稱。
+例如、
+
+命令： "C:\Program Files\NetApp\SnapCreator commands\sdcli.exe"
+
+命令： myscript.bat
+
+如果是 `allowed_commands.config` 檔案不存在、命令或指令碼執行將遭到封鎖、工作流程將失敗並顯示下列錯誤：
+
+"[/mnt/mount -a] 不允許執行。在外掛程式主機上的檔案 %s 中新增命令以進行授權。 "
+
+如果命令或指令碼未出現在中 `allowed_commands.config`、命令或指令碼執行將會遭到封鎖、工作流程將會失敗、並顯示下列錯誤：
+
+"[/mnt/mount -a] 不允許執行。在外掛程式主機上的檔案 %s 中新增命令以進行授權。 "
+
+
+NOTE: 您不應使用萬用字元項目（ * ）來允許所有命令。

@@ -13,8 +13,7 @@ summary: 您可以使用SnapCenter 「更新工作」頁面來監控不同備份
 [role="lead"]
 您可以使用SnapCenterJobs頁面監控不同備份作業的進度。您可能需要檢查進度、以判斷何時完成或是否有問題。
 
-*關於此工作*
-
+.關於這項工作
 「工作」頁面上會出現下列圖示、並指出作業的對應狀態：
 
 * image:../media/progress_icon.gif["進行中圖示"] 進行中
@@ -22,11 +21,10 @@ summary: 您可以使用SnapCenter 「更新工作」頁面來監控不同備份
 * image:../media/failed_icon.gif["失敗圖示"] 失敗
 * image:../media/warning_icon.gif["已完成並顯示警告圖示"] 已完成但有警告、或由於警告而無法啟動
 * image:../media/verification_job_in_queue.gif["驗證工作已排入佇列"] 已佇列
-* image:../media/cancel_icon.gif[""] 已取消
+* image:../media/cancel_icon.gif["取消圖示"] 已取消
 
 
-*步驟*
-
+.步驟
 . 在左導覽窗格中、按一下*監控*。
 . 在「監控」頁面中、按一下「*工作*」。
 . 在「工作」頁面中、執行下列步驟：

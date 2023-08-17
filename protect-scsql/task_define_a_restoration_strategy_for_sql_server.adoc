@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_define_a_restoration_strategy_for_sql_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: restoration strategy 
 summary: 定義SQL Server的還原策略可讓您成功還原資料庫。 
 ---
 = 定義SQL Server的還原策略

@@ -15,8 +15,7 @@ summary: 您應該設定儲存系統SnapCenter 、讓您能夠存取ONTAP 不必
 
 您可以新增獨立SVM或由多個SVM組成的叢集。如果您使用Amazon FSx for NetApp ONTAP 支援NetApp、則可以使用fsxadmin帳戶新增由多個SVM組成的FSx管理LIF、或在Sfssx SnapCenter 中新增FSVM。
 
-*您需要的是什麼*
-
+.開始之前
 * 您應該在「基礎架構管理員」角色中擁有必要的權限、才能建立儲存連線。
 * 您應確保外掛程式安裝不進行中。
 +
@@ -111,7 +110,7 @@ NOTE: 如果SVM是以簡短名稱或FQDN新增、則必須同時從SnapCenter �
 . 按一下*提交*。
 
 
-*結果*
+* 結果 *
 
 在「儲存系統」頁面的「*類型*」下拉式清單中、執行下列其中一項動作：
 
@@ -138,7 +137,7 @@ NOTE: 如果您已將 FAS 或 AFF 儲存系統升級至 All SAN Array （ ASA �
 
 叢集管理員必須在AutoSupport 每個儲存系統節點上啟用「支援功能」、SnapCenter 才能從所有可存取的儲存系統傳送電子郵件通知、方法是從儲存系統命令列執行下列命令：
 
-「AutoSupport 此功能可支援：client.app.info enenable -noteTo enable」
+`autosupport trigger modify -node nodename -autosupport-message client.app.info -to enable -noteto enable`
 
 
 NOTE: 儲存虛擬機器（SVM）管理員無法存取AutoSupport VMware。

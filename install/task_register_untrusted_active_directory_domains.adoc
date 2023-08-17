@@ -1,7 +1,7 @@
 ---
 permalink: install/task_register_untrusted_active_directory_domains.html 
 sidebar: sidebar 
-keywords:  
+keywords: Active Directory 
 summary: 您應向SnapCenter 支援此功能的伺服器登錄Active Directory、以管理來自多個不受信任Active Directory網域的主機、使用者和群組。 
 ---
 = 登錄不受信任的Active Directory網域
@@ -13,8 +13,7 @@ summary: 您應向SnapCenter 支援此功能的伺服器登錄Active Directory�
 [role="lead"]
 您應向SnapCenter 支援此功能的伺服器登錄Active Directory、以管理來自多個不受信任Active Directory網域的主機、使用者和群組。
 
-*您需要的是什麼*
-
+.開始之前
 * LDAP與LDAPS傳輸協定*
 
 * 您可以使用LDAP或LDAPS傳輸協定來登錄不受信任的Active Directory網域。

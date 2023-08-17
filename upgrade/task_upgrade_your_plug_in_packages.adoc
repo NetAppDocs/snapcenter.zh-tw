@@ -15,8 +15,7 @@ summary: 外掛程式套件是SnapCenter 隨附於升級版的一部分而發佈
 
 升級程序會將Windows、Linux或AIX主機置於「維護」模式、使主機無法執行任何排程工作。
 
-*您需要的是什麼*
-
+.開始之前
 * 如果您是非root使用者、可以存取Linux機器、則在執行升級作業之前、應先使用最新的Checksum值來更新/etc/udoers_檔案。
 * 根據預設SnapCenter 、此功能會從環境中偵測Java_Home。如果您想要使用固定的Java_Home、而且要升級Linux主機上的外掛程式、您應該在位於_/var/opt/snapcenter/spl/etc/_的_spl.properties_檔案中、手動新增SKip_JAVAHOME_update參數、並將值設為true。
 +
@@ -28,8 +27,7 @@ summary: 外掛程式套件是SnapCenter 隨附於升級版的一部分而發佈
 
 
 
-*關於此工作*
-
+.關於這項工作
 * 升級程序會將Windows、Linux或AIX主機置於「維護」模式、使主機無法執行任何排程工作。
 * 針對Microsoft SQL Server的支援功能、適用於Microsoft Exchange Server的支援功能、以及適用於Microsoft Windows的支援功能、建議您將伺服器和外掛程式主機升級至最新版本、以便執行指令碼路徑SnapCenter SnapCenter SnapCenter 。
 +
@@ -40,8 +38,7 @@ summary: 外掛程式套件是SnapCenter 隨附於升級版的一部分而發佈
 
 
 
-*步驟*
-
+.步驟
 . 在左側導覽窗格中、按一下*主機*>*受管理主機*。
 . 執行下列其中一項工作來升級主機：
 +

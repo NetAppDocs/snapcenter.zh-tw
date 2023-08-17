@@ -13,7 +13,7 @@ summary: 您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、同
 [role="lead"]
 您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、同時在多個主機上安裝適用於Linux或Windows的VMware®更新套件。
 
-.您需要的產品
+.開始之前
 您必須以SnapCenter 網域使用者的身分登入到支援安裝外掛程式套件的每個主機、並具有本機系統管理員權限。
 
 .步驟

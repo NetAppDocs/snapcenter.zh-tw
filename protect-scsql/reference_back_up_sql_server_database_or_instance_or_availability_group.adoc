@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_back_up_sql_server_database_or_instance_or_availability_group.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup workflow 
 summary: 當SnapCenter 您在環境中安裝適用於Microsoft SQL Server的解決方案時、SnapCenter 可以使用支援程序來備份SQL Server資源。 
 ---
 = 備份工作流程

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_multiple_databases_on_the_same_volume.html 
 sidebar: sidebar 
-keywords:  
+keywords: Multiple databases 
 summary: 您可以將所有資料庫放在同一個磁碟區上、因為備份原則有選項可設定每個備份的資料庫上限（預設值為100\）。 
 ---
 = 相同磁碟區上有多個資料庫

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_storage_disaster_recovery_for_scsql.html 
 sidebar: sidebar 
-keywords:  
+keywords: disaster recovery 
 summary: 您可以SnapCenter 在「Global Settings（全域設定）」頁面中啟用「DR Mode for Storage（儲存的DR模式）」、以還原適用於SQL Server儲存設備的「支援功能」外掛程式。 
 ---
 = 適用於SQL Server的儲存災難恢復（DR）SnapCenter
@@ -13,8 +13,7 @@ summary: 您可以SnapCenter 在「Global Settings（全域設定）」頁面中
 [role="lead"]
 您可以SnapCenter 在「Global Settings（全域設定）」頁面中啟用「DR Mode for Storage（儲存的DR模式）」、以還原適用於SQL Server儲存設備的「支援功能」外掛程式。
 
-*您需要的是什麼*
-
+.開始之前
 * 確認外掛程式處於維護模式。
 * 打破SnapMirror/SnapVault關係。link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.onc-sm-help-950/GUID-8A3F828F-CD3D-48E8-A171-393581FEB2ED.html["打破SnapMirror關係"]
 * 使用相同的磁碟機代號將LUN從次要連接到主機機器。
@@ -23,20 +22,17 @@ summary: 您可以SnapCenter 在「Global Settings（全域設定）」頁面中
 * 確保SQL資源重新連線。
 
 
-*關於此工作*
-
+.關於這項工作
 VMDK和RDM組態不支援災難恢復（DR）。
 
-*步驟*
-
+.步驟
 . 在「設定」頁面中、瀏覽至*設定*>*全域設定*>*災難恢復*。
 . 選取*「啟用災難恢復」*。
 . 按一下「 * 套用 * 」。
 . 按一下「*監控*>*工作*」來確認DR工作是否已啟用。
 
 
-*完成後*
-
+.完成後
 * 如果在容錯移轉之後建立新資料庫、資料庫將處於非DR模式。
 +
 新資料庫的運作方式將如同容錯移轉之前一樣。

@@ -15,8 +15,7 @@ summary: 還原Exchange資料庫包括啟動與SnapCenter 該伺服器的連線�
 
 您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。
 
-*步驟*
-
+.步驟
 . 使用「Open-SmConnection」指令程式、為SnapCenter 指定的使用者啟動與該伺服器的連線工作階段。
 +
 [listing]

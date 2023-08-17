@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: sc-automation/task_get_started_with_the_rest_api.html 
-keywords:  
+keywords: REST API 
 summary: 存取API可在您開始使用API之前、先提供一些觀點、讓您在即時設定中使用更複雜的工作流程程序。 
 ---
 = 開始使用REST API
@@ -19,8 +19,7 @@ summary: 存取API可在您開始使用API之前、先提供一些觀點、讓�
 
 您可以在系統上執行簡單的命令、開始使用SnapCenter 靜態API並確認其可用度。
 
-*您需要的是什麼*
-
+.開始之前
 * 請確定系統上有Curl公用程式可用。
 * 知識產權伺服器的IP位址或主機名稱SnapCenter
 * 有權存取SnapCenter 靜態API的帳戶使用者名稱和密碼。
@@ -29,8 +28,7 @@ summary: 存取API可在您開始使用API之前、先提供一些觀點、讓�
 
 NOTE: 如果您的認證資料包含特殊字元、您必須根據您使用的Shell、以Curl可接受的方式來設定其格式。例如、您可以在每個特殊字元之前插入反斜槓、或將整個「username:password」字串換成單引號。
 
-*步驟*
-
+.步驟
 在命令列介面上執行下列命令、以擷取外掛程式資訊：
 
 "curl -X Get -u username:password -k "https://<ip_address>/api/hosts?fields=IncludePluginInfo"`[]

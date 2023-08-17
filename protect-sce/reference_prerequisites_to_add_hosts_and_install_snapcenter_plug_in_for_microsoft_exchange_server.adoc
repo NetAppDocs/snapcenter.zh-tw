@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: 新增主機並安裝外掛程式套件之前、您必須先完成所有需求。 
 ---
 = 新增主機及安裝SnapCenter Microsoft Exchange Server的功能的先決條件

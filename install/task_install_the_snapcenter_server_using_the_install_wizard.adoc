@@ -18,8 +18,7 @@ summary: 您可以執行SnapCenter 《伺服器安裝程式執行檔」來安裝
 
 NOTE: 不支援從SnapCenter 命令列無聲安裝支援。
 
-*您需要的是什麼*
-
+.開始之前
 * 支援Windows更新的更新必須是最新版的伺服器SnapCenter 主機、而且不會有擱置中的系統重新啟動。
 * 您應該已確定MySQL Server未安裝在您計畫安裝SnapCenter 此伺服器的主機上。
 * 您應該已啟用Windows安裝程式偵錯功能。

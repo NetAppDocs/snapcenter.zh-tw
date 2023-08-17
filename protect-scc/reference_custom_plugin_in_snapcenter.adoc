@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_custom_plugin_in_snapcenter.html 
 sidebar: sidebar 
-keywords:  
+keywords: Custom plug-in 
 summary: 您可以使用SnapCenter 支援應用程式資料保護的功能、在主機上安裝所建立的自訂外掛程式。 
 ---
 = 自訂SnapCenter 插件

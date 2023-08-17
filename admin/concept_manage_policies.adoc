@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_policies.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage policies 
 summary: 您可以從資源或資源群組分離原則、修改、刪除、檢視及複製。 
 ---
 = 管理原則
@@ -78,8 +78,7 @@ summary: 您可以從資源或資源群組分離原則、修改、刪除、檢�
 
 如果不再需要原則、您可能會想要刪除這些原則。
 
-*您需要的是什麼*
-
+.開始之前
 如果原則與任何資源或資源群組相關聯、則應將原則從資源或資源群組中分離。
 
 *步驟*

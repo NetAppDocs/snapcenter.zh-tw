@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_storage_layout_recommendations_for_snapcenter_plug_in_for_microsoft_sql_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: Storage layout 
 summary: 設計完善的儲存配置可讓SnapCenter 支援服務器備份資料庫、以符合您的恢復目標。在定義儲存配置時、您應該考量幾個因素、包括資料庫大小、資料庫變更率、以及執行備份的頻率。 
 ---
 = 針對Microsoft SQL Server的解決方案、提供儲存配置建議SnapCenter

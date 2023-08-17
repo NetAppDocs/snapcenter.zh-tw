@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_the_storage_system.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage storage system 
 summary: 新增儲存系統之後、您可以修改儲存系統組態和連線、或刪除儲存系統。 
 ---
 = 管理儲存系統

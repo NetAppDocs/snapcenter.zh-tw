@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_requirements_for_backing_up_sql_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Requirements 
 summary: 在備份SQL資源之前、您必須確保符合多項需求。 
 ---
 = 備份SQL資源的需求

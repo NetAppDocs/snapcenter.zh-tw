@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/concept_minimum_privileges_required_for_sap_hana_and_exchange_plug_in.html 
 sidebar: sidebar 
-keywords:  
+keywords: Minimum ONTAP privileges 
 summary: 所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter 
 ---
 = SAP HANA外掛程式所需的ONTAP 最低需求權限

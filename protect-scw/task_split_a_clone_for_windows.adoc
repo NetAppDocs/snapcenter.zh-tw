@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_split_a_clone_for_windows.html 
 sidebar: sidebar 
-keywords:  
+keywords: split clone 
 summary: 您可以使用SnapCenter 此功能從父資源分割複製的資源。分割的實體複本會變成獨立於父資源的實體複本。 
 ---
 = 分割實體複本
@@ -13,8 +13,7 @@ summary: 您可以使用SnapCenter 此功能從父資源分割複製的資源。
 [role="lead"]
 您可以使用SnapCenter 此功能從父資源分割複製的資源。分割的實體複本會變成獨立於父資源的實體複本。
 
-*關於此工作*
-
+.關於這項工作
 * 您無法在中繼實體複本上執行實體複本分割作業。
 +
 例如、從資料庫備份建立clone1之後、您可以建立clone1的備份、然後複製此備份（clone2）。建立clone2之後、clone1是中繼實體複本、您無法在clone1上執行實體複本分割作業。不過、您可以在clone2上執行實體複本分割作業。
@@ -27,10 +26,9 @@ summary: 您可以使用SnapCenter 此功能從父資源分割複製的資源。
 * 確保儲存系統上的磁碟區或Aggregate已上線。
 
 
-*步驟*
-
+.步驟
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
-. 在「資源」頁面中、從「檢視」清單中選取適當的選項：
+. 在「*資源*」頁面中、從「檢視」清單中選取適當的選項：
 +
 |===
 | 選項 | 說明 
@@ -53,7 +51,7 @@ summary: 您可以使用SnapCenter 此功能從父資源分割複製的資源。
 +
 此時會顯示資源拓撲頁面。
 
-. 從「管理複本」檢視中選取複製的資源（例如資料庫或LUN）、然後按一下*image:../media/split_cone.gif[""]*。
+. 從 * 管理複本 * 檢視中、選取複製的資源（例如資料庫或 LUN ）、然後按一下 *image:../media/split_cone.gif["分割複本圖示"]*。
 . 檢閱要分割的實體複本估計大小、以及集合體上可用的必要空間、然後按一下* Start*。
 . 按一下*監控*>*工作*來監控作業進度。
 +
@@ -75,6 +73,5 @@ summary: 您可以使用SnapCenter 此功能從父資源分割複製的資源。
 
 
 
-*瞭解更多資訊*
-
+.相關資訊
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["使用Aggregate時無法進行實體複製或驗證SnapCenter"]

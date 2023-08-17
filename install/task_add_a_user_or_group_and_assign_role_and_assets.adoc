@@ -13,8 +13,7 @@ summary: 若要設定SnapCenter 適用於哪些使用者的角色型存取控制
 [role="lead"]
 若要設定SnapCenter 適用於哪些使用者的角色型存取控制、您可以新增使用者或群組並指派角色。角色決定SnapCenter 了使用者可以存取的選項。
 
-*您需要的是什麼*
-
+.開始之前
 * 您必須以「SnapCenterAdmin」角色登入。
 * 您必須在作業系統或資料庫的Active Directory中建立使用者或群組帳戶。您無法使用SnapCenter 不禁用功能來建立這些帳戶。
 +

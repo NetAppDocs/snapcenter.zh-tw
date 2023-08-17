@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_restore_and_recover_resources_using_powershell_cmdlets_scc.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore resources 
 summary: 還原資源備份包括啟動與SnapCenter 還原伺服器的連線工作階段、列出備份與擷取備份資訊、以及還原備份。 
 ---
 = 使用PowerShell Cmdlet還原資源
@@ -15,8 +15,7 @@ summary: 還原資源備份包括啟動與SnapCenter 還原伺服器的連線工
 
 您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。
 
-*步驟*
-
+.步驟
 . 使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。
 +
 [listing]

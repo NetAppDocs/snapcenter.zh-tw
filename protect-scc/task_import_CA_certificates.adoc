@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_import_CA_certificates.html 
 sidebar: sidebar 
-keywords: SnapCenter 
+keywords: SnapCenter, CA certificate 
 summary: 匯入SnapCenter 支援物件的CA認證和Windows主機外掛程式 
 ---
 = 匯入CA憑證
@@ -13,8 +13,7 @@ summary: 匯入SnapCenter 支援物件的CA認證和Windows主機外掛程式
 [role="lead"]
 您必須SnapCenter 使用Microsoft管理主控台（MMC）、將CA憑證匯入到S倚賴 者支援的伺服器和Windows主機外掛程式。
 
-*步驟*
-
+.步驟
 . 移至Microsoft管理主控台（MMC）、然後按一下*檔案*>*新增/移除Snapin *。
 . 在「新增或移除嵌入式管理單元」視窗中、選取「*憑證*」、然後按一下「*新增*」。
 . 在「憑證」嵌入式管理單元視窗中、選取「*電腦帳戶*」選項、然後按一下「*完成*」。

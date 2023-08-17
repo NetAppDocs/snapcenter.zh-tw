@@ -56,6 +56,6 @@ NOTE: SAP HANA系統複寫主要資源支援還原和刪除作業、次要資源
 
 NOTE: 您無法重新命名或刪除二線儲存設備上的備份。
 
-. 如果您要刪除複本、請從表格中選取複本、然後按一下 image:../media/delete_icon.gif[""]。
-. 如果您要分割複本、請從表格中選取複本、然後按一下 image:../media/split_cone.gif[""]。
+. 如果您要刪除複本、請從表格中選取複本、然後按一下 image:../media/delete_icon.gif["刪除圖示"]。
+. 如果您要分割複本、請從表格中選取複本、然後按一下 image:../media/split_cone.gif["複製分割圖示"]。
 

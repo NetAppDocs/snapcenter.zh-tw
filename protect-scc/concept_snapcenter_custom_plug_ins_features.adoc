@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/concept_snapcenter_custom_plug_ins_features.html 
 sidebar: sidebar 
-keywords:  
+keywords: Custom Plug-ins features 
 summary: 可與外掛應用程式及儲存系統上的NetApp技術整合。SnapCenter若要使用自訂外掛程式、請使用SnapCenter 圖形化使用者介面。 
 ---
 = 「自訂外掛程式」SnapCenter 功能

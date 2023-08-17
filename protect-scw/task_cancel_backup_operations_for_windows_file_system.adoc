@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_cancel_backup_operations_for_windows_file_system.html 
 sidebar: sidebar 
-keywords:  
+keywords: cancel backup 
 summary: 您可以取消佇列中的備份作業。 
 ---
 = 取消備份作業

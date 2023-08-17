@@ -13,8 +13,7 @@ summary: 備份Exchange Server資料庫包括與SnapCenter 該伺服器建立連
 [role="lead"]
 備份Exchange Server資料庫包括與SnapCenter 該伺服器建立連線、探索Exchange Server資料庫、新增原則、建立備份資源群組、備份及檢視備份狀態。
 
-*您需要的是什麼*
-
+.開始之前
 * 您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。
 * 您必須新增儲存系統連線並建立認證。
 * 您必須新增主機和探索到的資源。
@@ -23,8 +22,7 @@ summary: 備份Exchange Server資料庫包括與SnapCenter 該伺服器建立連
 
 NOTE: Exchange的外掛程式不支援複製作業、因此Exchange的外掛程式不支援Add-SmPolicy Cmdlet的CloneType參數
 
-*步驟*
-
+.步驟
 . 使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。
 +
 [listing]

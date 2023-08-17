@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_back_up_resources_using_powershell_cmdlets.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup resources 
 summary: 備份資源包括建立SnapCenter 與該伺服器的連線、新增資源、新增原則、建立備份資源群組、以及備份。 
 ---
 = 使用PowerShell Cmdlet備份資源
@@ -13,18 +13,15 @@ summary: 備份資源包括建立SnapCenter 與該伺服器的連線、新增資
 [role="lead"]
 備份資源包括建立SnapCenter 與該伺服器的連線、新增資源、新增原則、建立備份資源群組、以及備份。
 
-*您需要的是什麼*
-
+.開始之前
 * 您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。
 * 您必須新增儲存系統連線並建立認證。
 
 
-*關於此工作*
-
+.關於這項工作
 您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。
 
-*步驟*
-
+.步驟
 . 使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。
 +
 [listing]

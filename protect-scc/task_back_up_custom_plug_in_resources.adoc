@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_back_up_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup 
 summary: 備份工作流程包括規劃、識別備份資源、管理備份原則、建立資源群組及附加原則、建立備份及監控作業。 
 ---
 = 備份自訂外掛程式資源

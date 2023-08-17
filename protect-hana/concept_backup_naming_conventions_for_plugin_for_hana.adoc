@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/concept_backup_naming_conventions_for_plugin_for_hana.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup naming conventions 
 summary: 您可以使用預設的Snapshot複本命名慣例、也可以使用自訂的命名慣例。預設的備份命名慣例會在Snapshot複本名稱中新增時間戳記、協助您識別複本的建立時間。 
 ---
 = SAP HANA資料庫外掛程式的備份命名慣例

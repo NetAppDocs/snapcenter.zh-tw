@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_scc.html 
 sidebar: sidebar 
-keywords: credentials 
+keywords: add hosts 
 summary: 您必須使用SnapCenterAdd Host頁面來新增主機、然後安裝外掛程式套件。外掛程式會自動安裝在遠端主機上。您可以為個別主機或叢集新增主機並安裝外掛程式套件。 
 ---
 = 新增主機並在遠端主機上安裝外掛程式套件
@@ -13,8 +13,7 @@ summary: 您必須使用SnapCenterAdd Host頁面來新增主機、然後安裝�
 [role="lead"]
 您必須使用SnapCenterAdd Host頁面來新增主機、然後安裝外掛程式套件。外掛程式會自動安裝在遠端主機上。您可以為個別主機或叢集新增主機並安裝外掛程式套件。
 
-*您需要的是什麼*
-
+.開始之前
 * 您應該是指派給角色的使用者、該角色具有外掛程式安裝和解除安裝權限、例如SnapCenter 「支援管理員」角色。
 * 您應確保訊息佇列服務正在執行中。
 * 如果您使用群組託管服務帳戶（GMSA）、則應該使用管理權限來設定GMSA。
@@ -23,14 +22,12 @@ link:task_configure_gMSA_on_windows_server_2012_or_later.html["在Windows Server
 
 
 
-*關於此工作*
-
+.關於這項工作
 您無法將SnapCenter 某個支援服務器作為外掛主機新增至另SnapCenter 一個支援服務器。
 
 如果您在叢集（WSFC）上安裝外掛程式、則外掛程式會安裝在叢集的所有節點上。
 
-*步驟*
-
+.步驟
 . 在左側導覽窗格中、選取*主機*。
 . 驗證頂端是否已選取*託管主機*索引標籤。
 . 選取*「Add*」。
@@ -110,7 +107,7 @@ NOTE: 如果您手動安裝外掛程式並指定自訂連接埠、則必須指�
 +
 您也可以自訂路徑。
 
-** 針對適用於Linux的版本套件、預設路徑為/opp/NetApp/snapcenter。SnapCenter
+** 對於 SnapCenter Plug-in 套件 for Linux 、預設路徑為 `/opt/NetApp/snapcenter`。
 +
 您也可以自訂路徑。
 
@@ -121,7 +118,7 @@ NOTE: 如果您手動安裝外掛程式並指定自訂連接埠、則必須指�
 壓縮資料夾包含自訂外掛程式碼和描述元.xml檔案。
 
 +
-若為儲存外掛程式、請瀏覽至_C：\ProgramData\NetApp\SnapCenter\Package Storage_、然後選取「torage.Zip」資料夾。
+若為儲存外掛程式、請瀏覽至 `_C:\ProgramData\NetApp\SnapCenter\Package Repository_` 然後選擇 `Storage.zip` 資料夾。
 
 ... 選取 * 上傳 * 。
 +
@@ -176,6 +173,6 @@ NOTE: 即使先前已將同一部主機新增至SnapCenter 更新版本、而且
 
 . 監控安裝進度。
 +
-安裝特定的記錄檔位於/custature_LO地理位置/snapcenter/logs。
+安裝特定的記錄檔位於 `/custom_location/snapcenter/` 記錄。
 
 

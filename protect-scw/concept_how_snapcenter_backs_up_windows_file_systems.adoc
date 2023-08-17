@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/concept_how_snapcenter_backs_up_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter 
 summary: 使用Snapshot複製技術來備份駐留在LUN、CSV（叢集共用磁碟區）、RDM（原始裝置對應）磁碟區、Windows叢集中的ALM（非對稱LUN對應）、以及以VMS/NFS為基礎的VMDK（使用NFS的VMware虛擬機器檔案系統）上的Windows檔案系統資源。SnapCenter 
 ---
 = 如何備份Windows檔案系統SnapCenter

@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_install_plug_in_for_exchange_from_the_snapcenter_server_host_using_powershell_cmdlets.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 您應該從SnapCenter 無法使用的GUI安裝Exchange外掛程式。如果您不想使用GUI、可以在SnapCenter 支援伺服器的主機或遠端主機上使用PowerShell Cmdlet。 
 ---
 = 使用PowerShell Cmdlet從SnapCenter 支援伺服器的支援伺服器主機安裝Exchange外掛程式
@@ -13,8 +13,7 @@ summary: 您應該從SnapCenter 無法使用的GUI安裝Exchange外掛程式。�
 [role="lead"]
 您應該從SnapCenter 無法使用的GUI安裝Exchange外掛程式。如果您不想使用GUI、可以在SnapCenter 支援伺服器的主機或遠端主機上使用PowerShell Cmdlet。
 
-*您需要的是什麼*
-
+.開始之前
 * 必須已安裝並設定好伺服器。SnapCenter
 * 您必須是主機上的本機系統管理員或具有系統管理權限的使用者。
 * 您必須是指派給具有外掛程式、安裝及解除安裝權限之角色的使用者、例如SnapCenter 「支援管理員」
@@ -22,8 +21,7 @@ summary: 您應該從SnapCenter 無法使用的GUI安裝Exchange外掛程式。�
 * 您要安裝Exchange外掛程式的主機必須是Windows主機。
 
 
-*步驟*
-
+.步驟
 . 在支援服務器主機上SnapCenter 、使用_Open-SmConnection_ Cmdlet建立工作階段、然後輸入您的認證資料。
 . 使用_Add-SmHost_ Cmdlet搭配必要的參數、新增您要安裝外掛程式for Exchange的主機。
 +

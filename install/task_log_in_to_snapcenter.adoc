@@ -13,8 +13,7 @@ summary: 支援角色型存取控制（RBAC）SnapCenter 。透過支援資源�
 [role="lead"]
 支援角色型存取控制（RBAC）SnapCenter 。透過支援資源的RBAC、將角色和資源指派給工作群組或作用中目錄的使用者、或指派給作用中目錄中的群組。SnapCenter SnapCenterRBAC使用者現在可以SnapCenter 使用指派的角色登入至功能表。
 
-*您需要的是什麼*
-
+.開始之前
 * 您應該在Windows Server Manager中啟用Windows處理程序啟動服務（WOS）。
 * 如果您想要使用Internet Explorer作為瀏覽器登入SnapCenter 到該伺服器、您應該確定Internet Explorer中的「保護模式」已停用。
 
@@ -74,7 +73,7 @@ NOTE: 如果SnapCenter 您是第一次登入到此資訊中心、則必須使用
 
 
 
-*結果*
+* 結果 *
 
 隨即顯示儀表板頁面。
 
@@ -92,8 +91,7 @@ NOTE: 如果SnapCenter 您是第一次登入到此資訊中心、則必須使用
 
 支援MFA的網域帳戶是作用中目錄的一部分。SnapCenter
 
-*您需要的是什麼*
-
+.開始之前
 * 您應該已經啟用MFA。
 +
 如需如何啟用MFA的詳細資訊、請參閱 link:../install/enable_multifactor_authentication.html["啟用多因素驗證"]

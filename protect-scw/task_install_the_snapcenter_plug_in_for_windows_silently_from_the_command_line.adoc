@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/task_install_the_snapcenter_plug_in_for_windows_silently_from_the_command_line.html 
 sidebar: sidebar 
-keywords:  
+keywords: install, snapcenter 
 summary: 如果無法從Windows GUI遠端安裝外掛程式、您可以SnapCenter 在Windows主機本機上安裝適用於Microsoft Windows的支援功能。SnapCenter您可以SnapCenter 從Windows命令列、以無訊息模式在無人值守的情況下執行Microsoft Windows安裝程式的功能。 
 ---
 = 從命令列以無訊息方式安裝SnapCenter 適用於Microsoft Windows的功能
@@ -13,16 +13,14 @@ summary: 如果無法從Windows GUI遠端安裝外掛程式、您可以SnapCente
 [role="lead"]
 如果無法從Windows GUI遠端安裝外掛程式、您可以SnapCenter 在Windows主機本機上安裝適用於Microsoft Windows的支援功能。SnapCenter您可以SnapCenter 從Windows命令列、以無訊息模式在無人值守的情況下執行Microsoft Windows安裝程式的功能。
 
-*您需要的是什麼*
-
+.開始之前
 * 您必須安裝Microsoft Net 4.7.2或更新版本。
 * 您必須安裝PowerShell 4.0或更新版本。
 * 您必須開啟Windows訊息佇列。
 * 您必須是主機上的本機管理員。
 
 
-*步驟*
-
+.步驟
 . 從SnapCenter 您的安裝位置下載適用於Microsoft Windows的功能更新外掛程式。
 +
 例如、預設安裝路徑為C：\ProgramData\NetApp\SnapCenter\Package儲存庫。

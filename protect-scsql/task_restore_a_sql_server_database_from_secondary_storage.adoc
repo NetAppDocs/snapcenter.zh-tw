@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: restore operation 
 summary: 您可以從次要儲存系統上的實體LUN（RDM、iSCSI或FCP）還原備份的SQL Server資料庫。還原功能是一個多階段程序、可將所有資料和記錄頁面從位於次要儲存系統上的指定SQL Server備份複製到指定的資料庫。 
 ---
 = 從次要儲存設備還原SQL Server資料庫
@@ -13,15 +13,13 @@ summary: 您可以從次要儲存系統上的實體LUN（RDM、iSCSI或FCP）還
 [role="lead"]
 您可以從次要儲存系統上的實體LUN（RDM、iSCSI或FCP）還原備份的SQL Server資料庫。還原功能是一個多階段程序、可將所有資料和記錄頁面從位於次要儲存系統上的指定SQL Server備份複製到指定的資料庫。
 
-*您需要的是什麼*
-
+.開始之前
 * 您必須已將Snapshot複本從一線儲存系統複寫至二線儲存系統。
 * 您必須確保SnapCenter 支援此功能的伺服器和外掛程式主機能夠連線至二線儲存系統。
 * 「還原」精靈頁面上的大部分欄位都會在基本還原程序中說明。下列資訊說明您可能需要指引的部分欄位。
 
 
-*步驟*
-
+.步驟
 . 在左導覽窗格中、按一下*資源*、然後從SnapCenter 清單中選取*適用於SQL Server*的*支援外掛程式。
 . 在「資源」頁面中、從「*檢視*」下拉式清單中選取「*資料庫*」或「*資源群組*」。
 . 選取資料庫或資源群組。

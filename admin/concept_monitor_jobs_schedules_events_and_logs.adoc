@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_monitor_jobs_schedules_events_and_logs.html 
 sidebar: sidebar 
-keywords:  
+keywords: Monitor jobs, schedules, events, logs 
 summary: 您可以從「監控」頁面監控工作進度、取得排程工作的相關資訊、以及檢閱事件和記錄。 
 ---
 = 監控工作、排程、事件和記錄
@@ -135,6 +135,5 @@ NOTE: 若要在容錯移轉工作完成後存取健全狀況或組態資訊、�
 . 在「工作」頁面中、檢閱工作狀態。
 
 
-*瞭解更多資訊*
-
+.相關資訊
 您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。

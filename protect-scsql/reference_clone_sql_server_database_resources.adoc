@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_clone_sql_server_database_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Clone workflow 
 summary: 從備份複製資料庫資源之前、您必須先使用SnapCenter 支援伺服器執行數項工作。資料庫複製是建立正式作業資料庫或其備份集的時間點複本的程序。您可以複製資料庫、以測試應用程式開發週期中必須使用目前資料庫結構和內容來實作的功能、在填入資料倉儲時使用資料擷取和操作工具、或是還原錯誤刪除或變更的資料。 
 ---
 = 複製工作流程

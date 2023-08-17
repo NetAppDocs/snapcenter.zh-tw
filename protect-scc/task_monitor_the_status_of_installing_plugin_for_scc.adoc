@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_monitor_the_status_of_installing_plugin_for_scc.html 
 sidebar: sidebar 
-keywords:  
+keywords: monitor, custom plug-in 
 summary: 您SnapCenter 可以使用「工作」頁面來監控安裝過程。您可能需要檢查安裝進度、以判斷何時完成或是否有問題。 
 ---
 = 監控安裝自訂外掛程式的狀態
@@ -13,8 +13,7 @@ summary: 您SnapCenter 可以使用「工作」頁面來監控安裝過程。您
 [role="lead"]
 您SnapCenter 可以使用「工作」頁面來監控安裝過程。您可能需要檢查安裝進度、以判斷何時完成或是否有問題。
 
-*關於此工作*
-
+.關於這項工作
 「工作」頁面上會出現下列圖示、並指出作業狀態：
 
 * image:../media/progress_icon.gif["進行中圖示"] 進行中
@@ -24,11 +23,10 @@ summary: 您SnapCenter 可以使用「工作」頁面來監控安裝過程。您
 * image:../media/verification_job_in_queue.gif["驗證工作已排入佇列"] 已佇列
 
 
-*步驟*
-
+.步驟
 . 在左導覽窗格中、按一下*監控*。
-. 在「監控」頁面中、按一下「*工作*」。
-. 在「工作」頁面中、若要篩選清單以便只列出外掛程式安裝作業、請執行下列步驟：
+. 在「*監控*」頁面中、按一下「*工作*」。
+. 在 *Jobs* 頁面中、若要篩選清單以僅列出外掛程式安裝作業、請執行下列步驟：
 +
 .. 按一下*篩選*。
 .. 選用：指定開始和結束日期。
@@ -38,5 +36,5 @@ summary: 您SnapCenter 可以使用「工作」頁面來監控安裝過程。您
 
 
 . 選取安裝工作、然後按一下*詳細資料*以檢視工作詳細資料。
-. 在「工作詳細資料」頁面中、按一下*檢視記錄*。
+. 在「*工作詳細資料*」頁面中、按一下「*檢視記錄*」。
 

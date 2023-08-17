@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_how_long_to_retain_transaction_log_backups_on_the_source_storage_system.html 
 sidebar: sidebar 
-keywords:  
+keywords: retain transaction log backups 
 summary: 適用於Microsoft SQL Server的解決方案外掛程式需要交易記錄備份、才能執行最新的還原作業、將資料庫還原至兩次完整備份之間的一段時間。SnapCenter 
 ---
 = 在來源儲存系統上保留交易記錄備份的時間

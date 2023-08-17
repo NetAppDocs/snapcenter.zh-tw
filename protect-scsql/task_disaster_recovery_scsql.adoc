@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_disaster_recovery_scsql.html 
 sidebar: sidebar 
-keywords:  
+keywords: disaster recovery 
 summary: 當 SnapCenter Plug-in for SQL Server 當機時、請執行下列手動步驟來恢復外掛程式。 
 ---
 = SQL Server適用的支援功能SnapCenter
@@ -13,7 +13,7 @@ summary: 當 SnapCenter Plug-in for SQL Server 當機時、請執行下列手動
 [role="lead"]
 SnapCenter Plug-in for SQL Server 當機時、請使用下列步驟切換至不同的 SQL 主機並恢復資料。
 
-.您需要的產品
+.開始之前
 * 次要主機的作業系統、應用程式和主機名稱應與主要主機相同。
 * 使用「*新增主機*」或「*修改主機*」頁面、將SnapCenter 適用於SQL Server的「功能不全」外掛程式推送到替代主機。請參閱 link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["管理主機"] 以取得更多資訊。
 
@@ -24,5 +24,5 @@ SnapCenter Plug-in for SQL Server 當機時、請使用下列步驟切換至不�
 . 從SnapCenter DR備份的「SQL Server適用的支援程式」資料夾匯入Windows和SQL排程。
 
 
-.以取得更多資訊
+.相關資訊
 請參閱 link:https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["災難恢復API"^] 影片：

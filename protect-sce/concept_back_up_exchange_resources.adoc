@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/concept_back_up_exchange_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup workflow 
 summary: 當SnapCenter 您在環境中安裝適用於Microsoft Exchange Server的還原外掛程式時、您可以使用SnapCenter 效益管理功能來備份Exchange資源。 
 ---
 = 備份工作流程

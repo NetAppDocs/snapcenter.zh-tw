@@ -4,14 +4,12 @@
 
 Windows Server 2012或更新版本可讓您建立群組託管服務帳戶（GMSA）、以便從託管網域帳戶提供自動化服務帳戶密碼管理。
 
-*您需要的是什麼*
-
+.開始之前
 * 您應該擁有Windows Server 2012或更新版本的網域控制器。
 * 您應該擁有Windows Server 2012或更新版本的主機、該主機是網域的成員。
 
 
-*步驟*
-
+.步驟
 . 建立KDS根金鑰、為GMSA中的每個物件產生唯一的密碼。
 . 對於每個網域、請從Windows網域控制器執行下列命令：add-KDSRootKey -EffectiveImmedia
 . 建立及設定GMSA：

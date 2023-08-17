@@ -134,7 +134,7 @@ NOTE: 您不應重新命名在Windows排程器或SQL Server代理程式中建立
 . 選取 * 監控 * > * 工作 * 來監控作業進度。
 
 
-.接下來呢？
+.完成後
 * 在不完整的組態中MetroCluster 、SnapCenter 在容錯移轉之後、可能無法偵測到保護關係。
 +
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["無法偵測SnapVault 到SnapMirror或在MetroCluster 進行不復原容錯移轉之後的不協調關係"]

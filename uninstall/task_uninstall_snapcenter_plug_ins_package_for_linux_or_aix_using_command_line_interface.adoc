@@ -13,12 +13,10 @@ summary: 您SnapCenter 可以使用命令列介面來解除安裝適用於Linux�
 [role="lead"]
 您SnapCenter 可以使用命令列介面來解除安裝適用於Linux的RUNS-外掛程式套件或SnapCenter 適用於AIX的RUNS-外掛程式套件。
 
-*您需要的是什麼*
-
+.開始之前
 * 請確定您已刪除排程的工作
 * 確保所有執行中的工作都已完成。
 
 
-*步驟*
-
+.步驟
 執行_/cust_LOUSE/NetApp/snapcenter/spl/install/plugins/uninstall_以解除安裝。

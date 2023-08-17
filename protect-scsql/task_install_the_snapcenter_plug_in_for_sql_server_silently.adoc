@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_install_the_snapcenter_plug_in_for_sql_server_silently.html 
 sidebar: sidebar 
-keywords:  
+keywords: install, snapcenter 
 summary: 您應該SnapCenter 從SnapCenter 支援功能的使用者介面中安裝適用於Microsoft SQL Server的支援功能。不過、如果您因為某些原因無法執行、您可以從Windows命令列以無訊息模式執行SQL Server外掛程式安裝程式。 
 ---
 = 從命令列以無訊息方式安裝SnapCenter 適用於Microsoft SQL Server的功能
@@ -13,16 +13,14 @@ summary: 您應該SnapCenter 從SnapCenter 支援功能的使用者介面中安�
 [role="lead"]
 您應該SnapCenter 從SnapCenter 支援功能的使用者介面中安裝適用於Microsoft SQL Server的支援功能。不過、如果您因為某些原因無法執行、您可以從Windows命令列以無訊息模式執行SQL Server外掛程式安裝程式。
 
-*您需要的是什麼*
-
+.開始之前
 * 安裝之前、您必須先刪除SnapCenter 舊版的Microsoft SQL Server適用的支援功能。
 +
 如需詳細資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_Install_a_SnapCenter_Plug-In_manually_and_directly_from_thePlug-In_Host["如何SnapCenter 手動直接從外掛主機安裝功能不全的外掛程式"^]。
 
 
 
-*步驟*
-
+.步驟
 . 驗證外掛程式主機上是否存在C：\Temp資料夾、且登入的使用者是否擁有該資料夾的完整存取權。
 . 從C：\ProgramData \NetApp\SnapCenter\Package儲存庫下載SQL Server外掛程式軟體。
 +

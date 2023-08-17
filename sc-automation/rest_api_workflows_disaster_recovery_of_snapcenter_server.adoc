@@ -74,9 +74,12 @@ NOTE: 如果 VM 毀損、請開啟另一個 VM 或名稱相同的機器、並以
 
 使用REST API、您可以在REST API Swagger頁面上執行下列作業。如需存取Swagger頁面的資訊、請參閱 link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["如何使用Swagger API網頁存取REST API"]。
 
-.您需要的產品
+.開始之前
 * 您應該以SnapCenter 「管理員」使用者的身分登入。
 * 應啟動並執行此伺服器SnapCenter 以執行DR還原API。
+* 如果 DLL 毀損、請修復 SnapCenter 伺服器安裝。
+* 如果 NSM 毀損或組態檔案毀損、請解除安裝並重新安裝相同版本的 SnapCenter 伺服器。
+* 如果 VM 毀損、請開啟另一個名稱相同的 VM 、並以相同版本安裝 SnapCenter Server 。
 
 
 .關於這項工作
@@ -132,5 +135,5 @@ NOTE: 如果 VM 毀損、請開啟另一個 VM 或名稱相同的機器、並以
 貼文
 
 |===
-.以取得更多資訊
+.相關資訊
 請參閱 link:https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["災難恢復API"^] 影片：

@@ -13,8 +13,7 @@ summary: 您應該將 CA 憑證從 SnapCenter 伺服器匯出至外掛主機。
 [role="lead"]
 您應該使用 Microsoft 管理主控台（ MMC ）、將 CA 憑證從 SnapCenter 伺服器匯出至外掛主機。
 
-*您需要的是什麼*
-
+.開始之前
 您應該已設定雙向 SSL 。
 
 *步驟*

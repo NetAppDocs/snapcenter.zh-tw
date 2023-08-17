@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_java.html 
 sidebar: sidebar 
-keywords:  
+keywords: Custom plug-in 
 summary: 使用Java樣式開發外掛程式。 
 ---
 = Java樣式

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/reference_restore_sql_server_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: Restore workflow 
 summary: 您可以使用SnapCenter 支援功能還原SQL Server資料庫、方法是將資料從一或多個備份還原至使用中的檔案系統、然後還原資料庫。您也可以還原「可用度」群組中的資料庫、然後將還原的資料庫新增至「可用度群組」。還原SQL Server資料庫之前、您必須執行多項準備工作。 
 ---
 = 還原工作流程

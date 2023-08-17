@@ -6,8 +6,7 @@
 
 您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。
 
-*步驟*
-
+.步驟
 . 使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。
 +
 [listing]

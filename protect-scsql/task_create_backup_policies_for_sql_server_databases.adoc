@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_create_backup_policies_for_sql_server_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup policy 
 summary: 您可以先為資源或資源群組建立備份原則、再使用SnapCenter 支援功能來備份SQL Server資源、也可以在建立資源群組或備份單一資源時建立備份原則。 
 ---
 = 建立SQL Server資料庫的備份原則
@@ -13,7 +13,7 @@ summary: 您可以先為資源或資源群組建立備份原則、再使用SnapC
 [role="lead"]
 您可以先為資源或資源群組建立備份原則、再使用SnapCenter 支援功能來備份SQL Server資源、也可以在建立資源群組或備份單一資源時建立備份原則。
 
-.您需要的產品
+.開始之前
 * 您必須已定義資料保護策略。
 * 您必須完成安裝SnapCenter 、新增主機、識別資源及建立儲存系統連線等工作、以準備好保護資料。
 * 您必須已設定主機記錄目錄以進行記錄備份。

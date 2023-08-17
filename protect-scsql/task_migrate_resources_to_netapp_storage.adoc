@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/task_migrate_resources_to_netapp_storage.html 
 sidebar: sidebar 
-keywords:  
+keywords: migrate resources 
 summary: 在您使用SnapCenter 適用於Microsoft Windows的支援功能更新NetApp儲存系統後、您可以使用SnapCenter 「支援功能」圖形化使用者介面（GUI）或PowerShell Cmdlet、將資源移轉至NetApp儲存系統、或從一個NetApp LUN移轉至另一個NetApp LUN。 
 ---
 = 將資源移轉至NetApp儲存系統
@@ -13,16 +13,14 @@ summary: 在您使用SnapCenter 適用於Microsoft Windows的支援功能更新N
 [role="lead"]
 使用SnapCenter 適用於Microsoft Windows的支援功能、配置NetApp儲存系統之後、您可以使用SnapCenter 支援功能、圖形化使用者介面（GUI）或PowerShell Cmdlet、將資源移轉至NetApp儲存系統、或從一個NetApp LUN移轉至另一個NetApp LUN。
 
-*您需要的是什麼*
-
+.開始之前
 * 您必須已將儲存系統新增SnapCenter 至該伺服器。
 * 您必須重新整理（探索到）SQL Server資源。
 
 
 這些精靈頁面上的大部分欄位都是不言自明的。下列資訊說明您可能需要指引的部分欄位。
 
-*步驟*
-
+.步驟
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
 . 在「資源」頁面中、從「*檢視*」下拉式清單中選取「*資料庫*」或「*執行個體*」。
 . 從清單中選取資料庫或執行個體、然後按一下*移轉*。

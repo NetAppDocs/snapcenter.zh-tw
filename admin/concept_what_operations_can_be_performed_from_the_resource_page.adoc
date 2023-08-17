@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_what_operations_can_be_performed_from_the_resource_page.html 
 sidebar: sidebar 
-keywords:  
+keywords: Resources page 
 summary: 您可以從「資源」頁面探索資源並執行資料保護作業。您可以執行的作業會因您用來管理資源的外掛程式而有所不同。 
 ---
 = 「資源」頁面支援的作業

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/task_back_up_individual_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: backup, custom plug-in 
 summary: 如果個別的自訂外掛程式資源不是任何資源群組的一部分、您可以從「資源」頁面備份資源。您可以隨需備份資源、或者、如果資源已附加原則並已設定排程、則會根據排程自動進行備份。 
 ---
 = 備份個別的自訂外掛程式資源
@@ -13,18 +13,16 @@ summary: 如果個別的自訂外掛程式資源不是任何資源群組的一�
 [role="lead"]
 如果個別的自訂外掛程式資源不是任何資源群組的一部分、您可以從「資源」頁面備份資源。您可以隨需備份資源、或者、如果資源已附加原則並已設定排程、則會根據排程自動進行備份。
 
-*您需要的是什麼*
-
+.開始之前
 * 您必須已建立備份原則。
 * 如果您想要備份與二線儲存設備有SnapMirror關係的資源、ONTAP 指派給儲存設備使用者的這個角色應該包含「全部快照鏡射」權限。不過、如果您使用「vsadmin」角色、則不需要「全部快照鏡像」權限。
 
 
-*步驟*
-
+.步驟
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
 . 在「資源」頁面中、根據資源類型篩選*檢視*下拉式清單中的資源。
 +
-按一下 image:../media/filter_icon.png[""]，然後選取主機名稱和資源類型以篩選資源。然後按一下 image:../media/filter_icon.png[""] 以關閉篩選窗格。
+按一下 image:../media/filter_icon.png[""]，然後選取主機名稱和資源類型以篩選資源。然後按一下 image:../media/filter_icon.png["篩選圖示"] 以關閉篩選窗格。
 
 . 按一下您要備份的資源。
 . 在「資源」頁面中、如果您想要使用自訂名稱、請選取「*使用Snapshot COP*的自訂名稱格式」核取方塊、然後輸入Snapshot複本名稱的自訂名稱格式。
@@ -58,7 +56,7 @@ summary: 如果個別的自訂外掛程式資源不是任何資源群組的一�
 
 |===
 +
-image:../media/application_settings.gif[""]
+image:../media/application_settings.gif["應用程式設定頁面"]
 
 .. 按一下「*指令碼*」箭頭以執行「靜止」、「Snapshot複本」和「靜止」作業的「預先」和「POST」命令。您也可以在結束備份作業之前執行pres命令。
 +
@@ -98,12 +96,12 @@ image:../media/application_settings.gif[""]
 .. 從下拉式清單中選取一或多個原則。
 +
 
-NOTE: 您也可以按一下建立原則 image:../media/add_policy_from_resourcegroup.gif[""]。
+NOTE: 您也可以按一下建立原則 image:../media/add_policy_from_resourcegroup.gif["新增圖示"]。
 
 +
 在「設定所選原則的排程」區段中、會列出所選原則。
 
-.. 按一下 image:../media/add_policy_from_resourcegroup.gif[""] 在您要為其設定排程的原則之「設定排程」欄中。
+.. 按一下 image:../media/add_policy_from_resourcegroup.gif["新增圖示"] 在您要為其設定排程的原則之「設定排程」欄中。
 .. 在「新增原則_policy_name_的排程」對話方塊中、設定排程、然後按一下「*確定*」。
 +
 其中、_policy_name_是您選取的原則名稱。

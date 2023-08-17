@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_backup_schedules_for_plugin_for_sql.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup schedules 
 summary: 備份頻率（排程類型）是在原則中指定；備份排程是在資源群組組組態中指定。 
 ---
 = SQL Server外掛程式的備份排程

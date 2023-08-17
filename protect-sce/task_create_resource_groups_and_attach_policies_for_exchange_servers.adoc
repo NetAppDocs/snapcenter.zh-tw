@@ -13,8 +13,7 @@ summary: 任何資料保護工作都需要資源群組。您也必須將一或�
 [role="lead"]
 任何資料保護工作都需要資源群組。您也必須將一或多個原則附加至資源群組、以定義您要執行的資料保護工作類型和保護排程。
 
-*關於此工作*
-
+.關於這項工作
 * 可使用外掛主機SMCoreServiceHost.exe.Config檔案中的PredefinedWindows指令碼目錄金鑰來定義指令碼路徑。
 +
 如有需要、您可以變更此路徑並重新啟動SMcore服務。建議您使用預設的安全路徑。
@@ -27,8 +26,7 @@ summary: 任何資料保護工作都需要資源群組。您也必須將一或�
 
 
 
-*步驟*
-
+.步驟
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取Microsoft Exchange Server外掛程式。
 . 在「資源」頁面中、從*檢視*清單中選取*資料庫*。
 +
@@ -99,7 +97,7 @@ Microsoft Exchange Server的資源群組SnapCenter 每個Snapshot複本不能有
 .. 從下拉式清單中選取一或多個原則。
 +
 
-NOTE: 您也可以按一下*來建立原則image:../media/add_policy_from_resourcegroup.gif[""]*。
+NOTE: 您也可以按一下*來建立原則image:../media/add_policy_from_resourcegroup.gif["加號圖示"]*。
 
 +
 
@@ -108,7 +106,7 @@ NOTE: 如果原則包含*在備份工作建立時間*選取的伺服器上備份
 +
 在「設定所選原則的排程」區段中、會列出所選原則。
 
-.. 在「設定所選原則的排程」區段中、按一下*image:../media/add_policy_from_resourcegroup.gif[""]*在您要為其設定排程的原則*設定排程*欄中。
+.. 在「設定所選原則的排程」區段中、按一下*image:../media/add_policy_from_resourcegroup.gif["加號圖示"]*在您要為其設定排程的原則*設定排程*欄中。
 .. 在「新增原則_policy_name_的排程」對話方塊中、指定開始日期、到期日和頻率來設定排程、然後按一下「*確定*」。
 +
 您必須針對原則中所列的每個頻率執行此動作。設定的排程會列在「設定所選原則的排程」區段的「*套用的排程*」欄中。

@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_hosts.html 
 sidebar: sidebar 
-keywords:  
+keywords: Manage hosts 
 summary: 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套件、新增驗證伺服器、移除主機、移轉備份工作、以及更新主機以升級外掛程式套件或新增外掛程式套件。視所使用的外掛程式而定、您也可以配置磁碟、管理SMB共用、管理啟動器群組（igroups\）、管理iSCSI工作階段、以及移轉資料。 
 ---
 = 管理主機
@@ -244,7 +244,7 @@ NOTE: 請確定外掛程式版本與SnapCenter 版本的版本相同。
 . 按一下*提交*。
 
 
-*結果*
+* 結果 *
 
 主機已通過驗證、並新增至SnapCenter 「支援伺服器」。
 
@@ -291,7 +291,7 @@ NOTE: 您不需要先停止外掛程式服務。外掛程式服務可處於執�
 
 
 
-*結果*
+* 結果 *
 
 暫停主機上的排程之後、「託管主機」頁面會在主機的整體狀態欄位中顯示*暫停*。
 

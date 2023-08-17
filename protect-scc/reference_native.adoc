@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_native.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in 
 summary: 使用原生樣式開發外掛程式。 
 ---
 = 原生風格

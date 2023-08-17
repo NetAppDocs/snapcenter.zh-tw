@@ -1,7 +1,7 @@
 ---
 permalink: concept/concept_resources_resource_groups_and_policies.html 
 sidebar: sidebar 
-keywords: reource, resource group, policy 
+keywords: resource, resource group, policy 
 summary: 在您使用SnapCenter 原地複製之前、先瞭解與您想要執行的備份、複製及還原作業相關的基本概念非常實用。您可以與不同作業的資源、資源群組和原則互動。 
 ---
 = 資源、資源群組和原則

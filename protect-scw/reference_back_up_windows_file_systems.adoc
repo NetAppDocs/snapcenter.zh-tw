@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/reference_back_up_windows_file_systems.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter 
 summary: 當SnapCenter 您在環境中安裝適用於Microsoft Windows的還原外掛程式時、SnapCenter 可以使用還原來備份Windows檔案系統。您可以備份單一檔案系統或包含多個檔案系統的資源群組。您可以根據需求或根據定義的保護排程進行備份。 
 ---
 = 備份Windows檔案系統

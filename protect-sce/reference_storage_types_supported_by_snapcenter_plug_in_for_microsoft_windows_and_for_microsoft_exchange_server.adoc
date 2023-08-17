@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/reference_storage_types_supported_by_snapcenter_plug_in_for_microsoft_windows_and_for_microsoft_exchange_server.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: 支援實體機器和虛擬機器上的各種儲存類型。SnapCenter在安裝主機套件之前、您必須先確認儲存類型是否支援。 
 ---
 = 適用於Microsoft Windows和Microsoft Exchange Server的解決方案SnapCenter 支援的儲存類型

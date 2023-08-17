@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/concept_snapcenter_plug_in_for_windows_features.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter 
 summary: Windows外掛程式與儲存系統上的NetApp Snapshot複本技術整合。若要使用Windows外掛程式、您可以使用SnapCenter 這個介面。 
 ---
 = 適用於Windows功能的插件SnapCenter

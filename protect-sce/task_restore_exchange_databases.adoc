@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_restore_exchange_databases.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 您可以使用SnapCenter 支援功能還原備份的Exchange資料庫。 
 ---
 = 還原Exchange資料庫
@@ -13,8 +13,7 @@ summary: 您可以使用SnapCenter 支援功能還原備份的Exchange資料庫�
 [role="lead"]
 您可以使用SnapCenter 支援功能還原備份的Exchange資料庫。
 
-*您需要的是什麼*
-
+.開始之前
 * 您必須備份資源群組、資料庫或資料庫可用度群組（DAG）。
 * 當Exchange資料庫移轉至其他位置時、還原作業無法用於舊備份。
 * 如果您要將Snapshot複本複製到鏡射或保存庫、SnapCenter 則該管理員必須為來源磁碟區和目的地磁碟區指派SVM給您。
@@ -27,8 +26,7 @@ summary: 您可以使用SnapCenter 支援功能還原備份的Exchange資料庫�
 
 
 
-*關於此工作*
-
+.關於這項工作
 * 在資料庫上執行還原作業時、資料庫會掛載回同一部主機、而且不會建立新的Volume。
 * 必須從個別資料庫還原DAG層級的備份。
 * 如果存在Exchange資料庫（.edb）以外的檔案、則不支援完整磁碟還原。
@@ -48,8 +46,7 @@ summary: 您可以使用SnapCenter 支援功能還原備份的Exchange資料庫�
 
 
 
-*步驟*
-
+.步驟
 . 在左側導覽窗格中、按一下「資源」頁面左上角的*資源*。
 . 從下拉式清單中選取Exchange Server外掛程式。
 . 在「資源」頁面中、從「檢視」清單中選取「*資料庫*」。

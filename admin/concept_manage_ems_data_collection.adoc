@@ -1,7 +1,7 @@
 ---
 permalink: admin/concept_manage_ems_data_collection.html 
 sidebar: sidebar 
-keywords:  
+keywords: EMS data collection 
 summary: 您可以使用PowerShell Cmdlet排程及管理事件管理系統（EMS）資料收集。EMS資料收集作業包括收集SnapCenter 有關下列項目的詳細資料：《SesfServer》（《SesfServer》）、「Installed SnapCenter 》（已安裝的）插件套件、「Host」（主機）及類似資訊、然後將其傳送至指定ONTAP 的《SVM\》（《SVM\》）。 
 ---
 = 管理EMS資料收集
@@ -69,6 +69,5 @@ NOTE: 資料收集工作進行時、系統CPU使用率會很高。無論資料�
 . 輸入_Get-SmDataCollectionEmsTarget _以擷取有關EMS資料收集目標的資訊。
 
 
-*瞭解更多資訊*
-
+.相關資訊
 您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。

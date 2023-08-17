@@ -72,4 +72,4 @@ https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["VMware vSphere文件的
 
 將資源群組想像成定義您要保護的內容、以及您想要在何時保護資源群組。請將原則想像為定義您要保護的方式。例如、如果您要備份主機的所有資料庫、您可以建立一個資源群組、其中包含主機中的所有資料庫。然後您可以將兩個原則附加到資源群組：每日原則和每小時原則。當您建立資源群組並附加原則時、可能會將資源群組設定為每日執行完整備份、以及每小時執行記錄備份的另一個排程。下圖說明資料庫的資源、資源群組和原則之間的關係：
 
-image::../media/sce_resourcegroup_policy.gif[SCE資源群組原則]
+image::../media/sce_resourcegroup_policy.gif[資源群組原則的螢幕擷取畫面]

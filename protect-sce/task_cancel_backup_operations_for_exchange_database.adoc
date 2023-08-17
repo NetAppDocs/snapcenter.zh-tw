@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_cancel_backup_operations_for_exchange_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 您可以取消佇列中的備份作業。 
 ---
 = 取消Exchange資料庫的備份作業

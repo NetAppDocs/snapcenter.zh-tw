@@ -1,7 +1,7 @@
 ---
 permalink: protect-scc/reference_backup_schedules_of_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords:  
+keywords: custom plug-in 
 summary: 決定備份排程的最關鍵因素是資源的變更率。備份資源的頻率越高、SnapCenter 還原所需的歸檔記錄就越少、還原作業也就越快完成。 
 ---
 = 自訂外掛程式資源的備份排程

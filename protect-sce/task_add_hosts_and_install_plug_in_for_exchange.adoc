@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: 您可以使用SnapCenterAdd Host頁面來新增Windows主機。Exchange外掛程式會自動安裝在指定的主機上。這是安裝外掛程式的建議方法。您可以為個別主機或叢集新增主機並安裝外掛程式。 
 ---
 = 新增主機並安裝Exchange外掛程式
@@ -13,16 +13,14 @@ summary: 您可以使用SnapCenterAdd Host頁面來新增Windows主機。Exchang
 [role="lead"]
 您可以使用SnapCenter 「更新主機」頁面來新增Windows主機。Exchange外掛程式會自動安裝在指定的主機上。這是安裝外掛程式的建議方法。您可以為個別主機或叢集新增主機並安裝外掛程式。
 
-*您需要的是什麼*
-
+.開始之前
 * 您必須是指派給角色的使用者、且該角色具有外掛程式安裝和解除安裝權限、例如SnapCenter 「支援支援支援中心」
 * 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.
 * 訊息佇列服務必須執行中。
 * 如果您使用群組託管服務帳戶（GMSA）、則應該使用管理權限來設定GMSA。如需相關資訊、請參閱link:task_configure_gMSA_on_windows_server_2012_or_later.html["在適用於Microsoft Exchange Server的Windows Server 2012或更新版本上設定群組託管服務帳戶"^]。
 
 
-*關於此工作*
-
+.關於這項工作
 * 您無法將SnapCenter 某個支援服務器作為外掛主機新增至另SnapCenter 一個支援服務器。
 * 您可以為個別主機或叢集新增主機並安裝外掛程式套件。
 * 如果Exchange節點是DAG的一部分、您就無法將一個節點只新增至SnapCenter 該伺服器。
@@ -53,8 +51,7 @@ Exchange的外掛程式取決SnapCenter 於適用於Windows的包裹、且版本
 
 如果SnapManager 已經SnapDrive 安裝適用於Microsoft Exchange Server和適用於Windows的功能、 而且您想要在同一個Exchange Server上安裝外掛程式、必須取消登錄SnapDrive 由Windows版的VSS硬體供應商、因為它與隨Windows版Exchange和SnapCenter 更新外掛程式套件一起安裝的VSS硬體供應商不相容。如需詳細資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_manually_register_the_Data_ONTAP_VSS_Hardware_Provider["如何手動登錄Data ONTAP 《SolidvVSS Hardware Provider》"]。
 
-*步驟*
-
+.步驟
 . 在左側導覽窗格中、按一下*主機*。
 . 驗證頂端是否已選取*受管理的主機*。
 . 按一下「 * 新增 * 」。

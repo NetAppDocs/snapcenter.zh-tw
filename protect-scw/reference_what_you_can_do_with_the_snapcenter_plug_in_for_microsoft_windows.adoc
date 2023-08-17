@@ -1,7 +1,7 @@
 ---
 permalink: protect-scw/reference_what_you_can_do_with_the_snapcenter_plug_in_for_microsoft_windows.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft Windows 
 summary: 在您的環境中安裝Windows外掛程式時、SnapCenter 您可以使用效益管理功能來備份、還原及複製Windows檔案系統。您也可以執行支援這些作業的工作。 
 ---
 = 使用適用於Microsoft Windows的《不要用作更新程式的SnapCenter 功能」

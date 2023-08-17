@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_backup_retention_options_for_plugin_for_sql.html 
 sidebar: sidebar 
-keywords:  
+keywords: Backup retention options 
 summary: 您可以選擇保留備份複本的天數、或指定您要保留的備份複本數量、最多ONTAP 255份。例如、貴組織可能需要保留10天的備份複本或130個備份複本。 
 ---
 = SQL Server外掛程式的備份保留選項

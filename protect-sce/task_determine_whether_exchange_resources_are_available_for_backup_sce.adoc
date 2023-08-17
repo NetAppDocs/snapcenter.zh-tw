@@ -13,15 +13,13 @@ summary: 資源是由您安裝的外掛程式所維護的資料庫、Exchange資
 [role="lead"]
 資源是由您安裝的外掛程式所維護的資料庫、Exchange資料庫可用度群組。您可以將這些資源新增至資源群組、以便執行資料保護工作、但必須先找出可用的資源。確定可用資源也會驗證外掛程式安裝是否已成功完成。
 
-*您需要的是什麼*
-
+.開始之前
 * 您必須已經完成安裝SnapCenter 支援服務器、新增主機、建立儲存系統連線、新增認證、以及安裝Exchange外掛程式等工作。
 * 若要善用單一信箱恢復軟體功能、您必須在安裝單一信箱恢復軟體的Exchange Server上找到作用中資料庫。
 * 如果資料庫位於VMware RDM LUN上、您必須部署SnapCenter VMware vSphere的VMware vCenter外掛程式、並使用SnapCenter VMware vCenter登錄外掛程式。。 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["VMware vSphere文件的VMware外掛程式SnapCenter"] 有更多資訊。
 
 
-*關於此工作*
-
+.關於這項工作
 * 當「詳細資料」頁面中的*整體狀態*選項設定為無法備份時、您就無法備份資料庫。當下列任一情況成立時、*整體狀態*選項會設為無法備份：
 +
 ** 資料庫不在NetApp LUN上。
@@ -34,15 +32,14 @@ summary: 資源是由您安裝的外掛程式所維護的資料庫、Exchange資
 * 如果您有資料庫可用度群組（DAG）、您可以從DAG執行備份工作、來備份群組中的所有資料庫。
 
 
-*步驟*
-
+.步驟
 . 在左導覽窗格中、按一下*資源*、然後從「資源」頁面左上角的外掛程式下拉式清單中選取* Microsoft Exchange Server*。
 . 在「資源」頁面中、從「*檢視*」下拉式清單中選取「*資料庫*」或「*資料庫可用度群組*」或「*資源群組*」。
 +
 所有資料庫和DAG都會以FQDN格式顯示其DAG或主機名稱、以便區分多個資料庫。
 
 +
-按一下 image:../media/filter_icon.png[""] 然後選取主機名稱和Exchange Server以篩選資源。然後按一下 image:../media/filter_icon.png[""] 以關閉篩選窗格。
+按一下 image:../media/filter_icon.png["篩選圖示"] 然後選取主機名稱和Exchange Server以篩選資源。然後按一下 image:../media/filter_icon.png["篩選圖示"] 以關閉篩選窗格。
 
 . 按一下*重新整理資源*。
 +

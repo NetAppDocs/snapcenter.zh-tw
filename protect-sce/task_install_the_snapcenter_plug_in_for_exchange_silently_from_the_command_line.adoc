@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_install_the_snapcenter_plug_in_for_exchange_silently_from_the_command_line.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 您應該從SnapCenter 「版本資訊」使用者介面中安裝Exchange外掛程式。不過、如果您因為某些原因無法執行、您可以從Windows命令列以無訊息模式執行外掛程式的Exchange安裝程式。 
 ---
 = 從命令列以無訊息方式安裝SnapCenter Exchange的功能
@@ -13,8 +13,7 @@ summary: 您應該從SnapCenter 「版本資訊」使用者介面中安裝Exchan
 [role="lead"]
 您應該從SnapCenter 「版本資訊」使用者介面中安裝Exchange外掛程式。不過、如果您因為某些原因無法執行、您可以從Windows命令列以無訊息模式執行外掛程式的Exchange安裝程式。
 
-*您需要的是什麼*
-
+.開始之前
 * 您必須備份Microsoft Exchange Server資源。
 * 您必須已安裝SnapCenter 完整套的不更新程式。
 * 安裝之前、您必須先刪除SnapCenter 舊版的Microsoft SQL Server適用的更新版本。
@@ -23,8 +22,7 @@ summary: 您應該從SnapCenter 「版本資訊」使用者介面中安裝Exchan
 
 
 
-*步驟*
-
+.步驟
 . 驗證外掛程式主機上是否存在_C：\temp_資料夾、且登入的使用者是否擁有該資料夾的完整存取權。
 . 從SnapCenter _C：\ProgramData \NetApp\SnapCenter\Package_儲存庫下載適用於Microsoft Windows的支援功能外掛程式。
 +

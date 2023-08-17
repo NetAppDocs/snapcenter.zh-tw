@@ -13,7 +13,7 @@ summary: 還原SAP HANA資料庫備份包括啟動與SnapCenter 該伺服器的�
 [role="lead"]
 還原SAP HANA資料庫備份包括啟動與SnapCenter 該伺服器的連線工作階段、列出備份與擷取備份資訊、以及還原備份。
 
-.您需要的產品
+.開始之前
 您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。
 
 .步驟

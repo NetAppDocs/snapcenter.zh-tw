@@ -1,7 +1,7 @@
 ---
 permalink: admin/task_how_to_view_information_on_the_dashboard.html 
 sidebar: sidebar 
-keywords:  
+keywords: dashboard 
 summary: 您可以從SnapCenter 「左側」導覽窗格中檢視各種儀表板並排顯示或顯示、以及相關的系統詳細資料。儀表板中可用的顯示數量是固定的、無法變更。每個顯示器所提供的內容取決於角色型存取控制（RBAC）。 
 ---
 = 如何檢視儀表板上的資訊

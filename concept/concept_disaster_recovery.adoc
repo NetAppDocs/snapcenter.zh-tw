@@ -1,7 +1,7 @@
 ---
 permalink: concept/concept_disaster_recovery.html 
 sidebar: sidebar 
-keywords:  
+keywords: Disaster Recovery 
 summary: 如果發生資源毀損或伺服器當機等災難、您可以SnapCenter 使用SnapCenter 「還原災難恢復」功能來還原此伺服器。 
 ---
 = SnapCenter 災難恢復

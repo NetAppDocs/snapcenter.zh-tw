@@ -13,8 +13,7 @@ summary: 您應該設定CA憑證、並啟用SnapCenter 適用於該伺服器的C
 [role="lead"]
 您應該設定CA憑證、並啟用SnapCenter 適用於該伺服器的CA憑證驗證。
 
-*您需要的是什麼*
-
+.開始之前
 * 您可以使用Set-SmCertificateSettings Cmdlet來啟用或停用CA憑證。
 * 您可以SnapCenter 使用Get-SmCertificateSettings Cmdlet來顯示驗證伺服器的憑證狀態。
 

@@ -1,7 +1,7 @@
 ---
 permalink: protect-scsql/concept_requirements_for_restoring_a_database.html 
 sidebar: sidebar 
-keywords:  
+keywords: Requirements 
 summary: 從SnapCenter 適用於Microsoft SQL Server備份的還原外掛程式還原SQL Server資料庫之前、您必須確保符合多項需求。 
 ---
 = 還原資料庫的需求

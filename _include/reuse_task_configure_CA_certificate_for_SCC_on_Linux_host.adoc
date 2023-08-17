@@ -10,8 +10,7 @@
 
 == 管理自訂外掛程式Keystore的密碼、以及使用中的CA簽署金鑰配對別名
 
-*步驟*
-
+.步驟
 . 您可以從自訂外掛程式代理程式內容檔擷取自訂外掛程式Keystore預設密碼。
 +
 這是對應至金鑰「keystore _pass」的值。
@@ -37,8 +36,7 @@ NOTE: 自訂外掛程式Keystore的密碼、以及私密金鑰的所有相關別
 
 您應該設定根或中繼憑證、而不使用私密金鑰、以自訂外掛程式信任存放區。
 
-*步驟*
-
+.步驟
 . 瀏覽至包含自訂外掛程式Keystore的資料夾：/opp/NetApp/snapcenter/scc/等
 . 找到「keystore .jks」檔案。
 . 在Keystore中列出新增的憑證：
@@ -60,8 +58,7 @@ NOTE: 您應該先新增根CA憑證、然後再新增中繼CA憑證。
 
 您應該將CA簽署金鑰配對設定為自訂外掛程式信任存放區。
 
-*步驟*
-
+.步驟
 . 瀏覽至包含自訂外掛程式Keystore /opp/NetApp/snapcenter/scc/等的資料夾
 . 找到「keystore .jks」檔案。
 . 在Keystore中列出新增的憑證：
@@ -97,14 +94,12 @@ NOTE: 您應該先新增根CA憑證、然後再新增中繼CA憑證。
 
 == 針對SnapCenter 「不一樣的自訂外掛程式」設定憑證撤銷清單（CRL）
 
-*關於此工作*
-
+.關於這項工作
 * 「自訂外掛程式」會在預先設定的目錄中搜尋CRL檔案。SnapCenter
 * 適用於「SetcCustom Plug-in」的CRL檔案預設目錄SnapCenter 為「opt /NetApp/snapcenter/scc / etc/crl」。
 
 
-*步驟*
-
+.步驟
 . 您可以根據金鑰CRP_path修改及更新agent.properties檔案中的預設目錄。
 +
 您可以在此目錄中放置多個CRL檔案。傳入的憑證會根據每個CRL進行驗證。

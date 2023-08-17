@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_configure_snapmanager_7_x_for_exchange_and_snapcenter_plug_in_for_exchange_to_coexist.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter plug-in for Exchange Server 
 summary: 若要讓SnapCenter Microsoft Exchange Server的支援功能可與SnapManager 適用於Microsoft Exchange Server的支援功能共存、您必須在SnapCenter 安裝了適用於Microsoft Exchange Server的支援功能的Exchange Server上安裝適用於Microsoft Exchange Server的支援功能、SnapManager 停用SnapManager 適用於Exchange排程的支援功能、 並使用SnapCenter 適用於Microsoft Exchange Server的還原外掛程式來設定新的排程和備份。 
 ---
 = 設定SnapManager 讓Exchange SnapCenter 和VMware能夠共存的版本
@@ -13,8 +13,7 @@ summary: 若要讓SnapCenter Microsoft Exchange Server的支援功能可與SnapM
 [role="lead"]
 若要讓SnapCenter Microsoft Exchange Server的支援功能可與SnapManager 適用於Microsoft Exchange Server的支援功能共存、您必須在SnapCenter 安裝了適用於Microsoft Exchange Server的支援功能的Exchange Server上安裝適用於Microsoft Exchange Server的支援功能、SnapManager 停用SnapManager 適用於Exchange排程的支援功能、 並使用SnapCenter 適用於Microsoft Exchange Server的還原外掛程式來設定新的排程和備份。
 
-*您需要的是什麼*
-
+.開始之前
 * 已安裝適用於Microsoft Exchange Server和適用於Windows的功能、系統和SnapInfo目錄中均有適用於Microsoft Exchange Server備份的功能。SnapManager SnapDrive SnapManager
 * 您應該已經刪除SnapManager 或回收由不再需要的Microsoft Exchange Server的還原備份。
 * 您應該已經暫停或刪除SnapManager Windows排程器中由Microsoft Exchange Server的所有由WALL建立的排程。
@@ -28,8 +27,7 @@ summary: 若要讓SnapCenter Microsoft Exchange Server的支援功能可與SnapM
 
 
 
-*步驟*
-
+.步驟
 . 在所有DAG節點上使用PowerShell、判斷SnapDrive 是否已登錄適用於Windows VSS硬體供應商的功能：_vssadmin list prov供應商_
 +
 [listing]

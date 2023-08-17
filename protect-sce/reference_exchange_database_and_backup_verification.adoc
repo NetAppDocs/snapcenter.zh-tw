@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/reference_exchange_database_and_backup_verification.html 
 sidebar: sidebar 
-keywords:  
+keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: 適用於Microsoft Exchange Server的程式庫外掛程式不提供備份驗證、不過您可以使用Exchange隨附的Eseutil工具來驗證Exchange資料庫和備份。SnapCenter 
 ---
 = Exchange資料庫與備份驗證
