@@ -77,7 +77,7 @@ NOTE: 如果您在Oracle Linux或Red Hat Enterprise Linux 6.6或7.0作業系統�
  a| 
 主機上安裝的不需使用的RAM SnapCenter
  a| 
-1 GB
+2 GB
 
 
 
@@ -211,7 +211,7 @@ AIX 6.1或更新版本
  a| 
 主機上安裝及記錄SnapCenter 插件的最低空間
  a| 
-1 GB
+2 GB
 
 
 NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使用量。所需的記錄空間會因受保護的實體數量和資料保護作業的頻率而有所不同。如果沒有足夠的磁碟空間、將不會針對最近執行的作業建立記錄。
