@@ -19,7 +19,7 @@ summary: 如果發生資源毀損或伺服器當機等災難、您可以SnapCent
 * SnapCenter 伺服器資料已備份、可在不新增任何外掛程式或由 SnapCenter 伺服器管理的情況下進行還原。
 * 次要SnapCenter 版的伺服器應安裝在相同的安裝目錄中、並與主SnapCenter 版的SURL伺服器安裝在同一個連接埠上。
 * 針對多因素驗證（ MFA ）、請在 SnapCenter 伺服器 DR 期間、關閉所有瀏覽器索引標籤、然後重新開啟瀏覽器、再次登入。這會清除現有或作用中的工作階段 Cookie 、並更新正確的組態資料。
-* 支援災難恢復功能、使用REST API來備份功能。SnapCenter SnapCenter請參閱 link:../sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html["REST API工作流程、可用於SnapCenter 支援還原至支援的伺服器災難恢復"]。
+* 支援災難恢復功能、使用REST API來備份功能。SnapCenter SnapCenter請參閱 link:../tech-refresh/task_tech_refresh_server_host.html["REST API工作流程、可用於SnapCenter 支援還原至支援的伺服器災難恢復"]。
 * 與稽核設定相關的組態檔不會備份在DR備份中、也不會在還原作業之後備份在DR伺服器上。您應該手動重複稽核記錄設定。
 
 

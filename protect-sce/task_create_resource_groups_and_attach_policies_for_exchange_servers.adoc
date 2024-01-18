@@ -24,6 +24,7 @@ summary: 任何資料保護工作都需要資源群組。您也必須將一或�
 +
 您可以使用Get API來顯示金鑰的值。不支援Set API。
 
+* 對於啟用 SnapLock 的原則、對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 
 .步驟
@@ -124,7 +125,7 @@ NOTE: 如果原則包含*在備份工作建立時間*選取的伺服器上備份
 對於電子郵件通知、您必須使用GUI或PowerShell命令「et-SmtpServer」來指定SMTP伺服器詳細資料。
 
 +
-您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^]。
 
 . 檢閱摘要、然後按一下「*完成*」。
 

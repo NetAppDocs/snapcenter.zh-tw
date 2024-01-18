@@ -59,6 +59,6 @@ NOTE: 複製規格檔案建立於_/var/opt/snapcenter/scope/clone _specs_。
 如果作業失敗並顯示「PL-SCO-20032：CanExecute operation失敗、並顯示錯誤：PL-SCO-30031：REDO記錄檔+SC_2959770772_clmdb/clmdb/redog/redo01_01.log exists」錯誤訊息、請為「-WaitToTrigerClerClone」指定較高的值。
 
 +
-如需UNIX命令的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["《軟件命令參考指南》SnapCenter"^]。
+如需UNIX命令的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896["《軟件命令參考指南》SnapCenter"^]。
 
 

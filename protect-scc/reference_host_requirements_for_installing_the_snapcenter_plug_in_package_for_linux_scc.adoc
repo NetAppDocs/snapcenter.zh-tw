@@ -47,7 +47,7 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
  a| 
 必要的軟體套件
  a| 
-Java 1.8（64位元）Oracle Java或OpenJDK Flavors
+Java 1.8 （ 64 位元） Oracle Java 或 OpenJDK
 
 如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。
 

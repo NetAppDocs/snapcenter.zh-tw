@@ -1,0 +1,95 @@
+---
+permalink: protect-scu/concept_overview_snapcenter_plug_in_for_UNIX_file_systems.html 
+sidebar: sidebar 
+keywords: overview, unix file system, plug-in for unix file system, backup, restore, clone 
+summary: 適用於 Unix 檔案系統的外掛程式支援 Unix 檔案系統的備份、還原及複製。 
+---
+= SnapCenter Plug-in for Unix 檔案系統的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您的環境中安裝了適用於 Unix 檔案系統的外掛程式時、您可以使用 SnapCenter 來備份、還原及複製 Unix 檔案系統。您也可以執行支援這些作業的工作。
+
+* 探索資源
+* 備份 Unix 檔案系統
+* 排程備份作業
+* 還原檔案系統備份
+* 複製檔案系統備份
+* 監控備份、還原及複製作業
+
+
+
+
+== 支援的組態
+
+|===
+| 項目 | 支援的組態 
+
+
+ a| 
+環境
+ a| 
+* 實體伺服器
+* 虛擬伺服器
+
+
+
+
+ a| 
+作業系統
+ a| 
+* Red Hat Enterprise Linux
+* Oracle Linux
+* SUSE Linux Enterprise Server（SLES）
+
+
+
+
+ a| 
+檔案系統
+ a| 
+* SAN：
++
+** LVM 和非 LVM 型檔案系統
+** VMDK ext3 、 ext4 和 xfs 上的 LVM
+
+
+* NFS ： NFS v3 、 NFS v4.x
+
+
+
+
+ a| 
+通訊協定
+ a| 
+* FC
+* FCoE
+* iSCSI
+* NFS
+
+
+
+
+ a| 
+多重路徑
+ a| 
+是的
+
+|===
+
+
+== 限制
+
+* 不支援在磁碟區群組中混合使用 RDM 和虛擬磁碟。
+* 不支援檔案層級還原。
++
+不過、您可以手動執行檔案層級還原、方法是複製備份、然後手動複製檔案。
+
+* 不支援在 NFS 和 VMFS 資料存放區的 VMDK 之間混合使用檔案系統。
+* NVMe 不受支援。
+* 不支援 SnapMirror Business Continuity （ SM-BC ）。
+* 不支援資源配置。
+

@@ -1,0 +1,74 @@
+---
+permalink: protect-scu/task_clone_unix_file_systems_backup.html 
+sidebar: sidebar 
+keywords: alternate host, clone, Unix file systems, file systems 
+summary: 您可以使用 SnapCenter 來複製使用檔案系統備份的 Unix 檔案系統資料庫。 
+---
+= 複製 Unix 檔案系統備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SnapCenter 來複製使用檔案系統備份的 Unix 檔案系統。
+
+.開始之前
+* 您可以將 _agent.properties_ 檔案中的值 _SKI_Fst_update_ 設定為 *true* 、該檔案位於： /opt/NetApp/snapcenter/SCC/etc_ 。
+* 您可以在位於下列位置的 _agent.properties_ 檔案中、將 _use_custom_clone_volume 名稱和交會路徑的值設為 * true* 、以獲得靜態複製磁碟區名稱和交會路徑：更新檔案之後、您應該執行下列命令、重新啟動 SnapCenter 以取得自訂外掛程式服務： `/opt/NetApp/snapcenter/scc/bin/scc restart`。
++
+範例：如果沒有此內容、複製磁碟區名稱和交會路徑將類似於 <Source_volume_name> 複製 <Timestamp> 、但現在則是 <Source_volume_name> 複製 <Clone_Name>
+
++
+這會保持名稱不變、以便在不想透過 SnapCenter 更新 fstab 時、手動保持 Fstab 檔案的更新。
+
+
+
+.步驟
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、從 * 檢視 * 清單中選取 * 路徑 * 或 * 資源群組 * 。
+. 從詳細資料檢視或資源群組詳細資料檢視中選取檔案系統。
++
+此時會顯示「拓撲」頁面。
+
+. 從管理複本檢視中、從本機複本（主要）、鏡射複本（次要）或Vault複本（次要）中選取備份。
+. 從表格中選取備份、然後按一下*image:../media/clone_icon.gif["複製圖示"]*。
+. 在「位置」頁面中、執行下列動作：
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+Clone伺服器
+ a| 
+根據預設、會填入來源主機。
+
+
+
+ a| 
+複製掛載點
+ a| 
+指定要掛載檔案系統的路徑。
+
+|===
+. 在「指令碼」頁面中、執行下列步驟：
++
+.. 輸入應分別在複製作業之前或之後執行的預先複製或POST複製命令。
++
+
+NOTE: 您應該檢查插件主機上的命令列表中是否存在這些命令，該命令位於 _/opt/NetApp/snapcenter/SCC/allowed_commands.config_ 路徑中。
+
+
+
+. 在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。
++
+您也必須指定寄件者和接收者的電子郵件地址、以及電子郵件的主旨。如果您要附加執行的複製作業報告、請選取*附加作業報告*。
+
++
+
+NOTE: 對於電子郵件通知、您必須使用GUI或PowerShell命令Set-SmtpServer來指定SMTP伺服器詳細資料。
+
+. 檢閱摘要、然後按一下「*完成*」。
+. 按一下*監控*>*工作*來監控作業進度。
+

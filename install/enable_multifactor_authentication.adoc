@@ -21,7 +21,7 @@ summary: 利用嚴苛的安全性與驗證功能、確保資料安全無虞。Sn
 
 .關於這項工作
 * 在相同的AD FS中設定其他應用程式時、支援SSO型登入。SnapCenter在某些AD FS組態中、SnapCenter 由於安全原因、可能需要使用者驗證、視AD FS工作階段持續性而定。
-* 執行即可取得可搭配 Cmdlet 使用之參數的相關資訊及其說明 `Get-Help command_name`。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。
+* 執行即可取得可搭配 Cmdlet 使用之參數的相關資訊及其說明 `Get-Help command_name`。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^]。
 
 
 .開始之前

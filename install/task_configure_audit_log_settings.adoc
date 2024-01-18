@@ -36,7 +36,7 @@ summary: 您可以設定記錄軟體平台的安全性事件、以及在這些�
 * 如果在Syslog伺服器設定中使用了udp傳輸協定、則連接埠關閉或無法使用所造成的錯誤將無法擷取為SnapCenter 錯誤或是在列舉時發出警示。
 * 您可以使用Set-SmAuditSettings和Get-SmAuditSettings命令來設定稽核記錄。
 +
-您可以執行Get-Help命令名稱來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。
+您可以執行Get-Help命令名稱來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^]。
 
 
 

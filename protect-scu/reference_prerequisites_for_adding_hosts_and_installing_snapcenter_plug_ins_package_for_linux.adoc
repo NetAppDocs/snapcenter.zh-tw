@@ -1,0 +1,83 @@
+---
+permalink: protect-scu/reference_prerequisites_for_adding_hosts_and_installing_snapcenter_plug_ins_package_for_linux.html 
+sidebar: sidebar 
+keywords: prerequisites, iSCSI, host requirement for Linux, sudo privileges, non-root user, credentials, authenticate, domain administrator, local administrator, workgroup, sudo, root user 
+summary: 在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。 
+---
+= 新增主機和安裝適用於 Linux 的外掛程式套件的必要條件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在您新增主機並安裝適用於 Linux 的外掛程式套件之前、您必須先完成所有需求。
+
+* 如果您使用iSCSI、則必須執行iSCSI服務。
+* 您可以使用根或非根使用者的密碼型驗證、或是 SSH 金鑰型驗證。
++
+SnapCenter Plug-in for Unix File Systems 可由非 root 使用者安裝。不過、您應該設定非root使用者的Sudo權限、以便安裝和啟動外掛程式程序。安裝外掛程式之後、程序將以有效的非root使用者身分執行。
+
+* 以驗證模式建立認證、做為安裝使用者的 Linux 。
+* 您必須在 Linux 主機上安裝 Java 1.8.x 或 Java 11 （ 64 位元）。
++
+
+NOTE: 請確定您只在Linux主機上安裝認證版本的Java 11。
+
++
+如需下載Java的資訊、請參閱： http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"^]
+
+* 您應該將 * bash* 作為外掛程式安裝的預設 Shell 。
+
+
+
+
+== Linux主機需求
+
+在安裝SnapCenter 適用於Linux的支援套件之前、您應確保主機符合要求。
+
+|===
+| 項目 | 需求 
+
+
+ a| 
+作業系統
+ a| 
+* Red Hat Enterprise Linux
+* Oracle Linux
+* SUSE Linux Enterprise Server（SLES）
+
+
+
+
+ a| 
+主機上安裝的不需使用的RAM SnapCenter
+ a| 
+2 GB
+
+
+
+ a| 
+主機上安裝及記錄SnapCenter 插件的最低空間
+ a| 
+2 GB
+
+
+NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使用量。所需的記錄空間會因受保護的實體數量和資料保護作業的頻率而有所不同。如果沒有足夠的磁碟空間、將不會針對最近執行的作業建立記錄。
+
+
+
+ a| 
+必要的軟體套件
+ a| 
+* Java 1.8.x （ 64 位元） Oracle Java 和 OpenJDK
+* Java 11 （ 64 位元） Oracle Java 和 OpenJDK
+
+
+
+NOTE: 請確定您只在Linux主機上安裝認證版本的Java 11。
+
+如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。
+
+|===
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=112391;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"^]。

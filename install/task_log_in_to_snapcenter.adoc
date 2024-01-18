@@ -34,7 +34,7 @@ IMPORTANT: 如果您在網頁瀏覽器中開啟多個索引標籤、只要關閉
 
 若要部署高可用度（HA）、您必須SnapCenter 使用虛擬叢集IP _\ https://Virtual_Cluster_IP_or_FQDN:8146_來存取功能。如果您在Internet Explorer（IE）中瀏覽至_https://Virtual_Cluster_IP_or_FQDN:8146_時沒有看到SnapCenter 此功能、則必須在每個外掛主機的IE中、將虛擬叢集IP位址或FQDN新增為信任的網站、或是在每個外掛主機上停用IE增強安全功能。如需詳細資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["無法從外部網路存取叢集IP位址"^]。
 
-除了使用SnapCenter 還原GUI、您還可以使用PowerShell Cmdlet建立指令碼來執行組態、備份及還原作業。每SnapCenter 個版本的各個版本可能都有一些Cmdlet變更。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^] 有詳細資料。
+除了使用SnapCenter 還原GUI、您還可以使用PowerShell Cmdlet建立指令碼來執行組態、備份及還原作業。每SnapCenter 個版本的各個版本可能都有一些Cmdlet變更。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^] 有詳細資料。
 
 
 NOTE: 如果SnapCenter 您是第一次登入到此資訊中心、則必須使用安裝程序中提供的認證登入。

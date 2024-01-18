@@ -41,6 +41,9 @@ summary: 您可以使用SnapCenter 支援功能來複製SQL Server資料庫備�
 
 NOTE: 對於虛擬環境（VMDDK / RDM）、請確定掛載點是專用磁碟。
 
+* 對於啟用 SnapLock 的原則、對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本將繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+
+
 .步驟
 . 在左側導航窗格中，選擇 * 資源 * ，然後從列表中選擇 * SnapCenter Plug-in for SQL Server* 。
 . 在「資源」頁面中、從*檢視*清單中選取*資料庫*或*資源群組*。

@@ -94,8 +94,8 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
  a| 
 必要的軟體套件
  a| 
-* Java 1.8.x（64位元）Oracle Java和OpenJDKFlavors
-* Java 11（64位元）Oracle Java和OpenJDTM Flavors
+* Java 1.8.x （ 64 位元） Oracle Java 和 OpenJDK
+* Java 11 （ 64 位元） Oracle Java 和 OpenJDK
 
 
 

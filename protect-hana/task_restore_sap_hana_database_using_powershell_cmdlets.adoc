@@ -108,4 +108,4 @@ Restore-SmBackup -PluginCode 'HANA' -AppObjectId cn24.sccore.test.com\hana\H10 -
 
 
 
-您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^]。

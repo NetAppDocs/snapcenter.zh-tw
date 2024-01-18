@@ -41,13 +41,29 @@ summary: 您可以先為Exchange資源或資源群組建立備份原則、再使
 +
 您可以使用Get API來顯示金鑰的值。不支援Set API。
 
-
-
++
 |===
 
 
 | *最佳實務做法：*您最好根據您想保留的完整備份數和記錄備份總數來設定次要保留原則。當您設定次要保留原則時、請記住、當資料庫和記錄位於不同的磁碟區時、每個備份都可以有三個Snapshot複本、而且當資料庫和記錄位於同一個磁碟區時、每個備份都可以有兩個Snapshot複本。 
 |===
+* SnapLock
++
+** 如果選取「保留特定天數的備份複本」選項、則 SnapLock 保留期間必須小於或等於所述保留天數。
++
+指定 Snapshot 複本鎖定期間可防止在保留期間到期之前刪除 Snapshot 複本。  這可能會導致保留的 Snapshot 複本數量超過原則中指定的數量。
+
++
+對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本將繼承 SnapLock 到期時間。  您應該手動清除 SnapLock 到期後的複本。
+
++
+
+NOTE: 主要 SnapLock 設定是在 SnapCenter 備份原則中管理、次要 SnapLock 設定則是由 ONTAP 管理。
+
+
+
+
+
 .步驟
 . 在左側導覽窗格中、按一下*設定*。
 . 在「設定」頁面中、按一下*原則*。
@@ -190,6 +206,15 @@ IMPORTANT: 如果您打算啟用SnapVault 此功能、則必須將保留數設�
 
 記錄備份會保留到完整備份的天數。
 
+
+
+ a| 
+Snapshot 複本鎖定期間
+ a| 
+選取 * Snapshot 複本鎖定期間 * 、然後選取天、月或年。
+
+SnapLock 保留期應少於 100 年。
+
 |===
 +
 如果您選擇*記錄備份*做為備份類型、則記錄備份會保留為完整備份的最新保留設定之一。
@@ -213,6 +238,15 @@ IMPORTANT: 如果您打算啟用SnapVault 此功能、則必須將保留數設�
 保留完整備份的特定天數
  a| 
 選取*「將Snapshot複本保留為*」選項、並指定保留Snapshot複本（完整備份）的天數。
+
+
+
+ a| 
+Snapshot 複本鎖定期間
+ a| 
+選取 * Snapshot 複本鎖定期間 * 、然後選取天、月或年。
+
+SnapLock 保留期應少於 100 年。
 
 |===
 +
@@ -239,6 +273,12 @@ NOTE: 如果您的資料庫只有記錄備份、而且主機上的DAG組態沒�
 
  a| 
 建立本機Snapshot複本之後、請更新SnapMirror
+
+在次要複寫期間、 SnapLock 到期時間會載入主要 SnapLock 到期時間。
+
+按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。
+
+請參閱 link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["在「拓撲」頁面中檢視Exchange備份"]。
  a| 
 選取此選項可將備份集的鏡射複本保留在另一個磁碟區（SnapMirror）上。
 

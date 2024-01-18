@@ -85,10 +85,10 @@ https://automationstore.netapp.com/home.shtml["NetApp儲存自動化商店"^]
 如需REST API的詳細資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/sc-automation/overview_rest_apis.html["REST API總覽"]。
 
 +
-如需Windows Cmdlet的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。
+如需Windows Cmdlet的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^]。
 
 +
-如需UNIX命令的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206["《軟件命令參考指南》SnapCenter"^]。
+如需UNIX命令的詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896["《軟件命令參考指南》SnapCenter"^]。
 
 * 集中式資料保護儀表板與報告
 * 角色型存取控制（RBAC）、以確保安全性和委派。
@@ -107,6 +107,33 @@ https://automationstore.netapp.com/home.shtml["NetApp儲存自動化商店"^]
 * 災難恢復（DR）
 +
 當資源毀損或伺服器當機等災難發生時、您可以恢復SnapCenter 該伺服器。
+
+* SnapLock
++
+SnapLock 是高效能的法規遵循解決方案、適用於使用一次寫入、多次讀取（ WORM ）儲存設備、以未經修改的形式保留檔案、以供法規遵循與管理之用。
+
++
+如需 SnapLock 的詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap/snaplock/["什麼是呢SnapLock"]
+
+* SnapMirror營運不中斷（SMBC）
++
+SnapMirror Business Continuity （ SM-BC ）可讓業務服務持續運作、即使整個站台發生故障、也能支援應用程式使用次要複本進行透明容錯移轉。使用 SM-BC 觸發容錯移轉時、不需要手動介入或額外的指令碼處理。
+
++
+此功能支援的外掛程式包括適用於 SQL Server 的 SnapCenter 外掛程式、適用於 Windows 的 SnapCenter 外掛程式、以及適用於 Oracle 資料庫的 SnapCenter 外掛程式。
+
++
+如需 SM-BC 的詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap/smbc/index.html["SnapMirror營運不中斷（SMBC）"]
+
++
+對於 SM-BC 、請確定您已符合各種硬體、軟體和系統組態需求。  如需詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_prerequisites.html["先決條件"]
+
+* 同步鏡射
++
+同步鏡射功能可在遠端距離的儲存陣列之間提供線上即時資料複寫功能。
+
++
+如需同步鏡射的詳細資訊、請參閱 https://docs.netapp.com/us-en/e-series-santricity/sm-mirroring/overview-mirroring-sync.html["同步鏡射總覽"]
 
 
 
@@ -139,21 +166,13 @@ image::../media/snapcenter_architecture.gif[架構SnapCenter]
 +
 ** Oracle資料庫的支援外掛程式SnapCenter
 ** SAP HANA資料庫適用的插件SnapCenter
-** UNIX版的插件SnapCenter
-+
-
-NOTE: 適用於UNIX的DB2外掛程式不是獨立式外掛程式、無法獨立安裝。SnapCenter當您安裝SnapCenter 適用於Oracle資料庫的不穩定插件或SnapCenter 適用於SAP HANA資料庫的不穩定插件時、就會自動安裝此外掛程式。
-
+** 適用於 UNIX 檔案系統的 SnapCenter 外掛程式
 
 
 * 適用於AIX的程式集外掛套件、包含下列外掛程式：SnapCenter
 +
 ** Oracle資料庫的支援外掛程式SnapCenter
-** UNIX版的插件SnapCenter
-+
-
-NOTE: 適用於UNIX的DB2外掛程式不是獨立式外掛程式、無法獨立安裝。SnapCenter當您安裝SnapCenter 適用於Oracle資料庫的支援功能時、會自動安裝此外掛程式。
-
+** 適用於 UNIX 檔案系統的 SnapCenter 外掛程式
 
 
 * 不適用的自訂外掛程式SnapCenter
@@ -331,6 +350,7 @@ NOTE: Windows外掛程式會在實體和RDM LUN上配置SMB共用和Windows檔�
 +
 SAN原生裝置、檔案系統及以SAN裝置為建置基礎的LVM配置均受到支援。
 
+* 自動化 SnapCenter 環境中 UNIX 檔案系統的應用程式感知備份、還原及複製作業
 
 
 

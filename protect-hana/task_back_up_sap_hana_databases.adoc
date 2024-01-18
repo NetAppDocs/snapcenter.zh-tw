@@ -26,7 +26,7 @@ link:task_back_up_resource_groups_sap_hana.html["備份資源群組"]
 
 * 如果您想要在一或多個租戶資料庫關閉時建立檔案型備份、請使用「Set-ConfigSmSettings'指令程式」、將HANA內容檔案中的參數參數設定為* Yes*。
 +
-您可以執行Get-Help _command_name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"]
+您可以執行Get-Help _command_name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"]
 
 * 對於靜止、Snapshot複製及靜止作業的前置和POST命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否有這些命令：
 +

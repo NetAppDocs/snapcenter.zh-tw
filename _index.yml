@@ -1,12 +1,12 @@
 ---
 indexpage:
   lead: 支援簡單、集中化、可擴充的平台、可為在混合雲中任何位置的不間斷系統上執行的應用程式、資料庫、主機檔案系統及VM提供應用程式一致的資料保護。SnapCenter
-    ONTAP此文件庫包含 4.9 版的資訊。
+    ONTAP此文件庫包含 5.0 版的資訊。
   tiles:
   - title: 開始使用
     links:
     - title: 版本資訊
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886204
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886893
     - title: 深入瞭解SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
     - title: 保護SQL Server資料庫的快速參考
@@ -24,7 +24,7 @@ indexpage:
     - title: 使用F5設定高可用度
       url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
     - title: 災難恢復SnapCenter 功能
-      url: "/sc-automation/rest_api_workflows_disaster_recovery_of_snapcenter_server.html"
+      url: "/tech-refresh/task_tech_refresh_server_host.html"
   - title: 保護Microsoft SQL Server資料庫
     links:
     - title: 安裝SnapCenter 適用於Microsoft SQL Server資料庫的功能外掛程式
@@ -66,9 +66,9 @@ indexpage:
   - title: 更多資源
     links:
     - title: Cmdlet參考指南
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895
     - title: 命令參考指南
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886206
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2886896
     - title: 先前版本SnapCenter 的不適用資料
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: NetApp知識庫SnapCenter

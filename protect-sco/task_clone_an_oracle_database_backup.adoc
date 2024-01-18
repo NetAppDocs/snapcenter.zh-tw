@@ -19,19 +19,26 @@ summary: 您可以使用SnapCenter 支援功能、使用資料庫的備份來複
 
 *關於此工作*
 
-複製作業會建立資料庫資料檔案的複本、並建立新的線上重作記錄檔和控制檔。根據指定的恢復選項、可選擇將資料庫還原至指定時間。
-
+* 複製作業會建立資料庫資料檔案的複本、並建立新的線上重作記錄檔和控制檔。根據指定的恢復選項、可選擇將資料庫還原至指定時間。
++
 
 NOTE: 如果您嘗試將在Linux主機上建立的備份複製到AIX主機、複製將會失敗、反之亦然。
 
++
 從Oracle RAC資料庫備份複製時、會建立獨立資料庫。SnapCenter支援從Data Guard待命和Active Data Guard待命資料庫的備份建立複本。SnapCenter
 
++
 在複製期間SnapCenter 、根據SCN或資料及恢復作業時間、安裝最佳的記錄備份數量。恢復之後、記錄備份會卸載。所有這類複本均裝載於_/var/opt/snapcenter/SCU/Clone /_下。如果您使用的是ASM over NFS、則應將//var/capcenter/SCU/Clone /*/*新增至在asm_diskstring參數中定義的現有路徑。
 
++
 在SAN環境中複製ASM資料庫備份時、會在_/etc/udev/rules．d/999-scu-netapp.rules_建立複製主機裝置的udev規則。刪除複製的主機裝置時、會刪除這些與複製主機裝置相關的udev規則。
 
++
 
 NOTE: 在Flex ASM設定中、如果基數小於RAC叢集中的節點數、則無法在葉節點上執行實體複製作業。
+
+* 對於啟用 SnapLock 的原則、對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+
 
 *步驟*
 

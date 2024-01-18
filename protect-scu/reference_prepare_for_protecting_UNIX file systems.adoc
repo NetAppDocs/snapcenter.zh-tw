@@ -1,0 +1,30 @@
+---
+permalink: protect-scu/reference_prepare_for_protecting_UNIX file systems.html 
+sidebar: sidebar 
+keywords: unix file systems, preparation for protection, prerequisites 
+summary: 在執行任何資料保護作業（例如備份、複製或還原作業）之前、您應該先設定環境。 
+---
+= 準備好保護 Unix 檔案系統
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在執行任何資料保護作業（例如備份、複製或還原作業）之前、您應該先設定環境。您也可以設定SnapCenter 使用SnapMirror和SnapVault SnapMirror技術的「支援伺服器」。
+
+若要善用SnapVault SnapMirror和SnapMirror技術、您必須在儲存設備的來源與目的地磁碟區之間設定及初始化資料保護關係。您可以使用NetAppSystem Manager、也可以使用儲存主控台命令列來執行這些工作。
+
+在您使用適用於 Unix 檔案系統的外掛程式之前、 SnapCenter 管理員應該先安裝並設定 SnapCenter 伺服器、然後執行必要的工作。
+
+* 安裝及設定SnapCenter 靜態伺服器。 link:../install/task_install_the_snapcenter_server_using_the_install_wizard.html["深入瞭解"^]
+* 透過新增儲存系統連線來設定SnapCenter 靜態環境。 link:../install/task_add_storage_systems.html["深入瞭解"^]
++
+
+NOTE: 不支援在不同叢集上使用相同名稱的多個SVM。SnapCenter每個以SnapCenter SVM登錄或叢集登錄登錄登錄的SVM都必須是唯一的。
+
+* 新增主機、安裝外掛程式、以及探索資源。
+* 如果您使用 SnapCenter 伺服器來保護位於 VMware RDM LUN 或 VMDK 上的 Unix 檔案系統、則必須部署適用於 VMware vSphere 的 SnapCenter 外掛程式、並向 SnapCenter 註冊外掛程式。
+* 在 Linux 主機上安裝 Java 。
+* 如果需要備份複寫、請在 ONTAP 上設定 SnapMirror 和 SnapVault 。
+

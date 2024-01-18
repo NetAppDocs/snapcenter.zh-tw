@@ -26,18 +26,39 @@ summary: 您可以先為資源或資源群組建立備份原則、再使用SnapC
 +
 預設值為假。
 
+* 對於 SnapMirror Business Continuity （ SM-BC ）、如需先決條件和限制的詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror 業務持續運作的物件限制"]。
 
 
 .關於這項工作
-備份原則是一組規則、可控制您管理及保留備份的方式、以及資源或資源群組的備份頻率。此外、您也可以指定複寫和指令碼設定。在原則中指定選項可節省您想要重複使用其他資源群組原則的時間。
-
+* 備份原則是一組規則、可控制您管理及保留備份的方式、以及資源或資源群組的備份頻率。此外、您也可以指定複寫和指令碼設定。在原則中指定選項可節省您想要重複使用其他資源群組原則的時間。
++
 可使用外掛主機SMCoreServiceHost.exe.Config檔案中的PredefinedWindows指令碼目錄金鑰來定義指令碼路徑。
 
++
 如有需要、您可以變更此路徑並重新啟動SMcore服務。建議您使用預設的安全路徑。
 
++
 金鑰的值可透過API：API /4.7/configsettings從交換器顯示
 
++
 您可以使用Get API來顯示金鑰的值。不支援Set API。
+
+* SnapLock
++
+** 如果選取「保留特定天數的備份複本」選項、則 SnapLock 保留期間必須小於或等於所述保留天數。
++
+指定 Snapshot 複本鎖定期間可防止在保留期間到期之前刪除 Snapshot 複本。  這可能會導致保留的 Snapshot 複本數量超過原則中指定的數量。
+
++
+對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本將繼承 SnapLock 到期時間。  您應該手動清除 SnapLock 到期後的複本。
+
++
+
+NOTE: 主要 SnapLock 設定是在 SnapCenter 備份原則中管理、次要 SnapLock 設定則是由 ONTAP 管理。
+
+
+
+
 
 
 
@@ -129,7 +150,7 @@ NOTE: 在叢集組態中、備份會根據原則中設定的保留設定保留�
 您只能為原則選取一種排程類型。
 
 +
-image::../media/backup_settings.gif[備份設定]
+image::../media/backup_settings.gif[備份設定畫面。]
 
 +
 
@@ -192,6 +213,10 @@ NOTE: 對於使用率為1018的ONTAP 資源、如使用率為0、9.4或更新版
 .. 如果要指定刪除Snapshot複本之前保留Snapshot複本的天數、請選取*保留Snapshot複本*。
 
 
+. 如果要指定 Snapshot 複本鎖定期間、請選取 * Snapshot 複本鎖定期間 * 、然後選取天、月或年。
++
+SnapLock 保留期應少於 100 年。
+
 
 
 . 在「*完整備份保留設定*」區段中、針對「每小時」、「每日」、「每週」和「每月」保留設定、指定「備份類型」頁面中所選排程類型的保留設定。
@@ -213,9 +238,14 @@ IMPORTANT: 如果您打算啟用SnapVault 此功能、則必須將保留數設�
 .. 若要指定刪除 Snapshot 複本之前要保留的天數、請選取 * 保留 Snapshot 複本 * 。
 
 
+. 如果要指定 Snapshot 複本鎖定期間、請選取 * Snapshot 複本鎖定期間 * 、然後選取天、月或年。
++
+SnapLock 保留期應少於 100 年。
 
-
++
 記錄Snapshot複本保留預設為7天。使用Set-SmPolicy Cmdlet變更記錄Snapshot複本保留。
+
+
 
 此範例將記錄Snapshot複本保留設為2：
 
@@ -241,6 +271,15 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 在建立本機 Snapshot 複本之後更新 SnapMirror 。
 
 . 選取此選項可在另一個磁碟區（SnapMirror）上建立備份集的鏡射複本。
++
+此選項應可用於 SnapMirror Business Continuity （ SM-BC ）或 SnapMirror Sync （ SM-S ）。
+
++
+在次要複寫期間、 SnapLock 到期時間會載入主要 SnapLock 到期時間。按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。
+
++
+請參閱 link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視SQL Server備份與複製"]。
+
 
 
 --
@@ -249,6 +288,18 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 建立 Snapshot 複本後更新 SnapVault 。
 
 . 選取此選項以執行磁碟對磁碟備份複寫。
++
+在次要複寫期間、 SnapLock 到期時間會載入主要 SnapLock 到期時間。按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。
+
++
+當 SnapLock 僅在「 SnapLock 資料保險箱」的次要 ONTAP 上設定時、按一下「拓撲」頁面中的「 * 重新整理 * 」按鈕、即可重新整理從 ONTAP 擷取的次要裝置上的鎖定期間。
+
++
+如需 SnapLock Vault 的詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["將Snapshot複本提交至保存目的地上的WORM"]
+
++
+請參閱 link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視SQL Server備份與複製"]。
+
 
 
 --

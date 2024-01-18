@@ -1,0 +1,120 @@
+---
+permalink: tech-refresh/task_tech_refresh_plugin_host.html 
+sidebar: sidebar 
+keywords: tech refresh, plug-in host, supported plug-ins, prerequisites to refresh plug-in hosts, application hosts, limitations for tech refresh of plug-in hosts 
+summary: 將資源從舊主機移至新主機、以執行外掛主機的技術更新。 
+---
+= SnapCenter 外掛主機的技術更新
+:allow-uri-read: 
+
+
+[role="lead"]
+當 SnapCenter 外掛主機需要重新整理時、您應該將資源從舊主機移至新主機。當新主機新增至 SnapCenter 時、它會探索所有資源、但會被視為新資源。
+
+.關於這項工作
+您應該執行 API 或 Cmdlet 、以舊主機名稱和新主機名稱做為輸入、依名稱比較資源、並將資源從舊主機重新連結至新主機。相符的資源將標示為受保護。
+
+* 依預設、 _IsDryRun_ 參數設為 True 、可識別舊主機和新主機的相符資源。
++
+驗證相符的資源之後、您應該將 _IsDryRun_ 參數設為 False 、將相符資源的物件從舊主機重新連結到新主機。
+
+* 根據預設、 _AutoMigrateManuallyAddedResourced_ 參數設為 True 、這會自動將手動新增的資源從舊主機複製到新主機。
++
+_AutoMigrateManuallyAddedResourced_ 參數僅適用於 Oracle 和 SAP HANA 資源。
+
+* 如果舊主機與新主機之間的執行個體名稱不同、則應使用 _SQLInstanceMapping_ 參數。如果它是預設執行個體、則使用 _default_instance_as 執行個體名稱。
+
+
+下列 SnapCenter 外掛程式支援技術更新：
+
+* 適用於Microsoft SQL Server的支援外掛程式SnapCenter
++
+** 如果 SQL 資料庫在執行個體層級受到保護、而且在主機技術重新整理時、只會將部分資源移至新主機、則現有的執行個體層級保護將會轉換為資源群組保護、而來自這兩個主機的執行個體將會新增至資源群組。
+** 如果將 SQL 主機（例如 host1 ）用作另一主機資源的排程器或驗證伺服器（例如 host2 ）、則在 host1 上執行技術更新時、排程或驗證詳細資料將不會移轉、並會繼續在 host1 上執行。如果必須修改、則應在個別主機中手動變更。
+** 如果您使用 SQL 容錯移轉叢集執行個體（ FCI ）設定、您可以將新節點新增至 FCI 叢集、並在 SnapCenter 中重新整理外掛主機、以執行技術更新。
+** 如果您使用 SQL Availability Group （ AG ）設定、則不需要技術更新。您可以將新節點新增至 AG 、並在 SnapCenter 中重新整理主機。
+
+
+* 適用於Windows的插件SnapCenter
+* Oracle資料庫的支援外掛程式SnapCenter
++
+如果您使用 Oracle Real Application Cluster （ RAC ）設定、您可以將新節點新增至 RAC 叢集、並在 SnapCenter 中重新整理外掛主機、以執行技術更新。
+
+* SAP HANA資料庫適用的插件SnapCenter
+
+
+支援的使用案例包括：
+
+* 將資源從一部主機移轉到另一部主機。
+* 將資源從多部主機移轉到一部或多部主機。
+* 將資源從一部主機移轉到多部主機。
+
+
+支援的案例包括：
+
+* 新主機的名稱與舊主機的名稱不同
+* 現有主機已重新命名
+
+
+.開始之前
+由於此工作流程會修改 SnapCenter 儲存庫中的資料、因此建議您備份 SnapCenter 儲存庫。如果發生任何資料問題、可使用備份將 SnapCenter 儲存庫還原為舊狀態。
+
+如需詳細資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["備份SnapCenter 這個資訊庫"]。
+
+.步驟
+. 部署新主機並安裝應用程式。
+. 暫停舊主機的排程。
+. 將所需資源從舊主機移至新主機。
++
+.. 從同一儲存設備在新主機中開啟所需的資料庫。
++
+*** 確保儲存設備對應至與舊主機相同的磁碟機或裝載路徑。如果儲存設備未正確對應、則無法使用在舊主機中建立的備份進行還原。
++
+
+NOTE: 依預設、 Windows 會自動指派下一個可用的磁碟機。
+
+*** 如果啟用儲存 DR 、則應將個別儲存設備掛載到新主機。
+
+
+.. 如果應用程式版本有變更、請檢查相容性。
+.. 僅適用於 Oracle 外掛主機、請確保 Oracle 的 UUID 和 GID 及其群組使用者與舊主機的 UUID 和 GID 相同。
++
+如需詳細資訊、請參閱：
+
++
+*** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_SQL_host_tech_refresh["如何將 SQL 資料庫從舊主機移轉至新主機"]
+*** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_Oracle_host_tech_refresh["如何將 Oracle 資料庫從舊主機移轉至新主機"]
+*** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_Hana_host_tech_refresh["如何將 SAP HANA 資料庫裝入新主機"]
+
+
+
+
+. 將新主機新增至 SnapCenter 。
+. 驗證是否發現所有資源。
+. 執行主機重新整理 API ： `/5.0/techrefresh/host` 或 Cmdlet ： _Invoke-SmTechRefreshHost_ 。
++
+
+NOTE: 依預設會啟用演習、並識別要重新連結的配對資源。您可以執行 API ：「 /jobs/｛ jobid ｝ 」或 Cmdlet _Get-SmJobSummaryReport_ 來驗證資源。
+
++
+如果您已從多個主機移轉資源、則應為所有主機執行 API 或 Cmdlet 。如果新主機中的磁碟機或掛載路徑與舊主機不同、則下列還原作業將會失敗：
+
++
+** SQL 就地還原將會失敗。不過、您可以利用 RTAL 功能。
+** 恢復 Oracle 和 SAP HANA 資料庫將會失敗。
++
+如果您想要移轉至多部主機、則應針對所有主機執行步驟 1 中的所有步驟。
+
++
+
+NOTE: 您可以在同一部主機上多次執行 API 或 Cmdlet 、只有在識別出新資源時才會重新連結。
+
+
+
+. （選用）從 SnapCenter 移除舊主機。
+
+
+.相關資訊
+如需 API 的相關資訊、您需要存取 Swagger 頁面。請參閱 link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["如何使用Swagger API網頁存取REST API"]。
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^]。

@@ -1,0 +1,10 @@
+---
+section: tech-refresh
+title: 技術更新
+entries:
+- title: SnapCenter 伺服器主機的技術更新
+  url: "/tech-refresh/task_tech_refresh_server_host.html"
+- title: SnapCenter 外掛主機的技術更新
+  url: "/tech-refresh/task_tech_refresh_plugin_host.html"
+- title: 儲存系統的技術更新
+  url: "/tech-refresh/task_tech_refresh_storage_system.html"

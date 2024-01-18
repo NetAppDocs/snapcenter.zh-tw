@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-如果資料庫儲存在虛擬機器（VM）上、或是想要保護VM和資料存放區、則必須部署SnapCenter VMware vSphere虛擬應用裝置的《支援VMware vSphere的還原外掛程式》。
+如果您的資料庫或檔案系統儲存在虛擬機器（ VM ）上、或者您想要保護 VM 和資料存放區、則必須部署適用於 VMware vSphere 虛擬應用裝置的 SnapCenter 外掛程式。
 
 如需部署資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_get_started_overview.html["部署總覽"^]。
 

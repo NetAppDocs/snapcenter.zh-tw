@@ -1,0 +1,149 @@
+---
+permalink: tech-refresh/task_tech_refresh_storage_system.html 
+sidebar: sidebar 
+keywords: tech refresh, storage system, 
+summary: 將資料從舊儲存設備移至新儲存設備、將新儲存設備掛載至各自的主機、然後啟動資料庫、以執行儲存系統的技術更新。 
+---
+= 儲存系統的技術更新
+:allow-uri-read: 
+
+
+[role="lead"]
+當儲存設備技術更新時、資料會移轉至新的儲存設備、而應用程式主機則會以新的儲存設備掛載。SnapCenter 備份工作流程會識別新的儲存設備、並在 SnapCenter 中註冊新的儲存設備時建立快照。
+
+您可以在儲存重新整理後建立的新備份上執行還原、掛載及複製。不過、由於備份具有舊的儲存詳細資料、因此在儲存重新整理之前建立的備份上執行時、這些作業將會失敗。您應該執行儲存技術更新 API 或 Cmdlet 、以更新 SnapCenter 中的舊備份、並提供新的儲存詳細資料。
+
+下列 SnapCenter 外掛程式支援技術更新：
+
+* 適用於Microsoft SQL Server的支援外掛程式SnapCenter
+* 適用於Windows的插件SnapCenter
+* Oracle資料庫的支援外掛程式SnapCenter
+* SAP HANA資料庫適用的插件SnapCenter
+* 適用於Microsoft Exchange Server的元件外掛程式SnapCenter
+
+
+支援的使用案例包括：
+
+* 主儲存設備更新
++
+支援儲存技術更新、以新儲存設備取代主要儲存設備。您無法將現有的次要儲存設備轉換為主要儲存設備。
+
+* 次要儲存設備更新
+
+
+其他支援的案例包括：
+
+* SVM 名稱變更
+* Volume 名稱變更
+
+
+
+
+== 更新主儲存設備的備份
+
+當儲存設備技術更新時、您應執行儲存技術更新 API 或 Cmdlet 、以更新 SnapCenter 中的舊備份、並提供新的儲存詳細資料。
+
+.開始之前
+由於此工作流程會修改 SnapCenter 儲存庫中的資料、因此建議您備份 SnapCenter 儲存庫。如果發生任何資料問題、可使用備份將 SnapCenter 儲存庫還原為舊狀態。
+
+如需詳細資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["備份SnapCenter 這個資訊庫"]。
+
+.步驟
+. 將資料從舊儲存設備移轉至新儲存設備。
++
+如需如何移轉的詳細資訊、請參閱：
+
++
+** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_Storage_tech_refresh["如何將資料移轉至新的儲存設備"]
+** https://kb.netapp.com/onprem/ontap/dp/SnapMirror/How_can_I_copy_a_volume_and_preserve_all_of_the_Snapshot_copies["如何複製磁碟區並保留所有 Snapshot 複本？"]
+
+
+. 將主機置於維護模式。
+. 在各自的主機中掛載新儲存設備、並開啟資料庫。
++
+新儲存設備應以與之前相同的方式連接至主機。例如、如果它是以 SAN 連線、則需要以 SAN 連線。
+
++
+新儲存設備必須安裝在與舊儲存設備相同的磁碟機或路徑上。
+
+. 確認所有資源均已啟動並在執行中。
+. 在 SnapCenter 中新增儲存設備。
++
+確保您在 SnapCenter 中的叢集之間擁有唯一的 SVM 名稱。如果您在新儲存設備中使用相同的 SVM 名稱、而且 SVM 的所有磁碟區都可以在執行儲存重新整理之前移轉、 然後建議刪除舊叢集中的 SVM 、並重新探索 SnapCenter 中的舊叢集、將 SVM 從快取中移除。
+
+. 將主機置於正式作業模式。
+. 在 SnapCenter 中、建立儲存設備已移轉的資源備份。SnapCenter 必須進行新的備份、才能識別最新的儲存佔用空間、並將用於更新現有舊備份的中繼資料。
++
+
+NOTE: 每當新的 LUN 連接到主機時、就會有新的序號。在探索 Windows 檔案系統期間、 SnapCenter 會將每個唯一序號視為新資源。在儲存技術更新期間、當新儲存設備的 LUN 連接至具有相同磁碟機代號或路徑的主機時、 在 SnapCenter 中探索 Windows 檔案系統時、即使現有資源以相同的磁碟機代號或路徑掛載、也會將其標記為已刪除、並將新的 LUN 顯示為新資源。當資源標示為已刪除時、將不會考慮在 SnapCenter 中進行儲存技術更新、而舊資源的所有備份都將遺失。每當發生儲存重新整理時、對於 Windows 檔案系統資源、在執行儲存重新整理 API 或 Cmdlet 之前、不應執行資源探索。
+
+. 執行儲存重新整理 API ： `/5.0/techrefresh/primarystorage` 或 Cmdlet ： _invoke-SmTechRefreshPrimaryStorage_ 。
++
+
+NOTE: 如果資源已設定啟用複寫的原則、則儲存重新整理後的最新備份應該會包含次要儲存設備的詳細資料。
+
++
+.. 如果您使用 SQL 容錯移轉叢集執行個體（ FCI ）設定、則備份會維持在叢集層級。您應該提供叢集名稱作為儲存技術更新的輸入。
+.. 如果您使用 SQL Availability Group （ AG ）設定、則備份會維持在節點層級。您應該提供節點名稱作為儲存技術更新的輸入。
+.. 如果您使用 Oracle Real Application Clusters （ RAC ）設定、您可以在任何節點上執行儲存技術更新。
++
+依預設、 _IsDryRun_ 屬性設為 True 。它會識別儲存設備的重新整理資源。您可以執行 API ： '5.0/jobs/{jobid}' 或 Cmdlet _Get-SmJobSummaryReport_ 來檢視資源和變更的儲存詳細資料。
+
+
+
+. 驗證儲存詳細資料後、將 _IsDryRun_ 屬性設為 False 、然後執行儲存重新整理 API ： `/5.0/techrefresh/primarystorage` 或 Cmdlet ： _invoke-SmTechRefreshPrimaryStorage_ 。
++
+這會更新舊備份中的儲存詳細資料。
+
++
+您可以在同一部主機上多次執行 API 或 Cmdlet 、只有在重新整理儲存設備時、才會更新舊備份中的儲存詳細資料。
+
++
+
+NOTE: 複製階層架構無法在 ONTAP 中移轉。如果要移轉的儲存設備在 SnapCenter 中有任何複製中繼資料、則複製的資源會標記為「不受任何資源」。複製中繼資料的複本將以遞迴方式移除。
+
+. （選用）如果所有快照都未從舊的主要儲存設備移至新的主要儲存設備、請執行下列 API ： `/5.0/hosts/primarybackupsexistencecheck` 或 Cmdlet _invoke-SmPrimaryBackupsExistenceCheck_ 。
++
+這會對新的主要儲存設備執行快照存在檢查、並標記 SnapCenter 中無法執行任何作業的個別備份。
+
+
+
+
+
+== 更新次要儲存設備的備份
+
+當儲存設備技術更新時、您應執行儲存技術更新 API 或 Cmdlet 、以更新 SnapCenter 中的舊備份、並提供新的儲存詳細資料。
+
+.開始之前
+由於此工作流程會修改 SnapCenter 儲存庫中的資料、因此建議您備份 SnapCenter 儲存庫。如果發生任何資料問題、可使用備份將 SnapCenter 儲存庫還原為舊狀態。
+
+如需詳細資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["備份SnapCenter 這個資訊庫"]。
+
+.步驟
+. 將資料從舊儲存設備移轉至新儲存設備。
++
+如需如何移轉的詳細資訊、請參閱：
+
++
+** https://kb.netapp.com/mgmt/SnapCenter/How_to_perform_Storage_tech_refresh["如何將資料移轉至新的儲存設備"]
+** https://kb.netapp.com/onprem/ontap/dp/SnapMirror/How_can_I_copy_a_volume_and_preserve_all_of_the_Snapshot_copies["如何複製磁碟區並保留所有 Snapshot 複本？"]
+
+
+. 在主要儲存設備和新的次要儲存設備之間建立 SnapMirror 關係、並確保關係狀態良好。
+. 在 SnapCenter 中、建立儲存設備已移轉的資源備份。
++
+SnapCenter 必須進行新的備份、才能識別最新的儲存佔用空間、並將用於更新現有舊備份的中繼資料。
+
++
+
+IMPORTANT: 您應該等到此作業完成。如果您在完成前繼續下一個步驟、 SnapCenter 將會完全遺失舊的次要快照中繼資料。
+
+. 成功建立主機中所有資源的備份後、請執行次要儲存重新整理 API ： `/5.0/techrefresh/secondarystorage` 或 Cmdlet ： _Invoke-SmTechRefreshSecondaryStorage_ 。
++
+這會更新指定主機中較舊備份的次要儲存詳細資料。
+
++
+如果要在資源層級執行此作業、請按一下每個資源的 * 重新整理 * 、以更新次要儲存中繼資料。
+
+. 成功更新舊備份之後、您可以中斷舊的主要次要儲存關係。
+

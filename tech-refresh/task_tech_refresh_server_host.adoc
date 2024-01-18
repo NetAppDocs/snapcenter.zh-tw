@@ -1,0 +1,156 @@
+---
+permalink: tech-refresh/task_tech_refresh_server_host.html 
+sidebar: sidebar 
+keywords: tech refresh, SnapCenter Server, cmdlet, APIs, F5, rollback, decommission, disaster recovery, standalone 
+summary: 在新主機上安裝相同版本的 SnapCenter 伺服器、然後執行 API 或執行 Cmdlet 、從舊伺服器備份 SnapCenter 、並在新伺服器上還原。 
+---
+= SnapCenter 伺服器主機的技術更新
+:allow-uri-read: 
+
+
+[role="lead"]
+當 SnapCenter 伺服器主機需要重新整理時、您可以在新主機上安裝相同版本的 SnapCenter 伺服器、然後執行 API 、從舊伺服器備份 SnapCenter 、並在新伺服器上還原。
+
+.步驟
+. 部署新主機並執行下列工作：
++
+.. 安裝相同版本的 SnapCenter 伺服器。
+.. （選用）設定 CA 憑證並啟用雙向 SSL 。如需詳細資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/install/reference_generate_CA_certificate_CSR_file.html["設定CA憑證"] 和 https://docs.netapp.com/us-en/snapcenter/install/task_configure_two_way_ssl.html["設定及啟用雙向 SSL"]。
+.. （選用）設定多因素驗證。如需詳細資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/install/enable_multifactor_authentication.html["啟用多因素驗證"]。
+
+
+. 以 SnapCenter Admin 使用者的身分登入。
+. 使用 API 在舊主機上建立 SnapCenter 伺服器的備份： `/5.0/server/backup` 或 Cmdlet ： _New-SmServerBackup_ 。
++
+
+NOTE: 在進行備份之前、請先暫停所有排程工作、並確保沒有工作正在執行。
+
++
+
+IMPORTANT: 如果您想要在新網域上執行的 SnapCenter 伺服器上還原備份、在進行備份之前、您應該在舊的 SnapCenter 主機中新增新的網域使用者、並指派 SnapCenter 管理員角色。
+
+. 將備份從舊主機複製到新主機。
+. 使用 API 在新主機上還原 SnapCenter 伺服器的備份： `/5.0/server/restore` 或 Cmdlet ： _Restore-SmServerBackup_ 。
++
+依預設、還原會更新所有主機中的新 SnapCenter 伺服器 URL 。如果您想略過更新、請使用 --SkipSMSURLInHosts_ 屬性、並使用以下其中一種 API 執行、分別更新伺服器 URL ： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+
++
+
+NOTE: 如果外掛主機無法解析伺服器主機名稱、請登入每個外掛主機、然後以 <New IP> SC_SERVER_Name 格式新增新 IP 的 /etc/host_ 項目。
+
++
+
+NOTE: 伺服器 /etc/host_ 項目將不會還原。您可以從舊伺服器手動還原。
+
++
+如果備份是在新網域上執行的 SnpCenter 伺服器上還原、而且您想要繼續使用舊網域使用者、則應該在新的 SnapCenter 伺服器中登錄舊網域。
+
++
+
+NOTE: 如果您已手動更新舊 SnapCenter 主機中的 web.config 檔案、更新將不會複製到新主機。您應該在新主機的 web.config 檔案中手動進行相同的變更。
+
+. 如果您已略過更新 SnapCenter 伺服器 URL 、或是還原過程中任何主機當機、請使用 API 更新由 SnapCenter 管理的所有主機或指定主機中的新伺服器名稱： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+. 從新的 SnapCenter 伺服器啟動所有主機上的排程工作。
+
+
+
+
+== F5 叢集中節點的技術更新
+
+您可以移除節點並新增新節點、以技術方式重新整理 F5 叢集中的任何節點。如果需要重新整理的節點是作用中的、請將叢集的另一個節點設為作用中、然後移除節點。
+
+如需如何將節點新增至 F5 叢集的相關資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["使用SnapCenter F5設定高可用度的功能"]。
+
+
+NOTE: 如果 F5 叢集的 URL 變更、則可以使用 API 在所有主機中更新 URL ： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+
+
+
+== 解除委任舊的 SnapCenter 伺服器主機
+
+您可以在確認新的 SnapCenter 伺服器已啟動且正在執行、且所有外掛主機都能與新的 SnapCenter 伺服器主機通訊之後、移除舊的 SnapCenter 伺服器主機。
+
+
+
+== 復原至舊的 SnapCenter 伺服器主機
+
+如果發生任何問題、您可以使用 API 更新所有主機中的 SnapCenter 伺服器 URL 、以恢復舊的 SnapCenter 伺服器主機： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+
+
+
+== 災難恢復
+
+
+
+=== 獨立式 SnapCenter 主機的災難恢復
+
+您可以將伺服器備份還原至新主機、以執行災難恢復。
+
+.開始之前
+請確定您已備份舊的 SnapCenter 伺服器。
+
+.步驟
+. 部署新主機並執行下列工作：
++
+.. 安裝相同版本的 SnapCenter 伺服器。
+.. 設定 CA 憑證並啟用雙向 SSL 。如需詳細資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/install/reference_generate_CA_certificate_CSR_file.html["設定CA憑證"] 和 https://docs.netapp.com/us-en/snapcenter/install/task_configure_two_way_ssl.html["設定及啟用雙向 SSL"]。
+
+
+. 將舊的 SnapCenter 伺服器備份複製到新主機。
+. 以 SnapCenter Admin 使用者的身分登入。
+. 使用 API 在新主機上還原 SnapCenter 伺服器的備份： `/5.0/server/restore` 或 Cmdlet ： _Restore-SmServerBackup_ 。
++
+依預設、還原會更新所有主機中的新 SnapCenter 伺服器 URL 。如果您想略過更新、請使用 --SkipSMSURLInHosts_ 屬性、並使用 API 分別更新伺服器 URL ： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+
++
+
+NOTE: 如果外掛主機無法解析伺服器主機名稱、請登入每個外掛主機、然後以 <New IP> SC_SERVER_Name 格式新增新 IP 的 /etc/host_ 項目。
+
++
+
+NOTE: 伺服器 /etc/host_ 項目將不會還原。您可以從舊伺服器手動還原。
+
+. 如果您已略過更新 URL 、或是還原過程中有任何主機當機、請使用 API 更新 SnapCenter 所管理的所有主機或指定主機中的新伺服器名稱： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+
+
+
+
+=== SnapCenter F5 叢集的災難恢復
+
+您可以將伺服器備份還原至新主機、然後將獨立主機轉換為叢集、以執行災難恢復。
+
+.開始之前
+請確定您已備份舊的 SnapCenter 伺服器。
+
+.步驟
+. 部署新主機並執行下列工作：
++
+.. 安裝相同版本的 SnapCenter 伺服器。
+.. 設定 CA 憑證並啟用雙向 SSL 。如需詳細資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/install/reference_generate_CA_certificate_CSR_file.html["設定CA憑證"] 和 https://docs.netapp.com/us-en/snapcenter/install/task_configure_two_way_ssl.html["設定及啟用雙向 SSL"]。
+
+
+. 將舊的 SnapCenter 伺服器備份複製到新主機。
+. 以 SnapCenter Admin 使用者的身分登入。
+. 使用 API 在新主機上還原 SnapCenter 伺服器的備份： `/5.0/server/restore` 或 Cmdlet ： _Restore-SmServerBackup_ 。
++
+依預設、還原會更新所有主機中的新 SnapCenter 伺服器 URL 。如果您想略過更新、請使用 --SkipSMSURLInHosts_ 屬性、並使用 API 分別更新伺服器 URL ： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+
++
+
+NOTE: 如果外掛主機無法解析伺服器主機名稱、請登入每個外掛主機、然後以 <New IP> SC_SERVER_Name 格式新增新 IP 的 /etc/host_ 項目。
+
++
+
+NOTE: 伺服器 /etc/host_ 項目將不會還原。您可以從舊伺服器手動還原。
+
+. 如果您已略過更新 URL 、或是還原過程中有任何主機當機、請使用 API 更新 SnapCenter 所管理的所有主機或指定主機中的新伺服器名稱： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+. 將獨立主機轉換為 F5 叢集。
++
+如需如何設定 F5 的資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["使用SnapCenter F5設定高可用度的功能"]。
+
+
+
+.相關資訊
+如需 API 的相關資訊、您需要存取 Swagger 頁面。請參閱 link:https://docs.netapp.com/us-en/snapcenter/sc-automation/task_how%20to_access_rest_apis_using_the_swagger_api_web_page.html["如何使用Swagger API網頁存取REST API"]。
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^]。

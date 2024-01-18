@@ -18,4 +18,4 @@ summary: 您可以建立資源（資料庫）或資源群組的備份。備份�
 image::../media/sap_hana_backup_workflow.png[SAP_HANA備份工作流程]
 
 您也可以手動或在指令碼中使用 PowerShell Cmdlet 來執行備份、還原及複製作業。Cmdlet說明及Cmdlet參考資訊包含更多PowerShell Cmdlet的相關資訊。SnapCenter
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^]。

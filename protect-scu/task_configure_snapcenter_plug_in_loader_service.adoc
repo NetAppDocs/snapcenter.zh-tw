@@ -1,0 +1,195 @@
+---
+permalink: protect-scu/task_configure_snapcenter_plug_in_loader_service.html 
+sidebar: sidebar 
+keywords: SPL, plug-in loader service 
+summary: SnapCenter 外掛載入程式服務會載入適用於 Linux 的外掛程式套件、以便與 SnapCenter 伺服器互動。當您安裝適用於 Linux 的 SnapCenter 外掛程式套件時、就會安裝 SnapCenter 外掛程式載入器服務。 
+---
+= 設定SnapCenter 「靜態外掛程式載入器」服務
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 外掛載入程式服務會載入適用於 Linux 的外掛程式套件、以便與 SnapCenter 伺服器互動。當您安裝適用於 Linux 的 SnapCenter 外掛程式套件時、就會安裝 SnapCenter 外掛程式載入器服務。
+
+*關於此工作*
+
+安裝適用於 Linux 的 SnapCenter 外掛程式套件之後、 SnapCenter 外掛程式載入器服務會自動啟動。如果SnapCenter 無法自動啟動「功能更新載入程式」服務、您應該：
+
+* 確保外掛程式所在的目錄未刪除
+* 增加分配給Java虛擬機器的記憶體空間
+
+
+spl.properties檔案位於_/custom位置/NetApp/snapcenter/spl/etc/_、包含下列參數。預設值會指派給這些參數。
+
+|===
+| 參數名稱 | 說明 
+
+
+ a| 
+log_level
+ a| 
+顯示支援的記錄層級。
+
+可能的值包括追蹤、除錯、資訊、警告、錯誤、 而且致命。
+
+
+
+ a| 
+SPL_Protocol
+ a| 
+顯示SnapCenter 支援的傳輸協定、以供支援。
+
+僅支援HTTPS傳輸協定。如果缺少預設值、您可以新增該值。
+
+
+
+ a| 
+SNAPCENTIER_SERVER_PRONTA
+ a| 
+顯示SnapCenter 支援的傳輸協定。
+
+僅支援HTTPS傳輸協定。如果缺少預設值、您可以新增該值。
+
+
+
+ a| 
+SKip_JAVAHOME_update
+ a| 
+根據預設、SPL服務會偵測Java路徑並更新Java_Home參數。
+
+因此、預設值設為假。如果您想停用預設行為並手動修正Java路徑、則可以設定為true。
+
+
+
+ a| 
+SPL_Keystore密碼
+ a| 
+顯示Keystore檔案的密碼。
+
+只有在變更密碼或建立新的Keystore檔案時、才能變更此值。
+
+
+
+ a| 
+SPL_port
+ a| 
+顯示SnapCenter 執行「版本資訊」外掛程式載入器服務的連接埠號碼。
+
+如果缺少預設值、您可以新增該值。
+
+
+NOTE: 安裝外掛程式之後、不應變更值。
+
+
+
+ a| 
+SNAPCENTIER_SERVER_HOST
+ a| 
+顯示SnapCenter 支援此功能的伺服器IP位址或主機名稱。
+
+
+
+ a| 
+SPL_Keystore路徑
+ a| 
+顯示Keystore檔案的絕對路徑。
+
+
+
+ a| 
+SNAPCENTIER_SERVER_port
+ a| 
+顯示SnapCenter 執行此伺服器的連接埠號碼。
+
+
+
+ a| 
+Logs_MAX_count
+ a| 
+顯示SnapCenter 保留在_/custom位置/snapcenter/spl/logs_資料夾中的Sf2外掛程式載入器記錄檔數目。
+
+預設值設為5000。如果計數超過指定值、則會保留最後5000個修改過的檔案。從啟用「還原外掛程式載入程式」服務開始、每24小時自動檢查檔案數量SnapCenter 。
+
+
+NOTE: 如果您手動刪除spl.properties檔案、則要保留的檔案數量會設為9999。
+
+
+
+ a| 
+Java_Home
+ a| 
+顯示用於啟動SPL服務的Java_Home的絕對目錄路徑。
+
+此路徑會在安裝期間決定、並作為啟動SPL的一部分。
+
+
+
+ a| 
+log_MAX_SIZE
+ a| 
+顯示工作記錄檔的最大大小。
+
+一旦達到最大大小、記錄檔就會壓縮、而且記錄會寫入該工作的新檔案中。
+
+
+
+ a| 
+保有記錄數
+ a| 
+顯示記錄保留的天數。
+
+
+
+ a| 
+啟用憑證驗證
+ a| 
+當主機啟用CA憑證驗證時顯示為true。
+
+您可以透過編輯spl.properties或使用SnapCenter 不禁用圖形使用者介面或Cmdlet來啟用或停用此參數。
+
+|===
+如果這些參數中有任何一個未指派給預設值、或者您想指派或變更值、則可以修改spl.properties檔案。您也可以驗證spl.properties檔案並編輯檔案、以疑難排解指派給參數值的任何相關問題。修改spl.properties檔案之後、您應該重新啟動SnapCenter 「更新程式載入程式」服務。
+
+*步驟*
+
+. 視需要執行下列其中一項動作：
++
+** 啟動 SnapCenter 外掛程式載入器服務：
++
+*** 以 root 使用者身分執行： `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+*** 以非 root 使用者身分執行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl start`
+
+
+** 停止SnapCenter 功能不再是功能不全的外掛程式載入器服務：
++
+*** 以 root 使用者身分執行： `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
+*** 以非 root 使用者身分執行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl stop`
++
+
+NOTE: 您可以使用-force選項搭配stop命令、SnapCenter 強制停止執行《介紹》外掛程式載入器服務。不過、您應該在這麼做之前先謹慎行事、因為它也會終止現有的作業。
+
+
+
+** 重新啟動SnapCenter 「功能不全的外掛程式載入器服務：
++
+*** 以 root 使用者身分執行： `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+*** 以非 root 使用者身分執行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl restart`
+
+
+** 瞭解SnapCenter 《不整合式載入器》服務的狀態：
++
+*** 以 root 使用者身分執行： `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+*** 以非 root 使用者身分執行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl status`
+
+
+** 在「更新程式載入程式服務：SnapCenter
++
+*** 以 root 使用者身分執行： `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+*** 以非 root 使用者身分執行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl change`
+
+
+
+
+

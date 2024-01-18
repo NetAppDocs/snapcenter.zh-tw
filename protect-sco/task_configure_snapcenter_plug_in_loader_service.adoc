@@ -156,25 +156,40 @@ log_MAX_SIZE
 
 . 視需要執行下列其中一項動作：
 +
-** 以SnapCenter root使用者身分啟動「功能不全的外掛程式載入器」服務：
+** 啟動 SnapCenter 外掛程式載入器服務：
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+*** 以 root 使用者身分執行： `/custom_location/NetApp/snapcenter/spl/bin/spl start`
+*** 以非 root 使用者身分執行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl start`
+
+
 ** 停止SnapCenter 功能不再是功能不全的外掛程式載入器服務：
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
+*** 以 root 使用者身分執行： `/custom_location/NetApp/snapcenter/spl/bin/spl stop`
+*** 以非 root 使用者身分執行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl stop`
 +
 
 NOTE: 您可以使用-force選項搭配stop命令、SnapCenter 強制停止執行《介紹》外掛程式載入器服務。不過、您應該在這麼做之前先謹慎行事、因為它也會終止現有的作業。
 
+
+
 ** 重新啟動SnapCenter 「功能不全的外掛程式載入器服務：
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+*** 以 root 使用者身分執行： `/custom_location/NetApp/snapcenter/spl/bin/spl restart`
+*** 以非 root 使用者身分執行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl restart`
+
+
 ** 瞭解SnapCenter 《不整合式載入器》服務的狀態：
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+*** 以 root 使用者身分執行： `/custom_location/NetApp/snapcenter/spl/bin/spl status`
+*** 以非 root 使用者身分執行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl status`
+
+
 ** 在「更新程式載入程式服務：SnapCenter
 +
- `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+*** 以 root 使用者身分執行： `/custom_location/NetApp/snapcenter/spl/bin/spl change`
+*** 以非 root 使用者身分執行： `sudo /custom_location/NetApp/snapcenter/spl/bin/spl change`
+
+
 
 
 
