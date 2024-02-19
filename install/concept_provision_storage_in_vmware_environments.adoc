@@ -31,7 +31,7 @@ summary: 您可以在SnapCenter VMware環境中使用適用於Microsoft Windows�
 
 
 
-如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=112310;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=116926;&solution=1517&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 

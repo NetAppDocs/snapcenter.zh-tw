@@ -42,7 +42,7 @@ summary: 您可以先建立新的資源備份原則、再使用SnapCenter 支援
 +
 ** 如果選取「保留特定天數的備份複本」選項、則 SnapLock 保留期間必須小於或等於所述保留天數。
 ** 指定 Snapshot 複本鎖定期間可防止在保留期間到期之前刪除 Snapshot 複本。這可能會導致保留的 Snapshot 複本數量超過原則中指定的數量。
-** 對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本將繼承 SnapLock 到期時間。您應該手動清除 SnapLock 到期後的複本。
+** 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 
 

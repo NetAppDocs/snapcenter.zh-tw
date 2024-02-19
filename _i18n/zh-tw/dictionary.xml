@@ -7202,7 +7202,6 @@
   <block id="521d29d37f5561d4922ece42dc92cb07" category="cell">如果您使用SnapCenter 的是伺服器版本...</block>
   <block id="7676f59833cee6720de923cfeef21ede" category="cell">您可以直接將SnapCenter 伺服器升級至...</block>
   <block id="8d0f374d6bbbe36aead49222bc8c909f" category="cell">支援的外掛程式版本</block>
-  <block id="955d0e9747f65e6a6a1963edce3fa678" category="cell">4.6.x</block>
   <block id="35191da723a7990e2ec356b702112b64" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「jobhistory show」-access all」</block>
   <block id="950cb25af5f80592c9b230d80411689a" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「jobstop」-access all」</block>
   <block id="54e321a9e203600e142532be5ad7c700" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱"LUN"-access all"</block>
@@ -7612,8 +7611,6 @@
   <block id="79e06e5c035a2c2f7382e995d5baa08e" category="list-text">輸入Syslog伺服器傳輸協定</block>
   <block id="7a86ee54e2df90d7a4109938e53c1deb" category="list-text">輸入RFC格式</block>
   <block id="ace31f9e5f442121e5c3914671ec85d3" category="list-text">您可以按一下「*監控*&gt;*工作*」、查看稽核完整性檢查和磁碟空間檢查。</block>
-  <block id="3c07dcecb29c0d53519899b31b85fb61" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱 <block ref="0777b5ea2405197c6a0ed1eeb8c4cc9a" category="inline-link-rx"></block>。</block>
-  <block id="dfaba282a50c2055e70279d05523fba2" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="0777b5ea2405197c6a0ed1eeb8c4cc9a" category="inline-link-rx"></block>。</block>
   <block id="384ecb62d880a9048cd6ee500f8ffcdb" category="summary">您應該SnapCenter 使用SnapCenter 穩定使用者介面（UI）來安裝適用於SAP HANA資料庫的功能。如果您的環境不允許從SnapCenter Oracle UI遠端安裝外掛程式、您可以使用命令列介面（CLI1）、在主控台模式或無聲模式下安裝SAP HANA資料庫的外掛程式。</block>
   <block id="ffaafcbad8fa7abfb6f9166b4bc76388" category="doc">取消SAP HANA的備份作業</block>
   <block id="b2e1462cde70f9661bba1f1be6a19b4c" category="admonition">應用程式磁碟區僅支援直接NFS和直接iSCSI連線。</block>
@@ -7621,7 +7618,6 @@
   <block id="27881336d2ff10b5a1baa10f7bca34a1" category="list-text">針對Microsoft SQL Server的支援功能、適用於Microsoft Exchange Server的支援功能、以及適用於Microsoft Windows的支援功能、建議您將伺服器和外掛程式主機升級至最新版本、以便執行指令碼路徑SnapCenter SnapCenter SnapCenter 。</block>
   <block id="8ab368eff7e361869ef717b446f7ec1b" category="paragraph">所有相關服務都會在外掛程式升級期間重新啟動。</block>
   <block id="44dcf11fb80178db211421840242c071" category="summary">您應該SnapCenter 使用SnapCenter 「版本資訊」使用者介面（UI）來安裝「版本資訊」自訂外掛程式。如果您的環境不允許從SnapCenter SIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、在主控台模式或無聲模式下安裝自訂外掛程式。</block>
-  <block id="6128abac450b413be3b6d65797422307" category="paragraph">請參閱<block ref="c50d85e9b4db596cb2a135c4e622135b" category="inline-link-rx"></block></block>
   <block id="04f76259e3406e39f106d09b85354906" category="inline-link">Exchange備份僅將一半快照保留在Vault目的地記錄磁碟區上SnapCenter</block>
   <block id="67e1d332319e6fe55fd35967c2ec989e" category="admonition">處理Exchange磁碟區（LUN）時、請為記錄和資料庫建立個別的資料保存原則、並使用相同的標籤、將記錄原則的保留（保留）設定為每個標籤的兩倍數量作為資料庫原則。如需詳細資訊、請參閱：<block ref="069d987d34ba2a5b3f4862b42bb7f849" category="inline-link-rx"></block></block>
   <block id="b885eb831c1b0ea66dc957240ef0bacd" category="admonition">還原控制檔時、請確定目錄結構存在、或是應以正確的使用者和群組擁有者（如果有）建立、以允許還原程序將檔案複製到目標位置。如果目錄不存在、還原工作將會失敗。</block>
@@ -7838,8 +7834,6 @@
   <block id="63408836354c40518fc610de2ff61aef" category="paragraph">提供安裝 SnapCenter Server 和 SnapCenter Plug-in for Microsoft SQL Server 的一組精簡準備指示。</block>
   <block id="7527dcedb498a9e111f7eb26b4f075a6" category="section-title">授權需求</block>
   <block id="7a98b5f499da77fa6e09b98a638328d7" category="section-title">主機和連接埠需求</block>
-  <block id="1cd526ed887ba66c61f02b843ef02d9d" category="paragraph">如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block>。</block>
-  <block id="cfcb453ff70ad933cab89769866a7ca8" category="paragraph">請參閱<block ref="895e9fc4fedf805e54b700a772e16c16" category="inline-link-rx"></block></block>
   <block id="bc6cdf099cec9fa3dce7fb43c644e659" category="section-title">適用於 Microsoft SQL Server 的 SnapCenter 外掛程式需求</block>
   <block id="aa829ddf1acbdd2a8aa6a61635c33dec" category="inline-link-macro">匯入歸檔備份</block>
   <block id="b06af5128852d56366a94b0a3584c1a6" category="paragraph">如果您使用SnapManager 的是Microsoft SQL Server的支援功能、而且想要將資料從SnapManager Microsoft SQL Server的支援中心匯入SnapCenter 到支援中心、請參閱 <block ref="0079f46f6850618db9fdf32f5f6051e0" category="inline-link-macro-rx"></block></block>
@@ -7903,25 +7897,14 @@
   <block id="24642a08e354f43168ca4f1178850f84" category="list-text">您應確保 LUN 未使用由混合式傳輸協定 iSCSI 和 FC 組成的 iGroup 、對應至 AIX 主機。如需詳細資訊、請參閱<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>。</block>
   <block id="4fb437564892944d73f87c822342e2bb" category="cell">4.8.</block>
   <block id="028a3c414b2f36abce9baa1df750ef89" category="admonition">CA 憑證 RSA 金鑰長度至少應為 3072 位元。</block>
-  <block id="3f22331bd76f7085da3a93a57ab3fb56" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱
-<block ref="efe4f421015684342bb5b0bd0175a5d9" category="inline-link-rx"></block>。</block>
-  <block id="2c9ac50929ec7977214fdf241525d00e" category="paragraph"><block ref="17e4ab70f92d63f82ca1960c750c9db9" category="inline-link-rx"></block></block>
   <block id="deea3f8b34edb1c0cdb33001b691b29b" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="b04e67b184528fc82164b880a0386a24" category="inline-link-rx"></block>。</block>
   <block id="36fecb1daf18c8eeaacbcc8cdc70f4a6" category="paragraph">ONTAP 主要和次要可以是 ONTAP FAS 、 AFF 、 All SAN Array （ ASA ）、 Select 或 Cloud ONTAP 。</block>
   <block id="d21fbb2a5ce79a2a4ef0780b73023b2e" category="paragraph">VM 主機上的實體和 NFS 直接掛載（不支援 VMDK 和 RDM LUN ）。</block>
-  <block id="baad7b08eca760643b82b6a1c403e309" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="ceb473307a1c9c0409c57cc2f1dd9093" category="inline-link-rx"></block></block>
-  <block id="042ef6776c0d6409f8be7afe4398f4ca" category="paragraph"><block ref="46f8644173515685cc9cd1cd5e53cb71" category="inline-link-rx"></block></block>
-  <block id="2d1b96641aa035d797928097e07311af" category="list-text"><block ref="9db717dffc69a74b6e5198a07d217cdd" category="inline-link-rx"></block></block>
-  <block id="c2d3eecc8222902d64ee2cd0f82b86d1" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="edf4e33682eb2c881f774af1b8b72d07" category="inline-link-rx"></block>。</block>
   <block id="f2688d5a483bee7fcbd80a4e666fc088" category="inline-link">主機公用程式文件</block>
   <block id="8fefbd4e8dfd1fb79f89bc04af5e8001" category="paragraph">如需相關資訊、請參閱<block ref="ab48d7186c8a78dfaf0e19af923f0daf" category="inline-link-rx"></block>。</block>
-  <block id="9e14d7c7dd3ab3786a37e704d1da780d" category="paragraph">《Oracle資料庫適用的支援使用支援的組態SnapCenter 》（英文）列於中<block ref="edf4e33682eb2c881f774af1b8b72d07" category="inline-link-rx"></block>。</block>
-  <block id="95400b8283a4e34792161ec452edf43d" category="paragraph">如需受支援Oracle版本的最新資訊、請參閱<block ref="edf4e33682eb2c881f774af1b8b72d07" category="inline-link-rx"></block>。</block>
-  <block id="b28d9f1ff5db2142fa45bea6f649b117" category="paragraph">。<block ref="b4ff4342b2a4373cb1c8fb0cc58e4e08" category="inline-link-rx"></block> 包含支援版本的最新資訊。</block>
   <block id="08bb62da8c2fc3e9658022558d277993" category="paragraph">FAS 、 AFF 或所有 SAN 陣列（ ASA ）儲存控制器所需</block>
   <block id="f0d7edda487dadb54e43cde1120715ec" category="paragraph">不含不含控制器型授權的優質套裝組合。SnapCenter如果您擁有SnapManager 此產品的不支援功能、您也可以取得SnapCenter 「不支援即用」的授權。
 如果您想要試用 FAS 、 AFF 或 ASA 儲存設備來安裝 SnapCenter 、請聯絡銷售代表以取得優質產品組合評估授權。</block>
-  <block id="1dd60316135a653731118d7a0c5bf3d3" category="paragraph">如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱<block ref="487550db215c46367b60756354cd5f0b" category="inline-link-rx"></block>。</block>
   <block id="855469e68aebe957582edeb7405529e1" category="section-title">雙向 SSL 通訊</block>
   <block id="b4cbac9ded897ac6c04027b59ec07fad" category="paragraph">雙向 SSL 通訊可保護 SnapCenter 伺服器與外掛程式之間的相互通訊。</block>
   <block id="48462a95fd8685081e58f7c123971e5b" category="section-title">憑證型驗證概觀</block>
@@ -7929,7 +7912,6 @@
   <block id="f6ce44442588fc16e1d7cc2d3995eff2" category="list-text">位於 ONTAP FAS 、 AFF 或所有 SAN 陣列（ ASA ）主要系統上、並複寫到 ONTAP FAS 、 AFF 或 ASA 次要系統的資料</block>
   <block id="f5c37d824040662f50cbb8a32d77182d" category="list-text">ONTAP FAS 、 AFF 或 ASA 主要系統上的資料、並複寫至 Cloud Volumes ONTAP</block>
   <block id="622fbbcf746903b903f2af5462c8550a" category="cell">4.9</block>
-  <block id="f489bbbdc2405361afaf6f7380c7b943" category="admonition">例如、如果您使用的是 SnapCenter 4.6.x 版、而且想要升級至 4.9 版、則應先升級至 4.7 版、然後再進行 4.9 的循環升級。</block>
   <block id="42324a0900df941e87541a0b972b834f" category="admonition">如果主機已經是工作群組的一部分、並且變更為另一個網域、則 SnapCenter 不支援將相同的主機（外掛主機）新增至 SnapCenter 。
 如果您想要新增相同的主機、您應該從 SnapCenter 移除該主機、然後重新新增該主機。</block>
   <block id="be2aa64f1b64fb075f7467ccc849a45f" category="summary">從 SnapCenter 左側瀏覽窗格中、儀表板可讓您一覽系統的健全狀況、包括最近的工作活動、警示、保護摘要、儲存效率和使用量、 SnapCenter 工作的狀態（備份、複製、還原）、獨立式和 Windows 叢集主機的組態狀態、 由 SnapCenter 管理的儲存虛擬機器（ SVM ）數量、以及授權容量。</block>
@@ -7940,7 +7922,6 @@
   <block id="ac01fd33e160c622162b42b1f7e4fe18" category="paragraph">若要自訂連接埠、請參閱<block ref="32882cfc4755cb17eefc59506f087a6f" category="inline-link-rx"></block> 或<block ref="477bb7222f583d223b46c2b591c18bd9" category="inline-link-rx"></block></block>
   <block id="97e62e758724ab080cbfe2799c388822" category="paragraph">若要自訂連接埠、請參閱<block ref="477bb7222f583d223b46c2b591c18bd9" category="inline-link-rx"></block></block>
   <block id="fa9e479c30699c2d65f7d1107b28b62a" category="paragraph">若要自訂連接埠、請參閱<block ref="6bb20f223531bd59e001c776ffe35812" category="inline-link-rx"></block></block>
-  <block id="86f05f2519ccd51165ec12fde362a9fc" category="paragraph">如需支援的應用程式和資料庫詳細資訊、請參閱<block ref="0cf85a116af1f28ac715e95564ad65ab" category="inline-link-rx"></block>。</block>
   <block id="9e7f34933c1af065309071fd01a6cf3e" category="summary">您應該將 CA 憑證匯入 UNIX 外掛主機。</block>
   <block id="cd4c2aff8d03392b1feec1e4027d56c6" category="doc">將 CA 憑證匯入 UNIX 外掛主機</block>
   <block id="4fb85b60b1716c8666aada43c544f696" category="list-text">您可以管理 SPL Keystore 的密碼、以及使用中的 CA 簽署金鑰配對別名。</block>
@@ -8047,8 +8028,6 @@
   <block id="d9eee0506c2495d733480dc1fc801993" category="paragraph">用戶端驗證</block>
   <block id="b76827cae3bbfa9b3f16f50aaeeb8b94" category="paragraph">以基本驗證標頭傳送</block>
   <block id="5cd6f358fe0cd7802054f95932163e71" category="paragraph">在 *Advance Options* 標籤中、新增與 Callback URL 值相同的資源欄位、此值在 JWT Token 中會顯示為「 aud 」值。</block>
-  <block id="434b0b2d4791e06ef2ec9797163c03cc" category="paragraph">如需支援版本的最新資訊、請參閱
-<block ref="efe4f421015684342bb5b0bd0175a5d9" category="inline-link-rx"></block>。</block>
   <block id="28f9c2d1c67ea659588c7bfc2680e96d" category="summary">如果您使用的是 FAS 、 AFF 或 ASA 儲存控制器、則需要 SnapCenter 標準控制器型授權。</block>
   <block id="e6c51d0ec467f9742ef4d9ed2bfd5390" category="paragraph">如果您使用的是 FAS 、 AFF 或所有 SAN 陣列（ ASA ）儲存控制器、則需要 SnapCenter 標準控制器型授權。</block>
   <block id="6b22646455acfe9efc53d4f10b58a5fe" category="list-text">可透過 ONTAP 系統管理員或儲存叢集命令列、將其直接新增至 FAS 、 AFF 或 ASA 儲存控制器</block>
@@ -8088,7 +8067,6 @@
   <block id="45c7dee3ac562bb759cb41672ab95f30" category="list-text">如果CA憑證中的別名很長且包含空格或特殊字元（「*」、「」、」）、請將別名變更為簡單名稱：<block ref="f5d8ae119d7dc66fee2b1cca4d124984" prefix=" " category="inline-code"></block></block>
   <block id="b1cbd0b7f209604aeb80671e8db6bd88" category="list-text">從中的 Keystore 設定別名<block ref="052018eb7dd6b65a045cb7f85e1780e6" prefix=" " category="inline-code"></block> 檔案：
 請根據SPL_PRO證 書別名更新此值。</block>
-  <block id="9764e4439aa058bff629704e2e23fd7b" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="afaa5c2ff662f28d0c8c3429effcad87" category="inline-link-rx"></block>。</block>
   <block id="9d31f93b6415c6dc4d47047067008551" category="summary">您應該將 CA 憑證從 SnapCenter 伺服器匯出至外掛主機。</block>
   <block id="5bdc9dfe0790a57a6fe905d1fb1e3eae" category="doc">從 SnapCenter 伺服器匯出憑證授權單位（ CA ）憑證</block>
   <block id="d061d73c2d594c5f93d58cd0750abfd2" category="paragraph">您應該使用 Microsoft 管理主控台（ MMC ）、將 CA 憑證從 SnapCenter 伺服器匯出至外掛主機。</block>
@@ -8103,7 +8081,6 @@
   <block id="8db273592868b7d940261fe8347b32b4" category="inline-link-macro">CPS-00507</block>
   <block id="802a2285a60e079b52f32ba2c3140d0d" category="paragraph">NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA ）。如需詳細資訊、請參閱 <block ref="5a98ce97c5b40ecef6f220dc57d4f14a" category="inline-link-macro-rx"></block>。NetApp 將持續支援已於 2020 年 6 月 24 日推出的行銷零件編號、以支援購買信箱容量、維護和支援的客戶。</block>
   <block id="03da3b5726a1efd6df1fc511966c89a6" category="paragraph">NetApp 單一信箱恢復是 Ontrack 提供的合作夥伴產品。Ontrack PowerControl 提供的功能與 NetApp 單一信箱恢復功能類似。客戶可從 Ontrack （透過 licensingteam@ontrack.com ）取得新的 Ontrack PowerControl 軟體授權、以及 Ontrack PowerControl 的維護與支援續約、以便在 2023 年 5 月 12 日結束後進行精細信箱恢復。</block>
-  <block id="00555be23f4d41375bb46107e09eb1cb" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="0cf85a116af1f28ac715e95564ad65ab" category="inline-link-rx"></block>。</block>
   <block id="f58587d65108da4c76429348beba1493" category="summary">您應該為 SnapCenter 伺服器和 Windows 外掛主機啟用憑證型驗證。</block>
   <block id="ac91c641781bd7c7379113e123abc706" category="doc">啟用憑證型驗證</block>
   <block id="2deb2b431122c2428813248c5cc7e3cf" category="paragraph">若要為 SnapCenter Server 和 Windows 外掛程式主機啟用憑證型驗證、請執行下列 PowerShell Cmdlet 。  對於 Linux 外掛主機、當您啟用雙向 SSL 時、將會啟用憑證型驗證。</block>
@@ -8462,7 +8439,6 @@ Windows 主機：</block>
   <block id="d7b7ea0231f53dacd1c85813eafc068c" category="paragraph">對於 SnapMirror 業務連續性（ SM-BC ）、按一下「 *Refresh* 」（重新整理 * ）按鈕、查詢主站台和複本站台的 ONTAP 、以重新整理 SnapCenter 備份庫存。每週排程也會針對包含 SM-BC 關係的所有資料庫執行此活動。</block>
   <block id="51ec87329d3b31d6af2f107c3cc08b52" category="list-text">對於 SMBC 、 Async Mirror 、 Vault 或 MirrorVault 與新主要目的地的關係、應在容錯移轉後手動設定。</block>
   <block id="3f7fe170db20f91655f6252fba4f2d1f" category="list-text">容錯移轉後、應建立備份、讓 SnapCenter 能夠感知容錯移轉。只有在建立備份之後、才能按一下 * 重新整理 * 。</block>
-  <block id="12c4ec19ad63372b12fb5804def24834" category="list-text">對於啟用 SnapLock 的原則、對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本將繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
   <block id="6c71ac31f3c78acd8afe8d52906675dc" category="paragraph">如果您的資料庫或檔案系統儲存在虛擬機器（ VM ）上、或者您想要保護 VM 和資料存放區、則必須部署適用於 VMware vSphere 虛擬應用裝置的 SnapCenter 外掛程式。</block>
   <block id="c04230c1d09196842656722cf20c93a3" category="list-text">不支援將不含 SM-BC 的新資料庫新增至包含具有 SM-BC 資源的現有資源群組。</block>
   <block id="39c675e335f9b51f2b1113a213987a81" category="list-text">不支援以 SMBC 的容錯移轉模式將新資料庫新增至現有資源群組。您只能以一般或容錯回復狀態將資源新增至資源群組。</block>
@@ -8471,7 +8447,6 @@ Windows 主機：</block>
   <block id="acdc6b4f6edd40f37bce01247a32ff86" category="list-text">SnapLock</block>
   <block id="5645df6d49a903d3e2faf86e08d87813" category="list-text">如果選取「保留特定天數的備份複本」選項、則 SnapLock 保留期間必須小於或等於所述保留天數。</block>
   <block id="98a5daf42cec235d66d75e2276273e50" category="paragraph">指定 Snapshot 複本鎖定期間可防止在保留期間到期之前刪除 Snapshot 複本。  這可能會導致保留的 Snapshot 複本數量超過原則中指定的數量。</block>
-  <block id="f5ddb6d7603dc33bf103e8901a488536" category="paragraph">對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本將繼承 SnapLock 到期時間。  您應該手動清除 SnapLock 到期後的複本。</block>
   <block id="e07d82366bc71bb060becb82a0e09448" category="admonition">主要 SnapLock 設定是在 SnapCenter 備份原則中管理、次要 SnapLock 設定則是由 ONTAP 管理。</block>
   <block id="c7075c18b2e266ad847d25c7cdafc611" category="image-alt">備份設定畫面。</block>
   <block id="e528a1fd853f0dc6774eed55270c67fb" category="list-text">如果要指定 Snapshot 複本鎖定期間、請選取 * Snapshot 複本鎖定期間 * 、然後選取天、月或年。</block>
@@ -8487,7 +8462,6 @@ Windows 主機：</block>
   <block id="10fe11299ffddacc5ffb826021d50abb" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="c07c083ab1174f81e5a8dab86d345954" category="paragraph">Java 1.8 （ 64 位元） Oracle Java 或 OpenJDK</block>
   <block id="7533ab96da9180bf079f4c8dff903a17" category="list-text">指定 Snapshot 複本鎖定期間可防止在保留期間到期之前刪除 Snapshot 複本。這可能會導致保留的 Snapshot 複本數量超過原則中指定的數量。</block>
-  <block id="d85658340b1d541966d799fc21402f74" category="list-text">對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本將繼承 SnapLock 到期時間。您應該手動清除 SnapLock 到期後的複本。</block>
   <block id="971b3c1d99a5aa6f2b187690d01d852c" category="paragraph">Snapshot 複本鎖定期間</block>
   <block id="86b78accb82bf0596de946657114e7dd" category="paragraph">選取 Snapshot 複本鎖定期間、然後選取天、月或年。</block>
   <block id="cad9d181a2b84fefcf0bef1326b5660c" category="paragraph">在次要複寫期間、 SnapLock 到期時間會載入主要 SnapLock 到期時間。</block>
@@ -8842,4 +8816,28 @@ SnapLock 設定是由 ONTAP 管理。</block>
   <block id="106eca4a643cd4a82ba724aaf63cf399" category="sidebar">還原及還原 Unix 檔案系統</block>
   <block id="acebdece1b3734e875859ee761ab347e" category="sidebar">複製 Unix 檔案系統</block>
   <block id="1121f6eb8ee08b3fbbc4d05a5ee6ca76" category="sidebar">技術更新</block>
+  <block id="72e3ebd15de33a3a4ac48a1468899e30" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="96a4ccff2c2cba2d64ff2f5bfcf95100" category="inline-link-rx"></block>。</block>
+  <block id="6ef414d9ea1c137360c49ffc62ff4036" category="paragraph">對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
+  <block id="8585a7e2d9203547a9e1b2e127f530dc" category="paragraph">。<block ref="3c59f2e9aad2adb626f5cfbb7cd6a195" category="inline-link-rx"></block> 包含支援版本的最新資訊。</block>
+  <block id="059617cda1a3061ea2a2b4188965fe4d" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="f6a41fefbf1f1f164dbf4b318a39da2c" category="inline-link-rx"></block>。</block>
+  <block id="dc01c492280ce1fd1596d5e3bfe5bf41" category="list-text"><block ref="7a8856912beac423472b387a1e95361d" category="inline-link-rx"></block></block>
+  <block id="e0fa72ed5f9179a3d82835be00b885dd" category="paragraph">如需受支援Oracle版本的最新資訊、請參閱<block ref="f6a41fefbf1f1f164dbf4b318a39da2c" category="inline-link-rx"></block>。</block>
+  <block id="bd0863e85294598fc754a3f8e2f9a2f3" category="paragraph">《Oracle資料庫適用的支援使用支援的組態SnapCenter 》（英文）列於中<block ref="f6a41fefbf1f1f164dbf4b318a39da2c" category="inline-link-rx"></block>。</block>
+  <block id="336669dbe720233ed5577ddf81b653d3" category="cell">5.0%</block>
+  <block id="027fed5a5574f6cff82b872281a93f5d" category="admonition">例如、如果您使用的是 SnapCenter 4.7 版、而且想要升級至 5.0 版、則應先升級至 4.8 版、然後再進行滾動升級至 5.0 。</block>
+  <block id="4827d738536c61364b7a0c0897decc5e" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱
+<block ref="11af8d048e93c986989d5d8307216023" category="inline-link-rx"></block>。</block>
+  <block id="6268ab5682b70d4583394ece011d28a6" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="706ed2d40d8eb3989e1decea39a45a3e" category="inline-link-rx"></block>。</block>
+  <block id="4d019cbbbce62c6057181f21cd89ce78" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="27abb638c2bba159579a52674dd632d7" category="inline-link-rx"></block>。</block>
+  <block id="02f8e5ab9e96307a7e333587345f3284" category="paragraph">如需支援版本的最新資訊、請參閱
+<block ref="11af8d048e93c986989d5d8307216023" category="inline-link-rx"></block>。</block>
+  <block id="a8573850e5659feeef81fcbac3f67b09" category="paragraph">如需支援的應用程式和資料庫詳細資訊、請參閱<block ref="6b3ef4eef08ac0feed960a06e1cce7e2" category="inline-link-rx"></block>。</block>
+  <block id="0399ed9d4322925cd652419c6e80ccbb" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="6b3ef4eef08ac0feed960a06e1cce7e2" category="inline-link-rx"></block>。</block>
+  <block id="4bb4114cf33351f203faec5f1e34960e" category="paragraph"><block ref="11d2d1b194d6948e42dc38dca8202191" category="inline-link-rx"></block></block>
+  <block id="9dddc634db431dab44c50f3fd8460055" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="f427499ed0a5ab6c4e27afbbda198682" category="inline-link-rx"></block></block>
+  <block id="649d8184d4bc981264b0d66852b40d56" category="paragraph"><block ref="5274e0d1c22af55a55e01a625855ced0" category="inline-link-rx"></block></block>
+  <block id="924dbab7608ad7bebe0adaf9e15b8542" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱 <block ref="c16ce45673244a1fe516b0ed4d92ee5c" category="inline-link-rx"></block>。</block>
+  <block id="f70e7af7132291b170364c37c143af5f" category="paragraph">對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本將繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
+  <block id="d24a44cebb5d893d4a6ffefcfde236ea" category="paragraph">如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block>。</block>
+  <block id="9f15a95270d57c31e3fbf8e82eb6d5a6" category="paragraph">請參閱<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block></block>
 </blocks>

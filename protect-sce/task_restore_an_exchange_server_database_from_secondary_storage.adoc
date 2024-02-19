@@ -16,7 +16,7 @@ summary: 您可以從次要儲存設備（鏡射或保存庫）還原備份的Ex
 您必須將Snapshot複本從一線儲存設備複寫到二線儲存設備。
 
 .關於這項工作
-* 對於啟用 SnapLock 的原則、對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+* 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 
 .步驟

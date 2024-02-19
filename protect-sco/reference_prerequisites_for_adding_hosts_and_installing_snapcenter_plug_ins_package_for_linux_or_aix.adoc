@@ -104,7 +104,7 @@ NOTE: 請確定您只在Linux主機上安裝認證版本的Java 11。
 如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。
 
 |===
-如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=112391;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=117016;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 
@@ -228,7 +228,7 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
 如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。
 
 |===
-如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=112391;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=117016;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 

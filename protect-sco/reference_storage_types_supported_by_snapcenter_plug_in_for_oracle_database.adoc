@@ -76,4 +76,4 @@ NOTE: 不支援AIX和檔案系統上的NFS。
 
 
 |===
-。 https://imt.netapp.com/matrix/imt.jsp?components=112391;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"] 包含支援版本的最新資訊。
+。 https://imt.netapp.com/matrix/imt.jsp?components=117016;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"] 包含支援版本的最新資訊。

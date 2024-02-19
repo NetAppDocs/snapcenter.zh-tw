@@ -23,6 +23,6 @@ summary: 您應該知道支援的儲存系統、應用程式和資料庫。
 
 * 支援不同應用程式和資料庫的保護。SnapCenter
 +
-如需支援的應用程式和資料庫詳細資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援的應用程式和資料庫詳細資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 

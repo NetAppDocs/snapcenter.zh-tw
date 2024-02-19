@@ -25,7 +25,7 @@ Microsoft Windows
 僅支援英文、德文、日文及簡體中文版的作業系統。
 
 如需支援版本的最新資訊、請參閱
-https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 

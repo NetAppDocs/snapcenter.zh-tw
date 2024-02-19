@@ -32,4 +32,4 @@ summary: 可在多個瀏覽器上使用此軟體。SnapCenter
 * Microsoft Edge
 
 
-如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。

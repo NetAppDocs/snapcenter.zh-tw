@@ -16,7 +16,7 @@ summary: 還原Exchange資料庫包括啟動與SnapCenter 該伺服器的連線�
 您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。
 
 .關於這項工作
-對於啟用 SnapLock 的原則、對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 .步驟
 . 使用「Open-SmConnection」指令程式、為SnapCenter 指定的使用者啟動與該伺服器的連線工作階段。
