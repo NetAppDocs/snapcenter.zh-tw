@@ -1,0 +1,38 @@
+---
+permalink: protect-azure/create-backup-policies-sap-hana.html 
+sidebar: sidebar 
+keywords: create policies, SAP HANA, backup policies 
+summary: 為您要備份的資源或資源群組建立備份原則。 
+---
+= 為SAP HANA資料庫建立備份原則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用SnapCenter 支援功能來備份SAP HANA資料庫資源之前、您必須先為要備份的資源或資源群組建立備份原則。
+
+.步驟
+. 在左側導覽窗格中、按一下*設定*。
+. 在「設定」頁面中、按一下*原則*。
+. 按一下「*新增*」。
+. 在「名稱」頁面中、輸入原則名稱和說明。
+. 在「設定」頁面中、執行下列步驟：
++
+.. 選取備份類型。
++
+... 如果您要執行資料庫的完整性檢查、請選取 * 檔案型備份 * 。
+... 如果您想要使用 Snapshot 複製技術建立備份、請選取 * Snapshot Based * 。
+
+
+.. 指定排程類型。
+
+
+. 在「保留」頁面中、指定備份類型和所選排程類型的保留設定。
++
+
+NOTE: 不支援複寫至次要儲存設備。
+
+. 檢閱摘要、然後按一下「*完成*」。
+

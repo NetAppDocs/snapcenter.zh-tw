@@ -1,0 +1,37 @@
+---
+permalink: protect-azure/add-hosts-install-plugin-for-oracle.html 
+sidebar: sidebar 
+keywords: add host, install, install plug-in, oracle, database 
+summary: 新增主機、然後安裝外掛程式套件。 
+---
+= 新增主機並安裝 SnapCenter 外掛程式以供 Oracle 資料庫使用
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「新增主機」頁面來新增主機、然後安裝SnapCenter 適用於Linux或SnapCenter 適用於AIX的「版本資訊」外掛程式套件。外掛程式會自動安裝在遠端主機上。
+
+您可以為個別主機或叢集新增主機並安裝外掛程式套件。如果您要在叢集（ Oracle RAC ）上安裝外掛程式、外掛程式會安裝在叢集的所有節點上。對於Oracle RAC One Node、您應該在主動和被動節點上安裝外掛程式。
+
+.步驟
+. 在左側導覽窗格中、按一下*主機*。
+. 確認已選取 * 託管主機 * 索引標籤。
+. 按一下「 * 新增 * 」。
+. 在「hosts」（主機）頁面中、執行下列動作：
++
+.. 在主機類型欄位中、選取主機類型。
+.. 在主機名稱欄位中、輸入主機的完整網域名稱（ FQDN ）或 IP 位址。
+.. 在認證欄位中、輸入您建立的認證。
+
+
+. 在選取要安裝的外掛程式區段中、選取要安裝的外掛程式。
+. （可選）單擊 * 更多選項 * 並指定詳細信息。
+. 按一下*提交*。
+. 驗證指紋、然後按一下*「Confirm and Submit*（確認並提交）」。
++
+在叢集設定中、您應該驗證叢集中每個節點的指紋。
+
+. 監控安裝進度。
+

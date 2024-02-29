@@ -1,0 +1,43 @@
+---
+permalink: protect-azure/add-sap-hana-database.html 
+sidebar: sidebar 
+keywords: add, add SAP HANA database, manual discovery, automatic discovery 
+summary: 新增 SAP HANA 資料庫。 
+---
+= 新增 SAP HANA 資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該手動新增 SAP HANA 資料庫。
+
+.關於這項工作
+如果外掛程式安裝在集中式伺服器上、則需要手動新增資源。如果 SAP HANA 外掛程式安裝在 HANA 資料庫主機上、則系統會自動探索 HANA 系統。
+
+
+NOTE: HANA 多主機組態不支援自動探索、只能透過集中式外掛程式新增。
+
+.步驟
+. 在左側導覽窗格中、從SnapCenter 下拉式清單中選取「SAP HANA資料庫的功能不全」外掛程式、然後按一下「*資源*」。
+. 在「Resources（資源）」頁面中、按一下「* Add SAP HANA Database*（*新增SAP HANA
+. 在「提供資源詳細資料」頁面中、執行下列動作：
++
+.. 輸入資源類型、可以是「單一容器」、「多租戶資料庫容器」或「非資料 Volume 」。
+.. 輸入SAP HANA系統名稱。
+.. 輸入系統ID（SID）。
+.. 選取外掛程式主機。
+.. 輸入金鑰以連線至SAP HANA系統。
+.. 輸入設定 HDB 安全使用者儲存金鑰的使用者名稱。
+
+
+. 在「提供儲存空間」頁面中、選取 * Azure NetApp Files * 作為儲存類型。
++
+.. 選取 Azure NetApp 帳戶。
+.. 選取容量集區和相關聯的磁碟區。
+.. 按一下「 * 儲存 * 」。
+
+
+. 檢閱摘要、然後按一下「*完成*」。
+

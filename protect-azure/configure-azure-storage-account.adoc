@@ -1,0 +1,23 @@
+---
+permalink: protect-azure/configure-azure-storage-account.html 
+sidebar: sidebar 
+keywords: snapcenter, azure, azure storage account, subscription ID, azure credential, azure netapp account 
+summary: 在 SnapCenter 中設定 Azure 儲存帳戶。 
+---
+= 設定 Azure 儲存設備帳戶
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該在 SnapCenter 中設定 Azure 儲存帳戶。
+
+Azure 儲存設備帳戶包含有關訂閱 ID 、 Azure 認證和 Azure NetApp 帳戶的詳細資料。
+
+.步驟
+. 在左導覽窗格中、按一下*儲存系統*。
+. 在儲存系統頁面中、選取 * Azure NetApp Files * 、然後按一下 * 新 * 。
+. 從個別的下拉式清單中選取認證、訂閱 ID 和 NetApp 帳戶。
+. 按一下*提交*。
+

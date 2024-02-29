@@ -1,0 +1,58 @@
+---
+permalink: protect-azure/backup-sap-hana-databases.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SAP HANA Database, back up, databases, Azure NetApp Files 
+summary: 從「資源」頁面備份資源。 
+---
+= 備份在 Azure NetApp Files 上執行的 SAP HANA 資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果某個資源尚未納入任何資源群組、您可以從「資源」頁面備份該資源。
+
+.步驟
+. 在左側導覽窗格中、選取 * 資源 * 、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、根據資源類型篩選*檢視*下拉式清單中的資源。
+. 選取您要備份的資源。
+. 在「資源」頁面中、選取*使用Snapshot COPU*的自訂名稱格式、然後輸入您要用於Snapshot複本名稱的自訂名稱格式。
+. 在「應用程式設定」頁面中、執行下列動作：
++
+.. 選取 * 備份 * 箭頭以設定其他備份選項。
+.. 選取 * 指令碼 * 箭頭以執行停止、 Snapshot 複本和取消停止作業的前置和後置命令。
+.. 選取 * 自訂組態 * 箭頭、然後輸入使用此資源的所有工作所需的自訂值配對。
+.. 選擇 * Snapshot Copy Tool > SnapCenter without File System Consistency * （不具檔案系統一致性的快照複本）以建立 Snapshot 複本。
++
+* 檔案系統一致性 * 選項僅適用於在 Windows 主機上執行的應用程式。
+
+
+
+. 在「原則」頁面中、執行下列步驟：
++
+.. 從下拉式清單中選取一或多個原則。
+.. 選取*image:../media/add_policy_from_resourcegroup.gif[""]*在您要為其設定排程的原則的「設定排程」欄中。
+.. 在 [ 新增原則 _policy_name_ 的排程 ] 對話方塊中，設定排程，然後選取 *OK* 。
++
+_policy_name_是您選取的原則名稱。
+
+
+
+. 在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。
++
+您也必須指定寄件者和接收者的電子郵件地址、以及電子郵件的主旨。也必須在*設定*>*全域設定*中設定SMTP。
+
+. 檢閱摘要、然後選取 * 完成 * 。
+. 選擇 * 立即備份 * 。
+. 在「備份」頁面中、執行下列步驟：
++
+.. 如果有多個原則與資源相關聯、請從 * 原則 * 下拉式清單中、選取您要用於備份的原則。
++
+如果針對隨需備份所選取的原則與備份排程相關聯、則會根據為排程類型指定的保留設定來保留隨需備份。
+
+
+
+. 選擇*備份*。
+. 按一下*監控*>*工作*來監控作業進度。
+

@@ -41,6 +41,7 @@ summary: 支援簡單、集中化、可擴充的平台、可為在混合雲任�
 +
 ** 資料位於Cloud Volumes ONTAP 僅有ONTAP 的部分系統（前身為《不知道如何解決此問題》）
 ** Amazon FSX ONTAP 上的資料以供支援
+** 位於主要 Azure NetApp Files （ Oracle 、 Microsoft SQL 和 SAP HANA ）上的資料
 
 
 

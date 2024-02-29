@@ -8840,4 +8840,210 @@ SnapLock 設定是由 ONTAP 管理。</block>
   <block id="f70e7af7132291b170364c37c143af5f" category="paragraph">對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本將繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
   <block id="d24a44cebb5d893d4a6ffefcfde236ea" category="paragraph">如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block>。</block>
   <block id="9f15a95270d57c31e3fbf8e82eb6d5a6" category="paragraph">請參閱<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block></block>
+  <block id="9166c380efba6c6a0d61dc08bcc135ee" category="summary">為您要備份的資源或資源群組建立備份原則。</block>
+  <block id="73f45971c435fbf9828b3c34fe76a670" category="paragraph">在使用SnapCenter 支援功能來備份Oracle資料庫資源之前、您必須先為要備份的資源或資源群組建立備份原則。</block>
+  <block id="32005b30ff172564875bf82c9538168f" category="list-text">從下拉式清單中選取 Oracle 資料庫。</block>
+  <block id="079151e2a65ec7ff3445310b706078c0" category="list-text">選取備份類型為線上或離線備份。</block>
+  <block id="e1f4feb4c45f5316b8eb2a7570b14cec" category="list-text">指定排程頻率。</block>
+  <block id="35968ec44acc7cc8a13556f173c47cc3" category="list-text">指定刪除封存記錄檔設定。</block>
+  <block id="8bf586bfc11638f24bb033f322fb6ce1" category="list-text">在「保留」頁面中、指定保留設定。</block>
+  <block id="7db2a3f013bbf7ae548baa053e8f7584" category="list-text">在「驗證」頁面中、選取您要執行驗證作業的備份排程、然後分別輸入要在驗證作業之前或之後執行的預先記錄或 PostScript 路徑和引數。</block>
+  <block id="5dac7fdec7dddd64bc366ee8bd5cd09d" category="list-text">在「資源」頁面中、從「檢視」清單中選取「 * 資料庫 * 」或「 * 資源群組 * 」。</block>
+  <block id="58b7e36fa95125edcb8d66ea2e67582f" category="list-text">從「管理複本」檢視中、從主要儲存系統選取 * 備份 * 。</block>
+  <block id="2f8a690686af1b1cda975ef6f4f1bed0" category="list-text">如果您已在 RAC 環境中選取資料庫備份、請選取 RAC 。</block>
+  <block id="1399d83514b742ea6df34f461fcc4de2" category="list-text">如果您只想還原資料庫檔案、請選取 * 所有資料檔案 * 。</block>
+  <block id="acdb11b54cf63e8364ce855a4985b70a" category="list-text">如果您只想還原表格空間、請選取 * 表格空間 * 。</block>
+  <block id="e2d164854dc02140bc455818e74a5c33" category="list-text">如果您要還原 Data Guard 待命或 Active Data Guard 待命資料庫的重做記錄檔、請選取 * 重做記錄檔 * 。</block>
+  <block id="03853c460c3f942eb442c5ca0ad40fad" category="list-text">選擇 * 可插拔資料庫 * 、並指定您要還原的 PDF 。</block>
+  <block id="57845f4a15c2596bee374a61bd147668" category="list-text">如果要將資料庫還原至備份所在的同一 SQL 伺服器、請選取 * 將資料庫還原至建立備份的同一主機 * 。</block>
+  <block id="5ccb59313a41bd2c5b6739ff2b109e74" category="list-text">如果您想要將資料庫還原至備份所在的同一或不同主機中的不同 SQL Server 、請選取 * 將資料庫還原至其他主機 * 。</block>
+  <block id="d3848423ad873508b35dee4f882c93c1" category="list-text">如果您要恢復到最後一筆交易、請選取 * 所有記錄 * 。</block>
+  <block id="5d5be53ceca242c265f3132067176acf" category="list-text">如果您想要恢復到特定 SCN 、請選取 * 直到 SCN （系統變更編號） * 。</block>
+  <block id="876471c99dbc13177cc4d457546d7871" category="list-text">如果您要恢復到特定的日期和時間、請選取 * 日期和時間 * 。</block>
+  <block id="29efffe1f66a8912fca8bb27c93fc1b8" category="list-text">如果不想恢復，請選擇 * 無恢復 * 。</block>
+  <block id="961e01d405e8a902edb16845143ab971" category="list-text">如果您要指定外部封存記錄檔的位置、請選取 * 指定外部封存記錄檔位置 * 。</block>
+  <block id="6882420907ef9d77d69021bc2b742fdf" category="list-text">在「作業前與作業後」頁面中、指定所需的詳細資料。</block>
+  <block id="dfd5f1051da1aa9e9af8ea3369dfdb2f" category="paragraph">您可以還原已毀損或遺失的資料表空間子集、而不會影響資料庫中的其他資料表空間。使用RMAN執行表空間的時間點恢復（PITRR）SnapCenter 。</block>
+  <block id="35e42acf13f657c4bd3843e31c6b7b55" category="list-text">選取單一執行個體（多租戶）類型的資料庫。</block>
+  <block id="9a40b04f123f9d768ad814799ac13ed6" category="list-text">選取目錄備份、然後按一下 *<block ref="401f8f248ae37b21256b9fc8e83bcaa3" category="inline-image-macro-rx" type="image"></block>*。</block>
+  <block id="f10007ef38ad8ef0be191acdb24506f2" category="list-text">如果您已在 RAC 環境中選擇資料庫備份、請選取 * RAC* 。</block>
+  <block id="c319a65d4dabd1b8676673c0f51fbca4" category="list-text">如果您要還原 PDB 、請選取 * 可插拔資料庫（ PDB ） * 。</block>
+  <block id="7a30df58c32f2e58ee04367dc1a289ff" category="list-text">如果您要還原 PDB 中的表格空間、請選取 * 可插拔資料庫（ PDB ）表格空間 * 。</block>
+  <block id="d9c103e9b28e2bebca1491609f830d9e" category="list-text">選取備份類型。</block>
+  <block id="8b7749a11c408f4525e8b6cd3dbf31fa" category="list-text">如果您想要備份資料庫檔案和交易記錄、請選取 * 完整備份和記錄備份 * 。</block>
+  <block id="411148f58714b813c6fcff4f84e64c7e" category="list-text">如果只想備份資料庫檔案、請選取 * 完整備份 * 。</block>
+  <block id="181c2702cfecfcccae058cc9bef558cf" category="list-text">如果您只想備份交易記錄、請選取 * 記錄備份 * 。</block>
+  <block id="4f33ec7f0b6c5efe51b9298d732010fe" category="list-text">如果您要使用其他應用程式來備份資源、請選取 * 僅複製備份 * 。</block>
+  <block id="1a97eb2e4853a1fca9bc58dd7af59b48" category="list-text">如果您只想在複本上備份、請選取備份偏好的備份複本。</block>
+  <block id="9ec51e1bd21eedcf15db405459689d24" category="list-text">選取主要 AG 複本或次要 AG 複本以進行備份。</block>
+  <block id="ec3712a222adf7900d9abd47ada2d148" category="list-text">選取備份優先順序。</block>
+  <block id="e392de06f36aab499d20ac2874bd6a7a" category="list-text">指定排程類型。</block>
+  <block id="1616215a05c2a11b9d7f8a7b0c957551" category="list-text">在「保留」頁面中、根據選取的備份類型、指定保留設定。</block>
+  <block id="8164c29499ad21176441bff9c0dfb5a6" category="admonition">不支援複寫至次要儲存設備。</block>
+  <block id="c9d5c0fdf2d0d7d116a31da7f7075cf2" category="list-text">選取 * 隱藏所有資訊訊息（ no_info_msGS ） * 以隱藏所有資訊訊息。</block>
+  <block id="1ecb3b72a5b2c2c1236cd984534e09ff" category="paragraph">預設為選取。</block>
+  <block id="d3f2f88e0e51cd1bb2e765ff2a9329ea" category="list-text">如果不想檢查非叢集索引、請選取*不要檢查非叢集索引（NOINEX）*。</block>
+  <block id="7ce3afddd78d2c95f3288b6c71328476" category="summary">從「資源」頁面備份資源。</block>
+  <block id="cffecc178cc1b99a91effece6bd4417b" category="doc">備份在 Azure NetApp Files 上執行的 SQL Server 資料庫</block>
+  <block id="79acc61170d146040e6782f199b67161" category="list-text">在「資源」頁面中、從「檢視」下拉式清單中選取 * 資料庫 * 、 * 執行個體 * 或 * 可用性群組 * 。</block>
+  <block id="fddaa056d058e982a13036e05323d6f8" category="list-text">選取 * 使用 Microsoft SQL Server Scheduler* 、然後從與排程原則相關的 * 排程器 Instance* 下拉式清單中選取排程器執行個體。</block>
+  <block id="444abdb0adbf904dfeb2b6b85da3e698" category="list-text">選取驗證伺服器。</block>
+  <block id="102beeaa44096cb1c4640f46b3cabe69" category="list-text">選擇 * 備份後執行驗證 * 或 * 執行排程驗證 * 。</block>
+  <block id="2c7804d18e9ae000973714b450e90bee" category="list-text">如果有多個原則與資源相關聯、請從 * 原則 * 下拉式清單中、選取您要用於備份的原則。</block>
+  <block id="51bfdba913c7ca3420c862bcfa885fba" category="list-text">選擇 * 備份後驗證 * 。</block>
+  <block id="1a8b5d536181d67e04a2989ce55f1471" category="summary">您可以使用SnapCenter 支援功能來複製備份。</block>
+  <block id="e42122c0e464caa33250257fa8321c7b" category="doc">複製 Oracle 資料庫備份</block>
+  <block id="11e13a2f33d440e2a7175548ecae015f" category="list-text">選取資料庫。</block>
+  <block id="f27570b9a0395e940f2b631b70c9c9f3" category="list-text">從「管理複本」檢視頁面、選取主要儲存系統的備份。</block>
+  <block id="dc1a7c9a6c9105494aa3e624b96a4a8a" category="list-text">選取資料備份、然後按一下 *<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*。</block>
+  <block id="e5c5d189e7dca60262ce11d4d8948a36" category="list-text">在「名稱」頁面中、選取您要複製資料庫（ CDB 或非 CDB ）、或是複製可插入的資料庫（ PDB ）。</block>
+  <block id="9b65003600b751fccc76508227fd13ab" category="list-text">在「位置」頁面中、指定所需的詳細資料。</block>
+  <block id="b1410d725eb84bd1cd2dc5a0773800ed" category="paragraph">如果 Oracle 資料庫 anf 磁碟區是在手動 QoS 容量集區中設定、請指定複製磁碟區的 QoS 。</block>
+  <block id="3cf00704aaf3ff788104ae85f809de64" category="paragraph">如果未指定複製磁碟區的 QoS 、則會使用來源磁碟區的 QoS 。如果使用自動 QoS 容量集區、則會忽略指定的 QoS 值。</block>
+  <block id="3bac96329347bd387d3dc16e22e55c99" category="list-text">在「認證」頁面中、執行下列其中一項：</block>
+  <block id="fa4de18b260a3195ce9f3aa2275053fe" category="list-text">對於 sys 使用者的認證名稱、請選取要用於定義複製資料庫的 sys 使用者密碼的認證。</block>
+  <block id="21daac57ff613e2256c134d57a24b7fe" category="list-text">對於 ASM Instance Credential 名稱、如果啟用 OS 驗證以連線至複製主機上的 ASM 執行個體、請選取 * 無 * 。</block>
+  <block id="478856c905ade2c9882f8f0df0259cdc" category="paragraph">否則、請選取以「 sys 」使用者或具有適用於複製主機之「 sys.asm 」權限的使用者所設定的 Oracle ASM 認證。</block>
+  <block id="68571f7a88ba34fcf2f6bd54a8757e49" category="list-text">在「預先作業」頁面中、指定預先作業的路徑和引數、並在「資料庫參數設定」區段中、修改用於初始化資料庫的預先填入資料庫參數值。</block>
+  <block id="b5b8ca4c1991a55b0219f5cabf10cfcf" category="list-text">在「作業後」頁面中、依預設會選取 * 恢復資料庫 * 和 * 直到取消 * 來執行複製資料庫的復原。</block>
+  <block id="f27d210631347656f8a0cd665f480ed0" category="list-text">如果您選取 * 直到取消 * 、 SnapCenter 會在選取進行複製的資料備份之後、掛載最新的記錄備份、並以完整的歸檔記錄順序執行還原。</block>
+  <block id="2aac70261177d063218ac71d31d5ea6b" category="list-text">如果選擇 * 日期和時間 * ， SnapCenter 將恢復到指定的日期和時間。</block>
+  <block id="8e177bbd95dbc94a22433e0d93d58971" category="list-text">如果您選擇 * 直到 SCN* 、 SnapCenter 會將資料庫恢復至指定的 SCN 。</block>
+  <block id="7bf7e16e76dcebbcabe537cf40e7eaa0" category="list-text">如果您選取 * 指定外部歸檔記錄位置 * 、 SnapCenter 會根據指定的 SCN 或選取的日期和時間、識別並裝載最佳的記錄備份數。</block>
+  <block id="c3117bb6d1093367c8c8311f31a140cd" category="list-text">根據預設、 * 建立新的 DBID* 核取方塊會為複製的資料庫產生唯一編號（ DBID ）、使其與來源資料庫區隔。</block>
+  <block id="0b001fe4141b08084edf2ba3b8c346a0" category="list-text">如果您要為複製的資料庫的預設暫存資料表空間建立暫存檔、請選取 * 建立暫存資料表空間 * 核取方塊。</block>
+  <block id="cfd2830969742a0cf37ec3c88a0c7896" category="list-text">在 * 輸入建立複本時要套用的 SQL 項目 * 中、新增建立複本時要套用的 SQL 項目。</block>
+  <block id="95ec4bf6dbf6754ecfda5bb09b3a8415" category="list-text">在 * 輸入複製作業後要執行的指令碼 * 中、指定複製作業後要執行的 PostScript 路徑和引數。</block>
+  <block id="dcc66de93aefa3105fda8cbdb3cdc2cf" category="list-text">選取備份、然後按一下*<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*。</block>
+  <block id="13bc47d703b82b962d33b3cf47bf64fb" category="list-text">在「名稱」頁面中、選取 *PDB Clone * 、然後指定其他詳細資料。</block>
+  <block id="92336218cb59d91f7080fee85c60b95f" category="list-text">在「作業後」頁面中、依預設會選取 * 直到取消 * 、以執行複製資料庫的還原。</block>
+  <block id="82a14f04b2bdde64af5a7a694ab98bba" category="section-title">分割 Oracle 資料庫複本</block>
+  <block id="787b61c3679ebc574f4962a1f5aebb0c" category="list-text">選取複製的資源（例如資料庫或 LUN ）、然後按一下 *<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*。</block>
+  <block id="562ffa91cb05be38d306e7ac7ab12d9c" category="list-text">從「管理複本」檢視中、從主要儲存系統中選取 * Clones * 。</block>
+  <block id="62ef6c6e852eca46dfc82fdc6ad386b2" category="list-text">選取 PDB 複製（ targetCDB:PDBClone ）、然後按一下 *<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*。</block>
+  <block id="06297b8a736154148ec90e3788831eaa" category="doc">還原及還原 SQL Server 資料庫</block>
+  <block id="b01943524a657671dfae0f3f1f0948e5" category="paragraph">您可以使用SnapCenter 支援功能來還原備份的SQL Server資料庫。資料庫還原是一個多階段程序、可將所有資料和記錄頁面從指定的 SQL Server 備份複製到指定的資料庫。</block>
+  <block id="ddec2d3a4d88b9b7250ed10e6ef19f3f" category="list-text">從「管理複本」檢視中、從儲存系統選取 * 備份 * 。</block>
+  <block id="6408662ebc634bb326a1dde94a44620f" category="list-text">選取 * 所有記錄備份 * 直到最新的備份還原作業、以在完整備份後還原所有可用的記錄備份。</block>
+  <block id="aa9472a7b9cb1fc29c7cbe53b4716e81" category="summary">在 SnapCenter 中設定 Azure 儲存帳戶。</block>
+  <block id="118cba115d0fa759158cb2faa450d5de" category="doc">設定 Azure 儲存設備帳戶</block>
+  <block id="fadf22d2749d2c990d51a1177ed75a3c" category="paragraph">您應該在 SnapCenter 中設定 Azure 儲存帳戶。</block>
+  <block id="f2a9b03c9542d4be6aef4bdb2f408f9e" category="paragraph">Azure 儲存設備帳戶包含有關訂閱 ID 、 Azure 認證和 Azure NetApp 帳戶的詳細資料。</block>
+  <block id="8f8706f3da7c34c2111a8e25ce94e098" category="list-text">在儲存系統頁面中、選取 * Azure NetApp Files * 、然後按一下 * 新 * 。</block>
+  <block id="b67933dc97bd3a16f77741efb04c9c6a" category="list-text">從個別的下拉式清單中選取認證、訂閱 ID 和 NetApp 帳戶。</block>
+  <block id="b19cf02c2424a0928eeec4a9d7a2f2f8" category="summary">在 Azure 虛擬機器上下載並安裝 SnapCenter 。</block>
+  <block id="cefcdf7a4638575f474bc5a3bda6c998" category="doc">在 Azure 虛擬機器上安裝 SnapCenter</block>
+  <block id="4370482304eb1ca0418f2cd3fd63eb67" category="paragraph">您可以從 NetApp 支援網站 下載 SnapCenter 軟體、並在 Azure 虛擬機器上安裝軟體。</block>
+  <block id="ce65cbdd1461bceb86d66ab0fad635e1" category="paragraph">確保 Azure Windows 虛擬機器符合 SnapCenter 伺服器安裝需求。如需相關資訊、請參閱 <block ref="b3dec771f92c2fb9f455ad37ca093b8b" category="inline-link-macro-rx"></block>。</block>
+  <block id="70c594713d865f6147d93e740c40169b" category="list-text">請SnapCenter 從下載《停止更新》安裝套件<block ref="ae591c0a5c1f7ed1b2805b45c211ae4c" category="inline-link-rx"></block>。</block>
+  <block id="ba1d33ffe1922d93bdd900b985993172" category="paragraph">在您開始安裝之後、系統會執行所有預先檢查、如果不符合最低要求、則會顯示適當的錯誤或警告訊息。您可以忽略警告訊息並繼續安裝、但錯誤應予以修正。</block>
+  <block id="944ed313a3d76953a4897da7159e4286" category="admonition">儲存庫資料庫的自訂路徑不支援特殊字元「 % 」。如果您在路徑中加入「%」、安裝將會失敗。</block>
+  <block id="a8ba59cefefd06f7932de8d4f14fea85" category="paragraph">如果您已指定任何無效的值、將會顯示適當的錯誤訊息。您應該重新輸入值、然後開始安裝。</block>
+  <block id="3c075b0794a69a869247bae0fa8232c3" category="summary">建立認證以新增外掛主機。</block>
+  <block id="fc2036df5c2e9ad58052254d635ada38" category="doc">建立認證以新增外掛主機</block>
+  <block id="ab21a8c77f03ed9714c3a24a550e2416" category="paragraph">使用認證資料驗證使用者執行的不中斷作業。SnapCenter SnapCenter</block>
+  <block id="2af8c72fafd2de00780256e0886cf680" category="paragraph">您應該建立認證來安裝 SnapCenter 外掛程式、以及執行資料保護作業的其他認證。</block>
+  <block id="2c918b288cc3e2bd0419ef617cee7af1" category="list-text">在「認證」頁面中、指定建立認證所需的下列資訊。</block>
+  <block id="dcd46a1f9a42cb16a43e224e294b8f7a" category="paragraph">認證名稱</block>
+  <block id="29a3c3b668504b90c64c2a6ed618330f" category="paragraph">從下拉式清單中選取驗證模式。</block>
+  <block id="77a89adb2bed495492c121bfa080d52c" category="paragraph">驗證類型</block>
+  <block id="5517313827872a130ab285b0e5e37dce" category="paragraph">選取 * 密碼型 * 或 * SSH 金鑰型 * （僅適用於 Linux 主機）。</block>
+  <block id="df8915ff8479f150e2964f44c91d2fd4" category="paragraph">指定使用者名稱。</block>
+  <block id="fa7df0dba25d02121ff5ab3fb162be91" category="paragraph">如果您已選取密碼型驗證、請指定密碼。</block>
+  <block id="fab1bac8f68d0e85c7d853e7cc89dee8" category="paragraph">SSH私密金鑰</block>
+  <block id="66f8dac0eed0421ac7fcaabbabc37a68" category="paragraph">如果您已選取 SSH 金鑰型驗證、請指定私密金鑰。</block>
+  <block id="c07c0cf4af9b314370d0665aadeaf338" category="paragraph">如果您要為非 root 使用者建立認證、請選取使用 Sudo 權限核取方塊。</block>
+  <block id="703b449c96829cc800359f1d8ec271aa" category="admonition">這僅適用於 Linux 使用者。</block>
+  <block id="ad7e2b46dbd658b836afa67739728364" category="doc">備份 Oracle 資源群組</block>
+  <block id="3e069730cfbdc79be14782b101342cba" category="paragraph">您可以備份由多個資源組成的資源群組。資源群組上的備份作業會對資源群組中定義的所有資源執行。</block>
+  <block id="5aec80aae3b9f1be4549537d901f39a5" category="list-text">如果有多個原則與資源群組相關聯、請從 * 原則 * 下拉式清單中、選取您要用於備份的原則。</block>
+  <block id="a762c8a08fd8dd6ac2427dad067d141f" category="doc">建立資源群組並附加 SAP HANA 備份原則</block>
+  <block id="257763ed8a159d456a92e8b44d26aa9e" category="paragraph">資源群組可讓您同時備份與特定應用程式相關的所有資料。任何資料保護工作都需要資源群組。您也必須將一或多個原則附加至資源群組、以定義您要執行的資料保護工作類型。</block>
+  <block id="4b94425e098b41d12bc8e290ef43106f" category="summary">新增主機、然後安裝外掛程式套件。</block>
+  <block id="5a19eafc64d4b27754e1ea4fcdfa49f1" category="doc">新增主機並安裝 SnapCenter 外掛程式以供 Oracle 資料庫使用</block>
+  <block id="836b7a28ba9782fad01628dc33073d15" category="paragraph">您可以為個別主機或叢集新增主機並安裝外掛程式套件。如果您要在叢集（ Oracle RAC ）上安裝外掛程式、外掛程式會安裝在叢集的所有節點上。對於Oracle RAC One Node、您應該在主動和被動節點上安裝外掛程式。</block>
+  <block id="25df78dd01892122ff0e8b622af903f3" category="list-text">確認已選取 * 託管主機 * 索引標籤。</block>
+  <block id="70d62db3cdc3b09c944b95bb46579a2d" category="list-text">在主機類型欄位中、選取主機類型。</block>
+  <block id="aee77bbd57baf3f9ef22c7fc4d9bdef8" category="list-text">在主機名稱欄位中、輸入主機的完整網域名稱（ FQDN ）或 IP 位址。</block>
+  <block id="2e22c5b13053f3515b22c9c1ede2d7a8" category="list-text">在認證欄位中、輸入您建立的認證。</block>
+  <block id="cc01060000f3f813df5ac7a397f6c747" category="list-text">（可選）單擊 * 更多選項 * 並指定詳細信息。</block>
+  <block id="b75f291f313008e72d9ff0963164ee31" category="doc">建立資源群組並附加 SQL 備份原則</block>
+  <block id="2fd8d5ede56ca6e33060f1eb3dd0734b" category="paragraph">在使用SnapCenter 支援功能來備份SAP HANA資料庫資源之前、您必須先為要備份的資源或資源群組建立備份原則。</block>
+  <block id="e479da34c5ed7685fcd981da443e348b" category="list-text">如果您要執行資料庫的完整性檢查、請選取 * 檔案型備份 * 。</block>
+  <block id="9b13b3a5ddf2908f3bd7c006d6b212ee" category="list-text">如果您想要使用 Snapshot 複製技術建立備份、請選取 * Snapshot Based * 。</block>
+  <block id="ed5262a9aab3035c8548c5f3793c76f6" category="list-text">在「保留」頁面中、指定備份類型和所選排程類型的保留設定。</block>
+  <block id="98950caea953c79d817eba870ba7ae48" category="summary">在 SnapCenter 中建立 Azure 認證、以存取 Azure NetApp 帳戶。</block>
+  <block id="1ed01bab203e8745a0dcfe58f019c1d9" category="doc">在 SnapCenter 中建立 Azure 認證</block>
+  <block id="df807c6f76450e7af962b9ec2ffe867e" category="paragraph">您應該在 SnapCenter 中建立 Azure 認證、以存取 Azure NetApp 帳戶。</block>
+  <block id="c564c60262d5040cb9b4b2cb05c8532d" category="paragraph">在建立 Azure 認證之前、請確定您已在 Azure 中建立服務主體。建立 Azure 認證時、需要與服務主體相關的租戶 ID 、用戶端 ID 和秘密金鑰。</block>
+  <block id="aeec85b47cdcde0a1bea1e8a52e7efae" category="paragraph">從下拉式清單中選取 * Azure Credential* 。</block>
+  <block id="7131a7a6bfe81200d21d5a33c64847b6" category="paragraph">租戶 ID</block>
+  <block id="797fc8989dfaa45ed85ce3b352fc0fb9" category="paragraph">輸入租戶 ID 。</block>
+  <block id="4836681379c28438ec7ff8290c2fe10d" category="paragraph">輸入用戶端 ID 。</block>
+  <block id="6c5562c545345e1e93d50451b999407b" category="paragraph">用戶端秘密金鑰</block>
+  <block id="3f809529e531a829d1af35c6277c0600" category="paragraph">輸入用戶端秘密金鑰。</block>
+  <block id="83a5e957cdd4905f7e78a688fa59e4a6" category="doc">複製 SAP HANA 資料庫備份</block>
+  <block id="3e37c81f26466e5aef19ea7d64f141ae" category="list-text">選取安裝 SAP HANA 外掛程式的主機、以管理複製的 HANA 系統。</block>
+  <block id="e3455d720fcc40e26f0d36ee7581259f" category="paragraph">它可以是集中式外掛式主機或 HANA 系統主機。</block>
+  <block id="5c197ff6b8d148a9f919430a485adff2" category="list-text">輸入 SAP HANA SID 以從現有備份複製。</block>
+  <block id="11dae6129ac88bf8ce4b74a3f04b2931" category="list-text">如果 SAP HANA 資料庫 anf 磁碟區是在手動 QoS 容量集區中設定、請指定複製磁碟區的 QoS 。</block>
+  <block id="db72f6a27d253d274b29062a99ea2856" category="paragraph">如果自動探索來源 HANA 系統、並在 SAP HANA 主機上安裝複製目標主機外掛程式、則 SnapCenter 會自動在複製目標主機上卸載現有的 HANA 資料磁碟區、並裝載新複製的 HANA 資料磁碟區。</block>
+  <block id="42558f3e0d13c5a3ab297f0a09e3dce0" category="admonition">由於 anf 複本已經是從所選 Snapshot 複本建立的一個個別 Volume 、因此會停用 Clone Split 來建立 anf 複本。</block>
+  <block id="1d085da91833ced7df79bd36f6ed095f" category="doc">複製 SQL Server 資料庫備份</block>
+  <block id="98649dd054e392acef8b60637dd1e4eb" category="list-text">從「 * 管理複本 * 」檢視頁面中、選取主要儲存系統的備份。</block>
+  <block id="064cfc5ceb5ed3cddf1bdbcfa6887172" category="list-text">在 * 複製選項 * 頁面中、提供所有必要的詳細資料。</block>
+  <block id="de9209bd485fee913b85e751555d74c3" category="paragraph">如果 SQL Server 資料庫 anf 磁碟區是在手動 QoS 容量集區中設定、請指定複製磁碟區的 QoS 。</block>
+  <block id="b157956c9a5d380bfe61bbff0addd0ac" category="list-text">如果您只想複製完整備份而不需要任何記錄、請選取 * 無 * 。</block>
+  <block id="8079e6a754354a9a6eac9e4b8e07e1a0" category="list-text">如果您想要複製完整備份之後的所有可用記錄備份、請選取 * 所有記錄備份 * 。</block>
+  <block id="e43d167835a003da76fd0c153beda160" category="list-text">如果您想要根據在備份日誌之前所建立的備份日誌、以及所選日期來複製資料庫、請選取 * 依記錄備份直到 * 為止。</block>
+  <block id="aff03f4a9d4bb9f6f9919a54f788b1b8" category="list-text">如果您不想在指定的日期和時間之後套用交易記錄、請選取 * 依特定日期直到 * 。</block>
+  <block id="337965cee791a041ec57dfa24fedd746" category="list-text">選擇 * 設定排程 * 、以決定複製作業的發生頻率、複製排程應於何時開始、複製作業應於何時進行、排程何時到期、以及排程到期後是否必須刪除複本。</block>
+  <block id="f89c4239b02a9740bafee733a8c2165e" category="doc">建立資源群組並附加 Oracle 備份原則</block>
+  <block id="092f39203912611ce7a36e3e869ded6b" category="paragraph">歸檔記錄檔檔案目的地</block>
+  <block id="041394902f3d98321d4bfd68f857de13" category="paragraph">指定歸檔記錄檔的目的地。</block>
+  <block id="9563afdee3cf0b9796a53f40dab22f0c" category="list-text">選取您要設定驗證排程的原則、然後按一下*<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>。</block>
+  <block id="ac90f60a6a5dd000206a2912f740697f" category="doc">備份 SAP HANA 資源群組</block>
+  <block id="974344da42d421b4dd34c3a98dedb9c1" category="doc">還原及恢復 SAP HANA 資料庫</block>
+  <block id="2d09f159dc8f2cf742ceb30290c92ea6" category="paragraph">您可以從備份還原及恢復資料。</block>
+  <block id="0d9e685a9c99b721efacde42faca34d9" category="paragraph">若為自動探索 HANA 系統、若選取 * 完整資源 * 選項、則會使用單一檔案快照還原技術來執行還原。如果選中了 *Fast Restore* 複選框，則使用 Volume Revert 技術。</block>
+  <block id="99b3dba223899e7fb94fd6d1e2ec6105" category="paragraph">對於手動新增的資源、一律使用 Volume Revert 技術。</block>
+  <block id="6ebabcb2ba7b30c2d0a0aa41d985c7bc" category="list-text">在「還原範圍」頁面中、選取 * 完整資源 * 。</block>
+  <block id="17d91aa5af0e524138bf305183ffe871" category="paragraph">SAP HANA 資料庫的所有已設定資料磁碟區都會還原。</block>
+  <block id="d084cf7b664db6d86e5773141e47c52f" category="list-text">若為自動探索的 HANA 系統、請在「恢復範圍」頁面中執行下列動作：</block>
+  <block id="54e194bf5cfb154480d284f314afb664" category="list-text">如果您想要恢復到儘可能接近目前時間的位置、請選取 * 恢復到最近的狀態 * 。</block>
+  <block id="c01b52c5a76f239c6646e3f7088568c6" category="list-text">如果要恢復到指定時間點，請選擇 * 恢復到時間點 * 。</block>
+  <block id="f2f7d2a8ee1240bdbd4b04cf378241ab" category="list-text">如果您想要恢復到特定的資料備份、請選取 * 恢復到指定的資料備份 * 。</block>
+  <block id="bf61d8f4770f97cbbd31703c6d730b3b" category="list-text">如果您現在不想恢復、請選取 * 「無恢復」 * 。</block>
+  <block id="22b709ce565c80098fe2e4182927f525" category="list-text">指定記錄備份位置。</block>
+  <block id="eca17d3ca3df1d216ab9ee9a1a31fb70" category="list-text">指定備份目錄位置。</block>
+  <block id="10ee6df71b74c57a6b9f1595f3efce16" category="doc">備份在 Azure NetApp Files 上執行的 SAP HANA 資料庫</block>
+  <block id="13c7c834f7b8414cef2ddebbd37e4d86" category="list-text">選取 * 備份 * 箭頭以設定其他備份選項。</block>
+  <block id="820ce0339ce64af93adc295b0695c2f8" category="list-text">選取 * 自訂組態 * 箭頭、然後輸入使用此資源的所有工作所需的自訂值配對。</block>
+  <block id="54e4bfc320112c89c44dab7ba656c966" category="list-text">選擇 * Snapshot Copy Tool &gt; SnapCenter without File System Consistency * （不具檔案系統一致性的快照複本）以建立 Snapshot 複本。</block>
+  <block id="40defed757ae2b8a311e0272f6d77f1b" category="paragraph">* 檔案系統一致性 * 選項僅適用於在 Windows 主機上執行的應用程式。</block>
+  <block id="f3d79571b40021bb0ad32b78398ef057" category="doc">備份 Azure NetApp Files 上執行的 Oracle 資料庫</block>
+  <block id="5afb14e7449db1f35fc15f6f85899c21" category="list-text">在「資源」頁面中、從「檢視」下拉式清單中選取 * 資料庫 * 。</block>
+  <block id="a73fd7b4976dfcc1e3546be7ca66ef9a" category="doc">新增主機並安裝 SQL Server 資料庫的 SnapCenter 外掛程式</block>
+  <block id="eac029c95aaaeafaf99dc2f35db06dd6" category="paragraph">SnapCenter 支援在 Azure NetApp Files 上的 SMB 共用上保護 SQL 執行個體的資料。支援獨立式和可用性群組（ AG ）組態。</block>
+  <block id="d1172cfcd7a47a2529d53edd244acfc5" category="paragraph">您必須使用「 SnapCenter 新增主機」頁面來新增主機、然後安裝外掛程式套件。外掛程式會自動安裝在遠端主機上。</block>
+  <block id="016ddebcc4c9bce19a86657e974ffb35" category="list-text">選取 * 設定記錄目錄 * 、然後在「設定主機記錄目錄」頁面中、輸入主機記錄目錄的 SMB 路徑、然後按一下 * 儲存 * 。</block>
+  <block id="9c03188338f33fbc98c0bedf6a655e99" category="list-text">按一下 * 提交 * 並監控安裝進度。</block>
+  <block id="10033039ea407528903621059143983f" category="summary">新增 SAP HANA 資料庫。</block>
+  <block id="65072a18905d082d8c0ec964ee899a87" category="doc">新增 SAP HANA 資料庫</block>
+  <block id="983432516052147b4195eff39945656b" category="paragraph">您應該手動新增 SAP HANA 資料庫。</block>
+  <block id="42db56a55cf7b2e7c082bec753ed991f" category="paragraph">如果外掛程式安裝在集中式伺服器上、則需要手動新增資源。如果 SAP HANA 外掛程式安裝在 HANA 資料庫主機上、則系統會自動探索 HANA 系統。</block>
+  <block id="44ad4fb3028a44dd7e1cccf4676046cc" category="admonition">HANA 多主機組態不支援自動探索、只能透過集中式外掛程式新增。</block>
+  <block id="027f450221ddb96bc1d081ea94a7dd4a" category="list-text">輸入資源類型、可以是「單一容器」、「多租戶資料庫容器」或「非資料 Volume 」。</block>
+  <block id="e898199c829d90ae41784a78cdd2d6d9" category="list-text">輸入SAP HANA系統名稱。</block>
+  <block id="cf253dc5a484d80a6b33ae68007e2d62" category="list-text">輸入系統ID（SID）。</block>
+  <block id="f9c8e114a36ca0b831ecce357d1e5abf" category="list-text">輸入設定 HDB 安全使用者儲存金鑰的使用者名稱。</block>
+  <block id="2b0d7d4552b59040e15317cfff8068a4" category="list-text">在「提供儲存空間」頁面中、選取 * Azure NetApp Files * 作為儲存類型。</block>
+  <block id="76a43e4fdf38d1bf2ab7cd64e1d24429" category="list-text">選取 Azure NetApp 帳戶。</block>
+  <block id="b2a12ed50ab788953d23c52c8962eab8" category="list-text">選取容量集區和相關聯的磁碟區。</block>
+  <block id="ca326a551325da6560358f1a719a2589" category="doc">新增主機並安裝 SAP HANA 資料庫的 SnapCenter 外掛程式</block>
+  <block id="60c3e5dbe50b3ac1a499a2fd4014ef1b" category="paragraph">您必須使用SnapCenter 「更新主機」頁面來新增主機、然後安裝外掛程式套件。外掛程式會自動安裝在遠端主機上。</block>
+  <block id="2e5a7588f1caf86b5977da7c11079d6c" category="list-text">如果您要在集中式主機上安裝、請確定該主機上已安裝 SAP HANA 用戶端軟體、並在 SAP HANA 資料庫主機上開啟所需的連接埠、以便遠端執行 HDB SQL 查詢。</block>
+  <block id="97f2c8bf124398ba05bca9cc6fb869b1" category="list-text">位於主要 Azure NetApp Files （ Oracle 、 Microsoft SQL 和 SAP HANA ）上的資料</block>
+  <block id="3559da2fac74b3e69a2cd678efee3582" category="sidebar">保護在 Azure NetApp Files 上執行的應用程式</block>
+  <block id="dd5c6b13be74557c3408d452b60be7a6" category="sidebar">安裝 SnapCenter 並建立認證</block>
 </blocks>

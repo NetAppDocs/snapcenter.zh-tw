@@ -1,0 +1,35 @@
+---
+permalink: protect-azure/create-backup-policies-oracle.html 
+sidebar: sidebar 
+keywords: create policies, Oracle, backup policies 
+summary: 為您要備份的資源或資源群組建立備份原則。 
+---
+= 為Oracle資料庫建立備份原則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用SnapCenter 支援功能來備份Oracle資料庫資源之前、您必須先為要備份的資源或資源群組建立備份原則。
+
+.步驟
+. 在左側導覽窗格中、按一下*設定*。
+. 在「設定」頁面中、按一下*原則*。
+. 從下拉式清單中選取 Oracle 資料庫。
+. 按一下「*新增*」。
+. 在「名稱」頁面中、輸入原則名稱和說明。
+. 在「備份類型」頁面中、執行下列步驟：
++
+.. 選取備份類型為線上或離線備份。
+.. 指定排程頻率。
+.. 如果要使用Oracle Recovery Manager（RMAN）對備份進行目錄編錄、請選取*使用Oracle Recovery Manager（RMAN）進行目錄備份*。
+.. 如果您想在備份後剪除歸檔記錄、請選取*備份後的Prune歸檔記錄*。
+.. 指定刪除封存記錄檔設定。
+
+
+. 在「保留」頁面中、指定保留設定。
+. 在「指令碼」頁面中、分別輸入您要在備份作業之前或之後執行的指令碼或指令碼路徑和引數。
+. 在「驗證」頁面中、選取您要執行驗證作業的備份排程、然後分別輸入要在驗證作業之前或之後執行的預先記錄或 PostScript 路徑和引數。
+. 檢閱摘要、然後按一下「*完成*」。
+

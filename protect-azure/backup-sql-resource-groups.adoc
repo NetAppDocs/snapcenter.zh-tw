@@ -1,0 +1,28 @@
+---
+permalink: protect-azure/backup-sql-resource-groups.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for SQL Server Database, back up, resource groups 
+summary: 資源群組是主機上的資源集合。資源群組上的備份作業會對資源群組中定義的所有資源執行。 
+---
+= 備份SQL Server資源群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以備份由多個資源組成的資源群組。資源群組上的備份作業會對資源群組中定義的所有資源執行。
+
+.步驟
+. 在左側導覽窗格中、選取 * 資源 * 、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、從*檢視*清單中選取*資源群組*。
+. 在 [ 資源群組 ] 頁面中，選取您要備份的資源群組，然後選取 [ 立即備份 ] 。
+. 在「備份」頁面中、執行下列步驟：
++
+.. 如果有多個原則與資源群組相關聯、請從 * 原則 * 下拉式清單中、選取您要用於備份的原則。
+.. 備份後、選取* Verify（驗證）*以驗證隨需備份。
+.. 選擇*備份*。
+
+
+. 選取 * 監控 * > * 工作 * 來監控作業進度。
+
