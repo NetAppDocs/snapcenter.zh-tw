@@ -134,6 +134,8 @@ entries:
     url: "/protect-sco/task_delete_clone_of_a_pluggable_database.html"
 - title: 管理應用程式磁碟區
   entries:
+  - title: 什麼是應用程式磁碟區
+    url: "/protect-sco/overview-application-volume.html"
   - title: 新增應用程式磁碟區
     url: "/protect-sco/add-application-volume.html"
   - title: 備份應用程式磁碟區

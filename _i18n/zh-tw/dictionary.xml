@@ -6807,7 +6807,6 @@
   <block id="96c2f121719642c9bb76de237a79a8f7" category="list-text">支援使用進階加密標準（AES）加密來保護所有的認證資料SnapCenter 。</block>
   <block id="f8f9feb00e019b3a4905536ed6898cbc" category="list-text">使用符合聯邦資訊處理標準（FIPS）的安全演算法。SnapCenter</block>
   <block id="6e48ef9c3b9eee75beadb62ef46ee1fe" category="list-text">支援使用客戶提供的授權CA憑證。SnapCenter</block>
-  <block id="4c0acb13d249f2227e8b1f1cf0ce1119" category="list-text">支援傳輸層安全性（TLS）1.2與支援的通訊範圍包括：SnapCenter ONTAP您也可以在用戶端和伺服器之間使用TLS 1.2通訊。</block>
   <block id="40739afaa7fdf9957a38216f97ce0321" category="list-text">系統會在貴公司的防火牆內安裝支援功能、以便存取該伺服器、並可在該伺服器與外掛程式之間進行通訊。SnapCenter SnapCenter SnapCenter</block>
   <block id="60b7c3e24f63b13c2f4abe5f1a7def8e" category="list-text">支援使用AES加密的Token、24小時後即過期。SnapCenter</block>
   <block id="52804460cb53f83bd632c8bb5678e86c" category="list-text">利用Windows Active Directory整合的功能、可控制存取權限的登入和角色型存取控制（RBAC）SnapCenter 。</block>
@@ -8607,7 +8606,6 @@ Windows 主機：</block>
   <block id="ffc2be1279cc0930ef2358aa6770f7ff" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、請參閱<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="43fd8846b62a01de615c215f6601836d" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份與還原作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式指令程式說明或參閱<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="d239ebbabeedcdb87dfeedbd548986ac" category="list-text">支援災難恢復功能、使用REST API來備份功能。SnapCenter SnapCenter請參閱 <block ref="6bd0ca01dc1606a35edfa9534e3c90d2" category="inline-link-macro-rx"></block>。</block>
-  <block id="71e2b65158ea1d86e4f878e40777dafd" category="list-text">SnapCenter 5.0 支援傳輸層安全性（ TLS ） 1.3 與 ONTAP 的通訊。</block>
   <block id="c53d4394b4b820e8039b31483c1dfd5e" category="paragraph">如需Windows Cmdlet的詳細資訊、請參閱<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="9f41dc9894f346b6e32aabf91c683469" category="paragraph">如需UNIX命令的詳細資訊、請參閱<block ref="a6fc2394a8b2095d1929066d59f6fcc9" category="inline-link-rx"></block>。</block>
   <block id="e6c4248fcff66b43c157dbc37ec22080" category="paragraph">SnapLock 是高效能的法規遵循解決方案、適用於使用一次寫入、多次讀取（ WORM ）儲存設備、以未經修改的形式保留檔案、以供法規遵循與管理之用。</block>
@@ -9046,4 +9044,16 @@ SnapLock 設定是由 ONTAP 管理。</block>
   <block id="97f2c8bf124398ba05bca9cc6fb869b1" category="list-text">位於主要 Azure NetApp Files （ Oracle 、 Microsoft SQL 和 SAP HANA ）上的資料</block>
   <block id="3559da2fac74b3e69a2cd678efee3582" category="sidebar">保護在 Azure NetApp Files 上執行的應用程式</block>
   <block id="dd5c6b13be74557c3408d452b60be7a6" category="sidebar">安裝 SnapCenter 並建立認證</block>
+  <block id="e353c96a332f0cabee61ee0d1183ced5" category="list-text">SnapCenter 4.1.1 或更新版本支援傳輸層安全性（ TLS ） 1.2 以與 ONTAP 通訊。您也可以使用 TLS 1.2 在用戶端和伺服器之間進行通訊。</block>
+  <block id="35fdfe6dd04402c29d3fc6d0df727357" category="paragraph">從 5.0 開始、 SnapCenter 支援（ TLS ） 1.3 與 ONTAP 通訊。</block>
+  <block id="e9d6209daed73f3a8f0578d27a8a2a85" category="summary">應用程式 Volume 是儲存 Oracle 資料庫相關資訊的儲存設備。</block>
+  <block id="daa2e304f0d45a22bbdaee82fe42256f" category="doc">什麼是應用程式磁碟區</block>
+  <block id="b9ef14bd380b22129789d2a58055fd71" category="paragraph">應用程式 Volume 是儲存 Oracle 資料庫相關資訊的儲存設備、例如組態、安裝程式及其他非資料檔案。</block>
+  <block id="6a6e355317fc46c557aae7efee2616ae" category="paragraph">SnapCenter Plug-in for Oracle Database 可讓您建立應用程式磁碟區（非資料磁碟區）與 Oracle 資料庫的一致備份。</block>
+  <block id="23c8668967f14b47c49239015f1a75e6" category="paragraph">外掛程式可自動備份及複製應用程式磁碟區。</block>
+  <block id="460056168fe8cfae225fcede48618f89" category="list-text">在單一資源群組中保護應用程式磁碟區和 Oracle 資料庫磁碟區。</block>
+  <block id="8d4879d1f00447108f920120663f3d07" category="list-text">建立應用程式磁碟區的備份。</block>
+  <block id="af3d150952bdf0ab3693bd9da33bd032" category="list-text">建立 Oracle 資料庫與應用程式磁碟區的備份。</block>
+  <block id="39240126e5a114efbf72c14cc21a7094" category="list-text">建立資料庫的複本、以及直到時間點的應用程式磁碟區。</block>
+  <block id="c3f918653f9d61e3b2472e16235d9f90" category="list-text">檢視備份和複製作業的報告。</block>
 </blocks>
