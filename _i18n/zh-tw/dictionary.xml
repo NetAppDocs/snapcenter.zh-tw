@@ -9056,4 +9056,7 @@ SnapLock 設定是由 ONTAP 管理。</block>
   <block id="af3d150952bdf0ab3693bd9da33bd032" category="list-text">建立 Oracle 資料庫與應用程式磁碟區的備份。</block>
   <block id="39240126e5a114efbf72c14cc21a7094" category="list-text">建立資料庫的複本、以及直到時間點的應用程式磁碟區。</block>
   <block id="c3f918653f9d61e3b2472e16235d9f90" category="list-text">檢視備份和複製作業的報告。</block>
+  <block id="4db35e04fa48549bd85b1a6d4d43fb09" category="list-text">SnapCenter 4.9 P1 及更新版本支援在 VMware Cloud on Amazon Web Services （ AWS ）軟體定義資料中心（ SDDC ）環境中保護 Oracle 和 Microsoft SQL 工作負載。</block>
+  <block id="38012dbc6542f17135111019d1839fa1" category="inline-link">在 AWS SDDC 環境中使用 VMware Cloud 中的 NetApp SnapCenter 來保護 Oracle 、 MS SQL 工作負載</block>
+  <block id="50fc2fe54f751b9b7639d7a2f1fb2027" category="paragraph">如需詳細資訊、請參閱<block ref="4adac1bb1a663de205d28f66d3207227" category="inline-link-rx"></block>。</block>
 </blocks>
