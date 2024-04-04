@@ -4,7 +4,7 @@
 
 您可以使用SnapCenter 支援ONTAP SnapMirror技術的支援功能來在另一個Volume上建立備份集的鏡射複本、ONTAP SnapVault 並使用支援此技術的支援功能來執行磁碟對磁碟備份複寫、以符合標準及其他治理相關用途。在執行這些工作之前、您必須先設定來源與目的地磁碟區之間的資料保護關係、然後初始化關係。
 
-完成Snapshot複製作業後、執行SnapMirror和SnapMirror更新。SnapCenter SnapVaultSnapMirror和SnapVault SnapMirror更新是SnapCenter 執行功能不全的工作之一、請勿建立個別ONTAP 的功能不全。
+SnapCenter 會在完成 Snapshot 作業之後、執行 SnapMirror 和 SnapVault 的更新。SnapMirror和SnapVault SnapMirror更新是SnapCenter 執行功能不全的工作之一、請勿建立個別ONTAP 的功能不全。
 
 
 NOTE: 如果您是SnapCenter 從NetApp SnapManager 產品來到這個地方、並且對您設定的資料保護關係感到滿意、您可以跳過本節。

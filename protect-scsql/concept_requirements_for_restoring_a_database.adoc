@@ -34,7 +34,7 @@ summary: 從SnapCenter 適用於Microsoft SQL Server備份的還原外掛程式�
 https://support.microsoft.com/kb/2887595["Microsoft支援文件編號2887595：Windows RT 8.1、Windows 8.1和Windows Server 2012 R2更新彙總套件：2013年11月"]
 
 * 您必須備份資源群組或資料庫。
-* 如果您要將Snapshot複本複製到鏡射或保存庫、SnapCenter 則該管理員必須為來源磁碟區和目的地磁碟區指派儲存虛擬機器（SVM）給您。
+* 如果您要將快照複製到鏡像或資料保險箱、 SnapCenter 管理員必須為來源磁碟區和目的地磁碟區指派儲存虛擬機器（ SVM ）。
 +
 如需系統管理員如何指派資源給使用者的詳細資訊、請參閱SnapCenter 《關於安裝的資訊：
 

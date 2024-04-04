@@ -57,7 +57,7 @@ NOTE: 如果您建立自訂角色、則必須包含SnapCenter 所有的「管理
 
 使用認證資料來驗證獲授權的使用者是否也擁有應用程式層級的權限。SnapCenter SnapCenter
 
-例如、如果您想要在SQL Server環境中執行Snapshot複本和資料保護作業、則必須使用適當的Windows或SQL認證來設定認證資料。此伺服器SnapCenter 會使用任一種方法驗證認證集。如果您想要在ONTAP Windows檔案系統環境中執行Snapshot複製和資料保護作業、請在Windows SnapCenter 主機上執行此功能。
+例如、如果您要在 SQL Server 環境中執行 Snapshot 和資料保護作業、則必須使用適當的 Windows 或 SQL 認證來設定認證。此伺服器SnapCenter 會使用任一種方法驗證認證集。如果您要在 ONTAP 儲存設備上的 Windows 檔案系統環境中執行 Snapshot 和資料保護作業、 SnapCenter 管理員角色必須在 Windows 主機上擁有管理員權限。
 
 同樣地、如果您要在Oracle資料庫上執行資料保護作業、而且資料庫主機中的作業系統（OS）驗證已停用、則必須使用Oracle資料庫或Oracle ASM認證來設定認證資料。根據作業情況、此伺服器會使用下列其中一種方法來驗證認證集。SnapCenter
 

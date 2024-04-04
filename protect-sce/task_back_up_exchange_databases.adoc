@@ -49,9 +49,9 @@ NOTE: 在DAG中、如果主動式資料庫複本位於非NetApp儲存設備上�
 ** 如果您要備份資料庫可用度群組、請按一下資料庫可用度群組名稱。
 
 
-. 如果您要指定自訂Snapshot複本名稱，請在「資源」頁面中選取「*使用Snapshot複本的自訂名稱格式*」核取方塊，然後輸入您要用於Snapshot複本名稱的自訂名稱格式。
+. 如果您想要指定自訂的 Snapshot 名稱、請在「資源」頁面中、選取「 * 使用 Snapshot 複本的自訂名稱格式 * 」核取方塊、然後輸入您要用於 Snapshot 名稱的自訂名稱格式。
 +
-例如、_customtext_policy_hostname_或_resource_hostname_。根據預設、快照複本名稱會附加時間戳記。
+例如、_customtext_policy_hostname_或_resource_hostname_。根據預設、 Snapshot 名稱會附加時間戳記。
 
 . 在「原則」頁面中、執行下列步驟：
 +

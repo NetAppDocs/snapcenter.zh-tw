@@ -26,9 +26,9 @@ summary: 如果資源不屬於任何資源群組、您可以從「資源」頁�
 
 . 在「資源」頁面中、您可以執行下列步驟：
 +
-.. 選取核取方塊、然後輸入您要用於 Snapshot 複本名稱的自訂名稱格式。
+.. 選取核取方塊、然後輸入您要用於 Snapshot 名稱的自訂名稱格式。
 +
-例如、 `customtext_policy_hostname` 或 `resource_hostname`。根據預設、 Snapshot 複本名稱會附加時間戳記。
+例如、 `customtext_policy_hostname` 或 `resource_hostname`。根據預設、時間戳記會附加至 Snapshot 名稱。
 
 .. 指定您不想備份的歸檔記錄檔目的地。
 

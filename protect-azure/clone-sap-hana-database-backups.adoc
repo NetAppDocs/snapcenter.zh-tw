@@ -47,6 +47,6 @@ summary: 您可以使用SnapCenter 支援功能來複製備份。
 . 按一下*監控*>*工作*來監控作業進度。
 +
 
-NOTE: 由於 anf 複本已經是從所選 Snapshot 複本建立的一個個別 Volume 、因此會停用 Clone Split 來建立 anf 複本。
+NOTE: 由於 anf 複本已是從所選 Snapshot 建立的個別磁碟區、因此已停用對 anf 複本的 Clone Split 。
 
 

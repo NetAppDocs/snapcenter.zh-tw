@@ -60,7 +60,7 @@ https://automationstore.netapp.com/home.shtml["NetApp儲存自動化商店"^]
 
 * 原則型備份
 +
-以原則為基礎的備份運用NetApp Snapshot複製技術、建立快速、節省空間、應用程式一致、磁碟型的備份。或者、您也可以更新現有的保護關係、將這些備份作業自動化至二線儲存設備。
+原則型備份利用 NetApp Snapshot 技術來建立快速、節省空間、應用程式一致、磁碟型的備份。或者、您也可以更新現有的保護關係、將這些備份作業自動化至二線儲存設備。
 
 * 備份多種資源
 +
@@ -316,7 +316,7 @@ NOTE: VMware vSphere的支援VMware vSphere的VMware vCenter外掛程式可支�
 
 * 為SnapCenter 執行於Windows主機上的其他外掛程式啟用應用程式感知資料保護功能、以保護您的支援環境
 * 在SnapCenter 您的支援環境中、自動化Microsoft檔案系統的應用程式感知備份、還原及複製作業
-* 支援儲存資源配置、Snapshot複本一致性、以及Windows主機的空間回收
+* 支援 Windows 主機的儲存資源配置、 Snapshot 一致性和空間回收
 +
 
 NOTE: Windows外掛程式會在實體和RDM LUN上配置SMB共用和Windows檔案系統、但不支援SMB共用上的Windows檔案系統備份作業。

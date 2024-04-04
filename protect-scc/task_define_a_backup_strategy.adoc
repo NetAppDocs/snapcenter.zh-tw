@@ -20,8 +20,8 @@ SLA定義預期的服務層級、並解決許多與服務相關的問題、包�
 . 決定何時應備份資源。
 . 決定您需要多少備份工作。
 . 決定如何命名備份。
-. 決定是否要使用一致性群組Snapshot複本、並決定刪除一致性群組Snapshot複本的適當選項。
+. 決定是否要一致性群組快照、並決定刪除一致性群組快照的適當選項。
 . 決定要使用NetApp SnapMirror技術進行複寫、還是使用NetApp SnapVault SnapMirror技術來長期保留。
-. 確定來源儲存系統和SnapMirror目的地上Snapshot複本的保留期間。
+. 確定來源儲存系統和 SnapMirror 目的地上的 Snapshot 保留期間。
 . 判斷您是否要在備份作業之前或之後執行任何命令、並提供預先記錄或PostScript。
 

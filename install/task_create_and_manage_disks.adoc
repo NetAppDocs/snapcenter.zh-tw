@@ -295,10 +295,10 @@ NOTE: 不支援統一化可延伸韌體介面（UEFI）分割磁碟。
 * 對於完整配置的LUN、可擴充的大小（磁碟區中可用的大小）會顯示為最大大小。
 * 具有MBR-型分割區的LUN大小上限為2 TB。
 * 具有GPT型分割區的LUN儲存系統大小上限為16 TB。
-* 在調整LUN大小之前、最好先建立Snapshot複本。
-* 如果您需要從調整LUN大小之前所製作的Snapshot複本還原LUN、SnapCenter 則會自動將LUN重新調整為Snapshot複本的大小。
+* 建議您在調整 LUN 大小之前先建立 Snapshot 。
+* 如果您需要從重新調整 LUN 大小之前建立的 Snapshot 還原 LUN 、 SnapCenter 會自動將 LUN 調整為 Snapshot 的大小。
 +
-還原作業完成後、調整大小後新增至LUN的資料必須從調整大小後所製作的Snapshot複本中還原。
+還原作業完成後、重新調整 LUN 大小後新增至 LUN 的資料必須從重新調整大小後所建立的 Snapshot 還原。
 
 
 

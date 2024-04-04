@@ -32,7 +32,7 @@ NOTE: 如果命令清單中不存在這些命令、則作業將會失敗。
 .關於這項工作
 * 檔案型備份複本無法從SnapCenter 無法還原。
 * 升級SnapCenter 至還原4.3之後、SnapCenter 即可還原在還原4.2中所做的備份、但無法還原。您必須使用HANA studio或SnapCenter HANA恢復指令碼來恢復SnapCenter 在還原4.2中所做的備份。
-* 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+* 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 
 .步驟
@@ -61,7 +61,7 @@ image::../media/restoring_resource.gif[還原資源]
 +
 .. 如果您選取*完整資源*、則SAP HANA資料庫的所有已設定資料磁碟區都會還原。
 +
-如果資源包含磁碟區或qtree、則會刪除在這類磁碟區或qtree上選取要還原的Snapshot複本之後所取得的Snapshot複本、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。
+如果資源包含磁碟區或 qtree 、則會刪除選定要在這類磁碟區或 qtree 上還原的 Snapshot 之後所拍攝的 Snapshot 、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。
 
 .. 如果您選取*檔案層級*、則可以選取*全部*或選取特定磁碟區或qtree、然後輸入與這些磁碟區或qtree相關的路徑、並以逗號分隔
 +
@@ -88,7 +88,7 @@ NOTE: 如果選擇* All（全部）*、則會還原磁碟區、qtree或LUN上的
 
 +
 
-NOTE: 對於停止、 Snapshot 複本和取消停止作業的前置和後置命令、您應該檢查插件主機上的命令清單中是否存在 Linux 和 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\allowed_commands.config_ 路徑、以及 _C:\Program Files\NetApp\Snapcenter\Snapcentre Plug-In Creator\et\allowed_commands.txt_ 。
+NOTE: 對於停止、 Snapshot 和取消停止作業的前置和後置命令、您應該檢查插件主機上的命令清單中是否存在 Linux 和 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\allowed_commands.config_ 路徑、以及 Windows 的 _C ： \Program Files\NetApp\Snapcenter\Snapcenter Plug-In Creator\et\allowed_commands_list_txt.txt.
 
 . 在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。
 +

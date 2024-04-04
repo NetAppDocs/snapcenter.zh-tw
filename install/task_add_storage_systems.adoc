@@ -33,7 +33,7 @@ summary: 您應該設定儲存系統SnapCenter 、讓您能夠存取ONTAP 不必
 +
 如果啟用這些功能、SnapCenter 當AutoSupport 資源受到保護、還原或複製作業成功完成或作業失敗時、將會將支援資訊傳送至儲存系統、並將EMS訊息傳送至儲存系統的系統記錄。
 
-* 如果您打算將Snapshot複本複製到SnapMirror目的地或SnapVault 目的地、則必須為目的地SVM或叢集以及來源SVM或叢集設定儲存系統連線。
+* 如果您打算將 Snapshot 複寫到 SnapMirror 目的地或 SnapVault 目的地、則必須為目的地 SVM 或叢集、以及來源 SVM 或叢集設定儲存系統連線。
 
 
 

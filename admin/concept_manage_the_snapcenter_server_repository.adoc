@@ -96,7 +96,7 @@ _Protect - SmRepository_ Cmdlet可完成下列工作：
 C:\PS>Restore-SmRepositoryBackup -BackupName MYSQL_DS_SC_Repository_mva-x3550-s09_09-15-2016_10.32.00.4445
 ----
 +
-下列Cmdlet會在SnapCenter iSCSI LUN中意外刪除備份檔案時、還原MySQL的功能。若為VMDK、請手動從ONTAP Snapshot複本還原備份。
+下列Cmdlet會在SnapCenter iSCSI LUN中意外刪除備份檔案時、還原MySQL的功能。對於 VMDK 、請手動從 ONTAP 快照還原備份。
 
 +
 [listing]

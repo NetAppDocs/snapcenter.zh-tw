@@ -28,12 +28,12 @@ summary: 您可以使用SnapCenter 「不一樣的自訂外掛程式」來執行
 
 您可以使用儲存外掛程式進行資料保護作業。
 
-* 跨ONTAP 整個叢集取得一致性群組儲存Volume的Snapshot複本。
+* 跨 ONTAP 叢集取得儲存磁碟區的一致性群組快照。
 * 使用內建的指令碼前及後置架構來備份自訂應用程式
 +
 您可以備份ONTAP 實體磁碟區、LUN或Qtree。
 
-* 利用ONTAP 現有的複寫關係（Snapvault / SnapMirror /統一複寫）、使用SnapCenter 「更新一線快照」複本至「二線」複本
+* 使用 SnapCenter 原則、利用現有的複寫關係（ Snapvault / SnapMirror/ 統一複寫）、將主要快照更新為 ONTAP 次要快照
 +
 ONTAP 主要和次要可以是 ONTAP FAS 、 AFF 、 All SAN Array （ ASA ）、 Select 或 Cloud ONTAP 。
 

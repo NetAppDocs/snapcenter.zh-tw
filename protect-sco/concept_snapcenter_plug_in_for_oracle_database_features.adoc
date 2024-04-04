@@ -21,9 +21,9 @@ summary: 適用於Oracle資料庫的外掛程式可與Linux或AIX主機上的Ora
 +
 您可以排程備份與複製作業、設定原則型備份保留、以及執行還原作業。您也可以設定SnapCenter 使用功能支援功能來傳送電子郵件警示、主動監控環境。
 
-* 不中斷營運的NetApp Snapshot複製技術
+* 不中斷的 NetApp Snapshot 技術
 +
-使用NetApp Snapshot複製技術搭配Oracle資料庫外掛程式和UNIX外掛程式來備份資料庫。SnapCenterSnapshot複本所耗用的儲存空間最小。
+SnapCenter 使用 NetApp Snapshot 技術搭配適用於 Oracle 資料庫的外掛程式、以及適用於 UNIX 的外掛程式來備份資料庫。快照消耗的儲存空間最小。
 
 
 
@@ -45,7 +45,7 @@ summary: 適用於Oracle資料庫的外掛程式可與Linux或AIX主機上的Ora
 * 不中斷營運且自動化的備份驗證
 * 能夠在多個資料庫主機上同時執行多個備份
 +
-在單一作業中、當單一主機中的資料庫共用相同的磁碟區時、就會合併Snapshot複本。
+在單一作業中、當單一主機中的資料庫共用相同的磁碟區時、就會合併快照。
 
 * 支援實體與虛擬化基礎架構
 * 支援NFS、iSCSI、Fibre Channel（FC）、RDM、VMDK over NFS和VMFS、以及ASM over NFS、SAN、RDM和VMDK

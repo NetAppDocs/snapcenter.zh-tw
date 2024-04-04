@@ -16,7 +16,7 @@ summary: 您可以使用SnapCenter 支援功能還原備份的Exchange資料庫�
 .開始之前
 * 您必須備份資源群組、資料庫或資料庫可用度群組（DAG）。
 * 當Exchange資料庫移轉至其他位置時、還原作業無法用於舊備份。
-* 如果您要將Snapshot複本複製到鏡射或保存庫、SnapCenter 則該管理員必須為來源磁碟區和目的地磁碟區指派SVM給您。
+* 如果您要將 Snapshot 複製到鏡像或資料保險箱、 SnapCenter 管理員必須為來源磁碟區和目的地磁碟區指派 SVM 。
 * 在DAG中、如果主動式資料庫複本位於非NetApp儲存設備上、而您想要從NetApp儲存設備上的被動式資料庫複本備份還原、請將被動式複本（NetApp儲存設備）設定為主動複本、重新整理資源並執行還原作業。
 +
 執行「移動ActiveMailboxDatabase」命令、將被動式資料庫複本做為主動式資料庫複本。
@@ -44,7 +44,7 @@ summary: 您可以使用SnapCenter 支援功能還原備份的Exchange資料庫�
 +
 您可以使用Get API來顯示金鑰的值。不支援Set API。
 
-* 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+* 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 
 .步驟

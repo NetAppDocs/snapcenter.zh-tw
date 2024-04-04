@@ -30,18 +30,18 @@ NOTE: 如果您選取非NetApp LUN、毀損的資料庫或正在還原的資料�
 
 == 如何備份資料庫SnapCenter
 
-使用Snapshot複製技術來備份位於LUN或VMDK上的SQL Server資料庫。SnapCenter利用建立資料庫的Snapshot複本來建立備份。SnapCenter
+SnapCenter 使用 Snapshot 技術來備份位於 LUN 或 VMDK 上的 SQL Server 資料庫。SnapCenter 會建立資料庫的快照來建立備份。
 
 從「資源」頁面選取資料庫進行完整資料庫備份時SnapCenter 、會自動選取位於同一個儲存磁碟區上的所有其他資料庫。如果LUN或VMDK僅儲存單一資料庫、您可以個別清除或重新選取資料庫。如果LUN或VMDK包含多個資料庫、您必須清除或重新選取資料庫作為群組。
 
-位於單一磁碟區的所有資料庫都會使用Snapshot複本同時備份。如果並行備份資料庫的最大數目為35、且儲存磁碟區中有超過35個資料庫、則建立的Snapshot複本總數等於資料庫數除以35。
+位於單一磁碟區上的所有資料庫都會使用 Snapshot 同時備份。如果並行備份資料庫的最大數量為 35 個、且儲存磁碟區中有超過 35 個資料庫、則所建立的 Snapshot 總數等於資料庫數除以 35 。
 
 
-NOTE: 您可以在備份原則中設定每個Snapshot複本的資料庫數目上限。
+NOTE: 您可以在備份原則中設定每個 Snapshot 的資料庫數目上限。
 
-當使用此功能建立Snapshot複本時、會在Snapshot複本中擷取整個儲存系統磁碟區。SnapCenter不過、備份僅對建立備份的SQL主機伺服器有效。
+當 SnapCenter 建立 Snapshot 時、整個儲存系統磁碟區都會擷取在 Snapshot 中。不過、備份僅對建立備份的SQL主機伺服器有效。
 
-如果來自其他SQL主機伺服器的資料位於同一個磁碟區、則無法從Snapshot複本還原此資料。
+如果來自其他 SQL 主機伺服器的資料位於同一個磁碟區、則無法從 Snapshot 還原此資料。
 
 *瞭解更多資訊*
 

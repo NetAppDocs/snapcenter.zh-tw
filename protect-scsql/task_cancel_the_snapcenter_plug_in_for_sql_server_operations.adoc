@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html 
 sidebar: sidebar 
 keywords: cancel, backup 
-summary: 您可以取消執行中、佇列中或無回應的備份作業。當您取消備份作業時、SnapCenter 如果建立的備份並未在SnapCenter 伺服器上登錄、則停止此作業並從儲存設備中移除所有Snapshot複本。如果備份已登錄SnapCenter 到支援伺服器、則即使觸發取消動作、它也不會回復已建立的Snapshot複本。 
+summary: 您可以取消執行中、佇列中或無回應的備份作業。當您取消備份作業時、 SnapCenter 伺服器會停止作業、並在建立的備份未向 SnapCenter 伺服器註冊時、從儲存區移除所有快照。如果備份已在 SnapCenter 伺服器上註冊、即使在取消觸發之後、也不會回復已建立的 Snapshot 。 
 ---
 = 取消SnapCenter Microsoft SQL Server備份作業的功能
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您可以取消執行中、佇列中或無回應的備份作業。當�
 
 
 [role="lead"]
-您可以取消執行中、佇列中或無回應的備份作業。當您取消備份作業時、SnapCenter 如果建立的備份並未在SnapCenter 伺服器上登錄、則停止此作業並從儲存設備中移除所有Snapshot複本。如果備份已登錄SnapCenter 到支援伺服器、則即使觸發取消動作、它也不會回復已建立的Snapshot複本。
+您可以取消執行中、佇列中或無回應的備份作業。當您取消備份作業時、 SnapCenter 伺服器會停止作業、並在建立的備份未向 SnapCenter 伺服器註冊時、從儲存區移除所有快照。如果備份已在 SnapCenter 伺服器上註冊、即使在取消觸發之後、也不會回復已建立的 Snapshot 。
 
 .開始之前
 * 您必須以SnapCenter 「管理員」或「工作擁有者」身分登入、才能取消還原作業。

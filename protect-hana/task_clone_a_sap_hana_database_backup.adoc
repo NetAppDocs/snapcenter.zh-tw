@@ -32,7 +32,7 @@ NOTE: 如果命令清單中不存在這些命令、則作業將會失敗。
 
 .關於這項工作
 * 如需有關複本切割作業限制的資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 9 邏輯儲存管理指南》 ONTAP"^]。
-* 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+* 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 
 .步驟
@@ -120,7 +120,7 @@ NFS範例：
  mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
 +
 
-NOTE: 對於停止、 Snapshot 複本和取消停止作業的前置和後置命令、您應該檢查插件主機上的命令清單中是否存在 Linux 和 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\allowed_commands.config_ 路徑、以及 _C:\Program Files\NetApp\Snapcenter\Snapcentre Plug-In Creator\et\allowed_commands.txt_ 。
+NOTE: 對於停止、 Snapshot 和取消停止作業的前置和後置命令、您應該檢查插件主機上的命令清單中是否存在 Linux 和 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\allowed_commands.config_ 路徑、以及 Windows 的 _C ： \Program Files\NetApp\Snapcenter\Snapcenter Plug-In Creator\et\allowed_commands_list_txt.txt.
 
 
 

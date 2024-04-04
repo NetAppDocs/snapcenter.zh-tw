@@ -41,7 +41,7 @@ summary: 您可以使用SnapCenter 支援功能來複製SQL Server資料庫備�
 
 NOTE: 對於虛擬環境（VMDDK / RDM）、請確定掛載點是專用磁碟。
 
-* 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+* 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 
 .步驟

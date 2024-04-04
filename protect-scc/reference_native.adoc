@@ -55,7 +55,8 @@ SC_MESSAGE#<level>#<timestamp>#<message>
  a| 
 必要
  a| 
-此存根負責執行靜止。它會將應用程式置於可建立Snapshot複本的狀態。這在儲存Snapshot複製作業之前稱為。
+此存根負責執行靜止。它放置了
+應用程式進入我們可以建立 Snapshot 的狀態。這在儲存 Snapshot 作業之前稱為。
 
 
 
@@ -64,7 +65,9 @@ SC_MESSAGE#<level>#<timestamp>#<message>
  a| 
 必要
  a| 
-此存根負責執行取消靜止。它會將應用程式置於正常狀態。這是在儲存Snapshot複製作業之後呼叫的。
+此存根負責執行取消靜止。IT 所在位置
+應用程式處於正常狀態。這是在儲存後呼叫的
+Snapshot 作業。
 
 
 

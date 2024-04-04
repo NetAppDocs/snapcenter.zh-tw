@@ -56,7 +56,7 @@ NOTE: 在鏡射保存庫類型磁碟區上、版本彈性鏡像的備份複本�
 如果採用 SnapLock 啟用的備份、則按一下 * 重新整理 * 按鈕可重新整理從 ONTAP 擷取的主要和次要 SnapLock 到期時間。每週排程也會重新整理從 ONTAP 擷取的主要和次要 SnapLock 到期時間。
 
 +
-當應用程式資源分散於多個磁碟區時、用於備份的 SnapLock 到期時間將是磁碟區中為 Snapshot 複本設定的最長 SnapLock 到期時間。從 ONTAP 擷取最長的 SnapLock 過期時間。
+當應用程式資源分散於多個磁碟區時、用於備份的 SnapLock 到期時間將是磁碟區中為 Snapshot 設定的最長 SnapLock 到期時間。從 ONTAP 擷取最長的 SnapLock 過期時間。
 
 +
 對於 SnapMirror 業務連續性（ SM-BC ）、按一下「 *Refresh* 」（重新整理 * ）按鈕、查詢主站台和複本站台的 ONTAP 、以重新整理 SnapCenter 備份庫存。每週排程也會針對包含 SM-BC 關係的所有資料庫執行此活動。

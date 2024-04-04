@@ -9,7 +9,6 @@
   <block id="622c9e28dad13fa5c04d47d33d343831" category="list-text">如果主機具有與其他主機共享的資源群組、而您刪除了該主機、則資源群組也會一併刪除。</block>
   <block id="759ef57c3be2a273728558ce141e699a" category="list-text">您應該使用_remove-SmHost_ Cmdlet來移除停用或無法連線的外掛程式主機。</block>
   <block id="186767ddfa4a5b30e2b4a7d5eb5fce25" category="inline-link">《軟件指令程式參考指南》SnapCenter</block>
-  <block id="40b2be8df06289f2b15c3ba4ee7adb9d" category="list-text">移除主機所需的時間取決於備份數量和保留設定。這是因為Snapshot複本會從每個控制器中刪除、然後清除中繼資料。</block>
   <block id="4839d2f25cc35b249d5db15efa1afd75" category="paragraph">*步驟*</block>
   <block id="e3496f6d2696003cd08139c96386cc45" category="list-text">在左側導覽窗格中、按一下*主機*。</block>
   <block id="1fb1c7da13751553d9822a326bcffe06" category="list-text">在「主機」頁面中、按一下「*託管主機*」。</block>
@@ -119,7 +118,6 @@
   <block id="10b4ebc3af3b43078bbe14cbd2f856b5" category="admonition">您無法恢復手動新增的自訂外掛程式資源。</block>
   <block id="d26e732ff4468b921ec70bf797290866" category="section-title">完成資源還原</block>
   <block id="6dac61f5c61b1654fa020acda2c2434d" category="list-text">還原資源的所有磁碟區、qtree和LUN</block>
-  <block id="ce909fbfd1d823785d6ae63b6e197807" category="admonition">如果資源包含磁碟區或qtree、則會刪除在這類磁碟區或qtree上選取要還原的Snapshot複本之後所取得的Snapshot複本、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。</block>
   <block id="59d998f4e2735501ffcf1038b97c19b1" category="section-title">檔案層級還原</block>
   <block id="ef6b493c36772b4cff5ddca5d370121f" category="list-text">從磁碟區、qtree或目錄還原檔案</block>
   <block id="504e78ba630989f50409682ae7d17167" category="list-text">僅還原選取的LUN</block>
@@ -150,7 +148,6 @@
   <block id="989d21bc746b2aa2290eee8f0b763fb5" category="list-text">您應該已做好資料保護準備。</block>
   <block id="c8c80a063313a16e12f03127e0328584" category="paragraph">資料保護的準備工作包括安裝SnapCenter 功能、新增主機、建立儲存系統連線、以及新增資源等工作。</block>
   <block id="6ba578b908540138040a1f4cf18b620a" category="list-text">儲存虛擬機器（SVM）應指派給您進行鏡射或保存庫作業。</block>
-  <block id="88566b8e3d506e3456db8c4304c99e1c" category="paragraph">如果您要將Snapshot複本複製到鏡射或保存庫、則該管理員必須已將來源和目的地磁碟區的SVM指派給您。SnapCenter</block>
   <block id="aa641a0fba7a425b10304145921df291" category="list-text">您應該已經手動新增要保護的資源。</block>
   <block id="0b15a431b87402bce4bdb3d69d72102d" category="list-text">備份原則是一組規則、可管理您管理、排程及保留備份的方式。此外、您也可以指定複寫、指令碼及應用程式設定。</block>
   <block id="f29871ab419804e987d1bfb5f3274244" category="list-text">在原則中指定選項可節省您想要重複使用其他資源群組原則的時間。</block>
@@ -167,28 +164,19 @@
   <block id="33b9f4074a30cf7699528b526f1e171d" category="list-text">在「保留」頁面中、指定備份類型的保留設定、以及在「備份類型」頁面中選取的排程類型：</block>
   <block id="5d920b501536441ea32ecc24679c72a2" category="cell">如果您想要...</block>
   <block id="c1325f6903ebb5ebb2bb519a73ddb1b0" category="cell">然後...</block>
-  <block id="9562758d343cb5226c22630eacf99365" category="paragraph">保留一定數量的Snapshot複本</block>
-  <block id="189e283fb708ef792d0d8144a72e798b" category="paragraph">選取*要保留的Snapshot複本總數*、然後指定要保留的Snapshot複本數目。</block>
-  <block id="3aaac4c94ecda8362dc70a2825de8b24" category="paragraph">如果Snapshot複本數量超過指定數量、則會刪除Snapshot複本、並先刪除最舊的複本。</block>
-  <block id="6127fccc91f52e5ee1702cdfa7fa1673" category="admonition">如果您打算啟用SnapVault 此功能、則必須將保留數設為2或更高。如果您將保留數設為1、則保留作業可能會失敗、因為第一個Snapshot複本是SnapVault 參考Snapshot複本、用於進行此關係、直到將較新的Snapshot複本複寫到目標為止。</block>
   <block id="225ea283dca2590a2a542a782ac56927" category="admonition">對於使用率為1018的ONTAP 資源、如使用率為0、9.4或更新版本、ONTAP 而使用率為254的資源、如使用率為0、9.3或更新版本。如果保留設定的值高於基礎ONTAP 版支援的值、則備份將會失敗。</block>
-  <block id="b16c2ae9651bd34c3e7c132b0b29cf32" category="paragraph">將Snapshot複本保留一定天數</block>
-  <block id="f4a027d3dd6468d4bcffb446d92cfde1" category="paragraph">選取*保留Snapshot複本*、然後指定刪除Snapshot複本之前保留Snapshot複本的天數。</block>
   <block id="7cc68b5677a3b2fc34e03106ab7871ff" category="list-text">在「複寫」頁面中、指定複寫設定：</block>
   <block id="21f831502a413a739e20cbf9f2eefe54" category="cell">針對此欄位...</block>
   <block id="5e2ad6fd9deb412d871137094ee43ef0" category="cell">執行此動作...</block>
   <block id="53ef3d7584a54991b60fba81e93d201f" category="paragraph">*在建立本機Snapshot複本之後更新SnapMirror *</block>
   <block id="1275946d22bd30ab4fa43a93760353bd" category="paragraph">選取此欄位可在另一個磁碟區（SnapMirror複寫）上建立備份集的鏡射複本。</block>
-  <block id="3a30bd3496c2190790bc5bd919e52d87" category="paragraph">如果ONTAP 在「Mirror」（鏡射）和「Vault」（資料庫）類型中建立保護關係、且您只選取此選項、則在主要系統上建立的Snapshot複本將不會傳輸到目的地、而是會列在目的地中。如果從目的地選取此Snapshot複本以執行還原作業、則會顯示下列錯誤訊息：次要位置無法用於選取的資料保存/鏡射備份。</block>
   <block id="f5568337c8feae7a044bdfdfc53b4769" category="paragraph">* SnapVault 在建立本機Snapshot複本之後更新此功能*</block>
   <block id="a8026657de84cf12f52f1113eca69500" category="paragraph">選取此選項以執行磁碟對磁碟備份複寫（SnapVault 還原備份）。</block>
   <block id="e95e870e56d78f07b5959255a76d16ab" category="paragraph">*次要原則標籤*</block>
   <block id="7236d615f588fda61e35cc1fa07c46cb" category="paragraph">選取Snapshot標籤。</block>
-  <block id="57f81f76ee742c3e6fdc3de05738646d" category="paragraph">根據您選取的Snapshot複本標籤、ONTAP 將套用符合標籤的次要Snapshot複本保留原則。</block>
   <block id="f4d84b8f919668d97d6f1c1e6384cfac" category="admonition">如果您在建立本機Snapshot複本之後選擇*更新SnapMirror、您可以選擇性地指定次要原則標籤。不過、如果SnapVault 您在建立本機Snapshot複本*之後選擇*更新SUpdate、則應指定次要原則標籤。</block>
   <block id="e14f71eb0e90d4bbfc5445a42a5c2a4c" category="paragraph">*錯誤重試次數*</block>
   <block id="b1e8c3d6aa4aee19e19fd276e7c61e0b" category="paragraph">輸入作業停止前可允許的最大複寫嘗試次數。</block>
-  <block id="41c1fe93c7a860adc2ee274dfe16b5f6" category="admonition">您應該在ONTAP 適用於二線儲存設備的SnapMirror保留原則中進行設定、以避免達到二線儲存設備上Snapshot複本的上限。</block>
   <block id="fed1c121dc4f5a5484e5623e297385fb" category="list-text">檢閱摘要、然後按一下「*完成*」。</block>
   <block id="fdace28a15a0c32d01477d6a6f02b764" category="summary">在安裝SnapCenter 適用於Windows的整套解決方案之前、您應該先熟悉一些基本的主機系統空間需求和規模調整需求。</block>
   <block id="05fc12ecf449ac264abfd66ddab37332" category="doc">安裝SnapCenter 適用於Windows的功能性外掛程式套件的主機需求</block>
@@ -212,9 +200,7 @@
   <block id="96deff25f1bface148544989647467e9" category="list-text">決定何時應備份資源。</block>
   <block id="729874d0711acb352c13d8a3e53aa0b2" category="list-text">決定您需要多少備份工作。</block>
   <block id="63942c738344e1f1c6049b7faf74c632" category="list-text">決定如何命名備份。</block>
-  <block id="95aef696c73e163c6ea6099b0c1c735e" category="list-text">決定是否要使用一致性群組Snapshot複本、並決定刪除一致性群組Snapshot複本的適當選項。</block>
   <block id="3342baf28ca203b7bf1c234a26c83caf" category="list-text">決定要使用NetApp SnapMirror技術進行複寫、還是使用NetApp SnapVault SnapMirror技術來長期保留。</block>
-  <block id="3d26c33abc24209e09a71f676df43fda" category="list-text">確定來源儲存系統和SnapMirror目的地上Snapshot複本的保留期間。</block>
   <block id="ca9c798c580412195f975431858e693e" category="list-text">判斷您是否要在備份作業之前或之後執行任何命令、並提供預先記錄或PostScript。</block>
   <block id="e174be7156154463517dfe3b864d0329" category="summary">複製工作流程包括規劃、執行複製作業及監控作業。</block>
   <block id="8c922e6a0134954b667b072d00b58ce3" category="doc">使用PowerShell Cmdlet複製備份</block>
@@ -268,7 +254,6 @@
   <block id="15672c6e3417ee4aa0cd7381b560f34d" category="summary">您可以使用SnapCenter 支援功能來還原資源。還原作業的功能取決於您所使用的外掛程式。</block>
   <block id="d697fbdd5eef7a80e3797fe363484b61" category="doc">還原資源備份</block>
   <block id="fc2b6e19a895939771bd04f9bc9f7af2" category="list-text">您必須備份資源或資源群組。</block>
-  <block id="6f07fad9174a2429e52c321216b14548" category="list-text">如果您要將Snapshot複本複製到鏡射或保存庫、則該管理員必須為來源磁碟區和目的地磁碟區指派儲存虛擬機器（SVM）SnapCenter 。</block>
   <block id="fdb09cc42e4c011a17d475c9e1a1815e" category="list-text">您必須取消目前正在進行的任何要還原之資源或資源群組的備份作業。</block>
   <block id="2124f96b55bd8bcfe23c27d4d7c30129" category="paragraph">預設還原作業只會還原儲存物件。只有在自訂外掛程式提供該功能時、才能在應用程式層級執行還原作業。</block>
   <block id="530a5fa7e8fbaa4c796dbd46c93a55dd" category="list-text">在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。</block>
@@ -285,7 +270,6 @@
   <block id="498bd352a95e11b9ca37bc1c4bfbc11d" category="image-alt">還原資源</block>
   <block id="dd948b85f562407a9aee87c28c0fd30e" category="list-text">在「還原範圍」頁面中、選取*完整資源*或*檔案層級*。</block>
   <block id="e665a840f7240ecfe0bd9c88c7d36b0c" category="list-text">如果您選取*完整資源*、則會還原資源備份。</block>
-  <block id="de21de4104bb03728916aa887ea228d0" category="paragraph">如果資源包含磁碟區或qtree做為儲存佔用空間、則會刪除此類磁碟區或qtree上較新的Snapshot複本、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。</block>
   <block id="15390094a70f6891fc6b5bf032f36c29" category="list-text">如果您選取*檔案層級*、則可以選取*全部*、或選取磁碟區或qtree、然後輸入與以逗號分隔的磁碟區或qtree相關的路徑。</block>
   <block id="f47a1af7a319b571a0bacba2d5bdd6cf" category="list-text">您可以選取多個Volume和qtree。</block>
   <block id="5778b765a422af2fc3146858308856d0" category="list-text">如果資源類型為LUN、則會還原整個LUN。您可以選取多個LUN。+附註：如果您選取*全部*、則會還原磁碟區、qtree或LUN上的所有檔案。</block>
@@ -415,18 +399,13 @@
   <block id="8cab777e8f4d0f3134b1e688de9e3a14" category="list-text">*自動化中央管理*</block>
   <block id="c977f209575b6b5d579a260964bb7de1" category="paragraph">您可以排程備份作業、設定原則型備份保留、以及執行還原作業。您也可以設定SnapCenter 使用功能支援功能來傳送電子郵件警示、主動監控環境。</block>
   <block id="989a8d53a95cf1413d4fbd7dfdc2f013" category="list-text">*不中斷營運的NetApp Snapshot複製技術*</block>
-  <block id="132bc3bfff5021446bf1eec491193e6f" category="paragraph">利用NetApp Snapshot複製技術搭配使用「支援不必要的自訂外掛程式」來備份資源。SnapCenter SnapCenterSnapshot複本所耗用的儲存空間最小。</block>
   <block id="69dcda31e57641c96f304474f66756ca" category="paragraph">使用自訂外掛程式功能也有下列優點：</block>
   <block id="fda7113d1825e99bb5e099dfa43e494e" category="list-text">支援備份、還原及複製工作流程</block>
   <block id="5750866ea3f2f5172a0cbfaa24301be8" category="list-text">RBAC支援的安全性與集中式角色委派</block>
   <block id="67e3dbc43236eaec5752f527574fc4fa" category="paragraph">您也可以設定認證資料、讓獲授權SnapCenter 的功能驗證使用者擁有應用程式層級的權限。</block>
   <block id="77f89c57ca9a76d1b05a0a6547343371" category="list-text">使用NetApp FlexClone技術建立空間效率與時間點資源複本、以供測試或資料擷取之用</block>
   <block id="da7d10a7d1bd2a2e5acc1a7e98e314b4" category="paragraph">您要建立複本的儲存系統需要FlexClone授權。</block>
-  <block id="9e4633462318910dca2edeae9ec80ba5" category="list-text">支援ONTAP 一致性群組（CG）的Snapshot複本功能、做為建立備份的一部分。</block>
   <block id="b2d4bf2086608858ce65205273756f72" category="list-text">能夠在多個資源主機之間同時執行多個備份</block>
-  <block id="9fbdf25f5f7438e8ad28dc70e5ff6afe" category="paragraph">在單一作業中、當單一主機中的資源共用相同的磁碟區時、就會合併Snapshot複本。</block>
-  <block id="49bc745c5af6e687a7001eeef19edb34" category="list-text">使用外部命令建立Snapshot複本的功能。</block>
-  <block id="ee81cae3ec3e0c9309ae63b9a03ca91a" category="list-text">能夠在Windows環境中建立檔案系統一致的Snapshot複本。</block>
   <block id="af0b5aed7941c6f843b87c68b201035e" category="summary">在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。自訂外掛程式可在Windows和Linux環境中使用。</block>
   <block id="d4a7ff82c08a07473e6db99d099607ac" category="doc">新增主機和安裝SnapCenter 「更新自訂」外掛程式的先決條件</block>
   <block id="e26fb7c625f4366f8f4f984c45ecd6fc" category="list-text">您必須已建立自訂外掛程式。如需詳細資訊、請參閱開發人員資訊。</block>
@@ -544,13 +523,10 @@
   <block id="7651838ffd9b279a9ff6c4c63159427e" category="paragraph">輸入一或多個標籤、以協助您稍後搜尋資源群組。</block>
   <block id="dc5b15d16c6cbd04c1864901ca5f2732" category="paragraph">例如、如果您將HR新增為多個資源群組的標記、則稍後可以找到與HR標記相關聯的所有資源群組。</block>
   <block id="52a580de823d89b3d7b0e19883cf0a1b" category="paragraph">使用自訂名稱格式進行Snapshot複本</block>
-  <block id="aff716d8309a2ea5e7dcffc15638b023" category="paragraph">選取此核取方塊、然後輸入您要用於Snapshot複本名稱的自訂名稱格式。</block>
-  <block id="a80db864d152c8b32afdc8aba08be8a4" category="paragraph">例如、_customtext資源group原則主機名稱或資源group主機名稱_。根據預設、快照複本名稱會附加時間戳記。</block>
   <block id="667a5a1d21c8b2c591be7bfcf5d1b5ae" category="paragraph">這有助於篩選螢幕上的資訊。</block>
   <block id="c7e757b993a892f1adbc4d9d429ada9a" category="list-text">從「*可用資源*」區段中選取資源、然後按一下向右箭頭、將其移至「*選取的資源*」區段。</block>
   <block id="8cc859910effe8112e2912d3644f0bc8" category="paragraph">啟用一致性群組備份並執行下列工作：</block>
   <block id="a99f0aeaf38081c20a7370fb0f80e5fb" category="paragraph">等待一致性群組快照作業完成的時間</block>
-  <block id="16bfcf20ed729d5958d62a1310952406" category="paragraph">選取「緊急」、「中」或「輕鬆」、以指定完成Snapshot複本作業的等待時間。</block>
   <block id="01509b1df2505486f61f51b88bcefee0" category="paragraph">「緊急」= 5秒、「中」= 7秒、「輕鬆」= 20秒。</block>
   <block id="33d8fc89984b399b5f14da8a76d58c5a" category="paragraph">停用WAFL Sync</block>
   <block id="27a16d7d61f6682ceaf4d8022ffa250f" category="paragraph">選擇此選項可避免強制WAFL 使用不一致點。</block>
@@ -574,15 +550,9 @@
   <block id="39044c9904e8af5b92ac884123a563e6" category="paragraph">Archion_log_recsure_SE架構</block>
   <block id="f5c64a8a00482e0316a9a53b3ee3affc" category="paragraph">可管理子目錄內的歸檔記錄。</block>
   <block id="88ff0775a15d5ae4d05b9ecdeb6b5a48" category="paragraph">如果歸檔記錄位於子目錄下、則應使用此參數。</block>
-  <block id="97d85b626e97047020a03812221a5f99" category="list-text">按一下「* Snapshot Copy Tool*（* Snapshot複製工具*）」箭頭、選取建立Snapshot複本的工具：</block>
   <block id="70ea5c730ba565a725b5e6a5ce34b32d" category="cell">如果您需要...</block>
-  <block id="a2efdbdb435f556e1303999ceee52ac3" category="paragraph">使用適用於Windows的外掛程式、並在建立Snapshot複本之前、將檔案系統置於一致的狀態。SnapCenter對於Linux資源、此選項不適用。</block>
-  <block id="dc703326700303bf93d1386ba9fca6a5" category="paragraph">選擇SnapCenter 「以檔案系統一致性為目標」。</block>
   <block id="62559cf2803ff56106a84e128591c337" category="paragraph">此選項不適用於SnapCenter SAP HANA資料庫的不穩定插件。</block>
-  <block id="e81b2d9360690a59303d1e9e24590085" category="paragraph">建立儲存層級Snapshot複本SnapCenter</block>
-  <block id="cc1f89ce717207d3bd06c999199b9304" category="paragraph">選擇SnapCenter 「不含檔案系統一致性的不含」。</block>
   <block id="086beaa9afd2391b7d5204a8db47791c" category="paragraph">可輸入要在主機上執行的命令以建立Snapshot複本。</block>
-  <block id="fb99cb02e8a44f5112f8225ca020b979" category="paragraph">選取「其他」、然後輸入要在主機上執行的命令、以建立Snapshot複本。</block>
   <block id="53899dcc4360d3b8622ce5dc08a12950" category="list-text">在「原則」頁面中、執行下列步驟：</block>
   <block id="70c30c71587e2d0c71b7f9e97a8aad7d" category="list-text">從下拉式清單中選取一或多個原則。</block>
   <block id="e27c3f444b9f74c83a643ba11ed3a83e" category="admonition">您也可以按一下*來建立原則<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*。</block>
@@ -629,11 +599,9 @@
   <block id="6034a2219adc98364247fafa6c7ac86e" category="paragraph">需要傳回外掛程式的版本。</block>
   <block id="158432aca9b72e6906771c2e2fddbb8c" category="paragraph">由伺服器或代理程式要求外掛程式的版本。SnapCenter</block>
   <block id="b55904d7759e5a6f24d4ca0dbdafd019" category="paragraph">靜止</block>
-  <block id="6498844a78720752efd31c7ceef96db9" category="paragraph">需要在應用程式上執行靜止。在大多數情況下、這表示將應用程式置於SnapCenter 某個狀態、讓該應用程式能夠建立備份（例如Snapshot複本）。</block>
   <block id="15f6d11fd1f65efe57d9b506c0e06313" category="paragraph">在該伺服器SnapCenter 建立Snapshot複本或執行一般備份之前。</block>
   <block id="b52dd62394b28fe653e8d770689ea60c" category="paragraph">取消靜止</block>
   <block id="09ed5f9b77aca4b8dd337f525d41ea4c" category="paragraph">需要在應用程式上執行靜止。在大多數情況下、這表示應用程式會恢復正常運作狀態。</block>
-  <block id="0d8437d4c5f061421beecf8d457549e5" category="paragraph">在支援伺服器SnapCenter 建立Snapshot複本或執行一般備份之後。</block>
   <block id="8c6384dda98d8864d00e29dc96179970" category="paragraph">清理</block>
   <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="paragraph">否</block>
   <block id="ff36b404767cd635ab945ad85f4f04b9" category="paragraph">負責清除外掛程式需要清理的任何項目。</block>
@@ -855,9 +823,7 @@
   <block id="27a8a8bedafd19538124ce3fdb309e4e" category="cell">選用/必要</block>
   <block id="80f9d1ce28ebdbb90f6e6b35c5c789ad" category="paragraph">靜止</block>
   <block id="ac67ede5a84eb5a1add7ff4440e9a485" category="paragraph">必要</block>
-  <block id="4305bf9c0dcb1a2a6873aac14cbecaca" category="paragraph">此存根負責執行靜止。它會將應用程式置於可建立Snapshot複本的狀態。這在儲存Snapshot複製作業之前稱為。</block>
   <block id="aa092af188e3be05b1a73b3b230ec735" category="paragraph">取消靜止</block>
-  <block id="449021fc86b4250dcd4ffecba5f61ca8" category="paragraph">此存根負責執行取消靜止。它會將應用程式置於正常狀態。這是在儲存Snapshot複製作業之後呼叫的。</block>
   <block id="6cf49b275e3f780958fd8f3a3d44acb5" category="paragraph">Clone預先複製</block>
   <block id="d57c24f3fe52d16e7169b912dd647f0d" category="paragraph">選用</block>
   <block id="f7eeb12c0ae87e1a428729d93636f705" category="paragraph">此存根負責執行預先複製工作。這是假設您使用內建SnapCenter 的還原複製介面、而且只會在執行「clone_vol或clone_LUN」動作時觸發。</block>
@@ -903,20 +869,13 @@
   <block id="bb9d7068e92869688b6abcc02fa7e603" category="list-text">您必須已建立備份原則。</block>
   <block id="08c86005ddd32599a5beea4c7b9ff4ad" category="list-text">如果您想要備份與二線儲存設備有SnapMirror關係的資源、ONTAP 指派給儲存設備使用者的這個角色應該包含「全部快照鏡射」權限。不過、如果您使用「vsadmin」角色、則不需要「全部快照鏡像」權限。</block>
   <block id="085ab917326888bb9fd0378b5efb84b9" category="list-text">按一下您要備份的資源。</block>
-  <block id="80cb8ef1d01a491a4a563ec56f39cedc" category="list-text">在「資源」頁面中、如果您想要使用自訂名稱、請選取「*使用Snapshot COP*的自訂名稱格式」核取方塊、然後輸入Snapshot複本名稱的自訂名稱格式。</block>
-  <block id="8deb8aa93ea3b02fc36610daf36edad9" category="paragraph">例如、_customtext_policy_hostname_或_resource_hostname_。根據預設、快照複本名稱會附加時間戳記。</block>
   <block id="007bb45dbc12aff746ee53defa1f784f" category="list-text">在「應用程式設定」頁面中、執行下列動作：</block>
   <block id="23ce0178ca7588539a792fb41d10d6d6" category="list-text">按一下*備份*箭頭以設定其他備份選項：</block>
   <block id="75acd63fc160c8f401a6e89437895634" category="paragraph">視需要啟用一致性群組備份、並執行下列工作：</block>
-  <block id="6ab61c7e4778c57cf88bc1b95a583d05" category="list-text">按一下「*指令碼*」箭頭以執行「靜止」、「Snapshot複本」和「靜止」作業的「預先」和「POST」命令。您也可以在結束備份作業之前執行pres命令。</block>
   <block id="a5094e6952e443df9b800d4f5e45d91d" category="paragraph">指令碼和指令碼會在SnapCenter 支援服務器上執行。</block>
   <block id="b6b1826c899350995a39684ee19f8c7d" category="list-text">按一下「*自訂組態*」箭頭、然後輸入使用此資源之所有工作所需的自訂值配對。</block>
-  <block id="f02ae06c15b2bac3b80b81485cd916ce" category="paragraph">執行儲存層級Snapshot複本SnapCenter</block>
   <block id="6d9c2c737b6e3a27597d11ff3b1d8a05" category="paragraph">選擇* SnapCenter 不含檔案系統一致性*的功能。</block>
-  <block id="e668102d5b8a83e66e31f5c42dcbb239" category="paragraph">使用Windows外掛程式將檔案系統置於一致狀態、然後製作Snapshot複本SnapCenter</block>
   <block id="1accc18e0f25decba79f224ccd167283" category="paragraph">選擇* SnapCenter 《以檔案系統一致性*》。</block>
-  <block id="b0be4061cee618df981a407920b78462" category="paragraph">可輸入命令以建立Snapshot複本</block>
-  <block id="530fb3b2ba42bf6ae30b22ac27b110a9" category="paragraph">選取*其他*、然後輸入命令以建立Snapshot複本。</block>
   <block id="db9cc4a2ed12e21bb79e9346714c68b9" category="paragraph">在「設定所選原則的排程」區段中、會列出所選原則。</block>
   <block id="99b0a37a3e506683141bfd2275a4beb2" category="list-text">按一下 <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block> 在您要為其設定排程的原則之「設定排程」欄中。</block>
   <block id="a4412452c9cff96f8d11e97e688ba35e" category="list-text">在「新增原則_policy_name_的排程」對話方塊中、設定排程、然後按一下「*確定*」。</block>
@@ -1047,10 +1006,8 @@
   <block id="04a26f096e312ade5bd651748180efd4" category="list-text">檢視備份、還原及複製作業的報告。</block>
   <block id="08762ef2fe73d944789541451485f737" category="paragraph">*儲存外掛程式*</block>
   <block id="22f14629dccbccb3ea736a953a3743c7" category="paragraph">您可以使用儲存外掛程式進行資料保護作業。</block>
-  <block id="ba35678f07666a4f1a46da2ff07d3be9" category="list-text">跨ONTAP 整個叢集取得一致性群組儲存Volume的Snapshot複本。</block>
   <block id="c2230088d27abaa2d470e15431fe93b5" category="list-text">使用內建的指令碼前及後置架構來備份自訂應用程式</block>
   <block id="b7ef57ec0d80db01d4596e446c5f7c1f" category="paragraph">您可以備份ONTAP 實體磁碟區、LUN或Qtree。</block>
-  <block id="2ba3d313a9f79b9a7c6749bf2e99acfa" category="list-text">利用ONTAP 現有的複寫關係（Snapvault / SnapMirror /統一複寫）、使用SnapCenter 「更新一線快照」複本至「二線」複本</block>
   <block id="0930cbd774389ffda4b953dfada42944" category="list-text">恢復完整ONTAP 的實體磁碟區、LUN或檔案。</block>
   <block id="01416c60ab0c357d59811f108a67d5bd" category="paragraph">您應該手動提供個別的檔案路徑、因為瀏覽或索引功能並未內建於產品中。</block>
   <block id="17f0138477115892c87d600e535c1ed0" category="paragraph">不支援qtree或目錄還原、但只有在Qtree層級定義備份範圍時、才能複製及匯出Qtree。</block>
@@ -1087,8 +1044,6 @@
   <block id="34c6a8e1099863a52dbf55536f87b658" category="admonition">支援Linux檔案系統（Linux Flavors）。不支援AIX/Solaris（Unix Flavors）。</block>
   <block id="8cf57b0816d44a1b975402b721da2725" category="paragraph">探索完成</block>
   <block id="ce9d724a7186956382a6ad763f302ffc" category="admonition">支援Linux檔案系統（Linux Flavors）。不支援AIX和Solaris（Unix Flavors）。</block>
-  <block id="74df5012c8bd1283c16b4d90e5045b5e" category="paragraph">此存根負責執行靜止、也就是將應用程式置於可建立Snapshot複本的狀態。這在Snapshot複製作業之前稱為。保留的應用程式中繼資料應設定為回應的一部分、在後續複製或還原作業期間、應以組態參數的形式、傳回對應儲存Snapshot複本上的中繼資料。</block>
-  <block id="e1744ce71adaa3e31ac1cefb33719ea8" category="paragraph">此存根負責執行靜止、也就是將應用程式置於正常狀態。建立Snapshot複本之後就會呼叫此功能。</block>
   <block id="34db83eb305843e804a58cb6bd2946a1" category="paragraph">此存根負責執行預先複製工作。這假設您使用內建SnapCenter 的「還原伺服器複製」介面、並在執行複製作業時觸發。</block>
   <block id="91ebd6a2af6dffd236dfae9ec811613c" category="paragraph">此存根負責執行複製後的工作。這假設您使用內建SnapCenter 的「還原伺服器複製」介面、而且只有在執行複製作業時才會觸發。</block>
   <block id="04aa63c67e2110767959dc93267c3482" category="paragraph">此存根負責執行預先儲存的工作。這假設您使用內建SnapCenter 的還原伺服器介面、並在執行還原作業時觸發。</block>
@@ -1415,14 +1370,10 @@
   <block id="8eb6eae2f08f541d02277c6746c4fa05" category="image-alt">SAP HANA安裝設定工作流程</block>
   <block id="2cda512470ebd52d3c5ba685f87bb1fb" category="paragraph">若要建立SAP HANA系統複寫備份、建議將SAP HANA系統的所有資源新增至單一資源群組。如此可確保在接管容錯回復模式期間進行無縫備份。</block>
   <block id="8bd989fb65665020d24c4db21e1da81d" category="list-text">在「資源」頁面中、按一下「*新增資源群組*」。</block>
-  <block id="f575e6fdc603f5206dc21a87a354406b" category="paragraph">例如、customtext資源group原則主機名稱或資源group主機名稱。根據預設、快照複本名稱會附加時間戳記。</block>
   <block id="0e37d8b83258c6a647c282f496b46f7b" category="list-text">在「資源」頁面中、從*主機*下拉式清單中選取主機名稱、並從*資源類型*下拉式清單中選取資源類型。</block>
-  <block id="ed8207a67488af27356940d5feaf9f82" category="paragraph">選擇*緊急*、*中型*或*休閒*、以指定Snapshot複製作業完成的等待時間。</block>
-  <block id="0d7285674023c3795c1345455bf18c08" category="list-text">按一下「*指令碼*」箭頭、然後輸入「靜止」、「Snapshot複本」及「靜止」等作業的pre-POST命令。您也可以輸入要在發生故障時結束之前執行的預先命令。</block>
   <block id="775b811b88d8fc4fc28b0d206dcc4c05" category="list-text">按一下「*自訂組態*」箭頭、然後輸入使用此資源進行所有資料保護作業所需的自訂金鑰值配對。</block>
   <block id="036fef469740fe0c7a8ae6e09ddcb791" category="paragraph">可讓歸檔記錄管理刪除歸檔記錄。</block>
   <block id="0d1c37a6cf22ce8a58bdf0cb6bb40c68" category="admonition">SAP HANA Linux外掛系統支援自訂金鑰值配對、但註冊為集中式Windows外掛程式的SAP HANA資料庫則不支援。</block>
-  <block id="f3534eb85a79e67d42411ae7be3de94f" category="paragraph">選取*其他*、然後輸入要在主機上執行的命令、以建立Snapshot複本。</block>
   <block id="39fba97fa35b3e2df0e6339cd21abe23" category="paragraph">原則列於「設定所選原則的排程」區段。</block>
   <block id="eb40bd4c68324257632328b6d08fa139" category="list-text">在「Configure排程」欄中、按一下*<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*針對您要設定的原則。</block>
   <block id="7c221f1777123603eacf6f596630737a" category="paragraph">已設定的排程會列在*已套用的排程*欄中。</block>
@@ -1470,7 +1421,6 @@
   <block id="1b5d71bcf3ad020a170874b19a197c5e" category="paragraph">當使用者選擇*租戶資料庫*或*完整還原*選項時、不支援多個租戶的恢復作業SnapCenter 。您必須使用HANA Studio或HANA python指令碼來執行還原作業。</block>
   <block id="328fe5af43dcf98de458cd96c45d01e5" category="list-text">如果您要還原整個磁碟區、請選取* Volume Revert *。</block>
   <block id="688445a2db4c04104799e570d7137a10" category="paragraph">此選項可用於SnapCenter 在NFS環境中進行的還原4.3備份。</block>
-  <block id="403cf9a84060a96d70c006583dd1730f" category="paragraph">如果資源包含磁碟區或qtree、則會刪除在這類磁碟區或qtree上選取要還原的Snapshot複本之後所取得的Snapshot複本、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。當選擇*完整資源*與*磁碟區還原*選項進行還原時、此選項即適用。</block>
   <block id="adbdea83f9a3ed8226883751435bfbf1" category="list-text">選擇*租戶資料庫*。</block>
   <block id="ebe1639cfdfd980b05c9bbb602656161" category="paragraph">此選項僅適用於MDC資源。</block>
   <block id="b8b567d4ba521c0d72dfa10acaf6a9b9" category="paragraph">執行還原作業之前、請務必先停止租戶資料庫。</block>
@@ -1519,7 +1469,6 @@
   <block id="6fee97e44353ed8e1ca5358c6abe1798" category="doc">監控SAP HANA資料庫備份作業</block>
   <block id="1dd409d7b835d13842d9f347c93a6de3" category="doc">還原及還原手動新增的資源備份</block>
   <block id="c3b3d774c585dd79fb37eb8f605a3cdc" category="list-text">如果您選取*完整資源*、則SAP HANA資料庫的所有已設定資料磁碟區都會還原。</block>
-  <block id="cbfab698f18b454fe4b80a18cff2ed7f" category="paragraph">如果資源包含磁碟區或qtree、則會刪除在這類磁碟區或qtree上選取要還原的Snapshot複本之後所取得的Snapshot複本、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。</block>
   <block id="5992dc084820c1bb7deda13d5ca23184" category="list-text">如果您選取*檔案層級*、則可以選取*全部*或選取特定磁碟區或qtree、然後輸入與這些磁碟區或qtree相關的路徑、並以逗號分隔</block>
   <block id="57235293b58bcee8f885f03c7cc2bf98" category="list-text">如果資源類型為LUN、則會還原整個LUN。</block>
   <block id="e57982197dd9cb2dade8d5ebc3ffa4ab" category="paragraph">您可以選取多個LUN。</block>
@@ -1538,9 +1487,7 @@
   <block id="3bf75bf70c2d427f3de5388460f1ba00" category="summary">可與外掛應用程式及儲存系統上的NetApp技術整合。SnapCenter若要搭配SAP HANA資料庫外掛程式使用、您可以使用SnapCenter 這個圖形化使用者介面。</block>
   <block id="d7fdaf85ee16b5bdacd134994a4bb218" category="doc">SAP HANA資料庫功能的選用外掛程式SnapCenter</block>
   <block id="6fb6e736abe2121b5ad7a964c6879b29" category="paragraph">此支援介面可在外掛程式與環境之間提供標準化與一致性。SnapCenter利用此支援介面、您可以跨外掛程式完成一致的備份、還原及複製作業、使用集中式報告、使用概覽儀表板檢視、設定角色型存取控制（RBAC）、以及監控所有外掛程式的工作。SnapCenter</block>
-  <block id="cdeab085bb0baca278e3fd127c3bba01" category="paragraph">利用NetApp Snapshot複製技術搭配SAP HANA資料庫外掛程式來備份資源。SnapCenter</block>
   <block id="e7e4cc54822b6895b1ed2f1d8b2ba77b" category="paragraph">SAP HANA資料庫外掛程式的使用也具有下列優點：</block>
-  <block id="9596ee91c9b7773aba04b6a3a9a68174" category="list-text">能夠使用外部命令建立Snapshot複本。</block>
   <block id="6f52ab5eb8ac5cf70bdcac9134b36a7c" category="list-text">支援檔案型備份。</block>
   <block id="691f9dff16ebd5da65b5dbbe0c978b53" category="list-text">支援XFS檔案系統上的Linux LVM。</block>
   <block id="f70451089f1e1bfca806390a988a70f9" category="summary">某些HANA執行個體不支援自動探索。您必須手動新增這些資源。</block>
@@ -1579,7 +1526,6 @@
   <block id="7856cdeaea7e701262739e1779b10aa3" category="section-title">檔案型備份</block>
   <block id="4c61ae71e16d4bd98d42fac16e453319" category="paragraph">檔案型備份可驗證資料庫的完整性。您可以排定在特定時間間隔執行檔案型備份作業。只備份作用中的租戶。您無法從SnapCenter 無法還原及複製檔案型備份。</block>
   <block id="c6dba23441b7b81118b01afb845de37e" category="section-title">Snapshot複製型備份</block>
-  <block id="471cd56f3a3ff2711bc53c71b2a143ac" category="paragraph">Snapshot複製型備份運用NetApp Snapshot複製技術、為SAP HANA資料庫所在的磁碟區建立線上唯讀複本。</block>
   <block id="e53ba889508b719f73b0223755d7a145" category="summary">您可以使用SnapCenter 支援功能來複製備份。您可以從主要或次要備份複製。</block>
   <block id="cc9ec1117ac60bf06e35d58497993679" category="doc">複製SAP HANA資料庫備份</block>
   <block id="ff9ea1d5d9e34a2e53ae21ce93b5318b" category="list-text">您應該已備份資源或資源群組。</block>
@@ -1619,12 +1565,10 @@
   <block id="51637044cc8ef099cbd7a621fcec5a60" category="list-text">根據SnapCenter 保留設定、刪除在更新版本中執行的備份。</block>
   <block id="053b2f9960ca5511b7f50f4c35408867" category="list-text">從「拓撲」頁面刪除資源群組。</block>
   <block id="f8e1875f1ca7bafd5da6a29fa6bcda74" category="list-text">從「資源」頁面刪除舊的MDC資源。</block>
-  <block id="14b1f939d4d6ad1f9002f584e1e54fa8" category="paragraph">例如、如果主要Snapshot複本保留期間為7天、而次要Snapshot複本保留時間為45天、45天之後、且刪除所有備份之後、您必須刪除資源群組和舊的MDC資源。</block>
   <block id="e010280946f254b9face32c9e91fa35e" category="inline-link-macro">在「拓撲」頁面中檢視SAP HANA資料庫備份與複製</block>
   <block id="7b61486d739fb4f1d37092b600cea0e2" category="paragraph"><block ref="7b61486d739fb4f1d37092b600cea0e2" category="inline-link-macro-rx"></block></block>
   <block id="780c0ca05b56b9c80b7a61ef7ff2efa8" category="summary">可在儲存系統和檔案系統層級、以及SAP HANA備份目錄中管理記錄和資料備份的管理。SnapCenter</block>
   <block id="9024e1f264db01cbcede096090ebf938" category="doc">如何管理記錄與資料備份的內部管理SnapCenter</block>
-  <block id="d92a8f6f3c2b6a9c57099c523a22f5b2" category="paragraph">主要或次要儲存設備上的Snapshot複本、以及SAP HANA目錄中對應的項目、會根據保留設定予以刪除。SAP HANA目錄項目也會在刪除備份和資源群組時刪除。</block>
   <block id="515099a9db2d69620b1bbc080fe5200a" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。此指令程式說明及Cmdlet參考資訊包含PowerShell Cmdlet的詳細資訊。SnapCenter</block>
   <block id="d22047afaa5fcff0c93fc9cb30e1d95a" category="summary">您可以建立資源（資料庫）或資源群組的備份。備份工作流程包括規劃、識別備份資料庫、管理備份原則、建立資源群組及附加原則、建立備份及監控作業。</block>
   <block id="4716a9a8179e1e4a85b0d1c8b60a95fc" category="doc">備份SAP HANA資源</block>
@@ -1637,20 +1581,16 @@
   <block id="3ee4871644963356f98fad58d0b99216" category="paragraph">您必須指定恢復的日期和時間。</block>
   <block id="7ba57e19f3511ec8095d5f1239ebabca" category="list-text">將資料庫恢復至特定的資料備份</block>
   <block id="91e17023cada2b1f21dbf9949614b65a" category="paragraph">此外、SAP HANA資料庫也提供「無法恢復」選項。SnapCenter</block>
-  <block id="0a3ee0e4442fc13af19fee91daba03ad" category="summary">您可以使用預設的Snapshot複本命名慣例、也可以使用自訂的命名慣例。預設的備份命名慣例會在Snapshot複本名稱中新增時間戳記、協助您識別複本的建立時間。</block>
   <block id="1762d13aea1b5d74a284ce4d4d490287" category="doc">SAP HANA資料庫外掛程式的備份命名慣例</block>
-  <block id="535e5146f6710c64096ef0bec8fde052" category="paragraph">Snapshot複本使用下列預設命名慣例：</block>
   <block id="99bb793d8518c3738d75ad0f87e31dcf" category="paragraph">"resourceGroupname_hostname_timestamp"</block>
   <block id="d5cc6c862c6a1f4384bd43917710a763" category="paragraph">您應該以邏輯方式命名備份資源群組、如下列範例所示：</block>
   <block id="bdd8b7afde2c57bb177f08a155eb0f00" category="paragraph">在此範例中、語法元素具有下列意義：</block>
   <block id="0a582eb0bda617d73885518760675220" category="list-text">_dbs1_是資源群組名稱。</block>
   <block id="cbcca0e2763af2ef4379ffa9a0fee87d" category="list-text">_mach1x88_是主機名稱。</block>
   <block id="1cd8edb6081ac8a62963443b4802377c" category="list-text">_03-12-2015_23.17.26_是日期和時間戳記。</block>
-  <block id="a17dc09f2a6c5969ecc6d4e607cd5456" category="paragraph">或者、您也可以選取*使用Snapshot COPY*的自訂名稱格式、以指定Snapshot複本名稱格式、同時保護資源或資源群組。例如、customtext資源群組原則主機名稱或資源群組主機名稱。根據預設、時間戳記尾碼會新增至Snapshot複本名稱。</block>
   <block id="3ae095e6e07d17e8918b6a67b8c784c9" category="summary">在建立備份工作之前定義備份策略、有助於您取得成功還原或複製資源所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您的備份策略的主要決定因素。</block>
   <block id="e905ed4042dd0ec46ff540a7c45c6f31" category="doc">定義SAP HANA資料庫的備份策略</block>
   <block id="dae0c1941584d66ccde8deef4940141d" category="paragraph">在建立備份工作之前定義備份策略、有助於您取得成功還原或複製資源所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您備份策略的主要決定因素。</block>
-  <block id="62d32bd76c6f8fcf3452d35ef4b7af47" category="list-text">決定是否要建立Snapshot複本型原則、以備份資料庫的應用程式一致Snapshot複本。</block>
   <block id="8122a0c069e9fbb65067d3355a80e0fb" category="list-text">決定是否要驗證資料庫的完整性。</block>
   <block id="ef5e5410c69045de99fe88c248670ea8" category="list-text">決定您要使用NetApp SnapMirror技術進行複寫、還是使用NetApp SnapVault SnapMirror技術進行長期保留。</block>
   <block id="082307c48bdbc0df0689128d4a08ad92" category="list-text">判斷您要在備份作業之前或之後執行任何命令、並提供預先記錄或附有附有附有附有附有附有附有附有附有附有附有附有附有</block>
@@ -1694,16 +1634,13 @@
   <block id="7549e4590c51e2808eff73abfe0bfd99" category="list-text">在「Configure databasing settings（設定資料庫設定）」區段中、輸入HDB Secure User Store Key。</block>
   <block id="41119aa704f7776e425d802cc1efdd26" category="admonition">外掛程式主機名稱隨即顯示、HDB SQL OS使用者會自動填入&lt;SID&gt;adm。</block>
   <block id="508557159ac9ed78ebc5783d068e5939" category="paragraph">您可以從「拓撲」頁面修改資料庫組態。</block>
-  <block id="29921091f69f41a95339ffb3d8dc4dc8" category="summary">您可以使用外掛程式為資源群組建立一致性群組Snapshot複本。一致性群組是一個容器、可容納多個磁碟區、以便您將其管理為單一實體。一致性群組是多個磁碟區的同步Snapshot複本、提供一組磁碟區的一致複本。</block>
   <block id="9e869fca025d68642fcd561a55b8416a" category="doc">SAP HANA資料庫的功能介紹如何使用一致性群組Snapshot複本SnapCenter</block>
-  <block id="cda7be8fe8913527bfa13f746d857c84" category="paragraph">您也可以指定儲存控制器一致群組Snapshot複本的等待時間。可用的等待時間選項包括*緊急*、*中*和*休閒*。您也可以在WAFL 一致的群組Snapshot複製作業期間、啟用或停用Write Anywhere File Layout（更新）同步。利用此技術、可提升一致性群組Snapshot複本的效能。WAFL</block>
   <block id="68e32079f812553771749d1bb9d274ff" category="summary">當您準備備備備份或複製資源時、您可能會發現在一線和二線儲存設備上檢視所有備份和複製的圖形化表示方式很有幫助。</block>
   <block id="9b09db11200fb787ad2c7a490fdd0a19" category="admonition">顯示的備份數包括從二線儲存設備刪除的備份數。例如、如果您使用原則建立6個備份、僅保留4個備份、則顯示的備份數為6。</block>
   <block id="7debb54b4c31ab5f29560ac81dab00fe" category="admonition">在鏡射保存庫類型磁碟區上、版本彈性鏡像的備份複本會顯示在拓撲檢視中、但拓撲檢視中的鏡射備份計數並不包含版本彈性備份。</block>
   <block id="41d38b2eca9ea765772bfdd8438f72b8" category="admonition">SAP HANA系統複寫主要資源支援還原和刪除作業、次要資源則支援複製作業。</block>
   <block id="9e9f875b7baeaf8325e0b729f36b4671" category="paragraph">在「拓撲」頁面中、您可以看到可供所選資源或資源群組使用的所有備份和複本。您可以檢視這些備份與複製的詳細資料、然後選取這些資料以執行資料保護作業。</block>
   <block id="0aa6b4b4509f20915de241ab3125773b" category="list-text">請檢閱*摘要卡*、查看一線與二線儲存設備上可用的備份與複本數量摘要。</block>
-  <block id="7f6ba439286f41d27f288dd7335169c5" category="paragraph">「*摘要卡*」區段會顯示檔案型備份、Snapshot複本備份及複本的總數。</block>
   <block id="3b13d38fd3982d4d25de4533ccccd33c" category="paragraph">按一下「*重新整理*」按鈕會開始查詢儲存設備、以顯示準確的計數。</block>
   <block id="8decbf1aae0caf98d11e0d7812d18fa5" category="list-text">從表格中選取備份、然後按一下資料保護圖示以執行還原、複製及刪除作業。</block>
   <block id="54473c2cfe1570548e51b95d5d44628f" category="admonition">您無法重新命名或刪除二線儲存設備上的備份。</block>
@@ -1729,28 +1666,19 @@
   <block id="19999b58b15a4b6c9b7d47212a32aeba" category="list-text">選擇備份類型：</block>
   <block id="1ec8e0dcd181569d863906d3db3cbc7a" category="paragraph">執行資料庫的完整性檢查</block>
   <block id="5ea8c203a8e8ed3f981e261385d48b32" category="paragraph">選擇*檔案型備份*。只備份作用中的租戶。</block>
-  <block id="c7ca59353b5fbf390c454a539e22a12e" category="paragraph">使用Snapshot複製技術建立備份</block>
   <block id="58c4ab72512763368202ec9054d5b838" category="paragraph">選擇* Snapshot based *。</block>
   <block id="6dfee293c05174bbd44cb5148876cd2b" category="admonition">您可以在建立資源群組時、指定備份作業的排程（開始日期、結束日期和頻率）。這可讓您建立共用相同原則和備份頻率的資源群組、也可讓您為每個原則指派不同的備份排程。</block>
   <block id="b093b4eff25852e5f19297a922c5587f" category="list-text">在「*自訂備份設定*」區段中、提供必須以金鑰值格式傳遞至外掛程式的任何特定備份設定。</block>
   <block id="fc757224d0f11cae40cba577a1aa87f2" category="paragraph">您可以提供多個金鑰值來傳遞給外掛程式。</block>
-  <block id="7c180945c3efa4def592180bfeae77c5" category="admonition">對於Snapshot複製型備份、如果您打算啟用SnapVault 此功能、則必須將保留計數設為2或更高。如果您將保留數設為1、則保留作業可能會失敗、因為第一個Snapshot複本是SnapVault 參考Snapshot複本、用於進行此關係、直到將較新的Snapshot複本複寫到目標為止。</block>
   <block id="c0ab35de65d78830f03751afe7a38d7b" category="admonition">對於SAP HANA系統複寫、建議將SAP HANA系統的所有資源新增至單一資源群組。如此可確保保留正確的備份數量。</block>
-  <block id="a6be6f24e838a4da069bddb143958a11" category="admonition">對於SAP HANA系統複寫、所取得的Snapshot複本總數將等於資源群組的保留集。移除最舊的Snapshot複本是根據最舊Snapshot複本所在的節點而決定。例如、對於使用SAP HANA System Replication一線資源群組和SAP HANA System Replication二線資源群組、保留值設為7。您一次最多可取得7個Snapshot複本、包括SAP HANA System Replication一線複本和SAP HANA System Replication二線複本。</block>
   <block id="d19356a2f0a6b22cf9697eeb6f1aaab2" category="list-text">對於Snapshot複製型備份、請在「複寫」頁面中指定複寫設定：</block>
-  <block id="b1b35a317e8c296440243c1d7986c039" category="paragraph">如果ONTAP 在「Mirror」（鏡射）和「Vault」（資料庫）類型中建立保護關係、且您只選取此選項、則在主要系統上建立的Snapshot複本將不會傳輸到目的地、而是會列在目的地中。如果從目的地選取此Snapshot複本以執行還原作業、則會顯示「次要位置無法用於選取的資料保存/鏡射備份」錯誤訊息。</block>
-  <block id="dfc2bb18d15f87135d39c7efb3d45284" category="admonition">您應該在ONTAP 適用於二線儲存設備的SnapMirror保留原則中進行設定、以避免達到二線儲存設備上Snapshot複本的上限。</block>
   <block id="1c9948efe4bec2e09636b9c816bd9d20" category="summary">如果某個資源尚未納入任何資源群組、您可以從「資源」頁面備份該資源。</block>
   <block id="7394e84832837e7d0dc503d85eb3f36c" category="doc">備份SAP HANA資料庫</block>
-  <block id="8f0e9744b1000b3672d2bdcf50a74d27" category="list-text">對於Snapshot複製型備份作業、請確定所有租戶資料庫均有效且有效。</block>
   <block id="ae75553103cbeaaaa3b0e4002805ae6f" category="paragraph"><block ref="ae75553103cbeaaaa3b0e4002805ae6f" category="inline-link-macro-rx"></block></block>
   <block id="961e6abd0c7a72786d3641390a4dea5f" category="list-text">如果您想要在一或多個租戶資料庫關閉時建立檔案型備份、請使用「Set-ConfigSmSettings'指令程式」、將HANA內容檔案中的參數參數設定為* Yes*。</block>
   <block id="a2286f0c6fbfecb0501c43aa965242b6" category="list-text">在「資源」頁面中、根據資源類型篩選*檢視*下拉式清單中的資源。</block>
-  <block id="0ab7e5f8a6ae4c1833f0606e717b782e" category="list-text">在「資源」頁面中、選取*使用Snapshot COPU*的自訂名稱格式、然後輸入您要用於Snapshot複本名稱的自訂名稱格式。</block>
   <block id="50ce6bc02d574c2cab1fc82a19854cf8" category="paragraph">等待「一致性群組快照」作業完成的時間</block>
   <block id="419f55f97321a95d51e21f7ca2e9b02d" category="paragraph">您也可以在結束備份作業之前執行pres命令。指令碼和指令碼會在SnapCenter 支援服務器上執行。</block>
-  <block id="2ca1729f14a40401626e0eaac1397926" category="paragraph">建立儲存層級Snapshot複本SnapCenter</block>
-  <block id="106e549635779a49f4846a54f63000c8" category="paragraph">使用Windows外掛程式將檔案系統置於一致狀態、然後建立Snapshot複本SnapCenter</block>
   <block id="d9efe8cd3b84ef411469a4acc1e9bb8a" category="list-text">按一下*<block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block>*在您要為其設定排程的原則的「設定排程」欄中。</block>
   <block id="90334c9b6a705f8c6dafb182257f149b" category="paragraph">_policy_name_是您選取的原則名稱。</block>
   <block id="7dfb69fb5ea21273d78d12733b1b3b4f" category="list-text">如果您已將多個原則套用至資源、請從* Policy*下拉式清單中、選取您要用於備份的原則。</block>
@@ -1819,7 +1747,6 @@
   <block id="bb3cdc866288305ce31a483a8074dfe8" category="list-text">在「管理複本」檢視中、按一下主儲存設備或次儲存設備的*備份*、即可查看備份的詳細資料。</block>
   <block id="611ffb27775c37bf7e60cd26cf9094c8" category="paragraph">備份的詳細資料會以表格格式顯示。</block>
   <block id="85000b203e676bc7818219dc9faf5391" category="list-text">從表格中選取備份、然後按一下資料保護圖示以執行還原、重新命名及刪除作業。</block>
-  <block id="940f5685e97ecab99340ae1beaa57791" category="admonition">您無法重新命名或刪除二線儲存設備上的備份。刪除Snapshot複本是由ONTAP 不保留資料的設定來處理。</block>
   <block id="309792b343a6affaca1b564ebe6d92a5" category="summary">適用於Microsoft Exchange Server的功能區外掛程式是NetAppSnapCenter軟體的主機端元件、可讓您對Exchange資料庫進行應用程式感知資料保護管理。SnapCenterExchange外掛程式可在SnapCenter 您的支援環境中自動備份及還原Exchange資料庫。</block>
   <block id="c41e777bd921bd5fc9079273c0ed35db" category="doc">適用於Microsoft Exchange Server的插件概述SnapCenter</block>
   <block id="e126a0dff251b10008436e2bf2a5dd06" category="paragraph">適用於Microsoft Exchange Server的《支援功能》外掛程式是NetApp支援應用程式感知的Exchange資料庫資料保護管理功能的NetApp支援軟體主機端元件。SnapCenter SnapCenterExchange外掛程式可在SnapCenter 您的支援環境中自動備份及還原Exchange資料庫。</block>
@@ -1864,7 +1791,6 @@
   <block id="a1232051e6c5e893c86adc35d8552a57" category="paragraph">在建立備份工作之前定義備份策略、有助於確保您擁有成功還原資料庫所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、主要決定您的備份策略。</block>
   <block id="d30dabe55676a51374c03d57a495fc56" category="paragraph">SLA定義預期的服務層級、並解決許多與服務相關的問題、包括服務的可用度和效能。RTO是指在服務中斷後必須還原業務程序的時間。RPO定義了檔案的存留期策略、這些檔案必須從備份儲存設備中恢復、以便在故障後恢復正常作業。SLA、RTO及RPO有助於備份策略。</block>
   <block id="5947ba0032a3037dbf7c6e98581f0d07" category="section-title">Exchange資料庫支援的備份類型</block>
-  <block id="0ba326934a946ce406e1443b1fbae49f" category="paragraph">使用SnapCenter 支援功能來備份Exchange信箱時、您必須選擇資源類型、例如資料庫和資料庫可用度群組（DAG）。利用Snapshot複製技術來建立資源所在磁碟區的線上唯讀複本。</block>
   <block id="a3c82f66d39159c3e9d428cd534beb34" category="cell">備份類型</block>
   <block id="77a2dc238b9d72214020436ab4f4364f" category="paragraph">完整備份與記錄備份</block>
   <block id="c0ccfcb0fa212601291c0ab7fc0d5274" category="paragraph">備份資料庫和所有交易記錄、包括遭截的記錄。</block>
@@ -1915,8 +1841,6 @@
   <block id="5b1fb4d3a28a0f26688d270531975a93" category="admonition">如果您最近新增資源至SnapCenter Refresh*、請按一下「*重新整理資源*」以檢視新增的資源。</block>
   <block id="afa6a477c747b68e1d1dc87d163912e8" category="list-text">按一下「*新增資源群組*」。</block>
   <block id="866fa0fd559b5b17698e491ad5db1137" category="paragraph">輸入資源群組名稱。</block>
-  <block id="0394f23db0f190b75cbe21e4a5a40ee7" category="paragraph">選用：輸入自訂的Snapshot複本名稱和格式。</block>
-  <block id="03f5752c8a2bd8ac3f833f6139819b87" category="paragraph">例如、_customtext_resourcegrod_policy_hostname_或_resourcegroup_hostname_。根據預設、快照複本名稱會附加時間戳記。</block>
   <block id="8559383a73a140c79f029e57a237db3b" category="list-text">在「資源」頁面中、執行下列步驟：</block>
   <block id="1dfefedcde6c869266d5859ab23ccea2" category="list-text">從下拉式清單中選取資源類型和資料庫可用度群組、以篩選可用資源的清單。</block>
   <block id="11ef45d816fd55939848d9cd23e6b990" category="admonition">如果您最近新增了資源、只有在重新整理資源清單之後、這些資源才會出現在可用資源清單中。</block>
@@ -1925,7 +1849,6 @@
   <block id="88fd9ea8ef5d6be2e4dbe0754f9b540c" category="list-text">若要將資源從「可用資源」區段移至「選取的資源」區段、請執行下列其中一個步驟：</block>
   <block id="d5e1fd204fed10a4447207586da4f7c6" category="list-text">選取*自動選取同一個儲存磁碟區上的所有資源*、將同一個磁碟區上的所有資源移至「選取的資源」區段。</block>
   <block id="7cb4d9086d6c1cf01b806f319a85cc63" category="list-text">從「可用資源」區段中選取資源、然後按一下向右箭頭、將其移至「選取的資源」區段。</block>
-  <block id="40d8f5c9b7ab33a156de7775f928f1c6" category="paragraph">Microsoft Exchange Server的資源群組SnapCenter 每個Snapshot複本不能有超過30個資料庫。如果一個資源群組中有超過30個資料庫、則會為其他資料庫建立第二個Snapshot複本。因此、主備份工作下會建立2個子工作。對於具有二線複寫的備份、SnapMirror或SnapVault 更新正在進行中、可能會發生兩個子工作的更新重疊的情況。即使記錄顯示工作已完成、主備份工作仍會持續執行。</block>
   <block id="615d8aed25e6e033e2c4a35b84715c0e" category="admonition">如果原則包含*在備份工作建立時間*選取的伺服器上備份複本選項、則會顯示伺服器選擇選項以選取一或多個伺服器。伺服器選擇選項只會列出所選資料庫位於NetApp儲存設備上的伺服器。</block>
   <block id="351f7bad3082107e47ad4d5178c303b5" category="list-text">在「新增原則_policy_name_的排程」對話方塊中、指定開始日期、到期日和頻率來設定排程、然後按一下「*確定*」。</block>
   <block id="13d62cafc9cfc5929565224152d9294b" category="paragraph">您必須針對原則中所列的每個頻率執行此動作。設定的排程會列在「設定所選原則的排程」區段的「*套用的排程*」欄中。</block>
@@ -2020,7 +1943,6 @@
   <block id="8373034f279dfd1570ec179c090b858c" category="list-text">如果顯示「拓撲」檢視、請按一下「*保護*」。</block>
   <block id="c5f4c29439aa6c78216cfa3f9865548c" category="list-text">如果顯示Database - Protect Resource（資料庫-保護資源）精靈、請繼續執行步驟3。</block>
   <block id="54449f6b5c8531f99928e88f563830f0" category="list-text">如果您要備份資料庫可用度群組、請按一下資料庫可用度群組名稱。</block>
-  <block id="15729e255e75ea1df4e86881a1909cec" category="list-text">如果您要指定自訂Snapshot複本名稱，請在「資源」頁面中選取「*使用Snapshot複本的自訂名稱格式*」核取方塊，然後輸入您要用於Snapshot複本名稱的自訂名稱格式。</block>
   <block id="2ebdd237cad2d1f8e79c0e03ecacf3e4" category="admonition">如果原則包含*在備份工作建立時間*選取的伺服器上備份複本選項、則會顯示伺服器選擇選項以選取一或多個伺服器。伺服器選擇選項只會列出所選資料庫位於NetApp儲存設備上的伺服器。</block>
   <block id="b04a2aa13bc9b5c2000bf98771ae837a" category="list-text">在Add schedules for policy _policy_name_（新增原則_原則名稱_的排程）視窗中、設定排程、然後按一下* OK*（確定*）。</block>
   <block id="0f9a723c6f5eb511c1b09b3ba75314b7" category="paragraph">您也必須指定寄件者和接收者的電子郵件地址、以及電子郵件的主旨。如果您要附加在資源上執行的備份作業報告、請選取*附加工作報告*。</block>
@@ -2033,13 +1955,11 @@
   <block id="9cfd36cfc3a37318eec6f6fe3e00ed54" category="paragraph">如需詳細資訊、請參閱定義Exchange資料庫資料保護策略的相關資訊。</block>
   <block id="df9aaac67048ed67c2a2f97b808aed95" category="list-text">您必須完成安裝SnapCenter 、新增主機、識別資源及建立儲存系統連線等工作、以準備好保護資料。</block>
   <block id="9dc209a5ff8bc6b8f4cbec4265fd9bbd" category="list-text">您必須重新整理（探索到）Exchange Server資源。</block>
-  <block id="938aaddabdc2e2a3ed4141288699bf43" category="list-text">如果您要將Snapshot複本複製到鏡射或保存庫、SnapCenter 則該管理員必須已將來源磁碟區和目的地磁碟區的儲存虛擬機器（SVM）指派給您。</block>
   <block id="2e4041a908b258d7712f26bb75d78d07" category="list-text">如果您想以預先編寫和後指令碼執行PowerShell指令碼、您應該在「web.config」檔案中將「usePowerShellProcessforScripts」參數的值設為true。</block>
   <block id="9f35f4e7b1b8337e12bc210c7cc37233" category="paragraph">預設值為假</block>
   <block id="3b1c41a3ee3aff318c023951dec40c5c" category="paragraph">備份原則是一組規則、可控制您管理及保留備份的方式、以及資源或資源群組的備份頻率。此外、您也可以指定指令碼設定。在原則中指定選項可節省您想要重複使用其他資源群組原則的時間。</block>
   <block id="3bfd01447cc8c1d1ca4a07e4794a25fd" category="paragraph">完整備份保留僅適用於特定原則。使用原則A且完整備份保留4的資料庫或資源會保留4個完整備份、且不會影響相同資料庫或資源的原則B、因為該原則B可能保留3個完整備份。</block>
   <block id="ec7b72a8c05860fe4c7bb1822dfccbc0" category="paragraph">記錄備份保留在不同原則之間都有效、適用於資料庫或資源的所有記錄備份。因此、使用原則B執行完整備份時、記錄保留設定會影響原則A在同一個資料庫或資源上建立的記錄備份。同樣地、原則A的記錄保留設定也會影響原則B在同一個資料庫上建立的記錄備份。</block>
-  <block id="8de37c701110ee880cc06580b3fdfef3" category="cell">*最佳實務做法：*您最好根據您想保留的完整備份數和記錄備份總數來設定次要保留原則。當您設定次要保留原則時、請記住、當資料庫和記錄位於不同的磁碟區時、每個備份都可以有三個Snapshot複本、而且當資料庫和記錄位於同一個磁碟區時、每個備份都可以有兩個Snapshot複本。</block>
   <block id="49868beda0a485f260d92cbafbd9e394" category="list-text">在「備份類型」頁面中、執行下列步驟：</block>
   <block id="18566ccb16fd84825b0033ada84ed5cc" category="paragraph">備份資料庫檔案和必要的交易記錄</block>
   <block id="63afd0069eb731a8e67418ebe1db655d" category="paragraph">選擇*完整備份與記錄備份*。</block>
@@ -2075,17 +1995,13 @@
   <block id="da7954ba99f4a804cabb7b3971ad3c05" category="paragraph">最新（UTM）保留適用於透過完整備份或記錄備份建立的記錄備份。例如、如果UTM保留設定為保留最後5個完整備份的記錄備份、則會保留最後5個完整備份的記錄備份。</block>
   <block id="ea11649af713bda838dbd3f31bea61cf" category="paragraph">在UTM中、系統會自動刪除作為完整備份和記錄備份一部分所建立的記錄資料夾。您無法手動刪除記錄資料夾。例如、如果完整或完整備份和記錄備份的保留設定設為1個月、且UTM保留設為10天、則依照UTM所建立的記錄資料夾、將會刪除這些備份的一部分。因此、只會有10天的記錄資料夾、所有其他備份都會標示為時間點還原。</block>
   <block id="0799f0da10f294f7e56ccccbd18b0563" category="paragraph">如果不想執行最新還原、您可以將UTM保留值設為0。這將啟用時間點還原作業。</block>
-  <block id="7ffbf0bc0e312d01d73b618966eaead2" category="paragraph">*最佳實務做法：*最佳做法是、此設定必須等於「完整備份保留設定」區段中的「Snapshot複本總數（完整備份）」設定值。如此可確保每個完整備份都保留記錄檔。</block>
   <block id="94ce778033bf4abe093ce9cc1e7a0498" category="paragraph">保留備份複本的特定天數</block>
   <block id="924bb3d49c882cde2f529f1e98dd247a" category="paragraph">選取*保留記錄備份做為最後一個*選項、並指定保留記錄備份複本的天數。</block>
   <block id="6ae95201d922def8d78c44a121a1c9f0" category="paragraph">記錄備份會保留到完整備份的天數。</block>
   <block id="6f5031cdcf133378861489abd6b5d343" category="paragraph">如果您選擇*記錄備份*做為備份類型、則記錄備份會保留為完整備份的最新保留設定之一。</block>
   <block id="cc9d7c0546d0c50559930bffe9ed629e" category="list-text">在完整備份保留設定區段中、針對隨需備份選取下列其中一項、然後選取一項以進行完整備份：</block>
-  <block id="35c585b251342f8a3ef5f785412f91be" category="paragraph">僅保留特定數量的Snapshot複本</block>
-  <block id="0c71e9e3fed0ab387a61ef5b84879b86" category="paragraph">如果您要指定要保留的完整備份數、請選取*要保留的Snapshot複本總數*選項、然後指定要保留的Snapshot複本數（完整備份）。</block>
   <block id="a0867498c7500f2a4591bc4f28b90d46" category="paragraph">如果完整備份數超過指定數目、則會刪除超過指定數目的完整備份、並先刪除最舊的複本。</block>
   <block id="e9ba8713c7585ec0d2ad1f92ebd3f16d" category="paragraph">保留完整備份的特定天數</block>
-  <block id="4ff5a76a54ac539be51aee685c82a121" category="paragraph">選取*「將Snapshot複本保留為*」選項、並指定保留Snapshot複本（完整備份）的天數。</block>
   <block id="f470bf7c40d41dd4f2e04814c226f575" category="admonition">如果您的資料庫只有記錄備份、而且主機上的DAG組態沒有完整備份、則記錄備份會以下列方式保留：</block>
   <block id="5c63811228c15739fc821ea5492e3502" category="list-text">根據預設、SnapCenter 在DAG中的所有其他主機上、均會尋找此資料庫最舊的完整備份、並刪除此主機上在完整備份之前所進行的所有記錄備份。</block>
   <block id="9363a6dd8a937e03c1a0328e0f457267" category="list-text">您可以在_C:\Program Files\NetApp\SnapCenter webapp\web.config_檔案中新增* MaxLogBackupOnlyCountWithoutFullBackup *金鑰、以取代DAG主機上的上述預設保留行為。</block>
@@ -2104,7 +2020,6 @@
   <block id="3d40243b2d8fd2d8429d6d1e417ad7b3" category="paragraph">您可以執行指令碼來更新SNMP設陷、自動化警示、傳送記錄等等。</block>
   <block id="4f61ab8a2a0c2852922b2d5a0f7a634a" category="summary">您可以從次要儲存設備（鏡射或保存庫）還原備份的Exchange Server資料庫。</block>
   <block id="877b673d5c7c5e44277b4a9a4f2c7495" category="doc">從次要儲存設備還原Exchange Server資料庫</block>
-  <block id="2a2d320b7960913eaeb585eb75c4ad27" category="paragraph">您必須將Snapshot複本從一線儲存設備複寫到二線儲存設備。</block>
   <block id="f4bfc70881af07e0b233d284dd9a5c22" category="list-text">在左導覽窗格中、按一下*資源*、然後從清單中選取* Microsoft Exchange Server外掛程式*。</block>
   <block id="55301fa99490f8c21d0fdb7c28363f5b" category="list-text">在「資源」頁面中、從「*檢視*」下拉式清單中選取「*資料庫*」或「*資源群組*」。</block>
   <block id="66f39c9d213bfdbae4fbc70e6b626a20" category="list-text">選取資料庫或資源群組。</block>
@@ -2186,7 +2101,6 @@
   <block id="aa14e187b593d2a11c1d14cbbec8aadc" category="doc">還原Exchange資料庫</block>
   <block id="b016fed9d8e76be8e2b8327a19c79e1c" category="list-text">您必須備份資源群組、資料庫或資料庫可用度群組（DAG）。</block>
   <block id="e41a54e30fee34f56cdc085b137684ba" category="list-text">當Exchange資料庫移轉至其他位置時、還原作業無法用於舊備份。</block>
-  <block id="dc7e224e68acf9c07eb62ae6faae36fb" category="list-text">如果您要將Snapshot複本複製到鏡射或保存庫、SnapCenter 則該管理員必須為來源磁碟區和目的地磁碟區指派SVM給您。</block>
   <block id="8a422d49b5d70c11466a0e5c0147bc9d" category="list-text">在DAG中、如果主動式資料庫複本位於非NetApp儲存設備上、而您想要從NetApp儲存設備上的被動式資料庫複本備份還原、請將被動式複本（NetApp儲存設備）設定為主動複本、重新整理資源並執行還原作業。</block>
   <block id="fba073acc19f8172d74430f92eb03d51" category="paragraph">執行「移動ActiveMailboxDatabase」命令、將被動式資料庫複本做為主動式資料庫複本。</block>
   <block id="78c8d983d8c521824655c73beab8c489" category="paragraph">。<block ref="7bf0be93bef64f617af4a17f44fa52fc" category="inline-link-rx"></block> 包含此命令的相關資訊。</block>
@@ -2513,9 +2427,6 @@
   <block id="d75b221a62d4c54927e045808754179b" category="list-text">對於完整配置的LUN、可擴充的大小（磁碟區中可用的大小）會顯示為最大大小。</block>
   <block id="378f0e048b351847c673c327b1b01b2f" category="list-text">具有MBR-型分割區的LUN大小上限為2 TB。</block>
   <block id="3da1df07fc5b3e4a8b649955e81299b8" category="list-text">具有GPT型分割區的LUN儲存系統大小上限為16 TB。</block>
-  <block id="b60be6496fbd5e8e48e41b61ba470027" category="list-text">在調整LUN大小之前、最好先建立Snapshot複本。</block>
-  <block id="95c6d63a469de5afcddc96c6c1ea3f34" category="list-text">如果您需要從調整LUN大小之前所製作的Snapshot複本還原LUN、SnapCenter 則會自動將LUN重新調整為Snapshot複本的大小。</block>
-  <block id="3d68d9692f770a9139cf370f132ca172" category="paragraph">還原作業完成後、調整大小後新增至LUN的資料必須從調整大小後所製作的Snapshot複本中還原。</block>
   <block id="3015ed368b1638274f7638b11f4d1ab1" category="list-text">從主機下拉式清單中選取主機。</block>
   <block id="8cba961b1ec5d7c289472ddf43619739" category="list-text">選取您要調整大小的磁碟、然後按一下「*調整大小*」。</block>
   <block id="27b4f01bf1710435fa0b0b60a7a494a0" category="list-text">在「調整磁碟大小」對話方塊中、使用滑桿工具來指定磁碟的新大小、或是在「大小」欄位中輸入新的大小。</block>
@@ -2588,7 +2499,6 @@
   <block id="8877dc9fcfb6df8dad34589e1a225411" category="paragraph">建立資源群組</block>
   <block id="3e84305a1bfb0bb3f17a78c50889f512" category="list-text">當新節點新增至Windows叢集或DAG（Exchange Server資料庫可用度群組）資產、且此新節點已指派給使用者時、您必須將資產重新指派給使用者或群組、以便將新節點納入使用者或群組。</block>
   <block id="077b5968d54f25c57e3cff7cb71fb295" category="paragraph">您應該將RBAC使用者或群組重新指派給叢集或DAG、以便將新節點納入RBAC使用者或群組。例如、您有一個雙節點叢集、而且已將RBAC使用者或群組指派給叢集。當您將另一個節點新增至叢集時、應將RBAC使用者或群組重新指派至叢集、以納入RBAC使用者或群組的新節點。</block>
-  <block id="7a2bea54d65bdb486c21225326f24168" category="list-text">如果您打算複寫Snapshot複本、則必須將來源和目的地Volume的儲存連線指派給執行作業的使用者。</block>
   <block id="1a30a23470dfab273d5a6b116e08627b" category="paragraph">您應該先新增資產、再將存取權指派給使用者。</block>
   <block id="3b94205bc2616f2bf8416a810bbba1b8" category="inline-link">VMware SnapCenter vSphere隨附於VMware vSphere的VMware vCenter外掛程式的預先定義角色</block>
   <block id="61dc06ea09d65aec5db611ccff43e263" category="admonition">如果您使用SnapCenter VMware vSphere的VMware vSphere功能的VMware vCenter外掛程式來保護VM、VMDK或資料存放區、則應使用VMware vSphere GUI將vCenter使用者新增至SnapCenter VMware vSphere的「VMware vSphere的VMware vSphere插件」角色。如需VMware vSphere角色的相關資訊、請參閱<block ref="428cb7b96c1d9798e75623fa5c5801df" category="inline-link-rx"></block>。</block>
@@ -3080,7 +2990,6 @@
   <block id="4f67c4f1ef581c464d2fe1030e753de4" category="paragraph">您可以新增獨立SVM或由多個SVM組成的叢集。如果您使用Amazon FSx for NetApp ONTAP 支援NetApp、則可以使用fsxadmin帳戶新增由多個SVM組成的FSx管理LIF、或在Sfssx SnapCenter 中新增FSVM。</block>
   <block id="d8c79769d1510f53b50beb7c46e3e14f" category="list-text">當您設定儲存系統時、也可以啟用事件管理系統（EMS）和AutoSupport 功能。此功能可收集系統健全狀況的相關資料、並自動將資料傳送給NetApp技術支援部門、讓他們能夠疑難排解您的系統。AutoSupport</block>
   <block id="8066687b2002e6c5af9c9a8c64166d49" category="paragraph">如果啟用這些功能、SnapCenter 當AutoSupport 資源受到保護、還原或複製作業成功完成或作業失敗時、將會將支援資訊傳送至儲存系統、並將EMS訊息傳送至儲存系統的系統記錄。</block>
-  <block id="90e51e88af6422ac879c0c7acebf28ca" category="list-text">如果您打算將Snapshot複本複製到SnapMirror目的地或SnapVault 目的地、則必須為目的地SVM或叢集以及來源SVM或叢集設定儲存系統連線。</block>
   <block id="af0393ab7c1c21394683b80f2704864d" category="admonition">如果您變更儲存系統密碼、排程工作、隨需備份和還原作業可能會失敗。變更儲存系統密碼之後、您可以按一下「Storage（儲存設備）」索引標籤中的* Modify*（修改*）來更新密碼。</block>
   <block id="febaac7ceadda0aca80556bfc7f22a33" category="list-text">在左導覽窗格中、按一下*儲存系統*。</block>
   <block id="d907195077a50076f92791c10bb76a87" category="list-text">在「Storage Systems（儲存系統）」頁面中、按一下「* New*（*新</block>
@@ -3649,8 +3558,6 @@
   <block id="0a310341874ed9df279229cc94989cd0" category="list-text">統一化圖形化使用者介面</block>
   <block id="194512dda07e4cc0aca1533656efba55" category="list-text">自動化集中管理</block>
   <block id="25ec8c1a8c1cbba6a91ecfb52cfacecc" category="paragraph">您可以排程備份與複製作業、設定原則型備份保留、以及執行還原作業。您也可以設定SnapCenter 使用功能支援功能來傳送電子郵件警示、主動監控環境。</block>
-  <block id="3823b5d9d8dc7e47a02c4aa6ea80105b" category="list-text">不中斷營運的NetApp Snapshot複製技術</block>
-  <block id="5b106f222bf3db55d42731c8112c039b" category="paragraph">使用NetApp Snapshot複製技術搭配Oracle資料庫外掛程式和UNIX外掛程式來備份資料庫。SnapCenterSnapshot複本所耗用的儲存空間最小。</block>
   <block id="07ef9882c6d102197c21c087f1bcb441" category="paragraph">適用於Oracle資料庫的外掛程式也具有下列優點：</block>
   <block id="98c168ef2d3d275c5131b78a27b98fbf" category="list-text">支援備份、還原、複製、掛載、卸載、 和驗證工作流程</block>
   <block id="7042e4b6e6cd168a927b1bbc1790a57e" category="list-text">自動探索主機上設定的Oracle資料庫</block>
@@ -3659,7 +3566,6 @@
   <block id="60c01eaf63f6f84994a18b3ef120f90f" category="list-text">支援ONTAP 以支援支援的一致性群組（CG）功能、作為在SAN和ASM環境中建立備份的一部分</block>
   <block id="069e98228d13c52461ac7c6e9c4ef0cc" category="list-text">不中斷營運且自動化的備份驗證</block>
   <block id="791e3048ca35b220103df4a3c759f26a" category="list-text">能夠在多個資料庫主機上同時執行多個備份</block>
-  <block id="49ad63a9d87c64bd33da05af5cb09e1c" category="paragraph">在單一作業中、當單一主機中的資料庫共用相同的磁碟區時、就會合併Snapshot複本。</block>
   <block id="2f6b08e8b7841ff545c1fb1427f9a842" category="list-text">支援實體與虛擬化基礎架構</block>
   <block id="ba616d0f67fed92e5664508021cbd276" category="list-text">支援NFS、iSCSI、Fibre Channel（FC）、RDM、VMDK over NFS和VMFS、以及ASM over NFS、SAN、RDM和VMDK</block>
   <block id="abd96a9e67c87700d0ddbbf79ca1ad42" category="list-text">支援ONTAP 精選LUN地圖（SLM),功能如所述</block>
@@ -3965,8 +3871,6 @@
   <block id="d8e3db119b7cf9c31602a2121bfa4365" category="list-text">選取您要備份的資料庫。</block>
   <block id="d24902f60cccf9a4d0ef979587d1d4fd" category="paragraph">此時會顯示「資料庫保護」頁面。</block>
   <block id="8d2ba99665e114b5e2a9d74a31cdf554" category="list-text">在「資源」頁面中、執行下列動作：</block>
-  <block id="81e3d6d459d6185662dc1ac418aeba95" category="paragraph">選取此核取方塊、然後輸入您要用於Snapshot複本名稱的自訂名稱格式。</block>
-  <block id="d8e872fb73120498da08d2eb2e952e1f" category="paragraph">例如、customtext_policy_hostnameor resource_hostname.根據預設、快照複本名稱會附加時間戳記。</block>
   <block id="b34b9f5decf78eb62a8145da0940d7d1" category="paragraph">_policy_name_是您選取的原則名稱。</block>
   <block id="8aad6e1ddba0855250f3f027cd30ba41" category="list-text">在「驗證」頁面中、執行下列步驟：</block>
   <block id="73d5c45d8fe4cd81e69573ed4a382644" category="list-text">在「新增驗證排程_policy_name_」對話方塊中、執行下列動作：</block>
@@ -3998,7 +3902,6 @@
   <block id="2c4f60cdfab4e71a27e2dfbd9362e411" category="summary">在使用SnapCenter 支援功能來備份Oracle資料庫資源之前、您必須先為要備份的資源或資源群組建立備份原則。備份原則是一組規則、可管理您管理、排程及保留備份的方式。您也可以指定複寫、指令碼及備份類型設定。當您想要在其他資源或資源群組上重複使用原則時、建立原則可節省時間。</block>
   <block id="a3a63bd1ddab3e696228b7b61878c09d" category="doc">為Oracle資料庫建立備份原則</block>
   <block id="e457b5ee7ca69de08b3486e30ef1d570" category="list-text">您必須完成安裝SnapCenter 、新增主機、探索資料庫及建立儲存系統連線等工作、準備好保護資料。</block>
-  <block id="2619f2e63fc2bcfbbef6d5861952e68b" category="list-text">如果您要將Snapshot複本複製到鏡射或保存庫二線儲存設備、SnapCenter 則該管理員必須已將來源和目的地磁碟區的SVM指派給您。</block>
   <block id="12a8a88fbbb12cf46de8ed3c3c9c4df5" category="list-text">從下拉式清單中選取* Oracle Database*。</block>
   <block id="e290a9defe5f60a7f464d11afc89eb7f" category="list-text">如果您要*建立線上備份*、請選取*線上備份*。</block>
   <block id="2970dd9d72c00fe91590d9b297f952f6" category="paragraph">您必須指定是否要備份所有資料檔案、控制檔及封存記錄檔、僅備份資料檔案及控制檔、或僅備份歸檔記錄檔。</block>
@@ -4082,7 +3985,6 @@
   <block id="241427aa082547643032d9ac47ab0dda" category="summary">在還原Oracle資料庫之前、您應確保已完成先決條件。</block>
   <block id="e4efd46999918866976643fdf1c3041d" category="doc">還原Oracle資料庫的需求</block>
   <block id="58f28c7080a3b5a4d907dfdece1ece75" category="list-text">您應該已經定義了還原與還原策略。</block>
-  <block id="86e3376af807930c08ffb54560870134" category="list-text">如果您要將Snapshot複本複製到鏡射或保存庫、那麼支援此功能的管理員應該已為來源Volume和目的地Volume指派儲存虛擬機器（SVM）SnapCenter 。</block>
   <block id="61b9803a1cd8f34e415ade3146621c10" category="list-text">如果將歸檔記錄剪除為備份的一部分、您應該手動掛載所需的歸檔記錄備份。</block>
   <block id="1db970b2a6105a2ea2fd5097ac660cbe" category="list-text">如果您要還原位於虛擬機器磁碟（VMDK）上的Oracle資料庫、應確保客體機器具有所需數量的可用插槽、以便配置複製的VMDK。</block>
   <block id="ba4dc32189ac55cef59ce8019633507c" category="list-text">如果該資料庫已啟用二線保護、則應確保屬於資料庫的所有資料磁碟區和歸檔記錄磁碟區都受到保護。</block>
@@ -4131,7 +4033,6 @@
   <block id="e058be158ad9231e0b1b44d9048f0ff8" category="summary">您可以取消執行中、佇列中或無回應的備份作業。</block>
   <block id="725a197c7788c699a7829d49ed273483" category="doc">取消Oracle資料庫的備份作業</block>
   <block id="799f83c785fdbd8c224ff6863ef07529" category="paragraph">您必須以SnapCenter 「管理員」或「工作擁有者」身分登入、才能取消備份作業。</block>
-  <block id="b9713525162207c91f2908e3c4c7af7a" category="paragraph">當您取消備份作業時、SnapCenter 如果建立的備份並未在SnapCenter 伺服器上登錄、則停止此作業並從儲存設備中移除所有Snapshot複本。如果備份已登錄SnapCenter 到支援伺服器、則即使觸發取消動作、它也不會回復已建立的Snapshot複本。</block>
   <block id="f9f556d2b6534722edff515d5f7bc15b" category="list-text">您只能取消排入佇列或執行中的記錄或完整備份作業。</block>
   <block id="d7799eb8903db7e08fd7adb09ea0208d" category="list-text">驗證開始後、您無法取消作業。</block>
   <block id="f688549fef75ce58097dcbad1e2f175e" category="paragraph">如果您在驗證前取消作業、則會取消作業、而且不會執行驗證作業。</block>
@@ -4461,7 +4362,6 @@
   <block id="b2db2a6d191f5b90f084ac27e053d277" category="paragraph">/`opt/NetApp/snapcenter/spl/bin/spl recovery（選擇/NetApp/snapcenter/spl/bin / spl重新啟動）</block>
   <block id="7004c590f0cedfca0304271af0b72b63" category="section-title">使用主要或次要儲存磁碟區驗證備份複本</block>
   <block id="b84d1d8c09293020f3483a11ab0dddc9" category="paragraph">您可以在主要儲存磁碟區或SnapMirror或SnapVault 支援的二線儲存磁碟區上驗證備份複本。使用次要儲存磁碟區進行驗證、可降低主要儲存磁碟區的負載。</block>
-  <block id="f9265969cb3180ece98659aeee441d5a" category="paragraph">當您驗證主儲存磁碟區或次儲存磁碟區上的備份時、所有的主要與次要Snapshot複本都會標示為已驗證。</block>
   <block id="7d75df615ecc318750420253367a234c" category="paragraph">驗證SnapMirror和不二級儲存磁碟區上的備份複本時需要使用支援。SnapRestore SnapVault</block>
   <block id="6faa8eb5ad385d7b9d987de9ed13bb96" category="summary">利用此功能、您可以在複製資料庫時、使用預先定義的環境變數來執行預先記錄和PostScript。SnapCenter</block>
   <block id="23623438990ee2646061fa46ca8d9c90" category="doc">針對特定實體複本的預先定義環境變數、以及PostScript</block>
@@ -4510,7 +4410,6 @@
   <block id="642e03a2191a662afd43db47eb6fc31d" category="admonition">不支援Volume型的功能。SnapCenter SnapRestore</block>
   <block id="df3cf38e44637d2165eb181af223b67b" category="section-title">連線與複製還原</block>
   <block id="b1e6525cac3e5ba1f6afa5b22a0816a0" category="paragraph">如果資料庫配置與備份不同、或在建立備份之後有任何新檔案、則會執行連線與複製還原。在連線與複製還原方法中、會執行下列工作：</block>
-  <block id="9010183ca92e32bb60cc8b7403d1d2ae" category="list-text">磁碟區會從Snapshot複本複製、檔案系統堆疊會使用複製的LUN或磁碟區建立在主機上。</block>
   <block id="f829cb1081f9c94375e8005905c13c01" category="list-text">檔案會從複製的檔案系統複製到原始檔案系統。</block>
   <block id="af50d714aae8420f1fba06fef93a651c" category="list-text">然後從主機卸載複製的檔案系統、並從ONTAP 停止執行複製的磁碟區。</block>
   <block id="f3d8e7bed549389cd494b6bfbb85a42f" category="admonition">若為Flex ASM設定（其中基數小於RAC叢集中的節點數）或VMDK或RDM上的ASM RAC資料庫、則僅支援連線與複製還原方法。</block>
@@ -4761,7 +4660,6 @@
   <block id="168ab792c2cf9b011ce6299d37acc0db" category="list-text">選取已掛載的備份、然後按一下 <block ref="95ba06560c8632912f250655b94bc667" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="92be3471faf8c6f450426df8acbe531d" category="summary">在資料遺失的情況下、SnapCenter 您可以使用效益管理功能將資料從一或多個備份還原至使用中的檔案系統、然後還原資料庫。</block>
   <block id="98ecfe0d837e77006a17452ca412bc0a" category="doc">還原及還原Oracle資料庫</block>
-  <block id="588fdca387b41a3ed6e9915f94a10eb5" category="paragraph">恢復作業是使用設定的歸檔記錄位置所提供的歸檔記錄來執行。如果資料庫以ARCHIVELOG模式執行、Oracle資料庫會將已填入的重作記錄檔群組儲存至一或多個離線目的地、統稱「已歸檔的重作記錄」。根據指定的SCN、所選日期和時間或所有記錄選項、找出並掛載最佳的記錄備份數量。SnapCenter如果在設定的位置無法使用還原所需的歸檔記錄、您應該掛載包含記錄的Snapshot複本、並將路徑指定為外部歸檔記錄。</block>
   <block id="fbb97552b0524a5656aa7f96bad51e9d" category="paragraph">如果您將ASM資料庫從ASMLIB移轉至ASMFD、則無法使用以ASMLIB建立的備份來還原資料庫。您應該在ASMFD組態中建立備份、然後使用這些備份來還原。同樣地、如果ASM資料庫是從ASMFD移轉至ASMLIB、您應該在ASMLIB組態中建立備份以進行還原。</block>
   <block id="0555155513875ba53e743b223483c213" category="admonition">不支援還原SPFILE和密碼檔案。</block>
   <block id="e760b586cefa27f7097ba67da884d07c" category="list-text">從資料庫詳細資料檢視或資源群組詳細資料檢視中選取資料庫。</block>
@@ -5330,7 +5228,6 @@
   <block id="52b19e85e6a29b6fe5690f47944f859f" category="paragraph">原則僅指定備份頻率。備份的特定保護排程是在資源群組中定義。因此、兩個或多個資源群組可以共用相同的原則和備份頻率、但備份排程不同。</block>
   <block id="de22735eba76a2843e4c2bd28dfb8f2c" category="list-text">在「保留」頁面上、針對您所選的每個排程頻率、指定隨需備份的保留設定。</block>
   <block id="8e77ee8a8b856638f0a6d0872be527cd" category="paragraph">要保留的Snapshot複本總數</block>
-  <block id="92cc2a9a2d5824e9c2b490a8fb082801" category="paragraph">如果您想在SnapCenter 自動刪除Snapshot複本之前、先指定Snapshot複本的數量、請選擇此選項。</block>
   <block id="0a3cfeac0775871baedb24392bc4423c" category="paragraph">刪除舊於的Snapshot複本</block>
   <block id="9fbc3fb0ee9d4d329dbc0f3053b7b871" category="paragraph">如果您要指定SnapCenter 刪除備份複本之前保留備份複本的天數、請選擇此選項。</block>
   <block id="91c72a64980863f26bec585770f3d671" category="list-text">在「複寫」頁面中、指定複寫至次要儲存系統：</block>
@@ -5373,7 +5270,6 @@
   <block id="8f8654928a0369230f1d533710a0be96" category="doc">為Windows檔案系統建立資源群組</block>
   <block id="bd268863b796bc63e2713dc5a39dbb1e" category="admonition">如果您最近已將檔案系統新增SnapCenter 至Refresh*、請按一下「*重新整理資源*」以檢視新增的資源。</block>
   <block id="d08277bb970ddff932213b2609ab446f" category="list-text">在精靈的「名稱」頁面中、執行下列動作：</block>
-  <block id="690a9bec3617f718bd8cc89a054f296c" category="paragraph">例如、customtext資源群組原則主機名稱或資源群組主機名稱。根據預設、快照複本名稱會附加時間戳記。</block>
   <block id="c101058e7ea21bbbf2a5ac893088e90b" category="paragraph">標記</block>
   <block id="97bb2f32b5c5b00dd996d61d3d89e4f8" category="paragraph">輸入描述性標記、以協助尋找資源群組。</block>
   <block id="a15a8538f26ed0800d76a7c5251218aa" category="list-text">在「資源」頁面中、執行下列工作：</block>
@@ -5405,7 +5301,6 @@
   <block id="1c726678cd6140171263bcf8b41347de" category="list-text">在「資源」頁面中、選取「檔案系統」資源類型、然後選取您要備份的資源。</block>
   <block id="94470133339a09768284b95eccb8271a" category="list-text">如果「檔案系統-保護」精靈未自動啟動、請按一下「*保護*」以啟動精靈。</block>
   <block id="c62706269a2329ff51bf94ff5010638a" category="paragraph">指定保護設定、如建立資源群組工作中所述。</block>
-  <block id="da4b05983b1e6447f9b34c3d68c1e1e9" category="list-text">選用：在精靈的「資源」頁面中、輸入Snapshot複本的自訂名稱格式。</block>
   <block id="1957e5ad25b71af9fcaddadddc14180d" category="paragraph">您可以選取任何現有的原則、然後按一下*詳細資料*來判斷您是否可以使用該原則。</block>
   <block id="72505ce1779969b10a827b76ce40ee9f" category="paragraph">如果現有原則不符合您的需求、您可以複製現有原則並加以修改、或按一下建立新原則 <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block> 啟動原則精靈。</block>
   <block id="664f868df734376691b6f2603ef04ff9" category="list-text">在「Configure schedules for selected Policies（設定所選原則的排程）」區段中、按 <block ref="abe09f480538c71c9fc89b98cd91e2d0" category="inline-image-macro-rx" type="image"></block> 在您要為其設定排程的原則之「設定排程」欄中。</block>
@@ -5424,8 +5319,6 @@
   <block id="1bde0647fb6f71617acb9bfadcf22c2e" category="section-title">Windows檔案系統所需的備份數量</block>
   <block id="d2359e56e9afe6abfc78e46aebc63acc" category="paragraph">決定所需備份數量的因素包括Windows檔案系統的大小、使用的磁碟區數目、檔案系統變更率、以及您的服務層級協議（SLA）。</block>
   <block id="14935283082f29f3ca37aae3f791f689" category="section-title">Windows檔案系統的備份命名慣例</block>
-  <block id="3d93f758a971e608a1963f204b536e13" category="paragraph">Windows檔案系統備份使用預設的Snapshot複本命名慣例。預設的備份命名慣例會在Snapshot複本名稱中新增時間戳記、協助您識別複本的建立時間。</block>
-  <block id="38abb24b7df715b15e98d77be09d90bc" category="paragraph">Snapshot複本使用下列預設命名慣例：resourcegroupname_hostname_timestamp</block>
   <block id="ec8d9746dfb7f8cf3bf5aafdc14bcd92" category="list-text">「DTS1」是資源群組名稱。</block>
   <block id="c0f5323d1ade2329c48f90fc8ed6ff59" category="list-text">主機名稱為「每個1個88」。</block>
   <block id="cd63eec15ecf1146374bcd2d2325467e" category="list-text">「2016年3月12日至23月17日」是日期和時間戳記。</block>
@@ -5485,11 +5378,8 @@
   <block id="d1359b74848d2219dab91038da7ebea8" category="list-text">複製檔案系統備份</block>
   <block id="95916fa1aeaccaca841a441bf77df5cf" category="list-text">監控備份、還原及複製作業</block>
   <block id="9ca511d334b6134d9bc41cb47f1de155" category="admonition">適用於Windows的外掛程式不支援在SMB共用區上備份及還原檔案系統。</block>
-  <block id="a61442d4f2c413e3792d7594050ba2cc" category="summary">您可以使用Remove-SmBackup Cmdlet來清除無Snapshot複本之次要備份的備份計數。當管理複本拓撲中顯示的Snapshot複本總數與次要儲存Snapshot複本保留設定不符時、您可能需要使用此Cmdlet。</block>
   <block id="11dc6d5147b38aacb94d18c088856bed" category="doc">使用PowerShell Cmdlet清除次要備份數</block>
-  <block id="f71dfd6c3ba5579bcd41f13631288dbe" category="paragraph">您可以使用Remove-SmBackup Cmdlet來清除無Snapshot複本之次要備份的備份計數。當管理複本拓撲中顯示的Snapshot複本總數與次要儲存Snapshot複本保留設定不符時、您可能會想要使用此Cmdlet。</block>
   <block id="5d365fedd8db2449d52b5be4a9205fb5" category="list-text">使用-Clean輔助備份參數清除二線備份數。</block>
-  <block id="1bea5939f16f3388c1a175f0af134c13" category="paragraph">此範例可清除次要備份的備份數、而不使用Snapshot複本：</block>
   <block id="7372096d67d7a00d21e644f03bd6b3f6" category="summary">如果無法從Windows GUI遠端安裝外掛程式、您可以SnapCenter 在Windows主機本機上安裝適用於Microsoft Windows的支援功能。SnapCenter您可以SnapCenter 從Windows命令列、以無訊息模式在無人值守的情況下執行Microsoft Windows安裝程式的功能。</block>
   <block id="3065bc79c85488f5e9c34540aa589dee" category="doc">從命令列以無訊息方式安裝SnapCenter 適用於Microsoft Windows的功能</block>
   <block id="92e6ffea032db8bde3a4e28c14ca76bf" category="list-text">您必須安裝PowerShell 4.0或更新版本。</block>
@@ -5505,11 +5395,7 @@
   <block id="e370a7ee0bb74d7599ae4a101282e69b" category="paragraph">_debuglog_參數包括用於SnapCenter 資訊的記錄檔路徑。寫入此記錄檔是取得疑難排解資訊的慣用方法、因為檔案包含安裝針對外掛程式先決條件所執行的檢查結果。</block>
   <block id="69aab0f4bbb32969d2c33fb5099aa4fa" category="paragraph">如有必要、您可以在適用於SnapCenter Windows的資訊套件的記錄檔中找到其他疑難排解資訊。套件的記錄檔會列在_%Temp %_資料夾中（最舊的優先）、例如_C：\臨時\_。</block>
   <block id="3d7844d331c36c05271f66508c7df774" category="admonition">安裝Windows外掛程式時、會在主機上登錄外掛程式、而非SnapCenter 在伺服器上登錄外掛程式。您可以SnapCenter 透過SnapCenter 使用支援程式介面或PowerShell Cmdlet新增主機、在支援服務器上登錄外掛程式。新增主機之後、即會自動探索外掛程式。</block>
-  <block id="eac2032108306b4ff1100113fd59c42a" category="summary">使用Snapshot複製技術來備份駐留在LUN、CSV（叢集共用磁碟區）、RDM（原始裝置對應）磁碟區、Windows叢集中的ALM（非對稱LUN對應）、以及以VMS/NFS為基礎的VMDK（使用NFS的VMware虛擬機器檔案系統）上的Windows檔案系統資源。SnapCenter</block>
   <block id="43c5e19fd38af83f0ab296f57f1cfdee" category="doc">如何備份Windows檔案系統SnapCenter</block>
-  <block id="ff572a35b84827c88003212d894ddff1" category="paragraph">利用建立檔案系統的Snapshot複本來建立備份。SnapCenter相較於每個個別LUN的備份、磁碟區包含來自多個主機的LUN、因此相較於每個個別LUN的備份、聯合備份速度更快、效率更高、因為與每個檔案系統的個別Snapshot相比、只會建立一個磁碟區Snapshot複本。</block>
-  <block id="4af088960b278bd1fc6cf8e89db9376f" category="paragraph">當使用此功能建立Snapshot複本時、會在Snapshot複本中擷取整個儲存系統磁碟區。SnapCenter不過、備份僅對建立備份的主機伺服器有效。</block>
-  <block id="555ca970deac11b0a700273f40a51b85" category="paragraph">如果來自其他主機伺服器的資料位於同一個磁碟區、則無法從Snapshot複本還原此資料。</block>
   <block id="27a46746c79eda007f4ac37660e5a5d8" category="admonition">如果Windows檔案系統包含資料庫、則備份檔案系統與備份資料庫不同。若要備份資料庫、您必須使用其中一個資料庫外掛程式。</block>
   <block id="a870891a6e4f46d7a397baf010acf81b" category="doc">支援Microsoft Windows的儲存類型SnapCenter</block>
   <block id="0b0c2887a236e9135995566b39c6a69e" category="paragraph">儲存虛擬機器（SVM）上的SMB3（CIFS）共享區</block>
@@ -5518,13 +5404,11 @@
   <block id="bc52382a2b038e05ecba07a8b5754946" category="paragraph">虛擬機器檔案系統（VMFS）或NFS資料存放區</block>
   <block id="8887a9a417a1629326acdb917d224337" category="paragraph">VMware vSphere</block>
   <block id="414ff662e83e18f999457703c274be4b" category="paragraph">連線至SMB3共用的客體系統、位於SVM上</block>
-  <block id="07117ad816bc94530a93fd42336f2f79" category="summary">Windows外掛程式與儲存系統上的NetApp Snapshot複本技術整合。若要使用Windows外掛程式、您可以使用SnapCenter 這個介面。</block>
   <block id="6c2908e5cc43162ef9ecea994b17389d" category="doc">適用於Windows功能的插件SnapCenter</block>
   <block id="5152783556f9f44813fcbba2514ba270" category="paragraph">適用於Windows的外掛程式包含下列主要功能：</block>
   <block id="fe83f9df83b3aa96b52b9e5a120baa6d" category="list-text">*統一化圖形化使用者介面、採用SnapCenter S基 準*技術</block>
   <block id="790dc446b8ddf495165446e72a4fec35" category="paragraph">透過這個支援介面、您可以在外掛程式和環境之間實現標準化和一致性。SnapCenter利用此支援介面、您可以跨外掛程式完成一致的備份與還原程序、使用集中式報告、使用概覽儀表板檢視、設定角色型存取控制（RBAC）、以及監控所有外掛程式的工作。SnapCenter此外、還提供集中化的排程與原則管理功能、以支援備份與複製作業。SnapCenter</block>
   <block id="f865c48aa56189960fc5c9a515903527" category="paragraph">您可以排程例行檔案系統備份、設定原則型備份保留、以及設定還原作業。您也可以透過設定SnapCenter 以傳送電子郵件警示的功能、主動監控檔案系統環境。</block>
-  <block id="01579da5d7cdc4848493e7de2b549b68" category="paragraph">Windows外掛程式使用NetApp Snapshot複製技術。這可讓您在數秒內備份檔案系統、並快速還原檔案、而無需讓主機離線。Snapshot複本所耗用的儲存空間最小。</block>
   <block id="5e552e263b3cac8a0ad4ef299469911f" category="paragraph">除了這些主要功能之外、適用於Windows的外掛程式還提供下列優點：</block>
   <block id="aa3fb9fca5fdb4ad7f86964cd9fd89cc" category="list-text">備份、還原及複製工作流程支援</block>
   <block id="4a3e39ebca9c4f0e9238b4f749f8eda1" category="list-text">使用NetApp FlexClone技術建立生產檔案系統的空間效率複本、以供測試或資料擷取之用</block>
@@ -5542,7 +5426,6 @@
   <block id="f0d699c721a4dfe5de85ad5df9660579" category="list-text">使用「Install-SmHostPackage」Cmdlet和必要參數、在多個主機上安裝外掛程式。</block>
   <block id="b9eabe260cd8a0a2c241b35d09dfb062" category="paragraph">手動安裝外掛程式時、您可以使用「-skipprecheck」選項、而且您不想驗證主機是否符合安裝外掛程式的需求。</block>
   <block id="64095c20adc24a03dbae2f21ec58ed74" category="doc">監控複製作業</block>
-  <block id="8796317ad8b32fb8aef870b01b6167d3" category="summary">適用於Microsoft Windows的支援功能、是NetApp支援應用程式感知的Microsoft檔案系統資源資料保護管理功能的NetApp支援軟體主機端元件。SnapCenter SnapCenter此外、它還能為Windows檔案系統提供儲存資源配置、Snapshot複本一致性、以及空間回收等功能。Windows外掛程式可在SnapCenter 您的支援環境中自動執行檔案系統備份、還原及複製作業。</block>
   <block id="a9a17ec2f387b7172d4f7e035744dc4b" category="doc">適用於Microsoft Windows的插件總覽SnapCenter</block>
   <block id="da729e684f85b2f6417b12711de4813b" category="paragraph">安裝Windows外掛程式時、您可以使用SnapCenter 搭配NetApp SnapMirror技術的功能來在另一個磁碟區上建立備份集的鏡射複本、並使用NetApp SnapVault 支援技術來執行磁碟對磁碟備份複寫、以符合歸檔或標準。</block>
   <block id="c2454fba56bef1c420bd258538641b94" category="summary">資源是您檔案系統中的LUN和類似元件、這些元件是由您安裝的外掛程式所維護。您可以將這些資源新增至資源群組、以便在多個資源上執行資料保護工作、但必須先找出可用的資源。探索可用資源也會驗證外掛程式安裝是否成功完成。</block>
@@ -5571,9 +5454,7 @@
   <block id="b5e3f82dbe3b26af86ad24f52d33eca5" category="paragraph">如果您想要恢復已置於維護模式的資源群組作業、請選取資源群組、然後按一下「*正式作業*」。</block>
   <block id="ad9a47e46e4ad7c3e60285f394572957" category="section-title">刪除資源群組</block>
   <block id="51ebd5fa5a40caec4ed936fe9898a298" category="paragraph">如果不再需要保護資源群組中的資源、您可以刪除資源群組。您必須先確定已刪除資源群組、才能從SnapCenter 功能性資源移除外掛程式。</block>
-  <block id="96f3b8867aaf11c3ad817e34c18cd41e" category="paragraph">您應該手動刪除資源群組中任何資源所建立的所有複本。您可以選擇性地強制刪除與資源群組相關的所有備份、中繼資料、原則和Snapshot複本。</block>
   <block id="0c2afed1ed2cb68e29011a87d947fe86" category="list-text">選取資源群組、然後按一下*刪除*。</block>
-  <block id="e6367c97237b87006cded5c41a446fc2" category="list-text">選用：選取「*刪除與此資源群組*相關的備份與分離原則」核取方塊、即可移除與資源群組相關的所有備份、中繼資料、原則及Snapshot複本。</block>
   <block id="742a485520d4686910da365e393bff09" category="summary">您可以新增主機並安裝SnapCenter 支援功能的外掛程式套件、新增驗證伺服器、移除主機、移轉備份工作、以及更新主機以升級外掛程式套件或新增外掛程式套件。視所使用的外掛程式而定、您也可以配置磁碟、管理SMB共用、管理啟動器群組（igroups\）、管理iSCSI工作階段、以及移轉資料。</block>
   <block id="51929aa5ac08be2aca8dda46b9a095b1" category="doc">管理主機</block>
   <block id="f4a4e1bbc870f6173a4c9f0b39e55876" category="paragraph">您可以新增主機並安裝SnapCenter 支援功能的外掛程式套件、新增驗證伺服器、移除主機、移轉備份工作、以及更新主機以升級外掛程式套件或新增外掛程式套件。視所使用的外掛程式而定、您也可以配置磁碟、管理SMB共用、管理啟動器群組（igroup）、管理iSCSI工作階段、以及移轉資料。</block>
@@ -5780,7 +5661,6 @@
   <block id="0a2a28430d9f7066f6a8e5f614a42f52" category="summary">您可以從資源或資源群組分離原則、修改、刪除、檢視及複製。</block>
   <block id="e7326f303b8abf78625da7d8f22fa0b4" category="doc">管理原則</block>
   <block id="8a83564fb6cc1ce1968a698b16797b87" category="section-title">修改原則</block>
-  <block id="ba036c6de008cc90f19810d74054495f" category="paragraph">當原則附加至資源或資源群組時、您可以修改複寫選項、Snapshot複本保留設定、錯誤重試次數或指令碼資訊。只有在分離原則之後、才能修改排程類型（頻率）。</block>
   <block id="039310fa3be7e08e1e978c195979fc63" category="paragraph">修改原則中的排程類型需要額外的步驟、因為SnapCenter 只有在原則附加到資源或資源群組時、才能登錄排程類型。</block>
   <block id="c420c685f1c370d3495ae3f69ab2178a" category="paragraph">新增其他排程類型</block>
   <block id="d3862d52cd407d98a5060531bcc67094" category="paragraph">建立新原則、並將其附加至必要的資源或資源群組。</block>
@@ -5831,7 +5711,6 @@
   <block id="09a6d5e712449f112a3dcd2169dac55a" category="paragraph">當您還原SnapCenter 此資訊庫時、SnapCenter 執行的其他功能不穩定作業將受到影響、因為還原作業期間無法存取儲存庫資料庫。</block>
   <block id="f65a265b9c1e948edcb4b8b5bd492a18" category="list-text">使用_Restore-SmrepositoryBackup_ Cmdlet還原儲存庫備份。</block>
   <block id="ec9dad1ea2b1a5314f82d20d3bf23f49" category="paragraph">下列Cmdlet可從SnapCenter iSCSI LUN或VMDK上現有的備份還原VMware資料庫儲存庫：</block>
-  <block id="8157c1b74c579bf8df97655493bf3034" category="paragraph">下列Cmdlet會在SnapCenter iSCSI LUN中意外刪除備份檔案時、還原MySQL的功能。若為VMDK、請手動從ONTAP Snapshot複本還原備份。</block>
   <block id="ba26ffcdcd99a1aea9b86f7be319ba8b" category="admonition">執行還原作業之後擷取儲存庫備份時、不會列出用來執行儲存庫還原作業的備份。</block>
   <block id="071788d560dec04e39684f7e9734f7f8" category="section-title">移轉SnapCenter 此系統資訊庫</block>
   <block id="36a43a17d046b7175ef97b0dd0dbf8f8" category="paragraph">您可以將SnapCenter 預設位置的還原伺服器資料庫儲存庫移轉到另一個磁碟。當您想要將儲存庫重新部署到空間較多的磁碟時、可以移轉儲存庫。</block>
@@ -5864,11 +5743,9 @@
   <block id="0834ce0d0048d3f30b3ba331b3fbfaeb" category="paragraph">「嚴重」和「警告」類別警示的總數會顯示在畫面頂端。按一下「嚴重」或「警告」總計、會將您重新導向「警示」頁面、並在「警示」頁面中套用特定篩選條件。</block>
   <block id="730fa47453e87908aa833516ccc3ea45" category="paragraph">按一下特定警示可將您重新導向至警示頁面、以取得該警示的詳細資料。按一下畫面底部的*查看全部*、即可將您重新導向至「警示」頁面、以取得所有警示的清單。</block>
   <block id="d99a5786ad85001e24562511072e0438" category="section-title">最新保護摘要</block>
-  <block id="bded8d2469365a9282915f5f79cd9142" category="paragraph">最新的「Protection Summary」（保護摘要）方塊可為您有權存取的所有實體提供保護狀態。依預設、顯示器會設定為提供所有外掛程式的狀態。狀態資訊是針對以Snapshot複本備份至一線儲存設備的資源、以及使用SnapMirror和SnapVault SnapMirror技術備份至二線儲存設備的資源。次要儲存設備的可用保護狀態資訊取決於所選的外掛程式類型。</block>
   <block id="e1008495c688afceab4f2b4a2cf57b5f" category="admonition">如果您使用鏡射保存原則、保護摘要的計數器會顯示在SnapVault 「圖表」中、而非SnapMirror圖表中。</block>
   <block id="ce7dbf4c6cf16891692544eda41583e7" category="paragraph">從下拉式功能表中選取外掛程式、即可取得個別外掛程式的保護狀態。環圈圖顯示所選外掛程式的受保護資源百分比。按一下環圈片會將您重新導向至「*報告*&gt;*外掛程式*」頁面、該頁面提供指定外掛程式所有主要和次要儲存活動的詳細報告。</block>
   <block id="61918a19fed1a6f7aac77a6c590a36c8" category="admonition">關於二線儲存設備的報告SnapVault 僅適用於不支援SnapMirror報告。</block>
-  <block id="0ead2b8872977656919ce9f01f840af9" category="admonition">SAP HANA為Snapshot複本的主要和次要儲存設備提供保護狀態資訊。只有主要儲存保護狀態可用於檔案型備份。</block>
   <block id="0306f309d85c77b515e2062211ad3b92" category="cell">保護狀態</block>
   <block id="86b11f41cdd4202ed814b1453f2dd058" category="cell">主儲存設備</block>
   <block id="e095aee1efd740c71961a13e76576da6" category="cell">二線儲存設備</block>
@@ -5894,8 +5771,6 @@
   <block id="5bda814c4aedb126839228f1a3d92f09" category="paragraph">執行中</block>
   <block id="29f9814bc81dd214edb0b6be347f7229" category="paragraph">目前執行中的工作數。</block>
   <block id="f7dba3d6d7c9c3429f0c58a4580df905" category="paragraph">Storage（儲存設備）方塊會顯示保護工作在90天內所耗用的主要和次要儲存設備、以圖形方式呈現使用趨勢、並計算主要儲存設備的節約效益。儲存資訊會在上午12點每24小時更新一次</block>
-  <block id="8855900d93f9838e82c77bf6f804e8c3" category="paragraph">每日使用量總計（包括SnapCenter 可用於各種版本的備份總數、以及這些備份所佔用的大小）將顯示在顯示器頂端。備份可能有多個與其相關聯的Snapshot複本、而且計數也會反映相同的情況。這適用於主要與次要Snapshot複本。例如、您已建立10個備份、其中2個因為原則型備份保留而刪除、1個備份則由您明確刪除。因此、會顯示7個備份數、以及這7個備份所佔用的大小。</block>
-  <block id="d612286045a1daee2c40c6d4f0b3c319" category="paragraph">一線儲存設備的儲存節約係數是邏輯容量（複製與Snapshot複本節約效益加上儲存設備消耗）與一線儲存設備實體容量的比率。長條圖說明儲存節約效益。</block>
   <block id="b75814af78ac77b110a1f29425b27be2" category="paragraph">折線圖會在90天的循環期間、以每日為單位分別繪製一線和二線儲存使用量。將游標移到圖表上可提供詳細的每日結果。</block>
   <block id="e4b0253123055e5f41b264b422ac0484" category="admonition">如果您使用SnapCenter 還原伺服器4.2和舊版外掛程式（4.2之前）來建立備份、則「*儲存*」方塊不會顯示備份數量、這些備份所耗用的儲存空間、Snapshot節約效益、複本節約效益、以及Snapshot大小。</block>
   <block id="dda9cd1a94e969f6dac4fc6afb775de5" category="paragraph">「組態」方塊提供整合式狀態資訊、可讓SnapCenter 所有執行中的獨立主機和Windows叢集主機都能取得這些資訊、而且您可以存取這些資訊。這包括與這些主機相關的外掛程式狀態資訊。</block>
@@ -6241,9 +6116,7 @@
   <block id="14310a3e36aca9ee4f8ae01ecce176f6" category="paragraph">如需系統管理員如何指派資源給使用者的詳細資訊、請參閱SnapCenter 《關於安裝的資訊：</block>
   <block id="ee2f9fb0aa9e8c0cc118a5f3a67a4b15" category="paragraph">備份原則是一組規則、可控制您管理及保留備份的方式、以及資源或資源群組的備份頻率。此外、您也可以指定複寫和指令碼設定。在原則中指定選項可節省您想要重複使用其他資源群組原則的時間。</block>
   <block id="567ee5fafb197286f35c17cbadbca640" category="paragraph">這些精靈頁面上的大部分欄位都是不言自明的。下列資訊說明您可能需要指引的部分欄位。</block>
-  <block id="18d4675bdba207949ceb7f704c54e620" category="list-text">輸入每個Snapshot複本應備份的資料庫數量上限。</block>
   <block id="b0c8f062df15022a6331b14e3bf5591e" category="admonition">如果您想要同時執行多個備份作業、則必須增加此值。</block>
-  <block id="846c94f31178e6465f3c62be3f42cb3d" category="list-text">輸入每個Snapshot複本應備份的資料庫數量上限。預設值為100</block>
   <block id="f16fca991ae99058ce41f2b4b1614852" category="list-text">如果您使用其他備份應用程式來備份資源、請選取*僅複製備份*。</block>
   <block id="619da134802c3fcab97a2b7c6d14c4ec" category="paragraph">保持交易記錄不變、可讓任何備份應用程式還原資料庫。在任何其他情況下、您通常都不應使用「僅複本」選項。</block>
   <block id="31bbc81dcc68057ff34be7ba42a87cf4" category="admonition">Microsoft SQL不支援*僅複製備份*選項、以及*完整備份與記錄備份*選項、用於次要儲存設備。</block>
@@ -6257,14 +6130,9 @@
   <block id="73d1997538c5c2799ee681d5e59023ad" category="list-text">在「最新還原作業的保留設定」區段中、執行下列其中一項動作：</block>
   <block id="9bbf41d74c8f89f293d3299ea7bebf83" category="paragraph">選取*保留記錄備份適用於上次的完整備份天數*選項、並指定保留記錄備份複本的天數。</block>
   <block id="9de90deec5302da2195d39aecfada280" category="list-text">在「隨需保留」設定的*完整備份保留設定*區段中、執行下列動作：</block>
-  <block id="a0257f49f5547a6ef191dd6c2f9b4c75" category="admonition">根據預設、保留計數的值設為2。如果您將保留數設為1、則保留作業可能會失敗、因為第一個Snapshot複本是SnapVault 參考Snapshot複本、用於進行此關係、直到將較新的Snapshot複本複寫到目標為止。</block>
-  <block id="6d8af80369897e48f5d0073fb1d5235e" category="paragraph">如果要指定刪除Snapshot複本之前保留Snapshot複本的天數、請選取*保留Snapshot複本*。</block>
   <block id="058ebe875bccef9354f43eaa6facdc04" category="list-text">在「*完整備份保留設定*」區段中、針對「每小時」、「每日」、「每週」和「每月」保留設定、指定「備份類型」頁面中所選排程類型的保留設定。</block>
-  <block id="efa04a2e0b433b54ed88de4c3b1b5a79" category="paragraph">記錄Snapshot複本保留預設為7天。使用Set-SmPolicy Cmdlet變更記錄Snapshot複本保留。</block>
-  <block id="723fe9aea6dfe1a0a822f218095c1c11" category="paragraph">此範例將記錄Snapshot複本保留設為2：</block>
   <block id="f2d35fb96ac070e63c88b1b43cf8c70b" category="inline-link">可保留資料庫的Snapshot複本SnapCenter</block>
   <block id="96df6a4d32e4546cfd055ffa3e9a7097" category="paragraph"><block ref="96df6a4d32e4546cfd055ffa3e9a7097" category="inline-link-rx"></block></block>
-  <block id="a0e2a78c6c2fd62817afcae7e0b538f5" category="admonition">您必須在ONTAP 支援中設定SnapMirror保留原則、使次要儲存設備不會達到Snapshot複本的上限。</block>
   <block id="aec87100b169f0f2c41c04f01deccfff" category="list-text">在「執行下列備份排程驗證」區段中、選取排程頻率。</block>
   <block id="78b5b7c604c7bf8d28d141a67b26385f" category="list-text">在Database Consistency Check options（資料庫一致性檢查選項）區段中、執行下列動作：</block>
   <block id="369cd91c3e11b99e6fa5850b92b3090a" category="paragraph">將完整性結構限制為資料庫的實體結構（僅限實體）</block>
@@ -6274,8 +6142,6 @@
   <block id="afac60f293b05dc186f67c671aabe6bc" category="paragraph">選取*顯示每個物件所有報告的錯誤訊息（all_ERRORMSGS）*、以顯示每個物件所有報告的錯誤。</block>
   <block id="62acb38bef8d64c5f91175e7ae80611b" category="paragraph">請勿檢查非叢集式索引（NOINEX）</block>
   <block id="7872e7b32ee763197ad7b5b084205b8c" category="paragraph">如果不想檢查非叢集索引、請選取*不要檢查非叢集索引（NOINEX）*。SQL Server資料庫使用Microsoft SQL Server資料庫一致性檢查程式（DBCC）來檢查資料庫中物件的邏輯和實體完整性。</block>
-  <block id="88d8212b57ef4a806bbe46dc391aebdf" category="paragraph">限制檢查並取得鎖定、而非使用內部資料庫Snapshot複本（TABLOCK）</block>
-  <block id="bed7a5b2a53899a17a7ddb2e244ad497" category="paragraph">選擇*限制檢查並取得鎖定、而非使用內部資料庫Snapshot複本（TABLOCK*）*來限制檢查並取得鎖定、而非使用內部資料庫Snapshot複本。</block>
   <block id="d2f34567100e19ae71be551d2bab96bf" category="list-text">在「*記錄備份*」區段中、選取*完成時驗證記錄備份*、以在完成時驗證記錄備份。</block>
   <block id="a7abc11ba08de5d8165c85606e400ec8" category="list-text">在「*驗證指令碼設定*」區段中、分別輸入驗證作業之前或之後應執行的預先記錄或PostScript路徑和引數。</block>
   <block id="5a84253a41c8716d8113fbb5704f5cb7" category="summary">您必須使用SnapCenterAdd Host頁面來新增主機並安裝外掛程式套件。外掛程式會自動安裝在遠端主機上。</block>
@@ -6359,12 +6225,7 @@
   <block id="a9a36931adb350bdf3480cb9845a8fc8" category="image-alt">SCSQL備份工作流程</block>
   <block id="780c1b490607a3963a4db9b069dbf1e2" category="admonition">如果您選取非NetApp LUN、毀損的資料庫或正在還原的資料庫、則「資源」頁面上的「立即備份」、「還原」、「管理備份」及「複製」選項會停用。</block>
   <block id="70a3b8963fff53a1f81a125297906687" category="section-title">如何備份資料庫SnapCenter</block>
-  <block id="fe38a38405ced1973299d2b175c66a79" category="paragraph">使用Snapshot複製技術來備份位於LUN或VMDK上的SQL Server資料庫。SnapCenter利用建立資料庫的Snapshot複本來建立備份。SnapCenter</block>
   <block id="05e0444569b01c1a835c376c06e5d120" category="paragraph">從「資源」頁面選取資料庫進行完整資料庫備份時SnapCenter 、會自動選取位於同一個儲存磁碟區上的所有其他資料庫。如果LUN或VMDK僅儲存單一資料庫、您可以個別清除或重新選取資料庫。如果LUN或VMDK包含多個資料庫、您必須清除或重新選取資料庫作為群組。</block>
-  <block id="94d411efd4d509b79e37c7e4a295be9d" category="paragraph">位於單一磁碟區的所有資料庫都會使用Snapshot複本同時備份。如果並行備份資料庫的最大數目為35、且儲存磁碟區中有超過35個資料庫、則建立的Snapshot複本總數等於資料庫數除以35。</block>
-  <block id="ec785954577f393169b08b9820597d33" category="admonition">您可以在備份原則中設定每個Snapshot複本的資料庫數目上限。</block>
-  <block id="3c4ba880bf5f444b48a27b0feee215a3" category="paragraph">當使用此功能建立Snapshot複本時、會在Snapshot複本中擷取整個儲存系統磁碟區。SnapCenter不過、備份僅對建立備份的SQL主機伺服器有效。</block>
-  <block id="797732091f9ad14b5fbe3406e6d7ed15" category="paragraph">如果來自其他SQL主機伺服器的資料位於同一個磁碟區、則無法從Snapshot複本還原此資料。</block>
   <block id="f1b0e4721c4648a3a0d9747b1df24457" category="inline-link-macro">靜止或分組資源作業失敗</block>
   <block id="832cb1b396b5451b24475f6f96d26d25" category="paragraph"><block ref="832cb1b396b5451b24475f6f96d26d25" category="inline-link-macro-rx"></block></block>
   <block id="81a77062a70718e0452154930df7ac35" category="doc">取消SQL資源複製作業</block>
@@ -6407,7 +6268,6 @@
   <block id="ce938ff2cd62772022d524bef4583928" category="list-text">如果您不想檢查非叢集索引、請選取* NOINDEX*選項。</block>
   <block id="659d429411e9bdf1792d1ee2e9be57e8" category="paragraph">SQL Server資料庫使用Microsoft SQL Server資料庫一致性檢查程式（DBCC）來檢查資料庫中物件的邏輯和實體完整性。</block>
   <block id="56e4a44986eec2c6c805eb91f2eb9f57" category="admonition">您可能想要選取此選項以縮短執行時間。</block>
-  <block id="276a2a80c1894c38febc3b5daa0e6f1e" category="list-text">選擇「**TABLOCK**」選項以限制檢查並取得鎖定、而非使用內部資料庫Snapshot複本。</block>
   <block id="f896d9aec3aeda8f9d538e812b63bad4" category="list-text">檢閱摘要、然後按一下「*完成*」。</block>
   <block id="230797cd257f4279279a678587ed7d3e" category="summary">若要SnapCenter 保護SQL Server資料庫、您應該安裝並設定Microsoft SQL Server的支援功能。</block>
   <block id="f03c757efff1b7a92c7b30cbc8c7c0b8" category="doc">適用於Microsoft SQL Server的安裝工作流程SnapCenter</block>
@@ -6435,11 +6295,9 @@
   <block id="acc34d774648197faa78322b05b1a828" category="paragraph">下圖顯示如何在VMDK上設定中型或小型資料庫的儲存配置：</block>
   <block id="649f15576faed4804f780600790fe1a2" category="image-alt">VMDK中中型或小型資料庫的儲存配置</block>
   <block id="f9769cb6db4dd2d01611ef4c2e69e554" category="doc">準備儲存系統以進行SnapMirror和SnapVault SQL Server外掛程式的不全複寫</block>
-  <block id="24743f153fb0278e1e3b6f596ac1f6fa" category="summary">SQL Server外掛程式與Windows主機上的Microsoft SQL Server和儲存系統上的NetApp Snapshot複本技術整合。若要搭配SQL Server外掛程式使用、請使用SnapCenter 支援此功能的支援介面。</block>
   <block id="043833147a39840644f2ff01a835f90d" category="doc">適用於Microsoft SQL Server功能的支援外掛程式SnapCenter</block>
   <block id="124dafa39d6abec3cd14b880f87c4178" category="paragraph">適用於SQL Server的外掛程式包含下列主要功能：</block>
   <block id="76269dad3b4162847b77d8ae239cead5" category="paragraph">您可以排程例行SQL Server備份、設定原則型備份保留、以及設定時間點與最新還原作業。您也可以透過設定SnapCenter 功能以傳送電子郵件警示、主動監控SQL Server環境。</block>
-  <block id="a621c2443659e98a79889cf634460ecb" category="paragraph">適用於SQL Server的外掛程式使用NetApp Snapshot複製技術搭配SnapCenter 適用於Microsoft Windows的NetApp功能。這可讓您在數秒內備份資料庫、並快速還原資料庫、而無需讓SQL Server離線。Snapshot複本所耗用的儲存空間最小。</block>
   <block id="8a92e906457b4fafff3da6c975954701" category="paragraph">除了這些主要功能之外、適用於SQL Server的外掛程式還提供下列優點：</block>
   <block id="19ad37e6b2da345ecd66a8304c75bdf0" category="list-text">備份、還原、複製及驗證工作流程支援</block>
   <block id="eac9b389c34d711cb6f83d963db0f2cb" category="list-text">使用NetApp FlexClone技術建立具空間效益的生產資料庫時間點複本、以供測試或資料擷取之用</block>
@@ -6467,7 +6325,6 @@
   <block id="44567489037e9457257d3790f8cb3ccd" category="paragraph">對於資料庫備份、您選擇的備份工作數量通常取決於您放置資料庫的磁碟區數量。例如、如果您將一組小型資料庫放在一個磁碟區上、而另一個磁碟區上有一個大型資料庫、則您可以為小型資料庫建立一個備份工作、為大型資料庫建立一個備份工作。</block>
   <block id="0a5070b538c653ac59aaa80bcbf05055" category="summary">您可以從次要儲存系統上的實體LUN（RDM、iSCSI或FCP）還原備份的SQL Server資料庫。還原功能是一個多階段程序、可將所有資料和記錄頁面從位於次要儲存系統上的指定SQL Server備份複製到指定的資料庫。</block>
   <block id="322e2c0228e3fa3086aa2d2caa7e24ad" category="paragraph">您可以從次要儲存系統上的實體LUN（RDM、iSCSI或FCP）還原備份的SQL Server資料庫。還原功能是一個多階段程序、可將所有資料和記錄頁面從位於次要儲存系統上的指定SQL Server備份複製到指定的資料庫。</block>
-  <block id="6490dd6973f2704b0b377c24b0992a87" category="list-text">您必須已將Snapshot複本從一線儲存系統複寫至二線儲存系統。</block>
   <block id="e1573e93dec4a09a53c7948b08bea942" category="list-text">您必須確保SnapCenter 支援此功能的伺服器和外掛程式主機能夠連線至二線儲存系統。</block>
   <block id="48d655df40608a314f5332ec2869cbed" category="list-text">「還原」精靈頁面上的大部分欄位都會在基本還原程序中說明。下列資訊說明您可能需要指引的部分欄位。</block>
   <block id="0e6942735cceeadb6d02fb320e94d290" category="list-text">在「管理複本」區段中、從次要儲存系統（鏡射或保存庫）選取*備份*。</block>
@@ -6476,8 +6333,6 @@
   <block id="9660edb91fac8702aaa8095506c95490" category="summary">在建立備份工作之前定義備份策略、有助於確保您擁有成功還原或複製資料庫所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您的備份策略的主要決定因素。</block>
   <block id="e5b60957c4b0bca31d0e2fd06deba46c" category="doc">定義SQL Server資源的備份策略</block>
   <block id="57fbd1379ab3804c06f6e72d479b21a7" category="paragraph">在建立備份工作之前定義備份策略、有助於確保您擁有成功還原或複製資料庫所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、主要決定您的備份策略。</block>
-  <block id="6a34b15a40b3586e87a4c13c8590b294" category="summary">使用SnapCenter 支援功能來備份SQL Server系統和使用者資料庫時、您必須選擇資源類型、例如資料庫、SQL Server執行個體和可用度群組（AG）。利用Snapshot複製技術來建立資源所在磁碟區的線上唯讀複本。</block>
-  <block id="83a6b4f4d698b5886d410ecf41ce092e" category="paragraph">若要使用SnapCenter 支援功能來備份SQL Server系統和使用者資料庫、您必須選擇資源類型、例如資料庫、SQL Server執行個體和可用度群組（AG）。利用Snapshot複製技術來建立資源所在磁碟區的線上唯讀複本。</block>
   <block id="3f2b6cc2adaf1a1f28214b5ed39ff5cd" category="paragraph">您可以選取純複本選項、指定SQL Server不會刪減交易記錄。當您同時使用其他備份應用程式來管理SQL Server時、應該使用此選項。保持交易記錄不變、可讓任何備份應用程式還原系統資料庫。純複製備份與排程備份順序無關、不會影響資料庫的備份與還原程序。</block>
   <block id="6c8a86b32ee2dec60604a9f5961cc1c5" category="cell">備份類型的純複本選項</block>
   <block id="22961b75984331dc55326bb5be40039b" category="paragraph">完整備份與記錄備份</block>
@@ -6656,7 +6511,6 @@
   <block id="834a032ae363b3b656aaeecb6f1b7c3e" category="inline-link">Microsoft支援文件編號2887595：Windows RT 8.1、Windows 8.1和Windows Server 2012 R2更新彙總套件：2013年11月</block>
   <block id="145ee2da76e280f3ab74f8e48a4f6229" category="paragraph"><block ref="145ee2da76e280f3ab74f8e48a4f6229" category="inline-link-rx"></block></block>
   <block id="3a398ade5cc2db068632e3780c5f9812" category="list-text">您必須備份資源群組或資料庫。</block>
-  <block id="c9be9cc5ba5ff68efaa119bed3d4a11a" category="list-text">如果您要將Snapshot複本複製到鏡射或保存庫、SnapCenter 則該管理員必須為來源磁碟區和目的地磁碟區指派儲存虛擬機器（SVM）給您。</block>
   <block id="9ab48724fd891b73fc67de8664319345" category="list-text">還原資料庫之前、必須先停止所有備份與複製工作。</block>
   <block id="10344402be0db5fed4bdb763360d91a4" category="list-text">如果資料庫大小以TB為單位、則還原作業可能會逾時。</block>
   <block id="67758aec18021f6235b6a5ed9330f493" category="paragraph">如果您想要在資料庫上線時還原、應在「還原」頁面中啟用線上還原選項。</block>
@@ -6668,8 +6522,6 @@
   <block id="6b3f89d4de284eef9726110270f3aca6" category="list-text">選取您要備份的資料庫、執行個體或可用度群組。</block>
   <block id="8aacc4f53fdad965d551d7ddc2e431d1" category="paragraph">當您備份執行個體時、「資源」頁面將無法提供該執行個體上次備份狀態或時間戳記的相關資訊。</block>
   <block id="9d82e2623af61fdfe7b6c68017db0226" category="paragraph">在拓撲檢視中、您無法區分備份狀態、時間戳記或備份是針對執行個體或資料庫。</block>
-  <block id="53c98fb3ede460fb23424f1db6ea0273" category="list-text">在「資源」頁面中、選取「Snapshot Copy*的*自訂名稱格式」核取方塊、然後輸入您要用於Snapshot複本名稱的自訂名稱格式。</block>
-  <block id="3b9b501ce9ff4819d459190476007edc" category="paragraph">例如、customtext_policy_hostnameor resource_hostname.根據預設、快照複本名稱會附加時間戳記。</block>
   <block id="075e5d48960664645c5727a530a7c640" category="list-text">在原則區段中、從下拉式清單中選取一或多個原則。</block>
   <block id="204b899f0e95e32b80ec8ea79f53c1ec" category="paragraph">在「*設定所選原則的排程*」區段中、會列出所選原則。</block>
   <block id="08fe75bd987fb2dedbe7641f478927f0" category="paragraph">此處的「policy_name」是您選取的原則名稱。</block>
@@ -6687,7 +6539,6 @@
   <block id="1ca9ef3a64115b9b5155a63404740914" category="paragraph">隨即建立內含資源群組。您可以從「使用者存取」頁面選取個別的使用者或群組來檢視此資訊。隱含資源群組類型為「資源」。</block>
   <block id="393997bd3b722d52ae03ce598aa5cfec" category="paragraph"><block ref="393997bd3b722d52ae03ce598aa5cfec" category="inline-link-rx"></block></block>
   <block id="dae1725dc2e5765223411b1d431ef15d" category="doc">適用於Microsoft Windows和Microsoft SQL Server的解決方案SnapCenter 支援的儲存類型</block>
-  <block id="60b2a4dd687e5b16ce91fc08c7273c8b" category="summary">您可以取消執行中、佇列中或無回應的備份作業。當您取消備份作業時、SnapCenter 如果建立的備份並未在SnapCenter 伺服器上登錄、則停止此作業並從儲存設備中移除所有Snapshot複本。如果備份已登錄SnapCenter 到支援伺服器、則即使觸發取消動作、它也不會回復已建立的Snapshot複本。</block>
   <block id="6895fc6b34ff814dd8d20f8eb70439e5" category="doc">取消SnapCenter Microsoft SQL Server備份作業的功能</block>
   <block id="d15cddcc0f2911c53261943c85948fab" category="list-text">您必須以SnapCenter 「管理員」或「工作擁有者」身分登入、才能取消還原作業。</block>
   <block id="1e4f7aaf5f275f33488c6753583b5d84" category="list-text">您只能取消排入佇列或執行中的記錄或完整備份作業。</block>
@@ -6728,13 +6579,11 @@
   <block id="bfa8c341f9069cab983b83a7b3d6e229" category="summary">您可以將所有資料庫放在同一個磁碟區上、因為備份原則有選項可設定每個備份的資料庫上限（預設值為100\）。</block>
   <block id="49d3d638c72a43de1071ccafc35ba79d" category="doc">相同磁碟區上有多個資料庫</block>
   <block id="4e23a71c353d487c1b39814259994b97" category="paragraph">您可以將所有資料庫放在同一個磁碟區上、因為備份原則有選項可設定每個備份的資料庫上限（預設值為100）。</block>
-  <block id="190319f351847bd1023d75c822627133" category="paragraph">例如、如果您在同一個磁碟區中有200個資料庫、則會在兩個Snapshot複本中各建立兩個Snapshot複本、其中每個複本有100個資料庫。</block>
   <block id="46c4f3c110b291802e897ca96a3234db" category="doc">取消SQL資源還原作業</block>
   <block id="5c654ca02551a6a3a8886012f5c1fc6e" category="doc">監控SQL資料庫複製作業</block>
   <block id="0ebfc8ee6fcce1769e02ab4f33c1967f" category="summary">資源群組是一個容器、您可以在其中新增要一起備份及保護的資源。資源群組可讓您同時備份與特定應用程式相關聯的所有資料。任何資料保護工作都需要資源群組。您也必須將一或多個原則附加至資源群組、以定義您要執行的資料保護工作類型。</block>
   <block id="8a256fc5affeb3e3570c3c8e73ce682b" category="paragraph">您無需建立新的資源群組、即可個別保護資源。您可以在受保護的資源上進行備份。</block>
   <block id="80b4392036b2c71988077d45b3eedc67" category="paragraph">輸入一或多個標籤、以協助您稍後搜尋資源群組。例如、如果您將HR新增為多個資源群組的標記、則稍後可以找到與HR標記相關聯的所有資源群組。</block>
-  <block id="14896f2f427d28611f36aa160295c034" category="paragraph">選用：輸入自訂的Snapshot複本名稱和格式。例如、customtext資源群組原則主機名稱或資源群組主機名稱。根據預設、快照複本名稱會附加時間戳記。</block>
   <block id="cec46940af8355298a923d623115e6a7" category="list-text">從下拉式清單中選取主機名稱、資源類型和SQL Server執行個體、以篩選資源清單。</block>
   <block id="78504af1df199590dc7639bdc6191b6f" category="admonition">如果您最近新增了資源、只有在重新整理資源清單之後、這些資源才會出現在可用資源清單中。</block>
   <block id="3c8499d37e5b698773c087e64ded0e3e" category="list-text">若要將資源從*可用資源*區段移至「選取的資源」區段、請執行下列其中一個步驟：</block>
@@ -6781,7 +6630,6 @@
   <block id="13101775b1dc653fb8e14885572bf910" category="admonition">如果您建立自訂角色、則必須包含SnapCenter 所有的「管理員」角色權限。如果您只複製部分權限、例如「主機新增」或「主機移除」、就無法執行這些作業。</block>
   <block id="f99af3f9d6fe830ae8bd2fc15f75f35f" category="paragraph">使用者必須在登入期間、透過圖形使用者介面（GUI）或使用PowerShell Cmdlet來提供驗證。如果使用者是多個角色的成員、則在輸入登入認證之後、系統會提示使用者指定想要使用的角色。使用者也必須提供驗證、才能執行API。</block>
   <block id="4621c32301e9db3796cade120966e4ac" category="paragraph">使用認證資料來驗證獲授權的使用者是否也擁有應用程式層級的權限。SnapCenter SnapCenter</block>
-  <block id="86668b4509f462ece126907d84f808c1" category="paragraph">例如、如果您想要在SQL Server環境中執行Snapshot複本和資料保護作業、則必須使用適當的Windows或SQL認證來設定認證資料。此伺服器SnapCenter 會使用任一種方法驗證認證集。如果您想要在ONTAP Windows檔案系統環境中執行Snapshot複製和資料保護作業、請在Windows SnapCenter 主機上執行此功能。</block>
   <block id="1247a4f73aec617351c15da7677f2470" category="paragraph">同樣地、如果您要在Oracle資料庫上執行資料保護作業、而且資料庫主機中的作業系統（OS）驗證已停用、則必須使用Oracle資料庫或Oracle ASM認證來設定認證資料。根據作業情況、此伺服器會使用下列其中一種方法來驗證認證集。SnapCenter</block>
   <block id="880474ac5a13e7ace0b497d868bfcec8" category="section-title">VMware vSphere RBAC的插件SnapCenter</block>
   <block id="f801aae5c222a63a7b4293067447308c" category="paragraph">如果您使用SnapCenter VMware vCenter外掛程式來提供VM一致的資料保護、vCenter Server會提供額外的RBAC層級。VMware支援vCenter Server RBAC和VMware RBAC外掛程式。SnapCenter Data ONTAP</block>
@@ -6921,7 +6769,6 @@
   <block id="614d75d82c03a359210029561e76c31c" category="paragraph">資料保護功能可支援Microsoft Exchange Server、Microsoft SQL Server、Linux或AIX上的Oracle資料庫、SAP HANA資料庫、ONTAP 以及執行於更新系統上的Windows主機檔案系統。</block>
   <block id="91fc009ef552fe282ad4103bc4542688" category="paragraph">其他標準或自訂應用程式和資料庫也支援資料保護、提供架構以建立使用者定義SnapCenter 的功能表外掛程式。如此一來、其他應用程式和資料庫就能從同一個單一窗口進行資料保護。藉由運用此架構、NetApp已在SnapCenter NetApp Automation Store上針對IBM DB2、MongoDB、MySQL等發佈了適用的功能不全的外掛程式。</block>
   <block id="1e06a8cc16bd3bc423f81e8ff56e4fc0" category="list-text">原則型備份</block>
-  <block id="5120c9ef4a7041813fe0f5dd0dceb9e7" category="paragraph">以原則為基礎的備份運用NetApp Snapshot複製技術、建立快速、節省空間、應用程式一致、磁碟型的備份。或者、您也可以更新現有的保護關係、將這些備份作業自動化至二線儲存設備。</block>
   <block id="c6f23063f5e9e828f1d4a0d52255f07c" category="list-text">備份多種資源</block>
   <block id="050fe282bd8b711ba366c400655d1e2a" category="paragraph">您可以使用SnapCenter 資源群組、同時備份同類型的多個資源（應用程式、資料庫或主機檔案系統）。</block>
   <block id="6be8f3086a30e59e908d53eb620b51dd" category="list-text">還原與還原</block>
@@ -6998,7 +6845,6 @@
   <block id="2f75224064f651f17be474084e7a7ff5" category="section-title">適用於Microsoft Windows功能的插件SnapCenter</block>
   <block id="1b789581aeaa48640561ebae3b263a76" category="list-text">為SnapCenter 執行於Windows主機上的其他外掛程式啟用應用程式感知資料保護功能、以保護您的支援環境</block>
   <block id="d764b7be86ece9a7b21fa445a8e1493c" category="list-text">在SnapCenter 您的支援環境中、自動化Microsoft檔案系統的應用程式感知備份、還原及複製作業</block>
-  <block id="6654f600f78c3ef362da3ccd2f7edf7c" category="list-text">支援儲存資源配置、Snapshot複本一致性、以及Windows主機的空間回收</block>
   <block id="dea9211ac8214ee6078ef38e9e19fd1b" category="admonition">Windows外掛程式會在實體和RDM LUN上配置SMB共用和Windows檔案系統、但不支援SMB共用上的Windows檔案系統備份作業。</block>
   <block id="bb1a0267e6190653f6b95ebf12a64e69" category="section-title">適用於Microsoft Exchange Server功能的元件外掛程式SnapCenter</block>
   <block id="b1af2c6f8c468738169b12e770baea8c" category="list-text">在SnapCenter 您的支援環境中、自動化Microsoft Exchange Server資料庫和資料庫可用度群組（DAG）的應用程式感知備份與還原作業</block>
@@ -7209,7 +7055,6 @@
   <block id="d80b7e944064bf3bd382ae2be696ab9e" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver EXECT-Fpolicy show」-access all」</block>
   <block id="1c1ebdb4d2cea4a9f1b480ef6387ebbd" category="list-text">「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「vserver iSCSI connection show」-access all」</block>
   <block id="2bad882b7fb5945b0373cf8c526cb4ac" category="list-text">「安全性登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「Volume Clone分割狀態」-access all」</block>
-  <block id="af9210ab244187eb84af56c8e51b082c" category="paragraph">您可以在SnapCenter VMware環境中使用適用於Microsoft Windows的解決方案、來建立及管理LUN、以及管理Snapshot複本。</block>
   <block id="c9956993c3473df3ea1961fead514074" category="paragraph">Logs_MAX_count</block>
   <block id="9b24859b2a7f9c7d8afb9ec3b025e927" category="paragraph">log_MAX_SIZE</block>
   <block id="92cb537bc0c912cec1e9669f256ebc89" category="paragraph">顯示工作記錄檔的最大大小。</block>
@@ -7239,7 +7084,6 @@
   <block id="487a34d280250073f86b353bd430b05b" category="paragraph">如有需要、您可以變更此路徑並重新啟動SMcore服務。建議您使用預設的安全路徑。</block>
   <block id="cb0f6b6fa4cffa93ac67dd15850cae3d" category="paragraph">金鑰的值可透過API：API /4.7/configsettings從交換器顯示</block>
   <block id="cf2ded6f4d7ccf880ce7a042e4726b3e" category="paragraph">您可以使用Get API來顯示金鑰的值。不支援Set API。</block>
-  <block id="3bcbed691a828d3bec798c7f504ae72f" category="paragraph">完成Snapshot複製作業後、執行SnapMirror和SnapMirror更新。SnapCenter SnapVaultSnapMirror和SnapVault SnapMirror更新是SnapCenter 執行功能不全的工作之一、請勿建立個別ONTAP 的功能不全。</block>
   <block id="d332f88a3886e736c322b3643225a6cd" category="admonition">不支援SnapMirror與支援等量資料（*主要*&gt;*鏡射*&gt;* Vault *）之間的串聯關係。SnapCenter SnapVault您應該使用「扇出」關係。</block>
   <block id="08e9631e1208ded677a67844beb7e0f6" category="list-text">您必須安裝Microsoft Net 4.7.2或更新版本。</block>
   <block id="f9e40bd22b133e93e9c9d3b4c3adef6e" category="list-text">Microsoft .NET Framework 4.7.2或更新版本</block>
@@ -7489,7 +7333,6 @@
   <block id="e7b4efc5dd5b16a36c26e91652b78194" category="paragraph">對於Linux：_/var/opt/snapcenter/scc/sited_commands_list.txt_</block>
   <block id="2dd7c4421097b3d796ff9bf355ebaa6e" category="admonition">如果命令清單中不存在這些命令、則作業將會失敗。</block>
   <block id="e61e5d73b3b042b28dcdf96a5c438a4e" category="list-text">對於preclone或POST clone命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否存在命令：</block>
-  <block id="d5d9a4c4e51c27e556fb89bfdd11f0b0" category="list-text">對於靜止、Snapshot複製及靜止作業的前置和POST命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否有這些命令：</block>
   <block id="3c8f1b708d97734299340f633acf1b28" category="paragraph">如果您使用iSCSI、iSCSI服務應該會執行。</block>
   <block id="9415aa73bf3f3a2a034e0e07c5d506cf" category="section-title">SHA512雜湊</block>
   <block id="aeff1fc8cacc5ff5c9b086664b2f5560" category="list-text">對於NetApp提供的自訂外掛程式、您應該確定已將自訂外掛程式檔案的SHA512雜湊新增至_custom_plugin_checksum _list_檔案。</block>
@@ -7674,8 +7517,6 @@
   <block id="4c4d4c133d15d97bf3bef74ffeeeb66a" category="list-text">在左側導覽窗格中、選取 * 資源 * 、然後從清單中選取適當的外掛程式。</block>
   <block id="ba4484b740822363967ef7dbb090de6a" category="inline-image-macro">篩選圖示</block>
   <block id="90db41db3c301da492422a8fbb244c83" category="list-text">在「資源」頁面中、您可以執行下列步驟：</block>
-  <block id="00f0529a96533b63a21705811e1addce" category="list-text">選取核取方塊、然後輸入您要用於 Snapshot 複本名稱的自訂名稱格式。</block>
-  <block id="8319f5e3f98fcec5a71bd43e8454a8fd" category="paragraph">例如、<block ref="6d242f6ac938ffb13709f54d68cd3c4a" prefix=" " category="inline-code"></block> 或<block ref="90ea7aa0cb61dd49e32f6dcf8afac143" prefix=" " category="inline-code"></block>。根據預設、 Snapshot 複本名稱會附加時間戳記。</block>
   <block id="e0af3bf36c9535530ed431b3358aa176" category="inline-image-macro">新增符號</block>
   <block id="a2fbabd2b5fd55db991eb64739e8189a" category="admonition">您可以按一下建立原則 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="a04dff3ca18f5d27eeb205537402b01c" category="list-text">按一下 <block ref="494b170a0dd5e7fc7886f29293b0c5bc" category="inline-image-macro-rx" type="image"></block> 在 " 設定排程 " 欄位中 , 為您要的原則設定排程。</block>
@@ -7806,15 +7647,9 @@
   <block id="016bcd6d9710c9d2dde84a3ff020b0de" category="paragraph">您只能為原則選取一種排程類型。</block>
   <block id="ef077dad77fac08deaf5fe61aced7bc3" category="section-title">步驟 3 ：設定保留設定</block>
   <block id="d8d914bba3878c80c4a43efb4e1ce72c" category="open-title">特定份數</block>
-  <block id="5a0290e9f5b4a432c42379432ee6f5c8" category="paragraph">僅保留特定數量的 Snapshot 複本。</block>
   <block id="619f22faf39c2dfe9a11af29647bb1a6" category="list-text">選取*保留記錄備份適用於最後的&lt;number&gt;天*選項、然後指定保留天數。如果您接近此限制、可能會想要刪除舊版複本。</block>
   <block id="fe9e179b8597c5b1e7f1e2ff0644a5c8" category="open-title">特定天數</block>
   <block id="82c2224d099110596a9863d056598afe" category="paragraph">將備份複本保留一段特定天數。</block>
-  <block id="805b73e03f8c3c7c7a8238ed9766dee3" category="list-text">指定要保留的 Snapshot 複本總數</block>
-  <block id="ffe60c98392393713d4e1d365c27b6be" category="list-text">若要指定要保留的 Snapshot 複本數量、請選取 * 要保留的 Snapshot 複本總數 * 。</block>
-  <block id="d4f0bf88ec19106300653daff553435f" category="list-text">保留 Snapshot 複本的時間長度</block>
-  <block id="7fcb4d3ce02337b7e14c71c970e6aa6e" category="list-text">若要指定要保留的 Snapshot 複本數量、請選取 * 要保留的 Snapshot 複本總數 * 。如果Snapshot複本數量超過指定數量、則會刪除Snapshot複本、並先刪除最舊的複本。</block>
-  <block id="6618a5f84aa25633e669aa723e59a0cd" category="list-text">若要指定刪除 Snapshot 複本之前要保留的天數、請選取 * 保留 Snapshot 複本 * 。</block>
   <block id="92ac5fc0212c94ee50e6dc85913caeec" category="example-title">範例</block>
   <block id="8047dd542f0833c625160d18deaef831" category="paragraph">Set-SmPolicy -PolicyName 'newpol' -PolicyType 'Backup' -PluginPolicyType 'SSQL' -sqlbackuptype 'FullBackupAndLogBackup' -RetentionSettings @{BackupType='Data';ScheduleType='Hour';RetentionschedulerCount=2}@{BackupType='Log_ScheduleType=Retenthoure2;RetenteType='Type='LogOnClinthouring@'</block>
   <block id="b1cf83519efa64342d0b96985ded3691" category="section-title">步驟 4 ：設定複寫設定</block>
@@ -7844,9 +7679,7 @@
   <block id="7bc2103c2a80cd91e9a026c0f2b3f943" category="list-text">選取備份箭頭以設定其他備份選項：</block>
   <block id="6ab7eeea8e6b1dcd3c8360b245f0e3c0" category="inline-image-macro">一致性群組備份選項的螢幕擷取畫面：緊急、中或放鬆。</block>
   <block id="072de5e2138004f9a67883cb0ff2aaa6" category="paragraph"><block ref="072de5e2138004f9a67883cb0ff2aaa6" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e92d78d72bbcff05469cd98c282ac8c4" category="list-text">選取「指令碼」箭頭、然後輸入用於停止、 Snapshot 複本和取消停止作業的前置和後置命令。您也可以輸入要在發生故障時結束之前執行的預先命令。</block>
   <block id="3328b0dbde4c99683e19eca586842ffb" category="list-text">選取「自訂組態」箭頭、然後輸入使用此資源的所有資料保護作業所需的自訂金鑰值配對。</block>
-  <block id="dfa18f81ec763693ffdac89624763ae3" category="list-text">選擇 * Snapshot Copy Tool* （快照複製工具）箭頭以選擇用於創建 Snapshot 副本的工具：</block>
   <block id="7f368ffa9ab4869382c31a28f17f3a4a" category="inline-image-macro">加號圖示</block>
   <block id="f79b4ba47e778727c1290b36487ea0bc" category="admonition">您也可以選取 * 來建立原則<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>*。</block>
   <block id="b11a42908bee80055dfed2bb0e9a583a" category="list-text">在 * 設定排程 * 欄中、選取 *<block ref="a55421dd685609006a21f2507444357f" category="inline-image-macro-rx" type="image"></block>*針對您要設定的原則。</block>
@@ -8322,8 +8155,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="9eb8278143c5b25686cc1b6c525a9b8d" category="paragraph">選取*<block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>*、然後選取主機名稱和資源類型以篩選資源。然後您可以選取 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
   <block id="45b6721b8137bd82de1f2497a525d57a" category="list-text">選取您要備份的資源。</block>
   <block id="0666d07a296860de6e0a6f6e4fd0425e" category="list-text">選擇 * 備份 * 箭頭以設定其他備份選項：</block>
-  <block id="cd713ffb7f8ebc1fd9a44fb5ef40eefe" category="paragraph">選擇*緊急*或*中型*或*休閒*以指定Snapshot複製作業完成的等待時間。「緊急」= 5秒、「中」= 7秒、「輕鬆」= 20秒。</block>
-  <block id="8dd7963568a06d004b4a54b651ec862f" category="list-text">選取 * 指令碼 * 箭頭以執行停止、 Snapshot 複本和取消停止作業的前置和後置命令。</block>
   <block id="0644babb03e5024dbc898ead17e21f90" category="list-text">選取「 ** 自訂組態 ** 」箭頭、然後輸入使用此資源的所有工作所需的自訂值配對。</block>
   <block id="100eb4bb64628d6bc8890851c8173103" category="list-text">在 [ 新增原則 _policy_name_ 的排程 ] 對話方塊中，設定排程，然後選取 *OK* 。</block>
   <block id="7dd7da1b07a05d1000eeeecb05ce4ee5" category="paragraph">您可以在搜尋方塊中輸入資源群組名稱、或是選取來搜尋資源群組 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block>，然後選取標記。然後您可以選取 <block ref="f7fe4e34c7d99a8a3a2c66cbdc7de7d8" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
@@ -8423,8 +8254,6 @@ Windows 主機：</block>
   <block id="c58fd0a9a81f974b5b3b5db215383ed4" category="paragraph">如需執行Cmdlet的資訊、請參閱<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block></block>
   <block id="6f5877ce1b560e325ddcea6ec5f7f838" category="paragraph">如需詳細資訊、請參閱<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="6fe2ae3bc136b86813d15d08bd3465f4" category="list-text">對於 SnapMirror Business Continuity （ SM-BC ）還原作業、您必須從主要位置選取備份。</block>
-  <block id="1b117b973aa08e222958e556130f2f75" category="list-text">對於啟用 SnapLock 的原則、對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
-  <block id="3377f6aa07593543e3eae7ef14e25899" category="list-text">對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本將繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
   <block id="920deed37c528e013939d546655305ff" category="paragraph">「活動」窗格會顯示有關備份、還原、複製及排程備份作業的資訊。</block>
   <block id="1d37b803d962597d71711e7a279d95e7" category="paragraph">如果您與 SnapMirror 業務連續性（ SM-BC ）有次要關係、您可以看到下列其他圖示：</block>
   <block id="11ff410db3b99c0f2b2278663ad47a29" category="inline-image-macro">複本網站上線</block>
@@ -8434,7 +8263,6 @@ Windows 主機：</block>
   <block id="c0b99067667278701462d9633e3d936b" category="inline-image-macro">關係已重新建立</block>
   <block id="75b158522c29b4264f91885a3f9d64cd" category="list-text"><block ref="129c9657fb84202dacfb694c718f35e3" category="inline-image-macro-rx" type="image"></block> 表示次要鏡射或資料保險箱關係尚未重新建立。</block>
   <block id="719868bb6bc8ea409a4ca9e3c6f76bb8" category="paragraph">如果採用 SnapLock 啟用的備份、則按一下 * 重新整理 * 按鈕可重新整理從 ONTAP 擷取的主要和次要 SnapLock 到期時間。每週排程也會重新整理從 ONTAP 擷取的主要和次要 SnapLock 到期時間。</block>
-  <block id="8e99534f6af691fd41e00adb6770ed45" category="paragraph">當應用程式資源分散於多個磁碟區時、用於備份的 SnapLock 到期時間將是磁碟區中為 Snapshot 複本設定的最長 SnapLock 到期時間。從 ONTAP 擷取最長的 SnapLock 過期時間。</block>
   <block id="d7b7ea0231f53dacd1c85813eafc068c" category="paragraph">對於 SnapMirror 業務連續性（ SM-BC ）、按一下「 *Refresh* 」（重新整理 * ）按鈕、查詢主站台和複本站台的 ONTAP 、以重新整理 SnapCenter 備份庫存。每週排程也會針對包含 SM-BC 關係的所有資料庫執行此活動。</block>
   <block id="51ec87329d3b31d6af2f107c3cc08b52" category="list-text">對於 SMBC 、 Async Mirror 、 Vault 或 MirrorVault 與新主要目的地的關係、應在容錯移轉後手動設定。</block>
   <block id="3f7fe170db20f91655f6252fba4f2d1f" category="list-text">容錯移轉後、應建立備份、讓 SnapCenter 能夠感知容錯移轉。只有在建立備份之後、才能按一下 * 重新整理 * 。</block>
@@ -8445,10 +8273,8 @@ Windows 主機：</block>
   <block id="c38a6a60f8cb7ca5af460cfef37c8426" category="list-text">對於 SnapMirror Business Continuity （ SM-BC ）、如需先決條件和限制的詳細資訊、請參閱<block ref="cbb2c6fbcad65bcfffa8c7bece4e8d6b" category="inline-link-rx"></block>。</block>
   <block id="acdc6b4f6edd40f37bce01247a32ff86" category="list-text">SnapLock</block>
   <block id="5645df6d49a903d3e2faf86e08d87813" category="list-text">如果選取「保留特定天數的備份複本」選項、則 SnapLock 保留期間必須小於或等於所述保留天數。</block>
-  <block id="98a5daf42cec235d66d75e2276273e50" category="paragraph">指定 Snapshot 複本鎖定期間可防止在保留期間到期之前刪除 Snapshot 複本。  這可能會導致保留的 Snapshot 複本數量超過原則中指定的數量。</block>
   <block id="e07d82366bc71bb060becb82a0e09448" category="admonition">主要 SnapLock 設定是在 SnapCenter 備份原則中管理、次要 SnapLock 設定則是由 ONTAP 管理。</block>
   <block id="c7075c18b2e266ad847d25c7cdafc611" category="image-alt">備份設定畫面。</block>
-  <block id="e528a1fd853f0dc6774eed55270c67fb" category="list-text">如果要指定 Snapshot 複本鎖定期間、請選取 * Snapshot 複本鎖定期間 * 、然後選取天、月或年。</block>
   <block id="0e549e42000cf1cd2bd13dc132e61448" category="paragraph">SnapLock 保留期應少於 100 年。</block>
   <block id="e7c020bcc5fc6c46eea0af3b48696115" category="paragraph">SnapLock 保留期應少於 100 年。</block>
   <block id="5354b0db72154dc0430cb5a653a4402c" category="paragraph">此選項應可用於 SnapMirror Business Continuity （ SM-BC ）或 SnapMirror Sync （ SM-S ）。</block>
@@ -8460,14 +8286,11 @@ Windows 主機：</block>
   <block id="8932ab6e3b2afa64d560fca67a0712b7" category="paragraph"><block ref="12abf3d0b43747b4f372f737c28b4029" category="inline-link-rx"></block>。</block>
   <block id="10fe11299ffddacc5ffb826021d50abb" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="c07c083ab1174f81e5a8dab86d345954" category="paragraph">Java 1.8 （ 64 位元） Oracle Java 或 OpenJDK</block>
-  <block id="7533ab96da9180bf079f4c8dff903a17" category="list-text">指定 Snapshot 複本鎖定期間可防止在保留期間到期之前刪除 Snapshot 複本。這可能會導致保留的 Snapshot 複本數量超過原則中指定的數量。</block>
   <block id="971b3c1d99a5aa6f2b187690d01d852c" category="paragraph">Snapshot 複本鎖定期間</block>
   <block id="86b78accb82bf0596de946657114e7dd" category="paragraph">選取 Snapshot 複本鎖定期間、然後選取天、月或年。</block>
   <block id="cad9d181a2b84fefcf0bef1326b5660c" category="paragraph">在次要複寫期間、 SnapLock 到期時間會載入主要 SnapLock 到期時間。</block>
   <block id="08ec8ae585abf03648f1d4e2cb173c27" category="paragraph">按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。</block>
   <block id="6ce9eaa0f0e54448047c63d46dc547b2" category="paragraph">請參閱 <block ref="e93d68617e6aa08ec2871acfeebf51e9" category="inline-link-macro-rx"></block>。</block>
-  <block id="9bfc68bbc5769d2721e29f9f8cf04fc8" category="paragraph">如需 SnapLock 資料保險箱的詳細資訊、請參閱在資料保險箱上將 Snapshot 複本提交至 WORM
-目的地</block>
   <block id="9b4a73dc1c87ef95e6224c8753affd51" category="paragraph">如需PowerShell Cmdlet的相關資訊、請使用SnapCenter 支援程式指令程式、或參閱<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="36402f90f435da43f279f9a1a4c88f5e" category="list-text">如果您在SVM中有多個資料路徑（LIF）、SnapCenter 則選擇適當的資料路徑（LIF）來掛載NFS複製的Volume。不過、如果您要指定特定的資料路徑（LIF）、則必須執行Set-SvmPreferredDataPath CLI。
 執行_Get-Help命令名稱_可取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱<block ref="a6fc2394a8b2095d1929066d59f6fcc9" category="inline-link-rx"></block>。</block>
@@ -8637,7 +8460,6 @@ Windows 主機：</block>
   <block id="d9a37470fe419a246aa1213c6650926f" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block></block>
   <block id="54f98e61788c175cab05b17b3fd5f1f6" category="paragraph">您也可以使用_uninstall-SmHostPackage_ Cmdlet和必要的參數、從多個主機解除安裝外掛程式。您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
   <block id="ffb7780c8ab56bba323c1d49615fbd2f" category="paragraph">您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="7fb83b6cbb928f4072ab9a7c4ce09c24" category="inline-link-rx"></block>。</block>
-  <block id="29a6b619c3a60caa3635eee92628065c" category="admonition">對於停止、 Snapshot 複本和取消停止作業的前置和後置命令、您應該檢查插件主機上的命令清單中是否存在 Linux 和 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\allowed_commands.config_ 路徑、以及 _C:\Program Files\NetApp\Snapcenter\Snapcentre Plug-In Creator\et\allowed_commands.txt_ 。</block>
   <block id="bf62a235cd24baabab2de8cbe3e62354" category="paragraph">您也可以手動或在指令碼中使用 PowerShell Cmdlet 來執行備份、還原及複製作業。Cmdlet說明及Cmdlet參考資訊包含更多PowerShell Cmdlet的相關資訊。SnapCenter
 <block ref="12abf3d0b43747b4f372f737c28b4029" category="inline-link-rx"></block>。</block>
   <block id="633ff87a38ba5733ad482699222e5df6" category="paragraph">您可以執行Get-Help _command_name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block></block>
@@ -8815,7 +8637,6 @@ SnapLock 設定是由 ONTAP 管理。</block>
   <block id="acebdece1b3734e875859ee761ab347e" category="sidebar">複製 Unix 檔案系統</block>
   <block id="1121f6eb8ee08b3fbbc4d05a5ee6ca76" category="sidebar">技術更新</block>
   <block id="72e3ebd15de33a3a4ac48a1468899e30" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="96a4ccff2c2cba2d64ff2f5bfcf95100" category="inline-link-rx"></block>。</block>
-  <block id="6ef414d9ea1c137360c49ffc62ff4036" category="paragraph">對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
   <block id="8585a7e2d9203547a9e1b2e127f530dc" category="paragraph">。<block ref="3c59f2e9aad2adb626f5cfbb7cd6a195" category="inline-link-rx"></block> 包含支援版本的最新資訊。</block>
   <block id="059617cda1a3061ea2a2b4188965fe4d" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="f6a41fefbf1f1f164dbf4b318a39da2c" category="inline-link-rx"></block>。</block>
   <block id="dc01c492280ce1fd1596d5e3bfe5bf41" category="list-text"><block ref="7a8856912beac423472b387a1e95361d" category="inline-link-rx"></block></block>
@@ -8835,7 +8656,6 @@ SnapLock 設定是由 ONTAP 管理。</block>
   <block id="9dddc634db431dab44c50f3fd8460055" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="f427499ed0a5ab6c4e27afbbda198682" category="inline-link-rx"></block></block>
   <block id="649d8184d4bc981264b0d66852b40d56" category="paragraph"><block ref="5274e0d1c22af55a55e01a625855ced0" category="inline-link-rx"></block></block>
   <block id="924dbab7608ad7bebe0adaf9e15b8542" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱 <block ref="c16ce45673244a1fe516b0ed4d92ee5c" category="inline-link-rx"></block>。</block>
-  <block id="f70e7af7132291b170364c37c143af5f" category="paragraph">對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本將繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
   <block id="d24a44cebb5d893d4a6ffefcfde236ea" category="paragraph">如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block>。</block>
   <block id="9f15a95270d57c31e3fbf8e82eb6d5a6" category="paragraph">請參閱<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block></block>
   <block id="9166c380efba6c6a0d61dc08bcc135ee" category="summary">為您要備份的資源或資源群組建立備份原則。</block>
@@ -8968,7 +8788,6 @@ SnapLock 設定是由 ONTAP 管理。</block>
   <block id="b75f291f313008e72d9ff0963164ee31" category="doc">建立資源群組並附加 SQL 備份原則</block>
   <block id="2fd8d5ede56ca6e33060f1eb3dd0734b" category="paragraph">在使用SnapCenter 支援功能來備份SAP HANA資料庫資源之前、您必須先為要備份的資源或資源群組建立備份原則。</block>
   <block id="e479da34c5ed7685fcd981da443e348b" category="list-text">如果您要執行資料庫的完整性檢查、請選取 * 檔案型備份 * 。</block>
-  <block id="9b13b3a5ddf2908f3bd7c006d6b212ee" category="list-text">如果您想要使用 Snapshot 複製技術建立備份、請選取 * Snapshot Based * 。</block>
   <block id="ed5262a9aab3035c8548c5f3793c76f6" category="list-text">在「保留」頁面中、指定備份類型和所選排程類型的保留設定。</block>
   <block id="98950caea953c79d817eba870ba7ae48" category="summary">在 SnapCenter 中建立 Azure 認證、以存取 Azure NetApp 帳戶。</block>
   <block id="1ed01bab203e8745a0dcfe58f019c1d9" category="doc">在 SnapCenter 中建立 Azure 認證</block>
@@ -8986,7 +8805,6 @@ SnapLock 設定是由 ONTAP 管理。</block>
   <block id="5c197ff6b8d148a9f919430a485adff2" category="list-text">輸入 SAP HANA SID 以從現有備份複製。</block>
   <block id="11dae6129ac88bf8ce4b74a3f04b2931" category="list-text">如果 SAP HANA 資料庫 anf 磁碟區是在手動 QoS 容量集區中設定、請指定複製磁碟區的 QoS 。</block>
   <block id="db72f6a27d253d274b29062a99ea2856" category="paragraph">如果自動探索來源 HANA 系統、並在 SAP HANA 主機上安裝複製目標主機外掛程式、則 SnapCenter 會自動在複製目標主機上卸載現有的 HANA 資料磁碟區、並裝載新複製的 HANA 資料磁碟區。</block>
-  <block id="42558f3e0d13c5a3ab297f0a09e3dce0" category="admonition">由於 anf 複本已經是從所選 Snapshot 複本建立的一個個別 Volume 、因此會停用 Clone Split 來建立 anf 複本。</block>
   <block id="1d085da91833ced7df79bd36f6ed095f" category="doc">複製 SQL Server 資料庫備份</block>
   <block id="98649dd054e392acef8b60637dd1e4eb" category="list-text">從「 * 管理複本 * 」檢視頁面中、選取主要儲存系統的備份。</block>
   <block id="064cfc5ceb5ed3cddf1bdbcfa6887172" category="list-text">在 * 複製選項 * 頁面中、提供所有必要的詳細資料。</block>
@@ -9017,7 +8835,6 @@ SnapLock 設定是由 ONTAP 管理。</block>
   <block id="10ee6df71b74c57a6b9f1595f3efce16" category="doc">備份在 Azure NetApp Files 上執行的 SAP HANA 資料庫</block>
   <block id="13c7c834f7b8414cef2ddebbd37e4d86" category="list-text">選取 * 備份 * 箭頭以設定其他備份選項。</block>
   <block id="820ce0339ce64af93adc295b0695c2f8" category="list-text">選取 * 自訂組態 * 箭頭、然後輸入使用此資源的所有工作所需的自訂值配對。</block>
-  <block id="54e4bfc320112c89c44dab7ba656c966" category="list-text">選擇 * Snapshot Copy Tool &gt; SnapCenter without File System Consistency * （不具檔案系統一致性的快照複本）以建立 Snapshot 複本。</block>
   <block id="40defed757ae2b8a311e0272f6d77f1b" category="paragraph">* 檔案系統一致性 * 選項僅適用於在 Windows 主機上執行的應用程式。</block>
   <block id="f3d79571b40021bb0ad32b78398ef057" category="doc">備份 Azure NetApp Files 上執行的 Oracle 資料庫</block>
   <block id="5afb14e7449db1f35fc15f6f85899c21" category="list-text">在「資源」頁面中、從「檢視」下拉式清單中選取 * 資料庫 * 。</block>
@@ -9059,4 +8876,202 @@ SnapLock 設定是由 ONTAP 管理。</block>
   <block id="4db35e04fa48549bd85b1a6d4d43fb09" category="list-text">SnapCenter 4.9 P1 及更新版本支援在 VMware Cloud on Amazon Web Services （ AWS ）軟體定義資料中心（ SDDC ）環境中保護 Oracle 和 Microsoft SQL 工作負載。</block>
   <block id="38012dbc6542f17135111019d1839fa1" category="inline-link">在 AWS SDDC 環境中使用 VMware Cloud 中的 NetApp SnapCenter 來保護 Oracle 、 MS SQL 工作負載</block>
   <block id="50fc2fe54f751b9b7639d7a2f1fb2027" category="paragraph">如需詳細資訊、請參閱<block ref="4adac1bb1a663de205d28f66d3207227" category="inline-link-rx"></block>。</block>
+  <block id="726d39dceafdcf2a244cb0bcdb262380" category="paragraph">此存根負責執行靜止。它放置了
+應用程式進入我們可以建立 Snapshot 的狀態。這在儲存 Snapshot 作業之前稱為。</block>
+  <block id="2b8b2c493b09b013588a02ac57204e14" category="paragraph">此存根負責執行取消靜止。IT 所在位置
+應用程式處於正常狀態。這是在儲存後呼叫的
+Snapshot 作業。</block>
+  <block id="e337fc3b0c344eaa85525958668d8591" category="admonition">如果資源包含磁碟區或 qtree 、則會刪除選定要在這類磁碟區或 qtree 上還原的 Snapshot 之後所拍攝的 Snapshot 、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。</block>
+  <block id="ad8d3fc8faebdc68585dd1240b9fc90c" category="paragraph">選取此核取方塊、然後輸入您要用於 Snapshot 名稱的自訂名稱格式。</block>
+  <block id="f73a752fef5027614ec32183c0ee993b" category="paragraph">例如、_customtext資源group原則主機名稱或資源group主機名稱_。根據預設、 Snapshot 名稱會附加時間戳記。</block>
+  <block id="168d37e62ff50182379a645020cf7152" category="paragraph">選取「緊急」、「中」或「放鬆」、以指定完成 Snapshot 作業的等待時間。</block>
+  <block id="b9b6466d5860f878a4a60dda95135881" category="list-text">選取「指令碼」箭頭、然後輸入用於停止、 Snapshot 和取消停止作業的前置和後置命令。您也可以輸入要在發生故障時結束之前執行的預先命令。</block>
+  <block id="ea57a48a86501646953b0992c55066ad" category="list-text">選擇 * Snapshot Copy Tool* （快照複製工具 * ）箭頭以選擇要建立 Snapshot 的工具：</block>
+  <block id="b74a1dd6c2da66e7e33c0f14344382d7" category="paragraph">SnapCenter 使用 Windows 外掛程式、並在建立 Snapshot 之前將檔案系統置於一致的狀態。對於Linux資源、此選項不適用。</block>
+  <block id="45e5304bd8ba98d8e58920d13f8503a9" category="paragraph">SnapCenter 以建立儲存層級快照</block>
+  <block id="a19bb018830c78e2d5637fcf602ec4d4" category="paragraph">可輸入要在主機上執行的命令以創建 Snapshot 。</block>
+  <block id="94687babf968f2e9f2633c4704893c9e" category="paragraph">選取 * 其他 * 、然後輸入要在主機上執行的命令以建立 Snapshot 。</block>
+  <block id="98a696ecad4b4de122d523af3692ca6e" category="paragraph">如果您要將快照複製到鏡射或資料保險箱、 SnapCenter 管理員必須將來源和目的地磁碟區的 SVM 指派給您。</block>
+  <block id="4fcec4fe97075a54e91b04a9e79f56ff" category="list-text">指定 Snapshot 鎖定期間可防止在保留期間到期之前刪除 Snapshot 。這可能會導致保留的快照數量超過原則中指定的數量。</block>
+  <block id="f2c85d871e7c5ae1520349e8a3869fea" category="list-text">對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
+  <block id="cee00ab879a477aea09f4b1f404b14fc" category="paragraph">保留一定數量的快照</block>
+  <block id="b19465911649130b0ad9e7ed87b43f2f" category="paragraph">選取 * 要保留的 Snapshot 複本總數 * 、然後指定要保留的 Snapshot 數。</block>
+  <block id="7537e0d42ad63b5bae18964aee575640" category="paragraph">如果快照數量超過指定數量、則會先刪除最舊的複本、然後刪除快照。</block>
+  <block id="95dfd611f9419ea2abdea4d84377aeab" category="admonition">如果您打算啟用SnapVault 此功能、則必須將保留數設為2或更高。如果將保留計數設為 1 、則保留作業可能會失敗、因為第一個 Snapshot 是 SnapVault 關係的參考 Snapshot 、直到較新的 Snapshot 複寫到目標為止。</block>
+  <block id="298d4bea409e146b0187ec130a39fb72" category="paragraph">將快照保留一定天數</block>
+  <block id="e736f4106d35f31cff1a51f091e56c06" category="paragraph">選取 * 保留 Snapshot 複本 * 、然後指定您要保留 Snapshot 的天數、再將其刪除。</block>
+  <block id="7cd1d77689881addd5facf23970563df" category="paragraph">選取 Snapshot 鎖定期間、然後選取天、月或年。</block>
+  <block id="7630e21f8142849489483b7354d0643a" category="paragraph">如果 ONTAP 中的保護關係類型為鏡射和資料保險箱、且您只選取此選項、則在主要節點上建立的 Snapshot 不會傳輸至目的地、但會列在目的地中。如果從目的地選取此 Snapshot 以執行還原作業、則會顯示下列錯誤訊息：次要位置無法用於所選的保存 / 鏡射備份。</block>
+  <block id="d2f577cb0769d7c31f2785dd590b9f27" category="paragraph">如需 SnapLock 資料保險箱的詳細資訊、請參閱在資料保險箱上將快照提交至 WORM
+目的地</block>
+  <block id="9a5f5dfff4956ecfacfdc016d25c212b" category="paragraph">根據您選取的 Snapshot 標籤、 ONTAP 會套用符合標籤的次要 Snapshot 保留原則。</block>
+  <block id="4f2f5ecb6e9ddbc65d919530d4364ba6" category="admonition">您應該在 ONTAP 中為次要儲存設備設定 SnapMirror 保留原則、以避免達到次要儲存設備快照的上限。</block>
+  <block id="2cd86db6267706ae2b61eb8f47d98ca8" category="list-text">決定是否要一致性群組快照、並決定刪除一致性群組快照的適當選項。</block>
+  <block id="6ec295ec28557a4fa3d2b8d853589f33" category="list-text">確定來源儲存系統和 SnapMirror 目的地上的 Snapshot 保留期間。</block>
+  <block id="542226a75e67e826476b8a6313eb2a61" category="list-text">* 不中斷的 NetApp Snapshot 技術 *</block>
+  <block id="d7aeb41edb7600997bc3b48f534dd071" category="paragraph">SnapCenter 使用 NetApp Snapshot 技術搭配 SnapCenter 自訂外掛程式來備份資源。快照消耗的儲存空間最小。</block>
+  <block id="270b0961f4ad36c55a31c15e64b7ff91" category="list-text">支援 ONTAP 的一致性群組（ CG ）快照功能、作為建立備份的一部分。</block>
+  <block id="2e7557b222d681ee77b3f7d1103d9851" category="paragraph">在單一作業中、當單一主機中的資源共用同一個磁碟區時、快照就會整合。</block>
+  <block id="bd3d40e64c749fcba4bd5710c7b184ab" category="list-text">使用外部命令建立 Snapshot 的功能。</block>
+  <block id="0096aecb189c35a600788218923fbf90" category="list-text">能夠在 Windows 環境中建立檔案系統一致的快照。</block>
+  <block id="aeae183dfc696fe75906213d043a525b" category="list-text">在 [ 資源 ] 頁面中，如果您想要使用自訂名稱，請選取 [ 使用快照複本的自訂名稱格式 ] 核取方塊，然後輸入快照名稱的自訂名稱格式。</block>
+  <block id="3df4bf361c2bfb2dfa84fc1cffa5779e" category="paragraph">例如、_customtext_policy_hostname_或_resource_hostname_。根據預設、 Snapshot 名稱會附加時間戳記。</block>
+  <block id="54c33b2bcea395f4a04e336452fdf01b" category="list-text">按一下 * 指令碼 * 箭頭、執行停止、快照和取消停止作業的前置和後置命令。您也可以在結束備份作業之前執行pres命令。</block>
+  <block id="c9127adbadee36ca206638ad1cccd8ad" category="list-text">按一下 * Snapshot Copy Tool* （快照複製工具 * ）箭頭、選取建立 Snapshot 的工具：</block>
+  <block id="7abbc88f0fd37782c0173c64624bd002" category="paragraph">SnapCenter 可取得儲存層級快照</block>
+  <block id="4cdad3fc327406a192cf8fddec7132e3" category="paragraph">SnapCenter 使用 Windows 外掛程式將檔案系統置於一致的狀態、然後製作 Snapshot</block>
+  <block id="d03489d8edb47ae534fd09e8de3121c2" category="paragraph">可輸入命令以創建 Snapshot</block>
+  <block id="60c069fc0d03d8cbfeabe67ca031a729" category="paragraph">選取 * 其他 * 、然後輸入命令以建立 Snapshot 。</block>
+  <block id="0fd08e22cd8a21cd901e68b42968c2e6" category="paragraph">此存根負責執行一項「冷場」、也就是將應用程式置於可建立 Snapshot 的狀態。這在 Snapshot 作業之前稱為。應將要保留的應用程式中繼資料設為回應的一部分、並在後續的複製或還原作業中以組態參數的形式、在對應的儲存 Snapshot 上傳回。</block>
+  <block id="7371795f7797164be99265838bc9b9fa" category="paragraph">此存根負責執行靜止、也就是將應用程式置於正常狀態。這是在您建立 Snapshot 之後才會呼叫的。</block>
+  <block id="b57d7f6c59e14cd0c1b2ec157185a6bc" category="paragraph">當應用程式資源分散於多個磁碟區時、用於備份的 SnapLock 到期時間將是磁碟區中為 Snapshot 設定的最長 SnapLock 到期時間。從 ONTAP 擷取最長的 SnapLock 過期時間。</block>
+  <block id="433b97b9fd0c63b0de421dea32bde9c2" category="list-text">跨 ONTAP 叢集取得儲存磁碟區的一致性群組快照。</block>
+  <block id="b24c71863603f1e22b9646ccb63beac7" category="list-text">使用 SnapCenter 原則、利用現有的複寫關係（ Snapvault / SnapMirror/ 統一複寫）、將主要快照更新為 ONTAP 次要快照</block>
+  <block id="7a7937f1bd01629dfc078d9cfaca3c7f" category="paragraph">需要在應用程式上執行靜止。在大多數情況下、這表示將應用程式置於 SnapCenter 伺服器可以建立備份的狀態（例如、 Snapshot ）。</block>
+  <block id="2de9454fcd2f1befcb26b81a260ae3c9" category="paragraph">在 SnapCenter 伺服器建立 Snapshot 或擁有之後
+一般執行備份。</block>
+  <block id="2033dc98d1198d5069b9ced87c4c15a3" category="list-text">如果您要將快照複製到鏡射或資料保險箱、 SnapCenter 管理員必須為來源磁碟區和目的地磁碟區指派儲存虛擬機器（ SVM ）。</block>
+  <block id="5c2dc81500d1cc825407033c35b56981" category="paragraph">如果資源包含磁碟區或 qtree 作為儲存空間、則此類磁碟區或 qtree 上的新快照將會刪除、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。</block>
+  <block id="970623891ebb3c641166d7ce5d32a406" category="paragraph">SnapCenter 會在完成 Snapshot 作業之後、執行 SnapMirror 和 SnapVault 的更新。SnapMirror和SnapVault SnapMirror更新是SnapCenter 執行功能不全的工作之一、請勿建立個別ONTAP 的功能不全。</block>
+  <block id="b4565188a0190ae6d3db6b545812a7a1" category="list-text">建議您在調整 LUN 大小之前先建立 Snapshot 。</block>
+  <block id="7d4ca5d55cf34e28c22880cf6ec2eedb" category="list-text">如果您需要從重新調整 LUN 大小之前建立的 Snapshot 還原 LUN 、 SnapCenter 會自動將 LUN 調整為 Snapshot 的大小。</block>
+  <block id="3e47f97ded2b44c6f82b5673388c4cf5" category="paragraph">還原作業完成後、重新調整 LUN 大小後新增至 LUN 的資料必須從重新調整大小後所建立的 Snapshot 還原。</block>
+  <block id="6d301ee444a1c13b7da1bf8953d5daa2" category="list-text">如果您打算複寫 Snapshot 、則必須將來源和目的地 Volume 的儲存連線指派給執行作業的使用者。</block>
+  <block id="1de0023c56f6d86fc751b551520774b6" category="paragraph">您可以在 VMware 環境中使用適用於 Microsoft Windows 的 SnapCenter 外掛程式來建立和管理 LUN 、以及管理快照。</block>
+  <block id="9233a91d798c38a1e42098d2e0bdf521" category="list-text">如果您打算將 Snapshot 複寫到 SnapMirror 目的地或 SnapVault 目的地、則必須為目的地 SVM 或叢集、以及來源 SVM 或叢集設定儲存系統連線。</block>
+  <block id="0855d4a7efcc5d7db4786a318d5517e6" category="paragraph">SnapCenter 使用 Snapshot 技術來備份位於 LUN 或 VMDK 上的 SQL Server 資料庫。SnapCenter 會建立資料庫的快照來建立備份。</block>
+  <block id="2b0e03a4cda838c9297e1f7e7ff4a27f" category="paragraph">位於單一磁碟區上的所有資料庫都會使用 Snapshot 同時備份。如果並行備份資料庫的最大數量為 35 個、且儲存磁碟區中有超過 35 個資料庫、則所建立的 Snapshot 總數等於資料庫數除以 35 。</block>
+  <block id="72dafb1a5239fa5a8bc929bf6951f900" category="admonition">您可以在備份原則中設定每個 Snapshot 的資料庫數目上限。</block>
+  <block id="9bdd40947ff9b3833cc4fa3ca7493f5f" category="paragraph">當 SnapCenter 建立 Snapshot 時、整個儲存系統磁碟區都會擷取在 Snapshot 中。不過、備份僅對建立備份的SQL主機伺服器有效。</block>
+  <block id="00446608fea557ce7f8e6f3b5b02c95a" category="paragraph">如果來自其他 SQL 主機伺服器的資料位於同一個磁碟區、則無法從 Snapshot 還原此資料。</block>
+  <block id="7bd2019ba682b552d23b81c38e266cb4" category="summary">適用於 SQL Server 的外掛程式可與 Windows 主機上的 Microsoft SQL Server 整合、並可與儲存系統上的 NetApp Snapshot 技術整合。若要搭配SQL Server外掛程式使用、請使用SnapCenter 支援此功能的支援介面。</block>
+  <block id="c45d74eb4e3b48419f3ffdacf64df379" category="paragraph">適用於 SQL Server 的外掛程式使用 NetApp Snapshot 技術搭配適用於 Microsoft Windows 的 NetApp SnapCenter 外掛程式。這可讓您在數秒內備份資料庫、並快速還原資料庫、而無需讓SQL Server離線。快照消耗的儲存空間最小。</block>
+  <block id="4a62dc47918eb3194a2597130c3e3478" category="paragraph">當您驗證主要或次要儲存磁碟區上的備份時、所有主要快照和次要快照都會標示為已驗證。</block>
+  <block id="f22fa01ea126a4b35d7d1a7cadaacfb4" category="summary">您可以取消執行中、佇列中或無回應的備份作業。當您取消備份作業時、 SnapCenter 伺服器會停止作業、並在建立的備份未向 SnapCenter 伺服器註冊時、從儲存區移除所有快照。如果備份已在 SnapCenter 伺服器上註冊、即使在取消觸發之後、也不會回復已建立的 Snapshot 。</block>
+  <block id="c6e33317d1c640092fa79c411076f1ac" category="list-text">對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 鎖定期間、從防竄改快照建立的複本將會繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
+  <block id="ea0a2ffd065abd8f244c2b5ba8d2eb61" category="paragraph">選用：輸入自訂的 Snapshot 名稱和格式。     例如、customtext資源群組原則主機名稱或資源群組主機名稱。根據預設、 Snapshot 名稱會附加時間戳記。</block>
+  <block id="fc2e7a6d3781a1a4d36b65845b17034f" category="list-text">對於啟用 SnapLock 的原則、對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 鎖定期間、從防竄改快照建立的複本作為還原的一部分、將會繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
+  <block id="09b1825e6e4164ad9ae7bee22660c8a1" category="list-text">選取「 **TABLOCK** 」選項以限制檢查並取得鎖定、而非使用內部資料庫 Snapshot 。</block>
+  <block id="77da8eeb12f1568fe3ed9dda9f91d348" category="summary">您可以使用 Remove-SmBackup Cmdlet 來清理沒有 Snapshot 的次要備份數。當「管理複本」拓撲中顯示的總快照數與次要儲存 Snapshot 保留設定不符時、您可能需要使用此 Cmdlet 。</block>
+  <block id="f4efb7f60eb91fbd6aa1b8aca204f531" category="paragraph">您可以使用 Remove-SmBackup Cmdlet 來清理沒有 Snapshot 的次要備份數。當「管理複本」拓撲中顯示的總快照數與次要儲存 Snapshot 保留設定不符時、您可能會想要使用此 Cmdlet 。</block>
+  <block id="b3d3023e1077ceaca98543a186ce5cf3" category="paragraph">此範例清除二次備份的備份數、但不含快照：</block>
+  <block id="e5de086f995e9adace26013b3afa493b" category="list-text">如果您要將快照複製到鏡像或資料保險箱、 SnapCenter 管理員必須將來源磁碟區和目的地磁碟區的儲存虛擬機器（ SVM ）指派給您。</block>
+  <block id="d389a87e1086ac0f4d1de66ca0bb0ef6" category="paragraph">指定 Snapshot 鎖定期間可防止在保留期間到期之前刪除 Snapshot 。  這可能會導致保留的快照數量超過原則中指定的數量。</block>
+  <block id="367e13921e2255a8cbd12c7825418d0e" category="list-text">輸入應為每個 Snapshot 備份的資料庫數目上限。</block>
+  <block id="40e1269ad4c969b2e34a183b8fe9f42e" category="list-text">輸入應為每個 Snapshot 備份的資料庫數目上限。
+預設值為 100</block>
+  <block id="8822b1db0297028652e02db3e4af760f" category="paragraph">僅保留特定數量的快照。</block>
+  <block id="01161b2ea6c2a575567c66cd20fb2d2b" category="list-text">指定要保留的快照總數</block>
+  <block id="3e44a8badc4e63dbe09602ec7a645d6d" category="list-text">若要指定要保留的 Snapshot 數、請選取 * 要保留的 Snapshot 總份數 * 。</block>
+  <block id="77a7fd8cca8cbeb3ef776e9176ff5639" category="admonition">根據預設、保留計數的值設為2。如果將保留計數設為 1 、則保留作業可能會失敗、因為第一個 Snapshot 是 SnapVault 關係的參考 Snapshot 、直到較新的 Snapshot 複寫到目標為止。</block>
+  <block id="785922db862c289384ffb00097fa1b09" category="list-text">保留快照的時間長度</block>
+  <block id="b02e59c697fe2e431d0b9971224415f2" category="list-text">如果您想要指定在刪除快照之前保留快照的天數、請選取 * 保留快照複本 * 。</block>
+  <block id="22a17a0f81564b386d059bfef330f60f" category="list-text">如果要指定 Snapshot 鎖定期間、請選取 * Snapshot 複本鎖定期間 * 、然後選取天、月或年。</block>
+  <block id="c5de403e1806c217cf2924175f84c487" category="list-text">若要指定要保留的 Snapshot 數、請選取 * 要保留的 Snapshot 總份數 * 。如果快照數量超過指定數量、則會先刪除最舊的複本、然後刪除快照。</block>
+  <block id="6dbf7587b461da1c5b97d671cf358311" category="list-text">若要指定在刪除快照之前要保留快照的天數、請選取 * 保留快照複本 * 。</block>
+  <block id="8e21880c3d6be6527ce936f273c2dfdb" category="paragraph">根據預設、記錄 Snapshot 保留時間設為 7 天。使用 Set-SmPolicy Cmdlet 變更記錄 Snapshot 保留。</block>
+  <block id="4caf8c069465c53a1a175fa4a08aa0a8" category="paragraph">此範例將記錄 Snapshot 保留設定為 2 ：</block>
+  <block id="149450cb3a9e3ecae5eaba7a4573516f" category="paragraph">根據您選取的 Snapshot 標籤、 ONTAP 會套用符合標籤的次要 Snapshot 保留原則。</block>
+  <block id="dccc8011e6f51f002aae83ff00479c7d" category="admonition">您必須在 ONTAP 中設定 SnapMirror 保留原則、使次要儲存設備不會達到快照的最大限制。</block>
+  <block id="610559e33fd2c1c02990a8421918d746" category="list-text">限制檢查並取得鎖定、而非使用內部資料庫 Snapshot （ TABLOCK ）</block>
+  <block id="3ec8d83deb8081e2273aae284a9a87c1" category="list-text">選取 * 限制檢查並取得鎖定、而非使用內部資料庫 Snapshot 複本（ TABLOCK ） * 來限制檢查並取得鎖定、而非使用內部資料庫 Snapshot 。</block>
+  <block id="f8037ac04b4b9ad5f1f4efa485f02267" category="list-text">您必須將 Snapshot 從主要儲存系統複寫到次要儲存系統。</block>
+  <block id="be7d1513fcb4c496cc0a08dc4180b0c0" category="summary">您可以使用預設的 Snapshot 命名慣例、或使用自訂的命名慣例。預設備份命名慣例會在 Snapshot 名稱中新增時間戳記、協助您識別複本建立的時間。</block>
+  <block id="994822d5c1500de0f9f8d5222f1d1a08" category="paragraph">您可以使用預設的 Snapshot 命名慣例、或使用自訂的命名慣例。預設備份命名慣例會在 Snapshot 名稱中新增時間戳記、協助您識別複本建立的時間。</block>
+  <block id="1d220412a989e3409a81972981a34269" category="paragraph">Snapshot 使用下列預設命名慣例：</block>
+  <block id="5aacd591ac321cf50f17ba6d6b99482c" category="paragraph">或者、您也可以選取 * 使用 Snapshot 複本的自訂名稱格式 * 來指定 Snapshot 名稱格式、同時保護資源或資源群組。例如、customtext資源群組原則主機名稱或資源群組主機名稱。根據預設、時間戳記尾碼會新增至 Snapshot 名稱。</block>
+  <block id="27d1d8a7545b265c4bdec73aaeb38eed" category="paragraph">例如、如果同一個磁碟區中有 200 個資料庫、則會在兩個 Snapshot 中分別建立兩個 Snapshot 和 100 個資料庫。</block>
+  <block id="ad040426d6a404a4c17cacc91a28049d" category="list-text">在 [ 資源 ] 頁面中，選取 [ 快照複本 * 的 * 自訂名稱格式 ] 核取方塊，然後輸入您要用於 [ 快照 ] 名稱的自訂名稱格式。</block>
+  <block id="99eb5243897677d4ecbe85a62d686e8c" category="paragraph">例如、customtext_policy_hostnameor resource_hostname.根據預設、 Snapshot 名稱會附加時間戳記。</block>
+  <block id="1dc16d578df13bb68e843ba44a6ec58e" category="list-text">如果您要將快照複製到鏡像或資料保險箱、 SnapCenter 管理員必須為來源磁碟區和目的地磁碟區指派儲存虛擬機器（ SVM ）。</block>
+  <block id="0bfdfbd1ef58fc826a8deec759820453" category="summary">使用SnapCenter 支援功能來備份SQL Server系統和使用者資料庫時、您必須選擇資源類型、例如資料庫、SQL Server執行個體和可用度群組（AG）。Snapshot 技術可用於建立資源所在磁碟區的線上唯讀複本。</block>
+  <block id="b4d3eba987f9528647b8ea2102ac055f" category="paragraph">若要使用SnapCenter 支援功能來備份SQL Server系統和使用者資料庫、您必須選擇資源類型、例如資料庫、SQL Server執行個體和可用度群組（AG）。Snapshot 技術可用於建立資源所在磁碟區的線上唯讀複本。</block>
+  <block id="37467ff0195d6765df22bdc34e035d04" category="list-text">如果您要將快照複製到鏡像或資料保險箱次要儲存設備、 SnapCenter 管理員必須將來源和目的地磁碟區的 SVM 指派給您。</block>
+  <block id="099321e862ba2170dc1c3e6b1f02ef72" category="paragraph">對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
+  <block id="1635764350a12c1ff0349008881e57dd" category="paragraph">Snapshot 鎖定期間</block>
+  <block id="3c2828ba75d966a57611ae076f53de62" category="paragraph">在建立本機 Snapshot 之後更新 SnapMirror</block>
+  <block id="d515aa4634219e7d2319e5e18234ff1a" category="paragraph">建立本機快照後更新 SnapVault</block>
+  <block id="ea25009673ccb8c2097d73f240946554" category="list-text">選取核取方塊、然後輸入您要用於 Snapshot 名稱的自訂名稱格式。</block>
+  <block id="3b191506717d044b1c6c116437856fa8" category="paragraph">例如、<block ref="6d242f6ac938ffb13709f54d68cd3c4a" prefix=" " category="inline-code"></block> 或<block ref="90ea7aa0cb61dd49e32f6dcf8afac143" prefix=" " category="inline-code"></block>。根據預設、時間戳記會附加至 Snapshot 名稱。</block>
+  <block id="65086066849df85532ada3ce3b32fabb" category="paragraph">例如、customtext資源group原則主機名稱或資源group主機名稱。根據預設、 Snapshot 名稱會附加時間戳記。</block>
+  <block id="edadde14dd023edf408c56082534fb18" category="paragraph">當您取消備份作業時、 SnapCenter 伺服器會停止作業、並在建立的備份未向 SnapCenter 伺服器註冊時、從儲存區移除所有快照。如果備份已在 SnapCenter 伺服器上註冊、即使在取消觸發之後、也不會回復已建立的 Snapshot 。</block>
+  <block id="4283444ce0d2e5af852c09c8c490c9b2" category="list-text">不中斷的 NetApp Snapshot 技術</block>
+  <block id="e9c2c7f52b66305a7519773fdcb971a2" category="paragraph">SnapCenter 使用 NetApp Snapshot 技術搭配適用於 Oracle 資料庫的外掛程式、以及適用於 UNIX 的外掛程式來備份資料庫。快照消耗的儲存空間最小。</block>
+  <block id="6254fd4e626c978541c1f2e7fa8e13fd" category="paragraph">在單一作業中、當單一主機中的資料庫共用相同的磁碟區時、就會合併快照。</block>
+  <block id="39777df60ae8ddc1548b34cdead2def2" category="list-text">恢復作業是使用設定的歸檔記錄位置所提供的歸檔記錄來執行。如果資料庫以ARCHIVELOG模式執行、Oracle資料庫會將已填入的重作記錄檔群組儲存至一或多個離線目的地、統稱「已歸檔的重作記錄」。根據指定的SCN、所選日期和時間或所有記錄選項、找出並掛載最佳的記錄備份數量。SnapCenter
+如果在設定的位置上無法使用還原所需的歸檔記錄檔、您應該掛載包含記錄檔的 Snapshot 、並將路徑指定為外部歸檔記錄檔。</block>
+  <block id="adeb26b62f8ee06b6b6bae7b4ceacf27" category="list-text">如果您要將快照複製到鏡像或資料保險箱、 SnapCenter 管理員應該已為來源磁碟區和目的地磁碟區指派儲存虛擬機器（ SVM ）。</block>
+  <block id="ba0a9122f311e85ab0505c551b651192" category="list-text">磁碟區會從 Snapshot 複製、檔案系統堆疊會使用複製的 LUN 或磁碟區建立在主機上。</block>
+  <block id="9e1730c2573e54b5d90f6eb3254bfc8e" category="paragraph">選取此核取方塊、然後輸入您要用於 Snapshot 名稱的自訂名稱格式。</block>
+  <block id="99b1f696253ffa3a8fb97bceb5991c38" category="paragraph">例如、customtext_policy_hostnameor resource_hostname.根據預設、 Snapshot 名稱會附加時間戳記。</block>
+  <block id="d75cc4ee2a6f5a9c8f73c954b5b8dfb1" category="summary">您可以使用外掛程式為資源群組建立一致性群組快照。一致性群組是一個容器、可容納多個磁碟區、以便您將其管理為單一實體。一致性群組是多個磁碟區的同步快照、可為一組磁碟區提供一致的複本。</block>
+  <block id="fb38bbae125d9d388142d3e839171085" category="doc">SnapCenter Plug-in for SAP HANA 資料庫如何使用一致性群組快照</block>
+  <block id="d9be525eef97aa0a1757edb1b36e0668" category="paragraph">您也可以指定儲存控制器對 Snapshot 進行一致群組的等待時間。可用的等待時間選項包括*緊急*、*中*和*休閒*。您也可以在一致的群組快照作業期間、啟用或停用 Write Anywhere File Layout （ WAFL ）同步。WAFL 同步可改善一致性群組快照的效能。</block>
+  <block id="dc82007d2d72fe3595e4a12ab929226d" category="paragraph">使用 Snapshot 技術建立備份</block>
+  <block id="a73c04130d1785278e42ce85b94c154d" category="admonition">對於Snapshot複製型備份、如果您打算啟用SnapVault 此功能、則必須將保留計數設為2或更高。如果將保留計數設為 1 、則保留作業可能會失敗、因為第一個 Snapshot 是 SnapVault 關係的參考 Snapshot 、直到較新的 Snapshot 複寫到目標為止。</block>
+  <block id="3d721f84f4ba496ced30bffcfa1591da" category="admonition">對於 SAP HANA 系統複寫、所拍攝的總快照數將等於資源群組的保留集。  刪除最舊的 Snapshot 是根據最舊 Snapshot 所在的節點而定。
+例如、對於使用SAP HANA System Replication一線資源群組和SAP HANA System Replication二線資源群組、保留值設為7。  您一次最多可拍攝 7 個快照、包括 SAP HANA System Replication 主要和 SAP HANA System Replication 次要快照。</block>
+  <block id="87f3bd22fc3dd40b1b5252aca5beb91f" category="paragraph">如果 ONTAP 中的保護關係類型為鏡射和資料保險箱、且您只選取此選項、則在主要節點上建立的 Snapshot 不會傳輸至目的地、但會列在目的地中。如果從目的地選取此 Snapshot 以執行還原作業、則會顯示次要位置無法用於所選的保存 / 鏡射備份錯誤訊息。</block>
+  <block id="79bbfd966b301fcff4a657ffa7b4883b" category="admonition"> 您應該在 ONTAP 中為次要儲存設備設定 SnapMirror 保留原則、以避免達到次要儲存設備快照的上限。</block>
+  <block id="f73eb370f8bbfa82c1bb4c40f02b65ce" category="list-text">決定是否要建立 Snapshot 複本原則、以備份資料庫的應用程式一致的 Snapshot 。</block>
+  <block id="2bf2937ec53ec68b5e4f4ecdeab22229" category="paragraph">SnapCenter 使用 NetApp Snapshot 技術搭配適用於 SAP HANA 資料庫的外掛程式來備份資源。</block>
+  <block id="32d574f28776ee8b2deb390451f88886" category="list-text">使用外部命令建立快照的功能。</block>
+  <block id="b98ec889f59de061a4caf0f10c44b599" category="list-text">對於 Snapshot 複本型備份作業、請確保所有租戶資料庫均為有效且作用中。</block>
+  <block id="734b47c3d3034ecc47486b3b7c947423" category="list-text">對於用於停止、 Snapshot 和取消停止作業的前置和後置命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否存在這些命令：</block>
+  <block id="9322b02cbab1e9e30696c6f18aa5b45e" category="list-text">在「資源」頁面中、選取 * 使用 Snapshot 複本的自訂名稱格式 * 、然後輸入您要用於 Snapshot 名稱的自訂名稱格式。</block>
+  <block id="1ddf419f4244e28efab4ce0d4d2a7429" category="paragraph">選擇 * 緊急 * 、 * 中 * 或 * 放鬆 * 以指定快照作業完成的等待時間。「緊急」= 5秒、「中」= 7秒、「輕鬆」= 20秒。</block>
+  <block id="6fa0e3128174a7e08f019a67d401084d" category="list-text">選取 * 指令碼 * 箭頭以執行停止、快照和取消停止作業的前置和後置命令。</block>
+  <block id="5b0cda43c7e63de2868d2bf0d3b62f53" category="paragraph">SnapCenter 以建立儲存層級快照</block>
+  <block id="d00226243bd3282875e3647e34ef9ac2" category="paragraph">SnapCenter 使用 Windows 外掛程式將檔案系統置於一致的狀態、然後建立 Snapshot</block>
+  <block id="513e9e5c9242c20cd3a0e1af2c91141c" category="paragraph">選取 * 緊急 * 、 * 中 * 或 * 放鬆 * 以指定完成 Snapshot 作業的等待時間。</block>
+  <block id="7753c7b112c057fc94bcaa18ecc0f343" category="list-text">按一下 * 指令碼 * 箭頭、然後輸入停止、快照和取消停止作業的前置和後置命令。您也可以輸入要在發生故障時結束之前執行的預先命令。</block>
+  <block id="660ee777f341ef8a02048c649ceb5033" category="admonition">如果資源包含磁碟區或 qtree 、則會刪除選定要在這類磁碟區或 qtree 上還原的 Snapshot 之後所拍攝的 Snapshot 、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。</block>
+  <block id="99b447de4897ad60ae2d4ef832acc11d" category="paragraph">例如、如果主要快照保留期間為 7 天、次要快照保留時間為 45 天、則在完成 45 天之後、刪除所有備份之後、您必須刪除資源群組和舊的 MDC 資源。</block>
+  <block id="d7d148a2da0b4f8f54f724e577240359" category="paragraph">如果資源包含磁碟區或 qtree 、則會刪除選定要在這類磁碟區或 qtree 上還原的 Snapshot 之後所拍攝的 Snapshot 、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。當選擇*完整資源*與*磁碟區還原*選項進行還原時、此選項即適用。</block>
+  <block id="a559b2571e56d5cca36de86e59757d8d" category="admonition">對於停止、 Snapshot 和取消停止作業的前置和後置命令、您應該檢查插件主機上的命令清單中是否存在 Linux 和 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\allowed_commands.config_ 路徑、以及 Windows 的 _C ： \Program Files\NetApp\Snapcenter\Snapcenter Plug-In Creator\et\allowed_commands_list_txt.txt.</block>
+  <block id="bc0228a3b27171e08e61e5a457460cc1" category="paragraph">「 * 摘要卡 * 」區段會顯示檔案型備份、 Snapshot 複本型備份和複本的總數。</block>
+  <block id="be786b6916e284b80ab94c9292822f55" category="paragraph">如果資源包含磁碟區或 qtree 、則會刪除選定要在這類磁碟區或 qtree 上還原的 Snapshot 之後所拍攝的 Snapshot 、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。</block>
+  <block id="726c62039b2a1ccfba1cc9d89c1b6047" category="paragraph">根據保留設定、主要或次要儲存設備上的 Snapshot 及其在 SAP HANA 目錄中的對應項目都會刪除。SAP HANA目錄項目也會在刪除備份和資源群組時刪除。</block>
+  <block id="360b1745b63d8c10b566bfa854abc3ac" category="paragraph">Snapshot 複本型備份利用 NetApp Snapshot 技術、建立 SAP HANA 資料庫所在磁碟區的線上唯讀複本。</block>
+  <block id="6fe96fe83e4fe586b0886b2e5017d10d" category="paragraph">例如、如果您要在 SQL Server 環境中執行 Snapshot 和資料保護作業、則必須使用適當的 Windows 或 SQL 認證來設定認證。此伺服器SnapCenter 會使用任一種方法驗證認證集。如果您要在 ONTAP 儲存設備上的 Windows 檔案系統環境中執行 Snapshot 和資料保護作業、 SnapCenter 管理員角色必須在 Windows 主機上擁有管理員權限。</block>
+  <block id="9939c592ab7bc8c3264f4ed7fde3bd18" category="paragraph">原則型備份利用 NetApp Snapshot 技術來建立快速、節省空間、應用程式一致、磁碟型的備份。或者、您也可以更新現有的保護關係、將這些備份作業自動化至二線儲存設備。</block>
+  <block id="a156a2baa4fc7e4c8c93e2f496941e06" category="list-text">支援 Windows 主機的儲存資源配置、 Snapshot 一致性和空間回收</block>
+  <block id="3fd5f1108d9e6e2f31a2b951b94fcc66" category="list-text">移除主機所需的時間取決於備份數量和保留設定。這是因為快照會從每個控制器中刪除、而且中繼資料也會清除。</block>
+  <block id="921eceabf04ab9f25c362a6542724dba" category="paragraph">最新的「Protection Summary」（保護摘要）方塊可為您有權存取的所有實體提供保護狀態。依預設、顯示器會設定為提供所有外掛程式的狀態。我們會提供狀態資訊、以供備份至主要儲存設備的資源作為快照、以及使用 SnapMirror 和 SnapVault 技術的次要儲存設備之用。次要儲存設備的可用保護狀態資訊取決於所選的外掛程式類型。</block>
+  <block id="9bb33d5498eacebb490e288aa3ce44b5" category="admonition">SAP HANA 為 Snapshot 的主要與次要儲存設備提供保護狀態資訊。只有主要儲存保護狀態可用於檔案型備份。</block>
+  <block id="b4f406ad371d4f39621c6ae9315cada8" category="paragraph">每日使用量總計（包括SnapCenter 可用於各種版本的備份總數、以及這些備份所佔用的大小）將顯示在顯示器頂端。備份可能會有多個相關的 Snapshot 、而且數量也會反映相同的情況。這同時適用於主要和次要快照。例如、您已建立10個備份、其中2個因為原則型備份保留而刪除、1個備份則由您明確刪除。因此、會顯示7個備份數、以及這7個備份所佔用的大小。</block>
+  <block id="c3bdf8281e5e51911c7ebc0640da8222" category="paragraph">主要儲存設備的儲存節約係數是邏輯容量（複製與快照節省量加上已耗用儲存設備）與主要儲存設備實體容量的比率。長條圖說明儲存節約效益。</block>
+  <block id="fd0998113f77a0321315b7e0948f05e1" category="paragraph">當原則附加至資源或資源群組時、您可以修改複寫選項、 Snapshot 保留設定、錯誤重試次數或指令碼資訊。只有在分離原則之後、才能修改排程類型（頻率）。</block>
+  <block id="c3322261b5e365126f3bbd22ae033f3e" category="paragraph">您應該手動刪除資源群組中任何資源所建立的所有複本。您可以選擇性地強制刪除與資源群組相關聯的所有備份、中繼資料、原則和快照。</block>
+  <block id="4ac647997500ae801e90be76a0f09421" category="list-text">選用：選取 * 刪除與此資源群組相關的備份與分離原則 * 核取方塊、以移除與資源群組相關的所有備份、中繼資料、原則和快照。</block>
+  <block id="322c20f898d5631d47f9131b0ff643f9" category="paragraph">下列Cmdlet會在SnapCenter iSCSI LUN中意外刪除備份檔案時、還原MySQL的功能。對於 VMDK 、請手動從 ONTAP 快照還原備份。</block>
+  <block id="4954c41a9a08ab45a310519b5fd1e579" category="list-text">如果您想要使用 Snapshot 技術建立備份、請選取 * Snapshot Based * 。</block>
+  <block id="fd67ba398eb305129b3dffed5a367994" category="admonition">由於 anf 複本已是從所選 Snapshot 建立的個別磁碟區、因此已停用對 anf 複本的 Clone Split 。</block>
+  <block id="e809483d1a49ec9268e55af716571abf" category="list-text">選取 * Snapshot 複製工具 &gt; SnapCenter 無檔案系統一致性 * 來建立快照。</block>
+  <block id="4e84e965e1d16cd7b3116d29b62142fc" category="summary">SnapCenter 使用 Snapshot 技術來備份位於 LUN 、 CSV （叢集共用磁碟區）、 RDM （原始裝置對應）磁碟區、 Windows 叢集中的 ALM （非對稱 LUN 對應）、以及以 VMS/NFS 為基礎的 VMDK （使用 NFS 的 VMware 虛擬機器檔案系統）上的 Windows 檔案系統資源。</block>
+  <block id="f084fdf8914e7a02d5263759b465833b" category="paragraph">SnapCenter 會建立檔案系統的快照、以建立備份。聯盟備份（其中一個磁碟區包含來自多個主機的 LUN ）比備份個別 LUN 更快、更有效率、因為與每個檔案系統的個別快照相比、只會建立一個磁碟區快照。</block>
+  <block id="1925a06d08d617bc50d7a3d659b0f2a7" category="paragraph">當 SnapCenter 建立 Snapshot 時、整個儲存系統磁碟區都會擷取在 Snapshot 中。不過、備份僅對建立備份的主機伺服器有效。</block>
+  <block id="6a9942daeda54f016240682d869fe238" category="paragraph">如果來自其他主機伺服器的資料位於同一個磁碟區、則無法從 Snapshot 還原此資料。</block>
+  <block id="7e038afa02819cb4c7edd12ab0c9a3cf" category="paragraph">如果您想要在自動刪除快照 SnapCenter 儲存區之前指定其數量、請選擇此選項。</block>
+  <block id="39ede0b6680ded15631aad7474467c6a" category="list-text">選用：在精靈的 [ 資源 ] 頁面中，輸入 Snapshot 的自訂名稱格式。</block>
+  <block id="3cb5c9bda561968bd773237393992ae0" category="paragraph">例如、customtext資源群組原則主機名稱或資源群組主機名稱。根據預設、 Snapshot 名稱會附加時間戳記。</block>
+  <block id="dbb4720e991689c622a9db7249c8c661" category="paragraph">Windows 檔案系統備份使用預設的 Snapshot 命名慣例。預設備份命名慣例會在 Snapshot 名稱中新增時間戳記、協助您識別複本建立的時間。</block>
+  <block id="85f1de84fc13e82033f35724d5886e91" category="paragraph">Snapshot 使用下列預設命名慣例： resourcegroupname_hostname_timestamp</block>
+  <block id="ab4ef81968bb65a88c3886c889131244" category="paragraph">選用：輸入自訂的 Snapshot 名稱和格式。</block>
+  <block id="ddcb2243e0913e22a7bdaa62e5aba43f" category="summary">Windows 外掛程式與儲存系統上的 NetApp Snapshot 技術整合。若要使用Windows外掛程式、您可以使用SnapCenter 這個介面。</block>
+  <block id="515ccc782ae168ef3b657e96aa4edf37" category="paragraph">Windows 外掛程式使用 NetApp Snapshot 技術。這可讓您在數秒內備份檔案系統、並快速還原檔案、而無需讓主機離線。快照消耗的儲存空間最小。</block>
+  <block id="e0f0874a46e8d0e6a5ac3a9235a1074e" category="summary">適用於Microsoft Windows的支援功能、是NetApp支援應用程式感知的Microsoft檔案系統資源資料保護管理功能的NetApp支援軟體主機端元件。SnapCenter SnapCenter此外、它還能為 Windows 檔案系統提供儲存資源配置、 Snapshot 一致性和空間回收。Windows外掛程式可在SnapCenter 您的支援環境中自動執行檔案系統備份、還原及複製作業。</block>
+  <block id="d0ed77b6d80df72d0d6acae2c4e9db85" category="list-text">如果您要將 Snapshot 複製到鏡像或資料保險箱、 SnapCenter 管理員必須為來源磁碟區和目的地磁碟區指派 SVM 。</block>
+  <block id="be733ae25c1f590e21e985ae94968449" category="paragraph">您必須將 Snapshot 從主要儲存設備複製到次要儲存設備。</block>
+  <block id="44946d9385e466f803e84b161d44c49d" category="cell">*最佳實務做法：*您最好根據您想保留的完整備份數和記錄備份總數來設定次要保留原則。當您設定次要保留原則時、請記住、當資料庫和記錄位於不同的磁碟區時、每個備份都可以有三個快照、當資料庫和記錄位於同一個磁碟區時、每個備份都可以有兩個快照。</block>
+  <block id="9284db278aa00bd072e713a907999f2e" category="paragraph">對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本將繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
+  <block id="74f0af58207cfeaf671266f54dd2fef4" category="paragraph">最佳實務做法： * 最佳做法是設定必須等於「完整備份保留設定」區段中的「總快照（完整備份）」設定。如此可確保每個完整備份都保留記錄檔。</block>
+  <block id="161fa80fbfb00806b2721800e0738514" category="paragraph">僅保留特定數量的快照</block>
+  <block id="0d64a89a155466b599d67bf78b6d1097" category="paragraph">如果您想指定要保留的完整備份數量、請選取 * 要保留的總 Snapshot 複本 * 選項、然後指定要保留的 Snapshot （完整備份）數量。</block>
+  <block id="4afc4cedb01e8b3555973ac1d7338bfd" category="paragraph">選取 * 保留 Snapshot 複本 * 選項、並指定保留 Snapshot （完整備份）的天數。</block>
+  <block id="165d18348f040abed6010459ceae9a6d" category="paragraph">例如、_customtext_resourcegrod_policy_hostname_或_resourcegroup_hostname_。根據預設、 Snapshot 名稱會附加時間戳記。</block>
+  <block id="d7d2c8824fad4976a2cd5e20ba3ec375" category="paragraph">SnapCenter for Microsoft Exchange Server 的資源群組每個 Snapshot 不能有超過 30 個資料庫。如果一個資源群組中有 30 個以上的資料庫、則會為其他資料庫建立第二個 Snapshot 。因此、主備份工作下會建立2個子工作。對於具有二線複寫的備份、SnapMirror或SnapVault 更新正在進行中、可能會發生兩個子工作的更新重疊的情況。即使記錄顯示工作已完成、主備份工作仍會持續執行。</block>
+  <block id="bf971f3c72b83a1aac6d9fe1cb39850c" category="admonition">您無法重新命名或刪除二線儲存設備上的備份。刪除快照是由 ONTAP 保留設定來處理。</block>
+  <block id="eb71c7e77b1cb5486117cdac9d378fb6" category="list-text">如果您想要指定自訂的 Snapshot 名稱、請在「資源」頁面中、選取「 * 使用 Snapshot 複本的自訂名稱格式 * 」核取方塊、然後輸入您要用於 Snapshot 名稱的自訂名稱格式。</block>
+  <block id="2457e427df18c87448fa7fa796d115c7" category="paragraph">使用SnapCenter 支援功能來備份Exchange信箱時、您必須選擇資源類型、例如資料庫和資料庫可用度群組（DAG）。Snapshot 技術可用於建立資源所在磁碟區的線上唯讀複本。</block>
 </blocks>

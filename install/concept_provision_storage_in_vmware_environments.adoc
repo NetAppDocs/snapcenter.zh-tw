@@ -11,7 +11,7 @@ summary: 您可以在SnapCenter VMware環境中使用適用於Microsoft Windows�
 
 
 [role="lead"]
-您可以在SnapCenter VMware環境中使用適用於Microsoft Windows的解決方案、來建立及管理LUN、以及管理Snapshot複本。
+您可以在 VMware 環境中使用適用於 Microsoft Windows 的 SnapCenter 外掛程式來建立和管理 LUN 、以及管理快照。
 
 
 

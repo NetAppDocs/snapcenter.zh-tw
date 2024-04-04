@@ -33,9 +33,9 @@ summary: 如果某個資源尚未納入任何資源群組、您可以從「資�
 
 
 
-. 在「資源」頁面中、選取「Snapshot Copy*的*自訂名稱格式」核取方塊、然後輸入您要用於Snapshot複本名稱的自訂名稱格式。
+. 在 [ 資源 ] 頁面中，選取 [ 快照複本 * 的 * 自訂名稱格式 ] 核取方塊，然後輸入您要用於 [ 快照 ] 名稱的自訂名稱格式。
 +
-例如、customtext_policy_hostnameor resource_hostname.根據預設、快照複本名稱會附加時間戳記。
+例如、customtext_policy_hostnameor resource_hostname.根據預設、 Snapshot 名稱會附加時間戳記。
 
 . 在「原則」頁面中、執行下列工作：
 +

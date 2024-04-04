@@ -2,7 +2,7 @@
 permalink: protect-scw/concept_how_snapcenter_backs_up_windows_file_systems.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: 使用Snapshot複製技術來備份駐留在LUN、CSV（叢集共用磁碟區）、RDM（原始裝置對應）磁碟區、Windows叢集中的ALM（非對稱LUN對應）、以及以VMS/NFS為基礎的VMDK（使用NFS的VMware虛擬機器檔案系統）上的Windows檔案系統資源。SnapCenter 
+summary: SnapCenter 使用 Snapshot 技術來備份位於 LUN 、 CSV （叢集共用磁碟區）、 RDM （原始裝置對應）磁碟區、 Windows 叢集中的 ALM （非對稱 LUN 對應）、以及以 VMS/NFS 為基礎的 VMDK （使用 NFS 的 VMware 虛擬機器檔案系統）上的 Windows 檔案系統資源。 
 ---
 = 如何備份Windows檔案系統SnapCenter
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: 使用Snapshot複製技術來備份駐留在LUN、CSV（叢集共用磁
 
 
 [role="lead"]
-使用Snapshot複製技術來備份駐留在LUN、CSV（叢集共用磁碟區）、RDM（原始裝置對應）磁碟區、Windows叢集中的ALM（非對稱LUN對應）、以及以VMS/NFS為基礎的VMDK（使用NFS的VMware虛擬機器檔案系統）上的Windows檔案系統資源。SnapCenter
+SnapCenter 使用 Snapshot 技術來備份位於 LUN 、 CSV （叢集共用磁碟區）、 RDM （原始裝置對應）磁碟區、 Windows 叢集中的 ALM （非對稱 LUN 對應）、以及以 VMS/NFS 為基礎的 VMDK （使用 NFS 的 VMware 虛擬機器檔案系統）上的 Windows 檔案系統資源。
 
-利用建立檔案系統的Snapshot複本來建立備份。SnapCenter相較於每個個別LUN的備份、磁碟區包含來自多個主機的LUN、因此相較於每個個別LUN的備份、聯合備份速度更快、效率更高、因為與每個檔案系統的個別Snapshot相比、只會建立一個磁碟區Snapshot複本。
+SnapCenter 會建立檔案系統的快照、以建立備份。聯盟備份（其中一個磁碟區包含來自多個主機的 LUN ）比備份個別 LUN 更快、更有效率、因為與每個檔案系統的個別快照相比、只會建立一個磁碟區快照。
 
-當使用此功能建立Snapshot複本時、會在Snapshot複本中擷取整個儲存系統磁碟區。SnapCenter不過、備份僅對建立備份的主機伺服器有效。
+當 SnapCenter 建立 Snapshot 時、整個儲存系統磁碟區都會擷取在 Snapshot 中。不過、備份僅對建立備份的主機伺服器有效。
 
-如果來自其他主機伺服器的資料位於同一個磁碟區、則無法從Snapshot複本還原此資料。
+如果來自其他主機伺服器的資料位於同一個磁碟區、則無法從 Snapshot 還原此資料。
 
 
 NOTE: 如果Windows檔案系統包含資料庫、則備份檔案系統與備份資料庫不同。若要備份資料庫、您必須使用其中一個資料庫外掛程式。

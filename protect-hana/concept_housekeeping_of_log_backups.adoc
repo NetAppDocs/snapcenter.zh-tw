@@ -13,4 +13,4 @@ summary: 可在儲存系統和檔案系統層級、以及SAP HANA備份目錄中
 [role="lead"]
 可在儲存系統和檔案系統層級、以及SAP HANA備份目錄中管理記錄和資料備份的管理。SnapCenter
 
-主要或次要儲存設備上的Snapshot複本、以及SAP HANA目錄中對應的項目、會根據保留設定予以刪除。SAP HANA目錄項目也會在刪除備份和資源群組時刪除。
+根據保留設定、主要或次要儲存設備上的 Snapshot 及其在 SAP HANA 目錄中的對應項目都會刪除。SAP HANA目錄項目也會在刪除備份和資源群組時刪除。

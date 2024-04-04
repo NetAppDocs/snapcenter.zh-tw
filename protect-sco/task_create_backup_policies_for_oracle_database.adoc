@@ -17,7 +17,7 @@ summary: 在使用SnapCenter 支援功能來備份Oracle資料庫資源之前、
 
 * 您必須已定義備份策略。
 * 您必須完成安裝SnapCenter 、新增主機、探索資料庫及建立儲存系統連線等工作、準備好保護資料。
-* 如果您要將Snapshot複本複製到鏡射或保存庫二線儲存設備、SnapCenter 則該管理員必須已將來源和目的地磁碟區的SVM指派給您。
+* 如果您要將快照複製到鏡像或資料保險箱次要儲存設備、 SnapCenter 管理員必須將來源和目的地磁碟區的 SVM 指派給您。
 * 如果您以非 root 使用者的身分安裝外掛程式、則應該手動將執行權限指派給 prescScript 和 PostScript 目錄。
 * 如需 SnapMirror Business Continuity （ SM-BC ）的先決條件和限制、請參閱 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror 業務持續運作的物件限制"]。
 
@@ -27,10 +27,10 @@ summary: 在使用SnapCenter 支援功能來備份Oracle資料庫資源之前、
 +
 ** 如果選取「保留特定天數的備份複本」選項、則 SnapLock 保留期間必須小於或等於所述保留天數。
 +
-指定 Snapshot 複本鎖定期間可防止在保留期間到期之前刪除 Snapshot 複本。這可能會導致保留的 Snapshot 複本數量超過原則中指定的數量。
+指定 Snapshot 鎖定期間可防止在保留期間到期之前刪除 Snapshot 。這可能會導致保留的快照數量超過原則中指定的數量。
 
 +
-對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 +
 
@@ -140,29 +140,29 @@ image:../media/sco_backuppolicy_prunning.gif[""]
 
 
  a| 
-保留一定數量的Snapshot複本
+保留一定數量的快照
  a| 
-選取*要保留的Snapshot複本總數*、然後指定要保留的Snapshot複本數目。
+選取 * 要保留的 Snapshot 複本總數 * 、然後指定要保留的 Snapshot 數。
 
-如果Snapshot複本數量超過指定數量、則會刪除Snapshot複本、並先刪除最舊的複本。
+如果快照數量超過指定數量、則會先刪除最舊的複本、然後刪除快照。
 
 
 NOTE: 對於使用率為1018的ONTAP 資源、如使用率為0、9.4或更新版本、ONTAP 而使用率為254的資源、如使用率為0、9.3或更新版本。如果保留設定的值高於基礎ONTAP 版支援的值、則備份將會失敗。
 
 
-IMPORTANT: 如果您打算啟用SnapVault 此功能、則必須將保留數設為2或更高。如果您將保留數設為1、則保留作業可能會失敗、因為第一個Snapshot複本是SnapVault 參考Snapshot複本、用於進行此關係、直到將較新的Snapshot複本複寫到目標為止。
+IMPORTANT: 如果您打算啟用SnapVault 此功能、則必須將保留數設為2或更高。如果將保留計數設為 1 、則保留作業可能會失敗、因為第一個 Snapshot 是 SnapVault 關係的參考 Snapshot 、直到較新的 Snapshot 複寫到目標為止。
 
 
 
  a| 
-將Snapshot複本保留一定天數
+將快照保留一定天數
  a| 
-選取*保留Snapshot複本*、然後指定刪除Snapshot複本之前保留Snapshot複本的天數。
+選取 * 保留 Snapshot 複本 * 、然後指定您要保留 Snapshot 的天數、再將其刪除。
 
 
 
  a| 
-Snapshot 複本鎖定期間
+Snapshot 鎖定期間
  a| 
 選取 Snapshot 複本鎖定期間、然後選取天、月或年。
 
@@ -180,7 +180,7 @@ NOTE: 只有在您選擇歸檔記錄檔做為備份的一部分時、才能保�
 
 
  a| 
-建立本機Snapshot複本之後、請更新SnapMirror
+在建立本機 Snapshot 之後更新 SnapMirror
  a| 
 選取此欄位可在另一個磁碟區（SnapMirror複寫）上建立備份集的鏡射複本。
 
@@ -193,7 +193,7 @@ NOTE: 只有在您選擇歸檔記錄檔做為備份的一部分時、才能保�
 
 
  a| 
-建立本機Snapshot複本後再更新SnapVault
+建立本機快照後更新 SnapVault
  a| 
 選取此選項以執行磁碟對磁碟備份複寫（SnapVault 還原備份）。
 
@@ -210,7 +210,7 @@ NOTE: 只有在您選擇歸檔記錄檔做為備份的一部分時、才能保�
  a| 
 選取Snapshot標籤。
 
-根據您選取的Snapshot複本標籤、ONTAP 將套用符合標籤的次要Snapshot複本保留原則。
+根據您選取的 Snapshot 標籤、 ONTAP 會套用符合標籤的次要 Snapshot 保留原則。
 
 
 NOTE: 如果您在建立本機Snapshot複本之後選擇*更新SnapMirror、您可以選擇性地指定次要原則標籤。不過、如果SnapVault 您在建立本機Snapshot複本*之後選擇*更新SUpdate、則應指定次要原則標籤。
@@ -225,7 +225,7 @@ NOTE: 如果您在建立本機Snapshot複本之後選擇*更新SnapMirror、您�
 |===
 +
 
-NOTE: 您應該在ONTAP 適用於二線儲存設備的SnapMirror保留原則中進行設定、以避免達到二線儲存設備上Snapshot複本的上限。
+NOTE: 您應該在 ONTAP 中為次要儲存設備設定 SnapMirror 保留原則、以避免達到次要儲存設備快照的上限。
 
 . 在「指令碼」頁面中、分別輸入您要在備份作業之前或之後執行的指令碼或指令碼路徑和引數。
 +

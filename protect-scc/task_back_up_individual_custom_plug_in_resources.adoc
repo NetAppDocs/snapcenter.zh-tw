@@ -25,9 +25,9 @@ summary: 如果個別的自訂外掛程式資源不是任何資源群組的一�
 按一下 image:../media/filter_icon.png[""]，然後選取主機名稱和資源類型以篩選資源。然後按一下 image:../media/filter_icon.png["篩選圖示"] 以關閉篩選窗格。
 
 . 按一下您要備份的資源。
-. 在「資源」頁面中、如果您想要使用自訂名稱、請選取「*使用Snapshot COP*的自訂名稱格式」核取方塊、然後輸入Snapshot複本名稱的自訂名稱格式。
+. 在 [ 資源 ] 頁面中，如果您想要使用自訂名稱，請選取 [ 使用快照複本的自訂名稱格式 ] 核取方塊，然後輸入快照名稱的自訂名稱格式。
 +
-例如、_customtext_policy_hostname_或_resource_hostname_。根據預設、快照複本名稱會附加時間戳記。
+例如、_customtext_policy_hostname_或_resource_hostname_。根據預設、 Snapshot 名稱會附加時間戳記。
 
 . 在「應用程式設定」頁面中、執行下列動作：
 +
@@ -43,7 +43,7 @@ summary: 如果個別的自訂外掛程式資源不是任何資源群組的一�
  a| 
 等待一致性群組快照作業完成的時間
  a| 
-選取「緊急」、「中」或「輕鬆」、以指定完成Snapshot複本作業的等待時間。
+選取「緊急」、「中」或「放鬆」、以指定完成 Snapshot 作業的等待時間。
 
 「緊急」= 5秒、「中」= 7秒、「輕鬆」= 20秒。
 
@@ -58,35 +58,35 @@ summary: 如果個別的自訂外掛程式資源不是任何資源群組的一�
 +
 image:../media/application_settings.gif["應用程式設定頁面"]
 
-.. 按一下「*指令碼*」箭頭以執行「靜止」、「Snapshot複本」和「靜止」作業的「預先」和「POST」命令。您也可以在結束備份作業之前執行pres命令。
+.. 按一下 * 指令碼 * 箭頭、執行停止、快照和取消停止作業的前置和後置命令。您也可以在結束備份作業之前執行pres命令。
 +
 指令碼和指令碼會在SnapCenter 支援服務器上執行。
 
 .. 按一下「*自訂組態*」箭頭、然後輸入使用此資源之所有工作所需的自訂值配對。
-.. 按一下「* Snapshot Copy Tool*（* Snapshot複製工具*）」箭頭、選取建立Snapshot複本的工具：
+.. 按一下 * Snapshot Copy Tool* （快照複製工具 * ）箭頭、選取建立 Snapshot 的工具：
 +
 |===
 | 如果您需要... | 然後... 
 
 
  a| 
-執行儲存層級Snapshot複本SnapCenter
+SnapCenter 可取得儲存層級快照
  a| 
 選擇* SnapCenter 不含檔案系統一致性*的功能。
 
 
 
  a| 
-使用Windows外掛程式將檔案系統置於一致狀態、然後製作Snapshot複本SnapCenter
+SnapCenter 使用 Windows 外掛程式將檔案系統置於一致的狀態、然後製作 Snapshot
  a| 
 選擇* SnapCenter 《以檔案系統一致性*》。
 
 
 
  a| 
-可輸入命令以建立Snapshot複本
+可輸入命令以創建 Snapshot
  a| 
-選取*其他*、然後輸入命令以建立Snapshot複本。
+選取 * 其他 * 、然後輸入命令以建立 Snapshot 。
 
 |===
 

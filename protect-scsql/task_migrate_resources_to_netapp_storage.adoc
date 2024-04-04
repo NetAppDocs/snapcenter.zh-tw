@@ -91,7 +91,7 @@ SQL Server資料庫使用Microsoft SQL Server資料庫一致性檢查程式（DB
 
 NOTE: 您可能想要選取此選項以縮短執行時間。
 
-** 選擇「**TABLOCK**」選項以限制檢查並取得鎖定、而非使用內部資料庫Snapshot複本。
+** 選取「 **TABLOCK** 」選項以限制檢查並取得鎖定、而非使用內部資料庫 Snapshot 。
 
 
 |===

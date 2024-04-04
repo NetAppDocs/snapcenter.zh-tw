@@ -34,7 +34,7 @@ summary: 您可以使用SnapCenter 支援功能來還原備份的SQL Server資�
 
 * 「還原」精靈頁面上的大部分欄位都是不言自明的。下列資訊說明您可能需要指引的欄位。
 * 對於 SnapMirror Business Continuity （ SM-BC ）還原作業、您必須從主要位置選取備份。
-* 對於啟用 SnapLock 的原則、對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 複本鎖定期間、從防竄改 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+* 對於啟用 SnapLock 的原則、對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 鎖定期間、從防竄改快照建立的複本作為還原的一部分、將會繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 
 .步驟

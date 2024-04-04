@@ -38,9 +38,9 @@ summary: 如果應用程式磁碟區不是任何資源群組的一部分、您�
  a| 
 使用自訂名稱格式進行Snapshot複本
  a| 
-選取此核取方塊、然後輸入您要用於Snapshot複本名稱的自訂名稱格式。
+選取此核取方塊、然後輸入您要用於 Snapshot 名稱的自訂名稱格式。
 
-例如、customtext_policy_hostnameor resource_hostname.根據預設、快照複本名稱會附加時間戳記。
+例如、customtext_policy_hostnameor resource_hostname.根據預設、 Snapshot 名稱會附加時間戳記。
 
 
 

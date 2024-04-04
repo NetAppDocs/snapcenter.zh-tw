@@ -19,7 +19,7 @@ summary: 您可以先建立新的資源備份原則、再使用SnapCenter 支援
 +
 若要準備資料保護、您必須完成安裝SnapCenter 、新增主機、探索資源、以及建立儲存虛擬機器（SVM）連線等工作。
 
-* 如果您要將Snapshot複本複製到鏡射或保存庫二線儲存設備、SnapCenter 則該管理員必須已將來源和目的地磁碟區的SVM指派給您。
+* 如果您要將快照複製到鏡像或資料保險箱次要儲存設備、 SnapCenter 管理員必須將來源和目的地磁碟區的 SVM 指派給您。
 * 如果您想以預先編寫和後指令碼執行PowerShell指令碼、則應在web.config檔案中將usePowerShellProcessforScripts參數的值設為true。
 +
 預設值為假
@@ -41,8 +41,8 @@ summary: 您可以先建立新的資源備份原則、再使用SnapCenter 支援
 * SnapLock
 +
 ** 如果選取「保留特定天數的備份複本」選項、則 SnapLock 保留期間必須小於或等於所述保留天數。
-** 指定 Snapshot 複本鎖定期間可防止在保留期間到期之前刪除 Snapshot 複本。這可能會導致保留的 Snapshot 複本數量超過原則中指定的數量。
-** 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+** 指定 Snapshot 鎖定期間可防止在保留期間到期之前刪除 Snapshot 。這可能會導致保留的快照數量超過原則中指定的數量。
+** 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 
 
@@ -105,7 +105,7 @@ NOTE: 如果您排定在上午2：00、則在夏令時間（Dst）期間不會�
  a| 
 要保留的Snapshot複本總數
  a| 
-如果您想在SnapCenter 自動刪除Snapshot複本之前、先指定Snapshot複本的數量、請選擇此選項。
+如果您想要在自動刪除快照 SnapCenter 儲存區之前指定其數量、請選擇此選項。
 
 
 
@@ -119,7 +119,7 @@ NOTE: 如果您排定在上午2：00、則在夏令時間（Dst）期間不會�
  a| 
 Snapshot 複本鎖定期間
  a| 
-選取 Snapshot 複本鎖定期間、然後選取天、月或年。
+選取 Snapshot 鎖定期間、然後選取天、月或年。
 
 SnapLock 保留期應少於 100 年。
 
@@ -169,7 +169,7 @@ NOTE: 對於使用率為1018的ONTAP 資源、如使用率為0、9.4或更新版
  a| 
 選取Snapshot標籤。
 
-根據您選取的Snapshot複本標籤、ONTAP 將套用符合標籤的次要Snapshot複本保留原則。
+根據您選取的 Snapshot 標籤、 ONTAP 會套用符合標籤的次要 Snapshot 保留原則。
 
 
 NOTE: 如果您在建立本機Snapshot複本之後選擇*更新SnapMirror、您可以選擇性地指定次要原則標籤。不過、如果SnapVault 您在建立本機Snapshot複本*之後選擇*更新SUpdate、則應指定次要原則標籤。
@@ -184,7 +184,7 @@ NOTE: 如果您在建立本機Snapshot複本之後選擇*更新SnapMirror、您�
 |===
 +
 
-NOTE: 您應該在ONTAP 適用於二線儲存設備的SnapMirror保留原則中進行設定、以避免達到二線儲存設備上Snapshot複本的上限。
+NOTE: 您應該在 ONTAP 中為次要儲存設備設定 SnapMirror 保留原則、以避免達到次要儲存設備快照的上限。
 
 . 在「指令碼」頁面中、分別輸入您希望SnapCenter 在備份作業之前或之後執行的指令碼或指令碼路徑、以及SnapCenter 在逾時之前等候指令碼執行的時間限制。
 +

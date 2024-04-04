@@ -2,7 +2,7 @@
 permalink: protect-scw/concept_snapcenter_plug_in_for_windows_features.html 
 sidebar: sidebar 
 keywords: SnapCenter 
-summary: Windows外掛程式與儲存系統上的NetApp Snapshot複本技術整合。若要使用Windows外掛程式、您可以使用SnapCenter 這個介面。 
+summary: Windows 外掛程式與儲存系統上的 NetApp Snapshot 技術整合。若要使用Windows外掛程式、您可以使用SnapCenter 這個介面。 
 ---
 = 適用於Windows功能的插件SnapCenter
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Windows外掛程式與儲存系統上的NetApp Snapshot複本技術整�
 
 
 [role="lead"]
-Windows外掛程式與儲存系統上的NetApp Snapshot複本技術整合。若要使用Windows外掛程式、您可以使用SnapCenter 這個介面。
+Windows 外掛程式與儲存系統上的 NetApp Snapshot 技術整合。若要使用Windows外掛程式、您可以使用SnapCenter 這個介面。
 
 適用於Windows的外掛程式包含下列主要功能：
 
@@ -23,9 +23,9 @@ Windows外掛程式與儲存系統上的NetApp Snapshot複本技術整合。若�
 +
 您可以排程例行檔案系統備份、設定原則型備份保留、以及設定還原作業。您也可以透過設定SnapCenter 以傳送電子郵件警示的功能、主動監控檔案系統環境。
 
-* *不中斷營運的NetApp Snapshot複製技術*
+* * 不中斷的 NetApp Snapshot 技術 *
 +
-Windows外掛程式使用NetApp Snapshot複製技術。這可讓您在數秒內備份檔案系統、並快速還原檔案、而無需讓主機離線。Snapshot複本所耗用的儲存空間最小。
+Windows 外掛程式使用 NetApp Snapshot 技術。這可讓您在數秒內備份檔案系統、並快速還原檔案、而無需讓主機離線。快照消耗的儲存空間最小。
 
 
 

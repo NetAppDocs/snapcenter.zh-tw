@@ -24,7 +24,7 @@ summary: 任何資料保護工作都需要資源群組。您也必須將一或�
 +
 您可以使用Get API來顯示金鑰的值。不支援Set API。
 
-* 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱 Snapshot 複本建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+* 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 
 .步驟
@@ -63,9 +63,9 @@ NOTE: 資源群組名稱不得超過250個字元。
  a| 
 使用自訂名稱格式進行Snapshot複本
  a| 
-選用：輸入自訂的Snapshot複本名稱和格式。
+選用：輸入自訂的 Snapshot 名稱和格式。
 
-例如、_customtext_resourcegrod_policy_hostname_或_resourcegroup_hostname_。根據預設、快照複本名稱會附加時間戳記。
+例如、_customtext_resourcegrod_policy_hostname_或_resourcegroup_hostname_。根據預設、 Snapshot 名稱會附加時間戳記。
 
 |===
 . 在「資源」頁面中、執行下列步驟：
@@ -87,7 +87,7 @@ NOTE: 如果您最近新增了資源、只有在重新整理資源清單之後�
 *** 選取*自動選取同一個儲存磁碟區上的所有資源*、將同一個磁碟區上的所有資源移至「選取的資源」區段。
 *** 從「可用資源」區段中選取資源、然後按一下向右箭頭、將其移至「選取的資源」區段。
 +
-Microsoft Exchange Server的資源群組SnapCenter 每個Snapshot複本不能有超過30個資料庫。如果一個資源群組中有超過30個資料庫、則會為其他資料庫建立第二個Snapshot複本。因此、主備份工作下會建立2個子工作。對於具有二線複寫的備份、SnapMirror或SnapVault 更新正在進行中、可能會發生兩個子工作的更新重疊的情況。即使記錄顯示工作已完成、主備份工作仍會持續執行。
+SnapCenter for Microsoft Exchange Server 的資源群組每個 Snapshot 不能有超過 30 個資料庫。如果一個資源群組中有 30 個以上的資料庫、則會為其他資料庫建立第二個 Snapshot 。因此、主備份工作下會建立2個子工作。對於具有二線複寫的備份、SnapMirror或SnapVault 更新正在進行中、可能會發生兩個子工作的更新重疊的情況。即使記錄顯示工作已完成、主備份工作仍會持續執行。
 
 
 

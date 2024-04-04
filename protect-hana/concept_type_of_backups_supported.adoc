@@ -23,4 +23,4 @@ summary: 備份類型指定您要建立的備份類型。支援SAP HANA資料庫
 
 == Snapshot複製型備份
 
-Snapshot複製型備份運用NetApp Snapshot複製技術、為SAP HANA資料庫所在的磁碟區建立線上唯讀複本。
+Snapshot 複本型備份利用 NetApp Snapshot 技術、建立 SAP HANA 資料庫所在磁碟區的線上唯讀複本。

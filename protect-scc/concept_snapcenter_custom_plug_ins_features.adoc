@@ -21,9 +21,9 @@ summary: 可與外掛應用程式及儲存系統上的NetApp技術整合。SnapC
 +
 您可以排程備份作業、設定原則型備份保留、以及執行還原作業。您也可以設定SnapCenter 使用功能支援功能來傳送電子郵件警示、主動監控環境。
 
-* *不中斷營運的NetApp Snapshot複製技術*
+* * 不中斷的 NetApp Snapshot 技術 *
 +
-利用NetApp Snapshot複製技術搭配使用「支援不必要的自訂外掛程式」來備份資源。SnapCenter SnapCenterSnapshot複本所耗用的儲存空間最小。
+SnapCenter 使用 NetApp Snapshot 技術搭配 SnapCenter 自訂外掛程式來備份資源。快照消耗的儲存空間最小。
 
 
 
@@ -38,11 +38,11 @@ summary: 可與外掛應用程式及儲存系統上的NetApp技術整合。SnapC
 +
 您要建立複本的儲存系統需要FlexClone授權。
 
-* 支援ONTAP 一致性群組（CG）的Snapshot複本功能、做為建立備份的一部分。
+* 支援 ONTAP 的一致性群組（ CG ）快照功能、作為建立備份的一部分。
 * 能夠在多個資源主機之間同時執行多個備份
 +
-在單一作業中、當單一主機中的資源共用相同的磁碟區時、就會合併Snapshot複本。
+在單一作業中、當單一主機中的資源共用同一個磁碟區時、快照就會整合。
 
-* 使用外部命令建立Snapshot複本的功能。
-* 能夠在Windows環境中建立檔案系統一致的Snapshot複本。
+* 使用外部命令建立 Snapshot 的功能。
+* 能夠在 Windows 環境中建立檔案系統一致的快照。
 

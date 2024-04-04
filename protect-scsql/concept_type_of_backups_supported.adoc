@@ -2,7 +2,7 @@
 permalink: protect-scsql/concept_type_of_backups_supported.html 
 sidebar: sidebar 
 keywords: Type of backups 
-summary: 使用SnapCenter 支援功能來備份SQL Server系統和使用者資料庫時、您必須選擇資源類型、例如資料庫、SQL Server執行個體和可用度群組（AG）。利用Snapshot複製技術來建立資源所在磁碟區的線上唯讀複本。 
+summary: 使用SnapCenter 支援功能來備份SQL Server系統和使用者資料庫時、您必須選擇資源類型、例如資料庫、SQL Server執行個體和可用度群組（AG）。Snapshot 技術可用於建立資源所在磁碟區的線上唯讀複本。 
 ---
 = 支援的備份類型
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 使用SnapCenter 支援功能來備份SQL Server系統和使用者資�
 
 
 [role="lead"]
-若要使用SnapCenter 支援功能來備份SQL Server系統和使用者資料庫、您必須選擇資源類型、例如資料庫、SQL Server執行個體和可用度群組（AG）。利用Snapshot複製技術來建立資源所在磁碟區的線上唯讀複本。
+若要使用SnapCenter 支援功能來備份SQL Server系統和使用者資料庫、您必須選擇資源類型、例如資料庫、SQL Server執行個體和可用度群組（AG）。Snapshot 技術可用於建立資源所在磁碟區的線上唯讀複本。
 
 您可以選取純複本選項、指定SQL Server不會刪減交易記錄。當您同時使用其他備份應用程式來管理SQL Server時、應該使用此選項。保持交易記錄不變、可讓任何備份應用程式還原系統資料庫。純複製備份與排程備份順序無關、不會影響資料庫的備份與還原程序。
 

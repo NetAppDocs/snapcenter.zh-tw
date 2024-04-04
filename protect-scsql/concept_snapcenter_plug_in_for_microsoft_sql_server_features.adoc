@@ -2,7 +2,7 @@
 permalink: protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_features.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for Microsoft SQL Server 
-summary: SQL Server外掛程式與Windows主機上的Microsoft SQL Server和儲存系統上的NetApp Snapshot複本技術整合。若要搭配SQL Server外掛程式使用、請使用SnapCenter 支援此功能的支援介面。 
+summary: 適用於 SQL Server 的外掛程式可與 Windows 主機上的 Microsoft SQL Server 整合、並可與儲存系統上的 NetApp Snapshot 技術整合。若要搭配SQL Server外掛程式使用、請使用SnapCenter 支援此功能的支援介面。 
 ---
 = 適用於Microsoft SQL Server功能的支援外掛程式SnapCenter
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: SQL Server外掛程式與Windows主機上的Microsoft SQL Server和儲�
 
 
 [role="lead"]
-SQL Server外掛程式與Windows主機上的Microsoft SQL Server和儲存系統上的NetApp Snapshot複本技術整合。若要搭配SQL Server外掛程式使用、請使用SnapCenter 支援此功能的支援介面。
+適用於 SQL Server 的外掛程式可與 Windows 主機上的 Microsoft SQL Server 整合、並可與儲存系統上的 NetApp Snapshot 技術整合。若要搭配SQL Server外掛程式使用、請使用SnapCenter 支援此功能的支援介面。
 
 適用於SQL Server的外掛程式包含下列主要功能：
 
@@ -23,9 +23,9 @@ SQL Server外掛程式與Windows主機上的Microsoft SQL Server和儲存系統�
 +
 您可以排程例行SQL Server備份、設定原則型備份保留、以及設定時間點與最新還原作業。您也可以透過設定SnapCenter 功能以傳送電子郵件警示、主動監控SQL Server環境。
 
-* *不中斷營運的NetApp Snapshot複製技術*
+* * 不中斷的 NetApp Snapshot 技術 *
 +
-適用於SQL Server的外掛程式使用NetApp Snapshot複製技術搭配SnapCenter 適用於Microsoft Windows的NetApp功能。這可讓您在數秒內備份資料庫、並快速還原資料庫、而無需讓SQL Server離線。Snapshot複本所耗用的儲存空間最小。
+適用於 SQL Server 的外掛程式使用 NetApp Snapshot 技術搭配適用於 Microsoft Windows 的 NetApp SnapCenter 外掛程式。這可讓您在數秒內備份資料庫、並快速還原資料庫、而無需讓SQL Server離線。快照消耗的儲存空間最小。
 
 
 
