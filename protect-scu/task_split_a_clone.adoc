@@ -1,16 +1,14 @@
-= 
+---
+permalink: protect-scu/task_split_a_clone.html 
+sidebar: sidebar 
+keywords: split clone, snapcenter 
+summary: 您可以使用SnapCenter 此功能從父資源分割複製的資源。分割的實體複本會變成獨立於父資源的實體複本。 
+---
+= 分割實體複本
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
-
---
-永久連結： Protect - SCU/task_split_a_clone.html
-側邊列：側邊列
-關鍵字：分割複本、 SnapCenter
-摘要：「您可以使用 SnapCenter 將複製的資源從父資源分割出來。分割的複本會與父資源分開。」
--
-= 分割複本
-：圖示：字型
-： imagesdir ： . /media/
 
 [role="lead"]
 您可以使用SnapCenter 此功能從父資源分割複製的資源。分割的實體複本會變成獨立於父資源的實體複本。
@@ -77,5 +75,3 @@
 
 .相關資訊
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_clone_or_verfication_fails_with_aggregate_does_not_exist["使用Aggregate時無法進行實體複製或驗證SnapCenter"]
-
---

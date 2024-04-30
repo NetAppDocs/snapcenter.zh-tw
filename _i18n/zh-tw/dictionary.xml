@@ -8298,14 +8298,6 @@ Windows 主機：</block>
   <block id="40b141d81ebc81d0277454ddd95983be" category="paragraph">在隨需備份之後、按一下 * 重新整理 * 按鈕可重新整理備份或複製的詳細資料。</block>
   <block id="e3eb3098d9512640ba3691ccfbed50f5" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式支援或參閱<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block></block>
   <block id="f1472e722e81a79d38810332425a4e76" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需PowerShell Cmdlet的相關資訊、請使用SnapCenter 支援程式指令程式、或參閱<block ref="b70cb1971d6e57b9289aed553ef357cb" category="inline-link-rx"></block>。</block>
-  <block id="5145b2adfb55517e007962efd2a08be6" category="paragraph">永久連結： Protect - SCU/task_split_a_clone.html
-側邊列：側邊列
-關鍵字：分割複本、 SnapCenter
-摘要：「您可以使用 SnapCenter 將複製的資源從父資源分割出來。分割的複本會與父資源分開。」
--
-= 分割複本
-：圖示：字型
-： imagesdir ： . /media/</block>
   <block id="e9b924bbf420ab11fb241e13f75a92c1" category="summary">安裝適用於 Unix 檔案系統的外掛程式後、會自動探索主機上的檔案系統、並顯示在「資源」頁面中。</block>
   <block id="5f6bb3736007978d5604be7df99325f8" category="doc">探索可供備份的 UNIX 檔案系統</block>
   <block id="c94588b5932cbd964b99829c9c53f185" category="paragraph">安裝外掛程式之後、該主機上的所有檔案系統都會自動探索並顯示在「資源」頁面中。您可以將這些檔案系統新增至資源群組、以執行資料保護作業。</block>
@@ -9074,4 +9066,7 @@ Snapshot 作業。</block>
   <block id="bf971f3c72b83a1aac6d9fe1cb39850c" category="admonition">您無法重新命名或刪除二線儲存設備上的備份。刪除快照是由 ONTAP 保留設定來處理。</block>
   <block id="eb71c7e77b1cb5486117cdac9d378fb6" category="list-text">如果您想要指定自訂的 Snapshot 名稱、請在「資源」頁面中、選取「 * 使用 Snapshot 複本的自訂名稱格式 * 」核取方塊、然後輸入您要用於 Snapshot 名稱的自訂名稱格式。</block>
   <block id="2457e427df18c87448fa7fa796d115c7" category="paragraph">使用SnapCenter 支援功能來備份Exchange信箱時、您必須選擇資源類型、例如資料庫和資料庫可用度群組（DAG）。Snapshot 技術可用於建立資源所在磁碟區的線上唯讀複本。</block>
+  <block id="495685c9e0a33087f4a235b8fe0d5e1c" category="section-title">移除保護</block>
+  <block id="d315d492e2b430b33a4c4cd7b63eda74" category="paragraph">移除保護會刪除所有備份、並移除所有原則。在移除保護之前、您應確保備份不會掛載、且不會與備份相關聯。</block>
+  <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">選取備份、然後按一下 * 移除保護 * 。</block>
 </blocks>
