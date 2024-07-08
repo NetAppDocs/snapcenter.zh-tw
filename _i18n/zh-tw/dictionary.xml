@@ -3832,7 +3832,6 @@
   <block id="6347721d31864738b0e7a03f5553e69b" category="section-title">AIX主機需求</block>
   <block id="fed30036a3caffc826b4e66f434f67ea" category="paragraph">在安裝SnapCenter 適用於AIX的支援套件之前、您應確保主機符合要求。</block>
   <block id="cddfaa01c32e2362546c78364751248b" category="admonition">作爲適用於AIX的支援不支援並行Volume群組的《支援UNIX的程式集》外掛程式。SnapCenter SnapCenter</block>
-  <block id="895327977020e495debf0b375c7541d8" category="paragraph">AIX 6.1或更新版本</block>
   <block id="f805f99adc12df0c565005d33166c7bc" category="section-title">為非root使用者設定適用於AIX主機的Sudo權限</block>
   <block id="841774125775c871852a88e3823b3b8c" category="list-text">/home/_AIX_USER_/.SC_NetApp/snapcenter_AIX_host_plugin.bsx</block>
   <block id="c9d390513716fa3f8a5e273f77a61c88" category="list-text">登入您要在其中安裝SnapCenter 適用於AIX的整套件的AIX主機。</block>
@@ -9069,4 +9068,5 @@ Snapshot 作業。</block>
   <block id="495685c9e0a33087f4a235b8fe0d5e1c" category="section-title">移除保護</block>
   <block id="d315d492e2b430b33a4c4cd7b63eda74" category="paragraph">移除保護會刪除所有備份、並移除所有原則。在移除保護之前、您應確保備份不會掛載、且不會與備份相關聯。</block>
   <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">選取備份、然後按一下 * 移除保護 * 。</block>
+  <block id="ad569cc1cca820033bb20ffe1d5bc4a5" category="paragraph">部分7.1或更新版本AIX</block>
 </blocks>
