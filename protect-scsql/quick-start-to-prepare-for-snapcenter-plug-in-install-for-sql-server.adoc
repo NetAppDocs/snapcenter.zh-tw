@@ -44,15 +44,6 @@ summary: 提供準備安裝 SnapCenter Server 和 SnapCenter Plug-in for Microso
 
 
  a| 
-以容量為基礎的標準SnapCenter
- a| 
-需要搭配使用ONTAP Select Cloud Volumes ONTAP
-
-如果Cloud Volumes ONTAP 您是一個不知道或ONTAP Select 不知道的客戶、您必須根據SnapCenter 由支援的資料、購買每TB容量型授權。根據預設SnapCenter 、不含內建90天100 TB SnapCenter 的功能型試用授權。如需其他詳細資料、請聯絡銷售代表。
-
-
-
- a| 
 SnapMirror或SnapVault
  a| 
 ONTAP
@@ -99,7 +90,7 @@ NOTE: 我們建議您將SnapCenter 不需要的「不二用」授權新增至次
 CPU
  a| 
 * 伺服器主機：4核心
-* 外掛程式主機：1核心
+* 外掛主機： 4 核心
 
 
 
@@ -108,7 +99,7 @@ CPU
 RAM
  a| 
 * 伺服器主機：8 GB
-* 外掛程式主機：1 GB
+* 外掛程式主機：4 GB
 
 
 
@@ -118,8 +109,8 @@ RAM
  a| 
 伺服器主機：
 
-* 4 GB、適用於SnapCenter 伺服器軟體和記錄
-* 6 GB、用於SnapCenter 儲存庫
+* 7 GB、適用於SnapCenter 伺服器軟體和記錄
+* 8 GB、用於SnapCenter 儲存庫
 * 每個外掛程式主機：2 GB用於外掛程式安裝和記錄、只有在外掛程式安裝在專用主機上時才需要。
 
 
@@ -131,8 +122,8 @@ RAM
 在伺服器主機和外掛主機上需要SnapCenter ：
 
 * Microsoft .NET Framework 4.7.2或更新版本
-* Windows管理架構（WMF4.0或更新版本）
-* PowerShell 4.0或更新版本
+* asp 。 Net Core 託管套件（ 8.0.5 或更新版本）
+* PowerShell 7.4.2 或更新版本
 
 
 

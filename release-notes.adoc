@@ -13,4 +13,4 @@ summary: 提供SnapCenter 此版本的《支援服務器》和SnapCenter 《支�
 [role="lead"]
 提供SnapCenter 此版本的《支援服務器》和SnapCenter 《支援服務器的功能》外掛套件的重要資訊、包括修正問題、已知問題、注意事項及限制。
 
-如需詳細資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886893["SnapCenter Software 5.0 版本資訊"^]。
+如需詳細資訊，請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468["SnapCenter Software 6.0 版本資訊"^]。

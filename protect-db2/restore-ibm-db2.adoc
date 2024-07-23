@@ -1,0 +1,22 @@
+---
+permalink: protect-db2/restore-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: 還原與還原工作流程包括規劃、執行還原作業及監控作業。 
+---
+= 還原工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+還原與還原工作流程包括規劃、執行還原作業及監控作業。
+
+下列工作流程顯示您必須執行還原作業的順序：
+
+image::../media/db2_restore_workflow.png[還原工作流程]
+
+您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。此指令程式說明及Cmdlet參考資訊包含PowerShell Cmdlet的詳細資訊。SnapCenter
+
+https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。

@@ -1,0 +1,14 @@
+---
+permalink: protect-postgresql/auto-discovery-of-resources-on-linux-host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for PostgreSQL 
+summary: 資源是由 SnapCenter 管理的 Linux 主機上的 PostgreSQL 叢集和執行個體。安裝 PostgreSQL 外掛程式的 SnapCenter 外掛程式之後、系統會自動探索該 Linux 主機上的 PostgreSQL 叢集、並顯示在「資源」頁面中。 
+---
+= 自動探索Linux主機上的資源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+資源是由 SnapCenter 管理的 Linux 主機上的 PostgreSQL 叢集和執行個體。安裝 PostgreSQL 外掛程式的 SnapCenter 外掛程式之後、系統會自動探索該 Linux 主機上所有執行個體的 PostgreSQL 叢集、並顯示在「資源」頁面中。

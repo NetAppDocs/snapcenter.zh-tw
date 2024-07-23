@@ -1,20 +1,19 @@
 ---
 permalink: install/task_configure_two_way_ssl.html 
 sidebar: sidebar 
-keywords: security,two-way ssl,configure two-way ssl 
-summary: 您應該設定雙向 SSL 通訊、以確保 SnapCenter 伺服器與外掛程式之間的相互通訊安全無虞。   
+keywords: security,two-way ssl,configure two-way ssl, windows host 
+summary: 您應該設定雙向 SSL 通訊、以確保 Windows 主機上的 SnapCenter 伺服器與外掛程式之間的相互通訊安全無虞。 
 ---
-= 設定雙向 SSL 通訊
+= 在 Windows 主機上設定雙向 SSL 通訊
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您應該設定雙向 SSL 通訊、以確保 SnapCenter 伺服器與外掛程式之間的相互通訊安全無虞。
+您應該設定雙向 SSL 通訊、以確保 Windows 主機上的 SnapCenter 伺服器與外掛程式之間的相互通訊安全無虞。
 
-*開始之前*
-
+.開始之前
 * 您應該已產生 CA 憑證 CSR 檔案、其支援金鑰長度下限為 3072 。
 * CA 憑證應支援伺服器驗證和用戶端驗證。
 * 您應該擁有內含私密金鑰和指紋詳細資料的 CA 憑證。
@@ -28,8 +27,7 @@ summary: 您應該設定雙向 SSL 通訊、以確保 SnapCenter 伺服器與外
 
 
 
-*步驟*
-
+.步驟
 . 若要繫結連接埠、請在 SnapCenter 伺服器主機上針對 SnapCenter IIS 網頁伺服器連接埠 8146 （預設）執行下列步驟、並使用 PowerShell 命令再次為 SMCore 連接埠 8145 （預設）執行下列步驟。
 +
 .. 使用下列 PowerShell 命令移除現有的 SnapCenter 自我簽署憑證連接埠繫結。
@@ -119,12 +117,10 @@ summary: 您應該設定雙向 SSL 通訊、以確保 SnapCenter 伺服器與外
 
 您應該使用 PowerShell 命令設定 SnapCenter Windows 外掛程式、以進行雙向 SSL 通訊。
 
-*開始之前*
-
+.開始之前
 確保 CA 憑證指紋可用。
 
-*步驟*
-
+.步驟
 . 若要連結連接埠、請在 SMCore 連接埠 8145 的 Windows 外掛主機上執行下列動作（預設）。
 +
 .. 使用下列 PowerShell 命令移除現有的 SnapCenter 自我簽署憑證連接埠繫結。

@@ -1,0 +1,30 @@
+---
+permalink: protect-db2/types-of-restore-performed-for-auto-discovered-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: SnapCenter 支援 Volume 型 SnapRestore （ VBSR\ ）、單一檔案 SnapRestore 、以及自動探索的 IBM DB2 資料庫的連線與複製還原類型。 
+---
+= 自動探索到的 IBM DB2 還原作業類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於 IBM DB2 的 SnapCenter 外掛程式支援單一檔案 SnapRestore 、以及自動探索的 IBM DB2 資料庫的連線與複製還原類型。
+
+
+
+== 單一檔案SnapRestore 功能可在NFS環境中執行、適用於下列情況：
+
+* 如果只選取 * 完整資源 * 選項
+* 當所選的備份來自SnapMirror或SnapVault 不支援的次要位置、且已選取*完整資源*選項
+
+
+
+
+== 單一檔案SnapRestore 功能可在SAN環境中執行、適用於下列情況：
+
+* 如果只選取 * 完整資源 * 選項
+* 當從SnapMirror或SnapVault 不支援的位置選取備份、並選取「*完整資源*」選項時
+

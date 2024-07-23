@@ -1,0 +1,20 @@
+---
+permalink: protect-db2/type-of-backups-supported.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: 備份類型指定您要建立的備份類型。SnapCenter 支援 IBM DB2 資料庫的 Snapshot 複製型備份類型。 
+---
+= 支援的備份類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+備份類型指定您要建立的備份類型。SnapCenter 支援 IBM DB2 資料庫的 Snapshot 複製型備份類型。
+
+
+
+== Snapshot複製型備份
+
+Snapshot 複本型備份利用 NetApp 快照技術、建立 IBM DB2 資料庫所在之磁碟區的線上唯讀複本。

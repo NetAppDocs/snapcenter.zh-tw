@@ -1,0 +1,24 @@
+---
+permalink: protect-postgresql/prerequisites-for-using-snapcenter-plug-in-for-postgresql.html 
+sidebar: sidebar 
+keywords: Credentials,SnapCenter Plug-in for postgresql 
+summary: 在使用 SnapCenter Plug-in for PostgreSQL 之前、 SnapCenter 管理員必須先安裝及設定 SnapCenter 伺服器、然後執行必要的工作。 
+---
+= 使用 SnapCenter Plug-in for PostgreSQL 的先決條件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用 SnapCenter Plug-in for PostgreSQL 之前、 SnapCenter 管理員必須先安裝及設定 SnapCenter 伺服器、然後執行必要的工作。
+
+* 安裝及設定SnapCenter 靜態伺服器。
+* 登入SnapCenter 到伺服器。
+* 新增儲存系統連線並SnapCenter 建立認證資料（若適用）、以設定「靜態」環境。
+* 在 Linux 或 Windows 主機上安裝 Java 11 。
++
+您必須在主機的環境路徑變數中設定Java路徑。
+
+* 如果SnapVault 您想要備份複寫、請設定SnapMirror和SnapMirror。
+

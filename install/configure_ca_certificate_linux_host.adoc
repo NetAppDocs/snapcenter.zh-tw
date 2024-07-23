@@ -1,0 +1,73 @@
+---
+permalink: install/configure_ca_certificate_linux_host.html 
+sidebar: sidebar 
+keywords: SnapCenter, configure, CA certificate, linux, linux host 
+summary: 您應該在 Linux 主機上使用 SnapCenter 伺服器來設定 CA 憑證。 
+---
+= 設定 Linux 主機的 CA 憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 Linux 上安裝 SnapCenter 伺服器之後、安裝程式會建立自我簽署的憑證。如果您想要使用 CA 憑證、您應該為 Nginx 反向 Proxy 、稽核記錄和 SnapCenter 服務設定憑證。
+
+
+
+== 設定 Nginx 憑證
+
+.步驟
+. 瀏覽至 /etc/Nginc/conf.d_ ： `cd /etc/nginx/conf.d`
+. 使用 vi 或任何文字編輯器開啟 *snapcenter.conf* 。
+. 瀏覽至組態檔案中的伺服器區段。
+. 修改 _ssl_certificate 及 _ssl_certificate key_ 的路徑、以指向 CA 憑證。
+. 儲存並關閉檔案。
+. 重新載入 Nginx ： `$nginx -s reload`
+
+
+
+
+== 設定稽核記錄憑證
+
+.步驟
+. 使用 vi 或任何文字編輯器開啟 _install_DIR/NetApp/snapcenter/SnapManagerWeb/SnapManager.Web.ui.dll.config_ 。
++
+_install_DIR_ 的預設值為： __/opt_ 。
+
+. 編輯 *AUDILOG_CTIFOY_path* 和 *AUDILOG_CINATE_PASSI* 金鑰、分別加入 CA 憑證路徑和密碼。
++
+稽核記錄憑證僅支援 __.pfx._ 格式。
+
+. 儲存並關閉檔案。
+. 重新啟動 *snapmanagerweb* 服務： `$ systemctl restart snapmanagerweb`
+
+
+
+
+== 設定 SnapCenter 服務憑證
+
+.步驟
+. 使用 vi 或任何文字編輯器開啟下列組態檔案。
++
+** _INSTALL_DIR/NetApp/snapcenter/SnapManagerWeb/SnapManager
+** _INSTALL_DIR/NetApp/snapcenter/SMCore/SMCoreServiceHost.dll.config_
+** _INSTALL_DIR/NetApp/snapcenter/Scheduler/Scheduler.API.dll.config_
++
+_install_DIR_ 的預設值為： __/opt_ 。
+
+
+
+. 編輯 *service_certificate 路徑 * 和 *service_certificate 密碼 * 金鑰、分別包含 CA 憑證路徑和密碼。
++
+SnapCenter 服務憑證僅支援 __.pfy_format 。
+
+. 儲存並關閉檔案。
+. 重新啟動所有服務。
++
+** `$ systemctl restart snapmanagerweb`
+** `$ systemctl restart smcore`
+** `$ systemctl restart scheduler`
+
+
+

@@ -63,7 +63,7 @@ Web伺服器
 +
 ** .NET擴充性4.5
 ** 應用程式初始化
-** ASP.NET 4.7.2
+** asp 。 Net Core 託管套件（ 8.0.5 或更新版本）
 ** 伺服器端隨附
 ** WebSocket傳輸協定
 
@@ -87,15 +87,14 @@ Web伺服器
 
 
  a| 
-+.NET Framework 4.7.2功能+
++.NET Framework 8.0.5 Features+
  a| 
-* NET Framework 4.7.2
-* ASP.NET 4.7.2
+* NET Framework 8.0.5
+* ASP.NET 8.0.5
 * Windows Communication Foundation（WCF）HTTP Activation45
 +
 ** TCP啟動
 ** HTTP啟動
-** 訊息佇列（MSMQ）啟動
 
 
 
@@ -112,7 +111,7 @@ Web伺服器
 
 NOTE: 確保沒有其他應用程式使用SnapCenter 可用來建立及管理的msmqmq.服務。
 
-* msmqmq
+* RabbitMQ
 
 
 

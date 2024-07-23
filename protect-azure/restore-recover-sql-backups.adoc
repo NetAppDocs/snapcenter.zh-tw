@@ -13,6 +13,13 @@ summary: 您可以使用SnapCenter 效益管理功能、從一或多個備份中
 [role="lead"]
 您可以使用SnapCenter 支援功能來還原備份的SQL Server資料庫。資料庫還原是一個多階段程序、可將所有資料和記錄頁面從指定的 SQL Server 備份複製到指定的資料庫。
 
+.關於這項工作
+您應該確定還原的目標執行個體是由屬於 SMB ADActive Directory 網域的 Active Directory 使用者所設定、並具有適當設定檔案權限的權限。您應該在執行個體層級的 SnapCenter 中設定認證。
+
+SMB 組態不支援目標執行個體的 SQL 驗證。目標執行個體應在 SnapCenter 中設定、 Active Directory 使用者必須擁有必要的權限。
+
+如果 SnapCenter 外掛程式服務帳戶不是 Active Directory 使用者、則在執行還原至替代主機時、需要對來源磁碟區擁有完整控制權的使用者、才能模擬並執行所需的作業。
+
 .步驟
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
 . 在「資源」頁面中、從「檢視」清單中選取「 * 資料庫 * 」或「 * 資源群組 * 」。

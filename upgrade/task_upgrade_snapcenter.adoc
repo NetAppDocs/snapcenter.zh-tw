@@ -1,10 +1,10 @@
 ---
 permalink: upgrade/task_upgrade_snapcenter.html 
 sidebar: sidebar 
-keywords: upgrade, upgrade snapcenter server 
+keywords: upgrade, upgrade snapcenter server, windows 
 summary: 您可以使用SnapCenter 「伺服器安裝程式執行檔」來升級SnapCenter 「伺服器」。 
 ---
-= 升級SnapCenter 此伺服器
+= 升級 Windows 主機上的 SnapCenter 伺服器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -77,7 +77,7 @@ NOTE: 安裝舊版的還原伺服器時、將繼續使用現有的MySQL Server�
 
 
 .完成後
-* 如果外掛程式是使用Sudo使用者安裝、您應該複製_C：\ProgramData \NetApp\SnapCenter\Package Repository\Oracle_checksum．txt_提供的shap224金鑰、以更新_/etc/udoers_檔案。
+* 如果外掛程式是使用 Sudo 使用者安裝、您應該複製 _C ： \ProgramData\NetApp\SnapCenter\Package 儲存庫 \SC_UNIT_plugins_checksum ． txt_ 上的 sha224 金鑰、以更新 /etc/sudoers_ 檔案。
 * 您應該在主機上重新探索資源。
 +
 如果主機狀態顯示為「已停止」、您可以稍候一段時間、然後執行全新探索。您也可以將*主機重新更新間隔*參數（預設值為3、600秒）的值變更為超過10分鐘的任何值。

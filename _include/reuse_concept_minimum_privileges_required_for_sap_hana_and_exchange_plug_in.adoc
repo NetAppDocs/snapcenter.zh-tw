@@ -64,6 +64,7 @@
 ** 建立Volume Snapshot快照
 ** Volume Snapshot刪除
 ** Volume Snapshot修改
+** Volume Snapshot modify-SnapLock過期時間
 ** Volume Snapshot重新命名
 ** Volume Snapshot還原
 ** Volume Snapshot還原檔

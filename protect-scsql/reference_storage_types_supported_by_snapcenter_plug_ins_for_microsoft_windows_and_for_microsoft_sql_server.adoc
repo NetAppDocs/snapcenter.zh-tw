@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft SQL Server 
 summary: 支援實體機器和虛擬機器上的各種儲存類型。SnapCenter在安裝主機套件之前、您必須先確認儲存類型是否支援。 
 ---
-= 適用於Microsoft Windows和Microsoft SQL Server的解決方案SnapCenter 支援的儲存類型
+= SnapCenter Plug-in for Microsoft SQL Server 支援的儲存類型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -93,6 +93,16 @@ VMware VM
 僅支援資源配置。
 
 您無法使用SnapCenter 支援功能來備份任何使用SMB傳輸協定的資料或共用。
+
+
+
+ a| 
+VMware VM
+ a| 
+NFS 和 SAN 上的 VVOL 資料存放區
+ a| 
+VMware vSphere適用的VMware工具ONTAP
+ a| 
 
 
 

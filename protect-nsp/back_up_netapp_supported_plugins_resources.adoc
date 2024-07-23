@@ -1,0 +1,20 @@
+---
+permalink: protect-nsp/back_up_netapp_supported_plugins_resources.html 
+sidebar: sidebar 
+keywords: backup 
+summary: 備份工作流程包括規劃、識別備份資源、管理備份原則、建立資源群組及附加原則、建立備份及監控作業。 
+---
+= 備份 NetApp 支援的外掛程式資源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+備份工作流程包括規劃、識別備份資源、管理備份原則、建立資源群組及附加原則、建立備份及監控作業。
+
+下列工作流程顯示您必須執行備份作業的順序：
+
+image::../media/scc_backup_workflow.png[備份工作流程]
+
+您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需 PowerShell Cmdlet 的詳細資訊 , 請使用 SnapCenter Cmdlet 說明或參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"]

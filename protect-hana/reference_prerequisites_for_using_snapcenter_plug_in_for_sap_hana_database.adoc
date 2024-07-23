@@ -16,7 +16,7 @@ summary: 在使用SnapCenter 適用於SAP HANA資料庫的靜態外掛程式之�
 * 安裝及設定SnapCenter 靜態伺服器。
 * 登入SnapCenter 到伺服器。
 * 新增儲存系統連線並SnapCenter 建立認證資料（若適用）、以設定「靜態」環境。
-* 在Linux或Windows主機上安裝Java 1.7或Java 1.8。
+* 在 Linux 或 Windows 主機上安裝 Java 11 。
 +
 您必須在主機的環境路徑變數中設定Java路徑。
 

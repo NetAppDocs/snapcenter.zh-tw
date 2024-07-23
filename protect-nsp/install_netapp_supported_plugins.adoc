@@ -1,0 +1,18 @@
+---
+permalink: protect-nsp/install_netapp_supported_plugins.html 
+sidebar: sidebar 
+keywords: install workflow, NetApp supported plug-in 
+summary: 如果您想要保護 NetApp 支援的外掛程式資源、請安裝並設定 SnapCenter NetApp 支援的外掛程式。 
+---
+= SnapCenter NetApp 支援外掛程式的安裝工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您想要保護 NetApp 支援的外掛程式資源、請安裝並設定 SnapCenter NetApp 支援的外掛程式。
+
+image::../media/scc_install_configure_workflow.png[SnapCenter NetApp 支援外掛程式的工作流程]
+
+link:develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"]

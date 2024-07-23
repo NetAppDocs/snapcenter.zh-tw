@@ -14,13 +14,19 @@ summary: 您可以使用SnapCenter 「更新主機」頁面來新增Windows主�
 您可以使用SnapCenter 「更新主機」頁面來新增Windows主機。適用於Microsoft Windows的支援功能外掛程式會自動安裝在指定的主機上。SnapCenter這是安裝外掛程式的建議方法。您可以為個別主機或叢集新增主機並安裝外掛程式。
 
 .開始之前
+* 如果 SnapCenter 伺服器主機的作業系統為 Windows 2019 、而外掛主機的作業系統為 Windows 2022 、則應執行下列步驟：
++
+** 升級至 Windows Server 2019 （ OS Build 17763.5936 ）或更新版本
+** 升級至 Windows Server 2022 （ OS Build 20348.2402 ）或更新版本
+
+
 * 您必須是指派給具有外掛安裝和解除安裝權限之角色的使用者、例如SnapCenter 「支援管理員」角色。
 * 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.
 * 應將此使用者新增至Windows Server的「登入即服務」角色。SnapCenter
 * 您應確保訊息佇列服務處於執行中狀態。
 * 如果您使用群組託管服務帳戶（GMSA）、則應該使用管理權限來設定GMSA。
 +
-link:task_configure_gMSA_on_windows_server_2012_or_later.html["在Windows Server 2012或更新版本上為Windows檔案系統設定群組託管服務帳戶"]
+link:task_configure_gMSA_on_windows_server_2012_or_later.html["在Windows Server 2016或更新版本上為Windows檔案系統設定群組託管服務帳戶"]
 
 
 

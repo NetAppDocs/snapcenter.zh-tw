@@ -17,6 +17,9 @@ summary: 您可以使用SnapCenter 「SingsAdd Host」頁面來新增主機、�
 
 您可以為個別主機或叢集新增主機並安裝外掛程式套件。如果您要在叢集（Oracle RAC）上安裝外掛程式、則外掛程式會安裝在叢集的所有節點上。對於Oracle RAC One Node、您應該在主動和被動節點上安裝外掛程式。
 
+
+NOTE: 在 Oracle RAC 上安裝外掛程式時、僅支援密碼型驗證。不支援 SSH 金鑰型驗證。
+
 您應該被指派具有外掛程式安裝和解除安裝權限的角色、例如SnapCenter 「管理員角色」。
 
 

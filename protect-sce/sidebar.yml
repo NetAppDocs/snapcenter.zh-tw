@@ -26,7 +26,7 @@ entries:
     url: "/protect-sce/reference_prerequisites_to_add_hosts_and_install_snapcenter_plug_in_for_microsoft_exchange_server.html"
   - title: 設定SnapCenter 適用於Windows的驗證外掛程式認證
     url: "/protect-sce/task_set_up_credentials_for_the_snapcenter_plug_in_for_windows_sce.html"
-  - title: 在Windows Server 2012或更新版本上設定GMSA
+  - title: 在Windows Server 2016或更新版本上設定GMSA
     url: "/protect-sce/task_configure_gMSA_on_windows_server_2012_or_later.html"
   - title: 新增主機並安裝Exchange外掛程式
     url: "/protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html"

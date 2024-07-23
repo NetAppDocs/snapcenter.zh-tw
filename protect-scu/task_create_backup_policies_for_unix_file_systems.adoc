@@ -16,6 +16,7 @@ summary: 為您要備份的 Unix 檔案系統建立備份原則。
 .開始之前
 * 您必須完成安裝 SnapCenter 、新增主機、探索檔案系統及建立儲存系統連線等工作、以準備好保護資料。
 * 如果您要將快照複製到鏡像或資料保險箱次要儲存設備、 SnapCenter 管理員必須將來源和目的地磁碟區的 SVM 指派給您。
+* 查看 SnapMirror 主動同步的特定先決條件和限制。如需相關資訊、請參閱 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror 主動同步的物件限制"]。
 
 
 .步驟
@@ -68,6 +69,8 @@ NOTE: 只有在您選擇歸檔記錄檔做為備份的一部分時、才能保�
 建立本機Snapshot複本之後、請更新SnapMirror
  a| 
 選取此欄位可在另一個磁碟區（SnapMirror複寫）上建立備份集的鏡射複本。
+
+應啟用此選項以進行 SnapMirror 主動同步。
 
 
 

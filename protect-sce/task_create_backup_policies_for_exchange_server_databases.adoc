@@ -23,8 +23,9 @@ summary: 您可以先為Exchange資源或資源群組建立備份原則、再使
 * 如果您要將快照複製到鏡像或資料保險箱、 SnapCenter 管理員必須將來源磁碟區和目的地磁碟區的儲存虛擬機器（ SVM ）指派給您。
 * 如果您想以預先編寫和後指令碼執行PowerShell指令碼、您應該在「web.config」檔案中將「usePowerShellProcessforScripts」參數的值設為true。
 +
-預設值為假
+預設值為假。
 
+* 查看 SnapMirror 主動同步的特定先決條件和限制。如需相關資訊、請參閱 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror 主動同步的物件限制"]。
 
 
 .關於這項工作
@@ -250,8 +251,7 @@ SnapLock 保留期應少於 100 年。
 
 |===
 +
-
-NOTE: 如果您的資料庫只有記錄備份、而且主機上的DAG組態沒有完整備份、則記錄備份會以下列方式保留：
+如果您的資料庫只有記錄備份、而且主機上的DAG組態沒有完整備份、則記錄備份會以下列方式保留：
 
 +
 *** 根據預設、SnapCenter 在DAG中的所有其他主機上、均會尋找此資料庫最舊的完整備份、並刪除此主機上在完整備份之前所進行的所有記錄備份。
@@ -273,14 +273,19 @@ NOTE: 如果您的資料庫只有記錄備份、而且主機上的DAG組態沒�
 
  a| 
 在建立本機 Snapshot 之後更新 SnapMirror
+ a| 
+選取此選項可將備份集的鏡射複本保留在另一個磁碟區（SnapMirror）上。
 
 在次要複寫期間、 SnapLock 到期時間會載入主要 SnapLock 到期時間。
+
+應啟用此選項以進行 SnapMirror 主動同步。
+
+
+IMPORTANT: 如果針對 Exchange ONTAP 磁碟區設定 SnapMirror 主動同步、則無法使用純主要原則。SnapCenter 不允許這樣做。您應該啟用「鏡射」選項。
 
 按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。
 
 請參閱 link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["在「拓撲」頁面中檢視Exchange備份"]。
- a| 
-選取此選項可將備份集的鏡射複本保留在另一個磁碟區（SnapMirror）上。
 
 
 

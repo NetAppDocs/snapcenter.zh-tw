@@ -1,0 +1,16 @@
+---
+permalink: protect-db2/how-snapcenter-plug-in-for-ibm-db2-uses-consistency-group-snapshot-copies.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: 您可以使用外掛程式為資源群組建立一致性群組快照。一致性群組是一個容器、可容納多個磁碟區、以便您將其管理為單一實體。一致性群組是多個磁碟區的同步快照、可為一組磁碟區提供一致的複本。 
+---
+= SnapCenter Plug-in for IBM DB2 如何使用一致性群組快照
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用外掛程式為資源群組建立一致性群組快照。一致性群組是一個容器、可容納多個磁碟區、以便您將其管理為單一實體。一致性群組是多個磁碟區的同步快照、可為一組磁碟區提供一致的複本。
+
+您也可以指定儲存控制器一致地群組快照的等待時間。可用的等待時間選項包括*緊急*、*中*和*休閒*。您也可以在一致的群組快照作業期間、啟用或停用 Write Anywhere File Layout （ WAFL ）同步。WAFL 同步可改善一致性群組快照的效能。

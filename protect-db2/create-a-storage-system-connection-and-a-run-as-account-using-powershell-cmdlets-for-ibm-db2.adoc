@@ -1,0 +1,95 @@
+---
+permalink: protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: 在使用 PowerShell Cmdlet 備份、還原或複製 IBM DB2 資料庫之前、您必須先建立儲存虛擬機器（ SVM ）連線和認證。 
+---
+= 使用適用於 IBM DB2 的 PowerShell Cmdlet 建立儲存系統連線和認證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在使用 PowerShell Cmdlet 備份、還原或複製 IBM DB2 資料庫之前、您必須先建立儲存虛擬機器（ SVM ）連線和認證。
+
+.開始之前
+* 您應該已經準備好PowerShell環境來執行PowerShell Cmdlet。
+* 您應該在「基礎架構管理員」角色中擁有必要的權限、才能建立儲存連線。
+* 您應確保外掛程式安裝不進行中。
++
+在新增儲存系統連線時、主機外掛程式安裝不得進行、因為主機快取可能不會更新、而且SnapCenter 資料庫狀態可能會顯示在「無法備份」或「不在NetApp儲存設備上」。
+
+* 儲存系統名稱應該是唯一的。
++
+不支援在不同叢集上使用相同名稱的多個儲存系統。SnapCenter每個SnapCenter 受支援的儲存系統都應有唯一的名稱和唯一的資料LIF IP位址。
+
+
+
+.步驟
+. 按一下 * SnapCenterPS* 以啟動 PowerShell Core 。
+. 使用Add-SmStorageConnection Cmdlet建立新的儲存系統連線。
++
+[listing]
+----
+PS C:\> Add-SmStorageConnection -StorageType DataOntap -Type DataOntap -OntapStorage ‘scsnfssvm’ -Protocol Https -Timeout 60
+----
+. 使用Add-SmCredential Cmdlet建立新認證。
++
+本範例說明如何使用Windows認證建立名為FinanceAdmin的新認證：
+
++
+[listing]
+----
+PS C:\> Add-SmCredential -Name 'FinanceAdmin' -Type Linux -AuthenticationType PasswordBased -Credential db2hostuser -EnableSudoPrevileges:$true
+----
+. 將 IBM DB2 通訊主機新增至 SnapCenter 伺服器。
++
+對於Linux：
+
++
+[listing]
+----
+PS C:\> Add-SmHost -HostType Linux -HostName '10.232.204.61' -CredentialName 'defaultcreds'
+----
++
+Windows：
+
++
+[listing]
+----
+PS C:\> Add-SmHost -HostType Windows -HostName '10.232.204.61' -CredentialName 'defaultcreds'
+----
+. 在主機上安裝套件和 SnapCenter Plug-in for IBM DB2 。
++
+對於Linux：
+
++
+[listing]
+----
+PS C:\> Install-SmHostPackage -HostNames '10.232.204.61' -PluginCodes DB2
+----
++
+Windows：
+
++
+[listing]
+----
+PS C:\> Install-SmHostPackage -HostNames '10.232.204.61' -PluginCodes DB2,SCW
+----
+. 設定 SQLLIB 的路徑。
++
+對於 Windows 、 DB2 外掛程式會使用 SQLLIB 資料夾的預設路徑：「 C:\Program Files\IBM\SQLLIB\bin 」
+
++
+如果您要覆寫預設路徑、請使用下列命令。
+
++
+[listing]
+----
+PS C:\> Set-SmConfigSettings -Plugin -HostName '10.232.204.61' -PluginCode DB2 -configSettings @{"DB2_SQLLIB_CMD"="<custom_path>\IBM\SQLLIB\BIN"}
+
+----
+
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。

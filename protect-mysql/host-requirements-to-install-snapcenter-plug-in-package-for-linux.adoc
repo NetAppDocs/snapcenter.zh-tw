@@ -1,0 +1,57 @@
+---
+permalink: protect-mysql/host-requirements-to-install-snapcenter-plug-in-package-for-linux.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 在安裝SnapCenter 適用於Linux的支援功能套件之前、您應該先熟悉一些基本的主機系統空間和規模需求。 
+---
+= 安裝SnapCenter 適用於Linux的支援功能外掛套件的主機需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安裝SnapCenter 適用於Linux的支援功能套件之前、您應該先熟悉一些基本的主機系統空間和規模需求。
+
+|===
+| 項目 | 需求 
+
+
+ a| 
+作業系統
+ a| 
+* Red Hat Enterprise Linux
+* SUSE Linux Enterprise Server（SLES）
+
+
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"]。
+
+
+
+ a| 
+主機上安裝的不需使用的RAM SnapCenter
+ a| 
+1 GB
+
+
+
+ a| 
+主機上安裝及記錄SnapCenter 插件的最低空間
+ a| 
+2 GB
+
+
+NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使用量。所需的記錄空間會因受保護實體數量和資料保護作業頻率而異。如果沒有足夠的磁碟空間、將不會針對最近執行的作業建立記錄。
+
+
+
+ a| 
+必要的軟體套件
+ a| 
+Java 11 Oracle Java 和 OpenJDK
+
+如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。
+
+如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=112389;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"]。
+
+|===

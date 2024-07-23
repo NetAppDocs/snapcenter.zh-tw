@@ -1,0 +1,23 @@
+---
+permalink: protect-mysql/define-a-restore-and-recovery-strategy-for-mysql-resources.html 
+sidebar: sidebar 
+keywords: restore and recovery strategy, MySQL resources, snapcenter 
+summary: 您必須先定義策略、才能還原及還原資料庫、以便順利執行還原與還原作業。 
+---
+= 定義 MySQL 資源的還原與還原策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須先定義策略、才能還原及還原資料庫、以便順利執行還原與還原作業。
+
+
+NOTE: 僅支援手動復原資料庫。
+
+.步驟
+. 決定手動新增 MySQL 資源所支援的還原策略
+. 判斷自動探索的 MySQL 資料庫所支援的還原策略
+. 決定您要執行的恢復作業類型。
+

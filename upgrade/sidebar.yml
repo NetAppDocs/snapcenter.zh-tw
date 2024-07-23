@@ -6,7 +6,9 @@ entries:
   url: "/upgrade/task_configure_snapcenter_to_check_for_available_updates.html"
 - title: 升級工作流程
   url: "/upgrade/upgrade_workflow.html"
-- title: 升級SnapCenter 此伺服器
+- title: 升級 Windows 主機上的 SnapCenter 伺服器
   url: "/upgrade/task_upgrade_snapcenter.html"
+- title: 升級 Linux 主機上的 SnapCenter 伺服器
+  url: "/upgrade/upgrade_snapcenter_server_linux.html"
 - title: 升級外掛程式套件
   url: "/upgrade/task_upgrade_your_plug_in_packages.html"

@@ -1,0 +1,16 @@
+---
+permalink: protect-db2/install-snapcenter-plug-in-for-ibm-db2.html 
+sidebar: sidebar 
+keywords: installing 
+summary: 如果您想保護 IBM DB2 、則應該安裝及設定 IBM DB2 的 SnapCenter 外掛程式。 
+---
+= 適用於 IBM DB2 的 SnapCenter 外掛程式安裝工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您想保護 IBM DB2 資料庫、則應該安裝及設定 IBM DB2 的 SnapCenter 外掛程式。
+
+image::../media/sap_hana_install_configure_workflow.gif[SAP HANA安裝設定工作流程]

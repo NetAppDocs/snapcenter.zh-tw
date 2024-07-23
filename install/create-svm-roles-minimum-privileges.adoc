@@ -42,6 +42,7 @@ NOTE: 您應該針對每個權限重複此命令。
 * `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "snapmirror list-destinations" -access all`
 * `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "event generate-autosupport-log" -access all`
 * 「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「jobhistory show」-access all」
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "job show" -access all`
 * 「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「jobstop」-access all」
 * 「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱"LUN"-access all"
 * 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱"LUN cree"-access all"
@@ -94,10 +95,12 @@ NOTE: 您應該針對每個權限重複此命令。
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume snapshot create」-access all」
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume snapshot delete」-access all」
 * 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「volume snapshot modify」-access all」
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "volume snapshot modify-snaplock-expiry-time" -access all`
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume snapshot rame」-access all」
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「Volume snapshot還原」-access all」
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「Volume snapshot還原檔案」-access all」
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume snapshot show」-access all」
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume snapshot show-delta" -access all`
 * 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「volume unmount」-access all」
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「vserver CIFS共用create」-access all」
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「vserver CIFS共用刪除」-access all」
@@ -114,4 +117,15 @@ NOTE: 您應該針對每個權限重複此命令。
 * 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「vserver iSCSI」-access all」
 * 「安全性登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「Volume Clone分割狀態」-access all」
 * `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume managed-feature" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem map" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem create" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem delete" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem modify" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem host" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem controller" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem show" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme namespace create" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme namespace delete" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme namespace modify" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme namespace show" -access all`
 

@@ -1,0 +1,23 @@
+---
+permalink: protect-mysql/what-you-can-do-using-the-snapcenter-plug-in-for-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for mysql 
+summary: 在環境中安裝適用於 MySQL 的外掛程式時、您可以使用 SnapCenter 來備份、還原及複製 MySQL 及其資源。您也可以執行支援這些作業的工作。 
+---
+= 如何使用適用於 MySQL 的 SnapCenter 外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在環境中安裝適用於 MySQL 資料庫的外掛程式時、您可以使用 SnapCenter 來備份、還原及複製 MySQL 執行個體。您也可以執行支援這些作業的工作。
+
+* 新增執行個體。
+* 建立備份。
+* 從備份還原。
+* 複製備份：
+* 排程備份作業。
+* 監控備份、還原及複製作業。
+* 檢視備份、還原及複製作業的報告。
+

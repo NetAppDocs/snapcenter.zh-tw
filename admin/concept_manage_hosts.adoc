@@ -14,11 +14,17 @@ summary: 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套
 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套件、新增驗證伺服器、移除主機、移轉備份工作、以及更新主機以升級外掛程式套件或新增外掛程式套件。視所使用的外掛程式而定、您也可以配置磁碟、管理SMB共用、管理啟動器群組（igroup）、管理iSCSI工作階段、以及移轉資料。
 
 |===
-| 您可以執行這些工作... | 適用於Microsoft Exchange Server | 適用於Microsoft SQL Server | 適用於Microsoft Windows | 適用於Oracle資料庫 | 適用於SAP HANA資料庫 | 適用於自訂外掛程式 
+| 您可以執行這些工作... | 適用於Microsoft Exchange Server | 適用於Microsoft SQL Server | 適用於Microsoft Windows | 適用於Oracle資料庫 | 適用於SAP HANA資料庫 | 適用於 NetApp 支援的外掛程式 | 適用於 DB2 | 適用於 PostgreSQL | 適用於 MySQL 
 
 
  a| 
 新增主機並安裝外掛程式套件
+ a| 
+是的
+ a| 
+是的
+ a| 
+是的
  a| 
 是的
  a| 
@@ -48,11 +54,23 @@ summary: 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套
 否
  a| 
 否
+ a| 
+否
+ a| 
+否
+ a| 
+否
 
 
 
  a| 
 暫停排程並將主機置於維護模式
+ a| 
+是的
+ a| 
+是的
+ a| 
+是的
  a| 
 是的
  a| 
@@ -82,11 +100,23 @@ summary: 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套
 是的
  a| 
 是的
+ a| 
+是的
+ a| 
+是的
+ a| 
+是的
 
 
 
  a| 
 移除SnapCenter 主機的不受支持
+ a| 
+是的
+ a| 
+是的
+ a| 
+是的
  a| 
 是的
  a| 
@@ -116,6 +146,12 @@ summary: 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套
 是的
  a| 
 是的
+ a| 
+是的
+ a| 
+是的
+ a| 
+是的
 
 
 
@@ -127,6 +163,12 @@ summary: 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套
 否
  a| 
 是的
+ a| 
+否
+ a| 
+否
+ a| 
+否
  a| 
 否
  a| 
@@ -150,6 +192,12 @@ summary: 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套
 否
  a| 
 否
+ a| 
+否
+ a| 
+否
+ a| 
+否
 
 
 
@@ -161,6 +209,12 @@ summary: 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套
 否
  a| 
 是的
+ a| 
+否
+ a| 
+否
+ a| 
+否
  a| 
 否
  a| 
@@ -183,6 +237,13 @@ summary: 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套
  a| 
 否
  a| 
+否
+ a| 
+否
+ a| 
+否
+ a| 
+否
 
 |===
 

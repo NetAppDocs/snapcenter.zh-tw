@@ -1,0 +1,53 @@
+---
+permalink: protect-mysql/install-the-snapcenter-plug-in-for-mysql-on-linux-hosts-using-the-command-line-interface.html 
+sidebar: sidebar 
+keywords: install, SnapCenter Plug-in for MySQL 
+summary: 您應該使用 SnapCenter 使用者介面（ UI ）來安裝適用於 MySQL 資料庫的 SnapCenter 外掛程式。如果您的環境不允許從 SnapCenter UI 遠端安裝外掛程式、您可以使用命令列介面（ CLI1 ）、以主控台模式或無訊息模式安裝適用於 MySQL 資料庫的外掛程式。 
+---
+= 使用命令列介面、在 Linux 主機上安裝適用於 MySQL 的 SnapCenter 外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該使用 SnapCenter 使用者介面（ UI ）來安裝適用於 MySQL 資料庫的 SnapCenter 外掛程式。如果您的環境不允許從 SnapCenter UI 遠端安裝外掛程式、您可以使用命令列介面（ CLI ）、在主控台模式或無訊息模式下安裝適用於 MySQL 資料庫的外掛程式。
+
+.開始之前
+* 您應該在必須保護 MySQL 執行個體的每個 Linux 主機上安裝適用於 MySQL 資料庫的外掛程式。
+* 您要在其上安裝 SnapCenter Plug-in for MySQL 資料庫的 Linux 主機必須符合相關軟體、資料庫和作業系統的需求。
++
+互通性對照表工具IMT （Interoperability Matrix Tool、簡稱「互通性對照表工具」）包含有關支援組態的最新資訊。
+
++
+https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
+
+* 適用於 MySQL 資料庫的 SnapCenter 外掛程式是適用於 Linux 的 SnapCenter 外掛程式套件的一部分。在安裝SnapCenter 適用於Linux的支援功能套件之前、您應該已經在SnapCenter Windows主機上安裝了支援功能。
+
+
+.步驟
+. 將 SnapCenter Plug-ins Package for Linux 安裝檔案（ snapcenter_linux_host_plugin.bin ）從 C ： \ProgramData\NetApp\SnapCenter\Package 儲存庫複製到您要安裝 MySQL 外掛程式的主機。
++
+您可以從SnapCenter 安裝了該伺服器的主機存取此路徑。
+
+. 在命令提示字元中、瀏覽至您複製安裝檔案的目錄。
+. 安裝外掛程式：「path_to_installation_bin_file/snapcenter_linux_host_plugin.bin -i silent -DPORT=port_number_for_host -dserver_ip=server_name_or ip_address -dserver_https_port=port_number_for_server'
++
+** -DPORT指定SMCore HTTPS通訊連接埠。
+** -dserver_IP會指定SnapCenter 「伺服器IP位址」。
+** -dserver_https_port指定SnapCenter 了「伺服器HTTPS連接埠」。
+** -Duser_install_DIR會指定您要安裝SnapCenter 適用於Linux的《SKED Plug-ins套件》的目錄。
+** DINSTALL_LOD_NAME指定記錄檔的名稱。
+
+
++
+[listing]
+----
+/tmp/sc-plugin-installer/snapcenter_linux_host_plugin.bin -i silent  -DPORT=8145 -DSERVER_IP=scserver.domain.com -DSERVER_HTTPS_PORT=8146 -DUSER_INSTALL_DIR=/opt -DINSTALL_LOG_NAME=SnapCenter_Linux_Host_Plugin_Install_2.log -DCHOSEN_FEATURE_LIST=CUSTOM
+----
+. 編輯 <installation directory> /NetApp/snapcenter/SCC/etc/SC_SMS_Services.properties 檔案、然後新增 plugin_enabled = mySQL:3.0 參數。
+. 使用Add-Smhost Cmdlet和必要參數、將主機新增SnapCenter 至SetcServer。
++
+執行_Get-Help命令名稱_可取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。
+
+

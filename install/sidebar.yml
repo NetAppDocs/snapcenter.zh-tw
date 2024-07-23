@@ -20,6 +20,8 @@ entries:
     url: "/install/reference_connection_and_port_requirements.html"
   - title: 不需要授權SnapCenter
     url: "/install/concept_snapcenter_licenses.html"
+  - title: 註冊以存取 SnapCenter 軟體
+    url: "/install/register_enable_software_access.html"
   - title: 認證方法
     url: "/install/concept_authentication_methods_for_your_credentials.html"
   - title: 儲存虛擬機器連線與認證
@@ -32,11 +34,13 @@ entries:
       url: "/install/enable_multifactor_authentication_using_RestAPI_PowerShell_SCCLI.html"
     - title: 使用 PowerShell 、 sccli 和 REST API 在 SnapCenter 伺服器中設定 MFA
       url: "/install/configure_mfa_using_powershell_sccli_restapi.html"
-- title: 安裝SnapCenter 此伺服器
+- title: 在 Windows 主機上安裝 SnapCenter 伺服器
   url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
+- title: 在 Linux 主機上安裝 SnapCenter 伺服器
+  url: "/install/install_snapcenter_server_linux.html"
 - title: 登入SnapCenter 到
   url: "/install/task_log_in_to_snapcenter.html"
-- title: 設定CA憑證
+- title: 設定 Windows 主機的 CA 憑證
   entries:
   - title: 產生CA認證CSR檔案
     url: "/install/reference_generate_CA_certificate_CSR_file.html"
@@ -50,12 +54,20 @@ entries:
     url: "/install/task_configure_CA_certificate_with_snapcenter_site.html"
   - title: 啟用SnapCenter 適用於伺服器的CA憑證
     url: "/install/task_enable_ca_certificates_for_snapcenter.html"
-- title: 設定並啟用雙向 SSL 通訊
+- title: 設定 Linux 主機的 CA 憑證
+  url: "/install/configure_ca_certificate_linux_host.html"
+- title: 在 Windows 主機上設定並啟用雙向 SSL 通訊
   entries:
-  - title: 設定雙向 SSL 通訊
+  - title: 在 Windows 主機上設定雙向 SSL 通訊
     url: "/install/task_configure_two_way_ssl.html"
-  - title: 啟用雙向 SSL 通訊
+  - title: 在 Windows 主機上啟用雙向 SSL 通訊
     url: "/install/task_enable_two_way_ssl.html"
+- title: 在 Linux 主機上設定並啟用雙向 SSL 通訊
+  entries:
+  - title: 在 Linux 主機上設定雙向 SSL 通訊
+    url: "/install/configure_two_way_ssl_linux.html"
+  - title: 在 Linux 主機上啟用 SSL 通訊
+    url: "/install/enable_two_way_ssl_linux.html"
 - title: 設定憑證型驗證
   entries:
   - title: 從 SnapCenter 伺服器匯出憑證授權單位（ CA ）憑證
@@ -108,8 +120,6 @@ entries:
   url: "/install/task_add_storage_systems.html"
 - title: 新增SnapCenter 以控制器為基礎的功能
   url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
-- title: 新增SnapCenter 以功能為基礎的「功能型標準」授權
-  url: "/install/concept_snapcenter_standard_capacity_based_licenses.html"
 - title: 配置您的儲存系統
   entries:
   - title: 在Windows主機上配置儲存設備
@@ -132,3 +142,5 @@ entries:
   url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
 - title: 安裝期間在Windows主機上啟用的功能
   url: "/install/reference_features_enabled_on_your_windows_host_during_installation.html"
+- title: 安裝期間在 Linux 主機上啟用的功能
+  url: "/install/features_enabled_on_linux_host.html"

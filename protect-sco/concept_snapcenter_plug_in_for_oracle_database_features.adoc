@@ -64,17 +64,19 @@ SnapCenter 使用 NetApp Snapshot 技術搭配適用於 Oracle 資料庫的外�
 +
 您必須安裝NVMe util,才能複製或掛載到替代主機。
 
-** 備份、還原、複製、掛載、卸載、 除了VMDK和RDM等虛擬化環境之外、NVMe硬體支援目錄、無目錄和驗證作業。
+** 備份、還原、複製、掛載、卸載、 NVMe 硬體支援目錄、取消目錄和驗證作業、但 RDM 等虛擬化環境除外。
 +
 在沒有分割區或單一分割區的裝置上支援上述作業。
 
-
-
-
-
++
 
 NOTE: 您可以在核心中設定原生多重路徑選項、為NVMe裝置設定多重路徑解決方案。不支援裝置對應表（DM）多重路徑。
 
+** 備份、還原、複製、掛載、卸載、 NVMe over TCP/IP 支援目錄、取消目錄和驗證工作流程。
+** 備份、還原、複製、掛載、卸載、 在 NVMe over TCP/IP 上建立的 VMDK 配置支援目錄、取消目錄和驗證工作流程。
+
+
+* 支援 SnapMirror 主動式同步（最初以 SnapMirror Business Continuity [SM-BC] 發行）、即使整個站台發生故障、商業服務也能繼續運作、支援應用程式使用次要複本進行透明容錯移轉。使用 SnapMirror 主動式同步觸發容錯移轉時、不需要手動介入或額外的指令碼處理。
 * 支援任何非預設使用者、而非Oracle和Grid。
 +
 若要支援非預設使用者、您應該修改位於_file /var/opt/snapcenter/scop/etc/_的* sco.properties*檔案中的參數值、以設定非預設使用者。

@@ -2,20 +2,20 @@
 permalink: protect-scsql/task_configure_gMSA_on_windows_server_2012_or_later.html 
 sidebar: sidebar 
 keywords: gMSA 
-summary: Windows Server 2012或更新版本可讓您建立群組託管服務帳戶（GMSA）、以便從託管網域帳戶提供自動化服務帳戶密碼管理。 
+summary: Windows Server 2016或更新版本可讓您建立群組託管服務帳戶（GMSA）、以便從託管網域帳戶提供自動化服務帳戶密碼管理。 
 ---
-= 在Windows Server 2012或更新版本上設定GMSA
+= 在Windows Server 2016或更新版本上設定GMSA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Windows Server 2012或更新版本可讓您建立群組託管服務帳戶（GMSA）、以便從託管網域帳戶提供自動化服務帳戶密碼管理。
+Windows Server 2016或更新版本可讓您建立群組託管服務帳戶（GMSA）、以便從託管網域帳戶提供自動化服務帳戶密碼管理。
 
 .開始之前
-* 您應該擁有Windows Server 2012或更新版本的網域控制器。
-* 您應該擁有Windows Server 2012或更新版本的主機、該主機是網域的成員。
+* 您應該擁有Windows Server 2016或更新版本的網域控制器。
+* 您應該擁有Windows Server 2016或更新版本的主機、該主機是網域的成員。
 
 
 .步驟

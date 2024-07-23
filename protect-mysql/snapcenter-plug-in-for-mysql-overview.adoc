@@ -1,0 +1,24 @@
+---
+permalink: protect-mysql/snapcenter-plug-in-for-mysql-overview.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: 適用於 MySQL 的 SnapCenter 外掛程式是 NetApp SnapCenter 軟體的主機端元件、可支援應用程式感知的 MySQL 資料庫資料保護管理。適用於 MySQL 資料庫的外掛程式可在 SnapCenter 環境中自動備份、還原及複製 MySQL 資料庫。 
+---
+= 適用於 MySQL 的 SnapCenter 外掛程式概觀
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+適用於 MySQL 資料庫的 SnapCenter 外掛程式是 NetApp SnapCenter 軟體的主機端元件、可支援應用程式感知的 MySQL 資料庫資料保護管理。適用於 MySQL 資料庫的外掛程式可在 SnapCenter 環境中自動備份、還原及複製 MySQL 資料庫。
+
+SnapCenter 支援單一執行個體 MySQL 設定。您可以在 Linux 和 Windows 環境中使用適用於 MySQL 資料庫的外掛程式。在 Windows 環境中、 MySQL 將支援為手動資源。
+
+安裝適用於 MySQL 資料庫的外掛程式時、您可以使用 SnapCenter 搭配 NetApp SnapMirror 技術、在另一個磁碟區上建立備份集的鏡射複本。您也可以使用外掛程式搭配NetApp SnapVault 支援技術來執行磁碟對磁碟備份複寫、以符合標準。
+
+適用於 MySQL 的 SnapCenter 外掛程式支援 ONTAP 和 Azure NetApp 檔案儲存配置上的 NFS 和 SAN 。
+
+支援 VMDK 或虛擬儲存配置。
+
+不支援符號連結。

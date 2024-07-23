@@ -1,0 +1,124 @@
+---
+permalink: protect-nsp/prerequisites_to_adding_hosts_and_installing_netapp_supported_plugins.html 
+sidebar: sidebar 
+keywords: credentials 
+summary: 在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。NetApp 支援的外掛程式可同時用於 Windows 和 Linux 環境。 
+---
+= 新增主機和安裝 NetApp 支援外掛程式的必要條件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。NetApp 支援的外掛程式可同時用於 Windows 和 Linux 環境。
+
+* 您必須已建立自訂外掛程式。如需詳細資訊、請參閱開發人員資訊。
++
+link:develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"]
+
+* 您必須在 Linux 或 Windows 主機上安裝 Java 11 。
+* 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.
+* 執行新增主機作業的用戶端主機上必須有 NetApp 支援的外掛程式。
+
+
+
+
+== 一般
+
+如果您使用iSCSI、iSCSI服務應該會執行。
+
+
+
+== SHA512雜湊
+
+* 對於 NetApp 支援的外掛程式、您應該確定已將 NetApp 支援外掛程式檔案的 SHA512 雜湊新增至 _custom_plugin_checksum _list_ 檔案。
++
+** 對於Linux主機、SHA512雜湊位於_/var/opt/snapcenter/scc/cust_plugin_checksum _list.txt_
+** 對於Windows主機、SHA512雜湊位於_C:\Program Files\NetApp\SnapCenter Plug-in Creator\etc\custom_plugin_checksum _list.txt_
++
+對於自訂安裝路徑、SHA512雜湊位於_<CUSTOM路徑>\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\custom_plugin_checksum list.txt_
+
+
+
++
+custom_plugin_checksum 清單是 SnapCenter 在主機上安裝 NetApp 支援外掛程式的一部分。
+
+* 針對為應用程式建立的 NetApp 支援外掛程式、您應該已經執行下列步驟：
++
+.. 已產生外掛程式壓縮檔的SHA512雜湊。
++
+您可以使用像這樣的線上工具 https://emn178.github.io/online-tools/sha512_file_hash.html["SHA512雜湊"^]。
+
+.. 將產生的SHA512雜湊新增至custom_plugin_checksum清單檔案的新行。
++
+註解以#符號開頭、以識別雜湊所屬的外掛程式。
+
++
+以下是Checksum檔案中SHA512雜湊項目的範例：
+
++
+....
+#ORASCPM
+03721f567a1e4a1cb5569066b9a58af619ee12b1f8713108f81b696cfbdb81c25232fa63d6e6777a2b2a1ec068bb0a93a59a8ade71587182f8bccbe81f7e0ba6
+....
+
+
+
+
+
+
+== Windows主機
+
+* 您必須擁有具有本機系統管理員權限的網域使用者、並在遠端主機上具有本機登入權限。
+* 如果您管理SnapCenter 的是叢集節點、則必須有擁有叢集中所有節點管理權限的使用者。
+
+
+
+
+== Linux主機
+
+* 您必須為root或非root使用者啟用密碼型SSH連線。
+* 您必須在 Linux 主機上安裝 Java 11 。
++
+如果您使用 Windows Server 2019 或 Windows Server 2016 作為 SnapCenter 伺服器主機、則必須安裝 Java 11 。互通性對照表工具IMT （英文）包含有關需求的最新資訊。
+
++
+http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
+
++
+https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
+
+* 您必須為非root使用者設定Sudo權限、才能存取多個路徑。使用visudo Linux公用程式、將下列行新增至/etc/udoers檔案。
++
+
+NOTE: 請確定您使用的是Sudo 1.8.7版或更新版本。
+
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias HPPLCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin, /opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl, /opt/NetApp/snapcenter/scc/bin/scc
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/Linux_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+Cmnd_Alias SCCCMDEXECUTOR =checksum_value== /opt/NetApp/snapcenter/scc/bin/sccCommandExecutor
+_LINUX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPLCMD, PRECHECKCMD, CONFIGCHECKCMD, SCCCMDEXECUTOR, SCCMD
+Defaults: _LINUX_USER_ !visiblepw
+Defaults: _LINUX_USER_ !requiretty
+----
++
+_Linux使用者_是您所建立的非root使用者名稱。
+
++
+您可以從 *SC_UNIT_plugins_checksum ． txt* 檔案取得 _checksum 值 _ 、檔案位於：
+
++
+** _C ： \ProgramData\NetApp\SnapCenter\Package 儲存庫 \SC_UNIX 外掛程式 _checksum ． txt_ （如果 SnapCenter 伺服器安裝在 Windows 主機上）。
+** 如果 SnapCenter 伺服器安裝在 Linux 主機上、則為 /opt/NetApp/snapcenter/SnapManagerWeb/Repository /SC_UNIT_plugin_checksum ． txt_ 。
++
+
+IMPORTANT: 此範例只能做為建立自己資料的參考。
+
+
+
+

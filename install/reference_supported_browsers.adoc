@@ -13,10 +13,7 @@ summary: 可在多個瀏覽器上使用此軟體。SnapCenter
 [role="lead"]
 可在多個瀏覽器上使用此軟體。SnapCenter
 
-* Chrome
-+
-如果您使用的是v66、可能無法啟動SnapCenter vsGUI。
-
+* Chrome 125 版及更新版本
 * Internet Explorer
 +
 如果您使用的是IE 10或更早版本、則無法正確載入此程式。SnapCenter您應該升級至IE 11。

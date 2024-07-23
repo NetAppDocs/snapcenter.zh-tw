@@ -1,0 +1,16 @@
+---
+permalink: protect-mysql/install-snapcenter-plug-in-for-mysql.html 
+sidebar: sidebar 
+keywords: installing 
+summary: 如果要保護 MySQL 、您應該安裝並設定適用於 MySQL 的 SnapCenter 外掛程式。 
+---
+= 適用於 MySQL 的 SnapCenter 外掛程式安裝工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要保護 MySQL 資料庫、您應該安裝並設定適用於 MySQL 的 SnapCenter 外掛程式。
+
+image::../media/sap_hana_install_configure_workflow.gif[安裝及設定工作流程]

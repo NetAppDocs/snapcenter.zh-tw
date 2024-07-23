@@ -1,0 +1,153 @@
+---
+permalink: protect-postgresql/back-up-postgresql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for PostgreSQL 
+summary: 如果某個資源尚未納入任何資源群組、您可以從「資源」頁面備份該資源。 
+---
+= 備份 PostgreSQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果某個資源尚未納入任何資源群組、您可以從「資源」頁面備份該資源。
+
+.開始之前
+* 您必須已建立備份原則。
+* 如果您想要備份與二線儲存設備有SnapMirror關係的資源、ONTAP 指派給儲存設備使用者的這個角色應該包含「全部快照鏡射」權限。不過、如果您使用「vsadmin」角色、則不需要「全部快照鏡像」權限。
+* 對於 Snapshot 複本型備份作業、請確保所有租戶叢集均為有效且作用中。
+* 對於用於停止、 Snapshot 和取消停止作業的前置和後置命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否存在這些命令：
++
+Windows：_C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_
+
++
+對於Linux：_/var/opt/snapcenter/scc/sited_commands_list.txt_
+
+
+
+
+NOTE: 如果命令清單中不存在這些命令、則作業將會失敗。
+
+.步驟
+. 在左側導覽窗格中、選取 * 資源 * 、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、根據資源類型篩選*檢視*下拉式清單中的資源。
++
+選取*image:../media/filter_icon.png[""]*、然後選取主機名稱和資源類型以篩選資源。然後您可以選取 image:../media/filter_icon.png[""] 以關閉篩選窗格。
+
+. 選取您要備份的資源。
+. 在「資源」頁面中、選取 * 使用 Snapshot 複本的自訂名稱格式 * 、然後輸入您要用於 Snapshot 名稱的自訂名稱格式。
++
+例如、_customtext_policy_hostname_或_resource_hostname_。根據預設、 Snapshot 名稱會附加時間戳記。
+
+. 在「應用程式設定」頁面中、執行下列動作：
++
+** 選擇 * 備份 * 箭頭以設定其他備份選項：
++
+視需要啟用一致性群組備份、並執行下列工作：
+
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+等待「一致性群組快照」作業完成的時間
+ a| 
+選擇 * 緊急 * 、 * 中 * 或 * 放鬆 * 以指定快照作業完成的等待時間。「緊急」= 5秒、「中」= 7秒、「輕鬆」= 20秒。
+
+
+
+ a| 
+停用WAFL Sync
+ a| 
+選擇此選項可避免強制WAFL 使用不一致點。
+
+|===
+** 選取 * 指令碼 * 箭頭以執行停止、快照和取消停止作業的前置和後置命令。
++
+您也可以在結束備份作業之前執行pres命令。指令碼和指令碼會在SnapCenter 支援服務器上執行。
+
+** 選取「 ** 自訂組態 ** 」箭頭、然後輸入使用此資源的所有工作所需的自訂值配對。
+** 選擇 * Snapshot Copy Tool* （快照複製工具 * ）箭頭以選擇要建立 Snapshot 的工具：
++
+|===
+| 如果您需要... | 然後... 
+
+
+ a| 
+SnapCenter 以建立儲存層級快照
+ a| 
+選擇* SnapCenter 不含檔案系統一致性*的功能。
+
+
+
+ a| 
+SnapCenter 使用 Windows 外掛程式將檔案系統置於一致的狀態、然後建立 Snapshot
+ a| 
+選擇* SnapCenter 《以檔案系統一致性*》。
+
+
+
+ a| 
+可輸入命令以創建 Snapshot
+ a| 
+選取 * 其他 * 、然後輸入命令以建立 Snapshot 。
+
+|===
++
+image:../media/application_settings.gif[""]
+
+
+
+. 在「原則」頁面中、執行下列步驟：
++
+.. 從下拉式清單中選取一或多個原則。
++
+
+NOTE: 您也可以按一下*來建立原則image:../media/add_policy_from_resourcegroup.gif[""]*。
+
++
+在「設定所選原則的排程」區段中、會列出所選原則。
+
+.. 選取*image:../media/add_policy_from_resourcegroup.gif[""]*在您要為其設定排程的原則的「設定排程」欄中。
+.. 在 [ 新增原則 _policy_name_ 的排程 ] 對話方塊中，設定排程，然後選取 *OK* 。
++
+_policy_name_是您選取的原則名稱。
+
++
+已設定的排程會列在「已套用的排程」欄中。
+
+
+
+. 在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。
++
+您也必須指定寄件者和接收者的電子郵件地址、以及電子郵件的主旨。也必須在*設定*>*全域設定*中設定SMTP。
+
+. 檢閱摘要、然後選取 * 完成 * 。
++
+此時會顯示「資源拓撲」頁面。
+
+. 選擇 * 立即備份 * 。
+. 在「備份」頁面中、執行下列步驟：
++
+.. 如果您已將多個原則套用至資源、請從* Policy*下拉式清單中、選取您要用於備份的原則。
++
+如果針對隨需備份所選取的原則與備份排程相關聯、則會根據為排程類型指定的保留設定來保留隨需備份。
+
+.. 選擇*備份*。
+
+
+. 按一下*監控*>*工作*來監控作業進度。
++
+** 在不完整的組態中MetroCluster 、SnapCenter 在容錯移轉之後、可能無法偵測到保護關係。
++
+如需相關資訊、請參閱： https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["無法偵測SnapVault 到SnapMirror或在MetroCluster 進行不復原容錯移轉之後的不協調關係"^]
+
+** 如果您在VMDK上備份應用程式資料、SnapCenter 而針對VMware vSphere的VMware vSphere的Java堆疊大小不夠大、則備份可能會失敗。
++
+若要增加Java堆大小、請找出指令碼檔案_/opt/netapp/init_scripts/scvservice_。在該指令碼中、_do_start method_命令會啟動SnapCenter VMware插件服務。將該命令更新為：_java -jar -Xmx8192M -Xms4096M_
+
+
+
+

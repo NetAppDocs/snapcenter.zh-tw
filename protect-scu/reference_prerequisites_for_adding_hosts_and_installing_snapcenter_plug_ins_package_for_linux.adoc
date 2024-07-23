@@ -19,7 +19,7 @@ summary: 在新增主機並安裝外掛程式套件之前、您必須先完成�
 SnapCenter Plug-in for Unix File Systems 可由非 root 使用者安裝。不過、您應該設定非root使用者的Sudo權限、以便安裝和啟動外掛程式程序。安裝外掛程式之後、程序將以有效的非root使用者身分執行。
 
 * 以驗證模式建立認證、做為安裝使用者的 Linux 。
-* 您必須在 Linux 主機上安裝 Java 1.8.x 或 Java 11 （ 64 位元）。
+* 您必須在 Linux 主機上安裝 Java 11 。
 +
 
 NOTE: 請確定您只在Linux主機上安裝認證版本的Java 11。
@@ -70,9 +70,7 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
  a| 
 必要的軟體套件
  a| 
-* Java 1.8.x （ 64 位元） Oracle Java 和 OpenJDK
-* Java 11 （ 64 位元） Oracle Java 和 OpenJDK
-
+Java 11 Oracle Java 和 OpenJDK
 
 
 NOTE: 請確定您只在Linux主機上安裝認證版本的Java 11。

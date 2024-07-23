@@ -1,0 +1,20 @@
+---
+permalink: protect-postgresql/type-of-backups-supported.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for postgresql 
+summary: 備份類型指定您要建立的備份類型。SnapCenter 支援 PostgreSQL 叢集的快照複製型備份類型。 
+---
+= 支援的備份類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+備份類型指定您要建立的備份類型。SnapCenter 支援 PostgreSQL 叢集的快照複製型備份類型。
+
+
+
+== Snapshot複製型備份
+
+Snapshot 複本型備份利用 NetApp 快照技術、為 PostgreSQL 叢集所在的磁碟區建立線上唯讀複本。

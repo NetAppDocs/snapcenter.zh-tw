@@ -1,0 +1,40 @@
+---
+permalink: uninstall/uninstall_snapcenter_server_linux.html 
+sidebar: sidebar 
+keywords: uninstall, snapcenter server, linux 
+summary: 如果您不想再使用 SnapCenter 伺服器來管理資料保護工作、可以解除安裝 SnapCenter 伺服器。 
+---
+= 在 Linux 主機上解除安裝 SnapCenter 伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您不想再使用 SnapCenter 伺服器來管理資料保護工作、可以解除安裝 SnapCenter 伺服器。解除安裝SnapCenter 此伺服器會移除其所有元件。
+
+.步驟
+. 執行其中一項動作以解除安裝 SnapCenter 伺服器。
++
+|===
+| 如果您想要執行 ... | 執行此動作... 
+
+
+ a| 
+非互動式解除安裝
+ a| 
+`$ sudo /opt/NetApp/snapcenter/SnapManagerWeb/installation/uninstall -i silent -DCONFIRM=1`
+
+範例： Sudo /opt/NetApp/snapcenter/SnapManagerWeb/ 安裝 / 解除安裝
+
+
+
+ a| 
+互動式解除安裝
+ a| 
+`$ sudo <USER_INSTALL_DIR>/NetApp/snapcenter/SnapManagerWeb/installation/uninstall`
+
+在確認輸入中輸入 0 以外的任何值、以確認解除安裝。
+
+|===
+

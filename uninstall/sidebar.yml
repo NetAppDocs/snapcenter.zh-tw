@@ -16,5 +16,7 @@ entries:
     url: "/uninstall/task_uninstall_plug_ins_locally_on_a_host.html"
   - title: 使用CLI解除安裝適用於Linux或AIX的外掛程式套件
     url: "/uninstall/task_uninstall_snapcenter_plug_ins_package_for_linux_or_aix_using_command_line_interface.html"
-- title: 解除安裝SnapCenter 此伺服器
+- title: 解除安裝 Windows 主機上的 SnapCenter Server
   url: "/uninstall/task_uninstalling_the_snapcenter_server.html"
+- title: 在 Linux 主機上解除安裝 SnapCenter 伺服器
+  url: "/uninstall/uninstall_snapcenter_server_linux.html"

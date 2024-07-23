@@ -47,6 +47,7 @@ NOTE: 您應該針對每個權限重複此命令。
 * `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster show" -access all`
 * `security login role create -vserver Cluster_name -role Role_Name -cmddirname "event generate-autosupport-log" -access all`
 * 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「jobhistory show」-access all」
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "job show" -access all`
 * 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "jobstop」-access all」
 * 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱"LUN"-access all"
 * 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱"LUN cree"-access all"
@@ -107,6 +108,7 @@ NOTE: 您應該針對每個權限重複此命令。
 * 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume file clone create」-access all」
 * 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume file show-disk-usage」-access all」
 * 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume modify"-access all"
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot modify-snaplock-expiry-time" -access all`
 * 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume offline"-access all"
 * 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume online - access all"
 * 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume qtree cree"-access all"
@@ -123,6 +125,7 @@ NOTE: 您應該針對每個權限重複此命令。
 * 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「Volume snapshot還原」-access all」
 * 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume snapshot還原檔案」-access all」
 * 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume snapshot show」-access all」
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot show-delta" -access all`
 * 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume unmount」-access all」
 * 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "vserver"-access all"
 * 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「vserver CIFS create」-access all」

@@ -16,6 +16,7 @@ summary: 支援角色型存取控制（RBAC）SnapCenter 。透過支援資源�
 .開始之前
 * 您應該在Windows Server Manager中啟用Windows處理程序啟動服務（WOS）。
 * 如果您想要使用Internet Explorer作為瀏覽器登入SnapCenter 到該伺服器、您應該確定Internet Explorer中的「保護模式」已停用。
+* 如果 SnapCenter 伺服器安裝在 Linux 主機上、您應該使用用來安裝 SnapCenter 伺服器的使用者帳戶登入。
 
 
 *關於此工作*
@@ -34,7 +35,7 @@ IMPORTANT: 如果您在網頁瀏覽器中開啟多個索引標籤、只要關閉
 
 若要部署高可用度（HA）、您必須SnapCenter 使用虛擬叢集IP _\ https://Virtual_Cluster_IP_or_FQDN:8146_來存取功能。如果您在Internet Explorer（IE）中瀏覽至_https://Virtual_Cluster_IP_or_FQDN:8146_時沒有看到SnapCenter 此功能、則必須在每個外掛主機的IE中、將虛擬叢集IP位址或FQDN新增為信任的網站、或是在每個外掛主機上停用IE增強安全功能。如需詳細資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_access_cluster_IP_address_from_outside_network["無法從外部網路存取叢集IP位址"^]。
 
-除了使用SnapCenter 還原GUI、您還可以使用PowerShell Cmdlet建立指令碼來執行組態、備份及還原作業。每SnapCenter 個版本的各個版本可能都有一些Cmdlet變更。。 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^] 有詳細資料。
+除了使用SnapCenter 還原GUI、您還可以使用PowerShell Cmdlet建立指令碼來執行組態、備份及還原作業。每SnapCenter 個版本的各個版本可能都有一些Cmdlet變更。 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]有詳細資料。
 
 
 NOTE: 如果SnapCenter 您是第一次登入到此資訊中心、則必須使用安裝程序中提供的認證登入。
@@ -83,7 +84,11 @@ NOTE: 如果SnapCenter 您是第一次登入到此資訊中心、則必須使用
 
 初次以SnapCenter RBAC使用者身分登入到支援服務器之後、請重新整理資源清單。
 
-如果您有不受信任的Active Directory網域想SnapCenter 要支援此功能、則必須先以SnapCenter 支援的方式登錄這些網域、然後再為不受信任網域上的使用者設定角色。 link:../install/task_register_untrusted_active_directory_domains.html["深入瞭解"^]
+如果您有不受信任的Active Directory網域想SnapCenter 要支援此功能、則必須先以SnapCenter 支援的方式登錄這些網域、然後再為不受信任網域上的使用者設定角色。link:../install/task_register_untrusted_active_directory_domains.html["深入瞭解"^]。
+
+如果您想要在 Linux 主機上執行的 SnapCenter 中新增外掛主機、您應該從位置取得 Checksum 檔案： //opt/NetApp/snapcenter/SnapManagerWeb/Repository 。
+
+從 6.0 版本開始、桌面上會建立 SnapCenter PowerShell 的捷徑。您可以使用捷徑直接存取 SnapCenter PowerShell Cmdlet 。
 
 
 
@@ -92,11 +97,7 @@ NOTE: 如果SnapCenter 您是第一次登入到此資訊中心、則必須使用
 支援MFA的網域帳戶是作用中目錄的一部分。SnapCenter
 
 .開始之前
-* 您應該已經啟用MFA。
-+
-如需如何啟用MFA的詳細資訊、請參閱 link:../install/enable_multifactor_authentication.html["啟用多因素驗證"]
-
-
+您應該已經啟用MFA。如需如何啟用 MFA 的資訊、請參閱 link:../install/enable_multifactor_authentication.html["啟用多因素驗證"]
 
 *關於此工作*
 

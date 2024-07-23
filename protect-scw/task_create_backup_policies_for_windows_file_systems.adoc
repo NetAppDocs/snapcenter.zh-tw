@@ -24,7 +24,7 @@ summary: 您可以先建立新的資源備份原則、再使用SnapCenter 支援
 +
 預設值為假
 
-* 對於 SnapMirror Business Continuity （ SM-BC ）、如需先決條件和限制的詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror 業務持續運作的物件限制"]。
+* 查看 SnapMirror 主動同步的特定先決條件和限制。如需相關資訊、請參閱 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror 主動同步的物件限制"]。
 
 
 .關於這項工作
@@ -143,7 +143,7 @@ NOTE: 對於使用率為1018的ONTAP 資源、如使用率為0、9.4或更新版
  a| 
 選取此選項可在另一個磁碟區（SnapMirror）上建立備份集的鏡射複本。
 
-應啟用此選項以實現 SnapMirror Business Continuity （ SM-BC ）。
+應啟用此選項以進行 SnapSnapMirror 主動式同步。
 
 在次要複寫期間、 SnapLock 到期時間會載入主要 SnapLock 到期時間。按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。
 

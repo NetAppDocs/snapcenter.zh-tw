@@ -48,6 +48,6 @@ https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src
 . 編輯//NetApp/snapcenter/scc/etc/SC_SMS_Services.properties檔案、然後新增plugins_enabled = HANA：3.0參數。
 . 使用Add-Smhost Cmdlet和必要參數、將主機新增SnapCenter 至SetcServer。
 +
-執行_Get-Help命令名稱_可取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^]。
+執行_Get-Help命令名稱_可取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。
 
 

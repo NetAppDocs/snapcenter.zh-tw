@@ -1,0 +1,14 @@
+---
+permalink: protect-mysql/auto-discovery-of-resources-on-linux-host.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL 
+summary: 資源是由 SnapCenter 管理的 Linux 主機上的 MySQL 執行個體。安裝適用於 MySQL 外掛程式的 SnapCenter 外掛程式後、系統會自動探索該 Linux 主機上的 MySQL 資料庫、並顯示在「資源」頁面中。 
+---
+= 自動探索Linux主機上的資源
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+資源是由 SnapCenter 管理的 Linux 主機上的 MySQL 執行個體。安裝適用於 MySQL 外掛程式的 SnapCenter 外掛程式後、系統會自動探索該 Linux 主機上的 MySQL 執行個體、並顯示在「資源」頁面中。

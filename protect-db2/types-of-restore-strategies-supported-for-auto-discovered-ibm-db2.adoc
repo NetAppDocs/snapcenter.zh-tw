@@ -1,0 +1,16 @@
+---
+permalink: protect-db2/types-of-restore-strategies-supported-for-auto-discovered-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: 您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。自動探索到的 IBM DB2 資料庫有兩種還原策略。 
+---
+= 自動探索到的 IBM DB2 支援的還原策略類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。
+
+完整資源還原是自動探索到的 IBM DB2 資料庫所支援的還原策略。這會還原資源的所有磁碟區、 qtree 和 LUN 。

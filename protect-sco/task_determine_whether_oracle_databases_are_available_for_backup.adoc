@@ -13,8 +13,7 @@ summary: 資源是SnapCenter 由Oracle管理的主機上的Oracle資料庫。您
 [role="lead"]
 資源是SnapCenter 由Oracle管理的主機上的Oracle資料庫。您可以將這些資料庫新增至資源群組、以便在探索可用的資料庫之後執行資料保護作業。
 
-*您需要的是什麼*
-
+.開始之前
 * 您必須已完成安裝SnapCenter 完「支援服務器」、新增主機、建立儲存系統連線、以及新增認證等工作。
 * 如果資料庫位於虛擬機器磁碟（VMDK）或原始裝置對應（RDM）上、您必須部署SnapCenter VMware vSphere的「The VMware Plug-in」、並以SnapCenter 「Sfor VMware vSphere」登錄外掛程式。
 +
@@ -30,8 +29,7 @@ summary: 資源是SnapCenter 由Oracle管理的主機上的Oracle資料庫。您
 
 您可以避免SnapCenter 使用不含資料庫的功能來探索在oratab檔案中新增的非資料庫項目。
 
-*步驟*
-
+.步驟
 . 安裝Oracle外掛程式之後、root使用者應在目錄//var/capcenter/scop/etc/_下建立* sc_oratab.config*檔案。
 +
 將寫入權限授予Oracle二進位擁有者和群組、以便日後能夠維護該檔案。
@@ -76,8 +74,7 @@ IMPORTANT: 建議您務必先備份SC_oratab.config檔案、再升級SnapCenter 
 
 如果您已刪除主機上的Oracle資料庫、SnapCenter 則無法感知到該資料庫、並會列出刪除的資料庫。您應該手動重新整理資源、以更新SnapCenter 「資源更新清單」。
 
-*步驟*
-
+.步驟
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
 . 在「資源」頁面中、從*檢視*清單中選取*資料庫*。
 +

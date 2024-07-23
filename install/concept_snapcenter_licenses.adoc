@@ -30,15 +30,6 @@ NOTE: 此外、也提供資料保護套裝組合的一部分。SnapCenter如果�
 
 
  a| 
-以容量為基礎的標準SnapCenter
- a| 
-需要搭配使用ONTAP Select Cloud Volumes ONTAP
-
-如果Cloud Volumes ONTAP 您是一個不知道或ONTAP Select 不知道的客戶、您必須根據SnapCenter 由支援的資料、購買每TB容量型授權。根據預設SnapCenter 、不含內建90天100 TB SnapCenter 的功能型試用授權。如需其他詳細資料、請聯絡銷售代表。
-
-
-
- a| 
 SnapMirror或SnapVault
  a| 
 ONTAP
@@ -96,9 +87,9 @@ NOTE: 我們建議您將SnapCenter 不需要的「不二用」授權新增至次
 
 |===
 
-NOTE: 不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenter
+NOTE: 不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenterAmazon FSX for NetApp ONTAP 和 Cloud Volumes ONTAP 不再需要容量型授權。
 
-您應該安裝一SnapCenter 或多個版本的不二授權。如需如何新增授權的資訊、請參閱 link:../install/concept_snapcenter_standard_controller_based_licenses.html["新增SnapCenter 以控制器為基礎的功能"] 或 link:../install/concept_snapcenter_standard_capacity_based_licenses.html["新增SnapCenter 以功能為基礎的「功能型標準」授權"]。
+您應該安裝一SnapCenter 或多個版本的不二授權。有關如何添加許可證的信息，請參見 link:../install/concept_snapcenter_standard_controller_based_licenses.html["新增SnapCenter 以控制器為基礎的功能"]。
 
 
 

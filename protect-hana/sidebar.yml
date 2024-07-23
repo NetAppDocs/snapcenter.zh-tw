@@ -58,7 +58,7 @@ entries:
     url: "/protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_linux.html"
   - title: 設定SnapCenter SAP HANA資料庫的效能分析外掛程式認證
     url: "/protect-hana/task_set_up_credentials_for_snapcenter_plug_in_for_sap_hana_database.html"
-  - title: 在Windows Server 2012或更新版本上設定GMSA
+  - title: 在Windows Server 2016或更新版本上設定GMSA
     url: "/protect-hana/task_configure_gMSA_on_windows_server_2012_or_later.html"
   - title: 安裝SnapCenter 適用於SAP HANA資料庫的功能
     entries:

@@ -1,10 +1,10 @@
 ---
 permalink: uninstall/task_uninstalling_the_snapcenter_server.html 
 sidebar: sidebar 
-keywords: uninstall, snapcenter server 
+keywords: uninstall, snapcenter server, windows 
 summary: 如果您不想再使用SnapCenter 支援資料保護的功能、可以SnapCenter 使用SnapCenter 支援服務器主機上的程式和功能控制台來解除安裝支援服務器。解除安裝SnapCenter 此伺服器會移除其所有元件。 
 ---
-= 解除安裝SnapCenter 此伺服器
+= 解除安裝 Windows 主機上的 SnapCenter Server
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -223,7 +223,7 @@ image::../media/nss_controller_license_select.gif[選擇條件和序號輸入的
 如果您使用的SnapCenter 是以控制器為基礎的VMware認證、而且需要移除容量型試用授權（以「50」結尾的序號）、您應該使用MySQL命令手動移除試用版授權。試用版授權無法使用SnapCenter VMware GUI刪除。
 
 
-NOTE: 只有在使用SnapCenter 以VMware控制器為基礎的授權時、才需要手動移除試用授權。如果您購買SnapCenter 了以功能為基礎的VMware測試版授權、並將其新增SnapCenter 至VMware應用程式介面、則試用版授權會自動覆寫。
+NOTE: 只有在使用SnapCenter 以VMware控制器為基礎的授權時、才需要手動移除試用授權。
 
 .步驟
 . 在伺服SnapCenter 器上、開啟PowerShell視窗以重設MySQL密碼。
@@ -231,7 +231,7 @@ NOTE: 只有在使用SnapCenter 以VMware控制器為基礎的授權時、才需
 .. 執行Open-SmConnection Cmdlet、針對SnapCenter SnapCenterAdmin帳戶、啟動與該伺服器的連線工作階段。
 .. 執行Set-SmRegitoryPassword以重設MySQL密碼。
 +
-如需Cmdlet的相關資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^]。
+如需 Cmdlet 的相關資訊，請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。
 
 
 

@@ -1,0 +1,33 @@
+---
+permalink: install/enable_two_way_ssl_linux.html 
+sidebar: sidebar 
+keywords: security,enable two-way ssL, windows host, one-way ssl 
+summary: 您可以啟用 SSL 通訊、以使用 PowerShell 命令保護 Linux 主機上的 SnapCenter 伺服器與外掛程式之間的相互通訊。 
+---
+= 在 Linux 主機上啟用 SSL 通訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以啟用雙向 SSL 通訊、以使用 PowerShell 命令保護 Linux 主機上的 SnapCenter 伺服器與外掛程式之間的相互通訊。
+
+.步驟
+. 執行下列步驟以啟用單向 SSL 通訊。
++
+.. 登入 SnapCenter GUI 。
+.. 按一下 * 設定 * > * 全域設定 * 、然後選取 * 在 SnapCenter 伺服器 * 上啟用憑證驗證。
+.. 按一下 * 主機 * > * 託管主機 * 、然後選取您要啟用單向 SSL 的外掛主機。
+.. 按一下 image:../media/more_icon.gif[""] 圖示、然後按一下 * 啟用憑證驗證 * 。
+
+
+. 從 SnapCenter 伺服器 Linux 主機啟用雙向 SSL 通訊。
++
+** `Open-SmConnection`
+** `Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="true"} -HostName <Plugin Host Name>`
+** `Set-SmConfigSettings -Agent -configSettings @{"EnableTwoWaySSL"="true"} -HostName localhost`
+** `Set-SmConfigSettings -Server -configSettings @{"EnableTwoWaySSL"="true"}`
+
+
+

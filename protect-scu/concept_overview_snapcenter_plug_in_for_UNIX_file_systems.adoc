@@ -34,6 +34,9 @@ summary: 適用於 Unix 檔案系統的外掛程式支援 Unix 檔案系統的�
  a| 
 * 實體伺服器
 * 虛擬伺服器
++
+NFS 和 SAN 上的 VVOL 資料存放區。 VVOL 資料存放區只能使用適用於 VMware vSphere 的 ONTAP 工具進行資源配置。
+
 
 
 
@@ -90,6 +93,5 @@ summary: 適用於 Unix 檔案系統的外掛程式支援 Unix 檔案系統的�
 
 * 不支援在 NFS 和 VMFS 資料存放區的 VMDK 之間混合使用檔案系統。
 * NVMe 不受支援。
-* 不支援 SnapMirror Business Continuity （ SM-BC ）。
 * 不支援資源配置。
 

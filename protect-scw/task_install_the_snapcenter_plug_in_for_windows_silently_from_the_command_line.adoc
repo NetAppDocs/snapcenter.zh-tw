@@ -15,7 +15,7 @@ summary: 如果無法從Windows GUI遠端安裝外掛程式、您可以SnapCente
 
 .開始之前
 * 您必須安裝Microsoft Net 4.7.2或更新版本。
-* 您必須安裝PowerShell 4.0或更新版本。
+* 您必須已安裝 PowerShell 7.4.2 或更新版本。
 * 您必須開啟Windows訊息佇列。
 * 您必須是主機上的本機管理員。
 

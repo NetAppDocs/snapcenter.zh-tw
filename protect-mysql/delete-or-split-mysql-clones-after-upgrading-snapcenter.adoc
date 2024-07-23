@@ -1,0 +1,30 @@
+---
+permalink: protect-mysql/delete-or-split-mysql-clones-after-upgrading-snapcenter.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL Database 
+summary: 升級SnapCenter 至完Flash 4.3之後、您將無法再看到複本。您可以從建立複本的資源的「拓撲」頁面刪除複本或分割複本。 
+---
+= 升級 SnapCenter 後刪除或分割 MySQL 資料庫複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+升級SnapCenter 至完Flash 4.3之後、您將無法再看到複本。您可以從建立複本的資源的「拓撲」頁面刪除複本或分割複本。
+
+.關於這項工作
+如果您要找出隱藏複本的儲存設備實體、請執行下列命令：「Get-SmClone -ListStorageFootprint」
+
+.步驟
+. 使用remove-smbackup Cmdlet刪除複製資源的備份。
+. 使用remove-smresourcegrogroup Cmdlet刪除複製資源的資源群組。
+. 使用remove-smprotectresource Cmdlet移除複製資源的保護。
+. 從「資源」頁面選取父資源。
++
+此時會顯示資源拓撲頁面。
+
+. 從「管理複本」檢視中、從主要或次要（鏡射或複寫）儲存系統選取複本。
+. 選取複本、然後按一下 image:../media/delete_icon.gif[""] 刪除複本或按一下 image:../media/split_cone.gif[""] 以分割複本。
+. 按一下「*確定*」。
+

@@ -1,0 +1,23 @@
+---
+permalink: protect-postgresql/define-a-restore-and-recovery-strategy-for-postgresql-resources.html 
+sidebar: sidebar 
+keywords: restore and recovery strategy, postgresql resources, snapcenter 
+summary: 您必須先定義策略、才能還原和恢復叢集、以便成功執行還原和還原作業。 
+---
+= 定義 PostgreSQL 資源的還原與還原策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須先定義策略、才能還原和恢復叢集、以便成功執行還原和還原作業。
+
+
+NOTE: 僅支援手動叢集還原。
+
+.步驟
+. 決定手動新增 PostgreSQL 資源所支援的還原策略
+. 決定自動探索的 PostgreSQL 叢集所支援的還原策略
+. 決定您要執行的恢復作業類型。
+

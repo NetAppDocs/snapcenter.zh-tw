@@ -18,13 +18,6 @@ summary: 支援實體機器和虛擬機器（VM）上的各種儲存類型。Sna
 
 
  a| 
-實體與虛擬伺服器
- a| 
-連接FC的LUN
-
-
-
- a| 
 實體伺服器
  a| 
 連接iSCSI的LUN
@@ -34,6 +27,17 @@ summary: 支援實體機器和虛擬機器（VM）上的各種儲存類型。Sna
  a| 
 實體與虛擬伺服器
  a| 
-NFS連線的磁碟區
+* 連接FC的LUN
+* NFS連線的磁碟區
+
+
+
+
+ a| 
+VMware ESXi
+ a| 
+NFS 和 SAN 上的 VVOL 資料存放區
+
+VVOL 資料存放區只能使用適用於 VMware vSphere 的 ONTAP 工具進行資源配置。
 
 |===

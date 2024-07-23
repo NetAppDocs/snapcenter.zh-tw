@@ -13,6 +13,15 @@ summary: 萬一資料遺失、您可以使用 SnapCenter 來還原資料。
 [role="lead"]
 萬一資料遺失、您可以使用 SnapCenter 來還原 Unix 檔案系統。
 
+*關於此工作*
+
+* 您應該執行下列命令、以建立與SnapCenter 該伺服器的連線、列出備份並擷取其資訊、以及還原備份。
++
+您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["《軟件命令參考指南》SnapCenter"^]。
+
+* 對於 SnapMirror 主動同步還原作業、您必須從主要位置選取備份。
+
+
 .步驟
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
 . 在「資源」頁面中、從 * 檢視 * 清單中選取 * 路徑 * 或 * 資源群組 * 。

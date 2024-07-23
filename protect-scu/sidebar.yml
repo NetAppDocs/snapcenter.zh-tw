@@ -34,6 +34,8 @@ entries:
     url: "/protect-scu/task_back_up_unix_file_systems_resource_groups.html"
   - title: 監控備份進度
     url: "/protect-scu/task_monitor_unix_file_systems_backup_operations.html"
+  - title: 在「拓撲」頁面中檢視受保護的 Unix 檔案系統
+    url: "/protect-scu/view_protected_unix_file_systems_in_the_topology_page.html"
 - title: 還原及還原 Unix 檔案系統
   entries:
   - title: 還原及還原 Unix 檔案系統

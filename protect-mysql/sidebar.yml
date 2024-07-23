@@ -1,0 +1,148 @@
+---
+section: protect-mysql
+title: 保護 MySQL
+entries:
+- title: 適用於 MySQL 的 SnapCenter 外掛程式
+  entries:
+  - title: 適用於 MySQL 的 SnapCenter 外掛程式概觀
+    url: "/protect-mysql/snapcenter-plug-in-for-mysql-overview.html"
+  - title: 如何使用適用於 MySQL 的 SnapCenter 外掛程式
+    url: "/protect-mysql/what-you-can-do-using-the-snapcenter-plug-in-for-mysql.html"
+  - title: 適用於 MySQL 功能的 SnapCenter 外掛程式
+    url: "/protect-mysql/snapcenter-plug-in-for-mysql-features.html"
+  - title: 適用於 MySQL 的 SnapCenter 外掛程式支援的儲存類型
+    url: "/protect-mysql/storage-types-supported-by-snapcenter-plug-in-for-mysql.html"
+  - title: 需要最低ONTAP 的權限
+    url: "/protect-mysql/minimum-privileges-required-for-mysql.html"
+  - title: 準備儲存系統以進行SnapMirror和SnapVault 資訊複寫
+    url: "/protect-mysql/prepare-storage-systems-for-snapmirror-and-snapvault-replication-for-plugin-for-mysql.html"
+  - title: MySQL 的備份策略
+    entries:
+    - title: 定義 MySQL 的備份策略
+      url: "/protect-mysql/define-a-backup-strategy-for-mysql.html"
+    - title: 自動探索Linux主機上的資源
+      url: "/protect-mysql/auto-discovery-of-resources-on-linux-host.html"
+    - title: 支援的備份類型
+      url: "/protect-mysql/type-of-backups-supported.html"
+    - title: 適用於 MySQL 的 SnapCenter 外掛程式如何使用一致性群組 Snapshot 複本
+      url: "/protect-mysql/how-snapcenter-plug-in-for-mysql-uses-consistency-group-snapshot-copies.html"
+    - title: SnapCenter 如何管理資料備份的管理工作
+      url: "/protect-mysql/housekeeping-of-log-backups.html"
+    - title: 決定 MySQL 備份排程的考量事項
+      url: "/protect-mysql/considerations-for-determining-backup-schedules-for-mysql.html"
+    - title: MySQL 所需的備份工作數
+      url: "/protect-mysql/number-of-backup-jobs-needed-for-mysql.html"
+    - title: 備份命名慣例
+      url: "/protect-mysql/backup-naming-conventions-for-plugin-for-mysql.html"
+  - title: MySQL 的還原與還原策略
+    entries:
+    - title: 定義 MySQL 資源的還原與還原策略
+      url: "/protect-mysql/define-a-restore-and-recovery-strategy-for-mysql-resources.html"
+    - title: 支援手動新增 MySQL 資源的還原策略類型
+      url: "/protect-mysql/types-of-restore-strategies-supported-for-manually-added-mysql.html"
+    - title: 自動探索的 MySQL 支援的還原策略類型
+      url: "/protect-mysql/types-of-restore-strategies-supported-for-auto-discovered-mysql.html"
+    - title: 自動探索的 MySQL 的還原作業類型
+      url: "/protect-mysql/types-of-restore-performed-for-auto-discovered-mysql.html"
+- title: 準備安裝適用於 MySQL 的 SnapCenter 外掛程式
+  entries:
+  - title: 適用於 MySQL 的 SnapCenter 外掛程式安裝工作流程
+    url: "/protect-mysql/install-snapcenter-plug-in-for-mysql.html"
+  - title: 新增主機和安裝適用於 MySQL 的 SnapCenter 外掛程式的先決條件
+    url: "/protect-mysql/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-mysql.html"
+  - title: 安裝SnapCenter 適用於Windows的功能性外掛程式套件的主機需求
+    url: "/protect-mysql/host-requirements-to-install-snapcenter-plug-in-package-for-windows-mysql.html"
+  - title: 安裝SnapCenter 適用於Linux的支援功能外掛套件的主機需求
+    url: "/protect-mysql/host-requirements-to-install-snapcenter-plug-in-package-for-linux.html"
+  - title: 設定適用於 MySQL 的 SnapCenter 外掛程式認證
+    url: "/protect-mysql/set-up-credentials-for-snapcenter-plug-in-for-mysql.html"
+  - title: 安裝適用於 MySQL 的 SnapCenter 外掛程式
+    entries:
+    - title: 新增主機並在遠端主機上安裝外掛程式套件
+      url: "/protect-mysql/add-hosts-and-install-plug-in-packages-on-remote-hosts-mysql.html"
+    - title: 使用Cmdlet在SnapCenter 多個遠端主機上安裝適用於Linux或Windows的支援功能外掛套件
+      url: "/protect-mysql/install-snapcenter-plug-in-packages-for-linux-or-windows-on-multiple-remote-hosts-using-cmdlets-mysql.html"
+    - title: 使用命令列介面、在 Linux 主機上安裝適用於 MySQL 的 SnapCenter 外掛程式
+      url: "/protect-mysql/install-the-snapcenter-plug-in-for-mysql-on-linux-hosts-using-the-command-line-interface.html"
+    - title: 監控SnapCenter 程式套件安裝狀態
+      url: "/protect-mysql/monitor-the-status-of-installing-plugin-for-mysql.html"
+  - title: 設定CA憑證
+    entries:
+    - title: 產生CA認證CSR檔案
+      url: "/protect-mysql/generate-CA-certificate-CSR-file.html"
+    - title: 匯入CA憑證
+      url: "/protect-mysql/import-CA-certificates.html"
+    - title: 取得CA憑證指紋
+      url: "/protect-mysql/get-the-CA-certificate-thumbprint.html"
+    - title: 使用Windows主機外掛程式服務設定CA憑證
+      url: "/protect-mysql/configure-CA-certificate-with-Windows-host-plug-in-services.html"
+    - title: 在 Linux 主機上設定 SnapCenter MySQL 外掛程式服務的 CA 憑證
+      url: "/protect-mysql/configure-CA-certificate-for-mysql-on-Linux-host.html"
+    - title: 在 Windows 主機上設定 SnapCenter MySQL 外掛程式服務的 CA 憑證
+      url: "/protect-mysql/configure-CA-certificate-for-mysql-on-windows-host.html"
+    - title: 啟用外掛程式的CA憑證
+      url: "/protect-mysql/enable-ca-certificates-for-plug-ins.html"
+- title: 準備資料保護
+  entries:
+  - title: 使用適用於 MySQL 的 SnapCenter 外掛程式的先決條件
+    url: "/protect-mysql/prerequisites-for-using-snapcenter-plug-in-for-mysql.html"
+  - title: 如何使用資源、資源群組和原則來保護 MySQL
+    url: "/protect-mysql/how-resources-resource-groups-and-policies-are-used-for-protecting-mysql.html"
+- title: 備份 MySQL 資源
+  entries:
+  - title: 備份工作流程
+    url: "/protect-mysql/back-up-mysql-resources.html"
+  - title: 自動探索資料庫
+    url: "/protect-mysql/discover-the-databases-automatically.html"
+  - title: 將資源手動新增至外掛程式主機
+    url: "/protect-mysql/add-resources-manually-to-the-plug-in-host.html"
+  - title: 建立 MySQL 的備份原則
+    url: "/protect-mysql/create-backup-policies-for-mysql.html"
+  - title: 建立資源群組並附加原則
+    url: "/protect-mysql/create-resource-groups-and-attach-policies.html"
+  - title: 備份 MySQL
+    url: "/protect-mysql/back-up-mysql.html"
+  - title: 備份資源群組
+    url: "/protect-mysql/back-up-resource-groups-mysql.html"
+  - title: 使用適用於 MySQL 的 PowerShell Cmdlet 建立儲存系統連線和認證
+    url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
+  - title: 使用PowerShell Cmdlet備份資料庫
+    url: "/protect-mysql/back-up-databases-using-powershell-cmdlets-mysql.html"
+  - title: 監控備份作業
+    entries:
+    - title: 監控SnapCenter 「不支援作業」頁面中的備份作業
+      url: "/protect-mysql/monitor-mysql-backup-operations.html"
+    - title: 監控「活動」窗格中的作業
+      url: "/protect-mysql/monitor-dataprotection-operations-on-mysql-in-the-activity-pane.html"
+  - title: 取消備份作業
+    url: "/protect-mysql/cancel-backup-operations-for-mysql.html"
+  - title: 在「拓撲」頁面中檢視 MySQL 資料庫備份和複本
+    url: "/protect-mysql/view-mysql-database-backups-and-clones-in-the-topology-page.html"
+- title: 還原 MySQL
+  entries:
+  - title: 還原工作流程
+    url: "/protect-mysql/restore-mysql.html"
+  - title: 還原及還原手動新增的資源備份
+    url: "/protect-mysql/restore-and-recover-a-manually-added-resource-backup.html"
+  - title: 還原及還原自動探索的資料庫備份
+    url: "/protect-mysql/restore-and-recover-an-auto-discovered-database-backup.html"
+  - title: 使用 PowerShell Cmdlet 還原 MySQL
+    url: "/protect-mysql/restore-mysql-using-powershell-cmdlets.html"
+  - title: 使用PowerShell Cmdlet還原資源
+    url: "/protect-mysql/restore-and-recover-resources-using-powershell-cmdlets-mysql.html"
+  - title: 監控還原作業
+    url: "/protect-mysql/monitor-mysql-restore-operations.html"
+- title: 複製 MySQL 資源備份
+  entries:
+  - title: 複製工作流程
+    url: "/protect-mysql/clone-mysql-resource-backups.html"
+  - title: 複製 MySQL 資料庫備份
+    url: "/protect-mysql/clone-mysql-backup.html"
+  - title: 使用 PowerShell Cmdlet 複製 MySQL 資料庫備份
+    url: "/protect-mysql/clone-mysql-backups-using-powershell-cmdlets.html"
+  - title: 監控SnapCenter 實體複製作業
+    url: "/protect-mysql/monitor-mysql-clone-operations.html"
+  - title: 分割實體複本
+    url: "/protect-mysql/split-a-clone-for-mysql.html"
+  - title: 升級 SnapCenter 後刪除或分割 MySQL 資料庫複本
+    url: "/protect-mysql/delete-or-split-mysql-clones-after-upgrading-snapcenter.html"

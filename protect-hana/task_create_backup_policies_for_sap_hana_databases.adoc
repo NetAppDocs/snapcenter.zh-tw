@@ -23,6 +23,7 @@ summary: 在使用SnapCenter 支援功能來備份SAP HANA資料庫資源之前�
 +
 此外、您也可以在原則中指定複寫、指令碼和應用程式設定。當您想要重複使用其他資源群組的原則時、這些選項可節省時間。
 
+* 查看 SnapMirror 主動同步的特定先決條件和限制。如需相關資訊、請參閱 https://docs.netapp.com/us-en/ontap/smbc/considerations-limits.html#volumes["SnapMirror 主動同步的物件限制"]。
 
 
 .關於這項工作
@@ -147,6 +148,8 @@ SnapLock 保留期應少於 100 年。
 *在建立本機Snapshot複本之後更新SnapMirror *
  a| 
 選取此欄位可在另一個磁碟區（SnapMirror複寫）上建立備份集的鏡射複本。
+
+應啟用此選項以進行 SnapMirror 主動同步。
 
 如果 ONTAP 中的保護關係類型為鏡射和資料保險箱、且您只選取此選項、則在主要節點上建立的 Snapshot 不會傳輸至目的地、但會列在目的地中。如果從目的地選取此 Snapshot 以執行還原作業、則會顯示次要位置無法用於所選的保存 / 鏡射備份錯誤訊息。
 

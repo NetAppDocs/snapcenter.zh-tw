@@ -12,7 +12,7 @@ entries:
     url: "/protect-scsql/concept_snapcenter_plug_in_for_microsoft_sql_server_features.html"
   - title: 支援Windows叢集中的非對稱LUN對應
     url: "/protect-scsql/concept_support_for_asymmetric_lun_mapping_alm_in_windows_clusters.html"
-  - title: 適用於Microsoft Windows和Microsoft SQL Server的解決方案SnapCenter 支援的儲存類型
+  - title: SnapCenter Plug-in for Microsoft SQL Server 支援的儲存類型
     url: "/protect-scsql/reference_storage_types_supported_by_snapcenter_plug_ins_for_microsoft_windows_and_for_microsoft_sql_server.html"
   - title: 針對Microsoft SQL Server的解決方案、提供儲存配置建議SnapCenter
     url: "/protect-scsql/reference_storage_layout_recommendations_for_snapcenter_plug_in_for_microsoft_sql_server.html"
@@ -74,7 +74,7 @@ entries:
     url: "/protect-scsql/task_set_up_credentials_for_snapcenter_plug_ins_package_for_windows.html"
   - title: 設定個別SQL Server資源的認證資料
     url: "/protect-scsql/task_configure_credentials_for_an_individual_sql_server_resource.html"
-  - title: 在Windows Server 2012或更新版本上設定GMSA
+  - title: 在Windows Server 2016或更新版本上設定GMSA
     url: "/protect-scsql/task_configure_gMSA_on_windows_server_2012_or_later.html"
   - title: 安裝SnapCenter 適用於Microsoft SQL Server的功能性外掛程式
     entries:

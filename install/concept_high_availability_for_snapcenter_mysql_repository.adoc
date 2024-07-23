@@ -19,7 +19,7 @@ MySQL複寫是MySQL Server的一項功能、可讓您將資料從一個MySQL資�
 
 提供_Get-SmrepositoryConfig_和_Set-SmrepositoryConfig_ PowerShell Cmdlet來管理MySQL複寫。SnapCenter
 
-您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^]。
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。
 
 您必須瞭解MySQL HA功能的相關限制：
 

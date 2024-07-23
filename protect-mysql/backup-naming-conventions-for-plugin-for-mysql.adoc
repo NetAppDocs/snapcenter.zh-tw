@@ -1,0 +1,33 @@
+---
+permalink: protect-mysql/backup-naming-conventions-for-plugin-for-mysql.html 
+sidebar: sidebar 
+keywords: Backup naming conventions 
+summary: 您可以使用預設的快照命名慣例、或使用自訂的命名慣例。預設備份命名慣例會在快照名稱中新增時間戳記、協助您識別複本建立的時間。 
+---
+= MySQL 資料庫外掛程式的備份命名慣例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用預設的 Snapshot 命名慣例、或使用自訂的命名慣例。預設備份命名慣例會在 Snapshot 名稱中新增時間戳記、協助您識別複本建立的時間。
+
+Snapshot 使用下列預設命名慣例：
+
+"resourceGroupname_hostname_timestamp"
+
+您應該以邏輯方式命名備份資源群組、如下列範例所示：
+
+[listing]
+----
+dts1_mach1x88_03-12-2015_23.17.26
+----
+在此範例中、語法元素具有下列意義：
+
+* _dbs1_是資源群組名稱。
+* _mach1x88_是主機名稱。
+* _03-12-2015_23.17.26_是日期和時間戳記。
+
+
+或者、您也可以選取 * 使用 Snapshot 複本的自訂名稱格式 * 來指定 Snapshot 名稱格式、同時保護資源或資源群組。例如、customtext資源群組原則主機名稱或資源群組主機名稱。根據預設、時間戳記尾碼會新增至 Snapshot 名稱。

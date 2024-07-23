@@ -1,0 +1,82 @@
+---
+permalink: install/configure_two_way_ssl_linux.html 
+sidebar: sidebar 
+keywords: security,two-way ssl,configure two-way ssl, linux host 
+summary: 您應該設定雙向 SSL 通訊、以保護 Linux 主機上的 SnapCenter 伺服器與外掛程式之間的相互通訊。 
+---
+= 在 Linux 主機上設定雙向 SSL 通訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該設定雙向 SSL 通訊、以保護 Linux 主機上的 SnapCenter 伺服器與外掛程式之間的相互通訊。
+
+.開始之前
+* 您應該已設定 Linux 主機的 CA 憑證。
+* 您必須在所有外掛主機和 SnapCenter 伺服器上啟用雙向 SSL 通訊。
+
+
+.步驟
+. 將 * certificate .pem* 複製到 /etc/pi/cA-trust 、 source/crons/_ 。
+. 在 Linux 主機的信任清單中新增憑證。
++
+** `cp root-ca.pem /etc/pki/ca-trust/source/anchors/`
+** `cp certificate.pem /etc/pki/ca-trust/source/anchors/`
+** `update-ca-trust extract`
+
+
+. 確認憑證是否已新增至信任清單。
+`trust list | grep "<CN of your certificate>"`
+. 在 SnapCenter * NginX* 檔案中更新 *SSL_certificate * 和 *SSL_certificate _key* 、然後重新啟動。
++
+** `vim /etc/nginx/conf.d/snapcenter.conf`
+** `systemctl restart nginx`
+
+
+. 重新整理 SnapCenter 伺服器 GUI 連結。
+. 在位於 _ /NetApp/snapcenter/SnapManagerWeb_ 的 *SnapManager 、 Web.ui.dll.config* <installation path> 和位於 __/NETAPP /snapcenter/SMCore_ <installation path> 的 *SMCoreServiceHost.dll.config* 中更新下列機碼的值。
++
+** <add key="SERVICE_CERTIFICATE_PATH" value="<path of certificate.pfx>" />
+** <add key="SERVICE_CERTIFICATE_PASSWORD" value="<password>"/>
+
+
+. 重新啟動下列服務。
++
+** `systemctl restart smcore.service`
+** `systemctl restart snapmanagerweb.service`
+
+
+. 確認憑證已附加至 SnapManager 網路連接埠。
+`openssl s_client -connect localhost:8146 -brief`
+. 確認憑證已附加至 smcore 連接埠。
+`openssl s_client -connect localhost:8145 -brief`
+. 管理 SPL Keystore 和別名的密碼。
++
+.. 擷取 SPL 內容檔案中指派給 *SPL_Keystore 密碼的 SPL 金鑰庫預設密碼。
+.. 變更 Keystore 密碼。
+`keytool -storepasswd -keystore keystore.jks`
+.. 變更私密金鑰項目所有別名的密碼。
+`keytool -keypasswd -alias "<alias_name>" -keystore keystore.jks`
+.. 在 _spl.properties_ 中更新與鍵 *SPL_Keystore 密碼相同的密碼。
+.. 重新啟動服務。
+
+
+. 在外掛式 Linux 主機上、將根憑證和中繼憑證新增至 SPL 外掛程式的 Keystore 中。
++
+** `keytool -import -trustcacerts -alias <any preferred alias name> -file <path of root-ca.pem> -keystore <path of keystore.jks mentioned in spl.properties file>`
+** `keytool -importkeystore -srckeystore <path of certificate.pfx> -srcstoretype pkcs12 -destkeystore <path of keystore.jks mentioned in spl.properties file> -deststoretype JKS`
++
+... 檢查 keystore ． jks 中的條目。
+`keytool -list -v -keystore <path to keystore.jks>`
+... 必要時重新命名任何別名。
+`keytool -changealias -alias "old-alias" -destalias "new-alias" -keypass keypass -keystore </path/to/keystore> -storepass storepas`
+
+
+
+
+. 使用儲存在 _keystore ． jks_ 中的 * certificate ． pff* 別名、更新 _spl.properties_ 檔案中的 * SPL_certificate ． alias* 值、然後重新啟動 SPL 服務： `systemctl restart spl`
+. 確認憑證已附加至 smcore 連接埠。
+`openssl s_client -connect localhost:8145 -brief`
+

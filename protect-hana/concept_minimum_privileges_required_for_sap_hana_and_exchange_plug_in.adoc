@@ -73,6 +73,7 @@ summary: 所需的最低限度驗證權限會因您使用的資料保護功能�
 ** 建立Volume Snapshot快照
 ** Volume Snapshot刪除
 ** Volume Snapshot修改
+** Volume Snapshot modify-SnapLock過期時間
 ** Volume Snapshot重新命名
 ** Volume Snapshot還原
 ** Volume Snapshot還原檔

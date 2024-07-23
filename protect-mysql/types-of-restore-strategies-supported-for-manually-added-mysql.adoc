@@ -1,0 +1,27 @@
+---
+permalink: protect-mysql/types-of-restore-strategies-supported-for-manually-added-mysql.html 
+sidebar: sidebar 
+keywords: SnapCenter 
+summary: 您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。手動新增 MySQL 資源有兩種還原策略。您無法恢復手動新增的 MySQL 資源。 
+---
+= 支援手動新增 MySQL 資源的還原策略類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。手動新增 MySQL 資源有兩種還原策略。
+
+
+NOTE: 您無法恢復手動新增的 MySQL 資源。
+
+
+
+== 完成資源還原
+
+* 還原資源的所有磁碟區、qtree和LUN
+
+
+
+NOTE: 如果資源包含磁碟區或 qtree 、則會刪除選定要在這類磁碟區或 qtree 上還原的快照之後所拍攝的快照、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。

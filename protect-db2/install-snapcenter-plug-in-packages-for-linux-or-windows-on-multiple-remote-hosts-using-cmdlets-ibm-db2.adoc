@@ -1,0 +1,30 @@
+---
+permalink: protect-db2/install-snapcenter-plug-in-packages-for-linux-or-windows-on-multiple-remote-hosts-using-cmdlets-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in Packages for Linux, SnapCenter Plug-in Packages for Windows 
+summary: 您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、同時在多個主機上安裝適用於Linux或Windows的VMware®更新套件。 
+---
+= 使用Cmdlet在SnapCenter 多個遠端主機上安裝適用於Linux或Windows的支援功能外掛套件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、同時在多個主機上安裝適用於Linux或Windows的VMware®更新套件。
+
+.開始之前
+您必須以SnapCenter 網域使用者的身分登入到支援安裝外掛程式套件的每個主機、並具有本機系統管理員權限。
+
+.步驟
+. 啟動PowerShell。
+. 在支援服務器主機上SnapCenter 、使用Open-SmConnection Cmdlet建立工作階段、然後輸入您的認證資料。
+. 使用Install-SmHostPackage Cmdlet和必要參數、在多個主機上安裝外掛程式。
++
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。
+
++
+您可以在手動安裝外掛程式時使用-skipprecheck選項、而且不想驗證主機是否符合安裝外掛程式的需求。
+
+. 輸入遠端安裝的認證資料。
+

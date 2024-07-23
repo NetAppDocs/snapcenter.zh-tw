@@ -59,9 +59,20 @@ WSSMCore通訊連接埠SnapCenter
 
 
  a| 
+排程器服務連接埠
+ a| 
+8154 （ HTTPS ）、
+
+此連接埠用於 SnapCenter 集中化伺服器主機內所有受管理外掛程式的 SnapCenter 排程器工作流程。
+
+若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安裝精靈安裝 SnapCenter 伺服器。"]
+
+
+
+ a| 
 MySQL連接埠
  a| 
-3306（HTTPS）、雙向
+3306（HTTPS）、雙向、可自訂
 
 連接埠用於SnapCenter 在不同時執行的情況下、與MySQL儲存庫資料庫進行通訊。
 
@@ -118,7 +129,18 @@ Oracle的外掛程式會使用預設的JDBC連接埠來連線至Oracle資料庫�
 
 
  a| 
-客製SnapCenter 化的外掛程式
+SnapCenter Plug-in for Exchange 資料庫
+ a| 
+909、可自訂
+
+預設的 NET 。 Windows 外掛程式使用 TCP 連接埠來連線至 Exchange VSS 回撥。
+
+若要自訂連接埠、請參閱 link:../protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html["新增主機並安裝Exchange外掛程式"]。
+
+
+
+ a| 
+NetApp 支援的 SnapCenter 外掛程式
  a| 
 9090（HTTPS）、已修正
 

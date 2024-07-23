@@ -1,0 +1,23 @@
+---
+permalink: protect-postgresql/types_of_recovery_operations_supported_for_postgresql.html 
+sidebar: sidebar 
+keywords: recovery operations 
+summary: SnapCenter 可讓您針對 PostgreSQL 執行不同類型的還原作業。 
+---
+= PostgreSQL 叢集支援的恢復作業類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 可讓您為 PostgreSQL 叢集執行不同類型的還原作業。
+
+* 將叢集恢復至最新狀態
+* 將叢集恢復到特定時間點
++
+您必須指定恢復的日期和時間。
+
+
+
+SnapCenter 也為 PostgreSQL 叢集提供「無還原」選項。

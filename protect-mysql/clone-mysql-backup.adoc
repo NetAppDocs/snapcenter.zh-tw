@@ -1,0 +1,111 @@
+---
+permalink: protect-mysql/clone-mysql-backup.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for MySQL,run as 
+summary: 您可以使用SnapCenter 支援功能來複製備份。您可以從主要或次要備份複製。 
+---
+= 複製 MySQL 備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapCenter 支援功能來複製備份。您可以從主要或次要備份複製。
+
+.開始之前
+* 您應該已備份資源或資源群組。
+* 您應確保託管磁碟區的集合體應位於儲存虛擬機器（SVM）的指派集合體清單中。
+* 對於preclone或POST clone命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否存在命令：
++
+Windows：_C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_
+
++
+對於Linux：_/var/opt/snapcenter/scc/sited_commands_list.txt_
+
+
+
+
+NOTE: 如果命令清單中不存在這些命令、則作業將會失敗。* 對於 MySQL 5.7 版本、您應該在 MySQL 中設定 ignore _mySQLL_port = true （預設為 false ）。 內容檔案。
+
+.關於這項工作
+* 您無法保護複製的 MySQL 執行個體。
+* 如需有關複本切割作業限制的資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 9 邏輯儲存管理指南》 ONTAP"^]。
+* 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+
+
+.步驟
+. 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
+. 在「資源」頁面中、根據資源類型篩選*檢視*下拉式清單中的資源。
++
+這些資源會連同類型、主機、相關資源群組和原則、以及狀態等資訊一起顯示。
+
+. 選取資源或資源群組。
++
+如果您選取資源群組、則必須選取資源。
+
++
+此時會顯示資源或資源群組拓撲頁面。
+
+. 從「管理複本」檢視中、從主要或次要（鏡射或資料保存）儲存系統選取*備份*。
+. 從表格中選取資料備份、然後按一下 image:../media/clone_icon.gif["複製圖示"]。
+. 在「位置」頁面中、執行下列動作：
++
+|===
+| 針對此欄位... | 執行此動作... 
+
+
+ a| 
+Clone伺服器
+ a| 
+選擇要在其上建立複本的主機。
+
+
+
+ a| 
+連接埠
+ a| 
+提供要在其上啟動複製 MySQL 執行個體的連接埠。
+
+
+
+ a| 
+NFS匯出IP位址
+ a| 
+輸入要匯出複製磁碟區的IP位址或主機名稱。
+
+|===
+. 在「指令碼」頁面中、執行下列步驟：
++
+
+NOTE: 指令碼會在外掛程式主機上執行。
+
++
+.. 輸入應分別在複製作業之前或之後執行的預先複製或POST複製命令。
++
+*** 預先複製命令：刪除名稱相同的現有資料庫
+*** POST Clone命令：驗證資料庫或啟動資料庫。
+
+
+.. 輸入mount命令將檔案系統掛載到主機。
++
+Linux機器上的Volume或qtree掛載命令：
+
++
+NFS範例：
+
++
+ mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
++
+
+NOTE: 對於停止、 Snapshot 和取消停止作業的前置和後置命令、您應該檢查插件主機上的命令清單中是否存在 Linux 和 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\allowed_commands.config_ 路徑、以及 Windows 的 _C ： \Program Files\NetApp\Snapcenter\Snapcenter Plug-In Creator\et\allowed_commands_list_txt.txt.
+
+
+
+. 在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。
++
+您也必須指定寄件者和接收者的電子郵件地址、以及電子郵件的主旨。
+
+. 檢閱摘要、然後按一下「*完成*」。
+. 按一下*監控*>*工作*來監控作業進度。
+

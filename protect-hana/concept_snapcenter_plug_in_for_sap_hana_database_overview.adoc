@@ -16,3 +16,5 @@ summary: 適用於SAP HANA資料庫的功能區支援SAP HANA資料庫的功能�
 支援單一容器和多租戶資料庫容器（MDC）SnapCenter 。您可以在Windows和Linux環境中使用SAP HANA資料庫的外掛程式。未安裝在HANA資料庫主機上的外掛程式稱為集中式主機外掛程式。集中式主機外掛程式可跨不同主機管理多個HANA資料庫。
 
 安裝SAP HANA資料庫外掛程式時、您可以使用SnapCenter 搭配NetApp SnapMirror技術的功能來建立另一個磁碟區上備份集的鏡射複本。您也可以使用外掛程式搭配NetApp SnapVault 支援技術來執行磁碟對磁碟備份複寫、以符合標準。
+
+SAP HANA 外掛程式資料庫支援 SnapMirror 主動式同步（最初以 SnapMirror Business Continuity [SM-BC] 發行）、即使整個站台故障、商業服務也能繼續運作、支援應用程式使用次要複本以透明方式容錯移轉。使用 SnapMirror 主動式同步觸發容錯移轉時、不需要手動介入或額外的指令碼處理。

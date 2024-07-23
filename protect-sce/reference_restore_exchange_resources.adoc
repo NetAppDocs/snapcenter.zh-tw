@@ -17,4 +17,4 @@ summary: 您可以將SnapCenter 一或多個備份還原至使用中的檔案系
 
 image:../media/all_plug_ins_restore_workflow.png["還原工作流程"]
 
-您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份與還原作業。如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式指令程式說明或參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"^]。
+您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份與還原作業。如需 PowerShell Cmdlet 的詳細資訊，請使用 SnapCenter Cmdlet 說明或參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。

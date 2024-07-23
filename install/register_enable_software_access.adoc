@@ -1,0 +1,41 @@
+---
+permalink: install/register_enable_software_access.html 
+sidebar: sidebar 
+keywords: install, snapcenter software, install, register, new customer, NetApp account, enable 
+summary: 如果您沒有現有的 NetApp 帳戶、請依照下列步驟註冊以存取軟體。 
+---
+= 註冊以存取 SnapCenter 軟體
+:allow-uri-read: 
+
+
+[role="lead"]
+如果您是 Amazon FSX for NetApp ONTAP 或 Azure NetApp Files 的新手、而且沒有現有的 NetApp 帳戶、則可以存取 SnapCenter 軟體。
+
+.開始之前
+* 您應該可以存取公司電子郵件 ID 。
+* 如果您使用的是 Azure NetApp Files 、則應擁有 Azure 訂閱 ID 。
+* 如果您使用的是 Amazon FSX for NetApp ONTAP 、則您應該擁有適用於 ONTAP 檔案系統的 FSX 檔案系統 ID 。
+
+
+.關於這項工作
+您的註冊必須經過資訊驗證、可能需要一天的時間來確認新的 NetApp 支援網站（ NSS ）帳戶、並將其升級為「來賓」存取權的「完整」存取權。
+
+.步驟
+. 按一下 https://mysupport.netapp.com/site/user/registration[] 以進行註冊。
+. 輸入您的公司電子郵件 ID 、完成 captcha 、並接受 NetApp 的隱私權政策、然後按一下 * 提交 * 。
+. 輸入傳送至您電子郵件 ID 的 OTP 、以驗證登錄、然後按一下 * 繼續 * 。
+. 在登錄完成頁面上、輸入下列詳細資料以完成登錄。
++
+.. 選擇 * NetApp 客戶 / 終端使用者 * 。
+.. 在序號欄位中、輸入下列其中一項：
++
+*** Azure 訂閱 ID （若您使用 Azure NetApp Files ）。
+*** 如果您使用 Amazon FSX for NetApp ONTAP 、請使用檔案系統 ID 。
+
+
+
+
+
+
+
+NOTE: 如果您在登錄期間遇到任何問題、或是為了瞭解狀態、您可以在提出問題單 https://mysupport.netapp.com/site/help[] 。

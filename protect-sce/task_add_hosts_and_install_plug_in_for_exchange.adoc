@@ -1,7 +1,7 @@
 ---
 permalink: protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html 
 sidebar: sidebar 
-keywords: SnapCenter Plug-in for Microsoft Exchange Server 
+keywords: SnapCenter Plug-in for Microsoft Exchange Server, NET TCP 
 summary: 您可以使用SnapCenterAdd Host頁面來新增Windows主機。Exchange外掛程式會自動安裝在指定的主機上。這是安裝外掛程式的建議方法。您可以為個別主機或叢集新增主機並安裝外掛程式。 
 ---
 = 新增主機並安裝Exchange外掛程式
@@ -14,10 +14,16 @@ summary: 您可以使用SnapCenterAdd Host頁面來新增Windows主機。Exchang
 您可以使用SnapCenter 「更新主機」頁面來新增Windows主機。Exchange外掛程式會自動安裝在指定的主機上。這是安裝外掛程式的建議方法。您可以為個別主機或叢集新增主機並安裝外掛程式。
 
 .開始之前
+* 如果 SnapCenter 伺服器主機的作業系統為 Windows 2019 、而外掛主機的作業系統為 Windows 2022 、則應執行下列步驟：
++
+** 升級至 Windows Server 2019 （ OS Build 17763.5936 ）或更新版本
+** 升級至 Windows Server 2022 （ OS Build 20348.2402 ）或更新版本
+
+
 * 您必須是指派給角色的使用者、且該角色具有外掛程式安裝和解除安裝權限、例如SnapCenter 「支援支援支援中心」
 * 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.
 * 訊息佇列服務必須執行中。
-* 如果您使用群組託管服務帳戶（GMSA）、則應該使用管理權限來設定GMSA。如需相關資訊、請參閱link:task_configure_gMSA_on_windows_server_2012_or_later.html["在適用於Microsoft Exchange Server的Windows Server 2012或更新版本上設定群組託管服務帳戶"^]。
+* 如果您使用群組託管服務帳戶（GMSA）、則應該使用管理權限來設定GMSA。如需相關資訊，請參閱 link:task_configure_gMSA_on_windows_server_2012_or_later.html["在適用於Microsoft Exchange Server的Windows Server 2016或更新版本上設定群組託管服務帳戶"^]。
 
 
 .關於這項工作
@@ -184,4 +190,28 @@ NOTE: GMSA僅會做為SnapCenter Windows版的更新外掛程式服務的登入�
 NOTE: 在HA設定中、如果您要更新web.config檔案、則必須更新兩個節點上的檔案。
 
 . 監控安裝進度。
+
+
+
+
+== 設定自訂連接埠以進行 NET TCP 通訊
+
+根據預設、從 SnapCenter 6.0 版本開始、適用於 Windows 的 SnapCenter 外掛程式會使用連接埠 909 進行 NET TCP 通訊。如果連接埠 909 正在使用中、您可以設定另一個連接埠進行 NET TCP 通訊。
+
+.步驟
+. 將位於 _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\vssprovisters\navssprv.exe.config_ 的 _NetTCPPort_ 金鑰值修改為所需的連接埠編號。
+`<add key="NetTCPPort" value="new_port_number" />`
+. 將位於 _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-In for Microsoft Windows\SnapDriveService.dll.config_ 的 _NetTCPPort_ 金鑰值修改為所需的連接埠編號。
+`<add key="NetTCPPort" value="new_port_number" />`
+. 執行下列命令、取消登錄 Data ONTAP VSS 硬體供應商 _ 服務：
+`"C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\navssprv.exe" -r service -u`
++
+確認服務未顯示在 _services.msc_ 的服務清單中。
+
+. 執行下列命令、登錄 Data ONTAP VSS 硬體供應商 _ 服務：
+`"C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\vssproviders\navssprv.exe" -r service -a ".\LocalSystem"``
++
+驗證該服務是否現在顯示在 _services.msc_ 的服務清單中。
+
+. 重新啟動 _Plug-In for Windows_ 服務。
 

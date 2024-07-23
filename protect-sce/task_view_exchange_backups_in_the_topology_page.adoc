@@ -26,14 +26,21 @@ summary: 當您準備備備備份資源時、您可能會發現在一線和二�
 +
 例如、如果您使用原則建立6個備份、僅保留4個備份、則顯示的備份數為6。
 
-
-
 +
 |===
 
 
 | *最佳實務做法：*為了確保顯示正確數量的複寫備份、建議您重新整理拓撲。 
 |===
+
+
+
+
+如果您的次要關係是 SnapMirror 主動同步（最初以 SnapMirror Business Continuity [SM-BC] 發行）、您可以看到下列其他圖示：
+
+* image:../media/topology_replica_site_up.png["複本網站上線"] 表示複本站台已啟動。
+* image:../media/topology_replica_site_down.png["複本站台停機"]  表示複本站台已關閉。
+* image:../media/topology_reestablished.png["關係已重新建立"] 表示次要鏡射或資料保險箱關係尚未重新建立。
 
 
 .步驟
@@ -57,7 +64,12 @@ summary: 當您準備備備備份資源時、您可能會發現在一線和二�
 當應用程式資源分散於多個磁碟區時、用於備份的 SnapLock 到期時間將是磁碟區中為 Snapshot 設定的最長 SnapLock 到期時間。從 ONTAP 擷取最長的 SnapLock 過期時間。
 
 +
-在隨需備份之後、按一下 * 重新整理 * 按鈕可重新整理備份或複製的詳細資料。
+對於 SnapMirror 作用中同步、按一下「 * 重新整理 * 」按鈕、即可查詢主站台和複本站台的 ONTAP 、藉此重新整理 SnapCenter 備份清查。每週排程也會針對包含 SnapMirror 主動同步關係的所有資料庫執行此活動。
+
++
+** 對於 SnapMirror 主動式同步、以及僅適用於 ONTAP 9.14.1 、非同步鏡像或非同步 MirrorVault 與新主要目的地之間的關係、應該在容錯移轉後手動設定。從 ONTAP 9.15.1 開始、 Async Mirror 或 Async MirrorVault 會自動設定為新的主要目的地。容錯移轉之後。
+** 容錯移轉後、應建立備份、讓 SnapCenter 能夠感知容錯移轉。只有在建立備份之後、才能按一下 * 重新整理 * 。
+
 
 . 在「管理複本」檢視中、按一下主儲存設備或次儲存設備的*備份*、即可查看備份的詳細資料。
 +

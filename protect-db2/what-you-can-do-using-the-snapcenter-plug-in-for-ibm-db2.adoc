@@ -1,0 +1,23 @@
+---
+permalink: protect-db2/what-you-can-do-using-the-snapcenter-plug-in-for-ibm-db2.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for IBM Db2 
+summary: 當您在環境中安裝適用於 IBM DB2 的外掛程式時、可以使用 SnapCenter 來備份、還原及複製 IBM DB2 及其資源。您也可以執行支援這些作業的工作。 
+---
+= 您可以使用 SnapCenter Plug-in for IBM DB2 執行哪些工作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您在環境中安裝適用於 IBM DB2 資料庫的外掛程式時、可以使用 SnapCenter 來備份、還原及複製 IBM DB2 資料庫及其資源。您也可以執行支援這些作業的工作。
+
+* 新增資料庫。
+* 建立備份。
+* 從備份還原。
+* 複製備份：
+* 排程備份作業。
+* 監控備份、還原及複製作業。
+* 檢視備份、還原及複製作業的報告。
+

@@ -23,7 +23,7 @@ NOTE: 不支援在不同叢集上使用相同名稱的多個SVM。SnapCenter每�
 * 新增主機、安裝外掛程式、探索（重新整理）資源、以及設定外掛程式。
 * 執行Invoke-SmConfigureResources、將現有的Microsoft SQL Server資料庫從本機磁碟移至NetApp LUN、反之亦然。
 +
-如需執行Cmdlet的資訊、請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886895["《軟件指令程式參考指南》SnapCenter"]
+如需執行 Cmdlet 的詳細資訊 , 請參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"]
 
 * 如果您使用SnapCenter VMware vCenter Server來保護位於VMware RDM LUN或VMDK上的SQL資料庫、則必須部署SnapCenter VMware vSphere的「支援VMware vSphere的支援中心」外掛程式、並以SnapCenter 「支援中心」登錄外掛程式。VMware vSphere的《VMware vCenter外掛程式》文件有更多資訊。SnapCenter
 +

@@ -33,7 +33,7 @@ NOTE: 在鏡射保存庫類型磁碟區上、版本彈性鏡像的備份複本�
 
 NOTE: 在鏡射保存庫類型磁碟區上、版本彈性鏡像的備份複本會顯示在拓撲檢視中、但拓撲檢視中的鏡射備份計數並不包含版本彈性備份。
 
-如果您與 SnapMirror 業務連續性（ SM-BC ）有次要關係、您可以看到下列其他圖示：
+如果您的次要關係是 SnapMirror 主動同步（最初以 SnapMirror Business Continuity [SM-BC] 發行）、您可以看到下列其他圖示：
 
 * image:../media/topology_replica_site_up.png["複本網站上線"] 表示複本站台已啟動。
 * image:../media/topology_replica_site_down.png["複本站台停機"]  表示複本站台已關閉。
@@ -61,10 +61,10 @@ NOTE: 在鏡射保存庫類型磁碟區上、版本彈性鏡像的備份複本�
 當應用程式資源分散於多個磁碟區時、用於備份的 SnapLock 到期時間將是磁碟區中為 Snapshot 設定的最長 SnapLock 到期時間。從 ONTAP 擷取最長的 SnapLock 過期時間。
 
 +
-對於 SnapMirror 業務連續性（ SM-BC ）、按一下「 *Refresh* 」（重新整理 * ）按鈕、查詢主站台和複本站台的 ONTAP 、以重新整理 SnapCenter 備份庫存。每週排程也會針對包含 SM-BC 關係的所有資料庫執行此活動。
+對於 SnapMirror 作用中同步、按一下「 * 重新整理 * 」按鈕、即可查詢主站台和複本站台的 ONTAP 、藉此重新整理 SnapCenter 備份清查。每週排程也會針對包含 SnapMirror 主動同步關係的所有資料庫執行此活動。
 
 +
-** 對於 SMBC 、 Async Mirror 、 Vault 或 MirrorVault 與新主要目的地的關係、應在容錯移轉後手動設定。
+** 對於 SnapMirror 主動式同步、以及僅適用於 ONTAP 9.14.1 、非同步鏡像或非同步 MirrorVault 與新主要目的地之間的關係、應該在容錯移轉後手動設定。從 ONTAP 9.15.1 開始、 Async Mirror 或 Async MirrorVault 會自動設定為新的主要目的地。
 ** 容錯移轉後、應建立備份、讓 SnapCenter 能夠感知容錯移轉。只有在建立備份之後、才能按一下 * 重新整理 * 。
 
 
@@ -79,12 +79,6 @@ NOTE: 您無法重新命名或刪除二線儲存系統上的備份。
 
 +
 如果您使用SnapCenter 的是「還原自訂外掛程式」、則無法重新命名主要儲存系統上的備份。
-
-+
-** 如果您選取Oracle資源或資源群組的備份、也可以執行掛載和卸載作業。
-** 如果您已選取Oracle資源或資源群組的記錄備份、則可以執行重新命名、掛載、卸載及刪除作業。
-** 如果您使用SnapCenter 適用於Linux的支援還原外掛程式套件、並已使用Oracle Recovery Manager（RMAN）將備份編錄為目錄、則無法重新命名這些已編製的備份。
-
 
 . 如果您要刪除複本、請從表格中選取複本、然後按一下 image:../media/delete_icon.gif["刪除圖示"] 刪除複本。
 

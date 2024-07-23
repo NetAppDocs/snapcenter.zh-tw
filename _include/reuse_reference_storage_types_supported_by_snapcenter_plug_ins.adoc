@@ -88,6 +88,16 @@ VMware VM
 
 
  a| 
+VMware VM
+ a| 
+NFS 和 SAN 上的 VVOL 資料存放區
+ a| 
+VMware vSphere適用的VMware工具ONTAP
+ a| 
+
+
+
+ a| 
 Hyper-V VM
  a| 
 虛擬光纖通道交換器所連接的虛擬FC（vFC）LUN

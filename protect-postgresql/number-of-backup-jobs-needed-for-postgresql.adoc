@@ -1,0 +1,14 @@
+---
+permalink: protect-postgresql/number-of-backup-jobs-needed-for-postgresql.html 
+sidebar: sidebar 
+keywords: SnapCenter Plug-in for postgresql 
+summary: 決定所需備份工作數目的因素包括資源大小、使用的磁碟區數目、資源變更率、以及服務層級協議（SLA）。 
+---
+= PostgreSQL 所需的備份工作數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+決定所需備份工作數目的因素包括資源大小、使用的磁碟區數目、資源變更率、以及服務層級協議（SLA）。
