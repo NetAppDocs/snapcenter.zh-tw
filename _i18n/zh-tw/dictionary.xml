@@ -2993,7 +2993,6 @@
   <block id="91fd94b5750743b0b4db66d235c0cab9" category="list-text">若要檢視所有已新增的叢集、請選取* ONTAP 《叢集》*。</block>
   <block id="98670eb8cc95dd053ed921df2975cefe" category="list-text">在Storage Connections（儲存連線）清單中、找到Controller License（控制器授權）欄。</block>
   <block id="56ea331cb0dea9dc3bddc3e0e2f3ef88" category="paragraph">「Controller License」（控制器授權）欄會顯示下列狀態：</block>
-  <block id="a909f2df296012a51dc7da77f9e20dc6" category="list-text">不適用表示SnapManager 由於儲存控制器位於Cloud Volumes ONTAP 不適用的地方、所以不適用某個不適用的功能。ONTAP Select</block>
   <block id="e7590fb47d0f1f083a0a8a323aa643a0" category="admonition">以控制器為基礎的「以程式控制器為基礎」授權會顯示為SnapManagerSuite授權。SnapCenter</block>
   <block id="9865599458fea2a88fc4f94d29ab5c4e" category="list-text">輸入license show命令、然後檢視輸出以判斷是否已安裝SnapManagerSuite授權。</block>
   <block id="5b12cbd18ef5bbd432e4411b45e422ad" category="paragraph">在此範例中、SnapManagerSuite授權已安裝、因此不SnapCenter 需要執行其他的功能驗證動作。</block>
@@ -8790,7 +8789,6 @@ Snapshot 作業。</block>
   <block id="15d048e327e80031abf5c8b2302df43b" category="paragraph">支援MySQL Server 8.0.37或更新版本作為不支援的儲存庫資料庫。SnapCenter SnapCenter如果您使用舊版的MySQL Server搭配舊版SnapCenter 的功能、SnapCenter 在進行更新時、MySQL Server會升級至8.0.37或更新版本。</block>
   <block id="1dc4cb439c92e9e74deaa08a6206fd89" category="admonition">SnapCenter 也支援 AWS 彈性負載平衡（ Elb ）和 Azure 負載平衡。</block>
   <block id="e9782ad9d0230912b51a2e508d0dd653" category="paragraph">如需更多資訊、請參閱<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
-  <block id="953ceaee3fd51554dfa1935fc3bed9c7" category="admonition">不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenterAmazon FSX for NetApp ONTAP 和 Cloud Volumes ONTAP 不再需要容量型授權。</block>
   <block id="c11dc4986aae3f449b65e2cc978cb5da" category="paragraph">您應該安裝一SnapCenter 或多個版本的不二授權。有關如何添加許可證的信息，請參見 <block ref="978050eb868e07441781781da059ebc5" category="inline-link-macro-rx"></block>。</block>
   <block id="b69cd8afc7ba47f5300e7eb1864b6e2f" category="admonition">只有在使用SnapCenter 以VMware控制器為基礎的授權時、才需要手動移除試用授權。</block>
   <block id="de07b96d6e0726ed58c0b7506fed6a37" category="paragraph">如需 Cmdlet 的相關資訊，請參閱<block ref="60f235ced4554b230bb7034fc116cf25" category="inline-link-rx"></block>。</block>
@@ -8953,7 +8951,6 @@ Snapshot 作業。</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="list-title">接下來呢？</block>
   <block id="eafc328b587e3beef3dbe108a3dedcf8" category="list-text">如果 _SELinux 狀態 _ 為「已啟用」、且 _current-mode_ 為「強制」、則 *NginX* 服務無法啟動。您應該執行下列命令：</block>
   <block id="9c7abc376e895129105e281972c9f24c" category="list-text">移至主目錄。</block>
-  <block id="fffce54e1b9446cd2fa32f9d3350c088" category="list-text">執行命令：<block ref="4a8e78821c4854328b05bdd52e9bee4b" prefix=" " category="inline-code"></block>。</block>
   <block id="dbc1e96eaa4b3649ea27aa8dc172aef0" category="list-text">如果不允許 Webapp 內部連接埠（ 8147 ）接聽、請執行下列命令：</block>
   <block id="d8febff31d9105c404a858b1d61e0262" category="list-text"><block ref="d59b1175be1c68f2945ba0ad1856a015" prefix="" category="inline-code"></block></block>
   <block id="f1c7a9d24546d515c477f616b931f8fe" category="list-text"><block ref="d772e354c2fa82d230ec267576cbcac4" prefix="" category="inline-code"></block></block>
@@ -9875,4 +9872,8 @@ Snapshot 作業。</block>
   <block id="57318c547ffe570761f4a3f4b7899d67" category="sidebar">使用 PowerShell Cmdlet 還原 PostgreSQL</block>
   <block id="480aaec5aa69b781016a62284565640a" category="sidebar">複製 PostgreSQL 資源備份</block>
   <block id="680c5ccf46f4a728694c590785dc9cda" category="sidebar">複製 PostgreSQL 叢集備份</block>
+  <block id="881cbdbe2345b7472ef428b8c524734a" category="admonition">不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenterAmazon FSX for NetApp ONTAP 和 Cloud Volumes ONTAP 不再需要容量型授權。Azure NetApp Files 不需要標準授權和容量型授權。</block>
+  <block id="eba5bfa2c0dc8d9f24998cf70fa891a6" category="list-text">不適用表示 SnapManager 套件授權不適用、因為儲存控制器位於 Amazon FSX for NetApp ONTAP 、 Cloud Volumes ONTAP 、 ONTAP Select 或次要儲存平台上。</block>
+  <block id="4e07c38c016a099592ed905ac7e037f7" category="list-text">執行命令：<block ref="1031a5113d1c9ac03f4fa3db4c69d3a4" prefix=" " category="inline-code"></block>。</block>
+  <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Azure NetApp Files 不需要標準授權和容量型授權。</block>
 </blocks>

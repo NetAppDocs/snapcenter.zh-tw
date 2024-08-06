@@ -130,7 +130,7 @@ _webapp_extal_port_ 的預設值為 8146
 * 如果 _SELinux 狀態 _ 為「已啟用」、且 _current-mode_ 為「強制」、則 *NginX* 服務無法啟動。您應該執行下列命令：
 +
 .. 移至主目錄。
-.. 執行命令： `jorunalctl -x|grep nginx`。
+.. 執行命令： `journalctl -x|grep nginx`。
 .. 如果不允許 Webapp 內部連接埠（ 8147 ）接聽、請執行下列命令：
 +
 *** `ausearch -c 'nginx' --raw | audit2allow -M my-nginx`

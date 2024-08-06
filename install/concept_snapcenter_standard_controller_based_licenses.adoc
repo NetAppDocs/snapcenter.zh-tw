@@ -54,7 +54,7 @@ NOTE: 如果SnapManager 您的控制器上已經有一個用作支援的版本�
 +
 ** image:../media/controller_licensed_icon.gif["核取圖示"] 表示 SnapManager 套件授權已安裝在 FAS 、 AFF 或 ASA 主儲存系統上。
 ** image:../media/controller_not_licensed_icon.gif["取消圖示"] 表示 SnapManager 套件授權未安裝在 FAS 、 AFF 或 ASA 主儲存系統上。
-** 不適用表示SnapManager 由於儲存控制器位於Cloud Volumes ONTAP 不適用的地方、所以不適用某個不適用的功能。ONTAP Select
+** 不適用表示 SnapManager 套件授權不適用、因為儲存控制器位於 Amazon FSX for NetApp ONTAP 、 Cloud Volumes ONTAP 、 ONTAP Select 或次要儲存平台上。
 
 
 

@@ -15,6 +15,9 @@ summary: 在 SnapCenter 中設定 Azure 儲存帳戶。
 
 Azure 儲存設備帳戶包含有關訂閱 ID 、 Azure 認證和 Azure NetApp 帳戶的詳細資料。
 
+
+NOTE: Azure NetApp Files 不需要標準授權和容量型授權。
+
 .步驟
 . 在左導覽窗格中、按一下*儲存系統*。
 . 在儲存系統頁面中、選取 * Azure NetApp Files * 、然後按一下 * 新 * 。

@@ -87,7 +87,7 @@ NOTE: 我們建議您將SnapCenter 不需要的「不二用」授權新增至次
 
 |===
 
-NOTE: 不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenterAmazon FSX for NetApp ONTAP 和 Cloud Volumes ONTAP 不再需要容量型授權。
+NOTE: 不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenterAmazon FSX for NetApp ONTAP 和 Cloud Volumes ONTAP 不再需要容量型授權。Azure NetApp Files 不需要標準授權和容量型授權。
 
 您應該安裝一SnapCenter 或多個版本的不二授權。有關如何添加許可證的信息，請參見 link:../install/concept_snapcenter_standard_controller_based_licenses.html["新增SnapCenter 以控制器為基礎的功能"]。
 
