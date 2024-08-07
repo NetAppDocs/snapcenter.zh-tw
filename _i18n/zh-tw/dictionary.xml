@@ -4538,8 +4538,6 @@
   <block id="835be123689a0c878d2a9b458e5bf334" category="paragraph">如果資料庫以ARCHIVELOG模式執行、SnapCenter 則根據指定的SCN、所選日期和時間或所有記錄選項、來識別並掛載最佳的記錄備份數量。</block>
   <block id="f99510060ae91e89fdabd39c0e222578" category="paragraph">如果您仍要指定外部歸檔記錄檔的位置、請選取*指定外部歸檔記錄位置*。</block>
   <block id="5207ebbbc32a1a4bd295b43498ad0913" category="paragraph">如果在備份時剪除歸檔記錄、而且您手動掛載了所需的歸檔記錄備份、則必須將掛載的備份路徑指定為外部歸檔記錄位置以供還原。</block>
-  <block id="58fa648380c73e758318652a30ff424d" category="inline-link">NetApp技術報告4591：資料庫資料保護備份、恢復、複寫及災難恢復</block>
-  <block id="5e8af025f634ab1bdb43a04eac96f1c3" category="list-text"><block ref="5e8af025f634ab1bdb43a04eac96f1c3" category="inline-link-rx"></block></block>
   <block id="d4242c48bd0d5641374fbc107c7d9f14" category="inline-link">ORA-00308錯誤導致作業失敗</block>
   <block id="79ca58af823b457a1798d606cfd6d6ae" category="list-text"><block ref="79ca58af823b457a1798d606cfd6d6ae" category="inline-link-rx"></block></block>
   <block id="73ee3801ba5f54ed62d44865741a046d" category="paragraph">如果歸檔記錄磁碟區未受到保護、但資料磁碟區受到保護、則無法從二線備份執行還原。您只能選取*「No recovery」（*無恢復）*來還原。</block>
@@ -9876,4 +9874,6 @@ Snapshot 作業。</block>
   <block id="eba5bfa2c0dc8d9f24998cf70fa891a6" category="list-text">不適用表示 SnapManager 套件授權不適用、因為儲存控制器位於 Amazon FSX for NetApp ONTAP 、 Cloud Volumes ONTAP 、 ONTAP Select 或次要儲存平台上。</block>
   <block id="4e07c38c016a099592ed905ac7e037f7" category="list-text">執行命令：<block ref="1031a5113d1c9ac03f4fa3db4c69d3a4" prefix=" " category="inline-code"></block>。</block>
   <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Azure NetApp Files 不需要標準授權和容量型授權。</block>
+  <block id="9e19caeb431a5e29a1a63e3cee4b36c9" category="inline-link">使用 ONTAP 保護 Oracle 資料</block>
+  <block id="d118010bb2b3542007c6749bfd237123" category="list-text"><block ref="d118010bb2b3542007c6749bfd237123" category="inline-link-rx"></block></block>
 </blocks>

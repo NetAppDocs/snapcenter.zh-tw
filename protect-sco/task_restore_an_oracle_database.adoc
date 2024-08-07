@@ -176,7 +176,7 @@ NOTE: 非Data Guard資料庫不會備份重作記錄檔。對於非Data Guard資
 
 NOTE: 在將掛載路徑列為外部記錄位置之前、您應該先確認其路徑和內容。
 
-** http://www.netapp.com/us/media/tr-4591.pdf["NetApp技術報告4591：資料庫資料保護備份、恢復、複寫及災難恢復"^]
+** https://docs.netapp.com/us-en/ontap-apps-dbs/oracle/oracle-dp-overview.html["使用 ONTAP 保護 Oracle 資料"^]
 ** https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["ORA-00308錯誤導致作業失敗"^]
 
 
