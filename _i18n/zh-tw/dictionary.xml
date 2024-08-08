@@ -9876,4 +9876,6 @@ Snapshot 作業。</block>
   <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Azure NetApp Files 不需要標準授權和容量型授權。</block>
   <block id="9e19caeb431a5e29a1a63e3cee4b36c9" category="inline-link">使用 ONTAP 保護 Oracle 資料</block>
   <block id="d118010bb2b3542007c6749bfd237123" category="list-text"><block ref="d118010bb2b3542007c6749bfd237123" category="inline-link-rx"></block></block>
+  <block id="26d0f7d5ea2b87e82f98d6e622ecf6a0" category="admonition">從 5.0 開始、只有 REST API 支援 vserver 管理使用者。如果您想要使用非 vserver admin 建立角色、請使用 ZAPI 。</block>
+  <block id="3955db71dd681bf23ceee85c567a0129" category="admonition">從 SnapCenter 5.0 開始、叢集管理使用者只能使用 REST API 。如果您想要使用非叢集管理來建立角色、則應使用 ZAPI 。</block>
 </blocks>
