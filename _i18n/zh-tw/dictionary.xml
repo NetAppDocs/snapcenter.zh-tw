@@ -7467,7 +7467,6 @@
   <block id="24642a08e354f43168ca4f1178850f84" category="list-text">您應確保 LUN 未使用由混合式傳輸協定 iSCSI 和 FC 組成的 iGroup 、對應至 AIX 主機。如需詳細資訊、請參閱<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>。</block>
   <block id="4fb437564892944d73f87c822342e2bb" category="cell">4.8.</block>
   <block id="028a3c414b2f36abce9baa1df750ef89" category="admonition">CA 憑證 RSA 金鑰長度至少應為 3072 位元。</block>
-  <block id="deea3f8b34edb1c0cdb33001b691b29b" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="b04e67b184528fc82164b880a0386a24" category="inline-link-rx"></block>。</block>
   <block id="36fecb1daf18c8eeaacbcc8cdc70f4a6" category="paragraph">ONTAP 主要和次要可以是 ONTAP FAS 、 AFF 、 All SAN Array （ ASA ）、 Select 或 Cloud ONTAP 。</block>
   <block id="d21fbb2a5ce79a2a4ef0780b73023b2e" category="paragraph">VM 主機上的實體和 NFS 直接掛載（不支援 VMDK 和 RDM LUN ）。</block>
   <block id="f2688d5a483bee7fcbd80a4e666fc088" category="inline-link">主機公用程式文件</block>
@@ -8289,27 +8288,8 @@ SnapLock 設定是由 ONTAP 管理。</block>
   <block id="106eca4a643cd4a82ba724aaf63cf399" category="sidebar">還原及還原 Unix 檔案系統</block>
   <block id="acebdece1b3734e875859ee761ab347e" category="sidebar">複製 Unix 檔案系統</block>
   <block id="1121f6eb8ee08b3fbbc4d05a5ee6ca76" category="sidebar">技術更新</block>
-  <block id="72e3ebd15de33a3a4ac48a1468899e30" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="96a4ccff2c2cba2d64ff2f5bfcf95100" category="inline-link-rx"></block>。</block>
-  <block id="8585a7e2d9203547a9e1b2e127f530dc" category="paragraph">。<block ref="3c59f2e9aad2adb626f5cfbb7cd6a195" category="inline-link-rx"></block> 包含支援版本的最新資訊。</block>
-  <block id="059617cda1a3061ea2a2b4188965fe4d" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="f6a41fefbf1f1f164dbf4b318a39da2c" category="inline-link-rx"></block>。</block>
-  <block id="dc01c492280ce1fd1596d5e3bfe5bf41" category="list-text"><block ref="7a8856912beac423472b387a1e95361d" category="inline-link-rx"></block></block>
-  <block id="e0fa72ed5f9179a3d82835be00b885dd" category="paragraph">如需受支援Oracle版本的最新資訊、請參閱<block ref="f6a41fefbf1f1f164dbf4b318a39da2c" category="inline-link-rx"></block>。</block>
-  <block id="bd0863e85294598fc754a3f8e2f9a2f3" category="paragraph">《Oracle資料庫適用的支援使用支援的組態SnapCenter 》（英文）列於中<block ref="f6a41fefbf1f1f164dbf4b318a39da2c" category="inline-link-rx"></block>。</block>
   <block id="336669dbe720233ed5577ddf81b653d3" category="cell">5.0%</block>
-  <block id="4827d738536c61364b7a0c0897decc5e" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱
-<block ref="11af8d048e93c986989d5d8307216023" category="inline-link-rx"></block>。</block>
-  <block id="6268ab5682b70d4583394ece011d28a6" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="706ed2d40d8eb3989e1decea39a45a3e" category="inline-link-rx"></block>。</block>
-  <block id="4d019cbbbce62c6057181f21cd89ce78" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="27abb638c2bba159579a52674dd632d7" category="inline-link-rx"></block>。</block>
-  <block id="02f8e5ab9e96307a7e333587345f3284" category="paragraph">如需支援版本的最新資訊、請參閱
-<block ref="11af8d048e93c986989d5d8307216023" category="inline-link-rx"></block>。</block>
-  <block id="a8573850e5659feeef81fcbac3f67b09" category="paragraph">如需支援的應用程式和資料庫詳細資訊、請參閱<block ref="6b3ef4eef08ac0feed960a06e1cce7e2" category="inline-link-rx"></block>。</block>
-  <block id="0399ed9d4322925cd652419c6e80ccbb" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="6b3ef4eef08ac0feed960a06e1cce7e2" category="inline-link-rx"></block>。</block>
   <block id="4bb4114cf33351f203faec5f1e34960e" category="paragraph"><block ref="11d2d1b194d6948e42dc38dca8202191" category="inline-link-rx"></block></block>
-  <block id="9dddc634db431dab44c50f3fd8460055" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="f427499ed0a5ab6c4e27afbbda198682" category="inline-link-rx"></block></block>
-  <block id="649d8184d4bc981264b0d66852b40d56" category="paragraph"><block ref="5274e0d1c22af55a55e01a625855ced0" category="inline-link-rx"></block></block>
-  <block id="924dbab7608ad7bebe0adaf9e15b8542" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱 <block ref="c16ce45673244a1fe516b0ed4d92ee5c" category="inline-link-rx"></block>。</block>
-  <block id="d24a44cebb5d893d4a6ffefcfde236ea" category="paragraph">如需ONTAP 瞭解功能與應用程式外掛程式的最低需求、請參閱<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block>。</block>
-  <block id="9f15a95270d57c31e3fbf8e82eb6d5a6" category="paragraph">請參閱<block ref="fb6518117a57311639cf7e25ef1c11e1" category="inline-link-rx"></block></block>
   <block id="9166c380efba6c6a0d61dc08bcc135ee" category="summary">為您要備份的資源或資源群組建立備份原則。</block>
   <block id="73f45971c435fbf9828b3c34fe76a670" category="paragraph">在使用SnapCenter 支援功能來備份Oracle資料庫資源之前、您必須先為要備份的資源或資源群組建立備份原則。</block>
   <block id="32005b30ff172564875bf82c9538168f" category="list-text">從下拉式清單中選取 Oracle 資料庫。</block>
@@ -9878,4 +9858,30 @@ Snapshot 作業。</block>
   <block id="d118010bb2b3542007c6749bfd237123" category="list-text"><block ref="d118010bb2b3542007c6749bfd237123" category="inline-link-rx"></block></block>
   <block id="26d0f7d5ea2b87e82f98d6e622ecf6a0" category="admonition">從 5.0 開始、只有 REST API 支援 vserver 管理使用者。如果您想要使用非 vserver admin 建立角色、請使用 ZAPI 。</block>
   <block id="3955db71dd681bf23ceee85c567a0129" category="admonition">從 SnapCenter 5.0 開始、叢集管理使用者只能使用 REST API 。如果您想要使用非叢集管理來建立角色、則應使用 ZAPI 。</block>
+  <block id="3fd57bbce38ee807b2553fd56f562c3a" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>。</block>
+  <block id="785127eaa67d3c056c9086f5c305587c" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱 <block ref="e3393440e41cc60e26745e63c4eef2dd" category="inline-link-rx"></block>NetApp 互通性對照表工具 ^] 。</block>
+  <block id="e688fd8ff964975e518ba6e9fff48630" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block>。</block>
+  <block id="580a1e1b3bc67640f27785bacfdba10c" category="paragraph">如需支援版本的最新資訊，請參閱 <block ref="fd691abce396db29ca9081f79eea36a4" category="inline-link-rx"></block>。</block>
+  <block id="f773b518874c315e0079bcc43b41dafb" category="paragraph">如需支援版本的最新資訊，請參閱 <block ref="7e664c06fb213184870ee71fe5278749" category="inline-link-rx"></block>。</block>
+  <block id="abac3270d109e89fa7d33d34cb7eace2" category="paragraph">如需支援版本的最新資訊，請參閱：<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>。</block>
+  <block id="bb3f099cca59ac36a7f16baec282b9bb" category="paragraph">如需支援應用程式和資料庫的詳細資訊，請參閱<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>。</block>
+  <block id="5ff7954c3f2b829e25e83d1cec41fd90" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="bf4b590a983f5498451b0eaa24cb5904" category="inline-link-rx"></block>。</block>
+  <block id="0a2ff1c0a6b2aee7bcd66cc2b6860aee" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="fe8a65f917aada6df3764fc6c6209a28" category="inline-link-rx"></block>。</block>
+  <block id="752a11b4b210ea35436698a7cd80caea" category="paragraph"><block ref="e7d7a2115bf371d0f0089011e31cda38" category="inline-link-rx"></block></block>
+  <block id="f2a30e95b118ce2c4e84d94437f4a891" category="paragraph"><block ref="441e536b7611a093a15728d219a7454c" category="inline-link-rx"></block></block>
+  <block id="ae40aaa559a1bbbe76fec5e022433b75" category="paragraph"><block ref="351286a887d0b0d2fc33bf3b0aea6c46" category="inline-link-rx"></block></block>
+  <block id="9739b5dca00527fc095cb7d7328ae9a7" category="paragraph"><block ref="4ff8a1baebd27154daa6b321538c5ed7" category="inline-link-rx"></block></block>
+  <block id="56a209ac4190647592f4f2269ba15e4b" category="paragraph"><block ref="c8cd869b77fffd17e64627cb1aa57436" category="inline-link-rx"></block></block>
+  <block id="15819c8f1b3ff9ce9e18a6765617b72f" category="paragraph"><block ref="370c38cf447e1e69e1ad058e85ef81da" category="inline-link-rx"></block></block>
+  <block id="b292068e5bdee43d554d534df100834f" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="bf4b590a983f5498451b0eaa24cb5904" category="inline-link-rx"></block></block>
+  <block id="26c29286acbcac90c9ca148d0edc6829" category="paragraph"><block ref="f4c726cc6a480d91bc287e4e17640f59" category="inline-link-rx"></block></block>
+  <block id="cbf06340cf7e3ebe82b098559b7d3b1d" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱<block ref="ac8016761c99410cb5502fc617daf49f" category="inline-link-rx"></block> NetApp 互通性對照表工具 ^] 。</block>
+  <block id="dd51beca21dafbea1327c8a54048049f" category="paragraph">SnapCenter Plug-in for Oracle Database 支援的組態列於中<block ref="f921a84bb94ef2f856de2002022c7838" category="inline-link-rx"></block>。</block>
+  <block id="ea7066cba2f5864f04733d3067090883" category="list-text"><block ref="24657c22d8d7f925e015eed9a43e11c5" category="inline-link-rx"></block></block>
+  <block id="93c316672b17211820e2eaed5f45f68f" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="b02065f5fe9f591a1587fb1e13c5796e" category="inline-link-rx"></block>。</block>
+  <block id="b394be29329a30bfde3ff6670085b4f8" category="paragraph"><block ref="df4d48b0823cb16de0f94c0dcd83ea6f" category="inline-link-rx"></block>包含支援版本的最新資訊。</block>
+  <block id="54634901ea136d581a907da437231faa" category="paragraph">如需支援 Oracle 版本的最新資訊，請參閱<block ref="f921a84bb94ef2f856de2002022c7838" category="inline-link-rx"></block>。</block>
+  <block id="266df807c209259b6527f0402eec5ecc" category="paragraph">如需 ONTAP 和應用程式外掛程式的最低需求、請參閱<block ref="da65d29edc3443bf674cd57705cb58f7" category="inline-link-rx"></block> [ 互通性對照表工具 ^] 。</block>
+  <block id="0d9aba31602daa8aa7c78b179f23a57a" category="paragraph">請參閱<block ref="5ef8c586cada32cf8eb7b081f126f3ff" category="inline-link-rx"></block></block>
+  <block id="f4c1fea93a54108320484de7aa75a48a" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="a174ad87a36b51cae5fdf2582f4fe3d8" category="inline-link-rx"></block> NetApp 互通性對照表工具 ^] 。</block>
 </blocks>

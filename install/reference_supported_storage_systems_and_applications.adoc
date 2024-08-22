@@ -26,7 +26,7 @@ summary: 您應該知道支援的儲存系統、應用程式和資料庫。
 
 * 支援不同應用程式和資料庫的保護。SnapCenter
 +
-如需支援的應用程式和資料庫詳細資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=116859;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援應用程式和資料庫的詳細資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 * SnapCenter 4.9 P1 及更新版本支援在 VMware Cloud on Amazon Web Services （ AWS ）軟體定義資料中心（ SDDC ）環境中保護 Oracle 和 Microsoft SQL 工作負載。
 +

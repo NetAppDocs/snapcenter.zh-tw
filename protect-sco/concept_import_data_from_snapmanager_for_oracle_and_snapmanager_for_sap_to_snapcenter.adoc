@@ -35,7 +35,7 @@ NOTE: 不支援SnapCenter 從無法從圖形化使用者介面（GUI）匯入資
 
 在您將資料從SnapManager 適用於Oracle的物件3.4.x和SnapManager 適用於SAP的物件3.4.x匯入SnapCenter 到物件之前、您應該先瞭解SnapCenter 適用於Oracle資料庫的支援使用此功能的組態。
 
-《Oracle資料庫適用的支援使用支援的組態SnapCenter 》（英文）列於中 https://imt.netapp.com/matrix/imt.jsp?components=117016;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+SnapCenter Plug-in for Oracle Database 支援的組態列於中 https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 

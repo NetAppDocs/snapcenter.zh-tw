@@ -20,7 +20,7 @@ summary: 您應該使用 SnapCenter 使用者介面（ UI ）來安裝 PostgreSQ
 互通性對照表工具IMT （Interoperability Matrix Tool、簡稱「互通性對照表工具」）包含有關支援組態的最新資訊。
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=121069;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
 * 適用於 PostgreSQL 叢集的 SnapCenter 外掛程式是適用於 Linux 的 SnapCenter 外掛程式套件的一部分。在安裝SnapCenter 適用於Linux的支援功能套件之前、您應該已經在SnapCenter Windows主機上安裝了支援功能。
 

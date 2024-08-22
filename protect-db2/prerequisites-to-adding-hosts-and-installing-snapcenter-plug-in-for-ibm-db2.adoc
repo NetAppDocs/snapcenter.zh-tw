@@ -35,7 +35,7 @@ NOTE: 不支援IBM Java。
 http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
 
 
@@ -50,7 +50,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src
 http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=117015;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
+https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
 * 對於在 Linux 主機上執行的 IBM DB2 資料庫、當安裝適用於 IBM DB2 的外掛程式時、會自動安裝適用於 UNIX 的 SnapCenter 外掛程式。
 * 您應該將 * bash* 作為外掛程式安裝的預設 Shell 。
