@@ -20,7 +20,7 @@ summary: 在新主機上安裝相同版本的 SnapCenter 伺服器、然後執�
 
 
 . 以 SnapCenter Admin 使用者的身分登入。
-. 使用 API 在舊主機上建立 SnapCenter 伺服器的備份： `/5.0/server/backup` 或 Cmdlet ： _New-SmServerBackup_ 。
+. 使用 API: 或 Cmdlet:_New-SmServerBackup_ 在舊主機上建立 SnapCenter 伺服器的備份 `/<snapcenter_version>/server/backup` 。
 +
 
 NOTE: 在進行備份之前、請先暫停所有排程工作、並確保沒有工作正在執行。
@@ -30,9 +30,9 @@ NOTE: 在進行備份之前、請先暫停所有排程工作、並確保沒有�
 IMPORTANT: 如果您想要在新網域上執行的 SnapCenter 伺服器上還原備份、在進行備份之前、您應該在舊的 SnapCenter 主機中新增新的網域使用者、並指派 SnapCenter 管理員角色。
 
 . 將備份從舊主機複製到新主機。
-. 使用 API 在新主機上還原 SnapCenter 伺服器的備份： `/5.0/server/restore` 或 Cmdlet ： _Restore-SmServerBackup_ 。
+. 使用 API: 或 Cmdlet:_Restore-SmServerBackup_ 在新主機上還原 SnapCenter 伺服器的備份 `/<snapcenter_version>/server/restore` 。
 +
-依預設、還原會更新所有主機中的新 SnapCenter 伺服器 URL 。如果您想略過更新、請使用 --SkipSMSURLInHosts_ 屬性、並使用以下其中一種 API 執行、分別更新伺服器 URL ： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+依預設、還原會更新所有主機中的新 SnapCenter 伺服器 URL 。如果您想略過此更新、請使用 --SkipSMSURLInHosts_ 屬性、並使用 API 或 Cmdlet 執行、分別更新伺服器 URL `/<snapcenter_version>/server/configureurl` ： _Set-SmServerConfig_ 。
 
 +
 
@@ -49,7 +49,7 @@ NOTE: 伺服器 /etc/host_ 項目將不會還原。您可以從舊伺服器手�
 
 NOTE: 如果您已手動更新舊 SnapCenter 主機中的 web.config 檔案、更新將不會複製到新主機。您應該在新主機的 web.config 檔案中手動進行相同的變更。
 
-. 如果您已略過更新 SnapCenter 伺服器 URL 、或是還原過程中任何主機當機、請使用 API 更新由 SnapCenter 管理的所有主機或指定主機中的新伺服器名稱： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+. 如果您在還原程序期間略過更新 SnapCenter 伺服器 URL 或任何主機當機、請使用 API: 或 Cmdlet:_Set-SmServerConfig_ 、更新由 SnapCenter 管理的所有主機或指定主機中的新伺服器名稱 `/<snapcenter_version>/server/configureurl` 。
 . 從新的 SnapCenter 伺服器啟動所有主機上的排程工作。
 
 
@@ -62,7 +62,7 @@ NOTE: 如果您已手動更新舊 SnapCenter 主機中的 web.config 檔案、�
 如需如何將節點新增至 F5 叢集的相關資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["使用SnapCenter F5設定高可用度的功能"]。
 
 
-NOTE: 如果 F5 叢集的 URL 變更、則可以使用 API 在所有主機中更新 URL ： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+NOTE: 如果 F5 叢集的 URL 變更、則可以使用 API 或 Cmdlet 在所有主機中更新 URL `/<snapcenter_version>/server/configureurl` ： _Set-SmServerConfig_ 。
 
 
 
@@ -74,7 +74,7 @@ NOTE: 如果 F5 叢集的 URL 變更、則可以使用 API 在所有主機中更
 
 == 復原至舊的 SnapCenter 伺服器主機
 
-如果發生任何問題、您可以使用 API 更新所有主機中的 SnapCenter 伺服器 URL 、以恢復舊的 SnapCenter 伺服器主機： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+如果發生任何問題、您可以使用 API: 或 Cmdlet 更新所有主機中的 SnapCenter 伺服器 URL 、以恢復舊的 SnapCenter 伺服器主機 `/<snapcenter_version>/server/configureurl` ： _Set-SmServerConfig_ 。
 
 
 
@@ -98,9 +98,9 @@ NOTE: 如果 F5 叢集的 URL 變更、則可以使用 API 在所有主機中更
 
 . 將舊的 SnapCenter 伺服器備份複製到新主機。
 . 以 SnapCenter Admin 使用者的身分登入。
-. 使用 API 在新主機上還原 SnapCenter 伺服器的備份： `/5.0/server/restore` 或 Cmdlet ： _Restore-SmServerBackup_ 。
+. 使用 API: 或 Cmdlet:_Restore-SmServerBackup_ 在新主機上還原 SnapCenter 伺服器的備份 `/<snapcenter_version>/server/restore` 。
 +
-依預設、還原會更新所有主機中的新 SnapCenter 伺服器 URL 。如果您想略過更新、請使用 --SkipSMSURLInHosts_ 屬性、並使用 API 分別更新伺服器 URL ： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+依預設、還原會更新所有主機中的新 SnapCenter 伺服器 URL 。如果您想略過此更新、請使用 --SkipSMSURLInHosts_ 屬性、並使用 API 或 Cmdlet 分別更新伺服器 URL `/<snapcenter_version>/server/configureurl` ： _Set-SmServerConfig_ 。
 
 +
 
@@ -110,7 +110,7 @@ NOTE: 如果外掛主機無法解析伺服器主機名稱、請登入每個外�
 
 NOTE: 伺服器 /etc/host_ 項目將不會還原。您可以從舊伺服器手動還原。
 
-. 如果您已略過更新 URL 、或是還原過程中有任何主機當機、請使用 API 更新 SnapCenter 所管理的所有主機或指定主機中的新伺服器名稱： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+. 如果您在還原程序期間略過更新 URL 或任何主機當機、請使用 API: 或 Cmdlet:_Set-SmServerConfig_ 、更新由 SnapCenter 管理的所有主機或指定主機中的新伺服器名稱 `/<snapcenter_version>/server/configureurl` 。
 
 
 
@@ -131,9 +131,9 @@ NOTE: 伺服器 /etc/host_ 項目將不會還原。您可以從舊伺服器手�
 
 . 將舊的 SnapCenter 伺服器備份複製到新主機。
 . 以 SnapCenter Admin 使用者的身分登入。
-. 使用 API 在新主機上還原 SnapCenter 伺服器的備份： `/5.0/server/restore` 或 Cmdlet ： _Restore-SmServerBackup_ 。
+. 使用 API: 或 Cmdlet:_Restore-SmServerBackup_ 在新主機上還原 SnapCenter 伺服器的備份 `/<snapcenter_version>/server/restore` 。
 +
-依預設、還原會更新所有主機中的新 SnapCenter 伺服器 URL 。如果您想略過更新、請使用 --SkipSMSURLInHosts_ 屬性、並使用 API 分別更新伺服器 URL ： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+依預設、還原會更新所有主機中的新 SnapCenter 伺服器 URL 。如果您想略過此更新、請使用 --SkipSMSURLInHosts_ 屬性、並使用 API 或 Cmdlet 分別更新伺服器 URL `/<snapcenter_version>/server/configureurl` ： _Set-SmServerConfig_ 。
 
 +
 
@@ -143,7 +143,7 @@ NOTE: 如果外掛主機無法解析伺服器主機名稱、請登入每個外�
 
 NOTE: 伺服器 /etc/host_ 項目將不會還原。您可以從舊伺服器手動還原。
 
-. 如果您已略過更新 URL 、或是還原過程中有任何主機當機、請使用 API 更新 SnapCenter 所管理的所有主機或指定主機中的新伺服器名稱： `/5.0/server/configureurl` 或 Cmdlet ： _Set-SmServerConfig_ 。
+. 如果您在還原程序期間略過更新 URL 或任何主機當機、請使用 API: 或 Cmdlet:_Set-SmServerConfig_ 、更新由 SnapCenter 管理的所有主機或指定主機中的新伺服器名稱 `/<snapcenter_version>/server/configureurl` 。
 . 將獨立主機轉換為 F5 叢集。
 +
 如需如何設定 F5 的資訊、請參閱 https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["使用SnapCenter F5設定高可用度的功能"]。

@@ -91,7 +91,7 @@ NOTE: 依預設、 Windows 會自動指派下一個可用的磁碟機。
 
 . 將新主機新增至 SnapCenter 。
 . 驗證是否發現所有資源。
-. 執行主機重新整理 API ： `/5.0/techrefresh/host` 或 Cmdlet ： _Invoke-SmTechRefreshHost_ 。
+. 執行主機重新整理 API `/<snapcenter_version>/techrefresh/host` ：或 Cmdlet ： _invoke-SmTechRefreshHost_ 。
 +
 
 NOTE: 依預設會啟用演習、並識別要重新連結的配對資源。您可以執行 API ：「 /jobs/｛ jobid ｝ 」或 Cmdlet _Get-SmJobSummaryReport_ 來驗證資源。

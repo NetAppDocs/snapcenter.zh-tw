@@ -8174,7 +8174,6 @@ Windows 主機：</block>
   <block id="6c03857b78b3ff4a2451717b9e9827af" category="list-text"><block ref="6c03857b78b3ff4a2451717b9e9827af" category="inline-link-rx"></block></block>
   <block id="24cc9a88d9606665061c39212e66c652" category="list-text">將新主機新增至 SnapCenter 。</block>
   <block id="2e14e69362b4369a7145c71a12b474ac" category="list-text">驗證是否發現所有資源。</block>
-  <block id="e5895c534b891da856c34727ca198d1a" category="list-text">執行主機重新整理 API ：<block ref="81cfca4b27f756310803add092790c10" prefix=" " category="inline-code"></block> 或 Cmdlet ： _Invoke-SmTechRefreshHost_ 。</block>
   <block id="e99761d4e8fe46eed81bf6ce40a1f791" category="admonition">依預設會啟用演習、並識別要重新連結的配對資源。您可以執行 API ：「 /jobs/｛ jobid ｝ 」或 Cmdlet _Get-SmJobSummaryReport_ 來驗證資源。</block>
   <block id="fdaf38234b737e7c032ee2cecc41f45b" category="paragraph">如果您已從多個主機移轉資源、則應為所有主機執行 API 或 Cmdlet 。如果新主機中的磁碟機或掛載路徑與舊主機不同、則下列還原作業將會失敗：</block>
   <block id="865482b788ba7410d72bd211cc0f90c4" category="list-text">SQL 就地還原將會失敗。不過、您可以利用 RTAL 功能。</block>
@@ -8193,34 +8192,26 @@ Windows 主機：</block>
   <block id="637cb85078093dc0eac11d78013e5ea6" category="inline-link">啟用多因素驗證</block>
   <block id="2ef948491bb37a9da368eb98dbf46d25" category="list-text">（選用）設定多因素驗證。如需詳細資訊、請參閱<block ref="9188167510b580cfc3915a3c97779cfb" category="inline-link-rx"></block>。</block>
   <block id="73fcd074a38b94057f4ed6c44ccc4a72" category="list-text">以 SnapCenter Admin 使用者的身分登入。</block>
-  <block id="8e04153a44d15f2649eed597a45a1490" category="list-text">使用 API 在舊主機上建立 SnapCenter 伺服器的備份：<block ref="167559e525a32a9584dce30028ce2eb5" prefix=" " category="inline-code"></block> 或 Cmdlet ： _New-SmServerBackup_ 。</block>
   <block id="932aed11c7ac09d2c9b5fe47c68cf667" category="admonition">在進行備份之前、請先暫停所有排程工作、並確保沒有工作正在執行。</block>
   <block id="cd2afb5401e9315a58e0aa4a9bb6e12d" category="admonition">如果您想要在新網域上執行的 SnapCenter 伺服器上還原備份、在進行備份之前、您應該在舊的 SnapCenter 主機中新增新的網域使用者、並指派 SnapCenter 管理員角色。</block>
   <block id="a6c47e59c26648cb0d8ab865312f19cf" category="list-text">將備份從舊主機複製到新主機。</block>
-  <block id="21a80b35ea03c7240d13f42451d61fdb" category="list-text">使用 API 在新主機上還原 SnapCenter 伺服器的備份：<block ref="9413602b99de6842bc71ebb5b785b9e7" prefix=" " category="inline-code"></block> 或 Cmdlet ： _Restore-SmServerBackup_ 。</block>
-  <block id="83bca398f39af69acd2028a97e259162" category="paragraph">依預設、還原會更新所有主機中的新 SnapCenter 伺服器 URL 。如果您想略過更新、請使用 --SkipSMSURLInHosts_ 屬性、並使用以下其中一種 API 執行、分別更新伺服器 URL ：<block ref="e971ee31daa1b9fb67358eb67ac3e4ef" prefix=" " category="inline-code"></block> 或 Cmdlet ： _Set-SmServerConfig_ 。</block>
   <block id="75893b63c45ff1f656ee2dcb708ba603" category="admonition">如果外掛主機無法解析伺服器主機名稱、請登入每個外掛主機、然後以 &lt;New IP&gt; SC_SERVER_Name 格式新增新 IP 的 /etc/host_ 項目。</block>
   <block id="8142c17d2e259174dc68c6970743b3e0" category="admonition">伺服器 /etc/host_ 項目將不會還原。您可以從舊伺服器手動還原。</block>
   <block id="d3050839b85b878b37ec26575a2393e6" category="paragraph">如果備份是在新網域上執行的 SnpCenter 伺服器上還原、而且您想要繼續使用舊網域使用者、則應該在新的 SnapCenter 伺服器中登錄舊網域。</block>
   <block id="3cb008d45317bdc58a3f417a317573e6" category="admonition">如果您已手動更新舊 SnapCenter 主機中的 web.config 檔案、更新將不會複製到新主機。您應該在新主機的 web.config 檔案中手動進行相同的變更。</block>
-  <block id="b9e30f124abf9d96dd55b4c223b8f628" category="list-text">如果您已略過更新 SnapCenter 伺服器 URL 、或是還原過程中任何主機當機、請使用 API 更新由 SnapCenter 管理的所有主機或指定主機中的新伺服器名稱：<block ref="e971ee31daa1b9fb67358eb67ac3e4ef" prefix=" " category="inline-code"></block> 或 Cmdlet ： _Set-SmServerConfig_ 。</block>
   <block id="5a040d5194ec2af1001bd5d0cb6b80e1" category="list-text">從新的 SnapCenter 伺服器啟動所有主機上的排程工作。</block>
   <block id="9399a783da7a09f3a58595bfdcce7cb9" category="section-title">F5 叢集中節點的技術更新</block>
   <block id="d4bd088e50b59b47b581ecebb8f0d093" category="paragraph">您可以移除節點並新增新節點、以技術方式重新整理 F5 叢集中的任何節點。如果需要重新整理的節點是作用中的、請將叢集的另一個節點設為作用中、然後移除節點。</block>
   <block id="4c522a0a960905af1b1898134f7907a9" category="paragraph">如需如何將節點新增至 F5 叢集的相關資訊、請參閱<block ref="f63d5110d37e6e50dc290770e72a5d43" category="inline-link-rx"></block>。</block>
-  <block id="5e9ebe793a30d30e5539c7511e5c6e16" category="admonition">如果 F5 叢集的 URL 變更、則可以使用 API 在所有主機中更新 URL ：<block ref="e971ee31daa1b9fb67358eb67ac3e4ef" prefix=" " category="inline-code"></block> 或 Cmdlet ： _Set-SmServerConfig_ 。</block>
   <block id="28f25f96241cdf504bcd5de90ca513f0" category="section-title">解除委任舊的 SnapCenter 伺服器主機</block>
   <block id="4cfacc6c9a788b0680d720aad04b68de" category="paragraph">您可以在確認新的 SnapCenter 伺服器已啟動且正在執行、且所有外掛主機都能與新的 SnapCenter 伺服器主機通訊之後、移除舊的 SnapCenter 伺服器主機。</block>
   <block id="fa4325aa558a34f832e4e3caa0a88a3d" category="section-title">復原至舊的 SnapCenter 伺服器主機</block>
-  <block id="0f65df5a69f80fe4d53cc70d0582ac4a" category="paragraph">如果發生任何問題、您可以使用 API 更新所有主機中的 SnapCenter 伺服器 URL 、以恢復舊的 SnapCenter 伺服器主機：<block ref="e971ee31daa1b9fb67358eb67ac3e4ef" prefix=" " category="inline-code"></block> 或 Cmdlet ： _Set-SmServerConfig_ 。</block>
   <block id="645a84975202e30700b572b49a5ee29d" category="section-title">災難恢復</block>
   <block id="e840a7811f820d020b557a3452d192cd" category="section-title">獨立式 SnapCenter 主機的災難恢復</block>
   <block id="ead4a4a1f10513b6585301aa586f6555" category="paragraph">您可以將伺服器備份還原至新主機、以執行災難恢復。</block>
   <block id="3652ad6e60746a83a1ccdd7c49e1114d" category="paragraph">請確定您已備份舊的 SnapCenter 伺服器。</block>
   <block id="c7f7045ef4e37ae48744f3acccc57437" category="list-text">設定 CA 憑證並啟用雙向 SSL 。如需詳細資訊、請參閱<block ref="cf5f212364284bfbada6b95aa5119cc7" category="inline-link-rx"></block> 和<block ref="5cedcc7f04f2db49c5515979f7e2a157" category="inline-link-rx"></block>。</block>
   <block id="f3c8f6ef0e856eaaec4b17272aa0fefa" category="list-text">將舊的 SnapCenter 伺服器備份複製到新主機。</block>
-  <block id="0763426685b28b52e4bf650bd30e058e" category="paragraph">依預設、還原會更新所有主機中的新 SnapCenter 伺服器 URL 。如果您想略過更新、請使用 --SkipSMSURLInHosts_ 屬性、並使用 API 分別更新伺服器 URL ：<block ref="e971ee31daa1b9fb67358eb67ac3e4ef" prefix=" " category="inline-code"></block> 或 Cmdlet ： _Set-SmServerConfig_ 。</block>
-  <block id="8898b1441a85b04d66b54e88b20c098b" category="list-text">如果您已略過更新 URL 、或是還原過程中有任何主機當機、請使用 API 更新 SnapCenter 所管理的所有主機或指定主機中的新伺服器名稱：<block ref="e971ee31daa1b9fb67358eb67ac3e4ef" prefix=" " category="inline-code"></block> 或 Cmdlet ： _Set-SmServerConfig_ 。</block>
   <block id="206c780d8f39c3cbe7871518b8955c87" category="section-title">SnapCenter F5 叢集的災難恢復</block>
   <block id="99b619aa61c4a7bc51249d3daa98a9b6" category="paragraph">您可以將伺服器備份還原至新主機、然後將獨立主機轉換為叢集、以執行災難恢復。</block>
   <block id="1437d535957fc4f2f5ede150a9b16e03" category="list-text">將獨立主機轉換為 F5 叢集。</block>
@@ -8254,24 +8245,19 @@ Windows 主機：</block>
   <block id="a9e8d03a8c0a283037618f787942802f" category="list-text">將主機置於正式作業模式。</block>
   <block id="cebf7f0afc954a04ff2b679b949f2fdb" category="list-text">在 SnapCenter 中、建立儲存設備已移轉的資源備份。SnapCenter 必須進行新的備份、才能識別最新的儲存佔用空間、並將用於更新現有舊備份的中繼資料。</block>
   <block id="7b621988ba507f6eda02af30b5759f19" category="admonition">每當新的 LUN 連接到主機時、就會有新的序號。在探索 Windows 檔案系統期間、 SnapCenter 會將每個唯一序號視為新資源。在儲存技術更新期間、當新儲存設備的 LUN 連接至具有相同磁碟機代號或路徑的主機時、 在 SnapCenter 中探索 Windows 檔案系統時、即使現有資源以相同的磁碟機代號或路徑掛載、也會將其標記為已刪除、並將新的 LUN 顯示為新資源。當資源標示為已刪除時、將不會考慮在 SnapCenter 中進行儲存技術更新、而舊資源的所有備份都將遺失。每當發生儲存重新整理時、對於 Windows 檔案系統資源、在執行儲存重新整理 API 或 Cmdlet 之前、不應執行資源探索。</block>
-  <block id="61af4be774cf543288e094cd65f66f9d" category="list-text">執行儲存重新整理 API ：<block ref="8aa2b55d53215c8ada503a5e391eecee" prefix=" " category="inline-code"></block> 或 Cmdlet ： _invoke-SmTechRefreshPrimaryStorage_ 。</block>
   <block id="7efc97e31c96919069d3de5aad26d52c" category="admonition">如果資源已設定啟用複寫的原則、則儲存重新整理後的最新備份應該會包含次要儲存設備的詳細資料。</block>
   <block id="445383de89543cc5cefd65e468d97967" category="list-text">如果您使用 SQL 容錯移轉叢集執行個體（ FCI ）設定、則備份會維持在叢集層級。您應該提供叢集名稱作為儲存技術更新的輸入。</block>
   <block id="cfd4b26f26836517a989f96ea9c2dc5e" category="list-text">如果您使用 SQL Availability Group （ AG ）設定、則備份會維持在節點層級。您應該提供節點名稱作為儲存技術更新的輸入。</block>
   <block id="cc458a33f832f50b23bcd1380effa08f" category="list-text">如果您使用 Oracle Real Application Clusters （ RAC ）設定、您可以在任何節點上執行儲存技術更新。</block>
-  <block id="91e15f334388fed7f0f1f188db940bcc" category="paragraph">依預設、 _IsDryRun_ 屬性設為 True 。它會識別儲存設備的重新整理資源。您可以執行 API ： '5.0/jobs/{jobid}' 或 Cmdlet _Get-SmJobSummaryReport_ 來檢視資源和變更的儲存詳細資料。</block>
-  <block id="bb1d51bc9c891084ec74c829c9ed74f6" category="list-text">驗證儲存詳細資料後、將 _IsDryRun_ 屬性設為 False 、然後執行儲存重新整理 API ：<block ref="8aa2b55d53215c8ada503a5e391eecee" prefix=" " category="inline-code"></block> 或 Cmdlet ： _invoke-SmTechRefreshPrimaryStorage_ 。</block>
   <block id="0e74b14142ad76ad7f0d5d5c075a40d6" category="paragraph">這會更新舊備份中的儲存詳細資料。</block>
   <block id="c876de2821e8feb56cd9f1d2e77e52ca" category="paragraph">您可以在同一部主機上多次執行 API 或 Cmdlet 、只有在重新整理儲存設備時、才會更新舊備份中的儲存詳細資料。</block>
   <block id="d04c9bc8adc1e2522f0d4f02b9e07c51" category="admonition">複製階層架構無法在 ONTAP 中移轉。如果要移轉的儲存設備在 SnapCenter 中有任何複製中繼資料、則複製的資源會標記為「不受任何資源」。複製中繼資料的複本將以遞迴方式移除。</block>
-  <block id="1412ff8e3ddd4966afe8e811f9893c17" category="list-text">（選用）如果所有快照都未從舊的主要儲存設備移至新的主要儲存設備、請執行下列 API ：<block ref="2e3d92814ab937b9ea982f5c70df6b8c" prefix=" " category="inline-code"></block> 或 Cmdlet _invoke-SmPrimaryBackupsExistenceCheck_ 。</block>
   <block id="e77fa080fb93b274c5fd8afe7128856d" category="paragraph">這會對新的主要儲存設備執行快照存在檢查、並標記 SnapCenter 中無法執行任何作業的個別備份。</block>
   <block id="058c5f6f3bedef0d4efe7447e8ec24a0" category="section-title">更新次要儲存設備的備份</block>
   <block id="989761acccddfabb5694c3a77fa69ccf" category="list-text">在主要儲存設備和新的次要儲存設備之間建立 SnapMirror 關係、並確保關係狀態良好。</block>
   <block id="af9f7a112bf1099b70f681225bdfc61d" category="list-text">在 SnapCenter 中、建立儲存設備已移轉的資源備份。</block>
   <block id="35d0d7c4234c896b59954276eefc785c" category="paragraph">SnapCenter 必須進行新的備份、才能識別最新的儲存佔用空間、並將用於更新現有舊備份的中繼資料。</block>
   <block id="0e931ce92d17a7c4b4bfa6da256a2117" category="admonition">您應該等到此作業完成。如果您在完成前繼續下一個步驟、 SnapCenter 將會完全遺失舊的次要快照中繼資料。</block>
-  <block id="289dea5f2adc051adbcd3a7239eb588c" category="list-text">成功建立主機中所有資源的備份後、請執行次要儲存重新整理 API ：<block ref="445e0cbeef497c2ffbb139cf4d9d85d7" prefix=" " category="inline-code"></block> 或 Cmdlet ： _Invoke-SmTechRefreshSecondaryStorage_ 。</block>
   <block id="0f1a31157bf41fa9a14b8dd716c66a9a" category="paragraph">這會更新指定主機中較舊備份的次要儲存詳細資料。</block>
   <block id="abf0d07668e8864165ccc1b3eeb85231" category="paragraph">如果要在資源層級執行此作業、請按一下每個資源的 * 重新整理 * 、以更新次要儲存中繼資料。</block>
   <block id="0b20923697baecb6d37c37f407efdbb1" category="list-text">成功更新舊備份之後、您可以中斷舊的主要次要儲存關係。</block>
@@ -9884,4 +9870,18 @@ Snapshot 作業。</block>
   <block id="266df807c209259b6527f0402eec5ecc" category="paragraph">如需 ONTAP 和應用程式外掛程式的最低需求、請參閱<block ref="da65d29edc3443bf674cd57705cb58f7" category="inline-link-rx"></block> [ 互通性對照表工具 ^] 。</block>
   <block id="0d9aba31602daa8aa7c78b179f23a57a" category="paragraph">請參閱<block ref="5ef8c586cada32cf8eb7b081f126f3ff" category="inline-link-rx"></block></block>
   <block id="f4c1fea93a54108320484de7aa75a48a" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="a174ad87a36b51cae5fdf2582f4fe3d8" category="inline-link-rx"></block> NetApp 互通性對照表工具 ^] 。</block>
+  <block id="f726f8fd5eef7b55d41228aa71d0a7e9" category="list-text">執行主機重新整理 API<block ref="b37cd34fbbf7b073a1b5c2fd52ee92dd" prefix=" " category="inline-code"></block> ：或 Cmdlet ： _invoke-SmTechRefreshHost_ 。</block>
+  <block id="875d7a3460c60f3568be1f2abe89a635" category="list-text">使用 API: 或 Cmdlet:_New-SmServerBackup_ 在舊主機上建立 SnapCenter 伺服器的備份<block ref="88422de128aef85dbcc043bb5e99d727" prefix=" " category="inline-code"></block> 。</block>
+  <block id="717c72270ce876f743856a621389e967" category="list-text">使用 API: 或 Cmdlet:_Restore-SmServerBackup_ 在新主機上還原 SnapCenter 伺服器的備份<block ref="4c4a6e8508df6259fb36bbdfd36c0086" prefix=" " category="inline-code"></block> 。</block>
+  <block id="b5bccab3d839dec6954d2ee98465f797" category="paragraph">依預設、還原會更新所有主機中的新 SnapCenter 伺服器 URL 。如果您想略過此更新、請使用 --SkipSMSURLInHosts_ 屬性、並使用 API 或 Cmdlet 執行、分別更新伺服器 URL<block ref="a0debc001fcb5862414cffc14f778700" prefix=" " category="inline-code"></block> ： _Set-SmServerConfig_ 。</block>
+  <block id="cce21874db99bf2ff8009d7bba6a563e" category="list-text">如果您在還原程序期間略過更新 SnapCenter 伺服器 URL 或任何主機當機、請使用 API: 或 Cmdlet:_Set-SmServerConfig_ 、更新由 SnapCenter 管理的所有主機或指定主機中的新伺服器名稱<block ref="a0debc001fcb5862414cffc14f778700" prefix=" " category="inline-code"></block> 。</block>
+  <block id="cb9240a42017d8a2bfb2ccb6b34e9748" category="admonition">如果 F5 叢集的 URL 變更、則可以使用 API 或 Cmdlet 在所有主機中更新 URL<block ref="a0debc001fcb5862414cffc14f778700" prefix=" " category="inline-code"></block> ： _Set-SmServerConfig_ 。</block>
+  <block id="b62e8825f8eb26f88145e7459278b951" category="paragraph">如果發生任何問題、您可以使用 API: 或 Cmdlet 更新所有主機中的 SnapCenter 伺服器 URL 、以恢復舊的 SnapCenter 伺服器主機<block ref="a0debc001fcb5862414cffc14f778700" prefix=" " category="inline-code"></block> ： _Set-SmServerConfig_ 。</block>
+  <block id="7927668963a4b91c5f671a07cc05f694" category="paragraph">依預設、還原會更新所有主機中的新 SnapCenter 伺服器 URL 。如果您想略過此更新、請使用 --SkipSMSURLInHosts_ 屬性、並使用 API 或 Cmdlet 分別更新伺服器 URL<block ref="a0debc001fcb5862414cffc14f778700" prefix=" " category="inline-code"></block> ： _Set-SmServerConfig_ 。</block>
+  <block id="23d1c4d4d0b1c7dc3a95606b2c934617" category="list-text">如果您在還原程序期間略過更新 URL 或任何主機當機、請使用 API: 或 Cmdlet:_Set-SmServerConfig_ 、更新由 SnapCenter 管理的所有主機或指定主機中的新伺服器名稱<block ref="a0debc001fcb5862414cffc14f778700" prefix=" " category="inline-code"></block> 。</block>
+  <block id="cc5ce545a551c1edbafb6c9e650a64c4" category="list-text">執行儲存重新整理 API ：<block ref="84d2bad3561662612c0f19102d8af171" prefix=" " category="inline-code"></block> 或 Cmdlet ： _invoke-SmTechRefreshPrimaryStorage_ 。</block>
+  <block id="d741bee0a9e155f971a26c89ef6a540e" category="paragraph">依預設、 _IsDryRun_ 屬性設為 True 。它會識別儲存設備的重新整理資源。您可以執行 API: SnapCenter 版本 &gt;/jobs/{jobid}' 或 Cmdlet _Get-SmJobSummaryReport_ 來檢視資源和變更的儲存詳細資料。</block>
+  <block id="cc0cce77e1e28838ab6e9078eb7da114" category="list-text">驗證儲存詳細資料後、將 _IsDryRun_ 屬性設為 False 、然後執行儲存重新整理 API ：<block ref="84d2bad3561662612c0f19102d8af171" prefix=" " category="inline-code"></block> 或 Cmdlet ： _invoke-SmTechRefreshPrimaryStorage_ 。</block>
+  <block id="c81b0a7466aafc83de0beda501358cdd" category="list-text">（可選）如果所有快照均未從舊的主儲存設備移至新的主儲存設備、請執行下列 API ：<block ref="6e088a1a2676abbb3b6434c32a05fa0c" prefix=" " category="inline-code"></block> 或 Cmdlet _invoke-SmPrimaryBackupsExistenceCheck_ 。</block>
+  <block id="da838fd656a52206a5571426cdea502d" category="list-text">成功建立主機中所有資源的備份後、請執行次要儲存設備重新整理 API<block ref="519c39228e07d21e137e72515657a3cf" prefix=" " category="inline-code"></block> ：或 Cmdlet ： _Invoke-SmTechRefreshSecondaryStorage_ 。</block>
 </blocks>

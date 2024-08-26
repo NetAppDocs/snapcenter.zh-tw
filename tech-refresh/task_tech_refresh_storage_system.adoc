@@ -77,7 +77,7 @@ summary: 將資料從舊儲存設備移至新儲存設備、將新儲存設備�
 
 NOTE: 每當新的 LUN 連接到主機時、就會有新的序號。在探索 Windows 檔案系統期間、 SnapCenter 會將每個唯一序號視為新資源。在儲存技術更新期間、當新儲存設備的 LUN 連接至具有相同磁碟機代號或路徑的主機時、 在 SnapCenter 中探索 Windows 檔案系統時、即使現有資源以相同的磁碟機代號或路徑掛載、也會將其標記為已刪除、並將新的 LUN 顯示為新資源。當資源標示為已刪除時、將不會考慮在 SnapCenter 中進行儲存技術更新、而舊資源的所有備份都將遺失。每當發生儲存重新整理時、對於 Windows 檔案系統資源、在執行儲存重新整理 API 或 Cmdlet 之前、不應執行資源探索。
 
-. 執行儲存重新整理 API ： `/5.0/techrefresh/primarystorage` 或 Cmdlet ： _invoke-SmTechRefreshPrimaryStorage_ 。
+. 執行儲存重新整理 API ： `/<snapcenter_version>/techrefresh/primarystorage` 或 Cmdlet ： _invoke-SmTechRefreshPrimaryStorage_ 。
 +
 
 NOTE: 如果資源已設定啟用複寫的原則、則儲存重新整理後的最新備份應該會包含次要儲存設備的詳細資料。
@@ -87,11 +87,11 @@ NOTE: 如果資源已設定啟用複寫的原則、則儲存重新整理後的�
 .. 如果您使用 SQL Availability Group （ AG ）設定、則備份會維持在節點層級。您應該提供節點名稱作為儲存技術更新的輸入。
 .. 如果您使用 Oracle Real Application Clusters （ RAC ）設定、您可以在任何節點上執行儲存技術更新。
 +
-依預設、 _IsDryRun_ 屬性設為 True 。它會識別儲存設備的重新整理資源。您可以執行 API ： '5.0/jobs/{jobid}' 或 Cmdlet _Get-SmJobSummaryReport_ 來檢視資源和變更的儲存詳細資料。
+依預設、 _IsDryRun_ 屬性設為 True 。它會識別儲存設備的重新整理資源。您可以執行 API: SnapCenter 版本 >/jobs/{jobid}' 或 Cmdlet _Get-SmJobSummaryReport_ 來檢視資源和變更的儲存詳細資料。
 
 
 
-. 驗證儲存詳細資料後、將 _IsDryRun_ 屬性設為 False 、然後執行儲存重新整理 API ： `/5.0/techrefresh/primarystorage` 或 Cmdlet ： _invoke-SmTechRefreshPrimaryStorage_ 。
+. 驗證儲存詳細資料後、將 _IsDryRun_ 屬性設為 False 、然後執行儲存重新整理 API ： `/<snapcenter_version>/techrefresh/primarystorage` 或 Cmdlet ： _invoke-SmTechRefreshPrimaryStorage_ 。
 +
 這會更新舊備份中的儲存詳細資料。
 
@@ -102,7 +102,7 @@ NOTE: 如果資源已設定啟用複寫的原則、則儲存重新整理後的�
 
 NOTE: 複製階層架構無法在 ONTAP 中移轉。如果要移轉的儲存設備在 SnapCenter 中有任何複製中繼資料、則複製的資源會標記為「不受任何資源」。複製中繼資料的複本將以遞迴方式移除。
 
-. （選用）如果所有快照都未從舊的主要儲存設備移至新的主要儲存設備、請執行下列 API ： `/5.0/hosts/primarybackupsexistencecheck` 或 Cmdlet _invoke-SmPrimaryBackupsExistenceCheck_ 。
+. （可選）如果所有快照均未從舊的主儲存設備移至新的主儲存設備、請執行下列 API ： `/<snapcenter_version>/hosts/primarybackupsexistencecheck` 或 Cmdlet _invoke-SmPrimaryBackupsExistenceCheck_ 。
 +
 這會對新的主要儲存設備執行快照存在檢查、並標記 SnapCenter 中無法執行任何作業的個別備份。
 
@@ -138,7 +138,7 @@ SnapCenter 必須進行新的備份、才能識別最新的儲存佔用空間、
 
 IMPORTANT: 您應該等到此作業完成。如果您在完成前繼續下一個步驟、 SnapCenter 將會完全遺失舊的次要快照中繼資料。
 
-. 成功建立主機中所有資源的備份後、請執行次要儲存重新整理 API ： `/5.0/techrefresh/secondarystorage` 或 Cmdlet ： _Invoke-SmTechRefreshSecondaryStorage_ 。
+. 成功建立主機中所有資源的備份後、請執行次要儲存設備重新整理 API `/<snapcenter_version>/techrefresh/secondarystorage` ：或 Cmdlet ： _Invoke-SmTechRefreshSecondaryStorage_ 。
 +
 這會更新指定主機中較舊備份的次要儲存詳細資料。
 
