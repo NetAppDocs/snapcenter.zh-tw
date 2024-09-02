@@ -13,7 +13,7 @@ summary: 支援實體機器和虛擬機器上的各種儲存類型。SnapCenter�
 [role="lead"]
 支援實體機器和虛擬機器上的各種儲存類型。SnapCenter在安裝主機套件之前、您必須先確認儲存類型是否支援。
 
-Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT[]NetApp 互通性對照表工具 ^] 。
+Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 |===
 | 機器 | 儲存類型 | 資源配置使用 | 支援附註 
@@ -47,8 +47,6 @@ Windows Server提供支援的支援功能。SnapCenter如需支援版本的最�
 指令程式GUI或PowerShell Cmdlet SnapCenter
  a| 
 僅支援資源配置。
-
-您無法使用SnapCenter 支援功能來備份任何使用SMB傳輸協定的資料或共用。
 
 
 
@@ -90,8 +88,6 @@ VMware VM
 指令程式GUI或PowerShell Cmdlet SnapCenter
  a| 
 僅支援資源配置。
-
-您無法使用SnapCenter 支援功能來備份任何使用SMB傳輸協定的資料或共用。
 
 
 
@@ -139,8 +135,6 @@ Hyper-V VM
 指令程式GUI或PowerShell Cmdlet SnapCenter
  a| 
 僅支援資源配置。
-
-您無法使用SnapCenter 支援功能來備份任何使用SMB傳輸協定的資料或共用。
 
 
 NOTE: Hyper-V不支援在NetApp儲存設備上配置的VHD（x）上傳遞磁碟和備份資料庫。

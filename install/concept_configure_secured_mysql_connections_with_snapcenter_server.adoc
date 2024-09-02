@@ -95,16 +95,16 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-key.pem"
 ----
 . 停止SnapCenter Internet Information Server（IIS）中的功能。
 . 重新啟動MySQL服務。
-. 更新網路設定檔中MySQLProtocol金鑰的值。
+. 更新 SnapManager ． Web.ui.dll ． config 檔案中的 MySQLProtocol 金鑰值。
 +
-下列範例顯示已在web.config檔案中更新的MySQLProtocol金鑰值。
+下列範例顯示在 SnapManager ． Web.ui.dll ． config 檔案中更新的 MySQLProtocol 金鑰值。
 
 +
 [listing]
 ----
 <add key="MySQLProtocol" value="SSL" />
 ----
-. 使用my.ini檔案的[client]區段提供的路徑來更新網路設定檔。
+. 使用 my.ini 檔案 [ 用戶端 ] 區段中提供的路徑、更新 SnapManager 。 Web.UI.dll.config 檔案。
 +
 下列範例顯示my.ini檔案的[client]區段中更新的路徑。
 
@@ -279,16 +279,16 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/server-key.pem"
 
 . 在SnapCenter 兩個HA節點上的Internet Information Server（IIS）中停止使用支援功能的Web應用程式。
 . 在兩個HA節點上重新啟動MySQL服務。
-. 更新兩個HA節點的web.config檔案中MySQLProtocol金鑰的值。
+. 更新兩個 HA 節點的 SnapManager ． Web.ui.dll ． config 檔案中的 MySQLProtocol 金鑰值。
 +
-下列範例顯示已在網路設定檔中更新的MySQLProtocol金鑰值。
+下列範例顯示在 SnapManager ． Web.ui.dll ． config 檔案中更新的 MySQLProtocol 金鑰值。
 
 +
 [listing]
 ----
 <add key="MySQLProtocol" value="SSL" />
 ----
-. 使用您在my.ini檔案的[client]區段中針對兩個HA節點所指定的路徑來更新網路設定檔。
+. 使用您在 my.ini 檔案的 [ 用戶端 ] 區段中針對兩個 HA 節點所指定的路徑、更新 SnapManager 。 Web.UI.dll.config 檔案。
 +
 下列範例顯示my.ini檔案的[client]區段中更新的路徑。
 

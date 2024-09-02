@@ -2897,9 +2897,6 @@
   <block id="42c3a197506df634d37106aa12e94817" category="paragraph">下列範例顯示my.ini檔案的[client]區段中更新的路徑。</block>
   <block id="7bbf719310f30342c522d3414da61277" category="list-text">停止SnapCenter Internet Information Server（IIS）中的功能。</block>
   <block id="b93c543a0f96a9413f8f7281e2b85709" category="list-text">重新啟動MySQL服務。</block>
-  <block id="20990864d085d9bb1f322b2df271bdec" category="list-text">更新網路設定檔中MySQLProtocol金鑰的值。</block>
-  <block id="4828d55a2fe6e484512c9947b0fd06ef" category="paragraph">下列範例顯示已在web.config檔案中更新的MySQLProtocol金鑰值。</block>
-  <block id="67882348f76a80bca6ec205f6d47a382" category="list-text">使用my.ini檔案的[client]區段提供的路徑來更新網路設定檔。</block>
   <block id="6217c9a70228dfb942cee33273650127" category="list-text">在SnapCenter IIS中啟動「伺服器」Web應用程式。</block>
   <block id="7f2254a19dcb8d48356527ff8514efab" category="section-title">針對HA組態設定安全的MySQL連線</block>
   <block id="887dc7045f93986f64fbe50a55983beb" category="paragraph">如果您想要保護SnapCenter 穩定支援服務器與MySQL伺服器之間的通訊、可以為高可用度（HA）節點產生安全通訊端層（SSL）憑證和金鑰檔。您必須在MySQL伺服器和HA節點上設定憑證和金鑰檔。</block>
@@ -2919,9 +2916,6 @@
   <block id="89093a295da7b5b9812cf7cccb724876" category="paragraph">建議使用伺服器FQDN做為伺服器憑證的一般名稱。</block>
   <block id="4f3f310802411b7b71c042c2d0a84b55" category="list-text">在SnapCenter 兩個HA節點上的Internet Information Server（IIS）中停止使用支援功能的Web應用程式。</block>
   <block id="ceac3af00f29021cbec639a39d8bf71f" category="list-text">在兩個HA節點上重新啟動MySQL服務。</block>
-  <block id="dc4e66eba3a59e87b1bbedb41d37736c" category="list-text">更新兩個HA節點的web.config檔案中MySQLProtocol金鑰的值。</block>
-  <block id="bc8fe1879d43dbf3a3bb5cbbeedf0de0" category="paragraph">下列範例顯示已在網路設定檔中更新的MySQLProtocol金鑰值。</block>
-  <block id="7e5a31df8ef045a4de9b8f57aa6c423f" category="list-text">使用您在my.ini檔案的[client]區段中針對兩個HA節點所指定的路徑來更新網路設定檔。</block>
   <block id="ca74309e5786b1bad64702fbd15c6437" category="paragraph">下列範例顯示my.ini檔案的[client]區段中更新的路徑。</block>
   <block id="3c3e0111222e44f64ad4670abe8d6923" category="list-text">在SnapCenter 兩個HA節點的IIS中啟動「支援伺服器」Web應用程式。</block>
   <block id="38c6db21335904565d9a647706a7ba00" category="list-text">使用Set-SmRegitoryConfig -RebuildSlave -Force PowerShell Cmdlet搭配其中一個HA節點上的-Force選項、在兩個HA節點上建立安全的MySQL複寫。</block>
@@ -5225,7 +5219,6 @@
   <block id="27a46746c79eda007f4ac37660e5a5d8" category="admonition">如果Windows檔案系統包含資料庫、則備份檔案系統與備份資料庫不同。若要備份資料庫、您必須使用其中一個資料庫外掛程式。</block>
   <block id="0b0c2887a236e9135995566b39c6a69e" category="paragraph">儲存虛擬機器（SVM）上的SMB3（CIFS）共享區</block>
   <block id="ac8951fb8900c75e1b47b9440e783d24" category="paragraph">僅支援資源配置。</block>
-  <block id="23fb16c1c9b83befc8a21b31b0a433d2" category="paragraph">您無法使用SnapCenter 支援功能來備份任何使用SMB傳輸協定的資料或共用。</block>
   <block id="bc52382a2b038e05ecba07a8b5754946" category="paragraph">虛擬機器檔案系統（VMFS）或NFS資料存放區</block>
   <block id="8887a9a417a1629326acdb917d224337" category="paragraph">VMware vSphere</block>
   <block id="414ff662e83e18f999457703c274be4b" category="paragraph">連線至SMB3共用的客體系統、位於SVM上</block>
@@ -9845,7 +9838,6 @@ Snapshot 作業。</block>
   <block id="26d0f7d5ea2b87e82f98d6e622ecf6a0" category="admonition">從 5.0 開始、只有 REST API 支援 vserver 管理使用者。如果您想要使用非 vserver admin 建立角色、請使用 ZAPI 。</block>
   <block id="3955db71dd681bf23ceee85c567a0129" category="admonition">從 SnapCenter 5.0 開始、叢集管理使用者只能使用 REST API 。如果您想要使用非叢集管理來建立角色、則應使用 ZAPI 。</block>
   <block id="3fd57bbce38ee807b2553fd56f562c3a" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>。</block>
-  <block id="785127eaa67d3c056c9086f5c305587c" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱 <block ref="e3393440e41cc60e26745e63c4eef2dd" category="inline-link-rx"></block>NetApp 互通性對照表工具 ^] 。</block>
   <block id="e688fd8ff964975e518ba6e9fff48630" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block>。</block>
   <block id="580a1e1b3bc67640f27785bacfdba10c" category="paragraph">如需支援版本的最新資訊，請參閱 <block ref="fd691abce396db29ca9081f79eea36a4" category="inline-link-rx"></block>。</block>
   <block id="f773b518874c315e0079bcc43b41dafb" category="paragraph">如需支援版本的最新資訊，請參閱 <block ref="7e664c06fb213184870ee71fe5278749" category="inline-link-rx"></block>。</block>
@@ -9884,4 +9876,11 @@ Snapshot 作業。</block>
   <block id="cc0cce77e1e28838ab6e9078eb7da114" category="list-text">驗證儲存詳細資料後、將 _IsDryRun_ 屬性設為 False 、然後執行儲存重新整理 API ：<block ref="84d2bad3561662612c0f19102d8af171" prefix=" " category="inline-code"></block> 或 Cmdlet ： _invoke-SmTechRefreshPrimaryStorage_ 。</block>
   <block id="c81b0a7466aafc83de0beda501358cdd" category="list-text">（可選）如果所有快照均未從舊的主儲存設備移至新的主儲存設備、請執行下列 API ：<block ref="6e088a1a2676abbb3b6434c32a05fa0c" prefix=" " category="inline-code"></block> 或 Cmdlet _invoke-SmPrimaryBackupsExistenceCheck_ 。</block>
   <block id="da838fd656a52206a5571426cdea502d" category="list-text">成功建立主機中所有資源的備份後、請執行次要儲存設備重新整理 API<block ref="519c39228e07d21e137e72515657a3cf" prefix=" " category="inline-code"></block> ：或 Cmdlet ： _Invoke-SmTechRefreshSecondaryStorage_ 。</block>
+  <block id="4f76be6e3e78147f069df76d367c9608" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊，請參閱 <block ref="1b8aeeaa3467913188c00052ded68716" category="inline-link-rx"></block>。</block>
+  <block id="e41c493e675bae82cb792b14a41ea23d" category="list-text">更新 SnapManager ． Web.ui.dll ． config 檔案中的 MySQLProtocol 金鑰值。</block>
+  <block id="195748e3bf5f1bb6db5e627914555154" category="paragraph">下列範例顯示在 SnapManager ． Web.ui.dll ． config 檔案中更新的 MySQLProtocol 金鑰值。</block>
+  <block id="fc8660e632799d14ef937c4ca79726ab" category="list-text">使用 my.ini 檔案 [ 用戶端 ] 區段中提供的路徑、更新 SnapManager 。 Web.UI.dll.config 檔案。</block>
+  <block id="0512eab1623a615d3740da31907b5d7c" category="list-text">更新兩個 HA 節點的 SnapManager ． Web.ui.dll ． config 檔案中的 MySQLProtocol 金鑰值。</block>
+  <block id="e20a4407f4a132523f0ff53a11de8ea9" category="paragraph">下列範例顯示在 SnapManager ． Web.ui.dll ． config 檔案中更新的 MySQLProtocol 金鑰值。</block>
+  <block id="282f609628cc0aa1febc1031254fda4e" category="list-text">使用您在 my.ini 檔案的 [ 用戶端 ] 區段中針對兩個 HA 節點所指定的路徑、更新 SnapManager 。 Web.UI.dll.config 檔案。</block>
 </blocks>
