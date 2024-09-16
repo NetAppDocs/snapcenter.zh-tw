@@ -61,11 +61,20 @@ WSSMCore通訊連接埠SnapCenter
  a| 
 排程器服務連接埠
  a| 
-8154 （ HTTPS ）、
+8154（HTTPS）
 
 此連接埠用於 SnapCenter 集中化伺服器主機內所有受管理外掛程式的 SnapCenter 排程器工作流程。
 
 若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安裝精靈安裝 SnapCenter 伺服器。"]
+
+
+
+ a| 
+RabbitMQ 連接埠
+ a| 
+5672 （ TCP ）
+
+這是 RabbitMQ 接聽的預設連接埠、用於排程器服務與 SnapCenter 之間的發行者訂購者模式通訊。
 
 
 

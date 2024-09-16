@@ -16,7 +16,7 @@ summary: 您可以產生「憑證簽署要求」（CSR）、然後匯入可以�
 CSR是編碼文字區塊、提供給授權憑證廠商以取得簽署的CA憑證。
 
 
-NOTE: CA 憑證 RSA 金鑰長度至少應為 3072 位元。
+NOTE: CA 憑證 RSA 金鑰長度必須至少為 3072 位元。
 
 如需產生CSR的資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_generate_CA_Certificate_CSR_file["如何產生CA憑證CSR檔案"^]。
 

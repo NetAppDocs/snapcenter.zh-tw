@@ -14,19 +14,7 @@ summary: 可在多個瀏覽器上使用此軟體。SnapCenter
 可在多個瀏覽器上使用此軟體。SnapCenter
 
 * Chrome 125 版及更新版本
-* Internet Explorer
-+
-如果您使用的是IE 10或更早版本、則無法正確載入此程式。SnapCenter您應該升級至IE 11。
-
-+
-** 僅支援預設層級的安全性。
-+
-變更Internet Explorer安全性設定會導致瀏覽器顯示出現重大問題。
-
-** 必須停用Internet Explorer相容性檢視。
-
-
-* Microsoft Edge
+* Microsoft Edge 110.0.1587.17 及更新版本
 
 
 如需支援版本的最新資訊，請參閱： https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
