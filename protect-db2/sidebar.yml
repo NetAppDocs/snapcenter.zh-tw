@@ -102,14 +102,12 @@ entries:
     url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
   - title: 建立資源群組並附加原則
     url: "/protect-db2/create-resource-groups-and-attach-policies.html"
-  - title: 備份 IBM DB2
-    url: "/protect-db2/back-up-ibm-db2.html"
+  - title: 備份 DB2 資料庫
+    url: "/protect-db2/back-up-db2-databases.html"
   - title: 備份資源群組
     url: "/protect-db2/back-up-resource-groups-ibm-db2.html"
   - title: 使用適用於 IBM DB2 的 PowerShell Cmdlet 建立儲存系統連線和認證
     url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
-  - title: 使用PowerShell Cmdlet備份資料庫
-    url: "/protect-db2/back-up-databases-using-powershell-cmdlets-ibm-db2.html"
   - title: 監控備份作業
     entries:
     - title: 監控SnapCenter 「不支援作業」頁面中的備份作業
@@ -128,8 +126,6 @@ entries:
     url: "/protect-db2/restore-manually-added-resource-backup.html"
   - title: 還原自動探索的資料庫備份
     url: "/protect-db2/restore-auto-discovered-database-backup.html"
-  - title: 使用 PowerShell Cmdlet 還原 IBM DB2
-    url: "/protect-db2/restore-ibm-db2-database-using-powershell-cmdlets.html"
   - title: 監控還原作業
     url: "/protect-db2/monitor-db2-restore-operations.html"
 - title: 複製 IBM DB2 資源備份
@@ -138,8 +134,6 @@ entries:
     url: "/protect-db2/clone-ibm-db2-resource-backups.html"
   - title: 複製 IBM DB2 資料庫備份
     url: "/protect-db2/clone-ibm-db2-backup.html"
-  - title: 使用 PowerShell Cmdlet 複製 IBM DB2 資料庫備份
-    url: "/protect-db2/clone-ibm-db2-backups-using-powershell-cmdlets.html"
   - title: 監控SnapCenter 實體複製作業
     url: "/protect-db2/monitor-db2-clone-operations.html"
   - title: 分割實體複本

@@ -192,7 +192,6 @@
   <block id="3342baf28ca203b7bf1c234a26c83caf" category="list-text">決定要使用NetApp SnapMirror技術進行複寫、還是使用NetApp SnapVault SnapMirror技術來長期保留。</block>
   <block id="ca9c798c580412195f975431858e693e" category="list-text">判斷您是否要在備份作業之前或之後執行任何命令、並提供預先記錄或PostScript。</block>
   <block id="e174be7156154463517dfe3b864d0329" category="summary">複製工作流程包括規劃、執行複製作業及監控作業。</block>
-  <block id="8c922e6a0134954b667b072d00b58ce3" category="doc">使用PowerShell Cmdlet複製備份</block>
   <block id="c90de0347e94ade70c96034e2ffca3ba" category="paragraph">您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。</block>
   <block id="623aa9b9d36889377a728b1284e5485e" category="list-text">使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。</block>
   <block id="e8afddd41cf3a716324442f7a4538460" category="list-text">列出可使用Get-SmBackup或Get-SmResource Group Cmdlet複製的備份。</block>
@@ -455,9 +454,7 @@
   <block id="5a533c7bcb2424b4226650432977866b" category="paragraph">顯示Vserver iSCSI連線</block>
   <block id="448da724515e17f1a0d8b304eb2f526c" category="paragraph">Vserver展示</block>
   <block id="3c7a1d3e0ce94aeb0c7ab231e365f15e" category="cell">唯讀命令：ONTAP 要求具備最低權限才能執行支援</block>
-  <block id="517a125fd46ee1a60309a280447487c0" category="summary">備份資源包括建立SnapCenter 與該伺服器的連線、新增資源、新增原則、建立備份資源群組、以及備份。</block>
   <block id="d2a5f76428abadccd7b24ea08a0eee1e" category="doc">使用PowerShell Cmdlet備份資源</block>
-  <block id="38d7f66964588305ed5bee44db007183" category="list-text">您必須新增儲存系統連線並建立認證。</block>
   <block id="d5b8eb2056e11e71857a777fd502266b" category="paragraph">隨即顯示使用者名稱和密碼提示。</block>
   <block id="78bce70d2497c3d80a1f0dabc6500d76" category="list-text">使用Add-SmResources Cmdlet新增資源。</block>
   <block id="d278818a36e5f43a96b7082ec24a25e0" category="paragraph">此範例新增資源：</block>
@@ -1197,7 +1194,6 @@
   <block id="66f7a0f8b4cefaf4a1ca75e479e31fb0" category="paragraph">您可以將資源群組視為定義您要保護的內容、以及您想要保護的時間和日期。請將原則想像成定義您要如何保護它。例如、如果您要備份所有資料庫、可以建立一個資源群組、其中包含主機中的所有資料庫。然後您可以將兩個原則附加到資源群組：每日原則和每小時原則。當您建立資源群組並附加原則時、可能會將資源群組設定為每日執行完整備份。</block>
   <block id="28fcd30ab7740350640e0c975b072b39" category="doc">監控SAP HANA資料庫複製作業</block>
   <block id="f18910805a2fa2ea798a785953f19eaf" category="doc">在SnapCenter Linux主機上設定適用於SAP HANA外掛程式服務的CA憑證</block>
-  <block id="75a7c9b2e73f5c1cc5286ea02330c1bd" category="doc">使用PowerShell Cmdlet複製SAP HANA資料庫備份</block>
   <block id="7efd97c2a4471de87de7e99332374e4a" category="list-text">使用Get-SmBackup Cmdlet擷取備份以執行複製作業。</block>
   <block id="f03d64352eff2c5a90a8790e99accb55" category="paragraph">此範例顯示有兩個備份可供複製：</block>
   <block id="d7272ca580c1be43c009610e69bf10d3" category="list-text">從現有備份啟動複製作業、並指定匯出複製磁碟區的NFS匯出IP位址。</block>
@@ -1506,19 +1502,12 @@
   <block id="8122a0c069e9fbb65067d3355a80e0fb" category="list-text">決定是否要驗證資料庫的完整性。</block>
   <block id="ef5e5410c69045de99fe88c248670ea8" category="list-text">決定您要使用NetApp SnapMirror技術進行複寫、還是使用NetApp SnapVault SnapMirror技術進行長期保留。</block>
   <block id="082307c48bdbc0df0689128d4a08ad92" category="list-text">判斷您要在備份作業之前或之後執行任何命令、並提供預先記錄或附有附有附有附有附有附有附有附有附有附有附有附有附有</block>
-  <block id="62bd1df1f8e068497569c97f3e404a98" category="summary">還原SAP HANA資料庫備份包括啟動與SnapCenter 該伺服器的連線工作階段、列出備份與擷取備份資訊、以及還原備份。</block>
-  <block id="0f69ffe8d82c94ffce3da6b597e697b5" category="doc">使用PowerShell Cmdlet還原SAP HANA資料庫</block>
   <block id="0be208f27c2aea320f1d6d221e131551" category="list-text">使用Get-SmBackup和Get-SmBackup Cmdlet來識別您要還原的備份。</block>
   <block id="2004c840a5bc74f37ca5c26f2dfd5e0e" category="paragraph">此範例顯示有兩個備份可供還原：</block>
-  <block id="9cb2e8b30975ae43fe6a8ea67898a952" category="list-text">在HANA工作室開始恢復程序。</block>
-  <block id="a53d0252472f1610734654e51124858b" category="paragraph">資料庫已關閉。</block>
-  <block id="57a70f4a4a92a47a28f2f41b69a06ef8" category="admonition">AppObjectId為「Host\Plugin\UID」、其中UID = SID用於單一容器類型資源、而UID = MDL\SID用於多個容器資源。您可以從Get-smResources Cmdlet取得資源ID。</block>
   <block id="2aa8b416a2f876e9cf8c5050ccf69e30" category="paragraph">本範例說明如何從主要儲存設備還原資料庫：</block>
   <block id="08fb7677c629e186e2ce0a37ba408715" category="paragraph">本範例說明如何從次要儲存設備還原資料庫：</block>
-  <block id="1dbedac9aa8fb16b0d7e3f4c912759fc" category="paragraph">備份將在HANA Studio中提供以供還原。</block>
   <block id="7049a25bdae22fafbe95070b989df286" category="list-text">您可以在來源SAP HANA伺服器上複製。</block>
   <block id="bf2fb73b7932cdadf3476adc215ac4c1" category="summary">備份資料庫包括建立SnapCenter 與該伺服器的連線、新增資源、新增原則、建立備份資源群組、以及備份。</block>
-  <block id="0db7de34dbf5c1c143a3f3c98858115e" category="doc">使用PowerShell Cmdlet備份資料庫</block>
   <block id="4ff3483d2f2e6b961be08deacbb372c4" category="paragraph">本範例說明如何新增單一容器類型的SAP HANA資料庫：</block>
   <block id="b708e8e9f86c4cd6cb76c67f9b00bf53" category="paragraph">本範例說明如何新增多重容器類型的SAP HANA資料庫：</block>
   <block id="bb1ffae3f38e9b5dc46d4c22a016b298" category="paragraph">本範例說明如何建立非資料磁碟區資源：</block>
@@ -2052,10 +2041,6 @@
   <block id="c67cf2b105f14a1f28e583dd29d713ba" category="doc">使用PowerShell Cmdlet移除Exchange備份</block>
   <block id="dd120ab3ab1d158cb796d4df28443c51" category="list-text">使用「Remove-SmBackup」Cmdlet刪除一或多個備份。</block>
   <block id="ea2acdbc1a4fb35cdfb9da7003b18901" category="paragraph">此範例使用兩個備份ID刪除兩個備份：</block>
-  <block id="47dfd37b6d44f98f65b2e75ff64e7f3a" category="summary">備份Exchange Server資料庫包括與SnapCenter 該伺服器建立連線、探索Exchange Server資料庫、新增原則、建立備份資源群組、備份及檢視備份狀態。</block>
-  <block id="6c40f1cde52cc35bedb76a6ac167d83e" category="doc">使用PowerShell Cmdlet備份Exchange資源</block>
-  <block id="7d88eb773274afe1c014d0593b26bb0a" category="list-text">您必須新增主機和探索到的資源。</block>
-  <block id="177c6d04e35e22fd728d0f8aa88c6c74" category="admonition">Exchange的外掛程式不支援複製作業、因此Exchange的外掛程式不支援Add-SmPolicy Cmdlet的CloneType參數</block>
   <block id="584657e4b5bddce78001faf5776544cc" category="paragraph">此範例建立具有完整備份和記錄備份Exchange備份類型的新備份原則：</block>
   <block id="208c499842b5bd5ba293e47da51ebd68" category="paragraph">此範例建立新的備份原則、並以每小時一次的完整備份和記錄備份Exchange備份類型：</block>
   <block id="206edf297460ddfa7679c1e47ace5ca1" category="paragraph">此範例建立新的備份原則、僅備份Exchange記錄：</block>
@@ -2217,8 +2202,6 @@
   <block id="f57730a0247c69cadad062111d092b1e" category="list-text">使用「RESEED - SmDagReplicaCopy」Cmdlet重新建置資料庫。</block>
   <block id="8b3222a3884b8f2f5739a53f549e8da0" category="paragraph">此範例使用該主機上的最新備份、重新複製主機「mva-rx200.netapp.com"」上名為「execdb」的資料庫失敗複本。</block>
   <block id="cc5bc1d26171e5ce9676fcd50c26b3b4" category="paragraph">此範例使用替代主機「mva-rx201.netapp.com."」上的資料庫最新備份（正式作業/複製）、重新複寫名為「execdb」的資料庫失敗複本</block>
-  <block id="b2589f75fce91547cb20c051fa1935d2" category="summary">還原Exchange資料庫包括啟動與SnapCenter 該伺服器的連線工作階段、列出備份與擷取備份資訊、以及還原備份。</block>
-  <block id="97e9982b58636ac0e13e42585b460313" category="doc">使用PowerShell Cmdlet還原Exchange資源</block>
   <block id="53d7030c30fb81234ffed5a3972eb621" category="list-text">使用「Get-SmBackup」Cmdlet擷取您要還原的一或多個備份相關資訊。</block>
   <block id="a65b207e84f627a2af00b6dd102bd0e3" category="list-text">使用「Restore - SmBackup」Cmdlet從備份還原資料。</block>
   <block id="49ab07d3ee1a1aacb53dd0994a535a3f" category="paragraph">此範例可還原最新的備份：</block>
@@ -5073,7 +5056,6 @@
   <block id="408892a914ac762a3bbc6659fd4dd443" category="paragraph">選取此選項、即可使用AutoSupport 下列功能將任何失敗作業的相關資訊傳送給NetApp。</block>
   <block id="6a1ea7acf8d1cfa3f328f2086b1d0e71" category="paragraph">選取*永遠*、*失敗*或*失敗或警告*、即可在還原備份後傳送電子郵件訊息給收件者。輸入「SMTP伺服器」、「預設電子郵件主旨」行、以及「收件者」和「寄件者」電子郵件地址。</block>
   <block id="ef96beee5f80fc2bcd7726a450b3a989" category="admonition">如果還原的檔案系統包含資料庫、則您也必須還原資料庫。如果您不還原資料庫、則您的資料庫可能處於無效狀態。如需還原資料庫的相關資訊、請參閱該資料庫的《資料保護指南》。</block>
-  <block id="d2323db6aa3f6333b1375db7f025bd4e" category="summary">您可以使用PowerShell Cmdlet來備份SQL Server資料庫或Windows檔案系統。這包括備份SQL Server資料庫或Windows檔案系統、包括與SnapCenter 該伺服器建立連線、探索SQL Server資料庫執行個體或Windows檔案系統、新增原則、建立備份資源群組、備份及驗證備份。</block>
   <block id="3e78fcd28fc74d7aa4a8ac3b657caa4e" category="paragraph">此範例使用SQL備份類型的FullBackup建立新的備份原則：</block>
   <block id="2b3a9b6966873d8dbae9c68619afd0cb" category="paragraph">此範例使用CrashConistent的Windows檔案系統備份類型建立新的備份原則：</block>
   <block id="5ba802b3c66fae06c796891fa4f06e1a" category="paragraph">此範例會探索指定主機上Microsoft SQL外掛程式的資源：</block>
@@ -6011,8 +5993,6 @@
   <block id="4b70ba28cecacc0b972de64bf00eafac" category="paragraph">如需EMS、請參閱<block ref="6a6cc2b71a11174970b94b5318ade705" category="inline-link-rx"></block></block>
   <block id="b8ceb1eaf0d60af03679989562024d6b" category="paragraph">建立複本之後、您絕不能重新命名複本。</block>
   <block id="8a2bd81e968aaadb6ec10a1b58f541cc" category="inline-link-macro">備份SQL Server資料庫、執行個體或可用度群組</block>
-  <block id="38c78702a48e457f5ef291281168432e" category="paragraph"><block ref="38c78702a48e457f5ef291281168432e" category="inline-link-macro-rx"></block></block>
-  <block id="f9db2c2c51ac713541e90ff79219156d" category="paragraph"><block ref="f9db2c2c51ac713541e90ff79219156d" category="inline-link-macro-rx"></block></block>
   <block id="68f8e37f5b3d7c3c6c34a481b33a736f" category="inline-link">複製作業可能會失敗、或需要較長時間才能完成預設的TCP_timeout值</block>
   <block id="f7e7f0dd9d36aec3d609775de2dbbd0b" category="paragraph"><block ref="f7e7f0dd9d36aec3d609775de2dbbd0b" category="inline-link-rx"></block></block>
   <block id="1e9ab426973a56020f8d1db85cb07f06" category="inline-link">容錯移轉叢集執行個體資料庫複製失敗</block>
@@ -9026,7 +9006,6 @@ Snapshot 作業。</block>
   <block id="73bb0c3e029e657eee721094d9dfd4a4" category="doc">備份 IBM DB2 資源</block>
   <block id="9bb1086732d729daa5079011da1d7f58" category="image-alt">DB2 備份工作流程</block>
   <block id="f6ca7431c38f4f9103a7165ce76ebf07" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。Cmdlet說明及Cmdlet參考資訊包含更多PowerShell Cmdlet的相關資訊。SnapCenter<block ref="5c7d1c91ee3f41bdd6f718a502a5613f" category="inline-link-rx"></block>。</block>
-  <block id="524291bce284c7a322c8064a7d402ef7" category="doc">備份 IBM DB2</block>
   <block id="5698d6a1b70b87c193bb309260fbe3c4" category="paragraph">Windows ： _C ： \Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_</block>
   <block id="a9a2e6333525f32619cc146e3da2e140" category="paragraph">適用於 Linux ： /var/opt/sapcenter/SCC / allowed_commands.config_</block>
   <block id="f4ec0d473fd093ff1515ec698ec93238" category="summary">您可以使用預設的快照命名慣例、或使用自訂的命名慣例。預設備份命名慣例會在快照名稱中新增時間戳記、協助您識別複本建立的時間。</block>
@@ -9046,10 +9025,7 @@ Snapshot 作業。</block>
   <block id="a3abd792e75175dc6360666ec9533a2c" category="admonition">對於停止、 Snapshot 和取消停止作業的前置和後置命令、您應該檢查插件主機上的命令清單中是否存在 Linux 適用的命令清單、以及 Windows 適用的 _/opt/snapcenter/snapenter/scc/allowed_commands.config_ 路徑和 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\allowed_commands.config_ 路徑。</block>
   <block id="bec1318185bcb08bbbdb149f6e72458c" category="paragraph">複製自動探索的 DB2 資源之後、複製的資源會標記為手動資源。按一下 * 重新整理資源 * 以復原複製的 DB2 資源。刪除複本時、也會清理儲存設備和主機。</block>
   <block id="8da40f6fe3107c9433a48199413eafc1" category="paragraph">如果您在複製作業後未重新整理資源、並嘗試刪除複本、則儲存設備和主機將不會被清除。您必須在 Fstab 中手動刪除項目。</block>
-  <block id="0dba3293d94fffec6acecd31b797abb1" category="doc">使用 PowerShell Cmdlet 複製 IBM DB2 資料庫備份</block>
   <block id="7b5f6d9e0f208631c0910d81fcd84413" category="paragraph">此範例顯示要複製的備份具有 NFSExportIP 位址 10.32.212.14 ：</block>
-  <block id="e1d21c0573d8edccd1611eecec1c4497" category="paragraph">對於 DB2 資料庫：</block>
-  <block id="3bf2ba8333d028c6261fc6dc40aa02ef" category="paragraph">對於 DB2 執行個體：</block>
   <block id="a22f4a66e3c8c5cfcb28db540b3b53cd" category="list-text">您可以在來源 IBM DB2 伺服器上複製。</block>
   <block id="62efa2c3113bfa21f93723855cb62c9a" category="doc">在 Linux 主機上設定 SnapCenter IBM DB2 外掛程式服務的 CA 憑證</block>
   <block id="a601121a2919d3d268279f81d4b8569b" category="doc">在 Windows 主機上設定 SnapCenter IBM DB2 外掛程式服務的 CA 憑證</block>
@@ -9168,8 +9144,6 @@ Snapshot 作業。</block>
   <block id="c90dd548c691ca9f32913357e116af19" category="paragraph">自動探索到的資源不需要掛載命令。</block>
   <block id="df85b9b2d7736db0ac0fccefcb84c8f0" category="admonition">對於停止、快照和取消停止作業的前置和後置命令、您應該檢查插件主機上的命令清單中是否存在 Linux 適用的命令清單、以及 Windows 適用的 _/opt/snapcenter/snapenter/cc/allowed_commands.config_ 路徑和 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\allowed_commands.config_ 路徑。</block>
   <block id="63da44e9da033b590dde9b4ad197a492" category="paragraph">只有在 RollForward 狀態為「 DB 擱置中」狀態時、才能進行還原。此狀態適用於已啟用歸檔記錄的 DB2 資料庫。</block>
-  <block id="53b75feee407d1834b322c10e85f7623" category="summary">還原 IBM DB2 備份包括起始與 SnapCenter 伺服器的連線工作階段、列出備份和擷取備份資訊、以及還原備份。</block>
-  <block id="d1ef025ad5eecf5742761547510f17ec" category="doc">使用 PowerShell Cmdlet 還原 IBM DB2 資料庫</block>
   <block id="a1d5af660c5e2d1e4fad83bdc58b7ce2" category="admonition">AppObjectId 為「 Host\Plugin\UID 」、其中 UID = &lt;instance_name&gt; 用於手動探索的 DB2 執行個體資源、而 UID = &lt;instance_name&gt; = &lt;databse_name&gt; 用於 IBM DB2 資料庫資源。您可以從Get-smResources Cmdlet取得資源ID。</block>
   <block id="6bd0747e41f5cc71876f961107d5cde4" category="paragraph"><block ref="5c7d1c91ee3f41bdd6f718a502a5613f" category="inline-link-rx"></block>。</block>
   <block id="ba315e9de1111ac853f33529fa2cd3d3" category="doc">還原手動新增的資源備份</block>
@@ -9253,7 +9227,6 @@ Snapshot 作業。</block>
   <block id="e705a7920e05c9bb81e85e88f3bc517e" category="admonition">如果命令清單中不存在這些命令、則作業將會失敗。* 對於 MySQL 5.7 版本、您應該在 MySQL 中設定 ignore _mySQLL_port = true （預設為 false ）。 內容檔案。</block>
   <block id="1aa42ebe2562e36443837ba3783d56be" category="list-text">您無法保護複製的 MySQL 執行個體。</block>
   <block id="5ca99b958cb1bd3ef353a484ef374b7c" category="paragraph">提供要在其上啟動複製 MySQL 執行個體的連接埠。</block>
-  <block id="7bf249a0d2f6ca34f234e49a7c6ae839" category="doc">使用 PowerShell Cmdlet 複製 MySQL 資料庫備份</block>
   <block id="617874f47ab7905a23ed519cf3fea6ae" category="list-text">您可以在來源 MySQL 伺服器上複製。</block>
   <block id="0dfabcb39ba57463ff60fac9a6ef98b9" category="doc">在 Linux 主機上設定 SnapCenter MySQL 外掛程式服務的 CA 憑證</block>
   <block id="fcf09390b67d36433a1b5d8a3baa2685" category="doc">在 Windows 主機上設定 SnapCenter MySQL 外掛程式服務的 CA 憑證</block>
@@ -9323,9 +9296,6 @@ Snapshot 作業。</block>
   <block id="cb883508bba7de6fa1086f8be627f59b" category="list-text">不支援時間點和最新的自動恢復。</block>
   <block id="9fde62e7bc35c3b39dc1d0d05b5d4c30" category="list-text">在「還原範圍」頁面中、選取 * 完整資源 * 以還原 MySQL 資料庫的已設定資料磁碟區。</block>
   <block id="3aac36b8956b530dee664d07e15ff001" category="admonition">對於用於停止、快照和取消停止作業的前置和後置命令、您應該檢查插件主機上的命令清單中是否存在 Linux 適用的 __opt 或 snapcenter/snapenter/scC/allowed_commands.config_ 路徑中所提供的命令。</block>
-  <block id="cd590f35a0b386a7dbd4ed93e94a2563" category="summary">還原 MySQL 備份包括起始與 SnapCenter 伺服器的連線工作階段、列出備份和擷取備份資訊、以及還原備份。</block>
-  <block id="68a34ea2d1e4c6a908fbd0f2e0dfd502" category="doc">使用 PowerShell Cmdlet 還原 MySQL 資料庫</block>
-  <block id="5e9e173d2acff941dc42dd384b711936" category="admonition">AppObjectId 為「 Host\Plugin\UID 」、其中 UID = &lt;instance_name&gt; 用於手動探索的 MySQL 執行個體資源、而 UID = &lt;instance_name&gt; = &lt;databse_name&gt; 用於 MySQL 資料庫資源。您可以從 Get-SmResources Cmdlet 取得 ResourceID 。</block>
   <block id="26f012751d0422897cf8be8bfbe0e184" category="doc">設定適用於 MySQL 的 SnapCenter 外掛程式認證</block>
   <block id="957af8278f8063c6cf7bcf3ea7d98baa" category="summary">可與外掛應用程式及儲存系統上的NetApp技術整合。SnapCenter若要使用適用於 MySQL 資料庫的外掛程式、請使用 SnapCenter 圖形化使用者介面。</block>
   <block id="0ce8bb1c11c9d867461ad1c0b83e04c0" category="doc">適用於 MySQL 功能的 SnapCenter 外掛程式</block>
@@ -9427,7 +9397,6 @@ Snapshot 作業。</block>
   <block id="58ec0509621b150bb63b0fd69f20665f" category="doc">備份 NetApp 支援外掛程式資源的資源群組</block>
   <block id="82f84190c005819dad7f504f11cda76c" category="doc">NetApp 支援外掛程式資源的備份排程</block>
   <block id="219faad869c51c259c3baeb888e7715b" category="doc">取消 NetApp 支援外掛程式的備份作業</block>
-  <block id="dbde28811975e59f9d793cdbedffa379" category="paragraph">如需 PowerShell Cmdlet 的相關資訊，請使用 SnapCenter Cmdlet 說明或參閱<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="439bf0bb77d088155289bdb25e45edeb" category="list-text">預設的複製作業僅會複製儲存物件。只有在 NetApp 支援的外掛程式提供該功能時、才能在應用程式層級執行複製作業。</block>
   <block id="16ee2093a7a4ef5d61a3e32fb3cdb6aa" category="doc">Clone NetApp Supported plug-ins 資源備份</block>
   <block id="d6f2d27570c2ded83dc0df5937822b5e" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需 PowerShell Cmdlet 的詳細資訊、請使用 SnapCenter Cmdlet 說明或參閱<block ref="bc27467ef171f28886fa3a802d3980c6" category="inline-link-rx"></block> 軟體 Cmdlet 參考指南 ^] 。</block>
@@ -9521,8 +9490,6 @@ Snapshot 作業。</block>
   <block id="8c6a5ec4378c1fb0539384c188e10773" category="list-text">在 * 值 * 欄位中指定連接埠號碼。</block>
   <block id="8df8e33d8de2d6167669d469ccf7bacd" category="summary">資源是由 SnapCenter 管理的 Linux 主機上的 PostgreSQL 叢集和執行個體。安裝 PostgreSQL 外掛程式的 SnapCenter 外掛程式之後、系統會自動探索該 Linux 主機上的 PostgreSQL 叢集、並顯示在「資源」頁面中。</block>
   <block id="b7010b9dd54942efc350213b545f8fcc" category="paragraph">資源是由 SnapCenter 管理的 Linux 主機上的 PostgreSQL 叢集和執行個體。安裝 PostgreSQL 外掛程式的 SnapCenter 外掛程式之後、系統會自動探索該 Linux 主機上所有執行個體的 PostgreSQL 叢集、並顯示在「資源」頁面中。</block>
-  <block id="0d78e7f1a288dafc16b38b2db161bd37" category="summary">備份叢集包括建立與 SnapCenter 伺服器的連線、新增資源、新增原則、建立備份資源群組及備份。</block>
-  <block id="b1cbcfa72bf25e7c520985ac50c60f65" category="doc">使用 PowerShell Cmdlet 備份叢集</block>
   <block id="82cdab2339b9d151736b53885e0ce102" category="paragraph">此範例說明如何新增 PostgreSQL 執行個體：</block>
   <block id="76c214e24b03aa4168d09074b6e14e3f" category="summary">您可以建立資源（叢集）或資源群組的備份。備份工作流程包括規劃、識別備份叢集、管理備份原則、建立資源群組及附加原則、建立備份及監控作業。</block>
   <block id="530895ccaf7ffc619f25f8f9d8ec3597" category="doc">備份 PostgreSQL 資源</block>
@@ -9537,7 +9504,6 @@ Snapshot 作業。</block>
   <block id="3aec6404efc9e4c86b1c1e63225bc69f" category="paragraph">輸入要從現有備份複製的目標 PostgreSQL 目標連接埠。</block>
   <block id="ddeb42879d827df35406b952ceec75ef" category="list-text">預先複製命令：刪除名稱相同的現有叢集</block>
   <block id="ac6903fb60d8773c9c64b4d5c2ae07ca" category="list-text">POST clone 命令：驗證叢集或啟動叢集。</block>
-  <block id="c5f5244e6930e3be5fb9358a7fb198ec" category="doc">使用 PowerShell Cmdlet 複製 PostgreSQL 叢集備份</block>
   <block id="a46c7c9051556410e34daf87555e4af7" category="paragraph">對於 PostgreSQL 叢集：</block>
   <block id="16304fb8cc6cc60af53bde0bb5ac66b7" category="list-text">您可以在來源 PostgreSQL 伺服器上複製。</block>
   <block id="15ae17a7cd3cc273763752dd6144c354" category="doc">在 Linux 主機上設定 SnapCenter PostgreSQL 外掛程式服務的 CA 憑證</block>
@@ -9616,11 +9582,6 @@ Snapshot 作業。</block>
   <block id="c9ef32d5d952753021dc5a9a5f8a1fc1" category="paragraph">如果使用者想要執行恢復至 5 am 。 然後、使用者必須將瀏覽器時區設定為 PostgreSQL Linux 主機時區（ GMT-07 ： 00 ）、並將日期和時間指定為上午 5 ： 00</block>
   <block id="08a801b87570777fd2e3960aa5df1bb1" category="admonition">您無法恢復手動新增的 PostgreSQL 資源。</block>
   <block id="43434635d53a7654c99b7e0b2592780f" category="admonition">適用於 PostgreSQL 的 SnapCenter 外掛程式會在 __/PostgreSQL 、 &lt;OS_temp_folder&gt; SC_recovery 、 &lt;Restore_JobId&gt; 、 _ 資料夾中建立一個 backup_label 和 tablespace 地圖、以協助手動復原。</block>
-  <block id="77d20f777995de612db657a54e3dd05e" category="summary">還原 PostgreSQL 備份包括啟動與 SnapCenter 伺服器的連線工作階段、列出備份和擷取備份資訊、以及還原備份。</block>
-  <block id="327dedb40ce8a6597f0c43633fac8ff6" category="doc">使用 PowerShell Cmdlet 還原 PostgreSQL 叢集</block>
-  <block id="9211fb254b9418c89e77590ae03a0ae8" category="admonition">AppObjectId 為「 Host\Plugin\UID 」、其中 UID = &lt;instance_name&gt; 用於手動探索的 PostgreSQL 執行個體資源、而 UID = &lt;instance_name&gt; = &lt;databse_name&gt; 用於 PostgreSQL 叢集資源。您可以從Get-smResources Cmdlet取得資源ID。</block>
-  <block id="b5c3bf7715665388a63229be96401c77" category="paragraph">本範例說明如何從主要儲存設備還原叢集：</block>
-  <block id="68457f3725741703167e8a741dfb53a5" category="paragraph">本範例說明如何從次要儲存設備還原叢集：</block>
   <block id="e9ed9fe137a73fd8f4de1dd2a91bb6b4" category="summary">使用認證資料驗證使用者執行的不中斷作業。SnapCenter SnapCenter您應該建立認證來安裝 SnapCenter 外掛程式、以及在叢集或 Windows 檔案系統上執行資料保護作業的其他認證。</block>
   <block id="e98661df3aff27229a7058376533924a" category="doc">為 PostgreSQL 設定 SnapCenter 外掛程式的認證</block>
   <block id="4a22036d291fcb70270b7a277bb6609d" category="summary">可與外掛應用程式及儲存系統上的NetApp技術整合。SnapCenter若要使用 PostgreSQL 叢集的外掛程式、請使用 SnapCenter 圖形化使用者介面。</block>
@@ -9777,7 +9738,6 @@ Snapshot 作業。</block>
   <block id="d2a6c0fe906c34dcc3199d46b0f064eb" category="sidebar">在「拓撲」頁面中檢視 IBM DB2 資料庫備份和複本</block>
   <block id="1f70c9e1700c704dfec3fabce3ea1e61" category="sidebar">還原 IBM DB2</block>
   <block id="3f1b13e4c36844e70f5e441d547e538a" category="sidebar">還原自動探索的資料庫備份</block>
-  <block id="6430c6d3f6715feb3c81d928f75f4ef5" category="sidebar">使用 PowerShell Cmdlet 還原 IBM DB2</block>
   <block id="1c72949dbb5a015cff1821967cce106f" category="sidebar">複製 IBM DB2 資源備份</block>
   <block id="b0b60126f154fbea1109285d09dabe64" category="sidebar">複製 IBM DB2 資料庫備份</block>
   <block id="018574050002dfdb703111e592ace12f" category="sidebar">保護 MySQL</block>
@@ -9790,7 +9750,6 @@ Snapshot 作業。</block>
   <block id="0d1aafd347801e1c28235ed9f606913b" category="sidebar">安裝適用於 MySQL 的 SnapCenter 外掛程式</block>
   <block id="f8ec35321e854dc696eede14c98e61f0" category="sidebar">在「拓撲」頁面中檢視 MySQL 資料庫備份和複本</block>
   <block id="74f11b6391f86775587d7212c298b439" category="sidebar">還原 MySQL</block>
-  <block id="2fd821a84f4f2d04dfd883d9e831b487" category="sidebar">使用 PowerShell Cmdlet 還原 MySQL</block>
   <block id="66d8fc5dc91943dfb2a42f390879dbaa" category="sidebar">複製 MySQL 資源備份</block>
   <block id="e21d8a65aeaef70217d9755dfc6ca944" category="sidebar">複製 MySQL 資料庫備份</block>
   <block id="b0aa9b023351939602d9d1e28823f0e3" category="sidebar">保護 NetApp 支援的外掛程式</block>
@@ -9818,7 +9777,6 @@ Snapshot 作業。</block>
   <block id="a60af869a07d535dff66727f74a69b19" category="sidebar">安裝適用於 PostgreSQL 的 SnapCenter 外掛程式</block>
   <block id="146ebe956310ab6aebfd83b175d2bae4" category="sidebar">在「拓撲」頁面中檢視 PostgreSQL 叢集備份和複本</block>
   <block id="d9b22e5cf88b9d4e6e8fe02a7489ea16" category="sidebar">還原 PostgreSQL</block>
-  <block id="57318c547ffe570761f4a3f4b7899d67" category="sidebar">使用 PowerShell Cmdlet 還原 PostgreSQL</block>
   <block id="480aaec5aa69b781016a62284565640a" category="sidebar">複製 PostgreSQL 資源備份</block>
   <block id="680c5ccf46f4a728694c590785dc9cda" category="sidebar">複製 PostgreSQL 叢集備份</block>
   <block id="881cbdbe2345b7472ef428b8c524734a" category="admonition">不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenterAmazon FSX for NetApp ONTAP 和 Cloud Volumes ONTAP 不再需要容量型授權。Azure NetApp Files 不需要標準授權和容量型授權。</block>
@@ -9881,4 +9839,7 @@ Snapshot 作業。</block>
   <block id="310b8da14055c2cf4702264e02854d3d" category="paragraph">5672 （ TCP ）</block>
   <block id="c55a170d16570920e099a9e43d38db67" category="paragraph">這是 RabbitMQ 接聽的預設連接埠、用於排程器服務與 SnapCenter 之間的發行者訂購者模式通訊。</block>
   <block id="f5a551e6a3161ca6d9ee33d926d734d5" category="list-text">Microsoft Edge 110.0.1587.17 及更新版本</block>
+  <block id="3d64c1dca7f60c2f025bc4b68e25eaec" category="doc">備份 DB2 資料庫</block>
+  <block id="fc25be62e75052437e6fa7b8d1571f48" category="open-title">UI SnapCenter</block>
+  <block id="41269337bd4507838c6bb1bd7b2141c3" category="sidebar">備份 DB2 資料庫</block>
 </blocks>

@@ -100,8 +100,6 @@ entries:
     url: "/protect-nsp/back_up_resource_groups_of_netapp_supported_plugins_resources.html"
   - title: 使用PowerShell Cmdlet建立儲存系統連線和認證
     url: "/protect-nsp/create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets.html"
-  - title: 使用PowerShell Cmdlet備份資源
-    url: "/protect-nsp/back_up_resources_using_powershell_cmdlets.html"
   - title: 監控備份作業
     url: "/protect-nsp/monitor_resources_backup_operations.html"
   - title: 取消備份作業
@@ -124,7 +122,5 @@ entries:
     url: "/protect-nsp/clone_netapp_supported_plugins_resource_backups.html"
   - title: 從備份複製
     url: "/protect-nsp/clone_from_a_backup.html"
-  - title: 使用PowerShell Cmdlet複製備份
-    url: "/protect-nsp/clone_backups_using_powershell_cmdlets.html"
   - title: 監控SnapCenter 實體複製作業
     url: "/protect-nsp/monitor_resource_clone_operations.html"

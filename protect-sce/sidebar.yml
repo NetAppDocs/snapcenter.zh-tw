@@ -72,8 +72,6 @@ entries:
     url: "/protect-sce/task_back_up_exchange_resources_groups.html"
   - title: 使用適用於Exchange Server的PowerShell Cmdlet建立儲存系統連線和認證
     url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
-  - title: 使用PowerShell Cmdlet備份Exchange資源
-    url: "/protect-sce/task_back_up_exchange_resources_using_powershell_cmdlets.html"
   - title: 監控備份作業
     url: "/protect-sce/task_monitor_backup_operations.html"
   - title: 取消Exchange資料庫的備份作業
@@ -94,8 +92,6 @@ entries:
     url: "/protect-sce/reference_granular_recovery_of_mails_and_mailbox.html"
   - title: 從次要儲存設備還原Exchange Server資料庫
     url: "/protect-sce/task_restore_an_exchange_server_database_from_secondary_storage.html"
-  - title: 使用PowerShell Cmdlet還原Exchange資源
-    url: "/protect-sce/task_restore_exchange_resources_using_powershell_cmdlets.html"
   - title: 已重新建立被動式Exchange節點複本
     url: "/protect-sce/task_reseed_a_passive_exchange_node_replica.html"
   - title: 已使用PowerShell Cmdlet重新建立Exchange資料庫的複本

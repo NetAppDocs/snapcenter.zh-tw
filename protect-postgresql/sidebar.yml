@@ -110,8 +110,6 @@ entries:
     url: "/protect-postgresql/back-up-resource-groups-postgresql.html"
   - title: 使用適用於 PostgreSQL 的 PowerShell Cmdlet 建立儲存系統連線和認證
     url: "/protect-postgresql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-postgresql.html"
-  - title: 使用 PowerShell Cmdlet 備份叢集
-    url: "/protect-postgresql/back-up-clusters-using-powershell-cmdlets-postgresql.html"
   - title: 監控備份作業
     entries:
     - title: 監控SnapCenter 「不支援作業」頁面中的備份作業
@@ -130,8 +128,6 @@ entries:
     url: "/protect-postgresql/restore-and-recover-a-manually-added-resource-backup.html"
   - title: 還原並恢復自動探索到的叢集備份
     url: "/protect-postgresql/restore-and-recover-an-auto-discovered-cluster-backup.html"
-  - title: 使用 PowerShell Cmdlet 還原 PostgreSQL
-    url: "/protect-postgresql/restore-postgresql-using-powershell-cmdlets.html"
   - title: 使用PowerShell Cmdlet還原資源
     url: "/protect-postgresql/restore-and-recover-resources-using-powershell-cmdlets-postgresql.html"
   - title: 監控還原作業
@@ -142,8 +138,6 @@ entries:
     url: "/protect-postgresql/clone-postgresql-resource-backups.html"
   - title: 複製 PostgreSQL 叢集備份
     url: "/protect-postgresql/clone-postgresql-backup.html"
-  - title: 使用 PowerShell Cmdlet 複製 PostgreSQL 叢集備份
-    url: "/protect-postgresql/clone-postgresql-backups-using-powershell-cmdlets.html"
   - title: 監控SnapCenter 實體複製作業
     url: "/protect-postgresql/monitor-postgresql-clone-operations.html"
   - title: 分割實體複本

@@ -106,8 +106,6 @@ entries:
     url: "/protect-mysql/back-up-resource-groups-mysql.html"
   - title: 使用適用於 MySQL 的 PowerShell Cmdlet 建立儲存系統連線和認證
     url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
-  - title: 使用PowerShell Cmdlet備份資料庫
-    url: "/protect-mysql/back-up-databases-using-powershell-cmdlets-mysql.html"
   - title: 監控備份作業
     entries:
     - title: 監控SnapCenter 「不支援作業」頁面中的備份作業
@@ -126,8 +124,6 @@ entries:
     url: "/protect-mysql/restore-and-recover-a-manually-added-resource-backup.html"
   - title: 還原及還原自動探索的資料庫備份
     url: "/protect-mysql/restore-and-recover-an-auto-discovered-database-backup.html"
-  - title: 使用 PowerShell Cmdlet 還原 MySQL
-    url: "/protect-mysql/restore-mysql-using-powershell-cmdlets.html"
   - title: 使用PowerShell Cmdlet還原資源
     url: "/protect-mysql/restore-and-recover-resources-using-powershell-cmdlets-mysql.html"
   - title: 監控還原作業
@@ -138,8 +134,6 @@ entries:
     url: "/protect-mysql/clone-mysql-resource-backups.html"
   - title: 複製 MySQL 資料庫備份
     url: "/protect-mysql/clone-mysql-backup.html"
-  - title: 使用 PowerShell Cmdlet 複製 MySQL 資料庫備份
-    url: "/protect-mysql/clone-mysql-backups-using-powershell-cmdlets.html"
   - title: 監控SnapCenter 實體複製作業
     url: "/protect-mysql/monitor-mysql-clone-operations.html"
   - title: 分割實體複本

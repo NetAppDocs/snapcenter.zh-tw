@@ -26,6 +26,10 @@ summary: 如果某個資源尚未納入任何資源群組、您可以從「資�
 
 
 
+[role="tabbed-block"]
+====
+.UI SnapCenter
+--
 .步驟
 . 在左側導覽窗格中、選取 * 資源 * 、然後從清單中選取適當的外掛程式。
 . 在「資源」頁面中、從「*檢視*」下拉式清單中選取「*資料庫*」、「*執行個體*」或「*可用度群組*」。
@@ -158,3 +162,101 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Backup_fails_with_Windows_scheduler_error["Windows排程器錯誤導致備份失敗"]
 
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["靜止或分組資源作業失敗"]
+
+--
+.PowerShell Cmdlet
+--
+.步驟
+. 使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146
+----
++
+隨即顯示使用者名稱和密碼提示。
+
+. 使用Add-SmPolicy Cmdlet建立備份原則。
++
+此範例使用SQL備份類型的FullBackup建立新的備份原則：
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName TESTPolicy
+-PluginPolicyType SCSQL -PolicyType Backup
+-SqlBackupType FullBackup -Verbose
+----
++
+此範例使用CrashConistent的Windows檔案系統備份類型建立新的備份原則：
+
++
+[listing]
+----
+PS C:\> Add-SmPolicy -PolicyName FileSystemBackupPolicy
+-PluginPolicyType SCW -PolicyType Backup
+-ScwBackupType CrashConsistent -Verbose
+----
+. 使用Get-SmResources Cmdlet探索主機資源。
++
+此範例會探索指定主機上Microsoft SQL外掛程式的資源：
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise-f6.sddev.mycompany.com
+-PluginCode SCSQL
+----
++
+此範例會探索指定主機上Windows檔案系統的資源：
+
++
+[listing]
+----
+C:\PS>PS C:\> Get-SmResources -HostName vise2-f6.sddev.mycompany.com
+-PluginCode SCW
+----
+. 使用Add-SmResourceDGroup Cmdlet新增資源群組SnapCenter 至Seset.
++
+此範例會使用指定的原則和資源建立新的SQL資料庫備份資源群組：
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName AccountingResource
+-Resources @{"Host"="visef6.org.com";
+"Type"="SQL Database";"Names"="vise-f6\PayrollDatabase"}
+-Policies "BackupPolicy"
+----
++
+此範例會建立新的Windows檔案系統備份資源群組、其中包含指定的原則和資源：
+
++
+[listing]
+----
+PS C:\> Add-SmResourceGroup -ResourceGroupName EngineeringResource
+-PluginCode SCW -Resources @{"Host"="WIN-VOK20IKID5I";
+"Type"="Windows Filesystem";"Names"="E:\"}
+-Policies "EngineeringBackupPolicy"
+----
+. 使用New-SmBackup Cmdlet來初始化新的備份工作。
++
+[listing]
+----
+PS C:> New-SmBackup -ResourceGroupName PayrollDataset -Policy FinancePolicy
+----
+. 使用Get-SmBackupReport Cmdlet檢視備份工作的狀態。
++
+此範例顯示在指定日期執行之所有工作的工作摘要報告：
+
++
+[listing]
+----
+PS C:\> Get-SmJobSummaryReport -Date '1/27/2016'
+----
+
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。
+
+--
+====

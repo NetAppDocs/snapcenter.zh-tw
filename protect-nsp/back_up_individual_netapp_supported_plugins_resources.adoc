@@ -18,6 +18,10 @@ summary: 如果個別 NetApp 支援的外掛程式資源不是任何資源群組
 * 如果您想要備份與二線儲存設備有SnapMirror關係的資源、ONTAP 指派給儲存設備使用者的這個角色應該包含「全部快照鏡射」權限。不過、如果您使用「vsadmin」角色、則不需要「全部快照鏡像」權限。
 
 
+[role="tabbed-block"]
+====
+.UI SnapCenter
+--
 .步驟
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
 . 在「資源」頁面中、根據資源類型篩選*檢視*下拉式清單中的資源。
@@ -131,3 +135,89 @@ NOTE: 您也可以按一下建立原則 image:../media/add_policy_from_resourceg
 
 . 按一下*監控*>*工作*來監控作業進度。
 
+
+--
+.PowerShell Cmdlet
+--
+.步驟
+. 使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https:\\snapctr.demo.netapp.com:8146\
+----
++
+隨即顯示使用者名稱和密碼提示。
+
+. 使用Add-SmResources Cmdlet新增資源。
++
+此範例新增資源：
+
++
+[listing]
+----
+Add-SmResource -HostName '10.232.206.248' -PluginCode 'DB2' -ResourceName NONREC1 -ResourceType Database -StorageFootPrint ( @
+{"VolumeName"="DB2_NONREC1DB";"LunName"="DB2_NONREC1DB";"Vserver"="vserver_scauto_secondary"}) -Instance db2inst1
+----
+. 使用Add-SmPolicy Cmdlet建立備份原則。
++
+此範例建立新的備份原則：
+
++
+[listing]
+----
+Add-SMPolicy -PolicyName 'db2VolumePolicy' -PolicyType 'Backup' -PluginPolicyType DB2  -description 'VolumePolicy'
+----
+. 使用Add-SmResourceDGroup Cmdlet新增資源群組SnapCenter 至Seset.
++
+此範例會建立具有指定原則和資源的新資源群組：
+
++
+[listing]
+----
+Add-SmResourceGroup -ResourceGroupName 'Verify_ManualBackup_DatabaseLevel_MultipleVolume_unix' -Resources @(@
+{"Host"="10.232.206.248";"Uid"="db2inst2\NONREC"},@{"Host"="10.232.206.248";"Uid"="db2inst1\NONREC"}) -Policies db2ManualPolicy
+----
+. 使用New-SmBackup Cmdlet來初始化新的備份工作。
++
+[listing]
+----
+New-SMBackup -DatasetName Verify_ManualBackup_DatabaseLevel_MultipleVolume_unix -Policy db2ManualPolicy
+----
+. 使用Get-SmBackupReport Cmdlet檢視備份工作的狀態。
++
+此範例顯示在指定日期執行之所有工作的工作摘要報告：
+
++
+[listing]
+----
+PS C:\> Get-SmBackupReport -JobId 351
+Output:
+BackedUpObjects           : {DB1}
+FailedObjects             : {}
+IsScheduled               : False
+HasMetadata               : False
+SmBackupId                : 269
+SmJobId                   : 2361
+StartDateTime             : 10/4/2016 11:20:45 PM
+EndDateTime               : 10/4/2016 11:21:32 PM
+Duration                  : 00:00:46.2536470
+CreatedDateTime           : 10/4/2016 11:21:09 PM
+Status                    : Completed
+ProtectionGroupName       : Verify_ASUP_Message_windows
+SmProtectionGroupId       : 211
+PolicyName                : test2
+SmPolicyId                : 20
+BackupName                : Verify_ASUP_Message_windows_scc54_10-04-2016_23.20.46.2758
+VerificationStatus        : NotVerified
+VerificationStatuses      :
+SmJobError                :
+BackupType                : SCC_BACKUP
+CatalogingStatus          : NotApplicable
+CatalogingStatuses        :
+ReportDataCreatedDateTime :
+----
+
+
+--
+====

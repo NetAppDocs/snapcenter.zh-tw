@@ -33,6 +33,10 @@ NOTE: 如果命令清單中不存在這些命令、則作業將會失敗。
 * 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 
+[role="tabbed-block"]
+====
+.UI SnapCenter
+--
 .步驟
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
 . 在「資源」頁面中、根據資源類型篩選*檢視*下拉式清單中的資源。
@@ -86,3 +90,97 @@ NOTE: 對於停止、 Snapshot 和取消停止作業的前置和後置命令、�
 
 .完成後
 只有在 RollForward 狀態為「 DB 擱置中」狀態時、才能進行還原。此狀態適用於已啟用歸檔記錄的 DB2 資料庫。
+
+--
+.PowerShell Cmdlet
+--
+.步驟
+. 使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。
++
+[listing]
+----
+PS C:\> Open-SmConnection
+----
+. 使用Get-SmBackup和Get-SmBackup Cmdlet來識別您要還原的備份。
++
+此範例顯示有兩個備份可供還原：
+
++
+[listing]
+----
+ PS C:\> Get-SmBackup -AppObjectId cn24.sccore.test.com\DB2\db2inst1\Library
+
+        BackupId    BackupName                    BackupTime            BackupType
+        --------    ----------                    ----------            ----------
+         1          Payroll Dataset_vise-f6_08... 8/4/2015 11:02:32 AM  Full Backup
+         2          Payroll Dataset_vise-f6_08... 8/4/2015 11:23:17 AM
+----
++
+此範例顯示2015年1月29日至2015年2月3日備份的詳細資訊：
+
++
+[listing]
+----
+PS C:\> Get-SmBackupReport -FromDateTime "1/29/2015" -ToDateTime "2/3/2015"
+
+SmBackupId           : 113
+   SmJobId              : 2032
+   StartDateTime        : 2/2/2015 6:57:03 AM
+   EndDateTime          : 2/2/2015 6:57:11 AM
+   Duration             : 00:00:07.3060000
+   CreatedDateTime      : 2/2/2015 6:57:23 AM
+   Status               : Completed
+   ProtectionGroupName  : Clone
+   SmProtectionGroupId  : 34
+   PolicyName           : Vault
+   SmPolicyId           : 18
+   BackupName           : Clone_SCSPR0019366001_02-02-2015_06.57.08
+   VerificationStatus   : NotVerified
+
+   SmBackupId           : 114
+   SmJobId              : 2183
+   StartDateTime        : 2/2/2015 1:02:41 PM
+   EndDateTime          : 2/2/2015 1:02:38 PM
+   Duration             : -00:00:03.2300000
+   CreatedDateTime      : 2/2/2015 1:02:53 PM
+   Status               : Completed
+   ProtectionGroupName  : Clone
+   SmProtectionGroupId  : 34
+   PolicyName           : Vault
+   SmPolicyId           : 18
+   BackupName           : Clone_SCSPR0019366001_02-02-2015_13.02.45
+   VerificationStatus   : NotVerified
+----
+. 使用Restore-SmBackup Cmdlet從備份還原資料。
++
+
+NOTE: AppObjectId 為「 Host\Plugin\UID 」、其中 UID = <instance_name> 用於手動探索的 DB2 執行個體資源、而 UID = <instance_name> = <databse_name> 用於 IBM DB2 資料庫資源。您可以從Get-smResources Cmdlet取得資源ID。
+
++
+[listing]
+----
+Get-smResources  -HostName cn24.sccore.test.com  -PluginCode DB2
+----
++
+本範例說明如何從主要儲存設備還原資料庫：
+
++
+[listing]
+----
+Restore-SmBackup -PluginCode DB2 -AppObjectId cn24.sccore.test.com\DB2\db2inst1\DB01 -BackupId 3
+----
++
+本範例說明如何從次要儲存設備還原資料庫：
+
++
+[listing]
+----
+Restore-SmBackup -PluginCode 'DB2' -AppObjectId cn24.sccore.test.com\DB2\db2inst1\DB01 -BackupId 399 -Confirm:$false  -Archive @( @{"Primary"="<Primary Vserver>:<PrimaryVolume>";"Secondary"="<Secondary Vserver>:<SecondaryVolume>"})
+----
++
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。
+
+
+
+--
+====

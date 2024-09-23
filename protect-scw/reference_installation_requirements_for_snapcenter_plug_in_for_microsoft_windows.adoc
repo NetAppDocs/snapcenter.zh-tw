@@ -65,7 +65,6 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
  a| 
 * 。 NET Core 8.0.5
 * PowerShell Core 7.4.2
-* Java 11 Oracle Java 和 OpenJDK
 
 
 如需支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。

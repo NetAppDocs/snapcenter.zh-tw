@@ -66,8 +66,6 @@ entries:
     url: "/protect-scw/task_back_up_resource_groups_for_windows_file_systems.html"
   - title: 使用PowerShell Cmdlet建立儲存系統連線和認證
     url: "/protect-scw/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_windows.html"
-  - title: 使用PowerShell Cmdlet備份資源
-    url: "/protect-scw/task_back_up_resources_using_powershell_cmdlets_for_windows.html"
   - title: 監控備份作業
     url: "/protect-scw/task_monitor_backup_operations.html"
   - title: 取消備份作業
@@ -82,7 +80,7 @@ entries:
   entries:
   - title: 還原Windows檔案系統備份
     url: "/protect-scw/task_restore_windows_file_system_backups.html"
-  - title: 使用PowerShell Cmdlet還原及還原資源
+  - title: 使用PowerShell Cmdlet還原資源
     url: "/protect-scw/task_restore_and_recover_resources_using_powershell_cmdlets_for_windows.html"
   - title: 監控還原作業
     url: "/protect-scw/task_monitor_restore_operations.html"
@@ -92,8 +90,6 @@ entries:
   entries:
   - title: 從Windows檔案系統備份複製
     url: "/protect-scw/task_clone_from_a_windows_file_system_backup.html"
-  - title: 使用PowerShell Cmdlet複製備份
-    url: "/protect-scw/task_clone_backups_using_powershell_cmdlets_for_windows.html"
   - title: 監控複製作業
     url: "/protect-scw/task_monitor_clone_operations.html"
   - title: 取消複製作業

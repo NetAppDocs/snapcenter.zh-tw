@@ -2,14 +2,6 @@
 :allow-uri-read: 
 
 
-您可以使用PowerShell Cmdlet來備份SQL Server資料庫或Windows檔案系統。這包括備份SQL Server資料庫或Windows檔案系統、包括與SnapCenter 該伺服器建立連線、探索SQL Server資料庫執行個體或Windows檔案系統、新增原則、建立備份資源群組、備份及驗證備份。
-
-.開始之前
-* 您必須準備好PowerShell環境、才能執行PowerShell Cmdlet。
-* 您必須新增儲存系統連線並建立認證。
-* 您必須新增主機和探索到的資源。
-
-
 .步驟
 . 使用Open-SmConnection Cmdlet為SnapCenter 指定的使用者啟動與SetsServer的連線工作階段。
 +

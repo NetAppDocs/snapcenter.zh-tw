@@ -48,6 +48,10 @@ summary: 您可以使用SnapCenter 支援功能還原備份的Exchange資料庫�
 * 對於 SnapMirror 主動同步還原作業、您必須從主要位置選取備份。
 
 
+[role="tabbed-block"]
+====
+.UI SnapCenter
+--
 .步驟
 . 在左側導覽窗格中、按一下「資源」頁面左上角的*資源*。
 . 從下拉式清單中選取Exchange Server外掛程式。
@@ -132,3 +136,68 @@ NOTE: 預先編寫或後製指令碼路徑不應包含磁碟機或共用區。�
 從備份還原作用中資料庫時、如果複本與作用中資料庫之間有延遲、被動資料庫可能會進入暫停或故障狀態。
 
 當作用中資料庫的記錄鏈分支分支開始中斷複寫時、狀態可能會發生變更。Exchange Server會嘗試修復複本、但如果無法修復複本、則在還原之後、您應該建立新的備份、然後重新重新建立複本。
+
+--
+.PowerShell Cmdlet
+--
+.步驟
+. 使用「Open-SmConnection」指令程式、為SnapCenter 指定的使用者啟動與該伺服器的連線工作階段。
++
+[listing]
+----
+Open-smconnection  -SMSbaseurl  https://snapctr.demo.netapp.com:8146/
+----
+. 使用「Get-SmBackup」Cmdlet擷取您要還原的一或多個備份相關資訊。
++
+此範例顯示所有可用備份的相關資訊：
+
++
+[listing]
+----
+PS C:\> Get-SmBackup
+
+BackupId                      BackupName                    BackupTime                    BackupType
+--------                      ----------                    ----------                    ----------
+341                           ResourceGroup_36304978_UTM... 12/8/2017 4:13:24 PM          Full Backup
+342                           ResourceGroup_36304978_UTM... 12/8/2017 4:16:23 PM          Full Backup
+355                           ResourceGroup_06140588_UTM... 12/8/2017 6:32:36 PM          Log Backup
+356                           ResourceGroup_06140588_UTM... 12/8/2017 6:36:20 PM          Full Backup
+----
+. 使用「Restore - SmBackup」Cmdlet從備份還原資料。
++
+此範例可還原最新的備份：
+
++
+[listing]
+----
+C:\PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true
+----
++
+此範例可還原時間點備份：
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode SCE -AppObjectId 'sce-w2k12-exch.sceqa.com\sce-w2k12-exch_DB_2' -BackupId 341 -IsRecoverMount:$true -LogRestoreType ByTransactionLogs -LogCount 2
+----
++
+此範例將次要儲存設備上的備份還原為主要案例：
+
++
+[listing]
+----
+C:\ PS> Restore-SmBackup -PluginCode 'SCE' -AppObjectId 'DB2' -BackupId 81 -IsRecoverMount:$true -Confirm:$false
+-archive @{Primary="paw_vs:vol1";Secondary="paw_vs:vol1_mirror"} -logrestoretype All
+----
++
+使用「-archive」參數、您可以指定要用於還原的主要和次要磁碟區。
+
++
+「-IsRecoverMount：$true」參數可讓您在還原後掛載資料庫。
+
+
+
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。
+
+--
+====

@@ -140,8 +140,6 @@ entries:
       url: "/protect-scsql/task_monitor_dataprotection_operations_on_sql_resources_in_the_activity_pane.html"
   - title: 使用PowerShell Cmdlet建立儲存系統連線和認證
     url: "/protect-scsql/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_sql.html"
-  - title: 使用PowerShell Cmdlet備份資源
-    url: "/protect-scsql/task_back_up_resources_using_powershell_cmdlets_for_sql.html"
   - title: 取消SnapCenter Microsoft SQL Server備份作業的功能
     url: "/protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html"
   - title: 在「拓撲」頁面中檢視SQL Server備份與複製
@@ -160,10 +158,10 @@ entries:
     url: "/protect-scsql/task_restore_sql_server_database_backups.html"
   - title: 從次要儲存設備還原SQL Server資料庫
     url: "/protect-scsql/task_restore_a_sql_server_database_from_secondary_storage.html"
+  - title: 使用PowerShell Cmdlet還原資源
+    url: "/protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html"
   - title: 重新建立可用度群組資料庫
     url: "/protect-scsql/task_reseed_availability_group_databases.html"
-  - title: 使用PowerShell Cmdlet還原及還原資源
-    url: "/protect-scsql/task_restore_and_recover_resources_using_powershell_cmdlets_for_sql.html"
   - title: 監控還原作業
     url: "/protect-scsql/task_monitor_sql_resources_restore_operations.html"
   - title: 取消還原作業
@@ -174,8 +172,6 @@ entries:
     url: "/protect-scsql/reference_clone_sql_server_database_resources.html"
   - title: 從SQL Server資料庫備份複製
     url: "/protect-scsql/task_clone_from_a_sql_server_database_backup.html"
-  - title: 使用PowerShell Cmdlet複製備份
-    url: "/protect-scsql/task_clone_backups_using_powershell_cmdlets_for_sql.html"
   - title: 執行Clone生命週期
     url: "/protect-scsql/task_perform_clone_lifecycle_management.html"
   - title: 監控SnapCenter 實體複製作業
