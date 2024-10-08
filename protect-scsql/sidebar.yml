@@ -54,14 +54,6 @@ entries:
       url: "/protect-scsql/reference_types_of_restore_operations.html"
   - title: 定義SQL Server的複製策略
     url: "/protect-scsql/task_define_a_clone_strategy_for_sql_server.html"
-- title: 快速安裝SnapCenter 適用於Microsoft SQL Server的解決方案外掛程式
-  entries:
-  - title: 準備安裝 SnapCenter 伺服器和外掛程式
-    url: "/protect-scsql/quick-start-to-prepare-for-snapcenter-plug-in-install-for-sql-server.html"
-  - title: 安裝 SnapCenter Server for Microsoft SQL Server
-    url: "/protect-scsql/task-install-snapcenter-server-for-sql-server.html"
-  - title: 安裝SnapCenter 適用於Microsoft SQL Server的功能性外掛程式
-    url: "/protect-scsql/task-install-snapcenter-plug-in-for-sql-server.html"
 - title: 準備安裝SnapCenter 適用於Microsoft SQL Server的支援功能
   entries:
   - title: 適用於Microsoft SQL Server的安裝工作流程SnapCenter
@@ -128,24 +120,18 @@ entries:
     url: "/protect-scsql/task_create_resource_groups_and_attach_policies_for_sql_server.html"
   - title: 備份SQL資源的需求
     url: "/protect-scsql/concept_requirements_for_backing_up_sql_resources.html"
+  - title: 使用PowerShell Cmdlet建立儲存系統連線和認證
+    url: "/protect-scsql/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_sql.html"
   - title: 備份SQL資源
     url: "/protect-scsql/task_back_up_sql_resources.html"
   - title: 備份SQL Server資源群組
     url: "/protect-scsql/task_back_up_sql_server_resource_groups.html"
-  - title: 監控備份作業
-    entries:
-    - title: 監控SnapCenter 「不支援作業」頁面中的備份作業
-      url: "/protect-scsql/task_monitor_sql_resources_backup_operations.html"
-    - title: 監控「活動」窗格中的作業
-      url: "/protect-scsql/task_monitor_dataprotection_operations_on_sql_resources_in_the_activity_pane.html"
-  - title: 使用PowerShell Cmdlet建立儲存系統連線和認證
-    url: "/protect-scsql/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_sql.html"
+  - title: 監控SnapCenter 「不支援作業」頁面中的備份作業
+    url: "/protect-scsql/task_monitor_sql_resources_backup_operations.html"
   - title: 取消SnapCenter Microsoft SQL Server備份作業的功能
     url: "/protect-scsql/task_cancel_the_snapcenter_plug_in_for_sql_server_operations.html"
   - title: 在「拓撲」頁面中檢視SQL Server備份與複製
     url: "/protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html"
-  - title: 使用PowerShell Cmdlet移除備份
-    url: "/protect-scsql/task_remove_backups_using_powershell_cmdlets_for_sql.html"
   - title: 使用PowerShell Cmdlet清除次要備份數
     url: "/protect-scsql/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_sql.html"
 - title: 還原SQL Server資源

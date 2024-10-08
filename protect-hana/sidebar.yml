@@ -112,18 +112,14 @@ entries:
     url: "/protect-hana/task_create_backup_policies_for_sap_hana_databases.html"
   - title: 建立資源群組並附加原則
     url: "/protect-hana/task_create_resource_groups_and_attach_policies.html"
+  - title: 使用適用於SAP HANA資料庫的PowerShell Cmdlet建立儲存系統連線和認證
+    url: "/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html"
   - title: 備份SAP HANA資料庫
     url: "/protect-hana/task_back_up_sap_hana_databases.html"
   - title: 備份資源群組
     url: "/protect-hana/task_back_up_resource_groups_sap_hana.html"
-  - title: 使用適用於SAP HANA資料庫的PowerShell Cmdlet建立儲存系統連線和認證
-    url: "/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html"
-  - title: 監控備份作業
-    entries:
-    - title: 監控SnapCenter 「不支援作業」頁面中的備份作業
-      url: "/protect-hana/task_monitor_hana_databases_backup_operations.html"
-    - title: 監控「活動」窗格中的作業
-      url: "/protect-hana/task_monitor_dataprotection_operations_on_hana_databases_in_the_activity_pane.html"
+  - title: 監控SnapCenter 「不支援作業」頁面中的備份作業
+    url: "/protect-hana/task_monitor_hana_databases_backup_operations.html"
   - title: 取消備份作業
     url: "/protect-hana/task_cancel_backup_operations_for_sap_hana.html"
   - title: 在「拓撲」頁面中檢視SAP HANA資料庫備份與複製

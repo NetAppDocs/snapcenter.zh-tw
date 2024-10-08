@@ -66,18 +66,16 @@ entries:
     url: "/protect-sce/task_create_backup_policies_for_exchange_server_databases.html"
   - title: 建立Exchange Server的資源群組及附加原則
     url: "/protect-sce/task_create_resource_groups_and_attach_policies_for_exchange_servers.html"
+  - title: 使用適用於Exchange Server的PowerShell Cmdlet建立儲存系統連線和認證
+    url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
   - title: 備份Exchange資料庫
     url: "/protect-sce/task_back_up_exchange_databases.html"
   - title: 備份Exchange資源群組
     url: "/protect-sce/task_back_up_exchange_resources_groups.html"
-  - title: 使用適用於Exchange Server的PowerShell Cmdlet建立儲存系統連線和認證
-    url: "/protect-sce/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_exchange_database.html"
   - title: 監控備份作業
     url: "/protect-sce/task_monitor_backup_operations.html"
   - title: 取消Exchange資料庫的備份作業
     url: "/protect-sce/task_cancel_backup_operations_for_exchange_database.html"
-  - title: 使用PowerShell Cmdlet移除Exchange備份
-    url: "/protect-sce/task_remove_exchange_backups_using_powershell_cmdlets.html"
   - title: 在「拓撲」頁面中檢視Exchange備份
     url: "/protect-sce/task_view_exchange_backups_in_the_topology_page.html"
 - title: 還原Exchange資源

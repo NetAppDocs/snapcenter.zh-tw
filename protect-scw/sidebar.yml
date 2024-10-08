@@ -60,20 +60,18 @@ entries:
     url: "/protect-scw/task_create_backup_policies_for_windows_file_systems.html"
   - title: 為Windows檔案系統建立資源群組
     url: "/protect-scw/task_create_resource_groups_for_windows_file_systems.html"
+  - title: 使用PowerShell Cmdlet建立儲存系統連線和認證
+    url: "/protect-scw/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_windows.html"
   - title: 隨需備份單一資源以供Windows檔案系統使用
     url: "/protect-scw/task_back_up_a_single_resource_on_demand_for_windows_file_systems.html"
   - title: 備份Windows檔案系統的資源群組
     url: "/protect-scw/task_back_up_resource_groups_for_windows_file_systems.html"
-  - title: 使用PowerShell Cmdlet建立儲存系統連線和認證
-    url: "/protect-scw/task_create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets_for_windows.html"
   - title: 監控備份作業
     url: "/protect-scw/task_monitor_backup_operations.html"
   - title: 取消備份作業
     url: "/protect-scw/task_cancel_backup_operations_for_windows_file_system.html"
   - title: 在「拓撲」頁面中檢視相關的備份與複本
     url: "/protect-scw/task_view_related_backups_and_clones_in_the_topology_page.html"
-  - title: 使用PowerShell Cmdlet移除備份
-    url: "/protect-scw/task_remove_backups_using_powershell_cmdlets_for_windows.html"
   - title: 使用PowerShell Cmdlet清除次要備份數
     url: "/protect-scw/task_clean_up_the_secondary_backup_count_using_powershell_cmdlets_for_windows.html"
 - title: 還原Windows檔案系統

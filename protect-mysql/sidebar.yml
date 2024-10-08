@@ -100,18 +100,14 @@ entries:
     url: "/protect-mysql/create-backup-policies-for-mysql.html"
   - title: 建立資源群組並附加原則
     url: "/protect-mysql/create-resource-groups-and-attach-policies.html"
+  - title: 使用適用於 MySQL 的 PowerShell Cmdlet 建立儲存系統連線和認證
+    url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
   - title: 備份 MySQL
     url: "/protect-mysql/back-up-mysql.html"
   - title: 備份資源群組
     url: "/protect-mysql/back-up-resource-groups-mysql.html"
-  - title: 使用適用於 MySQL 的 PowerShell Cmdlet 建立儲存系統連線和認證
-    url: "/protect-mysql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-mysql.html"
-  - title: 監控備份作業
-    entries:
-    - title: 監控SnapCenter 「不支援作業」頁面中的備份作業
-      url: "/protect-mysql/monitor-mysql-backup-operations.html"
-    - title: 監控「活動」窗格中的作業
-      url: "/protect-mysql/monitor-dataprotection-operations-on-mysql-in-the-activity-pane.html"
+  - title: 監控SnapCenter 「不支援作業」頁面中的備份作業
+    url: "/protect-mysql/monitor-mysql-backup-operations.html"
   - title: 取消備份作業
     url: "/protect-mysql/cancel-backup-operations-for-mysql.html"
   - title: 在「拓撲」頁面中檢視 MySQL 資料庫備份和複本
