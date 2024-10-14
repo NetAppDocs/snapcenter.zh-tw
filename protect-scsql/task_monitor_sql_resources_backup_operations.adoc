@@ -7,7 +7,7 @@ summary: 您可以使用SnapCenter 「更新工作」頁面來監控不同備份
 = 監控SnapCenter 「不支援工作」頁面中的SQL資源備份作業
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/ ///
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -39,7 +39,7 @@ summary: 您可以使用SnapCenter 「更新工作」頁面來監控不同備份
 . 選取備份工作、然後按一下*詳細資料*以檢視工作詳細資料。
 +
 
-NOTE: 雖然會顯示備份工作狀態image:../media/success_icon.gif["已完成圖示"]在您按一下工作詳細資料時、可能會看到備份作業的部分子工作仍在進行中、或是標示有警示符號。
+NOTE: 雖然會顯示備份工作狀態image:../media/success_icon.gif["已完成圖示"]、但當您按一下工作詳細資料時、您可能會看到備份作業的某些子工作仍在進行中、或標示有警告標誌。
 
 . 在「工作詳細資料」頁面中、按一下*檢視記錄*。
 +

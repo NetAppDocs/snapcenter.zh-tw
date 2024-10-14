@@ -108,7 +108,9 @@ NOTE: 如果您想要同時執行多個備份作業、則必須增加此值。
 --
 .記錄備份
 --
-備份交易記錄。。選擇*記錄備份*。
+. 備份交易記錄。
+. 選擇*記錄備份*。
+
 
 --
 .僅複製備份
@@ -151,7 +153,7 @@ NOTE: 在叢集組態中、備份會根據原則中設定的保留設定保留�
 您只能為原則選取一種排程類型。
 
 +
-image::../media/backup_settings.gif[備份設定畫面。]
+image:../media/backup_settings.gif["備份設定畫面。"]
 
 +
 
@@ -279,7 +281,7 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 在次要複寫期間、 SnapLock 到期時間會載入主要 SnapLock 到期時間。按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。
 
 +
-請參閱 link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視SQL Server備份與複製"]。
+請參閱。 link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視SQL Server備份與複製"]
 
 
 
@@ -299,7 +301,7 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 如需 SnapLock Vault 的詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["將Snapshot複本提交至保存目的地上的WORM"]
 
 +
-請參閱 link:..protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視SQL Server備份與複製"]。
+請參閱。 link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視SQL Server備份與複製"]
 
 
 
