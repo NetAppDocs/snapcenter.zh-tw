@@ -13,4 +13,4 @@ summary: 若要SnapCenter 保護Oracle資料庫、您應該安裝並設定適用
 [role="lead"]
 若要SnapCenter 保護Oracle資料庫、您應該安裝並設定適用於Oracle資料庫的整套功能。
 
-image::../media/sco_install_configure_workflow.png[SCO安裝設定工作流程]
+image::../media/sco_install_configure_workflow.png[Oracle 外掛程式安裝工作流程]

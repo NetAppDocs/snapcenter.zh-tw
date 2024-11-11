@@ -6,6 +6,8 @@ summary: 您可以產生憑證簽署要求（CSR）並匯入憑證。
 ---
 = 產生CA認證CSR檔案
 :allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
 
 
 [role="lead"]

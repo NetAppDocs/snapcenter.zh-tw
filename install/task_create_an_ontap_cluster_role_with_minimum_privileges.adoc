@@ -40,7 +40,7 @@ NOTE: 您應該針對每個權限重複此命令。
 您應該執行幾ONTAP 個CLI命令來建立叢集角色並指派權限。
 
 
-NOTE: 從 SnapCenter 5.0 開始、叢集管理使用者只能使用 REST API 。如果您想要使用非叢集管理來建立角色、則應使用 ZAPI 。
+NOTE: 從 SnapCenter 5.0 開始，叢集管理使用者僅支援 REST API 。如果您想要使用非叢集管理來建立角色、則應使用 ZAPI 。
 
 * `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "metrocluster show" -access readonly`
 * `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "cluster identity modify" -access all`

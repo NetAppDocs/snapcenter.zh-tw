@@ -33,6 +33,37 @@ NOTE: 除非指派SnapCenter 「管理員」或其他超級使用者角色、否
 
 
 
+=== 管理排程的備份工作
+
+從 SnapCenter 6.0.1 版本開始，新增了一個參數 *JobContcurrency卻 可以設定臨界值，以設定任何指定時間可執行的排程工作數。這可讓您根據系統硬體組態來控制想要執行的備份數量。
+
+分配給 *JobConcurrencyValueHold* 的默認值爲 0 ，並且被禁用。如果您在排程備份期間觀察到效能降低，您可以透過指派值來啟用。
+
+
+NOTE: 如果您啟用 *JobConcurrencyThreshold * 來管理並行工作， SnapCenter 將不允許您控制備份順序，而且備份可能不會在排程中指定的時間觸發。
+
+.步驟
+. 設定 _C:\Program NetApp SnapManager ， Web.UI.dll.config_ 的 _JobConcurrencyValueHolding_ 參數值 SnapCenter 。
+. 按一下 [IIS] > [ 應用程式集區 ] > [IIS] > SnapCenter [Restart] ，以回收 SnapCenter 應用程式集區。
+. 按一下 [IIS] > [ 網站 ] > [IIS] > SnapCenter [Restart] > [Restart] ，重新啟動 SnapCenter Web 服務
+
+
+
+
+=== 管理過時的工作
+
+過時工作是因為 SnapCenter 中斷或工作更新不當所造成。從 SnapCenter 6.0.1 版本開始，我們會推出預先定義的排程，以清除這些卡住超過 72 小時的過時工作。您可以編輯可設定的參數 * CleanUpStaleJobsIntervalHours * 來變更排程頻率。
+
+您可以在 * 監控 * > * 排程 * > * SnapCenter > StaleJobCleanUp* 中執行排程，以觸發隨需清理。
+
+.步驟
+. 設定 _C ： \Program NetApp ， SnapCenter SnapManager ， Web.UI.dll.config_ 中 _CleanUpStaleJobsIntervalHours 參數的值。
+. 按一下 [IIS] > [ 應用程式集區 ] > [IIS] > SnapCenter [Restart] ，以回收 SnapCenter 應用程式集區。
+. 按一下 [IIS] > [ 網站 ] > [IIS] > SnapCenter [Restart] > [Restart] ，重新啟動 SnapCenter Web 服務
+
+
+
+
 == 監控排程
 
 您可能想要檢視目前的排程、以判斷作業開始時間、上次執行時間、以及下次執行時間。您也可以決定執行作業的主機、以及作業的資源群組和原則資訊。

@@ -48,7 +48,7 @@ entries:
   entries:
   - title: 適用於 IBM DB2 的 SnapCenter 外掛程式安裝工作流程
     url: "/protect-db2/install-snapcenter-plug-in-for-ibm-db2.html"
-  - title: 新增主機和安裝 IBM DB2 SnapCenter 外掛程式的必要條件
+  - title: 新增主機和安裝 Windows ， Linux 或 AIX 外掛程式套件的必要條件
     url: "/protect-db2/prerequisites-to-adding-hosts-and-installing-snapcenter-plug-in-for-ibm-db2.html"
   - title: 安裝SnapCenter 適用於Windows的功能性外掛程式套件的主機需求
     url: "/protect-db2/host-requirements-to-install-snapcenter-plug-in-package-for-windows-db2.html"

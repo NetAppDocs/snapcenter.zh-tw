@@ -127,7 +127,7 @@ NOTE: 如果原則包含*在備份工作建立時間*選取的伺服器上備份
 對於電子郵件通知、您必須使用GUI或PowerShell命令「et-SmtpServer」來指定SMTP伺服器詳細資料。
 
 +
-您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.htmlnapCenter[] 軟體 Cmdlet 參考指南 ^] 。
+您可以執行_Get-Help命令name_來取得可搭配Cmdlet使用之參數及其說明的相關資訊。或者、您也可以參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。
 
 . 檢閱摘要、然後按一下「*完成*」。
 

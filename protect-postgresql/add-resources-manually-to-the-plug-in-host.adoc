@@ -86,7 +86,7 @@ link:https://docs.netapp.com/us-en/snapcenter/install/task_add_a_user_or_group_a
 .完成後
 * 新增叢集之後、您可以修改 PostgreSQL 叢集詳細資料。
 * 從 SnapCenter 5.0 移轉的資源（資料表空間和叢集）將在 SnapCenter 6.0 中標記為 PostgreSQL 叢集類型。
-* 當您修改從 SnapCenter 5.0 或更低版本移轉的手動新增資源時、請在「 * 資源設定 * 」頁面中針對自訂金鑰值組執行下列動作：
+* 當您修改從 SnapCenter 5.0 或更早版本移轉的手動新增資源時，請在「 * 資源設定 * 」頁面中針對自訂金鑰值配對執行下列動作：
 +
 ** 在 * 名稱 * 欄位中指定「連接埠」一詞。
 ** 在 * 值 * 欄位中指定連接埠號碼。

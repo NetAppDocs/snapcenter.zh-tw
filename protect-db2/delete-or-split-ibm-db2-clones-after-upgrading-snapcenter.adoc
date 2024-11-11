@@ -25,6 +25,6 @@ summary: 升級SnapCenter 至完Flash 4.3之後、您將無法再看到複本。
 此時會顯示資源拓撲頁面。
 
 . 從「管理複本」檢視中、從主要或次要（鏡射或複寫）儲存系統選取複本。
-. 選取複本、然後按一下 image:../media/delete_icon.gif[""] 刪除複本或按一下 image:../media/split_cone.gif[""] 以分割複本。
+. 選取複本、然後按一下以刪除複本、或按一下 image:../media/delete_icon.gif["刪除"] image:../media/split_cone.gif["分割"] 以分割複本。
 . 按一下「*確定*」。
 

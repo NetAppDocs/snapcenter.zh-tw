@@ -18,22 +18,30 @@ summary: 支援實體機器和虛擬機器（VM）上的各種儲存類型。Sna
 
 
  a| 
-實體與虛擬伺服器
- a| 
-連接FC的LUN
-
-
-
- a| 
 實體伺服器
  a| 
-連接iSCSI的LUN
+* 連接FC的LUN
+* 連接iSCSI的LUN
+* NFS連線的磁碟區
+
 
 
 
  a| 
-實體與虛擬伺服器
+VMware ESXi
  a| 
-NFS連線的磁碟區
+* RDM LUN連接FC或iSCSI ESXi主機匯流排介面卡（HBA）的HBASCanning可能需要很長時間才能完成、因為SnapCenter VMware會掃描主機中所有的主機匯流排介面卡。
++
+您可以編輯位於_/opt/netapp/snapcenter/spl/plugins/scue/scucore /模組/scu/Config_的* Linux Config.pm*檔案、將* scsi_hosts_optimized_resc*參數的值設為1、以便僅重新掃描HBA驅動程式名稱中列出的HBA。
+
+* iSCSI啟動器直接連接至來賓系統的iSCSI LUN
+* NFS 資料存放區上的 VMDK
+* 已建立 VMFS 上的 VMDK
+* NFS磁碟區直接連線至客體系統
+* NFS 和 SAN 上的 VVOL 資料存放區
++
+VVOL 資料存放區只能使用適用於 VMware vSphere 的 ONTAP 工具進行資源配置。
+
+
 
 |===

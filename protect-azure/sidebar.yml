@@ -2,6 +2,8 @@
 section: protect-azure
 title: 保護在 Azure NetApp Files 上執行的應用程式
 entries:
+- title: 保護在 Azure NetApp Files 上執行的應用程式
+  url: "/protect-azure/protect-applications-azure-netapp-files.html"
 - title: 安裝 SnapCenter 並建立認證
   entries:
   - title: 在 Azure 虛擬機器上安裝 SnapCenter

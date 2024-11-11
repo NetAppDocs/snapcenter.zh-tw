@@ -18,7 +18,7 @@ summary: 若要設定SnapCenter 適用於哪些使用者的角色型存取控制
 * 您必須在作業系統或資料庫的Active Directory中建立使用者或群組帳戶。您無法使用SnapCenter 不禁用功能來建立這些帳戶。
 +
 
-NOTE: 從S32 4.5開始SnapCenter 、您只能在使用者名稱和群組名稱中包含下列特殊字元：空格（）、連字號（-）、底線（_）和分號（：）。如果您想要使用在SnapCenter 舊版的下列特殊字元中建立的角色、可以在SnapCenter 安裝了Web.config檔案中、將「isableSQLInjectionValidation」參數的值變更為true、以停用角色名稱驗證。修改值之後、您不需要重新啟動服務。
+NOTE: 您只能在使用者名稱和群組名稱中包含下列特殊字元：空格（），連字號（ - ），底線（ _ ）和冒號（：）。
 
 * 包含數個預先定義的角色。SnapCenter
 +

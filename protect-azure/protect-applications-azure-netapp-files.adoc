@@ -1,0 +1,28 @@
+---
+permalink: protect-azure/protect-applications-azure-netapp-files.html 
+sidebar: sidebar 
+keywords: azure netapp files, ANF, back up, restore, clone, ANF backup, Azure Blob storage 
+summary: 您可以備份，還原及複製在 Azure NetApp Files 上執行的應用程式。 
+---
+= 保護在 Azure NetApp Files 上執行的應用程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 支援保護位於 Azure NetApp Files 上的 Oracle ， SQL 和 SAP HANA 等應用程式。從 6.0.1 版開始， SnapCenter 支援 Azure NetApp Files 備份功能，可提供完整管理的備份解決方案來長期恢復，歸檔和法規遵循，藉此擴充 Azure NetApp Files 的資料保護功能。
+
+Azure NetApp Files 是一款優質儲存解決方案，長期備份保留可能會花費昂貴的成本。若要最佳化成本，您可以將備份從 Azure NetApp Files 儲存設備移至 Azure 物件存放區。從 SnapCenter 6.0.1 開始，您可以將位於 Azure NetApp Files 上的應用程式備份及複製到 Azure Blob 儲存設備（物件存放區）。您可以在 Azure NetApp Files 儲存設備上維護兩份資料複本，在短期恢復時保留磁碟區快照複本，並在 Azure Blob 儲存設備上保留另一份複本以進行長期恢復。
+
+啟用 Azure NetApp Files 備份原則並與資源相關聯時， SnapCenter 會處理磁碟區快照的建立，並將其備份至 Azure Blob 儲存設備。SnapCenter 會建立備份資料保險箱，並啟用磁碟區的備份。如果您已啟用磁碟區的備份，則 SnapCenter 會使用現有的資料保險箱。
+
+
+
+== 限制
+
+* 不支援 FAS 或 AFF ONTAP 和 FSxN 儲存系統的物件儲存功能。
+* 不支援 Oracle 和 SAP HANA 裝載和目錄工作流程。
+* 不支援物件儲存設備的備份驗證， REST API 支援，物件儲存設備的複製生命週期管理，以及物件儲存備份的報告功能。
+* 不支援從 Azure Blob 儲存設備上的備份還原至 Azure NetApp Files 。您也可以使用複製選項。
+

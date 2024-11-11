@@ -7,7 +7,7 @@ summary: 每個API要求都會對用戶端產生回應。您應該檢查回應�
 = API回應的解讀
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

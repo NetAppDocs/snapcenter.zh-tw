@@ -56,7 +56,7 @@ Microsoft Exchange Server 、 Microsoft SQL Server 、 Linux 或 AIX 上的 Orac
 其他標準或自訂應用程式和資料庫也支援資料保護、提供架構以建立使用者定義SnapCenter 的功能表外掛程式。如此一來、其他應用程式和資料庫就能從同一個單一窗口進行資料保護。NetApp 運用此架構、推出 SnapCenter 適用於 MongoDB 、 MySQL 、 PostgreSQL 、 Storage 、 MaxDB 、 Sybase ASE 、 ORASCPM 、 MongoDB 和 DPGlue 。除此之外、您也可以使用開發人員指南建立自己的外掛程式。
 
 +
-link:concept_develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"]
+link:../protect-nsp/develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"]
 
 * 原則型備份
 +

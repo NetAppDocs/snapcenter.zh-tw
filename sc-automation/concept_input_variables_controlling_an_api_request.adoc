@@ -7,7 +7,7 @@ summary: 您可以透過HTTP要求中設定的參數和變數來控制API呼叫�
 = 控制API要求的輸入變數
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

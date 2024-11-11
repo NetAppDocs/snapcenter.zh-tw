@@ -22,7 +22,9 @@ summary: 支援資料保護作業需要數個授權。SnapCenter安裝的不完�
  a| 
 FAS 、 AFF 、 All SAN Array （ ASA ）所需的
 
-不含不含控制器型授權的優質套裝組合。SnapCenter如果您擁有SnapManager 此產品的不支援功能、您也可以取得SnapCenter 「不支援即用」的授權。如果您想要試用 FAS 、 AFF 或 ASA 儲存設備來安裝 SnapCenter 、請聯絡銷售代表以取得優質產品組合評估授權。
+SnapCenter 標準授權是以控制器為基礎的授權，隨附於 ONTAP One 中。如果您擁有SnapManager 此產品的不支援功能、您也可以取得SnapCenter 「不支援即用」的授權。如果您想要試用 FAS ， AFF 或 ASA 儲存設備來安裝 SnapCenter ，請聯絡銷售代表以取得 ONTAP One 試用授權。
+
+如需 ONTAP One 隨附授權的相關資訊，請 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["ONTAP One 隨附授權"]參閱。
 
 
 NOTE: 此外、也提供資料保護套裝組合的一部分。SnapCenter如果您已購買A400或更新版本、則應購買資料保護套裝組合。
@@ -87,7 +89,7 @@ NOTE: 我們建議您將SnapCenter 不需要的「不二用」授權新增至次
 
 |===
 
-NOTE: 不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenterAmazon FSX for NetApp ONTAP 和 Cloud Volumes ONTAP 不再需要容量型授權。Azure NetApp Files 不需要標準授權和容量型授權。
+NOTE: 不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenterAmazon FSX for NetApp ONTAP ， ONTAP Select ， Cloud Volumes ONTAP 和 Azure NetApp Files 不再需要標準授權和容量型授權。
 
 您應該安裝一SnapCenter 或多個版本的不二授權。有關如何添加許可證的信息，請參見 link:../install/concept_snapcenter_standard_controller_based_licenses.html["新增SnapCenter 以控制器為基礎的功能"]。
 

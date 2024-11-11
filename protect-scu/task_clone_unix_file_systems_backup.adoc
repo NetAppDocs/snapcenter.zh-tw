@@ -57,7 +57,7 @@ Clone伺服器
 .. 輸入應分別在複製作業之前或之後執行的預先複製或POST複製命令。
 +
 
-NOTE: 您應該檢查插件主機上的命令列表中是否存在這些命令，該命令位於 _/opt/NetApp/snapcenter/SCC/allowed_commands.config_ 路徑中。
+NOTE: 您應該檢查插件主機上的命令列表中是否存在這些命令（可從 _/opt/netapp/sapcenter/SCC /etc/allowed_commands.config_ 路徑下找到）。
 
 
 

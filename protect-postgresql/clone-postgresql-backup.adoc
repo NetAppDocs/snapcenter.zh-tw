@@ -18,10 +18,9 @@ summary: 您可以使用SnapCenter 支援功能來複製備份。您可以從主
 * 您應確保託管磁碟區的集合體應位於儲存虛擬機器（SVM）的指派集合體清單中。
 * 對於preclone或POST clone命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否存在命令：
 +
-Windows：_C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands_list.txt_
+** Windows 主機上的預設位置： _C:\Program NetApp SnapCenter ， SnapCenter Plug-in Creator\etc\allowed_commands.config_
+** Linux 主機上的預設位置： __/opt/oracle/scc/etc/allowed_commands.config_ NetApp SnapCenter
 
-+
-對於Linux：_/var/opt/snapcenter/scc/sited_commands_list.txt_
 
 
 
@@ -106,13 +105,7 @@ NOTE: 指令碼會在外掛程式主機上執行。
 Linux機器上的Volume或qtree掛載命令：
 
 +
-NFS範例：
-
-+
- mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt
-+
-
-NOTE: 對於停止、 Snapshot 和取消停止作業的前置和後置命令、您應該檢查插件主機上的命令清單中是否存在 Linux 和 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\allowed_commands.config_ 路徑、以及 Windows 的 _C ： \Program Files\NetApp\Snapcenter\Snapcenter Plug-In Creator\et\allowed_commands_list_txt.txt.
+NFS 範例： `mount VSERVER_DATA_IP:%VOLUME_NAME_Clone /mnt`
 
 
 

@@ -22,7 +22,7 @@ summary: 資源群組是一個容器、您可以在其中新增要備份和保�
 下圖說明資料庫的資源、資源群組和原則之間的關係：
 
 +
-image::../media/sco_resourcegroup_policy.gif[SCO資源群組原則]
+image::../media/sco_resourcegroup_policy.gif[資源群組原則]
 
 * 對於啟用 SnapLock 的原則、對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 鎖定期間、從防竄改快照建立的複本作為還原的一部分、將會繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 * 不支援在沒有 SnapMirror 主動同步的情況下、將新資料庫新增至包含 SnapMirror 主動同步資源的現有資源群組。

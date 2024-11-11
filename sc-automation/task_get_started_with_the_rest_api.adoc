@@ -7,7 +7,7 @@ summary: 存取API可在您開始使用API之前、先提供一些觀點、讓�
 = 開始使用REST API
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

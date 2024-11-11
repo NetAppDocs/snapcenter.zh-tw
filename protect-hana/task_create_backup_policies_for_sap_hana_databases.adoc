@@ -157,7 +157,7 @@ SnapLock 保留期應少於 100 年。
 
 按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。
 
-請參閱 link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["在「拓撲」頁面中檢視SAP HANA資料庫備份與複製"]。
+請參閱。 link:../protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["在「拓撲」頁面中檢視SAP HANA資料庫備份與複製"]
 
 
 
@@ -172,7 +172,7 @@ SnapLock 保留期應少於 100 年。
 
 如需 SnapLock Vault 的詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["將Snapshot複本提交至保存目的地上的WORM"]
 
-請參閱 link:..protect-hana/task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["在「拓撲」頁面中檢視SAP HANA資料庫備份與複製"]。
+請參閱。 link:task_view_sap_hana_database_backups_and_clones_in_the_topology_page_sap_hana.html["在「拓撲」頁面中檢視SAP HANA資料庫備份與複製"]
 
 
 

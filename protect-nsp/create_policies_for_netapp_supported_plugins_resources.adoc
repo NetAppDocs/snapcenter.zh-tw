@@ -119,7 +119,7 @@ SnapLock 保留期應少於 100 年。
 
 按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。
 
-請參閱。 link:protect-nsp/view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視 NetApp 支援的外掛程式資源相關備份和複本"]
+請參閱。 link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視 NetApp 支援的外掛程式資源相關備份和複本"]
 
 
 
@@ -135,7 +135,7 @@ SnapLock 保留期應少於 100 年。
 如需 SnapLock 資料保險箱的詳細資訊、請參閱在資料保險箱上將快照提交至 WORM
 目的地
 
-請參閱。 link:protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視 NetApp 支援的外掛程式資源相關備份和複本"]
+link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視 NetApp 支援的外掛程式資源相關備份和複本"]。
 
 
 

@@ -47,4 +47,4 @@ image::../media/datasets_and_policies.gif[資料集與原則圖表]
 
 下圖說明Windows檔案系統的資源、資源群組和原則之間的關係：
 
-image::../media/resources_and_policies_for_wfs.gif[wfs的資源與原則]
+image::../media/resources_and_policies_for_wfs.gif[資源與原則]

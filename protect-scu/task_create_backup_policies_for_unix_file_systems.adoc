@@ -106,7 +106,7 @@ NOTE: 您應該在 ONTAP 中為次要儲存設備設定 SnapMirror 保留原則�
 . 在「指令碼」頁面中、分別輸入您要在備份作業之前或之後執行的指令碼或指令碼路徑和引數。
 +
 
-NOTE: 您應該檢查插件主機上的命令列表中是否存在這些命令（可從 _/opt/netapp/sapcenter/SCC /etc/allowed_commands.config_ 路徑下找到）。
+NOTE: 您應該檢查插件主機上的命令列表中是否存在這些命令，該命令位於 _ /opt/oracle/scc/etc/allowed_commands.config_ NetApp 路徑中 SnapCenter 。
 
 +
 您也可以指定指令碼逾時值。預設值為60秒。

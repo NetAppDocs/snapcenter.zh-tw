@@ -127,7 +127,7 @@ NOTE: 您必須確保RAC環境中的所有節點都能存取所有歸檔記錄�
 
 |===
 +
-image:../media/sco_backuppolicy_prunning.gif[""]
+image:../media/sco_backuppolicy_prunning.gif["備份原則"]
 
 
 
@@ -201,7 +201,7 @@ NOTE: 只有在您選擇歸檔記錄檔做為備份的一部分時、才能保�
 
 如需 SnapLock Vault 的詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["將Snapshot複本提交至保存目的地上的WORM"]
 
-請參閱 link:..protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視Oracle資料庫備份與複製"]。
+請參閱。 link:../protect-sco/task_view_oracle_databse_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視Oracle資料庫備份與複製"]
 
 
 

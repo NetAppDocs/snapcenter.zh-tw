@@ -62,42 +62,110 @@ https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src
 
 == 補充命令
 
-若要在 SnapCenter Plug-in for SAP HANA 上執行補充命令、您必須將其包含在中 `allowed_commands.config` 檔案：
+若要在 SnapCenter Plug-in for SAP HANA 上執行補充命令，您必須將其包含在 _allowed_commands.config_ 檔案中。
 
-`allowed_commands.config` 檔案位於 SnapCenter Plug-in for SAP HANA 目錄的「 etc 」子目錄中。
+* Windows 主機上的預設位置： _C:\Program NetApp SnapCenter ， SnapCenter Plug-in Creator\etc\allowed_commands.config_
+* Linux 主機上的預設位置： __/opt/oracle/scc/etc/allowed_commands.config_ NetApp SnapCenter
 
-.Windows主機
-預設： `C:\Program Files\NetApp\SnapCenter\HANA\etc\allowed_commands.config`
 
-自訂路徑： `<Custome_Directory>\NetApp\SnapCenter\HANA\etc\allowed_commands.config`
-Windows 主機：
+若要在外掛主機上允許輔助命令，請在編輯器中開啟 _allowed_commands.config_ 檔案。在單獨的行中輸入每個命令，命令不區分大小寫。請務必指定完整路徑名稱，並在路徑名稱包含空格時，以引號（ " ）括住路徑名稱。
 
-.Linux主機
-預設： `/opt/NetApp/snapcenter/scc/etc/allowed_commands.config`
-
-自訂路徑： `<Custome_Directory>/NetApp/snapcenter/scc/etc/allowed_commands.config`
-
-若要允許在外掛主機上執行補充命令、請開啟 `allowed_commands.config` 編輯器中的檔案。在單獨的行中輸入每個命令。它不區分大小寫。
-例如、
+例如：
 
 命令： mount
 
 命令： umount
 
-請務必指定完整路徑名稱。如果路徑名稱包含空格、請以引號（ " ）括住路徑名稱。
-例如、
-
 命令： "C:\Program Files\NetApp\SnapCreator commands\sdcli.exe"
 
 命令： myscript.bat
 
-如果是 `allowed_commands.config` 檔案不存在、命令或指令碼執行將遭到封鎖、工作流程將失敗並顯示下列錯誤：
+如果 _allowed_commands.config_ 檔案不存在，命令或指令碼執行將會遭到封鎖，工作流程將會失敗，並顯示下列錯誤：
 
 "[/mnt/mount -a] 不允許執行。在外掛程式主機上的檔案 %s 中新增命令以進行授權。 "
 
-如果命令或指令碼未出現在中 `allowed_commands.config`、命令或指令碼執行將會遭到封鎖、工作流程將會失敗、並顯示下列錯誤：
+如果命令或指令碼未出現在 _allowed_commands.config_ 中，命令或指令碼的執行將會遭到封鎖，工作流程將會失敗，並顯示下列錯誤：
 
 "[/mnt/mount -a] 不允許執行。在外掛程式主機上的檔案 %s 中新增命令以進行授權。 "
 
 
 NOTE: 您不應使用萬用字元項目（ * ）來允許所有命令。
+
+
+
+== 為Linux主機的非root使用者設定Sudo權限
+
+非root使用者可利用發行版本的更新版本安裝適用於Linux的《SUSE外掛程式套件」、並開始外掛程序。SnapCenter SnapCenter外掛程式程序將以有效的非root使用者身分執行。您應該為非root使用者設定Sudo權限、以提供對多個路徑的存取權。
+
+*您需要的是什麼*
+
+* Sudo 1.8.7版或更新版本。
+* 如果 umask 是 0027 ，請確定 Java 資料夾和其中的所有檔案都應具有 555 的權限。否則，外掛程式安裝可能會失敗。
+* 對於非 root 使用者、請確保非 root 使用者和使用者群組的名稱相同。
+* 編輯_/etc/ssh / sshd_config_檔案、以設定訊息驗證代碼演算法：Macs HMAC - SHA2-256和MAC HMAC - SHA2-512。
++
+更新組態檔後、重新啟動sshd服務。
+
++
+範例：
+
++
+[listing]
+----
+#Port 22
+#AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+#Legacy changes
+#KexAlgorithms diffie-hellman-group1-sha1
+#Ciphers aes128-cbc
+#The default requires explicit activation of protocol
+Protocol 2
+HostKey/etc/ssh/ssh_host_rsa_key
+MACs hmac-sha2-256
+----
+
+
+*關於此工作*
+
+您應該為非root使用者設定Sudo權限、以便存取下列路徑：
+
+* /home/_Linux使用者_/.sc_NetApp/snapcenter_linux_host_plugin.bin
+* /custature_location / NetApp/snapcenter/spl/installal/plugins/uninstall
+* /cust_LOUSE/NetApp/snapcenter/spl/bin/spl
+
+
+*步驟*
+
+. 登入您要安裝SnapCenter 適用於Linux的支援套件的Linux主機。
+. 使用visudo Linux公用程式、將下列行新增至/etc/udoers檔案。
++
+[listing, subs="+quotes"]
+----
+Cmnd_Alias HPPLCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/snapcenter_linux_host_plugin.bin, /opt/NetApp/snapcenter/spl/installation/plugins/uninstall, /opt/NetApp/snapcenter/spl/bin/spl, /opt/NetApp/snapcenter/scc/bin/scc
+Cmnd_Alias PRECHECKCMD = sha224:checksum_value== /home/_LINUX_USER_/.sc_netapp/Linux_Prechecks.sh
+Cmnd_Alias CONFIGCHECKCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/plugins/scu/scucore/configurationcheck/Config_Check.sh
+Cmnd_Alias SCCMD = sha224:checksum_value== /opt/NetApp/snapcenter/spl/bin/sc_command_executor
+Cmnd_Alias SCCCMDEXECUTOR =checksum_value== /opt/NetApp/snapcenter/scc/bin/sccCommandExecutor
+_LINUX_USER_ ALL=(ALL) NOPASSWD:SETENV: HPPLCMD, PRECHECKCMD, CONFIGCHECKCMD, SCCCMDEXECUTOR, SCCMD
+Defaults: _LINUX_USER_ !visiblepw
+Defaults: _LINUX_USER_ !requiretty
+----
++
+
+NOTE: 如果您有RAC設定、以及其他允許的命令、您應該將下列項目新增至/etc/udoers檔案：「/setc/bin/olsnodes <crs_home> 」
+
+
+
+您可以從/etc/oracle/OLR.loc_檔案取得_crs_home_的 值。
+
+_Linux使用者_是您所建立的非root使用者名稱。
+
+您可以從 *SC_UNIT_plugins_checksum ． txt* 檔案取得 _checksum 值 _ 、檔案位於：
+
+* _C ： \ProgramData\NetApp\SnapCenter\Package 儲存庫 \SC_UNIX 外掛程式 _checksum ． txt_ （如果 SnapCenter 伺服器安裝在 Windows 主機上）。
+* 如果 SnapCenter 伺服器安裝在 Linux 主機上、則為 /opt/NetApp/snapcenter/SnapManagerWeb/Repository /SC_UNIT_plugin_checksum ． txt_ 。。
+
+
+
+IMPORTANT: 此範例只能做為建立自己資料的參考。

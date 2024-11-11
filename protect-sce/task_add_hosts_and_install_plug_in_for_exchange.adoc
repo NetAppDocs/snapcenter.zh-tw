@@ -196,7 +196,7 @@ NOTE: 在HA設定中、如果您要更新web.config檔案、則必須更新兩�
 
 == 設定自訂連接埠以進行 NET TCP 通訊
 
-根據預設、從 SnapCenter 6.0 版本開始、適用於 Windows 的 SnapCenter 外掛程式會使用連接埠 909 進行 NET TCP 通訊。如果連接埠 909 正在使用中、您可以設定另一個連接埠進行 NET TCP 通訊。
+根據預設，從 SnapCenter 6.0 版本開始，適用於 Windows 的 SnapCenter 外掛程式會使用連接埠 909 進行 NET TCP 通訊。如果連接埠 909 正在使用中、您可以設定另一個連接埠進行 NET TCP 通訊。
 
 .步驟
 . 將位於 _C:\Program Files\NetApp\SnapCenter\SnapCenter Plug-in for Microsoft Windows\vssprovisters\navssprv.exe.config_ 的 _NetTCPPort_ 金鑰值修改為所需的連接埠編號。

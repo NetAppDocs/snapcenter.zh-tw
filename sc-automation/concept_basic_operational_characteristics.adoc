@@ -7,7 +7,7 @@ summary: REST建立一套通用的技術和最佳實務做法、但每個API的�
 = 基本營運特性
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

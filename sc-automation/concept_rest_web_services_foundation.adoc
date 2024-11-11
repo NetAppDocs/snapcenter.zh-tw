@@ -7,7 +7,7 @@ summary: REST是建立分散式Web應用程式的風格。當套用到Web服務A
 = REST Web服務基礎
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

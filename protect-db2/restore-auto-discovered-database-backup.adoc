@@ -18,16 +18,14 @@ summary: 您可以使用SnapCenter 效益管理功能、從一或多個備份中
 * 您必須取消目前正在進行中的任何要還原之資源或資源群組的備份作業。
 * 對於預先還原、POST還原、掛載及卸載命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否存在這些命令：
 +
-Windows ： _C ： \Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\allowed_commands.config_
+** Windows 主機上的預設位置： _C:\Program NetApp SnapCenter ， SnapCenter Plug-in Creator\etc\allowed_commands.config_
+** Linux 主機上的預設位置： __/opt/oracle/scc/etc/allowed_commands.config_ NetApp SnapCenter
 
-+
-適用於 Linux ： /opt/NetApp/snapcenter/SCC /etc/allowed_commands.config_
 
-+
+
+
 
 NOTE: 如果命令清單中不存在這些命令、則作業將會失敗。
-
-
 
 .關於這項工作
 * 對於自動探索的資源、 SFSR 支援還原。
@@ -65,10 +63,6 @@ image::../media/restoring_resource.gif[還原資源]
 . 在「Post ops（張貼作業）」頁面中、輸入要在執行還原工作之後執行的掛載和POST還原命令。
 +
 自動探索到的資源不需要掛載命令。
-
-+
-
-NOTE: 對於停止、快照和取消停止作業的前置和後置命令、您應該檢查插件主機上的命令清單中是否存在 Linux 適用的命令清單、以及 Windows 適用的 _/opt/snapcenter/snapenter/cc/allowed_commands.config_ 路徑和 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\allowed_commands.config_ 路徑。
 
 . 在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。
 +

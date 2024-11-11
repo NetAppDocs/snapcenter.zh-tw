@@ -1,7 +1,10 @@
 ---
 indexpage:
+  title: 軟件文檔SnapCenter
+  keywords: snapcenter server, plug-in, data protection, applications, databases,
+    host file systems, VmWare, backup, restore, clone
   lead: 支援簡單、集中化、可擴充的平台、可為在混合雲中任何位置的不間斷系統上執行的應用程式、資料庫、主機檔案系統及VM提供應用程式一致的資料保護。SnapCenter
-    ONTAP此文件庫包含 6.0 版的資訊。
+    ONTAP此文件庫包含 6.0 版和 6.0.1 版的資訊。
   tiles:
   - title: 開始使用
     links:
@@ -9,8 +12,6 @@ indexpage:
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468
     - title: 深入瞭解SnapCenter
       url: "/concept/concept_snapcenter_overview.html"
-    - title: 保護SQL Server資料庫的快速參考
-      url: "/protect-scsql/quick_start_to_install_snapcenter_plug-in_for_sql_server.html"
     - title: 升級SnapCenter 功能：伺SnapCenter 服器和功能不全的外掛程式
       url: "/upgrade/upgrade_workflow.html"
   - title: 安裝SnapCenter 伺服器

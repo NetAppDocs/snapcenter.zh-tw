@@ -285,7 +285,7 @@ IMPORTANT: 如果針對 Exchange ONTAP 磁碟區設定 SnapMirror 主動同步�
 
 按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。
 
-請參閱 link:..protect-sce/task_view_exchange_backups_in_the_topology_page.html["在「拓撲」頁面中檢視Exchange備份"]。
+請參閱。 link:../protect-sce/task_view_exchange_backups_in_the_topology_page.html["在「拓撲」頁面中檢視Exchange備份"]
 
 
 

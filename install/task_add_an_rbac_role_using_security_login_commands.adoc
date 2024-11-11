@@ -64,7 +64,7 @@ NOTE: 為了保持一致性、SnapCenter 本文檔將角色稱為使用權限。
 NOTE: 您必須針對每個權限重複此命令。請記住、All Access命令必須在唯讀命令之前列出。
 
 +
-如需權限清單的相關資訊、請參閱 link:../install/task_create_an_ontap_cluster_role_with_minimum_privileges.html#ontap-cli-commands-for-creating-roles-and-assigning-permissions["用於建立角色和指派權限的CLI命令ONTAP"^]。
+如需權限清單的相關資訊，請參閱 link:task_create_an_ontap_cluster_role_with_minimum_privileges.html#ontap-cli-commands-for-creating-cluster-roles-and-assigning-permissions["用於建立角色和指派權限的CLI命令ONTAP"^]。
 
 
 

@@ -21,7 +21,7 @@ ALM組態是單一Windows伺服器容錯移轉叢集、其中包含一或多個�
 * FCI適用於本機高可用度（HA）和可用度群組（AG）、可在災難恢復站台使用獨立執行個體進行災難恢復
 
 
-image::../media/asymmetric_lun_mapping_diagram.gif[非對稱LUN對應圖]
+image::../media/asymmetric_lun_mapping_diagram.gif[LUN 對應]
 
 主資料中心的儲存設備會在主資料中心的FCI節點之間共享。災難恢復資料中心的儲存設備會在災難恢復資料中心的FCI節點之間共享。
 

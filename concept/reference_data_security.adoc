@@ -46,7 +46,7 @@ summary: 利用嚴苛的安全性與驗證功能、確保資料安全無虞。Sn
 
 您應該在安裝SnapCenter 完Sing Server和個別外掛程式之後、再部署CA憑證。如需詳細資訊、請參閱 link:../install/reference_generate_CA_certificate_CSR_file.html["產生CA認證CSR檔案"]。
 
-您也可以部署適用於SnapCenter VMware vSphere的VMware vSphere的VMware認證外掛程式。如需詳細資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#create-and-import-certificates["建立及匯入憑證"^]。
+您也可以部署適用於SnapCenter VMware vSphere的VMware vSphere的VMware認證外掛程式。如需更多資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_create_and_import_certificates.html["建立及匯入憑證"^]。
 
 
 

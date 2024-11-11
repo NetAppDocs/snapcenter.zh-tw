@@ -50,7 +50,7 @@ NOTE: 如果SQL Server Standard Edition上有可用度群組組組態、則僅�
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
 . 在「資源」頁面中、從「*檢視*」下拉式清單中選取「*資料庫*」或「*執行個體*」或「*可用度群組*」。
 +
-按一下 image:../media/filter_icon.png[""] 然後選取主機名稱和SQL Server執行個體以篩選資源。然後按一下 image:../media/filter_icon.png[""] 以關閉篩選窗格。
+按一下 image:../media/filter_icon.png["篩選圖示"] 並選取主機名稱和 SQL Server Instance 、以篩選資源。接著您可以按一下 image:../media/filter_icon.png["篩選圖示"] 以關閉篩選窗格。
 
 . 按一下*重新整理資源*。
 +

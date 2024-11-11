@@ -26,7 +26,7 @@ summary: 您必須使用SnapCenter 「更新主機」頁面來新增主機、然
 * 管理文件包含有關管理主機的資訊。
 * 如果您使用群組託管服務帳戶（GMSA）、則應該使用管理權限來設定GMSA。
 +
-link:../protect-postgresql/task_configure_gMSA_on_windows_server_2012_or_later.html["針對 PostgreSQL 在 Windows Server 2016 或更新版本上設定群組託管服務帳戶"^]
+link:../protect-postgresql/configure-gMSA-on-windows-server-2012-or-later.html["針對 PostgreSQL 在 Windows Server 2016 或更新版本上設定群組託管服務帳戶"^]
 
 
 

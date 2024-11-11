@@ -13,4 +13,4 @@ summary: 如果SnapCenter 您想保護Exchange資料庫、應該安裝並設定M
 [role="lead"]
 如果SnapCenter 您想保護Exchange資料庫、應該安裝並設定Microsoft Exchange Server的功能完善的外掛程式。
 
-image::../media/sce_install_configure_workflow.gif[安裝工作流程]
+image::../media/sce_install_configure_workflow.png[安裝工作流程]

@@ -33,4 +33,4 @@ summary: 在您使用SnapCenter 原地複製之前、先瞭解與您想要執行
 
 下圖說明資料庫的資源、資源群組和原則之間的關係：
 
-image::../media/sco_resourcegroup_policy.gif[SCO資源群組原則]
+image::../media/sco_resourcegroup_policy.gif[資源群組原則]

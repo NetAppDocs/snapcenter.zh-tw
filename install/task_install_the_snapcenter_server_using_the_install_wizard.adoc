@@ -13,7 +13,7 @@ summary: 您可以執行SnapCenter 《伺服器安裝程式執行檔」來安裝
 [role="lead"]
 您可以執行SnapCenter 《伺服器安裝程式執行檔」來安裝SnapCenter 《伺服器版」。
 
-您可以選擇使用PowerShell Cmdlet來執行多個安裝和組態程序。
+您可以選擇使用PowerShell Cmdlet來執行多個安裝和組態程序。您應該使用 PowerShell 7.4.2 或更新版本。
 
 
 NOTE: 不支援從SnapCenter 命令列無聲安裝支援。

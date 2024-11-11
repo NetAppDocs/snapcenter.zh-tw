@@ -45,6 +45,4 @@ NOTE: 您可以在備份原則中設定每個 Snapshot 的資料庫數目上限�
 
 *瞭解更多資訊*
 
-link:task_back_up_resources_using_powershell_cmdlets_for_sql.html["使用PowerShell Cmdlet備份資源"]
-
 link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Quiesce_or_grouping_resources_operations_fail["靜止或分組資源作業失敗"]
