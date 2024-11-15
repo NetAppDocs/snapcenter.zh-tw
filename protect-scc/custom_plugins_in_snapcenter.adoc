@@ -1,5 +1,5 @@
 ---
-permalink: protect-nsp/custom_plugins_in_snapcenter.html 
+permalink: protect-scc/custom_plugins_in_snapcenter.html 
 sidebar: sidebar 
 keywords: Custom plug-in 
 summary: 您可以使用SnapCenter 支援應用程式資料保護的功能、在主機上安裝所建立的自訂外掛程式。 

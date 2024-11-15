@@ -1,7 +1,7 @@
 ---
 permalink: protect-nsp/netapp_supported_plugins_overview.html 
 sidebar: sidebar 
-keywords: NetApp supported plug-ins 
+keywords: NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: 您可以為使用的應用程式開發 NetApp 支援的外掛程式、然後使用 SnapCenter 來備份、還原或複製這些應用程式。與其他 SnapCenter 外掛程式一樣、您的 NetApp 支援外掛程式也可做為 NetApp SnapCenter 軟體的主機端元件、提供應用程式感知的資料保護與資源管理。 
 ---
 = NetApp 支援的外掛程式總覽
@@ -11,7 +11,7 @@ summary: 您可以為使用的應用程式開發 NetApp 支援的外掛程式、
 
 
 [role="lead"]
-您可以使用 NetApp 支援的外掛程式、或為您使用的應用程式開發自訂外掛程式、然後使用 SnapCenter 來備份、還原或複製這些應用程式。NetApp 支援的外掛程式是 NetApp SnapCenter 軟體的主機端元件、可提供應用程式感知的資料保護及資源管理。
+您可以使用 NetApp 支援的外掛程式，例如 MongoDB ， ORASCPM （ Oracle 應用程式）， SAP ASE ， SAP MaxDB 和儲存外掛程式，來 SnapCenter 備份，還原或複製這些應用程式。NetApp 支援的外掛程式是 NetApp SnapCenter 軟體的主機端元件、可提供應用程式感知的資料保護及資源管理。
 
 安裝 NetApp 支援的外掛程式時、您可以使用 SnapCenter 搭配 NetApp SnapMirror 技術、在另一個磁碟區上建立備份集的鏡射複本、並使用 NetApp SnapVault 技術執行磁碟對磁碟備份複寫。NetApp 支援的外掛程式可同時用於 Windows 和 Linux 環境。
 
@@ -20,13 +20,9 @@ NOTE: SnapCenterCLI 不支援 NetApp 支援的外掛程式命令。
 
 NetApp提供儲存外掛程式、ONTAP 以使用SnapCenter 內建於支援中的自訂外掛架構、在支援的情況下、在支援資料的整套儲存設備上執行資料磁碟區的資料保護作業。
 
-您可以從「新增主機」頁面安裝 NetApp 支援的外掛程式和自訂外掛程式、以及儲存外掛程式。
+您可以從「新增主機」頁面安裝 NetApp 支援的外掛程式。
 
 link:add_hosts_and_install_plug_in_packages_on_remote_hosts.html["新增主機並在遠端主機上安裝外掛程式套件。"^]
 
-NetApp 也提供 MongoDB 、 MySQL 、 PostgreSQL 、 Storage 、 MaxDB 、 Sybase ASE 、 ORASCPM 、 MongoDB 和 DPGlue 外掛程式。
-
 
 NOTE: 支援支援政策涵蓋支援功能、包括支援功能不全的自訂外掛程式架構、核心引擎及相關API。SnapCenter SnapCenter支援不涵蓋外掛程式原始程式碼及建置於自訂外掛程式架構上的相關指令碼。
-
-您可以參照指南來建立自己的自訂外掛程式 link:develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"^] 。

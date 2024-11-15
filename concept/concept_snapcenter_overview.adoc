@@ -50,13 +50,13 @@ summary: 支援簡單、集中化、可擴充的平台、可為在混合雲任�
 
 * 集中化、應用程式一致的資料保護
 +
-Microsoft Exchange Server 、 Microsoft SQL Server 、 Linux 或 AIX 上的 Oracle 資料庫、 SAP HANA 資料庫、 IBM DB2 和在 ONTAP 系統上執行的 Windows 主機檔案系統均支援資料保護。
+Microsoft Exchange Server ， Microsoft SQL Server ， Linux 或 AIX 上的 Oracle 資料庫， SAP HANA 資料庫， IBM DB2 ， PostgreSQL ， MySQL 和 ONTAP 系統上執行的 Windows 主機檔案系統均支援資料保護。
 
 +
-其他標準或自訂應用程式和資料庫也支援資料保護、提供架構以建立使用者定義SnapCenter 的功能表外掛程式。如此一來、其他應用程式和資料庫就能從同一個單一窗口進行資料保護。NetApp 運用此架構、推出 SnapCenter 適用於 MongoDB 、 MySQL 、 PostgreSQL 、 Storage 、 MaxDB 、 Sybase ASE 、 ORASCPM 、 MongoDB 和 DPGlue 。除此之外、您也可以使用開發人員指南建立自己的外掛程式。
+其他標準或自訂應用程式和資料庫也支援資料保護、提供架構以建立使用者定義SnapCenter 的功能表外掛程式。如此一來、其他應用程式和資料庫就能從同一個單一窗口進行資料保護。藉由運用此架構， NetApp 已發行適用於 MongoDB ， Storage ， MaxDB ， Sybase ASE ， ORASCPM 的 SnapCenter 外掛程式。除此之外、您也可以使用開發人員指南建立自己的外掛程式。
 
 +
-link:../protect-nsp/develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"]
+link:../protect-scc/develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"]
 
 * 原則型備份
 +
@@ -176,6 +176,11 @@ image::../media/snapcenter_architecture.gif[架構SnapCenter]
 ** 適用於 IBM DB2 的 SnapCenter 外掛程式
 ** 適用於 PostgreSQL 的 SnapCenter 外掛程式
 ** 適用於 MySQL 的 SnapCenter 外掛程式
+** SnapCenter 外掛程式，適用於 MongoDB
+** 適用於 ORASCPM （ Oracle 應用程式）的 SnapCenter 外掛程式
+** SnapCenter Plug-in for SAP ASE
+** SnapCenter Plug-in for SAP MaxDB
+** 適用於儲存外掛程式的 SnapCenter 外掛程式
 
 
 * 適用於Linux的程式集外掛套件、包括下列外掛程式：SnapCenter
@@ -186,15 +191,20 @@ image::../media/snapcenter_architecture.gif[架構SnapCenter]
 ** 適用於 IBM DB2 的 SnapCenter 外掛程式
 ** 適用於 PostgreSQL 的 SnapCenter 外掛程式
 ** 適用於 MySQL 的 SnapCenter 外掛程式
+** SnapCenter 外掛程式，適用於 MongoDB
+** 適用於 ORASCPM （ Oracle 應用程式）的 SnapCenter 外掛程式
+** SnapCenter Plug-in for SAP ASE
+** SnapCenter Plug-in for SAP MaxDB
+** 適用於儲存外掛程式的 SnapCenter 外掛程式
 
 
 * 適用於AIX的程式集外掛套件、包含下列外掛程式：SnapCenter
 +
 ** Oracle資料庫的支援外掛程式SnapCenter
 ** 適用於 UNIX 檔案系統的 SnapCenter 外掛程式
+** 適用於 IBM DB2 的 SnapCenter 外掛程式
 
 
-* SnapCenter NetApp 支援的外掛程式
 
 
 VMware vSphere的VMware vSphere外掛程式（前身為NetApp Data Broker）是獨立式虛擬應用裝置、可在虛擬化資料庫和檔案系統上支援資料保護作業。SnapCenter SnapCenter
@@ -351,6 +361,71 @@ Db2MySQL 主機
  a| 
 Linux或Windows
 
+
+
+ a| 
+MongoDB 外掛程式
+ a| 
+適用於Linux的外掛程式套件與適用於Windows的外掛程式套件
+ a| 
+適用於UNIX的外掛程式或適用於Windows的外掛程式
+ a| 
+MongoDB 主機
+ a| 
+Linux或Windows
+
+
+
+ a| 
+ORASCPM 外掛程式（ Oracle 應用程式）
+ a| 
+適用於Linux的外掛程式套件與適用於Windows的外掛程式套件
+ a| 
+適用於UNIX的外掛程式或適用於Windows的外掛程式
+ a| 
+Oracle主機
+ a| 
+Linux或Windows
+
+
+
+ a| 
+SAP ASE 的外掛程式
+ a| 
+適用於Linux的外掛程式套件與適用於Windows的外掛程式套件
+ a| 
+適用於UNIX的外掛程式或適用於Windows的外掛程式
+ a| 
+SAP 主機
+ a| 
+Linux或Windows
+
+
+
+ a| 
+SAP MaxDB 外掛程式
+ a| 
+適用於Linux的外掛程式套件與適用於Windows的外掛程式套件
+ a| 
+適用於UNIX的外掛程式或適用於Windows的外掛程式
+ a| 
+SAP MaxDB 主機
+ a| 
+Linux或Windows
+
+
+
+ a| 
+儲存外掛程式的外掛程式
+ a| 
+適用於Linux的外掛程式套件與適用於Windows的外掛程式套件
+ a| 
+適用於UNIX的外掛程式或適用於Windows的外掛程式
+ a| 
+儲存主機
+ a| 
+Linux或Windows
+
 |===
 
 NOTE: VMware vSphere的支援VMware vSphere的VMware vCenter外掛程式可支援虛擬機器（VM）、資料存放區和虛擬機器磁碟（VMDK）的損毀一致與VM一致的備份與還原作業、並支援以應用程式為特定的外掛程式、以保護虛擬化資料庫和檔案系統的應用程式一致備份與還原作業。SnapCenter SnapCenter
@@ -421,14 +496,12 @@ SAN原生裝置、檔案系統及以SAN裝置為建置基礎的LVM配置均受�
 
 === NetApp 支援的外掛程式功能
 
+NetApp 支援的外掛程式包括 MongoDB ， ORASCPM （ Oracle 應用程式）， SAP ASE ， SAP MaxDB 和儲存外掛程式。
+
 * 支援其他外掛程式來管理其他 SnapCenter 外掛程式不支援的應用程式或資料庫。NetApp 支援的外掛程式並未隨附於 SnapCenter 安裝中。
 * 支援在另一個磁碟區上建立備份集的鏡射複本、並執行磁碟對磁碟備份複寫。
 * 同時支援Windows和Linux環境。在Windows環境中、透過自訂外掛程式的自訂應用程式可選擇性地使用SnapCenter 適用於Microsoft Windows的還原外掛程式來進行檔案系統一致的備份。
 
-
-NetApp 支援建立及使用支援外掛程式的功能、但 NetApp 不支援您建立的外掛程式。
-
-如需詳細資訊、請參閱 link:../protect-nsp/develop_a_plug_in_for_your_application.html["為應用程式開發外掛程式"]
 
 
 

@@ -26,18 +26,6 @@ entries:
       url: "/protect-nsp/number_of_backup_jobs_needed.html"
   - title: 支援手動新增 NetApp 支援外掛程式資源的還原策略類型
     url: "/protect-nsp/types_of_restore_strategies_supported_for_manually_added_netapp_supported_plugins_resources.html"
-- title: 為應用程式開發外掛程式
-  entries:
-  - title: 總覽
-    url: "/protect-nsp/develop_a_plug_in_for_your_application.html"
-  - title: 基於Perl的開發
-    url: "/protect-nsp/perl.html"
-  - title: 原生風格
-    url: "/protect-nsp/native.html"
-  - title: Java樣式
-    url: "/protect-nsp/java.html"
-  - title: SnapCenter 中的自訂外掛程式
-    url: "/protect-nsp/custom_plugins_in_snapcenter.html"
 - title: 準備安裝 NetApp 支援的外掛程式
   entries:
   - title: NetApp 支援外掛程式的安裝工作流程
@@ -112,8 +100,6 @@ entries:
     url: "/protect-nsp/restore_netapp_supported_plugins_resources.html"
   - title: 還原資源備份
     url: "/protect-nsp/restore_a_resource_backup.html"
-  - title: 使用PowerShell Cmdlet還原資源
-    url: "/protect-nsp/restore_and_recover_resources_using_powershell_cmdlets.html"
   - title: 監控還原作業
     url: "/protect-nsp/monitor_resources_restore_operations.html"
 - title: Clone NetApp Supported plug-ins 資源備份

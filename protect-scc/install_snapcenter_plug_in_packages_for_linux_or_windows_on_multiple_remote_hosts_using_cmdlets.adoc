@@ -1,23 +1,20 @@
 ---
-permalink: protect-nsp/install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets.html 
+permalink: protect-scc/install_snapcenter_plug_in_packages_for_linux_or_windows_on_multiple_remote_hosts_using_cmdlets.html 
 sidebar: sidebar 
 keywords: install, snapcenter 
 summary: 您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、同時在多個主機上安裝適用於Linux或Windows的VMware®更新套件。 
 ---
-= 使用 Cmdlet 在多部遠端主機上安裝適用於 Linux ， Windows 或 AIX 的 SnapCenter 外掛程式套件
+= 使用Cmdlet在SnapCenter 多個遠端主機上安裝適用於Linux或Windows的支援功能外掛套件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-您可以使用 Install-SmHostPackage PowerShell Cmdlet ，在多部主機上同時安裝適用於 Linux ， Windows 或 AIX 的 SnapCenter 外掛套件。
+您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、同時在多個主機上安裝適用於Linux或Windows的VMware®更新套件。
 
 .開始之前
 新增主機的使用者應擁有主機的管理權限。
-
-
-NOTE: AIX 支援儲存設備和 Oracle 應用程式。
 
 .步驟
 . 啟動PowerShell。

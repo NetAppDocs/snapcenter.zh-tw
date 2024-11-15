@@ -1,22 +1,22 @@
 ---
-permalink: protect-nsp/create_policies_for_netapp_supported_plugins_resources.html 
+permalink: protect-scc/create_policies_for_custom_plug_in_resources.html 
 sidebar: sidebar 
-keywords: create policies, NetApp supported plug-in 
-summary: 在使用 SnapCenter 備份 NetApp 支援的外掛程式特定資源之前、您必須為要備份的資源或資源群組建立備份原則。 
+keywords: create policies, custom plug-in 
+summary: 在使用SnapCenter 支援功能來備份自訂外掛程式特定資源之前、您必須先為要備份的資源或資源群組建立備份原則。 
 ---
-= 為 NetApp 支援的外掛程式資源建立原則
+= 建立自訂外掛程式資源的原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-在使用 SnapCenter 備份 NetApp 支援的外掛程式特定資源之前、您必須為要備份的資源或資源群組建立備份原則。
+在使用SnapCenter 支援功能來備份自訂外掛程式特定資源之前、您必須先為要備份的資源或資源群組建立備份原則。
 
 .開始之前
 * 您應該已經定義備份策略。
 +
-如需詳細資訊、請參閱有關定義 NetApp 支援外掛程式的資料保護策略的資訊。
+如需詳細資訊、請參閱定義自訂外掛程式資料保護策略的相關資訊。
 
 * 您應該已做好資料保護準備。
 +
@@ -119,7 +119,7 @@ SnapLock 保留期應少於 100 年。
 
 按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。
 
-請參閱。 link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視 NetApp 支援的外掛程式資源相關備份和複本"]
+請參閱。 link:view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視自訂外掛程式資源相關備份與複製"]
 
 
 
@@ -135,7 +135,7 @@ SnapLock 保留期應少於 100 年。
 如需 SnapLock 資料保險箱的詳細資訊、請參閱在資料保險箱上將快照提交至 WORM
 目的地
 
-link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視 NetApp 支援的外掛程式資源相關備份和複本"]。
+請參閱。 link:view_custom_plug_in_resource_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視自訂外掛程式資源相關備份與複製"]
 
 
 

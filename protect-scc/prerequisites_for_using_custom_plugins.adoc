@@ -1,0 +1,32 @@
+---
+permalink: protect-scc/prerequisites_for_using_custom_plugins.html 
+sidebar: sidebar 
+keywords: Credentials 
+summary: 使用 SnapCenter 自訂外掛程式之前， SnapCenter 管理員必須先安裝及設定 SnapCenter 伺服器，然後執行必要的工作。 
+---
+= 使用SnapCenter 「Solutions自訂外掛程式」的先決條件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用 SnapCenter 自訂外掛程式之前， SnapCenter 管理員必須先安裝及設定 SnapCenter 伺服器，然後執行必要的工作。
+
+* 安裝及設定SnapCenter 靜態伺服器。
+* 登入SnapCenter 到伺服器。
+* 新增儲存系統連線並SnapCenter 建立認證資料（若適用）、以設定「靜態」環境。
+* 新增主機、並安裝及上傳外掛程式。
+* 如果適用、請在外掛主機上安裝 Java 11 。
+* 如果您有多個資料路徑（lifs）或一個DNFS組態、您可以使用SnapCenter 資料庫主機上的CLI執行下列動作：
++
+** 根據預設、資料庫主機的所有IP位址都會新增至複製磁碟區的儲存虛擬機器（SVM）中的NFS儲存匯出原則。如果您想要擁有特定的IP位址、或是限制為IP位址的子集、請執行Set-PreferredHostIPsInStorageExpportPolicy CLI。
+** 如果您在SVM中有多個資料路徑（LIF）、SnapCenter 則選擇適當的資料路徑（LIF）來掛載NFS複製的Volume。不過、如果您要指定特定的資料路徑（LIF）、則必須執行Set-SvmPreferredDataPath CLI。執行_Get-Help命令名稱_可取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["《軟件命令參考指南》SnapCenter"^]。
+
+
+* 如果SnapVault 您想要備份複寫、請設定SnapMirror和SnapMirror。
+* 確保主機上的任何其他應用程式都不會使用連接埠9090。
++
+除了 SnapCenter 所需的其他連接埠之外，連接埠 9090 必須保留供自訂外掛程式使用。
+
+

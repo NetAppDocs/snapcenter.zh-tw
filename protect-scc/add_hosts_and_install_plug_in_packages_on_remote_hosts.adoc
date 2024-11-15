@@ -1,7 +1,7 @@
 ---
-permalink: protect-nsp/add_hosts_and_install_plug_in_packages_on_remote_hosts.html 
+permalink: protect-scc/add_hosts_and_install_plug_in_packages_on_remote_hosts.html 
 sidebar: sidebar 
-keywords: add hostsNetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
+keywords: add hosts, custom plug-in 
 summary: 您必須使用SnapCenterAdd Host頁面來新增主機、然後安裝外掛程式套件。外掛程式會自動安裝在遠端主機上。您可以為個別主機或叢集新增主機並安裝外掛程式套件。 
 ---
 = 新增主機並在遠端主機上安裝外掛程式套件
@@ -11,7 +11,7 @@ summary: 您必須使用SnapCenterAdd Host頁面來新增主機、然後安裝�
 
 
 [role="lead"]
-您必須使用「 SnapCenter 新增主機」頁面來新增主機，然後安裝外掛程式套件。外掛程式會自動安裝在遠端主機上。您可以為個別主機或叢集新增主機並安裝外掛程式套件。
+您必須使用SnapCenterAdd Host頁面來新增主機、然後安裝外掛程式套件。外掛程式會自動安裝在遠端主機上。您可以為個別主機或叢集新增主機並安裝外掛程式套件。
 
 .開始之前
 * 您應該是指派給角色的使用者、該角色具有外掛程式安裝和解除安裝權限、例如SnapCenter 「支援管理員」角色。
@@ -20,13 +20,12 @@ summary: 您必須使用SnapCenterAdd Host頁面來新增主機、然後安裝�
 +
 link:configure_gMSA_on_windows_server_2012_or_later.html["在Windows Server 2016或更新版本上為自訂應用程式設定群組託管服務帳戶"]
 
-* 對於 Windows 主機，您必須確定選取 SnapCenter Plug-in for Windows 。
 
 
 .關於這項工作
-* 您無法將SnapCenter 某個支援服務器作為外掛主機新增至另SnapCenter 一個支援服務器。
-* 如果您在叢集（WSFC）上安裝外掛程式、則外掛程式會安裝在叢集的所有節點上。
+您無法將SnapCenter 某個支援服務器作為外掛主機新增至另SnapCenter 一個支援服務器。
 
+如果您在叢集（WSFC）上安裝外掛程式、則外掛程式會安裝在叢集的所有節點上。
 
 .步驟
 . 在左側導覽窗格中、選取*主機*。
@@ -45,14 +44,10 @@ link:configure_gMSA_on_windows_server_2012_or_later.html["在Windows Server 2016
 
 ** Windows
 ** Linux
-** AIX
 
 
 
-NOTE: NetApp 支援的外掛程式可在 Windows ， Linux 和 AIX 環境中使用。
-
-
-NOTE: AIX 支援儲存設備和 Oracle 應用程式。
+NOTE: 自訂外掛程式可在Windows和Linux環境中使用。
 
 
 
@@ -85,17 +80,6 @@ NOTE: 認證驗證模式取決於您在「新增主機」精靈中指定的主�
 
 |===
 . 在*選取要安裝的外掛程式*區段中、選取要安裝的外掛程式。
-+
-您可以從清單安裝下列外掛程式：
-
-+
-** MongoDB
-** ORASCPM （顯示為 Oracle 應用程式）
-** SAP ASE
-** SAP MaxDB
-** 儲存設備
-
-
 . （可選）選擇 * 更多選項 * 以安裝其他插件。
 +
 |===
@@ -117,15 +101,33 @@ NOTE: 如果您手動安裝外掛程式並指定自訂連接埠、則必須指�
  a| 
 安裝路徑
  a| 
-NetApp 支援的外掛程式可以安裝在 Windows 系統或 Linux 系統上。
+SnapCenter 自訂外掛程式可以安裝在 Windows 系統或 Linux 系統上。
 
 ** 針對適用於Windows的「更新程式套件」、預設路徑為C:\Program Files\NetApp\SnapCenter。SnapCenter
 +
 您也可以自訂路徑。
 
-** 對於 SnapCenter Plug-ins Package for Linux 和 SnapCenter Plug-ins Package for AIX ，默認路徑爲 `/opt/NetApp/snapcenter`。
+** 對於 SnapCenter Plug-in 套件 for Linux 、預設路徑為 `/opt/NetApp/snapcenter`。
 +
 您也可以自訂路徑。
+
+** 針對「不需要自訂的外掛程式」SnapCenter ：
++
+... 在「自訂外掛程式」區段中、選取 * 瀏覽 * 、然後選取壓縮的自訂外掛程式資料夾。
++
+壓縮資料夾包含自訂外掛程式碼和描述元.xml檔案。
+
++
+若為儲存外掛程式、請瀏覽至 `_C:\ProgramData\NetApp\SnapCenter\Package Repository_` 然後選擇 `Storage.zip` 資料夾。
+
+... 選取 * 上傳 * 。
++
+壓縮自訂外掛程式資料夾中的描述元.xml檔案會在上傳套件之前驗證。
+
++
+會列出上傳至SnapCenter Sfor the Sfor the Sfor the Server的自訂外掛程式。
+
+
 
 
 
@@ -155,17 +157,11 @@ NOTE: GMSA僅會做為SnapCenter Windows版的更新外掛程式服務的登入�
 如果您尚未選取「*跳過預先檢查*」核取方塊、系統會驗證主機是否符合安裝外掛程式的需求。磁碟空間、RAM、PowerShell版本、.NET版本、位置（適用於Windows外掛程式）和Java版本（適用於Linux外掛程式）均已根據最低需求進行驗證。如果不符合最低要求、則會顯示適當的錯誤或警告訊息。
 
 +
-如果錯誤與磁碟空間或 RAM 有關，您可以更新位於的 web.config 檔案 `C:\Program Files\NetApp\SnapCenter WebApp`，以修改預設值。如果錯誤與其他參數有關、您必須修正問題。
+如果錯誤與磁碟空間或RAM有關、您可以更新位於C:\Program Files\NetApp\SnapCenter Webapp的Web.config檔案、以修改預設值。如果錯誤與其他參數有關、您必須修正問題。
 
 +
 
-NOTE: 在 HA 設定中，如果您要更新 SnapManager 。 Web.ui.dll 。 config ，您必須在兩個節點上更新檔案，然後重新啟動 SnapCenter 應用程式集區。
-
-+
-Windows 預設路徑為 `C:\Program Files\NetApp\SnapCenter WebApp\SnapManager.Web.UI.dll.config`
-
-+
-Linux 預設路徑為 `/opt/NetApp/snapcenter/SnapManagerWeb/SnapManager.Web.UI.dll.config`
+NOTE: 在HA設定中、如果您要更新web.config檔案、則必須更新兩個節點上的檔案。
 
 . 如果主機類型為 Linux 、請驗證指紋、然後選取 * 確認並提交 * 。
 +

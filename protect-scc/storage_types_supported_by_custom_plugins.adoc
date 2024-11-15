@@ -1,0 +1,48 @@
+---
+permalink: protect-scc/storage_types_supported_by_custom_plugins.html 
+sidebar: sidebar 
+keywords: SnapCenter Custom Plug-ins 
+summary: 支援實體與虛擬機器上的各種儲存類型。SnapCenter您必須先驗證儲存類型的支援、才能安裝SnapCenter 「更新自訂外掛程式」。 
+---
+= 支援的儲存類型SnapCenter 由「支援的儲存類型」由「支援的自訂外掛程式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+支援實體與虛擬機器上的各種儲存類型。SnapCenter您必須先驗證儲存類型的支援、才能安裝SnapCenter 「更新自訂外掛程式」。
+
+|===
+| 機器 | 儲存類型 
+
+
+ a| 
+VM 主機上的實體和 NFS 直接掛載（不支援 VMDK 和 RDM LUN ）。
+ a| 
+連接FC的LUN
+
+
+
+ a| 
+VM 主機上的實體和 NFS 直接掛載（不支援 VMDK 和 RDM LUN ）。
+ a| 
+連接iSCSI的LUN
+
+
+
+ a| 
+VM 主機上的實體和 NFS 直接掛載（不支援 VMDK 和 RDM LUN ）。
+ a| 
+NFS連線的磁碟區
+
+
+
+ a| 
+VMware ESXi
+ a| 
+NFS 和 SAN 上的 VVOL 資料存放區
+
+VVOL 資料存放區只能使用適用於 VMware vSphere 的 ONTAP 工具進行資源配置。
+
+|===

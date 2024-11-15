@@ -1,0 +1,73 @@
+---
+permalink: protect-scc/configure_gMSA_on_windows_server_2012_or_later.html 
+sidebar: sidebar 
+keywords: gMSA 
+summary: Windows Server 2016或更新版本可讓您建立群組託管服務帳戶（GMSA）、以便從託管網域帳戶提供自動化服務帳戶密碼管理。 
+---
+= 在Windows Server 2016或更新版本上設定GMSA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Windows Server 2016或更新版本可讓您建立群組託管服務帳戶（GMSA）、以便從託管網域帳戶提供自動化服務帳戶密碼管理。
+
+.開始之前
+* 您應該擁有Windows Server 2016或更新版本的網域控制器。
+* 您應該擁有Windows Server 2016或更新版本的主機、該主機是網域的成員。
+
+
+.步驟
+. 建立KDS根金鑰、為GMSA中的每個物件產生唯一的密碼。
+. 對於每個網域、請從Windows網域控制器執行下列命令：add-KDSRootKey -EffectiveImmedia
+. 建立及設定GMSA：
++
+.. 以下列格式建立使用者群組帳戶：
++
+ domainName\accountName$
+.. 新增電腦物件至群組。
+.. 使用您剛建立的使用者群組來建立GMSA。
++
+例如、
+
++
+ New-ADServiceAccount -name <ServiceAccountName> -DNSHostName <fqdn> -PrincipalsAllowedToRetrieveManagedPassword <group> -ServicePrincipalNames <SPN1,SPN2,…>
+.. 執行「Get-ADServiceAccount」命令來驗證服務帳戶。
+
+
+. 在主機上設定GMSA：
++
+.. 在您要使用GMSA帳戶的主機上啟用Windows PowerShell的Active Directory模組。
++
+若要這麼做、請從PowerShell執行下列命令：
+
++
+[listing]
+----
+PS C:\> Get-WindowsFeature AD-Domain-Services
+
+Display Name                           Name                Install State
+------------                           ----                -------------
+[ ] Active Directory Domain Services   AD-Domain-Services  Available
+
+
+PS C:\> Install-WindowsFeature AD-DOMAIN-SERVICES
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             Success        {Active Directory Domain Services, Active ...
+WARNING: Windows automatic updating is not enabled. To ensure that your newly-installed role or feature is
+automatically updated, turn on Windows Update.
+----
+.. 重新啟動主機。
+.. 從PowerShell命令提示字元執行下列命令、在主機上安裝GMSA：「Install-AdServiceAccount <GMSA >」
+.. 執行下列命令驗證您的GMSA帳戶：「Test-AdServiceAccount <GMSA >」
+
+
+. 將管理權限指派給主機上已設定的GMSA。
+. 在SnapCenter 支援服務器中指定已設定的GMSA帳戶、以新增Windows主機。
++
+在安裝外掛程式的過程中、將會在主機上安裝所選的外掛程式、並使用指定的GMSA作為服務登入帳戶。SnapCenter
+
+

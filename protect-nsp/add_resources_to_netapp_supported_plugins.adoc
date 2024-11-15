@@ -1,7 +1,7 @@
 ---
 permalink: protect-nsp/add_resources_to_netapp_supported_plugins.html 
 sidebar: sidebar 
-keywords: NetApp supported plug-in, resources, snapcenter 
+keywords: NetApp supported plug-in, resources, NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: 您必須新增要備份或複製的資源。視您的環境而定、資源可能是您要備份或複製的資料庫執行個體或集合。 
 ---
 = 將資源新增至 NetApp 支援的外掛程式
@@ -15,7 +15,6 @@ summary: 您必須新增要備份或複製的資源。視您的環境而定、�
 
 .開始之前
 * 您必須已完成安裝SnapCenter 完「支援服務器」、新增主機、建立儲存系統連線、以及新增認證等工作。
-* 您必須擁有 link:develop_a_plug_in_for_your_application.html["已為您的應用程式建立自訂外掛程式"]。
 * 您必須已將外掛程式上傳至SnapCenter 更新伺服器。
 
 
@@ -73,7 +72,7 @@ summary: 您必須新增要備份或複製的資源。視您的環境而定、�
 NOTE: NetApp 支援的外掛程式不支援自動探索資源。實體與虛擬環境的儲存詳細資料也不會自動探索。您必須在建立資源的同時、提供實體和虛擬環境的儲存資訊。
 
 +
-image::../media/storage_footprint.gif[儲存設備佔用空間]
+image::../media/storage_footprint.png[儲存設備佔用空間]
 
 . 在「資源設定」頁面中、提供資源的自訂金鑰值配對。
 +
@@ -164,7 +163,7 @@ NOTE: 對於 Windows 環境、路徑必須在雙引號（ "..." ）內。
 
 
 
-=== Sybase ASE 的外掛程式
+=== SAP ASE 的外掛程式
 
 資源設定：
 

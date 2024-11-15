@@ -1,5 +1,5 @@
 ---
-permalink: protect-nsp/restore_and_recover_resources_using_powershell_cmdlets.html 
+permalink: protect-scc/restore_and_recover_resources_using_powershell_cmdlets.html 
 sidebar: sidebar 
 keywords: restore resources 
 summary: 還原資源備份包括啟動與SnapCenter 還原伺服器的連線工作階段、列出備份與擷取備份資訊、以及還原備份。 

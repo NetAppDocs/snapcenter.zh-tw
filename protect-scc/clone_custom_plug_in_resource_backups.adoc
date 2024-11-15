@@ -1,0 +1,28 @@
+---
+permalink: protect-scc/clone_custom_plug_in_resource_backups.html 
+sidebar: sidebar 
+keywords: clone, custom plug-ins 
+summary: 實體複本工作流程包括執行實體複本作業及監控作業。 
+---
+= 複製 SnapCenter 自訂外掛程式資源備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+實體複本工作流程包括執行實體複本作業及監控作業。
+
+.關於這項工作
+您可以複製資源備份、理由如下：
+
+* 在應用程式開發週期期間、測試必須使用目前資源結構和內容來實作的功能
+* 用於資料擷取和處理工具、以供填入資料倉儲
+* 以恢復錯誤刪除或變更的資料
+
+
+下列工作流程顯示您必須執行複製作業的順序：
+
+image::../media/sco_scc_wfs_clone_workflow.png[複製工作流程]
+
+您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需 PowerShell Cmdlet 的詳細資訊，請使用 SnapCenter Cmdlet 說明或參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。

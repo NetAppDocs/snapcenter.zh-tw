@@ -1,0 +1,26 @@
+---
+permalink: protect-scc/prepare_storage_systems_for_snapmirror_and_snapvault_replication_for_custom_plugins.html 
+sidebar: sidebar 
+keywords: snapmirror, snapvault, storage system, replication 
+summary: 您可以搭配SnapCenter 使用支援ONTAP SnapMirror和SnapVault SnapMirror技術的功能 
+---
+= 為儲存系統做好準備、以便進行SnapMirror和SnapVault 針對自訂外掛程式的等化複寫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用SnapCenter 支援ONTAP SnapMirror技術的支援功能來在另一個Volume上建立備份集的鏡射複本、ONTAP SnapVault 並使用支援此技術的支援功能來執行磁碟對磁碟備份複寫、以符合標準及其他治理相關用途。在執行這些工作之前、您必須先設定來源與目的地磁碟區之間的資料保護關係、然後初始化關係。
+
+SnapCenter 會在完成 Snapshot 作業之後、執行 SnapMirror 和 SnapVault 的更新。SnapMirror和SnapVault SnapMirror更新是SnapCenter 執行功能不全的工作之一、請勿建立個別ONTAP 的功能不全。
+
+
+NOTE: 如果您是SnapCenter 從NetApp SnapManager 產品來到這個地方、並且對您設定的資料保護關係感到滿意、您可以跳過本節。
+
+資料保護關係會將主要儲存設備（來源Volume）上的資料複寫到次要儲存設備（目的地Volume）。當您初始化關係時、ONTAP 將來源磁碟區上參照的資料區塊傳輸到目的地磁碟區。
+
+
+NOTE: 不支援SnapMirror與支援等量資料（*主要*>*鏡射*>* Vault *）之間的串聯關係。SnapCenter SnapVault您應該使用「扇出」關係。
+
+支援管理版本彈性的SnapMirror關係。SnapCenter如需版本靈活的SnapMirror關係及其設定方式的詳細資訊、請參閱 http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.ic-base%2Fresources%2Fhome.html["本文檔 ONTAP"^]。
