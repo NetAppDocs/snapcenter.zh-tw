@@ -1,0 +1,18 @@
+---
+permalink: release-notes/release-notes.html 
+sidebar: sidebar 
+keywords: release notes, snapcenter 
+summary: 提供SnapCenter 此版本的《支援服務器》和SnapCenter 《支援服務器的功能》外掛套件的重要資訊、包括修正問題、已知問題、注意事項及限制。 
+---
+= 版本資訊
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+瞭解 SnapCenter 6.0 和 6.0.1 中提供的新功能和增強功能。
+
+有關新功能和增強功能的完整列表，請參閱link:what's-new-in-snapcenter601.html["SnapCenter 6.0.1 的新功能"]和link:what's-new-in-snapcenter60.html["SnapCenter 6.0 的新功能"]。
+
+如需已知問題，限制，修正問題及新增及變更命令的詳細資訊，請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323468["SnapCenter 軟體 6.0 與 6.0.1 版本資訊"^]。您必須使用 NetApp 帳戶登入、或建立帳戶才能存取版本資訊。

@@ -21,13 +21,12 @@ settings:
     url: "/snapcenter-46"
   - version-number: '4.5'
     url: "/snapcenter-45"
-  langs: zh-tw,us-en,ja-jp,ko-kr,zh-cn,de-de,es-es,fr-fr,it-it
+  langs: zh-tw,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn
 sidebar:
   entries:
   - title: SnapCenter Software 6.0 文件
     url: "/index.html"
-  - title: 版本資訊
-    url: "/release-notes.html"
+  - section: release-notes
   - section: concept
   - section: install
   - section: protect-scsql

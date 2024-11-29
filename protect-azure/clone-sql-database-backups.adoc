@@ -11,7 +11,7 @@ summary: 您可以使用SnapCenter 支援功能來複製備份。
 
 
 [role="lead"]
-您可以使用SnapCenter 支援功能來複製SQL Server資料庫備份。如果您想要存取或還原舊版資料、可以隨需複製資料庫備份。
+您可以使用 SnapCenter 來複製使用資料庫備份的 SQL 資料庫。建立的複本是複本複本，並建立在父容量集區上。
 
 .關於這項工作
 您應該確定複製的目標執行個體是由屬於 SMB ADActive Directory 網域的 Active Directory 使用者所設定、並具有適當設定檔案權限的權限。您應該在執行個體層級的 SnapCenter 中設定認證。

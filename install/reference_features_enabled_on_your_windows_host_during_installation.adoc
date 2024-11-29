@@ -63,7 +63,7 @@ Web伺服器
 +
 ** .NET擴充性4.5
 ** 應用程式初始化
-** asp 。 Net Core 託管套件（ 8.0.5 或更新版本）
+** ASP.NET Core Hosting Bundle 從 8.0.5 版開始，包括所有後續的 .NET 8 修補程式
 ** 伺服器端隨附
 ** WebSocket傳輸協定
 
@@ -89,8 +89,8 @@ Web伺服器
  a| 
 +.NET Framework 8.0.5 Features+
  a| 
-* NET Framework 8.0.5
-* ASP.NET 8.0.5
+* 從 8.0.5 版開始的 .NET Framework ，包括所有後續的 .NET 8 修補程式
+* ASP.NET 從 8.0.5 版開始，包括所有後續的 .NET 8 修補程式
 * Windows Communication Foundation（WCF）HTTP Activation45
 +
 ** TCP啟動

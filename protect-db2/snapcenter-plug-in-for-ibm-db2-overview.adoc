@@ -19,6 +19,9 @@ SnapCenter Plug-in for IBM DB2 Database 是 NetApp SnapCenter 軟體的主機端
 
 SnapCenter 支援單一執行個體和多個執行個體 DB2 設定。您可以在 Linux 和 Windows 環境中使用適用於 IBM DB2 資料庫的外掛程式。在 Windows 環境中、 DB2 將支援為手動資源。
 
+
+NOTE: 不支援 DB2 PureScale 環境和 DB2 多節點（ DPF ）系統。
+
 安裝 IBM DB2 資料庫外掛程式時、您可以使用 SnapCenter 搭配 NetApp SnapMirror 技術、在另一個磁碟區上建立備份集的鏡射複本。您也可以使用外掛程式搭配NetApp SnapVault 支援技術來執行磁碟對磁碟備份複寫、以符合標準。
 
 SnapCenter Plug-in for DB2 支援 ONTAP 和 Azure NetApp 檔案儲存配置上的 NFS 和 SAN 。

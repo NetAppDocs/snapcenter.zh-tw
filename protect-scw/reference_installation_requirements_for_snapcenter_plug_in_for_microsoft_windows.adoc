@@ -63,7 +63,7 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
  a| 
 必要的軟體套件
  a| 
-* 。 NET Core 8.0.5
+* 從 8.0.5 版開始的 .NET Core ，包括所有後續的 .NET 8 修補程式
 * PowerShell Core 7.4.2
 
 

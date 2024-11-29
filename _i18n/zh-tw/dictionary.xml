@@ -8141,10 +8141,6 @@ SnapLock 設定是由 ONTAP 管理。</block>
   <block id="dcc66de93aefa3105fda8cbdb3cdc2cf" category="list-text">選取備份、然後按一下*<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*。</block>
   <block id="13bc47d703b82b962d33b3cf47bf64fb" category="list-text">在「名稱」頁面中、選取 *PDB Clone * 、然後指定其他詳細資料。</block>
   <block id="92336218cb59d91f7080fee85c60b95f" category="list-text">在「作業後」頁面中、依預設會選取 * 直到取消 * 、以執行複製資料庫的還原。</block>
-  <block id="82a14f04b2bdde64af5a7a694ab98bba" category="section-title">分割 Oracle 資料庫複本</block>
-  <block id="787b61c3679ebc574f4962a1f5aebb0c" category="list-text">選取複製的資源（例如資料庫或 LUN ）、然後按一下 *<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*。</block>
-  <block id="562ffa91cb05be38d306e7ac7ab12d9c" category="list-text">從「管理複本」檢視中、從主要儲存系統中選取 * Clones * 。</block>
-  <block id="62ef6c6e852eca46dfc82fdc6ad386b2" category="list-text">選取 PDB 複製（ targetCDB:PDBClone ）、然後按一下 *<block ref="11ec183c45ca833d0220ddbf2e2e1d98" category="inline-image-macro-rx" type="image"></block>*。</block>
   <block id="06297b8a736154148ec90e3788831eaa" category="doc">還原及還原 SQL Server 資料庫</block>
   <block id="b01943524a657671dfae0f3f1f0948e5" category="paragraph">您可以使用SnapCenter 支援功能來還原備份的SQL Server資料庫。資料庫還原是一個多階段程序、可將所有資料和記錄頁面從指定的 SQL Server 備份複製到指定的資料庫。</block>
   <block id="ddec2d3a4d88b9b7250ed10e6ef19f3f" category="list-text">從「管理複本」檢視中、從儲存系統選取 * 備份 * 。</block>
@@ -8480,7 +8476,6 @@ Snapshot 作業。</block>
   <block id="58184ed57b20efbfac17064f1bc0e4f4" category="list-text">選取備份、然後按一下 * 移除保護 * 。</block>
   <block id="ad569cc1cca820033bb20ffe1d5bc4a5" category="paragraph">部分7.1或更新版本AIX</block>
   <block id="6b139c8a52407032a30a5d0cbb7c1438" category="list-text">Volume Snapshot modify-SnapLock過期時間</block>
-  <block id="ce67e9a5c3006b689a5f150a9c30d732" category="list-text">。 NET Core 8.0.5</block>
   <block id="4a58751c57809081912e30803a16d52e" category="list-text">PowerShell Core 7.4.2</block>
   <block id="b7ccd7f577996dd33bde8070db971b93" category="list-text">Java 11 Oracle Java 和 OpenJDK</block>
   <block id="9b722cfab4d80b751e95d2565746573a" category="paragraph">NFS 和 SAN 上的 VVOL 資料存放區</block>
@@ -8628,7 +8623,6 @@ Snapshot 作業。</block>
   <block id="2ac5f63d0bb2ab4a9898d18445391caf" category="list-text">RabbitMQ</block>
   <block id="62e0b5b350c9e3d2c19aa801d9442ba9" category="list-text">恩靈思</block>
   <block id="f7e853158b776246c53345b938159cc1" category="list-text">Erlang</block>
-  <block id="4b895fbdf0b21e04dc01c9b2f52bd5ee" category="list-text">NET Framework 8.0.5</block>
   <block id="21624173efc06090951170116cd13563" category="list-text">Pam-devel</block>
   <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="list-text">PowerShell</block>
   <block id="6e3da1e6c4de3ddc55b5442f3d8fbf10" category="summary">您可以在 Linux 主機上安裝 SnapCenter 伺服器。</block>
@@ -8714,9 +8708,7 @@ Snapshot 作業。</block>
   <block id="b0ca30368b247fa738c8bdba36dd4d73" category="paragraph">預設的 NET 。 Windows 外掛程式使用 TCP 連接埠來連線至 Exchange VSS 回撥。</block>
   <block id="accc958f08cd768c04d4e40292acd632" category="paragraph">若要自訂連接埠、請參閱 <block ref="db95a9150e60a9ea9da8200975d83e74" category="inline-link-macro-rx"></block>。</block>
   <block id="cc0974b8a511f2e4b4d021cda6e5e820" category="paragraph">NetApp 支援的 SnapCenter 外掛程式</block>
-  <block id="77e6d1d743590f1944df090df04f64fb" category="list-text">asp 。 Net Core 託管套件（ 8.0.5 或更新版本）</block>
   <block id="628b02e3b9750945ce37b6d84682cd2b" category="paragraph">+.NET Framework 8.0.5 Features+</block>
-  <block id="aaf9b73d8f0e71b5b8ed41944e56091d" category="list-text">ASP.NET 8.0.5</block>
   <block id="7eaa993723e57b3bfc99923c196e2e17" category="list-text">RabbitMQ</block>
   <block id="6905661e5d7f8f3e6a4faffbbab0f627" category="cell">Windows 主機需求</block>
   <block id="e7074f744b12e993cbdc6c77ee980b3e" category="list-text">Red Hat Enterprise Linux （ RHEL ） 8 和 9</block>
@@ -8726,7 +8718,6 @@ Snapshot 作業。</block>
   <block id="9f101c0e6e5929a04c9e7663fdf91eda" category="paragraph">15 GB</block>
   <block id="d6874413f4fac004d1cb83f02eccc33c" category="admonition">附註：如果SnapCenter 您在SnapCenter 安裝了該系統資訊庫的同一個磁碟機中安裝了該伺服器、則建議您使用15 GB的容量。</block>
   <block id="4c6ec01f6ae03e08c146fe6865423a4b" category="list-text">PowerShell 7.4.2 或更新版本</block>
-  <block id="43e185b7580feec0acd79569efc4e099" category="list-text">asp 。 NET Core Runtime 8.0.5 或更新版本</block>
   <block id="149d1be25c7d76696b875863179ac66d" category="list-text">Nginx 是可做為反向 Proxy 的 Web 伺服器</block>
   <block id="6d4ed4face9b51c5caae12208e47fa1e" category="paragraph">PAM （可插拔驗證模組）是一種系統安全工具、可讓系統管理員設定驗證原則、而無需重新編譯執行驗證的程式。</block>
   <block id="e49b0f86241cddbd59f6488d104741df" category="list-text">Chrome 125 版及更新版本</block>
@@ -8786,7 +8777,6 @@ Snapshot 作業。</block>
   <block id="7e5dacddaaa8672290ea4564cf1c41ad" category="paragraph">如果您尚未選取「略過預先檢查」核取方塊、則會驗證主機是否符合安裝外掛程式的需求。 磁碟空間、 RAM 、 PowerShell 版本、。 NET 版本、位置（適用於 Windows 外掛程式）和 Java 11 （適用於 Windows 和 Linux 外掛程式）均根據最低需求進行驗證。如果不符合最低要求、則會顯示適當的錯誤或警告訊息。</block>
   <block id="0fcc0f3a2dace0457cd9db71bb8bfef8" category="list-text">對於 Windows 外掛程式、安裝與升級記錄檔位於： _C ： \Windows\SnapCenter 外掛程式 &lt;JOBID&gt;</block>
   <block id="4921a99bb14e7c74ffbcbc45df56f359" category="list-text">對於 Linux 外掛程式、安裝記錄檔位於： &lt;JOBID&gt; 。升級記錄檔位於： &lt;JOBID&gt;</block>
-  <block id="0a14114e3ff4a5d760adcf058a9a4579" category="paragraph">如果您想要升級至 SnapCenter 6.0 版本、則會從遠端外掛程式伺服器解除安裝現有的 DB2 Perl 外掛程式。</block>
   <block id="f55d81a07e6e0581f3e19eff0a932069" category="summary">某些 DB2 執行個體不支援自動探索。您必須手動新增這些資源。</block>
   <block id="48f6b76a211d0c32945a6f4c2a082f3c" category="paragraph">Windows 主機不支援自動探索。您必須手動新增 DB2 執行個體和資料庫資源。</block>
   <block id="66fe54fa4e213e520e33fab0de4829f3" category="list-text">您必須完成安裝 SnapCenter 伺服器、新增主機及設定儲存系統連線等工作。</block>
@@ -9049,7 +9039,6 @@ Snapshot 作業。</block>
   <block id="5960f7331fcbdec5c21642b1d51cc972" category="list-text">適用於 MySQL 的 SnapCenter 外掛程式不支援自動探索 RM/VMDK 虛擬環境中的資源。您必須在手動新增資料庫的同時、提供虛擬環境的儲存資訊。</block>
   <block id="d6e5affbef5f3cc4e984ce8bcf594a94" category="list-text">在左導覽窗格中、按一下 * 資源 * 、然後從清單中選取適用於 MySQL 的外掛程式。</block>
   <block id="f09ef27e0279c131a669a6a13b1cbb6a" category="admonition">如果在 SnapCenter 之外重新命名執行個體、則必須重新整理資源。</block>
-  <block id="533bfd13df04fd1382b86a2d79550e09" category="list-text">DotNet Core 8.0.5</block>
   <block id="abb388d4926d485f81269db2a3f0891f" category="summary">SnapCenter 負責管理儲存系統和檔案系統層級、以及 MySQL 備份目錄中的記錄和資料備份管理工作。</block>
   <block id="62fded2795270fcd11011954ceeb813b" category="doc">SnapCenter 如何管理記錄備份的管理工作</block>
   <block id="a44bea300ebfa8b4240129a005791668" category="doc">如何使用資源、資源群組和原則來保護 MySQL</block>
@@ -9803,7 +9792,6 @@ Snapshot 作業。</block>
   <block id="31152c60a83a3da780e5073389e4b747" category="inline-image-macro">從資源群組新增原則</block>
   <block id="80594268749f867035de9885db91d7c7" category="list-text">在「設定所選原則的排程」區段中、針對您要設定排程的原則、按一下 <block ref="fb07bcf88c7c1b46f6236382e5e0ff22" category="inline-image-macro-rx" type="image"></block> 「設定排程」欄。</block>
   <block id="583e42a8940ae8003094ff152460e62b" category="inline-link">SnapCenter 軟體 6.0 與 6.0.1 版本資訊</block>
-  <block id="5c515af353439e417dd1d3ff4a8a8714" category="paragraph">如需詳細資訊，請參閱<block ref="96c6a9ad961cdb98d787b7b13bc5a289" category="inline-link-rx"></block>。</block>
   <block id="4d6b1749d463347a1b3df01a9e8b0ea5" category="list-text">在開始升級作業之前，如果您已手動將伺服器主機置於維護模式，則必須在升級後按一下 * 主機 * &gt; * 啟動排程 * ，手動將伺服器主機移出維護模式。</block>
   <block id="490e9071957ca8b80f7019e9cb2a8b99" category="list-text">您應該在伺服器主機上執行新的資源探索。</block>
   <block id="06eee3caed57cb295b8ae731bc4b8dce" category="paragraph">如果伺服器主機的狀態顯示為停止，您可以等待一段時間，然後執行新的探索。您也可以將*主機重新更新間隔*參數（預設值為3、600秒）的值變更為超過10分鐘的任何值。</block>
@@ -9944,4 +9932,67 @@ Snapshot 作業。</block>
   <block id="33e8da2f20646df222fc0acf35201fe4" category="sidebar">備份自訂外掛程式資源</block>
   <block id="8ffa4ba0dd2df5995fd397c72a149679" category="sidebar">備份個別的自訂外掛程式資源</block>
   <block id="e734e6e2e702d38ebab6ed3c050a5e72" category="sidebar">複製自訂外掛程式資源備份</block>
+  <block id="305e2d6826371134136661ce4869e554" category="list-text">從 8.0.5 版開始的 .NET Core ，包括所有後續的 .NET 8 修補程式</block>
+  <block id="52498505b3fc927f491c9b006eecae92" category="list-text">從 8.0.5 版開始的 .NET Framework ，包括所有後續的 .NET 8 修補程式</block>
+  <block id="76ab71a79937e997e9cf1c7dc354e025" category="list-text">ASP.NET Core Hosting Bundle 從 8.0.5 版開始，包括所有後續的 .NET 8 修補程式</block>
+  <block id="3728d48973e3d053d0a862af7bf6c785" category="list-text">ASP.NET 從 8.0.5 版開始，包括所有後續的 .NET 8 修補程式</block>
+  <block id="c1de3dacba751659ff9e6c8833e5f903" category="list-text">ASP.NET Core Runtime 從 8.0.5 版開始，包括所有後續的 .NET 8 修補程式</block>
+  <block id="881a29d62175189b1872a856fce933da" category="paragraph">您可以使用SnapCenter 支援功能、使用資料庫的備份來複製Oracle資料庫。建立的複本是複本複本，並建立在父容量集區上。</block>
+  <block id="57507899dd312cf4de9c076e90990d6a" category="paragraph">您可以使用 SnapCenter ，使用資料庫的備份來複製 SAP HANA 資料庫。建立的複本是複本複本，並建立在父容量集區上。</block>
+  <block id="73c291e6ad930a577bf1c1d0267ecd80" category="paragraph">您可以使用 SnapCenter 來複製使用資料庫備份的 SQL 資料庫。建立的複本是複本複本，並建立在父容量集區上。</block>
+  <block id="c606038e9f060e87fd33c813592804d3" category="list-text">不支援複本分割。</block>
+  <block id="30d32a0f164bac6778a1be0b6bbad3d1" category="paragraph">選取您所建立的認證名稱、或建立新認證。認證資料必須具有遠端主機的管理權限。如需詳細資訊、請參閱建立認證的相關資訊。</block>
+  <block id="0d09fd1c49f1d2d9fdc72b9e6af179ff" category="paragraph">如果您想要升級至 SnapCenter 6.0 或更新版本，則會從遠端外掛程式伺服器解除安裝現有的 DB2 Perl 外掛程式。</block>
+  <block id="8bd5c68a1ade9c22f98424902eb6b969" category="admonition">不支援 DB2 PureScale 環境和 DB2 多節點（ DPF ）系統。</block>
+  <block id="2d2b303d961d395bd777f5532d182df1" category="list-text">DotNet Core 從 8.0.5 版開始，包括所有後續的 .NET 8 修補程式</block>
+  <block id="d26271179537201ce6d4270b088e3629" category="paragraph">瞭解 SnapCenter 6.0 和 6.0.1 中提供的新功能和增強功能。</block>
+  <block id="e26065304cca26ac94a12ba286943668" category="inline-link-macro">SnapCenter 6.0.1 的新功能</block>
+  <block id="1389d6b3bba6a06a7cec4120c31b52b7" category="inline-link-macro">SnapCenter 6.0 的新功能</block>
+  <block id="a63ea5d9f72525ae37d941e9bc5ecbc7" category="paragraph">有關新功能和增強功能的完整列表，請參閱<block ref="2b7c5d00a49e44d91d9f881dc992a4a5" category="inline-link-macro-rx"></block>和<block ref="e9409363ebf38833c42f0fa2ec48a387" category="inline-link-macro-rx"></block>。</block>
+  <block id="e9d4ea3f0c1b4cd9e879f1519fb60c79" category="paragraph">如需已知問題，限制，修正問題及新增及變更命令的詳細資訊，請參閱<block ref="96c6a9ad961cdb98d787b7b13bc5a289" category="inline-link-rx"></block>。您必須使用 NetApp 帳戶登入、或建立帳戶才能存取版本資訊。</block>
+  <block id="89f4d38108821acdbf6cd6b780454397" category="summary">SnapCenter 支援的升級路徑。</block>
+  <block id="5097f966477870c178d6885558d88ef0" category="doc">SnapCenter 支援的升級路徑</block>
+  <block id="917e552e8290664f15e1332b2d723ec0" category="paragraph">升級途徑可協助您瞭解可從哪些舊版 SnapCenter 升級至最新版 SnapCenter ，以及支援哪些版本的外掛程式。</block>
+  <block id="ab3e1b5fbcd7c46009ad34f096e65d30" category="admonition">例如，如果您使用的是 SnapCenter 4.9 版，而且想要升級至 6.0.1 版，則應先升級至 5.0 ，然後再進行滾動升級至 6.0.1 。</block>
+  <block id="430bb58f6ef28c742787a646394cc85d" category="summary">SnapCenter 軟體 6.0 版包含數項新功能與增強功能。</block>
+  <block id="c93a09afa54abf05ddd4770e3b2343a1" category="doc">SnapCenter 軟體 6.0 的新功能</block>
+  <block id="5864c825e06c8214939d2a9d0894bf16" category="inline-link-macro">支援 NetApp 的企業工作負載外掛程式</block>
+  <block id="b378547eb64b7be3e2ffe67d84149895" category="cell"><block ref="b378547eb64b7be3e2ffe67d84149895" category="inline-link-macro-rx"></block></block>
+  <block id="3be8c0bcb79f27206e60c05521a2483c" category="paragraph">SnapCenter 提供外掛程式來管理 PostgreSQL ， MySQL 和 IBM DB2 等工作負載。您可以自動探索，備份，還原，裝載及複製工作負載。</block>
+  <block id="1fa76ac55ad0967716ac4dfee12b4407" category="paragraph">SnapCenter 也提供外掛程式來管理工作負載，例如 SAP ASE ， SAP MaxDB ， MongoDB ， Oracle 應用程式和 ONTAP 儲存設備。您可以備份，還原及複製工作負載。</block>
+  <block id="2e267d83f08284f9047134b3c074b19b" category="inline-link-macro">支援適用於雲端和內部部署工作負載的 Linux 版 SnapCenter</block>
+  <block id="ca5b1ab4090623818a4fec6b963d13f9" category="cell"><block ref="ca5b1ab4090623818a4fec6b963d13f9" category="inline-link-macro-rx"></block></block>
+  <block id="7daff1874dce5a11aba2586028b0c18f" category="list-text">支援 Azure NetApp Files ， Amazon FSX for NetApp ONTAP ， Cloud Volumes ONTAP 和 ONTAP 儲存設備。</block>
+  <block id="762100fcdd1477c85af12beef8cd62c3" category="list-text">Linux 版本的獨立二進位檔，例如 Red Hat Enterprise Linux （ RHEL ）， Oracle Linux 和 SUSE Linux Enterprise Server （ SLES ）。</block>
+  <block id="13600e1a28d7c26b057fc84f30416618" category="list-text">支援 SAP HANA ， Oracle ， IBM DB2 ， SAP ASE ， SAP MaxDB 等傳統資料庫。</block>
+  <block id="1dbcbbe14ef1a2328b3e7e8b86a02d30" category="list-text">支援 PostgreSQL ， MySQL 和 MongoDB 等現代化工作負載。</block>
+  <block id="42e9bb4040dfb564c8bc793490bd7ba6" category="list-text">支援 ONTAP Volume 和 Linux 檔案系統的外掛程式，以保護任何不受支援或自行開發的應用程式。</block>
+  <block id="95c6ebe4e9f4b874b3476bd9c75d257b" category="inline-link-macro">支援 SnapMirror Active Sync</block>
+  <block id="8440547858789da7c3b2feb37f16cb25" category="cell"><block ref="8440547858789da7c3b2feb37f16cb25" category="inline-link-macro-rx"></block></block>
+  <block id="d318b0578f25b54d744e21d30b035e8a" category="paragraph">能夠無縫備份，還原及複製 SAN 工作負載（資料庫和 VMware VM ），並設定為透明的應用程式容錯移轉和營運持續性。</block>
+  <block id="e030f85ea3742a8498cd3f4ce5f26a2f" category="inline-link-macro">支援 SMB3 上的 Microsoft SQL Server</block>
+  <block id="c550e496e988fba14212cef600247fed" category="cell"><block ref="c550e496e988fba14212cef600247fed" category="inline-link-macro-rx"></block></block>
+  <block id="661984b66e3a7f72fbbda59c35c7aa92" category="paragraph">部署在 ONTAP ， Azure NetApp Files ， Amazon FSX for NetApp ONTAP 和 ONTAP Cloud Volumes 中 SMB3 傳輸協定上的 Microsoft SQL Server 資料庫現在可以使用 SnapCenter 加以保護。</block>
+  <block id="534b29f3d774d1d19d1dc1030cdc4b3d" category="inline-link-macro">支援 NVMe / TCP</block>
+  <block id="98d7af4aa50fe1e0cd7013f44cc2cebc" category="cell"><block ref="98d7af4aa50fe1e0cd7013f44cc2cebc" category="inline-link-macro-rx"></block></block>
+  <block id="6b4fa7a607a45ee2985d38d057ed95a1" category="paragraph">如果您要將關鍵工作負載移轉至 NVMe / TCP 以獲得更好的效能，您可以使用 SnapCenter 來備份及恢復應用程式和檔案系統。</block>
+  <block id="64727e12025200ba369f3ba7c0682081" category="cell">支援 VMware vVols</block>
+  <block id="8717c0ac7cfbe6d918d19dd574d63e73" category="paragraph">如果您已在 VMware vVols 上部署資料庫和檔案系統，則可以使用 SnapCenter 來保護它們。</block>
+  <block id="180a2e8c671bfb57b670570970b59480" category="summary">6.0.1 版的 SnapCenter 軟體包含數項新功能和增強功能。</block>
+  <block id="f5db6e0b0a7608b32dd00dbb85353e53" category="doc">SnapCenter 軟體 6.0.1 的新增功能</block>
+  <block id="0ee351a583abf7baa869129519adaddb" category="inline-link-macro">支援 Azure NetApp Files 備份</block>
+  <block id="62c2d7366772786ca345ac877bf79c4a" category="cell"><block ref="62c2d7366772786ca345ac877bf79c4a" category="inline-link-macro-rx"></block></block>
+  <block id="4cc6d2996939fe7970c652728017b3e9" category="paragraph">SnapCenter 支援 Azure NetApp Files 備份功能，可為長期恢復，歸檔和法規遵循提供完全託管的備份解決方案，藉此擴充 Azure NetApp Files 的資料保護功能。</block>
+  <block id="f47390dbd7bff67c8e4d16001f8c4395" category="inline-link-macro">支援在 Linux 上執行的 SnapCenter 高可用度</block>
+  <block id="fa7aa08aceadadc58383fc01281330d1" category="cell"><block ref="fa7aa08aceadadc58383fc01281330d1" category="inline-link-macro-rx"></block></block>
+  <block id="8951fc15a429c65f620e89da09c5240e" category="paragraph">使用 F5 負載平衡器， Microsoft 網路負載平衡（ NLB ）， Amazon Web Services （ AWS ） Elastic Load Balancing （ Elb ）或 Azure 負載平衡器，在 Windows 或 Linux 上執行的 SnapCenter 中設定高可用度。</block>
+  <block id="1810fc343d328f63ca20580898910abc" category="inline-link-macro">支援管理排程備份工作</block>
+  <block id="a9e5aa37b3dc50c95040bd19f911000b" category="cell"><block ref="a9e5aa37b3dc50c95040bd19f911000b" category="inline-link-macro-rx"></block></block>
+  <block id="6775f2c837a6e0d211c88415495a3ca3" category="paragraph">可讓您將臨界值設定為可在任何指定時間執行的排程工作數。這可讓您根據系統硬體組態來控制想要執行的備份數量。</block>
+  <block id="6c1303e3667436380323a8f91aeeb3b1" category="inline-link-macro">支援管理過時工作</block>
+  <block id="0f16714fed95f3a4b2ef5ba9724d3658" category="cell"><block ref="0f16714fed95f3a4b2ef5ba9724d3658" category="inline-link-macro-rx"></block></block>
+  <block id="4b6d2450b6badef80cca9ba40b34bd88" category="paragraph">可讓您清除卡住 72 小時以上的過時工作。</block>
+  <block id="70e43ac38d4ee9a77d2476513c883d81" category="cell">支援 AIX 上的 IBM DB2 ， Oracle Application 和 Storage 外掛程式</block>
+  <block id="9b37c223b27baf9481210cc34272107f" category="paragraph">支援 IBM DB2 ， Oracle Application 及 AIX 上儲存外掛程式的資料保護</block>
+  <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">版本資訊</block>
 </blocks>

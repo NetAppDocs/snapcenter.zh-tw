@@ -16,7 +16,7 @@ SnapCenter 伺服器會安裝在下列軟體套件下方、這些套件可能對
 * RabbitMQ
 * 恩靈思
 * Erlang
-* NET Framework 8.0.5
+* 從 8.0.5 版開始的 .NET Framework ，包括所有後續的 .NET 8 修補程式
 * Pam-devel
 * PowerShell
 
