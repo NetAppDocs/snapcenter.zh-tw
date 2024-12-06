@@ -17,22 +17,22 @@ summary: 6.0.1 版的 SnapCenter 軟體包含數項新功能和增強功能。
 | 更新 | 說明 
 
 
-| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/protect-azure/protect-applications-azure-netapp-files.html["支援 Azure NetApp Files 備份"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/protect-azure/protect-applications-azure-netapp-files.html["支援 Azure NetApp Files 備份"]  a| 
 SnapCenter 支援 Azure NetApp Files 備份功能，可為長期恢復，歸檔和法規遵循提供完全託管的備份解決方案，藉此擴充 Azure NetApp Files 的資料保護功能。
 
 
 
-| link:hhttps://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["支援在 Linux 上執行的 SnapCenter 高可用度"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html["支援在 Linux 上執行的 SnapCenter 高可用度"]  a| 
 使用 F5 負載平衡器， Microsoft 網路負載平衡（ NLB ）， Amazon Web Services （ AWS ） Elastic Load Balancing （ Elb ）或 Azure 負載平衡器，在 Windows 或 Linux 上執行的 SnapCenter 中設定高可用度。
 
 
 
-| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-scheduled-backup-jobs["支援管理排程備份工作"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-scheduled-backup-jobs["支援管理排程備份工作"]  a| 
 可讓您將臨界值設定為可在任何指定時間執行的排程工作數。這可讓您根據系統硬體組態來控制想要執行的備份數量。
 
 
 
-| link:https://review.docs.netapp.com/us-en/snapcenter_sc601_oct2024_releasebranch/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-stale-jobs["支援管理過時工作"]  a| 
+| link:https://docs.netapp.com/us-en/snapcenter/admin/concept_monitor_jobs_schedules_events_and_logs.html#manage-stale-jobs["支援管理過時工作"]  a| 
 可讓您清除卡住 72 小時以上的過時工作。
 
 

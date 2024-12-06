@@ -9981,18 +9981,18 @@ Snapshot 作業。</block>
   <block id="180a2e8c671bfb57b670570970b59480" category="summary">6.0.1 版的 SnapCenter 軟體包含數項新功能和增強功能。</block>
   <block id="f5db6e0b0a7608b32dd00dbb85353e53" category="doc">SnapCenter 軟體 6.0.1 的新增功能</block>
   <block id="0ee351a583abf7baa869129519adaddb" category="inline-link-macro">支援 Azure NetApp Files 備份</block>
-  <block id="62c2d7366772786ca345ac877bf79c4a" category="cell"><block ref="62c2d7366772786ca345ac877bf79c4a" category="inline-link-macro-rx"></block></block>
   <block id="4cc6d2996939fe7970c652728017b3e9" category="paragraph">SnapCenter 支援 Azure NetApp Files 備份功能，可為長期恢復，歸檔和法規遵循提供完全託管的備份解決方案，藉此擴充 Azure NetApp Files 的資料保護功能。</block>
   <block id="f47390dbd7bff67c8e4d16001f8c4395" category="inline-link-macro">支援在 Linux 上執行的 SnapCenter 高可用度</block>
-  <block id="fa7aa08aceadadc58383fc01281330d1" category="cell"><block ref="fa7aa08aceadadc58383fc01281330d1" category="inline-link-macro-rx"></block></block>
   <block id="8951fc15a429c65f620e89da09c5240e" category="paragraph">使用 F5 負載平衡器， Microsoft 網路負載平衡（ NLB ）， Amazon Web Services （ AWS ） Elastic Load Balancing （ Elb ）或 Azure 負載平衡器，在 Windows 或 Linux 上執行的 SnapCenter 中設定高可用度。</block>
   <block id="1810fc343d328f63ca20580898910abc" category="inline-link-macro">支援管理排程備份工作</block>
-  <block id="a9e5aa37b3dc50c95040bd19f911000b" category="cell"><block ref="a9e5aa37b3dc50c95040bd19f911000b" category="inline-link-macro-rx"></block></block>
   <block id="6775f2c837a6e0d211c88415495a3ca3" category="paragraph">可讓您將臨界值設定為可在任何指定時間執行的排程工作數。這可讓您根據系統硬體組態來控制想要執行的備份數量。</block>
   <block id="6c1303e3667436380323a8f91aeeb3b1" category="inline-link-macro">支援管理過時工作</block>
-  <block id="0f16714fed95f3a4b2ef5ba9724d3658" category="cell"><block ref="0f16714fed95f3a4b2ef5ba9724d3658" category="inline-link-macro-rx"></block></block>
   <block id="4b6d2450b6badef80cca9ba40b34bd88" category="paragraph">可讓您清除卡住 72 小時以上的過時工作。</block>
   <block id="70e43ac38d4ee9a77d2476513c883d81" category="cell">支援 AIX 上的 IBM DB2 ， Oracle Application 和 Storage 外掛程式</block>
   <block id="9b37c223b27baf9481210cc34272107f" category="paragraph">支援 IBM DB2 ， Oracle Application 及 AIX 上儲存外掛程式的資料保護</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">版本資訊</block>
+  <block id="4396a053fce24f7f396ccf91773d1924" category="cell"><block ref="4396a053fce24f7f396ccf91773d1924" category="inline-link-macro-rx"></block></block>
+  <block id="c382d5571738a226abf22d83f911bf29" category="cell"><block ref="c382d5571738a226abf22d83f911bf29" category="inline-link-macro-rx"></block></block>
+  <block id="2a332b39aa52e9f2636ba160aca67cb8" category="cell"><block ref="2a332b39aa52e9f2636ba160aca67cb8" category="inline-link-macro-rx"></block></block>
+  <block id="4e57d9d37ed4764b16b2fed20544a690" category="cell"><block ref="4e57d9d37ed4764b16b2fed20544a690" category="inline-link-macro-rx"></block></block>
 </blocks>
