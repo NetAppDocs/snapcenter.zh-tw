@@ -9402,9 +9402,7 @@ Snapshot 作業。</block>
   <block id="cadca0993c074565e0295e47c4f0c2a0" category="list-text">您必須在 Linux 或 AIX 主機上安裝 Java 11 。</block>
   <block id="97ee77f84790cbf22d7e32413911f94c" category="paragraph">Java 11 IBM Java</block>
   <block id="3ab5865f7b3fcc5851ae24144b15f370" category="list-text">NVMe FC</block>
-  <block id="ad18d9aa7c4c9bdbf86e39bd6dd5b727" category="list-text">NVMe TCP</block>
   <block id="bb2676e02f9905c86303b7f1988d2898" category="list-text">NFS 資料存放區上的 VMDK</block>
-  <block id="13d64591a6e2c6389e1896047405d742" category="list-text">在透過 NVMe TCP 建立的 VMFS 上的 VMDK</block>
   <block id="ae1d120b56beba9c6f5a7802f3e3d61d" category="admonition">支援共享 VMDK 的 ESX 8.0U2 支援 RAC</block>
   <block id="35695ced3ec52ece3ab6114b133a4872" category="admonition">在 Oracle RAC 上安裝外掛程式時、僅支援密碼型驗證。不支援 SSH 金鑰型驗證。</block>
   <block id="bc3f01c8b7967405e08d06ae461bdcd7" category="paragraph">您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱<block ref="1be7dd030b7b4d460912ef60d82c1252" category="inline-link-rx"></block>。</block>
@@ -9956,43 +9954,51 @@ Snapshot 作業。</block>
   <block id="ab3e1b5fbcd7c46009ad34f096e65d30" category="admonition">例如，如果您使用的是 SnapCenter 4.9 版，而且想要升級至 6.0.1 版，則應先升級至 5.0 ，然後再進行滾動升級至 6.0.1 。</block>
   <block id="430bb58f6ef28c742787a646394cc85d" category="summary">SnapCenter 軟體 6.0 版包含數項新功能與增強功能。</block>
   <block id="c93a09afa54abf05ddd4770e3b2343a1" category="doc">SnapCenter 軟體 6.0 的新功能</block>
-  <block id="5864c825e06c8214939d2a9d0894bf16" category="inline-link-macro">支援 NetApp 的企業工作負載外掛程式</block>
-  <block id="b378547eb64b7be3e2ffe67d84149895" category="cell"><block ref="b378547eb64b7be3e2ffe67d84149895" category="inline-link-macro-rx"></block></block>
   <block id="3be8c0bcb79f27206e60c05521a2483c" category="paragraph">SnapCenter 提供外掛程式來管理 PostgreSQL ， MySQL 和 IBM DB2 等工作負載。您可以自動探索，備份，還原，裝載及複製工作負載。</block>
   <block id="1fa76ac55ad0967716ac4dfee12b4407" category="paragraph">SnapCenter 也提供外掛程式來管理工作負載，例如 SAP ASE ， SAP MaxDB ， MongoDB ， Oracle 應用程式和 ONTAP 儲存設備。您可以備份，還原及複製工作負載。</block>
-  <block id="2e267d83f08284f9047134b3c074b19b" category="inline-link-macro">支援適用於雲端和內部部署工作負載的 Linux 版 SnapCenter</block>
-  <block id="ca5b1ab4090623818a4fec6b963d13f9" category="cell"><block ref="ca5b1ab4090623818a4fec6b963d13f9" category="inline-link-macro-rx"></block></block>
   <block id="7daff1874dce5a11aba2586028b0c18f" category="list-text">支援 Azure NetApp Files ， Amazon FSX for NetApp ONTAP ， Cloud Volumes ONTAP 和 ONTAP 儲存設備。</block>
   <block id="762100fcdd1477c85af12beef8cd62c3" category="list-text">Linux 版本的獨立二進位檔，例如 Red Hat Enterprise Linux （ RHEL ）， Oracle Linux 和 SUSE Linux Enterprise Server （ SLES ）。</block>
   <block id="13600e1a28d7c26b057fc84f30416618" category="list-text">支援 SAP HANA ， Oracle ， IBM DB2 ， SAP ASE ， SAP MaxDB 等傳統資料庫。</block>
   <block id="1dbcbbe14ef1a2328b3e7e8b86a02d30" category="list-text">支援 PostgreSQL ， MySQL 和 MongoDB 等現代化工作負載。</block>
   <block id="42e9bb4040dfb564c8bc793490bd7ba6" category="list-text">支援 ONTAP Volume 和 Linux 檔案系統的外掛程式，以保護任何不受支援或自行開發的應用程式。</block>
-  <block id="95c6ebe4e9f4b874b3476bd9c75d257b" category="inline-link-macro">支援 SnapMirror Active Sync</block>
-  <block id="8440547858789da7c3b2feb37f16cb25" category="cell"><block ref="8440547858789da7c3b2feb37f16cb25" category="inline-link-macro-rx"></block></block>
-  <block id="d318b0578f25b54d744e21d30b035e8a" category="paragraph">能夠無縫備份，還原及複製 SAN 工作負載（資料庫和 VMware VM ），並設定為透明的應用程式容錯移轉和營運持續性。</block>
   <block id="e030f85ea3742a8498cd3f4ce5f26a2f" category="inline-link-macro">支援 SMB3 上的 Microsoft SQL Server</block>
   <block id="c550e496e988fba14212cef600247fed" category="cell"><block ref="c550e496e988fba14212cef600247fed" category="inline-link-macro-rx"></block></block>
-  <block id="661984b66e3a7f72fbbda59c35c7aa92" category="paragraph">部署在 ONTAP ， Azure NetApp Files ， Amazon FSX for NetApp ONTAP 和 ONTAP Cloud Volumes 中 SMB3 傳輸協定上的 Microsoft SQL Server 資料庫現在可以使用 SnapCenter 加以保護。</block>
   <block id="534b29f3d774d1d19d1dc1030cdc4b3d" category="inline-link-macro">支援 NVMe / TCP</block>
   <block id="98d7af4aa50fe1e0cd7013f44cc2cebc" category="cell"><block ref="98d7af4aa50fe1e0cd7013f44cc2cebc" category="inline-link-macro-rx"></block></block>
-  <block id="6b4fa7a607a45ee2985d38d057ed95a1" category="paragraph">如果您要將關鍵工作負載移轉至 NVMe / TCP 以獲得更好的效能，您可以使用 SnapCenter 來備份及恢復應用程式和檔案系統。</block>
-  <block id="64727e12025200ba369f3ba7c0682081" category="cell">支援 VMware vVols</block>
-  <block id="8717c0ac7cfbe6d918d19dd574d63e73" category="paragraph">如果您已在 VMware vVols 上部署資料庫和檔案系統，則可以使用 SnapCenter 來保護它們。</block>
   <block id="180a2e8c671bfb57b670570970b59480" category="summary">6.0.1 版的 SnapCenter 軟體包含數項新功能和增強功能。</block>
   <block id="f5db6e0b0a7608b32dd00dbb85353e53" category="doc">SnapCenter 軟體 6.0.1 的新增功能</block>
   <block id="0ee351a583abf7baa869129519adaddb" category="inline-link-macro">支援 Azure NetApp Files 備份</block>
-  <block id="4cc6d2996939fe7970c652728017b3e9" category="paragraph">SnapCenter 支援 Azure NetApp Files 備份功能，可為長期恢復，歸檔和法規遵循提供完全託管的備份解決方案，藉此擴充 Azure NetApp Files 的資料保護功能。</block>
   <block id="f47390dbd7bff67c8e4d16001f8c4395" category="inline-link-macro">支援在 Linux 上執行的 SnapCenter 高可用度</block>
-  <block id="8951fc15a429c65f620e89da09c5240e" category="paragraph">使用 F5 負載平衡器， Microsoft 網路負載平衡（ NLB ）， Amazon Web Services （ AWS ） Elastic Load Balancing （ Elb ）或 Azure 負載平衡器，在 Windows 或 Linux 上執行的 SnapCenter 中設定高可用度。</block>
-  <block id="1810fc343d328f63ca20580898910abc" category="inline-link-macro">支援管理排程備份工作</block>
-  <block id="6775f2c837a6e0d211c88415495a3ca3" category="paragraph">可讓您將臨界值設定為可在任何指定時間執行的排程工作數。這可讓您根據系統硬體組態來控制想要執行的備份數量。</block>
-  <block id="6c1303e3667436380323a8f91aeeb3b1" category="inline-link-macro">支援管理過時工作</block>
-  <block id="4b6d2450b6badef80cca9ba40b34bd88" category="paragraph">可讓您清除卡住 72 小時以上的過時工作。</block>
-  <block id="70e43ac38d4ee9a77d2476513c883d81" category="cell">支援 AIX 上的 IBM DB2 ， Oracle Application 和 Storage 外掛程式</block>
-  <block id="9b37c223b27baf9481210cc34272107f" category="paragraph">支援 IBM DB2 ， Oracle Application 及 AIX 上儲存外掛程式的資料保護</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">版本資訊</block>
   <block id="4396a053fce24f7f396ccf91773d1924" category="cell"><block ref="4396a053fce24f7f396ccf91773d1924" category="inline-link-macro-rx"></block></block>
   <block id="c382d5571738a226abf22d83f911bf29" category="cell"><block ref="c382d5571738a226abf22d83f911bf29" category="inline-link-macro-rx"></block></block>
-  <block id="2a332b39aa52e9f2636ba160aca67cb8" category="cell"><block ref="2a332b39aa52e9f2636ba160aca67cb8" category="inline-link-macro-rx"></block></block>
-  <block id="4e57d9d37ed4764b16b2fed20544a690" category="cell"><block ref="4e57d9d37ed4764b16b2fed20544a690" category="inline-link-macro-rx"></block></block>
+  <block id="8b7c42123642e2e4ea7dd426aeb2de58" category="list-text">NVMe / TCP</block>
+  <block id="e32c19b9fdeb1a3c3b963304701ce944" category="list-text">在透過 NVMe / TCP 建立的 VMFS 上的 VMDK</block>
+  <block id="6f8d85621ec7e8c73c4ba859ec9c7469" category="inline-link-macro">支援 NetApp 的企業工作負載外掛程式</block>
+  <block id="478831acf82b0a4b3818fd65c592a742" category="cell"><block ref="478831acf82b0a4b3818fd65c592a742" category="inline-link-macro-rx"></block></block>
+  <block id="1ef9e52684a20f666e12e341c8ef8ce1" category="inline-link-macro">支援 Linux 版本的 SnapCenter ，同時適用於雲端和內部部署工作負載</block>
+  <block id="8759eb4a15f0954f1ffe6a1ba0fcb91b" category="cell"><block ref="8759eb4a15f0954f1ffe6a1ba0fcb91b" category="inline-link-macro-rx"></block></block>
+  <block id="1cbe08eda60fa869e0f775f6bb3d2581" category="paragraph">現在， Red Hat Enterprise Linux （ RHEL ）， Oracle Linux 和 SUSE Linux Enterprise Server （ SLES ）等 Linux 版本均可使用獨立的 SnapCenter 二進位檔。</block>
+  <block id="4f53b479c6b47d73b1fdb28f399b1301" category="inline-link-macro">支援 SnapMirror 主動式同步</block>
+  <block id="a757709afe5913a9ac546212ec3e1688" category="cell"><block ref="a757709afe5913a9ac546212ec3e1688" category="inline-link-macro-rx"></block></block>
+  <block id="426704b1f334cde736f8e5ff800c0a22" category="paragraph">您現在可以使用 SnapCenter 來設定 SnapMirror 主動式同步功能，並有效備份，還原及複製資料庫和 VMware VM 的 SAN 工作負載。如此可確保透明化的應用程式容錯移轉和營運持續性。</block>
+  <block id="729dead3f3fe6b0217c2f68871edb8ee" category="paragraph">您現在可以使用 SnapCenter 來保護部署在 ONTAP ， Azure NetApp Files ， Amazon FSX for NetApp ONTAP 和 Cloud Volumes ONTAP 中 SMB3 傳輸協定上的 Microsoft SQL Server 資料庫。</block>
+  <block id="cadb0ed69287e5a4f65d1590e5e42a58" category="paragraph">SnapCenter 現在支援 NVMe over TCP 傳輸協定，可備份及恢復應用程式和檔案系統。</block>
+  <block id="bcaa0376902365340dff7a0ee422b390" category="cell">支援 VMware vSphere 虛擬磁碟區（ VVols ）</block>
+  <block id="d0942f199de3f390337f613419cc5b6d" category="paragraph">您現在可以使用 SnapCenter 來保護部署在 vVols 上的資料庫和檔案系統。</block>
+  <block id="6d3c36ceae85dfee8b7d9ccb6f9daa41" category="paragraph">您現在可以使用 SnapCenter 將位於 Azure NetApp Files 上的應用程式備份及複製到 Azure Blob 儲存設備（物件存放區）。</block>
+  <block id="dc3cf03517bc0034c89608c70487dd43" category="paragraph">SnapCenter 的 HA 組態支援現已延伸至 Linux 系統。您可以使用標準負載平衡器來進行此組態：</block>
+  <block id="cf70dd989291fe3c73323dca9c132c7a" category="list-text">F5 負載平衡器</block>
+  <block id="3a5261cb56e1fc4dcab4467255cb2f77" category="list-text">Microsoft 網路負載平衡（ NLB ）</block>
+  <block id="943ca3782b28d89aff2f86a50b332b3c" category="list-text">Amazon Web Services（AWS）</block>
+  <block id="00c0ea0ebc04a689882db84f8ac573b8" category="list-text">彈性負載平衡（ Elb ）</block>
+  <block id="30b49d6d7f72510603794f5cddeb0f51" category="list-text">Azure 負載平衡器</block>
+  <block id="2f95a365481f255b94a459c0cdbe6403" category="inline-link-macro">能夠管理排程的備份工作</block>
+  <block id="ed432f9ce52c9850999f7b028aad79ff" category="cell"><block ref="ed432f9ce52c9850999f7b028aad79ff" category="inline-link-macro-rx"></block></block>
+  <block id="45504f3ad62432af1eda619e4b060b8a" category="paragraph">您現在可以設定排程工作的臨界值，以根據系統硬體組態，控制您想要在任何指定時間執行的備份數量。</block>
+  <block id="4001d0b97ee7312467d6a3f7954548e2" category="inline-link-macro">管理過時工作的能力</block>
+  <block id="df630e1703b2829b32d71f57dd02d24e" category="cell"><block ref="df630e1703b2829b32d71f57dd02d24e" category="inline-link-macro-rx"></block></block>
+  <block id="d76b0a3fe3eb0d4b24bd1965df4f6005" category="paragraph">您現在可以設定預先定義的排程，以清除卡住 72 小時以上的過時工作。</block>
+  <block id="8a30edb275ecde423390e79fd8e6f1b2" category="cell">適用於在 AIX 上執行的 IBM DB2 ， Oracle Application 和 Storage 外掛程式的資料保護功能</block>
+  <block id="7d8509e50a4a8e004140e403e5253c3c" category="paragraph">支援在 AIX 上執行的 IBM DB2 ， Oracle Application 和 Storage 外掛程式的資料保護。</block>
 </blocks>

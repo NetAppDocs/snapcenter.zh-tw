@@ -32,7 +32,7 @@ summary: 支援實體與虛擬機器上的各種儲存類型。SnapCenter您必�
 * 連接iSCSI的LUN
 * NFS連線的磁碟區
 * NVMe FC
-* NVMe TCP
+* NVMe / TCP
 
 
 
@@ -46,7 +46,7 @@ VMware ESXi
 
 * iSCSI啟動器直接連接至來賓系統的iSCSI LUN
 * NFS 資料存放區上的 VMDK
-* 在透過 NVMe TCP 建立的 VMFS 上的 VMDK
+* 在透過 NVMe / TCP 建立的 VMFS 上的 VMDK
 +
 
 NOTE: 支援共享 VMDK 的 ESX 8.0U2 支援 RAC

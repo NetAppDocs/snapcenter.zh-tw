@@ -252,11 +252,11 @@ NOTE: 您必須針對主機上的每個設定檔執行「SMO認證集」命令�
 *** 「msap認證集-repository -dbname reposure_database_name -host host_name -port port_number -login-username_for_reposace_database"
 *** 「msap profile sync -reposal -dbname reposure_database_name -host host_name -port port_number -login-usernamehost_name_for_reposure_database"
 *** 「msap認證集-profile -name profile_name」
-
-
 +
 
 NOTE: 您必須針對主機上的每個設定檔執行smsap認證集命令。
+
+
 
 
 
