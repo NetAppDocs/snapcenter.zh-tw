@@ -186,12 +186,12 @@ SnapCenter 以建立儲存層級快照
 .. 從下拉式清單中選取一或多個原則。
 +
 
-NOTE: 您也可以按一下*來建立原則image:../media/add_policy_from_resourcegroup.gif[""]*。
+NOTE: 您也可以按一下 * * 來建立原則image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 
 +
 原則列於「設定所選原則的排程」區段。
 
-.. 在「Configure排程」欄中、按一下*image:../media/add_policy_from_resourcegroup.gif[""]*針對您要設定的原則。
+.. 在「設定排程」欄中、按一下 * *image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]以取得您要設定的原則。
 .. 在「新增原則_policy_name_的排程」對話方塊中、設定排程、然後按一下「*確定*」。
 +
 其中policy_name是您選取的原則名稱。

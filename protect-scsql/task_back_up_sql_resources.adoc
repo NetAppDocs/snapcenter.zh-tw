@@ -14,6 +14,7 @@ summary: 如果某個資源尚未納入任何資源群組、您可以從「資�
 如果某個資源尚未納入任何資源群組、您可以從「資源」頁面備份該資源。
 
 .關於這項工作
+* 若要最佳化備份作業，您應該在 DNS 伺服器中建立 Windows 叢集名稱和 IP 位址的反向查詢記錄。
 * 對於Windows認證驗證、您必須先設定認證、才能安裝外掛程式。
 * 對於SQL Server執行個體驗證、您必須在安裝外掛程式之後新增認證。
 * 若要進行GMSA驗證、您必須在SnapCenter 「*新增主機*」或「*修改主機*」頁面中、設定GMSA、才能啟用及使用GMSA。
@@ -51,12 +52,12 @@ summary: 如果某個資源尚未納入任何資源群組、您可以從「資�
 +
 .. 在原則區段中、從下拉式清單中選取一或多個原則。
 +
-您可以選取 * 來建立原則image:../media/add_policy_from_resourcegroup.gif[""]*啟動原則精靈。
+您可以選取 * * 來啟動原則精靈、以建立image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]原則。
 
 +
 在「*設定所選原則的排程*」區段中、會列出所選原則。
 
-.. 選取*image:../media/add_policy_from_resourcegroup.gif[""]*在您要為其設定排程的原則的「設定排程」欄中。
+.. 針對您要設定排程的原則、在「設定排程」欄中選取 * * *image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 .. 在*新增原則排程*中 `policy_name` 對話方塊中、設定排程、然後選取 * 確定 * 。
 +
 此處的「policy_name」是您選取的原則名稱。
@@ -78,7 +79,7 @@ summary: 如果某個資源尚未納入任何資源群組、您可以從「資�
 NOTE: 驗證伺服器版本應等於或高於主資料庫所在的SQL Server版本。
 
 .. 選取*「Load二線定位器」以驗證二線*上的備份、以驗證二線儲存系統上的備份。
-.. 選取您要設定驗證排程的原則、然後選取 *image:../media/add_policy_from_resourcegroup.gif[""]*。
+.. 選取您要設定驗證排程的原則、然後選取 * *image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 .. 在「新增驗證排程_policy_name_」對話方塊中、執行下列動作：
 +
 |===

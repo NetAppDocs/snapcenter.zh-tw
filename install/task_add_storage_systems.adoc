@@ -1,7 +1,7 @@
 ---
 permalink: install/task_add_storage_systems.html 
 sidebar: sidebar 
-keywords: add, storage system, SVM 
+keywords: add, storage system, SVM, ASA r2 systems 
 summary: 您應該設定儲存系統SnapCenter 、讓您能夠存取ONTAP 不必要的資料儲存設備、以執行資料保護和資源配置作業。您可以新增獨立的SVM或由多個SVM組成的叢集。 
 ---
 = 新增儲存系統
@@ -11,7 +11,7 @@ summary: 您應該設定儲存系統SnapCenter 、讓您能夠存取ONTAP 不必
 
 
 [role="lead"]
-您應該設定儲存系統SnapCenter 、讓您能夠存取ONTAP 功能不全的功能、或是使用Amazon FSX for NetApp ONTAP 來執行資料保護和資源配置作業。
+您應該設定儲存系統，讓 SnapCenter 能夠存取 ONTAP 儲存設備， ASA R2 系統或 Amazon FSX for NetApp ONTAP ，以執行資料保護和資源配置作業。
 
 您可以新增獨立SVM或由多個SVM組成的叢集。如果您使用Amazon FSx for NetApp ONTAP 支援NetApp、則可以使用fsxadmin帳戶新增由多個SVM組成的FSx管理LIF、或在Sfssx SnapCenter 中新增FSVM。
 

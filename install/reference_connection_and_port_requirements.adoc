@@ -33,47 +33,61 @@ summary: 在安裝SnapCenter 完還原伺服器和應用程式或資料庫外掛
 下表列出不同的連接埠及其預設值。
 
 |===
-| 連接埠類型 | 預設連接埠 
+| 連接埠名稱 | 連接埠編號 | 傳輸協定 | 方向 | 說明 
 
 
  a| 
 連接埠SnapCenter
  a| 
-8146（HTTPS）、雙向、可自訂的、如URL _\https://server:8146_所載
+8146
+ a| 
+HTTPS
+ a| 
+雙向
+ a| 
+此連接埠用於 SnapCenter 用戶端（ SnapCenter 使用者）與 SnapCenter 伺服器之間的通訊，也用於從外掛主機與 SnapCenter 伺服器之間的通訊。
 
-用於SnapCenter 在客戶端（SnapCenter 不知使用者）和SnapCenter 伺服器之間進行通訊。也可用於從外掛程式主機到SnapCenter 該伺服器的通訊。
-
-若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安裝精靈安裝 SnapCenter 伺服器。"]
+您可以自訂連接埠號碼。
 
 
 
  a| 
 WSSMCore通訊連接埠SnapCenter
  a| 
-8145（HTTPS）、雙向、可自訂
+8145
+ a| 
+HTTPS
+ a| 
+雙向
+ a| 
+此連接埠可用於SnapCenter 在Sfor the Sfor Server和SnapCenter 安裝了該插件的主機之間進行通訊。
 
-連接埠用於SnapCenter 在Sfor the Sfor Server和SnapCenter 安裝了該插件的主機之間進行通訊。
-
-若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安裝精靈安裝 SnapCenter 伺服器。"]
+您可以自訂連接埠號碼。
 
 
 
  a| 
 排程器服務連接埠
  a| 
-8154（HTTPS）
-
+8154
+ a| 
+HTTPS
+ a| 
+ a| 
 此連接埠用於 SnapCenter 集中化伺服器主機內所有受管理外掛程式的 SnapCenter 排程器工作流程。
 
-若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安裝精靈安裝 SnapCenter 伺服器。"]
+您可以自訂連接埠號碼。
 
 
 
  a| 
 RabbitMQ 連接埠
  a| 
-5672 （ TCP ）
-
+5672
+ a| 
+TCP
+ a| 
+ a| 
 這是 RabbitMQ 接聽的預設連接埠、用於排程器服務與 SnapCenter 之間的發行者訂購者模式通訊。
 
 
@@ -81,78 +95,85 @@ RabbitMQ 連接埠
  a| 
 MySQL連接埠
  a| 
-3306（HTTPS）、雙向、可自訂
-
-連接埠用於SnapCenter 在不同時執行的情況下、與MySQL儲存庫資料庫進行通訊。
-
-您可以建立安全的連線、從SnapCenter 「伺服器」到MySQL伺服器。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["深入瞭解"]
-
-若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/install/task_install_the_snapcenter_server_using_the_install_wizard.html["使用安裝精靈安裝 SnapCenter 伺服器。"]
+3306
+ a| 
+HTTPS
+ a| 
+ a| 
+連接埠用於與 SnapCenter 儲存庫資料庫通訊。您可以建立從 SnapCenter 伺服器到 MySQL 伺服器的安全連線。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["深入瞭解"]
 
 
 
  a| 
 Windows外掛程式主機
  a| 
-135、445（TCP）
-
-除了連接埠135和445之外、Microsoft指定的動態連接埠範圍也應該開啟。遠端安裝作業使用Windows Management Instrumentation（WMI）服務、此服務會動態搜尋此連接埠範圍。
-
-如需支援的動態連接埠範圍資訊、請參閱 https://support.microsoft.com/kb/832017["Windows的服務總覽和網路連接埠需求"^]
-
-連接埠可用於SnapCenter 在安裝外掛程式的伺服器與主機之間進行通訊。若要將外掛程式套件二進位檔推送至Windows外掛程式主機、連接埠只能在外掛程式主機上開啟、而且可以在安裝後關閉。
+135 、 445
+ a| 
+TCP
+ a| 
+ a| 
+此連接埠用於 SnapCenter 伺服器與正在安裝外掛程式的主機之間的通訊。Microsoft 指定的其他動態連接埠範圍也應該是開放的。
 
 
 
  a| 
 Linux或AIX外掛程式主機
  a| 
-22（SSH）
-
-連接埠用於SnapCenter 在安裝外掛程式的伺服器與主機之間進行通訊。這些連接埠是SnapCenter 由效能資料所使用、可將外掛套件二進位檔複製到Linux或AIX外掛程式主機、並應開啟或排除在防火牆或iptables之外。
+22
+ a| 
+SSH
+ a| 
+單向
+ a| 
+此連接埠用於 SnapCenter 伺服器與主機之間的通訊，從伺服器啟動至用戶端主機。
 
 
 
  a| 
-適用於Windows的程式集外掛套件、適用於Linux的程式集外掛套件或適用於AIX的程式集外掛套件SnapCenter SnapCenter SnapCenter
+適用於 Windows ， Linux 或 AIX 的 SnapCenter 外掛程式套件
  a| 
-8145（HTTPS）、雙向、可自訂
+8145
+ a| 
+HTTPS
+ a| 
+雙向
+ a| 
+此連接埠用於 SMCore 與安裝外掛程式套件的主機之間的通訊。可自訂。
 
-連接埠用於SMCore與安裝外掛程式套件的主機之間的通訊。
-
-SVM管理LIF與SnapCenter SVM管理伺服器之間的通訊路徑也必須開放。
-
-若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/protect-scw/task_add_hosts_and_install_snapcenter_plug_in_for_microsoft_windows.html["新增主機並安裝SnapCenter 適用於Microsoft Windows的解決方案"] 或 https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["新增主機並安裝適用於 Linux 或 AIX 的 SnapCenter 外掛程式套件。"]
+您可以自訂連接埠號碼。
 
 
 
  a| 
 Oracle資料庫的支援外掛程式SnapCenter
  a| 
-27216、可自訂
-
+27216
+ a| 
+ a| 
+ a| 
 Oracle的外掛程式會使用預設的JDBC連接埠來連線至Oracle資料庫。
-
-若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/protect-sco/task_add_hosts_and_installing_the_snapcenter_plug_ins_package_for_linux_or_aix.html["新增主機並安裝適用於 Linux 或 AIX 的 SnapCenter 外掛程式套件。"]
 
 
 
  a| 
 SnapCenter Plug-in for Exchange 資料庫
  a| 
-909、可自訂
-
+909
+ a| 
+ a| 
+ a| 
 預設的 NET 。 Windows 外掛程式使用 TCP 連接埠來連線至 Exchange VSS 回撥。
-
-若要自訂連接埠、請參閱 link:../protect-sce/task_add_hosts_and_install_plug_in_for_exchange.html["新增主機並安裝Exchange外掛程式"]。
 
 
 
  a| 
 NetApp 支援的 SnapCenter 外掛程式
  a| 
-9090（HTTPS）、已修正
-
+9090
+ a| 
+HTTPS
+ a| 
+ a| 
 這是僅用於自訂外掛程式主機的內部連接埠、不需要防火牆例外。
 
 透過連接埠8145、即可在伺服SnapCenter 器與自訂外掛程式之間進行通訊。
@@ -162,31 +183,49 @@ NetApp 支援的 SnapCenter 外掛程式
  a| 
 叢集或SVM通訊連接埠ONTAP
  a| 
-443（HTTPS）、biddirectional80（HTTP）、雙向
+* 443（HTTPS）
+* 80（HTTP）
 
+ a| 
+* HTTPS
+* HTTP
+
+ a| 
+雙向
+ a| 
 此連接埠由SAL（Storage Abstraction Layer、Storage Abstraction Layer）使用、用於執行SnapCenter 支援服務器和SVM的主機之間的通訊。此連接埠目前也用於SnapCenter Windows外掛程式主機上的SAL、用於SnapCenter 在支援該外掛程式的主機和SVM之間進行通訊。
 
 
 
  a| 
-SAP HANA資料庫適用的插件vCode Spell Checkerport SnapCenter
+SAP HANA資料庫適用的插件SnapCenter
  a| 
-3執行個體編號13或3執行個體編號15、HTTP或HTTPS、雙向且可自訂
+* 3instance_number13
+* 3instance_number15
 
+ a| 
+* HTTPS
+* HTTP
+
+ a| 
+雙向
+ a| 
 對於多租戶資料庫容器（MDC）單一租戶、連接埠編號以13結尾；對於非MDC、連接埠編號以15結尾。
 
-例如、32013是連接埠編號、例如20、31015是連接埠編號、例如10。
-
-若要自訂連接埠、請參閱 https://docs.netapp.com/us-en/snapcenter/protect-hana/task_add_hosts_and_install_plug_in_packages_on_remote_hosts_sap_hana.html["新增主機並在遠端主機上安裝外掛程式套件。"]
+您可以自訂連接埠號碼。
 
 
 
  a| 
-網域控制器通訊連接埠
+適用於 PostgreSQL 的 SnapCenter 外掛程式
  a| 
-請參閱Microsoft文件以識別應在網域控制器防火牆中開啟的連接埠、以便驗證正常運作。
+5432
+ a| 
+ a| 
+ a| 
+此連接埠是預設的 PostgreSQL 連接埠，可讓 PostgreSQL 外掛程式與 PostgreSQL 叢集進行通訊。
 
-您必須開啟網域控制器上的Microsoft必要連接埠、SnapCenter 才能讓支援服務器、外掛程式主機或其他Windows用戶端驗證使用者。
+您可以自訂連接埠號碼。
 
 |===
 若要修改連接埠詳細資料、請參閱 link:../admin/concept_manage_hosts.html#modify-plug-in-hosts["修改外掛程式主機"]。

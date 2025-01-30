@@ -48,7 +48,7 @@ link:task_configure_CA_client_certificate_for_LDAPS.html["設定LDAPS的CA用戶
 . 在左側導覽窗格中、按一下*設定*。
 . 在「設定」頁面中、按一下「*全域設定*」。
 . 在「全域設定」頁面中、按一下*網域設定*。
-. 按一下 image:../media/add_policy_from_resourcegroup.gif["新增原則"] 以登錄新網域。
+. 按一下 image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"] 以登錄新網域。
 . 在「Register New Domain」（註冊新網域）頁面中、選取「* LDAP*」或「* LDAPS*」。
 +
 .. 如果選擇* LDAP*、請指定登錄LDAP不受信任網域所需的資訊：

@@ -20,14 +20,14 @@ summary: 從「資源」頁面備份資源。
 . 在「原則」頁面中、執行下列步驟：
 +
 .. 從下拉式清單中選取一或多個原則。
-.. 選取*image:../media/add_policy_from_resourcegroup.gif[""]*在您要為其設定排程的原則的「設定排程」欄中。
+.. 針對您要設定排程的原則、在「設定排程」欄中選取 * * *image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 .. 在 [ 新增原則 _policy_name_ 的排程 ] 對話方塊中，設定排程，然後選取 *OK* 。
 
 
 . 在「驗證」頁面中、執行下列步驟：
 +
 .. 選取驗證伺服器。
-.. 選取您要設定驗證排程的原則、然後按一下*image:../media/add_policy_from_resourcegroup.gif[""]*。
+.. 選取您要設定驗證排程的原則、然後按一下 * *image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 .. 選擇 * 備份後執行驗證 * 或 * 執行排程驗證 * 。
 .. 按一下「確定」。
 

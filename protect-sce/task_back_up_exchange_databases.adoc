@@ -34,14 +34,14 @@ summary: 如果資料庫不是任何資源群組的一部分、您可以從「�
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取* Microsoft Exchange Server外掛程式*。
 . 在「資源」頁面中、從*檢視*清單中選取*資料庫*或*資料庫可用度群組*。
 +
-在「資源」頁面中、 image:../media/not_supported_icon.png["不支援的儲存設備"] 圖示表示資料庫位於非 NetApp 儲存設備上。
+在「資源」頁面中、 image:../media/not_supported_icon.gif["不支援的圖示"] 圖示表示資料庫位於非 NetApp 儲存設備上。
 
 +
 
 NOTE: 在DAG中、如果主動式資料庫複本位於非NetApp儲存設備上、且至少有一個被動式資料庫複本位於NetApp儲存設備上、則您可以保護資料庫。
 
 +
-按一下*image:../media/filter_icon.png[""]*、然後選取主機名稱和資料庫類型以篩選資源。然後按一下*image:../media/filter_icon.png[""]*關閉篩選窗格。
+按一下 *image:../media/filter_icon.gif["篩選圖示"]、然後選取主機名稱和資料庫類型以篩選資源。然後按一下 *image:../media/filter_icon.gif["篩選圖示"]即可關閉篩選窗格。
 
 +
 ** 如果您要備份資料庫、請按一下資料庫名稱。
@@ -62,7 +62,7 @@ NOTE: 在DAG中、如果主動式資料庫複本位於非NetApp儲存設備上�
 .. 從下拉式清單中選取一或多個原則。
 +
 
-NOTE: 您也可以按一下*來建立原則image:../media/add_policy_from_resourcegroup.gif[""]*。
+NOTE: 您也可以按一下 * * 來建立原則image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 
 +
 
@@ -74,7 +74,7 @@ NOTE: 如果原則包含*在備份工作建立時間*選取的伺服器上備份
 在「設定所選原則的排程」區段中、會列出所選原則。
 
 +
-.. 按一下*image:../media/add_policy_from_resourcegroup.gif[""]*在您要為其設定排程的原則的「設定排程」欄中。
+.. 針對您要設定排程的原則、按一下「設定排程」欄中的 * *image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 .. 在Add schedules for policy _policy_name_（新增原則_原則名稱_的排程）視窗中、設定排程、然後按一下* OK*（確定*）。
 +
 其中、_policy_name_是您選取的原則名稱。

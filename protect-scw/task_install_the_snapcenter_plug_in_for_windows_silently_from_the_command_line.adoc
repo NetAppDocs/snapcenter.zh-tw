@@ -14,7 +14,7 @@ summary: 如果無法從Windows GUI遠端安裝外掛程式、您可以SnapCente
 如果無法從Windows GUI遠端安裝外掛程式、您可以SnapCenter 在Windows主機本機上安裝適用於Microsoft Windows的支援功能。SnapCenter您可以SnapCenter 從Windows命令列、以無訊息模式在無人值守的情況下執行Microsoft Windows安裝程式的功能。
 
 .開始之前
-* 您必須安裝Microsoft Net 4.7.2或更新版本。
+* 您必須已安裝 ASP.NET Core Runtime 8.0.12 （以及所有後續的 8.1.x 修補程式）代管 Bundle 。
 * 您必須已安裝 PowerShell 7.4.2 或更新版本。
 * 您必須開啟Windows訊息佇列。
 * 您必須是主機上的本機管理員。

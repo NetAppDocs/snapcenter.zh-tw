@@ -1,0 +1,166 @@
+---
+permalink: install/create-cluster-roles-asa-r2-resources.html 
+sidebar: sidebar 
+keywords: cluster role, privileges, asa r2 systems 
+summary: 您應該為 ASA R2 系統建立 ONTAP 叢集角色，這樣就不需要使用 ONTAP 管理員角色來執行 SnapCenter 中的作業。 
+---
+= 為 ASA R2 系統建立 ONTAP 叢集角色
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該建立ONTAP 具有最低權限的支援功能、以便不必使用ONTAP 這個功能來SnapCenter 執行動作。您可以執行數ONTAP 個CLI命令來建立ONTAP 一個不含指令集的叢集角色、並指派最低權限。
+
+*步驟*
+
+. 在儲存系統上、建立角色並將所有權限指派給該角色。
++
+「安全登入角色create–vserver <cluster名稱\>- role <role名稱\>-cmd目錄名稱<permission\>'
+
++
+
+NOTE: 您應該針對每個權限重複此命令。
+
+. 建立使用者並將角色指派給該使用者。
++
+`security login create -user <user_name\> -vserver <cluster_name\> -application http -authmethod password -role <role_name\>`
+
+. 解除鎖定使用者。
++
+「安全登入解除鎖定-使用者<使用者名稱>-vserver <叢集名稱>」
+
+
+
+
+
+== 用於建立叢集角色和指派權限的CLI命令ONTAP
+
+您應該執行幾ONTAP 個CLI命令來建立叢集角色並指派權限。
+
+* `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "metrocluster show" -access readonly`
+* `security login role create -vserver Cluster_name or cluster_name -role Role_Name -cmddirname "cluster identity modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster identity show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster peer show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "cluster show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "event generate-autosupport-log" -access all`
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「jobhistory show」-access all」
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "job show" -access all`
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "jobstop」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱"LUN"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱"LUN cree"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱"lun刪除"-access all"
+* 「安全登入角色create -vserver Cluster_name -role rou_name -cmd dirname "LUN igroup add"-access all"
+* 「安全登入角色create -vserver Cluster_name -role rou_name -cmd dirname "LUN igroup cree"-access all"
+* 「安全登入角色create -vserver Cluster_name -role rou_name -cmd dirname "LUN igroup delete"-access all"
+* 「安全登入角色create -vserver Cluster_name -role rou_name -cmd dirname "LUN igroup modify"-access all"
+* 「安全登入角色create -vserver Cluster_name -role rou_name -cmd dirname "LUN igroup rame"-access all"
+* 「安全登入角色create -vserver Cluster_name -role rou_name -cmd dirname "LUN igroup show"-access all"
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「LUN mapping add-report-nodes」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「LUN mapping create」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「LUN mapping delete」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「LUN mapping remove-report-nodes」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「LUN mapping show」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱"lun modify"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "LUN move-in-volume」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱"lun offline"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「LUN online」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "LUN永久性保留區Clear"-access all"
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「LUN resize」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "LUN serial」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱"LUN show"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「network interface create」-access readonly」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「network interface delete」-access readonly」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「network interface modify」-access readonly」
+* 「安全登入角色create -vserver Cluster_name -role road_Name -cmd dirname「network interface show」-access readonly」
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "nvme subsystem map" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "nvme subsystem create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "nvme subsystem delete" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "nvme subsystem modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "nvme subsystem host" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "nvme subsystem controller" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "nvme subsystem show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "nvme namespace create" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "nvme namespace delete" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "nvme namespace modify" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "nvme namespace show" -access all`
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「安全性登入」-access readonly」
+* 「安全登入角色create -role rose_Name -cmd目錄名稱"SnapMirror cree"-vserver Cluster_name -access all"
+* 「安全登入角色create -role rose_Name -cmd目錄名稱"SnapMirror list-destinations"-vserver Cluster_name -access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「SnapMirror原則附加規則」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「SnapMirror原則create」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「SnapMirror原則刪除」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「SnapMirror原則修改」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「SnapMirror原則modify-rRule」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「SnapMirror原則移除規則」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「SnapMirror原則show」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱"SnapMirror還原"-access all"
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱"SnapMirror show"-access all"
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「SnapMirror show-history」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「SnapMirror update」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「SnapMirror update-ls-set」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「system license add」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「system license clear-up」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「system license delete」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「system license show」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「system license Status show」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「system nodemodify」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「system Node show」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「system Status show」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「version」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume clone create」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「volume clone show」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume clone s拆 分start」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume clone split stop」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume cree"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume destrode"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume file clone create」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume file show-disk-usage」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume modify"-access all"
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot modify-snaplock-expiry-time" -access all`
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume offline"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume online - access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume qtree cree"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume qtree delete"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume qtree modify"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume qtree show"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume restrent"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume show"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume snapshot create」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume snapshot delete"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume snapshot modify」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume snapshot Promote」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume snapshot rame」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「Volume snapshot還原」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume snapshot還原檔案」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「volume snapshot show」-access all」
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume snapshot show-delta" -access all`
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "volume unmount」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "vserver"-access all"
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「vserver CIFS create」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「vserver CIFS刪除」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「vserver CIFS modify」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「vserver CIFS共用修改」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「vserver CIFS共用create」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「vserver CIFS共用刪除」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「vserver CIFS共用修改」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「vserver CIFS共用show」-access all」
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「vserver CIFS show」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「vserver create」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "vserver EXECLON-policy cree"-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "vserver EXECTON-policy DELETE」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname「vserver EXECLON-policy rule create」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "vserver EXECLON-policy rule DELETE」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "vserver EXECLON-policy rule modify"-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "vserver EXECTON-policy rule show"-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「vserver EXECTON-policy show」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd目錄名稱「vserver iSCSI connection show」-access all」
+* 「安全性登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "vserver modify"-access all"
+* 「安全登入角色create -vserver Cluster_name -role rose_Name -cmd dirname "vserver show"-access all"
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "storage-unit show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "consistency-group" show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "snapmirror protect" show" -access all`
+* `security login role create -vserver Cluster_name -role Role_Name -cmddirname "volume delete" show" -access all`
+

@@ -13,4 +13,4 @@ summary: 如果您想要保護 PostgreSQL 、您應該安裝並設定 PostgreSQL
 [role="lead"]
 若要保護 PostgreSQL 叢集、您應該安裝並設定 PostgreSQL 的 SnapCenter 外掛程式。
 
-image::../media/sap_hana_install_configure_workflow.png[安裝及設定工作流程]
+image::../media/sap_hana_install_configure_workflow.gif[安裝及設定工作流程]

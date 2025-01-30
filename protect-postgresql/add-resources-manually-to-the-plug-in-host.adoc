@@ -70,7 +70,7 @@ Windows 主機不支援自動探索。您必須手動新增 PostgreSQL 叢集資
 |===
 . 在「提供儲存空間」頁面中、選取儲存類型、然後選擇一或多個磁碟區、 LUN 和 qtree 、然後按一下 * 儲存 * 。
 +
-選用：您可以按一下*image:../media/add_policy_from_resourcegroup.gif[""]*圖示、可從其他儲存系統新增更多磁碟區、LUN及qtree。
+選用：您可以按一下 *image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]圖示、從其他儲存系統新增更多磁碟區、 LUN 和 qtree 。
 
 . 選用：在「資源設定」頁面中、針對 Windows 主機上的資源、輸入 PostgreSQL 外掛程式的自訂金鑰值配對
 . 檢閱摘要、然後按一下「*完成*」。

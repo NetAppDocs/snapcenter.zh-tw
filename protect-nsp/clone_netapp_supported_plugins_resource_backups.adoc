@@ -23,6 +23,6 @@ summary: 實體複本工作流程包括執行實體複本作業及監控作業�
 
 下列工作流程顯示您必須執行複製作業的順序：
 
-image::../media/sco_scc_wfs_clone_workflow.png[複製工作流程]
+image:../media/sco_scc_wfs_clone_workflow.gif["複製工作流程"]
 
 您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需 PowerShell Cmdlet 的詳細資訊，請使用 SnapCenter Cmdlet 說明或參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。

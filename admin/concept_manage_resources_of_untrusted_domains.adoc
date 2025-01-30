@@ -78,5 +78,5 @@ summary: 除了管理Active Directory（AD\）信任網域中的主機之外、S
 . 在「設定」頁面中、按一下「*全域設定*」。
 . 在「全域設定」頁面中、按一下*網域設定*。
 . 從網域清單中、選取您要取消登錄的網域。
-. 按一下 image:../media/delete_icon.gif[""]，然後單擊*確定*。
+. 按一下 image:../media/delete_icon.gif["刪除圖示"]，然後按一下 * 確定 * 。
 

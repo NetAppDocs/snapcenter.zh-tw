@@ -31,10 +31,10 @@ summary: 您應該設定CA憑證、並啟用SnapCenter 適用於該伺服器的C
 
 「受管理的主機」標籤主機會顯示掛鎖、掛鎖的色彩則會指出SnapCenter 「支援服務器」與外掛主機之間的連線狀態。
 
-* *image:../media/enable_ca_issues_icon.png[""]*表示沒有啟用CA憑證或指派給外掛程式主機。
-* *image:../media/enable_ca_good_icon.png[""]*表示CA憑證已成功驗證。
-* *image:../media/enable_ca_failed_icon.png[""]*表示無法驗證CA憑證。
-* *image:../media/enable_ca_undefined_icon.png[""]*表示無法擷取連線資訊。
+* * *image:../media/enable_ca_issues_icon.png["問題圖示"]表示未啟用或指派 CA 憑證給外掛主機。
+* * *image:../media/enable_ca_good_icon.png["良好的標誌"]表示 CA 憑證已成功驗證。
+* * *image:../media/enable_ca_failed_icon.png["失敗圖示"]表示 CA 憑證無法驗證。
+* * *image:../media/enable_ca_undefined_icon.png["未定義的圖示"]表示無法擷取連線資訊。
 
 
 

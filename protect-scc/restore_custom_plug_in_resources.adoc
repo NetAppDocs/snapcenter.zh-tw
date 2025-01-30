@@ -16,6 +16,6 @@ summary: 還原與還原工作流程包括規劃、執行還原作業及監控�
 .關於這項工作
 下列工作流程顯示您必須執行還原作業的順序：
 
-image::../media/all_plug_ins_restore_workflow.png[還原工作流程]
+image::../media/all_plug_ins_restore_workflow.gif[還原工作流程]
 
 您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需 PowerShell Cmdlet 的相關資訊，請使用 SnapCenter Cmdlet 說明或參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"]。

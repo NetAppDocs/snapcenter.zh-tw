@@ -13,4 +13,4 @@ summary: 若要SnapCenter 保護SQL Server資料庫、您應該安裝並設定Mi
 [role="lead"]
 若要SnapCenter 保護SQL Server資料庫、您應該安裝並設定Microsoft SQL Server的支援功能。
 
-image::../media/scsql_install_configure_workflow.png[SQL工作流程]
+image::../media/scsql_install_configure_workflow.gif[安裝 SQL 工作流程]

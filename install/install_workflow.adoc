@@ -13,4 +13,4 @@ summary: 工作流程影像顯示安裝及設定SnapCenter ImageServer的步驟�
 [role="lead"]
 工作流程會顯示安裝及設定SnapCenter 此伺服器所需的不同工作。
 
-image::../media/install_snapcenter_server.png[安裝SnapCenter 伺服器]
+image::../media/install_snapcenter_server.gif[安裝SnapCenter 伺服器]

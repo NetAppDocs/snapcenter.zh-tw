@@ -22,9 +22,9 @@ summary: 您必須設定HDB使用者儲存金鑰和HDBSQL OS使用者、才能�
 .步驟
 . 在左側導覽窗格中、按一下* Resources（資源）*、然後從SnapCenter 清單中選取「SAP HANA資料庫適用的插件」。
 . 在「資源」頁面中、從*檢視*清單中選取資源類型。
-. （選用）按一下 image:../media/filter_icon.png["篩選圖示"] 並選取主機名稱。
+. （選用）按一下 image:../media/filter_icon.gif["篩選圖示"] 並選取主機名稱。
 +
-接著您可以按一下 image:../media/filter_icon.png["篩選圖示"] 以關閉篩選窗格。
+接著您可以按一下 image:../media/filter_icon.gif["篩選圖示"] 以關閉篩選窗格。
 
 . 選取資料庫、然後按一下「*設定資料庫*」。
 . 在「Configure databasing settings（設定資料庫設定）」區段中、輸入HDB Secure User Store Key。

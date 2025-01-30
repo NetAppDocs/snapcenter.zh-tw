@@ -29,6 +29,7 @@ summary: 支援簡單、集中化、可擴充的平台、可為在混合雲任�
 ** 位於 ONTAP FAS 、 AFF 或所有 SAN 陣列（ ASA ）主要系統上、並複寫到 ONTAP FAS 、 AFF 或 ASA 次要系統的資料
 ** 資料位於不整系統上ONTAP Select
 ** 位於 ONTAP FAS 、 AFF 或 ASA 主要和次要系統上、並受本機 StorageGRID 物件儲存保護的資料
+** ONTAP ASA R2 主要和次要系統上的資料
 
 
 * 內部部署於混合雲中、以保護下列項目：
@@ -89,7 +90,7 @@ link:../protect-scc/develop_a_plug_in_for_your_application.html["為應用程式
 如需 Windows Cmdlet 的詳細資訊，請參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。
 
 +
-如需 UNIX 命令的詳細資訊，請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["《軟件命令參考指南》SnapCenter"^]。
+如需 UNIX 命令的詳細資訊，請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["《軟件命令參考指南》SnapCenter"^]。
 
 * 集中式資料保護儀表板與報告
 * 角色型存取控制（RBAC）、以確保安全性和委派。
@@ -111,10 +112,10 @@ link:../protect-scc/develop_a_plug_in_for_your_application.html["為應用程式
 
 * SnapLock
 +
-SnapLock 是高效能的法規遵循解決方案、適用於使用一次寫入、多次讀取（ WORM ）儲存設備、以未經修改的形式保留檔案、以供法規遵循與管理之用。
+SnapLock 是高效能的法規遵循解決方案、適用於使用一次寫入、多次讀取（ WORM ）儲存設備、以未經修改的形式保留檔案、以供法規遵循與管理之用。有關 SnapLock 的詳細信息，請參閱 https://docs.netapp.com/us-en/ontap/snaplock/["什麼是呢SnapLock"]。
 
 +
-如需 SnapLock 的詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap/snaplock/["什麼是呢SnapLock"]
+鎖定快照可確保快照不會意外或惡意刪除。SnapCenter 可讓您指定主要和次要快照的鎖定期間。
 
 * SnapMirror 主動同步（最初以 SnapMirror 業務連續性 [SM-BC] 形式發佈）
 +

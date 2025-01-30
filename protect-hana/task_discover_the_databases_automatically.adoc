@@ -31,9 +31,9 @@ summary: 資源包括SAP HANA資料庫和SnapCenter 非資料Volume、位於由�
 .步驟
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取SAP HANA資料庫的外掛程式。
 . 在「資源」頁面中、從「檢視」清單中選取資源類型。
-. （選用）按一下*image:../media/filter_icon.png["篩選圖示"]*、然後選取主機名稱。
+. （選用）按一下 * *image:../media/filter_icon.gif["篩選圖示"]、然後選取主機名稱。
 +
-然後按一下*image:../media/filter_icon.png["篩選圖示"]*關閉篩選窗格。
+然後按一下 *image:../media/filter_icon.gif["篩選圖示"]即可關閉篩選窗格。
 
 . 按一下*重新整理資源*以探索主機上可用的資源。
 +

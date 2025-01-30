@@ -68,6 +68,8 @@ entries:
     url: "/protect-sco/task_create_backup_policies_for_oracle_database.html"
   - title: 建立資源群組
     url: "/protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html"
+  - title: 在 ASA R2 系統上建立資源群組，並啟用 Oracle 資源的次要保護
+    url: "/protect-sco/create-resource-groups-secondary-protection-for-asa-r2-oracle-resources.html"
   - title: 備份Oracle資源
     url: "/protect-sco/task_back_up_oracle_resources.html"
   - title: 備份資源群組

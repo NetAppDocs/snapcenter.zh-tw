@@ -118,6 +118,8 @@ entries:
     url: "/protect-scsql/task_create_backup_policies_for_sql_server_databases.html"
   - title: 建立SQL Server的資源群組和附加原則
     url: "/protect-scsql/task_create_resource_groups_and_attach_policies_for_sql_server.html"
+  - title: 在 ASA R2 系統上建立資源群組，並啟用 Microsoft SQL Server 資源的次要保護
+    url: "/protect-scsql/create-resource-groups-secondary-protection-for-asa-r2-mssql-resources.html"
   - title: 備份SQL資源的需求
     url: "/protect-scsql/concept_requirements_for_backing_up_sql_resources.html"
   - title: 使用PowerShell Cmdlet建立儲存系統連線和認證

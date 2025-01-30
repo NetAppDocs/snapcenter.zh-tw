@@ -15,6 +15,6 @@ summary: 您可以建立資源（資料庫）或資源群組的備份。備份�
 
 下列工作流程顯示您必須執行備份作業的順序：
 
-image::../media/db2_backup_workflow.png[DB2 備份工作流程]
+image:../media/db2_backup_workflow.gif["DB2 備份工作流程"]
 
 您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。Cmdlet說明及Cmdlet參考資訊包含更多PowerShell Cmdlet的相關資訊。SnapCenterhttps://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。

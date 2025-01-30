@@ -1,0 +1,28 @@
+---
+permalink: 'release-notes/what"s-new-in-snapcenter61.html' 
+sidebar: sidebar 
+keywords: what is new, features, enhancements, 6.1 
+summary: SnapCenter 軟體 6.1 版包含數項新功能與增強功能。 
+---
+= SnapCenter 軟體 6.1 的新功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 軟體 6.1 版包含數項新功能與增強功能。
+
+|===
+| 更新 | 說明 
+
+
+| link:../install/learn-about-supporting-asa-r2-in-snapcenter.html["支援 ASA R2 系統"]  a| 
+SnapCenter 現在支援 ASA R2 系統，可針對僅限 SAN 的客戶需求，提供簡化的體驗。
+
+
+
+| 支援二次防竄改快照  a| 
+SnapCenter 可讓您指定次要快照的鎖定期間。
+
+|===

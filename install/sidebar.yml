@@ -14,6 +14,8 @@ entries:
     url: "/install/reference_san_host_requirements.html"
   - title: 支援的儲存系統與應用程式
     url: "/install/reference_supported_storage_systems_and_applications.html"
+  - title: 瞭解如何在 SnapCenter 中支援 ASA R2 系統
+    url: "/install/learn-about-supporting-asa-r2-in-snapcenter.html"
   - title: 支援的瀏覽器
     url: "/install/reference_supported_browsers.html"
   - title: 連線與連接埠需求
@@ -106,8 +108,12 @@ entries:
     url: "/install/task_add_an_rbac_role_using_security_login_commands.html"
   - title: 以最低權限建立SVM角色
     url: "/install/create-svm-roles-minimum-privileges.html"
+  - title: 為 ASA R2 系統建立 SVM 角色
+    url: "/install/create-svm-roles-asa-r2-resources.html"
   - title: 以ONTAP 最低權限建立叢集角色
     url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
+  - title: 為 ASA R2 系統建立 ONTAP 叢集角色
+    url: "/install/create-cluster-roles-asa-r2-resources.html"
   - title: 設定「IIS應用程式集區」以啟用Active Directory讀取權限
     url: "/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html"
 - title: 設定稽核日誌設定

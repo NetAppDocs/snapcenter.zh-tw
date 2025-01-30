@@ -17,4 +17,4 @@ summary: 當SnapCenter 您在環境中安裝適用於Microsoft Exchange Server�
 
 下列工作流程顯示您必須執行備份作業的順序：
 
-image:../media/sce_backup_workflow.gif["Exchange 資料庫備份工作流程"]
+image:../media/sce_backup_workflow.gif["備份工作流程交換器伺服器資料庫"]

@@ -46,9 +46,12 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
  a| 
 必要的軟體套件
  a| 
-* 從 8.0.5 版開始的 .NET Core ，包括所有後續的 .NET 8 修補程式
+* ASP.NET Core Runtime 8.0.12 （以及所有後續 8.0.x 修補程式）代管產品組合
 * PowerShell Core 7.4.2
 * Java 11 Oracle Java 和 OpenJDK
++
+只有 SAP HANA ， IBM DB2 ， PostgreSQL ， MySQL ， NetApp 支援的外掛程式，以及其他可安裝在 Windows 主機上的自訂應用程式，才需要 Java 11 Oracle Java 和 OpenJDK 。
+
 
 
 如需支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。

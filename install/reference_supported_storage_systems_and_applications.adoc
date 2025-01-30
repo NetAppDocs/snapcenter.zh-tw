@@ -1,7 +1,7 @@
 ---
 permalink: install/reference_supported_storage_systems_and_applications.html 
 sidebar: sidebar 
-keywords: storage system, ONTAP version 
+keywords: storage system, ONTAP version, ASA r2 systems 
 summary: 您應該知道支援的儲存系統、應用程式和資料庫。 
 ---
 = 支援的儲存系統與應用程式
@@ -14,6 +14,13 @@ summary: 您應該知道支援的儲存系統、應用程式和資料庫。
 您應該知道支援的儲存系統、應用程式和資料庫。
 
 * SnapCenter 支援 ONTAP 9.12.1 及更新版本、可保護您的資料。
+* SnapCenter 6.1 支援執行 ONTAP 9.16.1 的 NetApp ASA R2 系統（ ASA A1K ， ASA A70 和 ASA A90 ）。
++
+ASA R2 系統為所有 Flash 平台上建置的僅 SAN 環境提供統一化的硬體與軟體解決方案。ASA R2 系統在實作其儲存層、支援的通訊協定和 ONTAP 特性時、會與其他 ONTAP 系統（ ASA 、 AFF 和 FAS ）不同。
+
++
+如需 ASA R2 系統的相關資訊，請參閱 https://docs.netapp.com/us-en/asa-r2/index.html["ASA R2 說明文件"^]。
+
 * 支援Amazon FSX for NetApp功能、保護資料不受來自於更新版的支援。SnapCenter ONTAP SnapCenter
 +
 如果您使用Amazon FSX for NetApp ONTAP Sfor NetApp的話、請確保SnapCenter 將支援此功能的支援伺服器主機外掛程式升級至4.5 P1或更新版本、以執行資料保護作業。

@@ -102,6 +102,8 @@ entries:
     url: "/protect-db2/create-backup-policies-for-ibm-db2.html"
   - title: 建立資源群組並附加原則
     url: "/protect-db2/create-resource-groups-and-attach-policies.html"
+  - title: 在 ASA R2 系統上建立資源群組，並啟用 IBM DB2 資源的次要保護
+    url: "/protect-db2/create-resource-groups-secondary-protection-for-asa-r2-db2-resources.html"
   - title: 使用適用於 IBM DB2 的 PowerShell Cmdlet 建立儲存系統連線和認證
     url: "/protect-db2/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-ibm-db2.html"
   - title: 備份 DB2 資料庫

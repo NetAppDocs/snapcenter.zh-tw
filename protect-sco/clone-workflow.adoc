@@ -22,4 +22,4 @@ summary: 複製工作流程包括規劃、執行複製作業及監控作業。
 
 下列工作流程顯示您必須執行複製作業的順序：
 
-image::../media/sco_scc_wfs_clone_workflow.png[複製工作流程]
+image::../media/sco_scc_wfs_clone_workflow.gif[複製工作流程]

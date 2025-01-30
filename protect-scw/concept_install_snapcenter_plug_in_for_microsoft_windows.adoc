@@ -13,4 +13,4 @@ summary: 如果您想要保護非資料庫檔案的Windows檔案、則必須安�
 [role="lead"]
 如果您想要保護非資料庫檔案的Windows檔案、則必須安裝並設定SnapCenter 適用於Microsoft Windows的還原外掛程式。
 
-image::../media/scw_workflow_for_installing.png[安裝工作流程]
+image::../media/scw_workflow_for_installing.gif[安裝工作流程]

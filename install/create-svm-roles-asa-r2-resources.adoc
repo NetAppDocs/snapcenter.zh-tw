@@ -1,0 +1,137 @@
+---
+permalink: install/create-svm-roles-asa-r2-resources.html 
+sidebar: sidebar 
+keywords: svm role, privileges, asa r2 systems 
+summary: 如果您在 ASA R2 系統中設定 SVM 以搭配 SanpCenter 使用，而不想使用 vsadmin 角色，則應該建立 SVM 角色。 
+---
+= 為 ASA R2 系統建立 SVM 角色
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您必須執行數個 ONTAP CLI 命令，才能在 ASA R2 系統中為新的 SVM 使用者建立角色。如果您在 ASA R2 系統中將 SVM 設定為與 SnapCenter 搭配使用，且不想使用 vsadmin 角色，則需要此角色。
+
+*步驟*
+
+. 在儲存系統上、建立角色並將所有權限指派給該角色。
++
+「安全登入角色create–vserver <Svm_name\>- role <Svm_rouse_Name\>-cmd目錄名稱<permission\>'
+
++
+
+NOTE: 您應該針對每個權限重複此命令。
+
+. 建立使用者並將角色指派給該使用者。
++
+`security login create -user <user_name\> -vserver <svm_name\> -application http -authmethod password -role <SVM_Role_Name\>`
+
+. 解除鎖定使用者。
++
+「安全登入解除鎖定-使用者<user_name\>-vserver <Svm_name\>'
+
+
+
+
+
+== 用於建立SVM角色和指派權限的CLI命令ONTAP
+
+您應該執行幾ONTAP 個SVM命令來建立SVM角色並指派權限。
+
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "snapmirror list-destinations" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "event generate-autosupport-log" -access all`
+* 「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「jobhistory show」-access all」
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "job show" -access all`
+* 「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「jobstop」-access all」
+* 「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱"LUN"-access all"
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱"LUN cree"-access all"
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱"lun刪除"-access all"
+* 「安全登入角色create -vserver Svm_name -role Svm_rou_name -cmd目錄名稱"LUN igroup add"-access all"
+* 「安全登入角色create -vserver Svm_name -role Svm_rou_name -cmd目錄名稱"LUN igroup cree"-access all"
+* 「安全登入角色create -vserver Svm_name -role Svm_rou_name -cmd目錄名稱"LUN igroup delete"-access all"
+* 「安全登入角色create -vserver Svm_name -role Svm_rou_name -cmd目錄名稱"LUN igroup rame"-access all"
+* 「安全登入角色create -vserver Svm_name -role Svm_rou_name -cmd目錄名稱"LUN igroup show"-access all"
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「LUN mapping add-report-nodes」-access all」
+* 「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「LUN mapping create」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「LUN mapping delete」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「LUN mapping remove-reporting節點」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「LUN mapping show」-access all」
+* 「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「LUN modify」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「LUN move-in Volume」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「lun offline」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「LUN online」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「LUN resize」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱"LUN serial」-access all"
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱"LUN show"-access all"
+* 「安全登入角色create -vserver Svm_Name -role Svm_road_Name -cmd目錄名稱「network interface」-access readonly」
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「SnapMirror原則附加規則」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「SnapMirror原則modify-rRule」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「SnapMirror原則移除規則」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「SnapMirror原則show」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「SnapMirror還原」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱"SnapMirror show"-access all"
+* 「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「SnapMirror show-history」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「SnapMirror update」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「SnapMirror update-ls-set」-access all」
+* 「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「version」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume clone create」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume clone show」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume clone s拆 分start」-access all」
+* 「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「Volume clone split stop」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume create」-access all」
+* 「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「volume destrole」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume file clone create」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「volume file show-disk-usage」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「volume modify」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume offline」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume online」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「volume qtree create」-access all」
+* 「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱"volume qtree delete"-access all"
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「volume qtree modify」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱"volume qtree show"-access all"
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume restrict」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume show」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume snapshot create」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume snapshot delete」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「volume snapshot modify」-access all」
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "volume snapshot modify-snaplock-expiry-time" -access all`
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume snapshot rame」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「Volume snapshot還原」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「Volume snapshot還原檔案」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「volume snapshot show」-access all」
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume snapshot show-delta" -access all`
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「volume unmount」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「vserver CIFS共用create」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「vserver CIFS共用刪除」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「vserver CIFS共用show」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「vserver CIFS show」-access all」
+* 「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver EXECTON-policy create」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver EXECT-Fpolicy DELETE」-access all」
+* 「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver匯出原則規則create」-access all」
+* 「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver匯出原則規則show」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver EXECT-Fpolicy show」-access all」
+* 「安全登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「vserver iSCSI connection show」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_road_Name -cmd目錄名稱"vserver"-access readonly」
+* 「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver EXECT-policy」-access all」
+* 「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「vserver iSCSI」-access all」
+* 「安全性登入角色create -vserver Svm_Name -role Svm_rous_Name -cmd目錄名稱「Volume Clone分割狀態」-access all」
+* `security login role create -vserver SVM_name -role SVM_Role_Name -cmddirname "volume managed-feature" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem map" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem create" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem delete" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem modify" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem host" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem controller" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme subsystem show" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme namespace create" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme namespace delete" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme namespace modify" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "nvme namespace show" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "storage-unit show" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "consistency-group" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "snapmirror protect" -access all`
+* `security login role create -vserver SVM_Name -role SVM_Role_Name -cmddirname "volume delete" -access all`
+* `security login create -user-or-group-name user_name -application http -authentication-method password -role SVM_Role_Name -vserver SVM_Name`
+* `security login create -user-or-group-name user_name -application ssh -authentication-method password -role SVM_Role_Name -vserver SVM_Name`
+

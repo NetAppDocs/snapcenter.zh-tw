@@ -23,6 +23,6 @@ NOTE: 目錄或資源檢視中不會顯示pdb複本。
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
 . 從資源或資源群組檢視中選取來源容器資料庫（CDB）。
 . 從「管理複本」檢視中、從主要或次要（鏡射或複寫）儲存系統選取* Clones *。
-. 選取pdb實體複本（目標CDB：PDBClone）、然後按一下 image:../media/delete_icon.gif[""]。
+. 選取 PDB 複製（ targetCDB:PDBClone ）、然後按一下 image:../media/delete_icon.gif["刪除圖示"]。
 . 按一下「*確定*」。
 

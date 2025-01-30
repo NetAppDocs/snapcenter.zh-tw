@@ -15,7 +15,7 @@ summary: 您可以使用SnapCenter 支援功能還原SQL Server資料庫、方�
 
 下列工作流程顯示您必須執行資料庫還原作業的順序：
 
-image::../media/all_plug_ins_restore_workflow.png[all_plug-ins_還原 工作流程]
+image::../media/all_plug_ins_restore_workflow.gif[all_plug-ins_還原 工作流程]
 
 您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原、還原、驗證及複製作業。如需 PowerShell Cmdlet 的詳細資訊 , 請使用 SnapCenter Cmdlet 說明或參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"]
 

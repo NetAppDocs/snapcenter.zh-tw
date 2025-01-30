@@ -48,25 +48,28 @@ NOTE: 主要 SnapLock 設定是在 SnapCenter 備份原則中管理、次要 Sna
 . 在左側導覽窗格中、按一下*設定*。
 . 在「設定」頁面中、按一下*原則*。
 . 按一下「*新增*」。
-. 在「名稱」頁面中、輸入原則名稱和說明。
-. 在「設定」頁面中、執行下列步驟：
+. 在「名稱」頁面中，輸入原則名稱和詳細資料。
+. 在「原則類型」頁面中、執行下列步驟：
 +
-** 選取*隨選*、*每小時*、*每日*、*每週*或*每月*、以指定排程類型。
+.. 選擇儲存類型。
+.. 在「自訂備份設定」區段中，提供必須以金鑰值格式傳遞至外掛程式的任何特定備份設定。
++
+您可以提供多個金鑰值來傳遞給外掛程式。
+
+
+
+. 在「 Snapshot and Replication 」（快照與複寫）頁面中，執行下列步驟：
++
+.. 選取*隨選*、*每小時*、*每日*、*每週*或*每月*、以指定排程類型。
 +
 
 NOTE: 您可以在建立資源群組時、指定備份作業的排程（開始日期、結束日期和頻率）。這可讓您建立共用相同原則和備份頻率的資源群組、但可讓您為每個原則指派不同的備份排程。
 
 +
-image::../media/backup_settings.gif[備份設定頁面]
-
-+
 
 NOTE: 如果您排定在上午2：00、則在夏令時間（Dst）期間不會觸發排程。
 
-** 在「自訂備份設定」區段中、提供必須以金鑰值格式傳遞至外掛程式的任何特定備份設定。您可以提供多個金鑰值來傳遞給外掛程式。
-
-
-. 在 * Retention * 頁面中、指定備份類型的保留設定、以及在 * Backup Type* 頁面中選取的排程類型：
+.. 在 Snapshot settings （快照設定）區段中，指定備份類型的保留設定，以及在 * Backup Type* （備份類型 * ）頁面中選取的排程類型：
 +
 |===
 | 如果您想要... | 然後... 
@@ -75,7 +78,7 @@ NOTE: 如果您排定在上午2：00、則在夏令時間（Dst）期間不會�
  a| 
 保留一定數量的快照
  a| 
-選取 * 要保留的 Snapshot 複本總數 * 、然後指定要保留的 Snapshot 數。
+選取 * 要保留的複本 * ，然後指定要保留的快照數。
 
 如果快照數量超過指定數量、則會先刪除最舊的複本、然後刪除快照。
 
@@ -90,19 +93,46 @@ NOTE: 對於使用率為1018的ONTAP 資源、如使用率為0、9.4或更新版
  a| 
 將快照保留一定天數
  a| 
-選取 * 保留 Snapshot 複本 * 、然後指定您要保留 Snapshot 的天數、再將其刪除。
+選取 * 保留複本 * ，然後指定您要保留快照的天數，再將其刪除。
 
 
 
  a| 
-Snapshot 複本鎖定期間
+主要快照複本鎖定期間
  a| 
 選取 Snapshot 鎖定期間、然後選取天、月或年。
 
 SnapLock 保留期應少於 100 年。
 
+
+
+ a| 
+次 Snapshot 複本鎖定期間
+ a| 
+選取 * 次快照複本鎖定期間 * ，然後選取天，月或年。
+
+若要使此選項生效，您必須執行下列工作：
+
+*** 選取 * 主要快照複本鎖定期間 * 。
+*** 選取其中一個或兩個次要複寫選項。
+
+
 |===
-. 在 * Replication * 頁面中、指定複寫設定：
+.. 選取原則標籤。
++
+根據您選取的原則標籤， ONTAP 會套用符合標籤的次要 Snapshot 保留原則。
+
++
+
+NOTE: 如果您在建立本機Snapshot複本之後選擇*更新SnapMirror、您可以選擇性地指定次要原則標籤。不過、如果SnapVault 您在建立本機Snapshot複本*之後選擇*更新SUpdate、則應指定次要原則標籤。
+
+
+
+. 在 [ 選取次要複寫選項 ] 區段中，選取下列其中一個或兩個次要複寫選項：
++
+
+NOTE: 您必須為 * 次快照複本鎖定期間 * 選取次要複寫選項，才能生效。
+
 +
 |===
 | 針對此欄位... | 執行此動作... 
@@ -119,7 +149,7 @@ SnapLock 保留期應少於 100 年。
 
 按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。
 
-請參閱。 link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視 NetApp 支援的外掛程式資源相關備份和複本"]
+請參閱。 link:view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視 NetApp 支援的外掛程式資源相關備份和複本"]
 
 
 
@@ -132,22 +162,9 @@ SnapLock 保留期應少於 100 年。
 
 當 SnapLock 僅在「 SnapLock 資料保險箱」的次要 ONTAP 上設定時、按一下「拓撲」頁面中的「 * 重新整理 * 」按鈕、即可重新整理從 ONTAP 擷取的次要裝置上的鎖定期間。
 
-如需 SnapLock 資料保險箱的詳細資訊、請參閱在資料保險箱上將快照提交至 WORM
-目的地
+如需 SnapLock 資料保險箱的詳細資訊，請參閱將快照提交至資料保險箱目的地上的 WORM 。
 
-link:../protect-nsp/view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視 NetApp 支援的外掛程式資源相關備份和複本"]。
-
-
-
- a| 
-*次要原則標籤*
- a| 
-選取Snapshot標籤。
-
-根據您選取的 Snapshot 標籤、 ONTAP 會套用符合標籤的次要 Snapshot 保留原則。
-
-
-NOTE: 如果您在建立本機Snapshot複本之後選擇*更新SnapMirror、您可以選擇性地指定次要原則標籤。不過、如果SnapVault 您在建立本機Snapshot複本*之後選擇*更新SUpdate、則應指定次要原則標籤。
+請參閱。 link:view_netapp_supported_plugins_resource_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視 NetApp 支援的外掛程式資源相關備份和複本"]
 
 
 

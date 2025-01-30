@@ -112,6 +112,8 @@ entries:
     url: "/protect-hana/task_create_backup_policies_for_sap_hana_databases.html"
   - title: 建立資源群組並附加原則
     url: "/protect-hana/task_create_resource_groups_and_attach_policies.html"
+  - title: 在 ASA R2 系統上建立資源群組，並為 SAP HANA 資源提供次要保護
+    url: "/protect-hana/create-resource-groups-secondary-protection-for-asa-r2-hana-resources.html"
   - title: 使用適用於SAP HANA資料庫的PowerShell Cmdlet建立儲存系統連線和認證
     url: "/protect-hana/task_create_a_storage_system_connection_and_a_run_as_account_using_powershell_cmdlets_for_sap_hana_database.html"
   - title: 備份SAP HANA資料庫

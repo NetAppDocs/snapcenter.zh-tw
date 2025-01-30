@@ -40,8 +40,7 @@ NOTE: 在Flex ASM設定中、如果基數小於RAC叢集中的節點數、則無
 * 對於啟用 SnapLock 的原則、對於 ONTAP 9.12.1 及更低版本、如果您指定 Snapshot 鎖定期間、從防竄改快照建立的複本作為還原的一部分、將會繼承 SnapLock 到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 
-*步驟*
-
+.步驟
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取適當的外掛程式。
 . 在「資源」頁面中、從*檢視*清單中選取*資料庫*或*資源群組*。
 . 從資料庫詳細資料檢視或資源群組詳細資料檢視中選取資料庫。
@@ -207,7 +206,7 @@ Oracle主目錄、使用者名稱和群組詳細資料會自動從來源資料�
 
 .. 在「資料庫參數設定」區段中、修改用於初始化資料庫的預先填入資料庫參數值。
 +
-您可以按一下*來新增其他參數image:../media/add_policy_from_resourcegroup.gif[""]*。
+您可以按一下 * 來新增其他參數image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 
 +
 如果您使用的是Oracle Standard Edition、且資料庫以歸檔記錄模式執行、或想要從歸檔重作記錄還原資料庫、請新增參數並指定路徑。
@@ -355,4 +354,30 @@ NOTE: 如果您在複製時尚未執行還原、則複製資料庫的備份可�
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/ORA-00308%3A_cannot_open_archived_log_ORA_LOG_arch1_123_456789012.arc["還原或複製失敗、並顯示ORA-00308錯誤訊息"^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Failed_to_recover_a_cloned_database["無法恢復複製的資料庫"^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/What_are_the_customizable_parameters_for_backup_restore_and_clone_operations_on_AIX_systems["可自訂的參數、用於在AIX系統上進行備份、還原和複製作業"^]
+
+
+
+
+== 更新主機上的慣用 IP
+
+複製作業完成後，儲存存取層（ SAL ）提供的複製路徑將會是 <nfs_lif_IP> ： <JunctionPath> 格式。若要提供偏好的 IP ，您必須使用 scclis 命令在主機上進行設定。
+
+.步驟
+. 登入資料庫主機。
+. 針對指定的使用者，啟動與 SnapCenter 的 PowerShell 連線工作階段。
++
+Open-SmConnection
+
+. 建立空白檔案。
++
+點選 SnapCenter storagepreference.properties
+
+. 為 SVM 設定偏好的資料 LIF 。
++
+add-SvmPreferredDataPath -SVM <SVM Name> -DataPath <IP 位址或 FQDN>
+
+. 驗證偏好的路徑。
++
+Get-SvmPreferredDataPath
+
 

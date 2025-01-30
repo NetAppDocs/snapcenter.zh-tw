@@ -80,11 +80,11 @@ NOTE: 您無法重新命名或刪除二線儲存設備上的備份。
 ** 如果您已使用Oracle Recovery Manager（RMAN）將備份編錄為目錄、則無法重新命名這些已編製目錄的備份。
 
 
-. 如果您要刪除複本、請從表格中選取複本、然後按一下 image:../media/delete_icon.gif[""]。
+. 如果要刪除複本、請從表格中選取該複本、然後按一下 image:../media/delete_icon.gif["刪除圖示"]。
 
 
 如果指派給Snapmirror狀態更新的值較少、則即使資料和記錄磁碟區已成功保護、拓撲頁面上也不會列出鏡射和Vault備份複本。您應該使用_Set-SmConfigSettings_ PowerShell Cmdlet來增加指派給SnapmiraporStatusUpdateWaitTime的值。
 
 您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。
 
-或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["《軟件命令參考指南》SnapCenter"^] 或 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。
+或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["《軟件命令參考指南》SnapCenter"^] 或 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。

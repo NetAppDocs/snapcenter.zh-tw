@@ -82,6 +82,8 @@ entries:
     url: "/protect-nsp/create_policies_for_netapp_supported_plugins_resources.html"
   - title: 建立資源群組並附加原則
     url: "/protect-nsp/create_resource_groups_and_attach_policies.html"
+  - title: 在 ASA R2 系統上建立資源群組，並啟用資源的次要保護
+    url: "/protect-nsp/create-resource-groups-secondary-protection-for-asa-r2-resources.html"
   - title: 使用PowerShell Cmdlet建立儲存系統連線和認證
     url: "/protect-nsp/create_a_storage_system_connection_and_a_credential_using_powershell_cmdlets.html"
   - title: 備份個別 NetApp 支援的外掛程式資源

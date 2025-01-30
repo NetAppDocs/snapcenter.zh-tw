@@ -21,9 +21,9 @@ summary: 如果應用程式磁碟區不是任何資源群組的一部分、您�
 
 . 在左導覽窗格中、按一下*資源*、然後從清單中選取Oracle資料庫外掛程式。
 . 在「資源」頁面中、從*檢視*清單中選取*應用程式磁碟區*。
-. 按一下 image:../media/filter_icon.png["篩選圖示"]，然後選取主機名稱和資料庫類型以篩選資源。
+. 按一下 *image:../media/filter_icon.gif["篩選圖示"]、然後選取主機名稱和資料庫類型以篩選資源。
 +
-接著您可以按一下 image:../media/filter_icon.png["篩選圖示"] 以關閉篩選窗格。
+然後按一下 *image:../media/filter_icon.gif["篩選圖示"]即可關閉篩選窗格。
 
 . 選取您要備份的應用程式磁碟區。
 +
@@ -55,7 +55,7 @@ summary: 如果應用程式磁碟區不是任何資源群組的一部分、您�
 .. 從下拉式清單中選取一或多個原則。
 +
 
-NOTE: 您也可以按一下建立原則 image:../media/add_policy_from_resourcegroup.gif["新增原則"]。
+NOTE: 您也可以按一下 * * 來建立原則image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 
 
 
@@ -63,7 +63,7 @@ NOTE: 您也可以按一下建立原則 image:../media/add_policy_from_resourceg
 在「設定所選原則的排程」區段中、會列出所選原則。
 
 +
-.. 按一下 image:../media/add_policy_from_resourcegroup.gif["新增原則"] 您要設定排程之原則的「設定排程」欄。
+.. 按一下 image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"] 您要設定排程之原則的「設定排程」欄。
 .. 在Add schedules for policy _policy_name_（新增原則_原則名稱_的排程）視窗中、設定排程、然後按一下* OK*（確定*）。
 +
 _policy_name_是您選取的原則名稱。

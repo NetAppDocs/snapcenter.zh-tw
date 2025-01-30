@@ -40,7 +40,7 @@ NOTE: 不支援在不同叢集上使用相同名稱的多個SVM。SnapCenter每�
 
 * 如果SAN環境中有Oracle資料庫、請務必依照下列指南所述的建議來設定SAN環境：
 +
-** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547957["Linux Unified Host Utilities的建議主機設定"^]
+** https://library.netapp.com/ecm/ecm_download_file/ECMLP2547958["使用Linux主機搭配ONTAP 不含資源的儲存設備"^]
 ** https://library.netapp.com/ecm/ecm_download_file/ECMP1119218["受AIX主機公用程式影響的主機設定"^]
 
 

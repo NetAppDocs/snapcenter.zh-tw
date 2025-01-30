@@ -46,7 +46,7 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
  a| 
 必要的軟體套件
  a| 
-* DotNet Core 從 8.0.5 版開始，包括所有後續的 .NET 8 修補程式
+* ASP.NET Core Runtime 8.0.12 （以及所有後續 8.0.x 修補程式）代管產品組合
 * PowerShell Core 7.4.2
 
 

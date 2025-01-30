@@ -62,7 +62,7 @@ NOTE: 如果備份與複製的資源相關聯、則無法刪除備份。
 +
 您無法刪除二線儲存系統上的備份。
 
-. 選取備份、然後按一下 image:../media/delete_icon.gif[""]。
+. 選取備份，然後按一下 image:../media/delete_icon.gif["刪除圖示"]。
 +
 如果您要刪除SAP HANA資料庫備份、備份的相關SAP HANA目錄也會一併刪除。
 

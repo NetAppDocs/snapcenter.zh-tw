@@ -47,7 +47,7 @@ NOTE: 如果命令清單中不存在這些命令、則作業將會失敗。
 . 在左側導覽窗格中、選取 * 資源 * 、然後從清單中選取適當的外掛程式。
 . 在「資源」頁面中、根據資源類型篩選*檢視*下拉式清單中的資源。
 +
-選取image:../media/filter_icon.png["篩選圖示"]，然後選取主機名稱和資源類型以篩選資源。接著您可以選取 image:../media/filter_icon.png["篩選圖示"] 以關閉篩選窗格。
+選取 * *image:../media/filter_icon.gif["篩選圖示"]、然後選取主機名稱和資源類型以篩選資源。接著您可以選取 image:../media/filter_icon.gif["篩選圖示"] 以關閉篩選窗格。
 
 . 選取您要備份的資源。
 . 在「資源」頁面中、選取 * 使用 Snapshot 複本的自訂名稱格式 * 、然後輸入您要用於 Snapshot 名稱的自訂名稱格式。
@@ -119,12 +119,12 @@ image:../media/application_settings.gif["應用程式設定"]
 .. 從下拉式清單中選取一或多個原則。
 +
 
-NOTE: 您也可以按一下*來建立原則image:../media/add_policy_from_resourcegroup.gif[""]*。
+NOTE: 您也可以按一下 * * 來建立原則image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 
 +
 在「設定所選原則的排程」區段中、會列出所選原則。
 
-.. 選取*image:../media/add_policy_from_resourcegroup.gif[""]*在您要為其設定排程的原則的「設定排程」欄中。
+.. 針對您要設定排程的原則、在「設定排程」欄中選取 * * *image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 .. 在 [ 新增原則 _policy_name_ 的排程 ] 對話方塊中，設定排程，然後選取 *OK* 。
 +
 _policy_name_是您選取的原則名稱。

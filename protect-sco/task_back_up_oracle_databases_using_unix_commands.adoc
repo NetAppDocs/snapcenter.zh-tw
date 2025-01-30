@@ -30,7 +30,7 @@ NOTE: 連線工作階段僅在24小時內有效。不過、您可以使用「Tok
 
 您應該執行下列命令、以建立與SnapCenter 該伺服器的連線、探索Oracle資料庫執行個體、新增原則和資源群組、備份及驗證備份。
 
-您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3323470["《軟件命令參考指南》SnapCenter"^]。
+您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["《軟件命令參考指南》SnapCenter"^]。
 
 *步驟*
 

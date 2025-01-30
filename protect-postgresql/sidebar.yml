@@ -104,6 +104,8 @@ entries:
     url: "/protect-postgresql/create-backup-policies-for-postgresql.html"
   - title: 建立資源群組並附加原則
     url: "/protect-postgresql/create-resource-groups-and-attach-policies.html"
+  - title: 在 ASA R2 系統上建立資源群組，並啟用 PostgreSQL 資源的次要保護
+    url: "/protect-postgresql/create-resource-groups-secondary-protection-for-asa-r2-postgresql-resources.html"
   - title: 使用適用於 PostgreSQL 的 PowerShell Cmdlet 建立儲存系統連線和認證
     url: "/protect-postgresql/create-a-storage-system-connection-and-a-run-as-account-using-powershell-cmdlets-for-postgresql.html"
   - title: 備份 PostgreSQL

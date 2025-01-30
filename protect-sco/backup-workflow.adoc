@@ -15,7 +15,7 @@ summary: 您可以建立資源（資料庫）或資源群組的備份。
 
 下列工作流程顯示您必須執行備份作業的順序：
 
-image::../media/sco_backup_workflow.png[Oracle的備份工作流程]
+image::../media/sco_backup_workflow.gif[Oracle的備份工作流程]
 
 為Oracle資料庫建立備份時、會在位於_/var/opt/snapcenter/scop/lock_目錄的Oracle資料庫主機上建立作業鎖定檔案（_.sm_lock_dbsid_）、以避免在資料庫上執行多項作業。備份資料庫之後、會自動移除作業鎖定檔案。
 

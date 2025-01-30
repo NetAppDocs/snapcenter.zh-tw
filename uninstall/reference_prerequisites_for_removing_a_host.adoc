@@ -46,3 +46,5 @@ summary: 如果您不想再使用SnapCenter 支援功能來管理資料保護工
 * 您應該已將RBAC使用者指派給主機SnapCenter 、Microsoft SQL Server適用的支援功能、認證、複製生命週期資源群組和儲存系統。
 * 您應該SnapCenter 已以RBAC使用者身分登入了不真實的功能。
 
+
+如需解除安裝 SnapCenter Plug-in for VMware vSphere 的相關資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_remove_plugin.html["移除SnapCenter VMware vSphere的功能性外掛程式"^]。

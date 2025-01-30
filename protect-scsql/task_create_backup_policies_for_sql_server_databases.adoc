@@ -52,10 +52,6 @@ summary: 您可以先為資源或資源群組建立備份原則、再使用SnapC
 +
 對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
-+
-
-NOTE: 主要 SnapLock 設定是在 SnapCenter 備份原則中管理、次要 SnapLock 設定則是由 ONTAP 管理。
-
 
 
 
@@ -67,24 +63,26 @@ NOTE: 主要 SnapLock 設定是在 SnapCenter 備份原則中管理、次要 Sna
 . 在左導覽窗格中、選取 * 設定 * 。
 . 在「設定」頁面中、選取 * 原則 * 。
 . 選取 * 新 * 。
-. 在「*名稱*」頁面中、輸入原則名稱和說明。
+. 在「 * 名稱 * 」頁面中，輸入原則名稱和詳細資料。
 
 
 
 
-== 步驟 2 ：設定備份選項
+== 步驟 2 ：設定原則選項
 
-. 選擇您的備份類型
-
-
+. 在「原則類型」頁面中，執行下列步驟：
++
+.. 選擇您的儲存類型。
+.. 選取您的原則範圍。
++
 [role="tabbed-block"]
 ====
 .完整備份與記錄備份
 --
 備份資料庫檔案和交易記錄、並截斷交易記錄。
 
-. 選擇*完整備份與記錄備份*。
-. 輸入應為每個 Snapshot 備份的資料庫數目上限。
+... 選擇*完整備份與記錄備份*。
+... 輸入應為每個 Snapshot 備份的資料庫數目上限。
 +
 
 NOTE: 如果您想要同時執行多個備份作業、則必須增加此值。
@@ -96,8 +94,8 @@ NOTE: 如果您想要同時執行多個備份作業、則必須增加此值。
 --
 備份資料庫檔案。
 
-. 選擇*完整備份*。
-. 輸入應為每個 Snapshot 備份的資料庫數目上限。
+... 選擇*完整備份*。
+... 輸入應為每個 Snapshot 備份的資料庫數目上限。
 預設值為 100
 +
 
@@ -108,14 +106,14 @@ NOTE: 如果您想要同時執行多個備份作業、則必須增加此值。
 --
 .記錄備份
 --
-. 備份交易記錄。
-. 選擇*記錄備份*。
+... 備份交易記錄。
+... 選擇*記錄備份*。
 
 
 --
 .僅複製備份
 --
-. 如果您使用其他備份應用程式來備份資源、請選取*僅複製備份*。
+... 如果您使用其他備份應用程式來備份資源、請選取*僅複製備份*。
 
 
 保持交易記錄不變、可讓任何備份應用程式還原資料庫。在任何其他情況下、您通常都不應使用「僅複本」選項。
@@ -125,6 +123,14 @@ NOTE: Microsoft SQL不支援*僅複製備份*選項、以及*完整備份與記�
 
 --
 ====
+
+
+
+
+
+
+== 步驟 3 ：設定可用性群組設定
+
 . 在「可用度群組設定」區段中、執行下列動作：
 +
 .. 僅在偏好的備份複本上備份。
@@ -148,12 +154,17 @@ NOTE: Microsoft SQL不支援*僅複製備份*選項、以及*完整備份與記�
 
 NOTE: 在叢集組態中、備份會根據原則中設定的保留設定保留在叢集的每個節點上。如果AG的擁有者節點變更、則會根據保留設定進行備份、並保留先前擁有者節點的備份。AG保留僅適用於節點層級。
 
-. 排程此原則的備份頻率。選擇 * 隨需 * 、 * 每小時 * 、 * 每日 * 、 * 每週 * 或 * 每月 * 來指定排程類型。
+
+
+
+
+== 步驟 4 ：設定 Snapshot 和 Replication 設定
+
+. 在「 Snapshot and Replication 」（快照與複寫）頁面中，執行下列步驟：
++
+.. 選取*隨選*、*每小時*、*每日*、*每週*或*每月*、以指定排程類型。
 +
 您只能為原則選取一種排程類型。
-
-+
-image:../media/backup_settings.gif["備份設定畫面。"]
 
 +
 
@@ -167,11 +178,11 @@ NOTE: 如果您排定在上午2：00、則在夏令時間（Dst）期間不會�
 
 
 
-== 步驟 3 ：設定保留設定
 
-在「保留」頁面中、視備份類型頁面中選取的備份類型而定、執行下列一或多項動作：
 
-. 在「最新還原作業的保留設定」區段中、執行下列其中一項動作：
+== 步驟 5 ：設定直到分鐘的保留設定
+
+. 根據備份類型頁面中選取的備份類型，在「直到分鐘保留設定」區段中，執行下列一或多項動作：
 
 
 [role="tabbed-block"]
@@ -193,11 +204,15 @@ NOTE: 如果您排定在上午2：00、則在夏令時間（Dst）期間不會�
 
 --
 ====
-. 在「隨需保留」設定的*完整備份保留設定*區段中、執行下列動作：
+
+
+== 步驟 6 ：設定 Snapshot 設定
+
+. 如需完整備份保留設定，請執行下列動作：
 +
 .. 指定要保留的快照總數
 +
-... 若要指定要保留的 Snapshot 數、請選取 * 要保留的 Snapshot 總份數 * 。
+... 若要指定要保留的快照數目，請選取 * 要保留的複本 * 。
 ... 如果快照數量超過指定數量、則會先刪除最舊的複本、然後刪除快照。
 
 
@@ -206,65 +221,61 @@ NOTE: 如果您排定在上午2：00、則在夏令時間（Dst）期間不會�
 
 
 
-IMPORTANT: 根據預設、保留計數的值設為2。如果將保留計數設為 1 、則保留作業可能會失敗、因為第一個 Snapshot 是 SnapVault 關係的參考 Snapshot 、直到較新的 Snapshot 複寫到目標為止。
+IMPORTANT: 根據預設、保留計數的值設為2。如果將保留計數設為 1 、則保留作業可能會失敗、因為第一個快照是 SnapVault 關係的參考快照、直到較新的快照複寫到目標為止。
 
 
 NOTE: 對於使用率為1018的ONTAP 資源、如使用率為0、9.4或更新版本、ONTAP 而使用率為254的資源、如使用率為0、9.3或更新版本。如果保留設定的值高於基礎ONTAP 版支援的值、則備份將會失敗。
 
 . 保留快照的時間長度
 +
-.. 如果您想要指定在刪除快照之前保留快照的天數、請選取 * 保留快照複本 * 。
+.. 如果您想要指定在刪除快照之前保留快照的天數，請選取 * 保留複本 * 。
 
 
-. 如果要指定 Snapshot 鎖定期間、請選取 * Snapshot 複本鎖定期間 * 、然後選取天、月或年。
+. 如果您要指定主要快照複本鎖定期間，請選取 * 主要快照複本鎖定期間 * ，然後選取天，月或年。
 +
 SnapLock 保留期應少於 100 年。
 
-
-
-. 在「*完整備份保留設定*」區段中、針對「每小時」、「每日」、「每週」和「每月」保留設定、指定「備份類型」頁面中所選排程類型的保留設定。
+. 如果您要指定次要快照複本鎖定期間，請選取 * 次要快照複本鎖定期間 * ，然後選取天，月或年。
 +
-.. 指定要保留的快照總數
-+
-... 若要指定要保留的 Snapshot 數、請選取 * 要保留的 Snapshot 總份數 * 。如果快照數量超過指定數量、則會先刪除最舊的複本、然後刪除快照。
-
-
-
-
-
-
-
-IMPORTANT: 如果您打算啟用SnapVault 此功能、則必須將保留數設為2或更高。如果將保留計數設為 1 、則保留作業可能會失敗、因為第一個 Snapshot 是 SnapVault 關係的參考 Snapshot 、直到較新的 Snapshot 複寫到目標為止。
-
-. 保留快照的時間長度
-+
-.. 若要指定在刪除快照之前要保留快照的天數、請選取 * 保留快照複本 * 。
-
-
-. 如果要指定 Snapshot 鎖定期間、請選取 * Snapshot 複本鎖定期間 * 、然後選取天、月或年。
-+
-SnapLock 保留期應少於 100 年。
+若要使此選項生效，您必須執行下列工作：
 
 +
-根據預設、記錄 Snapshot 保留時間設為 7 天。使用 Set-SmPolicy Cmdlet 變更記錄 Snapshot 保留。
-
-
-
+** 選取 * 主要快照複本鎖定期間 * 。
+** 選取其中一個或兩個次要複寫選項。
++
 此範例將記錄 Snapshot 保留設定為 2 ：
 
++
 .範例
 []
 ====
 Set-SmPolicy -PolicyName 'newpol' -PolicyType 'Backup' -PluginPolicyType 'SSQL' -sqlbackuptype 'FullBackupAndLogBackup' -RetentionSettings @{BackupType='Data';ScheduleType='Hour';RetentionschedulerCount=2}@{BackupType='Log_ScheduleType=Retenthoure2;RetenteType='Type='LogOnClinthouring@'
 
 ====
++
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["可保留資料庫的Snapshot複本SnapCenter"]
 
 
 
-== 步驟 4 ：設定複寫設定
+. 選取 Snapshot 標籤
++
+根據您選取的 Snapshot 標籤、 ONTAP 會套用符合標籤的次要 Snapshot 保留原則。
 
-. 在「複寫」頁面中、指定複寫至次要儲存系統：
++
+
+NOTE: 如果您在建立本機Snapshot複本之後選擇*更新SnapMirror、您可以選擇性地指定次要原則標籤。不過、如果SnapVault 您在建立本機Snapshot複本*之後選擇*更新SUpdate、則應指定次要原則標籤。
+
+
+
+
+
+== 步驟 7 ：設定次要複寫選項
+
+. 在 [ 選取次要複寫選項 ] 區段中，選取下列其中一個或兩個次要複寫選項：
++
+
+NOTE: 您必須為 * 次快照複本鎖定期間 * 選取次要複寫選項，才能生效。
+
 
 
 [role="tabbed-block"]
@@ -281,7 +292,7 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 在次要複寫期間、 SnapLock 到期時間會載入主要 SnapLock 到期時間。按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。
 
 +
-請參閱。 link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視SQL Server備份與複製"]
+請參閱。 link:../protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視SQL Server備份與複製"]
 
 
 
@@ -301,20 +312,9 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/Sn
 如需 SnapLock Vault 的詳細資訊、請參閱 https://docs.netapp.com/us-en/ontap/snaplock/commit-snapshot-copies-worm-concept.html["將Snapshot複本提交至保存目的地上的WORM"]
 
 +
-請參閱。 link:task_view_sql_server_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視SQL Server備份與複製"]
+請參閱。 link:../protect-scsql/task_view_sql_server_backups_and_clones_in_the_topology_page.html["在「拓撲」頁面中檢視SQL Server備份與複製"]
 
 
-
---
-.次要原則標籤
---
-. 選取Snapshot標籤。
-
-
-根據您選取的 Snapshot 標籤、 ONTAP 會套用符合標籤的次要 Snapshot 保留原則。
-
-
-NOTE: 如果您在建立本機Snapshot複本之後選擇*更新SnapMirror、您可以選擇性地指定次要原則標籤。不過、如果SnapVault 您在建立本機Snapshot複本*之後選擇*更新SUpdate、則應指定次要原則標籤。
 
 --
 .錯誤重試計數
@@ -326,7 +326,7 @@ NOTE: 如果您在建立本機Snapshot複本之後選擇*更新SnapMirror、您�
 ====
 
 
-== 步驟 5 ：設定指令碼設定
+== 步驟 8 ：設定指令碼設定
 
 . 在「指令碼」頁面中、分別輸入備份作業之前或之後應執行的指令碼或指令碼路徑和引數。
 +
@@ -344,7 +344,7 @@ NOTE: 您必須在 ONTAP 中設定 SnapMirror 保留原則、使次要儲存設�
 
 
 
-== 步驟 6 ：設定驗證設定
+== 步驟 9 ：設定驗證設定
 
 在「驗證」頁面中、執行下列步驟：
 
@@ -388,7 +388,7 @@ NOTE: 預先編寫或後製指令碼路徑不應包含磁碟機或共用區。�
 
 
 
-== 步驟 7 ：檢視摘要
+== 步驟 10 ：檢視摘要
 
 . 檢閱摘要、然後選取 * 完成 * 。
 

@@ -78,12 +78,12 @@ NOTE: 如果您最近新增了資源、只有在重新整理資源清單之後�
 .. 從下拉式清單中選取一或多個原則。
 +
 
-NOTE: 您也可以按一下*來建立原則image:../media/add_policy_from_resourcegroup.gif[""]*。
+NOTE: 您也可以按一下 * * 來建立原則image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 
 +
 在「設定所選原則的排程」區段中、會列出所選原則。
 
-.. 在「設定所選原則的排程」區段中、按一下*image:../media/add_policy_from_resourcegroup.gif[""]*在您要為其設定排程的原則的「設定排程」欄中。
+.. 在「設定所選原則的排程」區段中、針對您要設定排程的原則、按一下「設定排程」欄中的 * *image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 .. 在「新增原則_policy_name_的排程」對話方塊中、指定開始日期、到期日和頻率來設定排程、然後按一下「*確定*」。
 +
 您必須針對原則中所列的每個頻率執行此動作。設定的排程會列在「*設定所選原則的排程*」區段的「套用的排程」欄中。
@@ -111,7 +111,7 @@ NOTE: 您也可以按一下*來建立原則image:../media/add_policy_from_resour
 NOTE: 驗證伺服器版本應與主控主要資料庫的SQL伺服器版本相符。
 
 .. 按一下*載入定位器*、載入SnapMirror和SnapVault S後備 磁碟區、以在二線儲存設備上執行驗證。
-.. 選取您要設定驗證排程的原則、然後按一下*image:../media/add_policy_from_resourcegroup.gif[""]*。
+.. 選取您要設定驗證排程的原則、然後按一下 * *image:../media/add_policy_from_resourcegroup.gif["新增原則表單資源群組"]。
 .. 在「新增驗證排程policy_name」對話方塊中、執行下列動作：
 +
 |===

@@ -39,7 +39,7 @@ summary: 資源是由您安裝的外掛程式所維護的資料庫、Exchange資
 所有資料庫和DAG都會以FQDN格式顯示其DAG或主機名稱、以便區分多個資料庫。
 
 +
-按一下 image:../media/filter_icon.png["篩選圖示"] 然後選取主機名稱和Exchange Server以篩選資源。然後按一下 image:../media/filter_icon.png["篩選圖示"] 以關閉篩選窗格。
+按一下 image:../media/filter_icon.gif["篩選圖示"] 並選取主機名稱和 Exchange Server 以篩選資源。接著您可以按一下 image:../media/filter_icon.gif["篩選圖示"] 以關閉篩選窗格。
 
 . 按一下*重新整理資源*。
 +

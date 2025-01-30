@@ -13,4 +13,4 @@ summary: 如果SnapCenter 您想要保護SAP HANA資料庫、應該安裝並設�
 [role="lead"]
 如果SnapCenter 您想要保護SAP HANA資料庫、應該安裝並設定SAP HANA資料庫的功能完善的功能。
 
-image::../media/sap_hana_install_configure_workflow.png[安裝 HANA 外掛程式工作流程]
+image::../media/sap_hana_install_configure_workflow.gif[安裝 SAP Hana 外掛程式]
