@@ -22,7 +22,8 @@ Azure NetApp Files 是一款優質儲存解決方案，長期備份保留可能�
 == 限制
 
 * 不支援 FAS 或 AFF ONTAP 和 FSxN 儲存系統的物件儲存功能。
-* 不支援 Oracle 和 SAP HANA 裝載和目錄工作流程。
+* 物件儲存備份不支援 Oracle 和 SAP HANA 裝載和目錄工作流程，但支援快照。
+* 物件儲存備份不支援 Oracle PDB 複本，但快照支援 Oracle PDB 複本。
 * 不支援物件儲存設備的備份驗證， REST API 支援，物件儲存設備的複製生命週期管理，以及物件儲存備份的報告功能。
 * 不支援從 Azure Blob 儲存設備上的備份還原至 Azure NetApp Files 。您也可以使用複製選項。
 * 不支援複本分割。

@@ -9521,7 +9521,6 @@ Snapshot 作業。</block>
   <block id="03ba6af8c8aacc925daefdecc52c1ced" category="paragraph">Azure NetApp Files 是一款優質儲存解決方案，長期備份保留可能會花費昂貴的成本。若要最佳化成本，您可以將備份從 Azure NetApp Files 儲存設備移至 Azure 物件存放區。從 SnapCenter 6.0.1 開始，您可以將位於 Azure NetApp Files 上的應用程式備份及複製到 Azure Blob 儲存設備（物件存放區）。您可以在 Azure NetApp Files 儲存設備上維護兩份資料複本，在短期恢復時保留磁碟區快照複本，並在 Azure Blob 儲存設備上保留另一份複本以進行長期恢復。</block>
   <block id="20c30f0cc89f35ed825a3cd3d901372c" category="paragraph">啟用 Azure NetApp Files 備份原則並與資源相關聯時， SnapCenter 會處理磁碟區快照的建立，並將其備份至 Azure Blob 儲存設備。SnapCenter 會建立備份資料保險箱，並啟用磁碟區的備份。如果您已啟用磁碟區的備份，則 SnapCenter 會使用現有的資料保險箱。</block>
   <block id="e55ea9fc643ab80ebff324b5ff0d6b8d" category="list-text">不支援 FAS 或 AFF ONTAP 和 FSxN 儲存系統的物件儲存功能。</block>
-  <block id="5b44b7d138d30c112390cba3570d49bf" category="list-text">不支援 Oracle 和 SAP HANA 裝載和目錄工作流程。</block>
   <block id="1e05d9799692ccd6b7989f741f68ec55" category="list-text">不支援物件儲存設備的備份驗證， REST API 支援，物件儲存設備的複製生命週期管理，以及物件儲存備份的報告功能。</block>
   <block id="c54485c49dccc7921e44c57c0bc07610" category="list-text">不支援從 Azure Blob 儲存設備上的備份還原至 Azure NetApp Files 。您也可以使用複製選項。</block>
   <block id="9a6872cf47cae5149dfd734be3f2eee0" category="paragraph"><block ref="9a6872cf47cae5149dfd734be3f2eee0" category="inline-link-macro-rx"></block></block>
@@ -10063,4 +10062,6 @@ Snapshot 作業。</block>
   <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">如果您要升級多個主機、請選取所有主機、按一下、然後按一 <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>下 * 升級 * &gt; * 確定 * 。</block>
   <block id="eafbda6a16d2997896c70ba8ded3db33" category="sidebar">支援簡單、集中化、可擴充的平台、可為在混合雲中任何位置的不間斷系統上執行的應用程式、資料庫、主機檔案系統及VM提供應用程式一致的資料保護。SnapCenter ONTAP此文件庫包含 6.1 版的資訊。</block>
   <block id="888e5b40ea166427f96db1a9c08af7fc" category="sidebar">SnapCenter Software 6.1 文件</block>
+  <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">物件儲存備份不支援 Oracle 和 SAP HANA 裝載和目錄工作流程，但支援快照。</block>
+  <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">物件儲存備份不支援 Oracle PDB 複本，但快照支援 Oracle PDB 複本。</block>
 </blocks>
