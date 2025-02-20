@@ -3180,7 +3180,6 @@
   <block id="5010ac065b072d3a5a66d4913af22358" category="section-title">建立共享的FC RDM LUN</block>
   <block id="10680a7aa79949d8b454b29a782cc64a" category="paragraph">在使用FC RDM LUN在Microsoft叢集中的節點之間共用儲存設備之前、您必須先建立共用仲裁磁碟和共用儲存磁碟、然後將它們新增至叢集中的兩個虛擬機器。</block>
   <block id="cbdb6828febec04786f22df9a1ccc748" category="inline-link">跨實體主機叢集虛擬機器</block>
-  <block id="343e62dffb88999e9c503088341e1fc0" category="paragraph">共用磁碟並非使用Windows的外掛程式建立。您應該建立共享LUN、然後將其新增至叢集中的每個虛擬機器。如需相關資訊、請參閱<block ref="4339506e2feb8115940eea5a6e9ba248" category="inline-link-rx"></block>。</block>
   <block id="318e9318f3e81f666ea14f7560451333" category="summary">可以在網域或工作群組中的系統上安裝此伺服器SnapCenter 。在工作群組和網域的情況下、用於安裝的使用者應該擁有機器的管理權限。</block>
   <block id="0322b41f8bf313240d64c3e6923b4ee4" category="doc">網域與工作群組需求</block>
   <block id="1c55be82b0d56e1433794bc0b704c38b" category="paragraph">若要在SnapCenter Windows主機上安裝Sfor Server和SnapCenter Sof the plug-ins、您應該使用下列其中一項：</block>
@@ -5876,8 +5875,6 @@
   <block id="024d2125c4de994f5780d700157a8f8a" category="inline-link-macro">執行Clone生命週期</block>
   <block id="b5fb765366530fd4f75c7c5c651544bd" category="paragraph"><block ref="b5fb765366530fd4f75c7c5c651544bd" category="inline-link-macro-rx"></block></block>
   <block id="5f2b3d8994098e5cded686a40b8bb7c9" category="paragraph"><block ref="5f2b3d8994098e5cded686a40b8bb7c9" category="inline-link-macro-rx"></block></block>
-  <block id="0441f921ecb29005b4b309df792042a3" category="summary">定義SQL Server的還原策略可讓您成功還原資料庫。</block>
-  <block id="24fc557949539a292d3c18f3c9454f62" category="doc">定義SQL Server的還原策略</block>
   <block id="e120fc76fd23e12235b495bc6454901a" category="doc">SQL外掛程式所需的ONTAP 最低支援權限</block>
   <block id="4311a9aa7335c4d3eaea1abc109915e9" category="summary">在您使用SnapCenter 適用於Microsoft Windows的支援功能更新NetApp儲存系統後、您可以使用SnapCenter 「支援功能」圖形化使用者介面（GUI）或PowerShell Cmdlet、將資源移轉至NetApp儲存系統、或從一個NetApp LUN移轉至另一個NetApp LUN。</block>
   <block id="1da241185bd7824666c55b0362d4f620" category="doc">將資源移轉至NetApp儲存系統</block>
@@ -6857,8 +6854,6 @@
   <block id="0129ab4e23da78e3b3d44732592d15ea" category="list-text">執行下列Cmdlet來更新SnapCenter Sf1中的AD FS中繼資料：</block>
   <block id="97088f26ec75cb4d55c4fe5eeb3b62b4" category="section-title">更新SnapCenter 功能不支援MFA中繼資料</block>
   <block id="ac82039d46e3be923c813d3d4c5456e4" category="paragraph">每當有任何修改ADFS伺服器（例如修復、CA憑證續約、DR等）時、您就應該更新SnapCenter AD FS中的功能完善的MFA中繼資料。</block>
-  <block id="56ec825045a003fc115765658ea8b639" category="list-text">按一下*信賴廠商信任*。</block>
-  <block id="83e84b83a6a686044df5e13021693e95" category="list-text">在建立SnapCenter 的依賴方信任上按一下滑鼠右鍵、然後按一下「*刪除*」。</block>
   <block id="d929cc2f30ed7ebb91266d0b79b5f2cf" category="paragraph">隨即顯示使用者定義的信賴關係人信任名稱。</block>
   <block id="18231d11def74e66e747d2eb30fc1c50" category="list-text">啟用多因素驗證（MFA）。</block>
   <block id="a606674f3f6a9cee6f0ddf2eef03b07b" category="section-title">停用多因素驗證（MFA）</block>
@@ -7399,7 +7394,6 @@
   <block id="c8010626798701f4dd6505ffd8c7bab3" category="paragraph">您可以使用 PowerShell 命令為 SnapCenter 伺服器啟用 MFA 功能。</block>
   <block id="65b2ac31e28fbe23df3871ad716e40c2" category="list-text">使用為 SnapCenter 伺服器啟用 MFA<block ref="2eb01e8a95b53a60b13860ce5cac5104" prefix=" " category="inline-code"></block> Cmdlet。</block>
   <block id="b73f485c1067e4b3168b292142131855" category="inline-link">在多個索引標籤中同時嘗試登入會顯示 MFA 錯誤</block>
-  <block id="9e4f9470d66f1730ad7525f9043126be" category="paragraph">如需疑難排解資訊、請參閱<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>。</block>
   <block id="b3844eddf099b8f80b95a7c68ca22ae5" category="list-text">停用 MFA 、並清除使用啟用 MFA 時所建立的組態檔案<block ref="2eb01e8a95b53a60b13860ce5cac5104" prefix=" " category="inline-code"></block> Cmdlet。</block>
   <block id="b31ad42cda3bd1bc7787fd71d2a175bf" category="summary">您可以使用 REST API 、 PowerShell 和 sccli 介面來設定 MFA 。</block>
   <block id="0699cec0b36b38a01a2c7453df793209" category="doc">使用 PowerShell 、 sccli 和 REST API 在 SnapCenter 伺服器中設定 MFA</block>
@@ -7898,9 +7892,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="8ffddc72407882a56963d8f378c8a456" category="list-text">主儲存設備更新</block>
   <block id="9f4800cf67d29558e0e5678693afc837" category="paragraph">支援儲存技術更新、以新儲存設備取代主要儲存設備。您無法將現有的次要儲存設備轉換為主要儲存設備。</block>
   <block id="1e1065b586c984207ccf5533c1320669" category="list-text">次要儲存設備更新</block>
-  <block id="3d31d63019c8a7405127998ac1be0ceb" category="paragraph">其他支援的案例包括：</block>
-  <block id="0985fc6b1b51806986eb62030f325040" category="list-text">SVM 名稱變更</block>
-  <block id="fc957d9228b0c0b7e2969feb8f831113" category="list-text">Volume 名稱變更</block>
   <block id="7fd4a62a4b2e1acfeaddfc8e7f2832c8" category="section-title">更新主儲存設備的備份</block>
   <block id="ff8ce159bd650a518bc9706cce5196da" category="paragraph">當儲存設備技術更新時、您應執行儲存技術更新 API 或 Cmdlet 、以更新 SnapCenter 中的舊備份、並提供新的儲存詳細資料。</block>
   <block id="e1efdab7eb1b670b3a9bd8ace49c4b03" category="list-text">將資料從舊儲存設備移轉至新儲存設備。</block>
@@ -10064,4 +10055,9 @@ Snapshot 作業。</block>
   <block id="888e5b40ea166427f96db1a9c08af7fc" category="sidebar">SnapCenter Software 6.1 文件</block>
   <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">物件儲存備份不支援 Oracle 和 SAP HANA 裝載和目錄工作流程，但支援快照。</block>
   <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">物件儲存備份不支援 Oracle PDB 複本，但快照支援 Oracle PDB 複本。</block>
+  <block id="6eec14240810faadbd60c3ec98b543e7" category="paragraph">共用磁碟並非使用Windows的外掛程式建立。您應該建立共享LUN、然後將其新增至叢集中的每個虛擬機器。如需相關資訊，請參閱<block ref="0564b16166a6e24aa234d21e5bcdc18a" category="inline-link-rx"></block>。</block>
+  <block id="744d48cfa6032e04d109166f7ff6aeaf" category="paragraph">如需疑難排解資訊，請參閱<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>。</block>
+  <block id="a141599a0eec0e6d9aea907fc97ea039" category="list-text">選擇 * 信賴方信任 * 。</block>
+  <block id="458f1b484cf2f93e8e2f35b3f5a3b94a" category="list-text">在為 SnapCenter 建立的信賴方信任上按一下滑鼠右鍵，然後選取 * 刪除 * 。</block>
+  <block id="c6cd54ad2b3bca5fe6357919d1ec62e7" category="list-text">您應該安裝 ASP.NET Core Runtime 8.0.12 （以及所有後續的 8.0.x 修補程式）代管 Bundle 和 PowerShell 7.4.2 或更新版本。</block>
 </blocks>

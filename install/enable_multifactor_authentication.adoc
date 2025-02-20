@@ -116,7 +116,7 @@ path參數指定將MFA中繼資料檔案儲存到SnapCenter Sof the Server主機
 
 也可使用REST API來啟用「支援MFA」功能。SnapCenter
 
-如需疑難排解資訊、請參閱 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["在多個索引標籤中同時嘗試登入會顯示 MFA 錯誤"]。
+如需疑難排解資訊，請參閱 https://kb.netapp.com/mgmt/SnapCenter/SnapCenter_MFA_login_error_The_SAML_message_response_1_doesnt_match_the_expected_response_2["在多個索引標籤中同時嘗試登入會顯示 MFA 錯誤"]。
 
 
 
@@ -143,8 +143,8 @@ path參數指定將MFA中繼資料檔案儲存到SnapCenter Sof the Server主機
 .步驟
 . 在AD FS主機中、開啟AD FS管理精靈、然後執行下列步驟：
 +
-.. 按一下*信賴廠商信任*。
-.. 在建立SnapCenter 的依賴方信任上按一下滑鼠右鍵、然後按一下「*刪除*」。
+.. 選擇 * 信賴方信任 * 。
+.. 在為 SnapCenter 建立的信賴方信任上按一下滑鼠右鍵，然後選取 * 刪除 * 。
 +
 隨即顯示使用者定義的信賴關係人信任名稱。
 

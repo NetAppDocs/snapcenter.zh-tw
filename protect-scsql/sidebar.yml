@@ -44,8 +44,6 @@ entries:
       url: "/protect-scsql/concept_when_to_schedule_verification_jobs.html"
   - title: SQL Server的還原策略
     entries:
-    - title: 定義SQL Server的還原策略
-      url: "/protect-scsql/task_define_a_restoration_strategy_for_sql_server.html"
     - title: 還原作業的來源和目的地
       url: "/protect-scsql/reference_sources_and_destinations_for_a_restore_operation.html"
     - title: 支援的SQL Server恢復模式SnapCenter
