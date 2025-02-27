@@ -9850,8 +9850,6 @@ Snapshot 作業。</block>
   <block id="5444e411b400fd0c1d17ad74b8d82bff" category="paragraph">+.NET Framework 8.0.12 Features+</block>
   <block id="8c16affd19f6d2610f039e0bf745fe04" category="list-text">NET Framework 8.0.12 （以及所有後續的 8.0.x 修補程式）</block>
   <block id="36ab4d2d051baac565e5a2261da2c98d" category="admonition">ASP.NET 核心需要 IIS_IUSRS 來存取 Windows 上 SnapCenter Server 中的暫存檔系統。</block>
-  <block id="78f63cd4c898dfa4fb35e6755c784b8e" category="list-text">SnapCenter 6.1 支援執行 ONTAP 9.16.1 的 NetApp ASA R2 系統（ ASA A1K ， ASA A70 和 ASA A90 ）。</block>
-  <block id="a96666c23540f7c6d0da8ca6ab7b57d5" category="paragraph">ASA R2 系統為所有 Flash 平台上建置的僅 SAN 環境提供統一化的硬體與軟體解決方案。ASA R2 系統在實作其儲存層、支援的通訊協定和 ONTAP 特性時、會與其他 ONTAP 系統（ ASA 、 AFF 和 FAS ）不同。</block>
   <block id="1bb71df56b7ae979d57d7cedfffe49f5" category="inline-link">ASA R2 說明文件</block>
   <block id="5cbf1300bdf2b6a56588b252b251a998" category="paragraph">如需 ASA R2 系統的相關資訊，請參閱<block ref="d94cf7303df26cfd7838987d91518061" category="inline-link-rx"></block>。</block>
   <block id="de14602aec2aa05e977975d7781f0163" category="paragraph">如需權限清單的相關資訊，請參閱 <block ref="d791b2cd4a5fa29c456ec537e56c834d" category="inline-link-macro-rx"></block>。</block>
@@ -10060,4 +10058,6 @@ Snapshot 作業。</block>
   <block id="a141599a0eec0e6d9aea907fc97ea039" category="list-text">選擇 * 信賴方信任 * 。</block>
   <block id="458f1b484cf2f93e8e2f35b3f5a3b94a" category="list-text">在為 SnapCenter 建立的信賴方信任上按一下滑鼠右鍵，然後選取 * 刪除 * 。</block>
   <block id="c6cd54ad2b3bca5fe6357919d1ec62e7" category="list-text">您應該安裝 ASP.NET Core Runtime 8.0.12 （以及所有後續的 8.0.x 修補程式）代管 Bundle 和 PowerShell 7.4.2 或更新版本。</block>
+  <block id="088d994d276e3b7e6090022acb48aaf7" category="list-text">SnapCenter 6.1 支援執行 ONTAP 9.16.1 的 NetApp ASA R2 系統。</block>
+  <block id="a1c01ec21d4b8df32fe29facff7e7688" category="paragraph">ASA R2 系統為所有 Flash 平台上建置的僅 SAN 環境提供統一化的硬體與軟體解決方案。</block>
 </blocks>
