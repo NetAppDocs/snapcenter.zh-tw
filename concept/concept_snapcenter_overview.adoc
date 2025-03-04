@@ -26,7 +26,7 @@ summary: 支援簡單、集中化、可擴充的平台、可為在混合雲任�
 
 * 內部部署以保護下列項目：
 +
-** 位於 ONTAP FAS 、 AFF 或所有 SAN 陣列（ ASA ）主要系統上、並複寫到 ONTAP FAS 、 AFF 或 ASA 次要系統的資料
+** ONTAP FAS ， AFF 或 ASA 主要系統上的資料，並複寫至 ONTAP FAS ， AFF 或 ASA 次要系統
 ** 資料位於不整系統上ONTAP Select
 ** 位於 ONTAP FAS 、 AFF 或 ASA 主要和次要系統上、並受本機 StorageGRID 物件儲存保護的資料
 ** ONTAP ASA R2 主要和次要系統上的資料

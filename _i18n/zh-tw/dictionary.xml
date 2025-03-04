@@ -148,7 +148,6 @@
   <block id="a16b9f3426d9cfca29c06a875b667023" category="admonition">如果您排定在上午2：00、則在夏令時間（Dst）期間不會觸發排程。</block>
   <block id="5d920b501536441ea32ecc24679c72a2" category="cell">如果您想要...</block>
   <block id="c1325f6903ebb5ebb2bb519a73ddb1b0" category="cell">然後...</block>
-  <block id="225ea283dca2590a2a542a782ac56927" category="admonition">對於使用率為1018的ONTAP 資源、如使用率為0、9.4或更新版本、ONTAP 而使用率為254的資源、如使用率為0、9.3或更新版本。如果保留設定的值高於基礎ONTAP 版支援的值、則備份將會失敗。</block>
   <block id="21f831502a413a739e20cbf9f2eefe54" category="cell">針對此欄位...</block>
   <block id="5e2ad6fd9deb412d871137094ee43ef0" category="cell">執行此動作...</block>
   <block id="53ef3d7584a54991b60fba81e93d201f" category="paragraph">*在建立本機Snapshot複本之後更新SnapMirror *</block>
@@ -298,7 +297,6 @@
   <block id="ee951528ab77b8d58d90d5ab615dd4aa" category="paragraph">外掛程式的名稱。允許使用英數字元。例如DB2、MySQL、MongoDB</block>
   <block id="ff1642648bf25086a549307da08e818d" category="paragraph">對於以原生樣式建立的外掛程式、請確定您未提供檔案副檔名。例如、如果外掛程式名稱為MongoDB.sh、請將名稱指定為MongoDB。</block>
   <block id="34b6cd75171affba6957e308dcbd92be" category="paragraph">版本</block>
-  <block id="96472ac7d17b3fa637c939c5dbe7aa2c" category="paragraph">外掛程式版本。可同時包含主要和次要版本。例如1.0、1.1、2.0、2.1</block>
   <block id="3b868ced6f60acf5ee565ac021d42941" category="paragraph">顯示名稱</block>
   <block id="0c5cf3f9437d836d57e97dfa37ce8453" category="paragraph">顯示在SnapCenter Is供 伺服器中的外掛程式名稱。如果寫入相同外掛程式的多個版本、請確認所有版本的顯示名稱都相同。</block>
   <block id="54d2dab039ee358ddca7d63d0f413e56" category="paragraph">PluginType</block>
@@ -364,7 +362,6 @@
   <block id="6919c26b69875a76335f5a1dd643e508" category="inline-link">適用於所有作業系統的Java下載</block>
   <block id="9226092112d9484949841b47e3b0500e" category="paragraph"><block ref="9226092112d9484949841b47e3b0500e" category="inline-link-rx"></block></block>
   <block id="04a9cf8066f01cc2ca9e6a6e6b25a340" category="summary">所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter</block>
-  <block id="f787fb91924061fe015dd390115ff7b0" category="cell">All Access命令：ONTAP 要求最低權限才能執行支援</block>
   <block id="f29e68a537349e874e09abd00f21d020" category="paragraph">事件generate-autosup-log</block>
   <block id="e3890e588ffa00d05486b60aaec37e39" category="paragraph">工作歷史記錄顯示</block>
   <block id="5b4f487acd2a1e48d6c43939945c2783" category="paragraph">工作停止</block>
@@ -2009,10 +2006,7 @@
   <block id="691fa56b0f1b19ab3099a9a59ce15434" category="paragraph">此範例顯示特定工作ID的工作摘要報告：</block>
   <block id="ec053c308e147d0958e28a0ea54218e5" category="summary">如果您需要重新複本複本複本、例如複本毀損時、您可以使用SnapCenter 更新功能重新複製到最新的備份。</block>
   <block id="aabc88376ed488867dcbd5ebe7ee5f24" category="doc">已重新建立被動式Exchange節點複本</block>
-  <block id="95ae09e6950aff657a0ec2b6e13f37f0" category="list-text">您必須使用SnapCenter 的是適用於Exchange 4.1或更新版本的版本、以及外掛程式。</block>
-  <block id="48d90a5e363abeb3058a0de5e6f65119" category="paragraph">4.1之前的版本不支援重新置放複本SnapCenter 。</block>
   <block id="b2570b05b44ba71c96d94339ccd4972a" category="list-text">您必須已建立要重新建立的資料庫備份。</block>
-  <block id="6bdff70e9de2a356cc9745518bb414e7" category="cell">*最佳實務做法：*為了避免節點之間的落後、建議您在執行重新分頁作業之前先建立新的備份、或是選擇具有最新備份的主機。</block>
   <block id="08367630ec592ba2c7487a0cf5b3bbe7" category="paragraph">重新建立單一資料庫</block>
   <block id="02ef6de5e20a0597f2ed1b57dd05fdaa" category="paragraph">在DAG中重新建立資料庫</block>
   <block id="b83818b703f4f22e49bcfef1709247cc" category="paragraph">從「檢視」清單中選取「*資料庫可用度群組*」。</block>
@@ -2573,7 +2567,6 @@
   <block id="ba7cbf773bd0f0004c4d97fba5034cdb" category="summary">您應該知道支援的儲存系統、應用程式和資料庫。</block>
   <block id="1e1ed4854c77f284f3e97b0843b6e570" category="doc">支援的儲存系統與應用程式</block>
   <block id="ed3518bf4a914f119b6bdecebdd5768f" category="paragraph">您應該知道支援的儲存系統、應用程式和資料庫。</block>
-  <block id="213ee580d561421ab50f46ea0b22affa" category="list-text">支援Amazon FSX for NetApp功能、保護資料不受來自於更新版的支援。SnapCenter ONTAP SnapCenter</block>
   <block id="dc39fb71951ab3bfb20cab9c1beb9446" category="paragraph">如果您使用Amazon FSX for NetApp ONTAP Sfor NetApp的話、請確保SnapCenter 將支援此功能的支援伺服器主機外掛程式升級至4.5 P1或更新版本、以執行資料保護作業。</block>
   <block id="cc788b7e72b2a734dd0985bd1e0e9fe3" category="inline-link">Amazon FSX for NetApp ONTAP 的支援文件</block>
   <block id="6ae4072dd3f83211384c8e5499a7935c" category="paragraph">如需Amazon FSX for NetApp ONTAP 功能的相關資訊、請參閱<block ref="6acd76e3ffef3be13d939109e0593e26" category="inline-link-rx"></block>。</block>
@@ -2649,7 +2642,6 @@
   <block id="f8ab61d03ef9c157f83d8967c5325f72" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_road_Name -cmd目錄名稱"vserver"-access readonly」</block>
   <block id="32b2dd2ad5bcd04617f8049be39f3a4e" category="list-text">「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver EXECT-policy」-access all」</block>
   <block id="070716b587ce6b006f4906a8222fc505" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「vserver iSCSI」-access all」</block>
-  <block id="6c778a52dc5f13a6dd5e629e65cf1082" category="summary">當儲存系統執行叢集式的動作時、您可以使用安全登入命令來新增ONTAP 一個無法使用的RBAC角色ONTAP 。</block>
   <block id="a69e754efca1b9623b6b0f65a2d8dc73" category="doc">使用ONTAP 安全登入命令新增一個RBAC角色</block>
   <block id="474d9e4d882e646ea038c1c3f1057d2e" category="list-text">在您為ONTAP 執行叢集ONTAP 式功能的儲存系統建立一套不必要的RBAC角色之前、您必須先識別下列項目：</block>
   <block id="ebe591ae9d43ae4398d95940e9fd9562" category="list-text">您要執行的工作</block>
@@ -2660,9 +2652,6 @@
   <block id="dee6c2623edcbb8e68bfe81ea75668fa" category="paragraph">您必須一律先指派所有存取權限。</block>
   <block id="1deb5fee27bfdda7d20d4c10f6e8f273" category="list-text">指派角色給使用者。</block>
   <block id="407e9947315902e28583d3951a4332d4" category="list-text">根據SnapCenter 您的不確定插件是連接至整個叢集的叢集管理員IP、還是直接連接至叢集內的SVM、而有所不同。</block>
-  <block id="b0d5e2e1ad5a75d6a2a8f8b07fde4928" category="paragraph">為了簡化儲存系統上的角色設定、您可以使用Data ONTAP NetApp社群論壇上發佈的RBAC User Creator for Soliding工具。</block>
-  <block id="8e841d21791a29493ed9fc18a2573067" category="paragraph">此工具會自動ONTAP 正確處理設定功能不正確的功能。例如、RBAC User Creator for Data ONTAP BIOS工具會自動以正確順序新增權限、以便先顯示所有存取權限。如果您先新增唯讀權限、然後新增全存取權限、ONTAP 則將全存取權限標示為重複、並予以忽略。</block>
-  <block id="5f1f3816baaf1ae27261430125d83764" category="admonition">如果您稍後升級SnapCenter 了版本的功能、ONTAP 應該重新執行RBAC User Creator for Data ONTAP BIOS工具、以更新您先前建立的使用者角色。為SnapCenter 舊版的版本的使用者角色無法ONTAP 在升級版本中正常運作。當您重新執行此工具時、它會自動處理升級作業。您不需要重新建立角色。</block>
   <block id="9dc5053bca32e6394932747f3adab2c4" category="inline-link">《Administrator驗證與RBAC電源指南》（英文）ONTAP</block>
   <block id="cf450319b4b50a20dcf243d6273acbf4" category="paragraph">如需設定ONTAP RBAC角色的詳細資訊、請參閱<block ref="4054a3747c1ed1604c443c75434e693a" category="inline-link-rx"></block>。</block>
   <block id="eaa07c06fe679751494bfd4b2951b580" category="list-text">在儲存系統上、輸入下列命令以建立新角色：</block>
@@ -2915,7 +2904,6 @@
   <block id="ed996e97427b9382e039c0a5dde5d493" category="list-text">使用ONTAP flexfline命令列登入控制器。</block>
   <block id="1220394f5402b4332338e11150062d91" category="list-text">輸入system show -instance命令、然後檢閱輸出以找出控制器序號。</block>
   <block id="065b83de49a875bb4bd71dbe16fad428" category="list-text">記錄序號。</block>
-  <block id="da68fe81ae35bfda8d512b213d4ea64f" category="paragraph">如果您使用FAS 的是功能不全或AFF 功能不全的儲存設備、您可以先SnapCenter 從NetApp支援網站擷取以支援控制器為基礎的授權、然後再使用ONTAP 功能不全的命令列進行安裝。</block>
   <block id="315713e21026e04eaaa2b9a3821e4c3d" category="paragraph">如果您未輸入有效的認證資料、則不會傳回任何資訊供您搜尋。</block>
   <block id="253fa4a7008b4934e4b20001065ef254" category="list-text">您應該有控制器序號。</block>
   <block id="b5ddaee766816307a016e7736f50313d" category="paragraph">隨即顯示指定控制器的授權清單。</block>
@@ -3288,7 +3276,6 @@
   <block id="ba616d0f67fed92e5664508021cbd276" category="list-text">支援NFS、iSCSI、Fibre Channel（FC）、RDM、VMDK over NFS和VMFS、以及ASM over NFS、SAN、RDM和VMDK</block>
   <block id="abd96a9e67c87700d0ddbbf79ca1ad42" category="list-text">支援ONTAP 精選LUN地圖（SLM),功能如所述</block>
   <block id="fcc8a219537ae52cbcb4de4b42305ef7" category="paragraph">根據預設、「SLM-功能」會定期探索沒有最佳化路徑的LUN、並加以修正。您可以修改位於/var/opt/snapcenter/SCU/依此類推 的scu.properties檔案中的參數來設定SLM..</block>
-  <block id="1988e9c8cf124cb346a67d52ea613567" category="inline-link">《SAN管理指南》（英文）ONTAP</block>
   <block id="dae71de3db9b8ca8a505e2ba72dca103" category="summary">還原與還原工作流程包括規劃、執行還原與還原作業、以及監控作業。</block>
   <block id="d75122950244af54ca4e4eec97be936c" category="doc">使用UNIX命令還原及還原Oracle資料庫</block>
   <block id="22b572eba58965669b192b1084592874" category="paragraph">您應該執行下列命令、以建立與SnapCenter 該伺服器的連線、列出備份並擷取其資訊、以及還原備份。</block>
@@ -4118,7 +4105,6 @@
   <block id="af50d714aae8420f1fba06fef93a651c" category="list-text">然後從主機卸載複製的檔案系統、並從ONTAP 停止執行複製的磁碟區。</block>
   <block id="f3d8e7bed549389cd494b6bfbb85a42f" category="admonition">若為Flex ASM設定（其中基數小於RAC叢集中的節點數）或VMDK或RDM上的ASM RAC資料庫、則僅支援連線與複製還原方法。</block>
   <block id="08a1ae55d996ee98dd80c5c4c62d96d9" category="paragraph">即使您已強制啟用就地還原、SnapCenter 在下列情況下、也會執行連線與複製還原：</block>
-  <block id="10dba007e44356285cbd9088246559ad" category="list-text">從二線儲存系統還原、Data ONTAP 如果不能在8.3之前還原</block>
   <block id="a0a19d4dbaa7f0338115cde34d5f3fac" category="list-text">在未設定資料庫執行個體的Oracle RAC設定節點上、會出現ASM磁碟群組還原</block>
   <block id="ec96fc3f26a5e3def34349a5ba3106a0" category="list-text">在Oracle RAC設定中、如果ASM執行個體或叢集執行個體未執行、或對等節點當機、則會在任何對等節點上執行</block>
   <block id="21f04616c9f47b98a118438980bfa7c0" category="list-text">僅還原控制檔</block>
@@ -4128,7 +4114,6 @@
   <block id="1b143938aaf5bb9e6ff4dad55436c4c6" category="list-text">新節點會新增至Oracle RAC、SnapCenter 而不知悉最近新增的節點</block>
   <block id="8fe5511a781b8c0eb456871713250421" category="section-title">原地還原</block>
   <block id="d4f49b060e7bae27b677a5d8d6a56473" category="paragraph">如果資料庫配置與備份類似、而且尚未對儲存設備和資料庫堆疊進行任何組態變更、則會執行就地還原、在ONTAP 其中還原檔案或LUN。作爲就地還原方法的一部分、支援僅單一檔案還原（SFSR）SnapCenter SnapRestore 。</block>
-  <block id="d1977d8080b26c1ee878aaa6c61e9d31" category="admonition">支援從次要位置進行就地還原的支援（8.3或更新版本）Data ONTAP 。</block>
   <block id="37349ec346f2d78876e8b6f263b4cb20" category="paragraph">如果您要在資料庫上執行就地還原、請確定ASM磁碟群組上只有資料檔案。您必須在ASM磁碟群組或資料庫實體結構進行任何變更之後建立備份。執行就地還原之後、磁碟群組將包含與備份時相同的資料檔案數目。</block>
   <block id="45fbe01b3c6942c8f893e08fa3c65f19" category="paragraph">當磁碟群組或掛載點符合下列條件時、系統會自動套用就地還原：</block>
   <block id="003fdb57b0f7d55f85205faea9f2db43" category="list-text">備份後不會新增任何資料檔（外部檔案檢查）</block>
@@ -4312,7 +4297,6 @@
   <block id="1322a86c20d88dd26355642efba68105" category="list-text"><block ref="1322a86c20d88dd26355642efba68105" category="inline-link-rx"></block></block>
   <block id="4cdff21e1a3b3a11f16dc574421a1599" category="doc">分割Oracle資料庫複製</block>
   <block id="b1b82801e9c78c50ebcf99fde0aea87a" category="list-text">當您分割複本時、複本的備份複本會被刪除。</block>
-  <block id="cba97cc8f5b2bb7297dd2360ae8b024a" category="list-text">如需有關實體複本分割作業限制的資訊、請參閱<block ref="3ae98799f9586e965a749204c2b3e8f9" category="inline-link-rx"></block>。</block>
   <block id="c073ee3bf31639ca8cd5dfdf2fe18185" category="paragraph">如果SMCore服務重新啟動、而執行實體複本分割作業的資料庫在「資源」頁面中列為實體複本、則實體複本分割作業將停止回應。您應該執行_stop-SmJob_ Cmdlet來停止複製分割作業、然後重試複製分割作業。</block>
   <block id="103e35e260868e1aa1c36274a7301158" category="paragraph">如果您想要較長的輪詢時間或較短的輪詢時間來檢查實體複本是否分割、您可以在SMCoreServiceHost.exe.config檔案中變更CloneSplitStatusChecksollTime參數的值、以設定SMCore輪詢實體分割作業狀態的時間間隔。此值以毫秒為單位、預設值為5分鐘。</block>
   <block id="fbfa277a055cde6a44aa257516ef119c" category="admonition">如果正在進行備份、還原或其他實體複本分割、則複本分割啟動作業會失敗。只有在執行中的作業完成後、才應重新啟動複本分割作業。</block>
@@ -4996,7 +4980,6 @@
   <block id="7aa15b9ece3853d2adab83f8a1ac2fc0" category="paragraph">建立備份時、您也可以新增描述性標記來協助識別備份。相反地、如果您想要使用自訂的備份命名慣例、則必須在備份作業完成後重新命名備份。</block>
   <block id="b651b2481c776bf3bf9ea345a8be10ad" category="summary">當您準備備備備份或複製資源時、可以檢視一線與二線儲存設備上所有備份與複本的圖形化呈現。在「拓撲」頁面中、您可以看到可供所選資源或資源群組使用的所有備份和複本。您可以檢視這些備份與複製的詳細資料、然後選取這些資料以執行資料保護作業。</block>
   <block id="1b756b9da2644838105069f2ae8ca2a5" category="doc">在「拓撲」頁面中檢視相關的備份與複本</block>
-  <block id="ab4899518bdf2b09eb1ef12f3cb58429" category="list-text">如果您已從SnapCenter 還原1.1升級、則次要（鏡射或保存庫）上的複本不會顯示在「拓撲」頁面的「鏡射複本」或「保存庫複本」下。所有使用SnapCenter NetApp 1.1建立的複本、都會顯示在SnapCenter 本機版本下方、以支援NetApp 3.0。</block>
   <block id="a5034055581c83d2fec0b4b410e664f4" category="paragraph">「摘要卡」區段會顯示備份與複本的總數。僅限Oracle資料庫、Summary Card區段也會顯示記錄備份的總數。</block>
   <block id="80c82fe3ce8c148b5edc714385f5f5b1" category="paragraph">如果您使用SnapCenter 的是「還原自訂外掛程式」、則無法重新命名主要儲存系統上的備份。</block>
   <block id="890d45c40e49f2dabb2c7635de46d483" category="inline-image-macro">主儲存設備中的備份與複製拓撲檢視。</block>
@@ -5552,7 +5535,6 @@
   <block id="8e9c48fe78f7db8b873c1b8d90139e22" category="list-text">輸入_disable-SmDataCollectionEms_停用EMS資料收集。</block>
   <block id="446a2f14b20bdf1f8fabde0cb8e8b51f" category="section-title">開始EMS資料收集</block>
   <block id="4250a340e7b9c6a47392e8eb582132b9" category="paragraph">依預設、系統會啟用EMS資料收集功能、排定在安裝日期後每七天執行一次。如果您已停用、可以使用_Enable - SmDataCollectionEEMS _ Cmdlet再次啟動EMS資料收集。</block>
-  <block id="d06bfbc0749c176c2a7d908e8b92e373" category="paragraph">已授予儲存虛擬機器（SVM）使用者「事件產生自動支援記錄」權限。Data ONTAP</block>
   <block id="d4eebbbd9ad773c8069231c64b1463fd" category="list-text">輸入_Enable-SmDataCollectionEms_以啟用EMS資料收集。</block>
   <block id="e491daede62a6579dd942889f56f16d7" category="section-title">變更EMS資料收集排程和目標SVM</block>
   <block id="98e5542972b0ba06f813e4c68d3fec0b" category="paragraph">您可以使用PowerShell Cmdlet變更EMS資料收集排程或目標儲存虛擬機器（SVM）。</block>
@@ -6220,7 +6202,6 @@
   <block id="4621c32301e9db3796cade120966e4ac" category="paragraph">使用認證資料來驗證獲授權的使用者是否也擁有應用程式層級的權限。SnapCenter SnapCenter</block>
   <block id="1247a4f73aec617351c15da7677f2470" category="paragraph">同樣地、如果您要在Oracle資料庫上執行資料保護作業、而且資料庫主機中的作業系統（OS）驗證已停用、則必須使用Oracle資料庫或Oracle ASM認證來設定認證資料。根據作業情況、此伺服器會使用下列其中一種方法來驗證認證集。SnapCenter</block>
   <block id="880474ac5a13e7ace0b497d868bfcec8" category="section-title">VMware vSphere RBAC的插件SnapCenter</block>
-  <block id="f801aae5c222a63a7b4293067447308c" category="paragraph">如果您使用SnapCenter VMware vCenter外掛程式來提供VM一致的資料保護、vCenter Server會提供額外的RBAC層級。VMware支援vCenter Server RBAC和VMware RBAC外掛程式。SnapCenter Data ONTAP</block>
   <block id="924b38ecfddee0161d42ebb991f8e8a3" category="paragraph">如需相關資訊、請參閱<block ref="1ec180cad4f4e747c7ef776c635100ff" category="inline-link-rx"></block></block>
   <block id="fee7e83316f093eca52deec4c8b672ce" category="paragraph">您應該建立具有存取儲存系統所需權限的vsadmin帳戶。</block>
   <block id="f5e109b370464d84cabe080f73038355" category="inline-link-macro">以ONTAP 最低權限建立一個不含任何權限的叢集角色</block>
@@ -6627,7 +6608,6 @@
   <block id="ead2412064891fbb9b123e509e3e73da" category="paragraph">如需啟用MFA的資訊、請參閱 <block ref="5ec6b0ec41fc91e8184fa478c63adb14" category="inline-link-macro-rx"></block>。</block>
   <block id="cb7915cb66b1b1e301d1220e2e017bb5" category="list-text">Windows指令碼應位於外掛程式主機上。</block>
   <block id="13e879c5832931b24329a65364023ff4" category="admonition">預先編寫或後製指令碼路徑不應包含磁碟機或共用區。路徑應相對於指令碼路徑。</block>
-  <block id="ed00a9e405426a3469fc285a29a849ab" category="list-text">針對Microsoft SQL Server的支援功能、適用於Microsoft Exchange Server的支援功能、以及適用於Microsoft Windows的支援功能、建議您將伺服器和外掛程式主機升級至4.7版、以便運行指令碼路徑。SnapCenter SnapCenter SnapCenter</block>
   <block id="d707739d912438c4a86ec02ff6529da1" category="paragraph">針對原則中已啟用的預先編寫和後製指令碼的現有備份與驗證排程、備份作業會在升級後繼續運作。</block>
   <block id="8159134911a3775f77dfaeafb846c0d3" category="paragraph">在「*工作詳細資料*」頁面中、有一則警告訊息建議客戶將指令碼複製到指令碼路徑、然後編輯原則、以提供相對於指令碼路徑的路徑。對於複製生命週期工作、會在子工作層級顯示警告訊息。</block>
   <block id="adebd9b53fa49781be98cf46c0afc646" category="summary">說明如何升級SnapCenter Sfor Server和外掛程式、以及支援的升級途徑</block>
@@ -6642,7 +6622,6 @@
   <block id="07a2a06d39605aa9ff4e7d9c550b1f32" category="admonition">在將掛載路徑列為外部記錄位置之前、您應該先確認其路徑和內容。</block>
   <block id="75274e3b5c9387e61941a9dbd37f3bda" category="list-text">支援歸檔記錄管理（ALM）以進行還原和複製作業</block>
   <block id="5bc73a697938fe752e1c9b686f4c9bca" category="list-text">您可以將啟用午餐路徑監控參數的值設為假、以停用此功能。</block>
-  <block id="bb05b6e20b4cf14467757d0be8887ff0" category="list-text">您可以指定LUN路徑自動固定的頻率、方法是將lunpath_監 控時間間隔參數的值（以小時為單位）指派給lunpath_監 控時間間隔參數。如需有關SLM,請參閱<block ref="cb74c6abbb61537bc6ce7c3d4eb82b8a" category="inline-link-rx"></block>。</block>
   <block id="5773f6440e36169f1e12e5bf94061c09" category="list-text">支援Linux上的非揮發性記憶體Express（NVMe）</block>
   <block id="258f389f9aaafec4ce1ef8c36ad97497" category="list-text">NVMe使用者必須安裝在主機上。</block>
   <block id="ab89efb871fba5e381bbef07f0387285" category="paragraph">您必須安裝NVMe util,才能複製或掛載到替代主機。</block>
@@ -7209,7 +7188,6 @@
   <block id="392e651b70e91641288713738f526ce0" category="section-title">步驟 6 ：移除試用授權</block>
   <block id="46d55a8aefdec15a8ce44087c8123826" category="inline-link">作業失敗、錯誤無法探索 LUN 的裝置</block>
   <block id="24642a08e354f43168ca4f1178850f84" category="list-text">您應確保 LUN 未使用由混合式傳輸協定 iSCSI 和 FC 組成的 iGroup 、對應至 AIX 主機。如需詳細資訊、請參閱<block ref="94f247529a6b6f563b3a8d4772877431" category="inline-link-rx"></block>。</block>
-  <block id="36fecb1daf18c8eeaacbcc8cdc70f4a6" category="paragraph">ONTAP 主要和次要可以是 ONTAP FAS 、 AFF 、 All SAN Array （ ASA ）、 Select 或 Cloud ONTAP 。</block>
   <block id="d21fbb2a5ce79a2a4ef0780b73023b2e" category="paragraph">VM 主機上的實體和 NFS 直接掛載（不支援 VMDK 和 RDM LUN ）。</block>
   <block id="f2688d5a483bee7fcbd80a4e666fc088" category="inline-link">主機公用程式文件</block>
   <block id="8fefbd4e8dfd1fb79f89bc04af5e8001" category="paragraph">如需相關資訊、請參閱<block ref="ab48d7186c8a78dfaf0e19af923f0daf" category="inline-link-rx"></block>。</block>
@@ -7217,7 +7195,6 @@
   <block id="b4cbac9ded897ac6c04027b59ec07fad" category="paragraph">雙向 SSL 通訊可保護 SnapCenter 伺服器與外掛程式之間的相互通訊。</block>
   <block id="48462a95fd8685081e58f7c123971e5b" category="section-title">憑證型驗證概觀</block>
   <block id="dbb44863e91bacd01eafa49136b071d2" category="paragraph">憑證型驗證可驗證嘗試存取 SnapCenter 外掛主機之個別使用者的真實性。使用者應匯出不含私密金鑰的 SnapCenter 伺服器憑證、並將其匯入外掛程式主機信任存放區。只有啟用雙向 SSL 功能時、憑證型驗證才會生效。</block>
-  <block id="f6ce44442588fc16e1d7cc2d3995eff2" category="list-text">位於 ONTAP FAS 、 AFF 或所有 SAN 陣列（ ASA ）主要系統上、並複寫到 ONTAP FAS 、 AFF 或 ASA 次要系統的資料</block>
   <block id="f5c37d824040662f50cbb8a32d77182d" category="list-text">ONTAP FAS 、 AFF 或 ASA 主要系統上的資料、並複寫至 Cloud Volumes ONTAP</block>
   <block id="42324a0900df941e87541a0b972b834f" category="admonition">如果主機已經是工作群組的一部分、並且變更為另一個網域、則 SnapCenter 不支援將相同的主機（外掛主機）新增至 SnapCenter 。
 如果您想要新增相同的主機、您應該從 SnapCenter 移除該主機、然後重新新增該主機。</block>
@@ -7329,8 +7306,6 @@
   <block id="b76827cae3bbfa9b3f16f50aaeeb8b94" category="paragraph">以基本驗證標頭傳送</block>
   <block id="5cd6f358fe0cd7802054f95932163e71" category="paragraph">在 *Advance Options* 標籤中、新增與 Callback URL 值相同的資源欄位、此值在 JWT Token 中會顯示為「 aud 」值。</block>
   <block id="28f9c2d1c67ea659588c7bfc2680e96d" category="summary">如果您使用的是 FAS 、 AFF 或 ASA 儲存控制器、則需要 SnapCenter 標準控制器型授權。</block>
-  <block id="e6c51d0ec467f9742ef4d9ed2bfd5390" category="paragraph">如果您使用的是 FAS 、 AFF 或所有 SAN 陣列（ ASA ）儲存控制器、則需要 SnapCenter 標準控制器型授權。</block>
-  <block id="6b22646455acfe9efc53d4f10b58a5fe" category="list-text">可透過 ONTAP 系統管理員或儲存叢集命令列、將其直接新增至 FAS 、 AFF 或 ASA 儲存控制器</block>
   <block id="4675b365d16842b130752bb3fa27614d" category="paragraph">您可以使用 SnapCenter GUI 來檢視 SnapManager 套件授權是安裝在 FAS 、 AFF 或 ASA 主儲存系統上、並識別哪些儲存系統可能需要 SnapManager 套件授權。SnapManager 套件授權僅適用於主要儲存系統上的 FAS 、 AFF 和 ASA SVM 或叢集。</block>
   <block id="bf8a4dfe438069855e34bbd2f8ec59d7" category="list-text"><block ref="1b6b7d2df953b943aed63061cd428e2b" category="inline-image-macro-rx" type="image"></block> 表示 SnapManager 套件授權已安裝在 FAS 、 AFF 或 ASA 主儲存系統上。</block>
   <block id="982c80480700680b3b8dc4d7d03053af" category="list-text"><block ref="1ca20f925112adf63235e58f0e4483cd" category="inline-image-macro-rx" type="image"></block> 表示 SnapManager 套件授權未安裝在 FAS 、 AFF 或 ASA 主儲存系統上。</block>
@@ -7376,7 +7351,6 @@
   <block id="76348cf9ddb92acc65440418b185db2d" category="paragraph">檔案名稱</block>
   <block id="00d7eaf591094c1fc261342becc7f305" category="paragraph">按一下 * 瀏覽 * 並指定儲存憑證的檔案路徑、然後按一下 * 下一步 * 。</block>
   <block id="6071c6433af7f31e998f8d748728b519" category="admonition">SnapCenter HA 組態和 SnapCenter Plug-in for VMware vSphere 不支援憑證型驗證。</block>
-  <block id="e9f8485c0c52ec084887222481b5cb66" category="paragraph">FAS 、 AFF 、 All SAN Array （ ASA ）所需的</block>
   <block id="8db273592868b7d940261fe8347b32b4" category="inline-link-macro">CPS-00507</block>
   <block id="802a2285a60e079b52f32ba2c3140d0d" category="paragraph">NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA ）。如需詳細資訊、請參閱 <block ref="5a98ce97c5b40ecef6f220dc57d4f14a" category="inline-link-macro-rx"></block>。NetApp 將持續支援已於 2020 年 6 月 24 日推出的行銷零件編號、以支援購買信箱容量、維護和支援的客戶。</block>
   <block id="03da3b5726a1efd6df1fc511966c89a6" category="paragraph">NetApp 單一信箱恢復是 Ontrack 提供的合作夥伴產品。Ontrack PowerControl 提供的功能與 NetApp 單一信箱恢復功能類似。客戶可從 Ontrack （透過 licensingteam@ontrack.com ）取得新的 Ontrack PowerControl 軟體授權、以及 Ontrack PowerControl 的維護與支援續約、以便在 2023 年 5 月 12 日結束後進行精細信箱恢復。</block>
@@ -7389,7 +7363,6 @@
   <block id="b5cfca9930b60b6f87f38ad0e8d31765" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="b1b73520f4b4ea4d2583cc59029bbe0d" prefix=" " category="inline-code"></block></block>
   <block id="1a415d60c0654233b8e03281525e6b18" category="admonition">儲存系統名稱（不包括網域名稱）必須有 15 個或更少的字元、而且名稱必須可解析。若要建立名稱超過15個字元的儲存系統連線、您可以使用Add-SmStorageConnectionPowerShell Cmdlet。</block>
   <block id="542082ddc576a51ede49e11ac68a28ff" category="paragraph">如果您在 SnapCenter 中新增了 SVM 、則使用者需要從下拉式清單中手動選取平台類型。</block>
-  <block id="cff41786c5502cd7deaf78557f919f0f" category="admonition">如果您已將 FAS 或 AFF 儲存系統升級至 All SAN Array （ ASA ）、則必須重新整理 SnapCenter 伺服器中的儲存連線、以反映 SnapCenter 中的新儲存類型。</block>
   <block id="440355fc57f515aab537d229da6473e3" category="paragraph">您可以在 Active Directory Federation Service （ AD FS ）伺服器和 SnapCenter 伺服器中管理多因素驗證（ MFA ）功能。</block>
   <block id="c8010626798701f4dd6505ffd8c7bab3" category="paragraph">您可以使用 PowerShell 命令為 SnapCenter 伺服器啟用 MFA 功能。</block>
   <block id="65b2ac31e28fbe23df3871ad716e40c2" category="list-text">使用為 SnapCenter 伺服器啟用 MFA<block ref="2eb01e8a95b53a60b13860ce5cac5104" prefix=" " category="inline-code"></block> Cmdlet。</block>
@@ -8227,7 +8200,6 @@ Snapshot 作業。</block>
   <block id="40e1269ad4c969b2e34a183b8fe9f42e" category="list-text">輸入應為每個 Snapshot 備份的資料庫數目上限。
 預設值為 100</block>
   <block id="8822b1db0297028652e02db3e4af760f" category="paragraph">僅保留特定數量的快照。</block>
-  <block id="4caf8c069465c53a1a175fa4a08aa0a8" category="paragraph">此範例將記錄 Snapshot 保留設定為 2 ：</block>
   <block id="149450cb3a9e3ecae5eaba7a4573516f" category="paragraph">根據您選取的 Snapshot 標籤、 ONTAP 會套用符合標籤的次要 Snapshot 保留原則。</block>
   <block id="dccc8011e6f51f002aae83ff00479c7d" category="admonition">您必須在 ONTAP 中設定 SnapMirror 保留原則、使次要儲存設備不會達到快照的最大限制。</block>
   <block id="610559e33fd2c1c02990a8421918d746" category="list-text">限制檢查並取得鎖定、而非使用內部資料庫 Snapshot （ TABLOCK ）</block>
@@ -8300,7 +8272,6 @@ Snapshot 作業。</block>
   <block id="fd0998113f77a0321315b7e0948f05e1" category="paragraph">當原則附加至資源或資源群組時、您可以修改複寫選項、 Snapshot 保留設定、錯誤重試次數或指令碼資訊。只有在分離原則之後、才能修改排程類型（頻率）。</block>
   <block id="c3322261b5e365126f3bbd22ae033f3e" category="paragraph">您應該手動刪除資源群組中任何資源所建立的所有複本。您可以選擇性地強制刪除與資源群組相關聯的所有備份、中繼資料、原則和快照。</block>
   <block id="4ac647997500ae801e90be76a0f09421" category="list-text">選用：選取 * 刪除與此資源群組相關的備份與分離原則 * 核取方塊、以移除與資源群組相關的所有備份、中繼資料、原則和快照。</block>
-  <block id="322c20f898d5631d47f9131b0ff643f9" category="paragraph">下列Cmdlet會在SnapCenter iSCSI LUN中意外刪除備份檔案時、還原MySQL的功能。對於 VMDK 、請手動從 ONTAP 快照還原備份。</block>
   <block id="4954c41a9a08ab45a310519b5fd1e579" category="list-text">如果您想要使用 Snapshot 技術建立備份、請選取 * Snapshot Based * 。</block>
   <block id="fd67ba398eb305129b3dffed5a367994" category="admonition">由於 anf 複本已是從所選 Snapshot 建立的個別磁碟區、因此已停用對 anf 複本的 Clone Split 。</block>
   <block id="e809483d1a49ec9268e55af716571abf" category="list-text">選取 * Snapshot 複製工具 &gt; SnapCenter 無檔案系統一致性 * 來建立快照。</block>
@@ -9491,9 +9462,6 @@ Snapshot 作業。</block>
   <block id="caa08201cb734b2c4b9c07d88af03f12" category="list-text">如有需要，請重新建置次要主機。<block ref="fe77a15e62ab867fe36429b52c13f7a6" prefix=" " category="inline-code"></block></block>
   <block id="6027414af513eb2fd2ff4d1ba01ecc48" category="list-text">容錯移轉至第二個主機。<block ref="0b9b9eafa89b540bbf9b9ff9bde04610" prefix=" " category="inline-code"></block></block>
   <block id="c5161716a036dddca2f68cda30000d0f" category="paragraph">= 從 NLB 切換至 F5 以獲得高可用度</block>
-  <block id="39dc06ca99004e21bf85ae55cfbb26ff" category="paragraph">SnapCenter 標準授權是以控制器為基礎的授權，隨附於 ONTAP One 中。如果您擁有SnapManager 此產品的不支援功能、您也可以取得SnapCenter 「不支援即用」的授權。如果您想要試用 FAS ， AFF 或 ASA 儲存設備來安裝 SnapCenter ，請聯絡銷售代表以取得 ONTAP One 試用授權。</block>
-  <block id="a167444fdea2847400372052380975f2" category="inline-link">ONTAP One 隨附授權</block>
-  <block id="ecad5e8e1aac5e2b9870fc1d4a8bbb91" category="paragraph">如需 ONTAP One 隨附授權的相關資訊，請<block ref="c2fb007f72246516006250865a9beb37" category="inline-link-rx"></block>參閱。</block>
   <block id="156a5008fbec69c3f4a424d5bca0e1d8" category="admonition">不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenterAmazon FSX for NetApp ONTAP ， ONTAP Select ， Cloud Volumes ONTAP 和 Azure NetApp Files 不再需要標準授權和容量型授權。</block>
   <block id="dbd495ad96b61252237734b22b1ddf62" category="admonition">您只能在使用者名稱和群組名稱中包含下列特殊字元：空格（），連字號（ - ），底線（ _ ）和冒號（：）。</block>
   <block id="3c1eae5e6ea0b19f0a43abeaee269bc2" category="paragraph">您可以選擇使用PowerShell Cmdlet來執行多個安裝和組態程序。您應該使用 PowerShell 7.4.2 或更新版本。</block>
@@ -9511,7 +9479,6 @@ Snapshot 作業。</block>
   <block id="30e30875c1a26a8c3649817182f09da6" category="paragraph">SnapCenter 支援保護位於 Azure NetApp Files 上的 Oracle ， SQL 和 SAP HANA 等應用程式。從 6.0.1 版開始， SnapCenter 支援 Azure NetApp Files 備份功能，可提供完整管理的備份解決方案來長期恢復，歸檔和法規遵循，藉此擴充 Azure NetApp Files 的資料保護功能。</block>
   <block id="03ba6af8c8aacc925daefdecc52c1ced" category="paragraph">Azure NetApp Files 是一款優質儲存解決方案，長期備份保留可能會花費昂貴的成本。若要最佳化成本，您可以將備份從 Azure NetApp Files 儲存設備移至 Azure 物件存放區。從 SnapCenter 6.0.1 開始，您可以將位於 Azure NetApp Files 上的應用程式備份及複製到 Azure Blob 儲存設備（物件存放區）。您可以在 Azure NetApp Files 儲存設備上維護兩份資料複本，在短期恢復時保留磁碟區快照複本，並在 Azure Blob 儲存設備上保留另一份複本以進行長期恢復。</block>
   <block id="20c30f0cc89f35ed825a3cd3d901372c" category="paragraph">啟用 Azure NetApp Files 備份原則並與資源相關聯時， SnapCenter 會處理磁碟區快照的建立，並將其備份至 Azure Blob 儲存設備。SnapCenter 會建立備份資料保險箱，並啟用磁碟區的備份。如果您已啟用磁碟區的備份，則 SnapCenter 會使用現有的資料保險箱。</block>
-  <block id="e55ea9fc643ab80ebff324b5ff0d6b8d" category="list-text">不支援 FAS 或 AFF ONTAP 和 FSxN 儲存系統的物件儲存功能。</block>
   <block id="1e05d9799692ccd6b7989f741f68ec55" category="list-text">不支援物件儲存設備的備份驗證， REST API 支援，物件儲存設備的複製生命週期管理，以及物件儲存備份的報告功能。</block>
   <block id="c54485c49dccc7921e44c57c0bc07610" category="list-text">不支援從 Azure Blob 儲存設備上的備份還原至 Azure NetApp Files 。您也可以使用複製選項。</block>
   <block id="9a6872cf47cae5149dfd734be3f2eee0" category="paragraph"><block ref="9a6872cf47cae5149dfd734be3f2eee0" category="inline-link-macro-rx"></block></block>
@@ -9881,13 +9848,8 @@ Snapshot 作業。</block>
   <block id="8c4df87df7072888db58abdf493c82ba" category="paragraph">如果您要指定主要快照鎖定期間，請選取 Snapshot 複本鎖定期間，然後選取天，月或年。</block>
   <block id="37f001fbef310181d8f4577b4c03a798" category="paragraph">次快照鎖定期間</block>
   <block id="2e37f31a39b30876eff1858ef3d01783" category="paragraph">選取 * 次快照複本鎖定期間 * ，然後選取天，月或年。</block>
-  <block id="d4fab0a3b9169228dc7321f4155040a6" category="paragraph">若要使此選項生效，您必須執行下列工作：</block>
-  <block id="768d22eeffe1b0d643b0ed933c3e5f76" category="list-text">選取 * 主要快照複本鎖定期間 * 。</block>
-  <block id="8dedb6d4cefe12f20aa79a3e591fbe62" category="list-text">選取其中一個或兩個次要複寫選項。</block>
   <block id="49d10f32e6045f6eb1e87608c6663036" category="list-text">在 [ 選取次要複寫選項 ] 區段中，選取下列其中一個或兩個次要複寫選項：</block>
   <block id="8a2dda8619fc89210a82c7915ff8404f" category="admonition">您必須為 * 次快照複本鎖定期間 * 選取次要複寫選項，才能生效。</block>
-  <block id="e0db40503bb9a725a94275ee8cd82432" category="paragraph">+ 根據您選取的 Snapshot 標籤， ONTAP 會套用符合標籤的次要 Snapshot 保留原則。</block>
-  <block id="7924c7d510ee4c17272379c570f53baa" category="paragraph">+ 注意：如果您在建立本機 Snapshot 複本 * 之後選取了 * 更新 SnapMirror ，您可以選擇性地指定次要原則標籤。不過、如果SnapVault 您在建立本機Snapshot複本*之後選擇*更新SUpdate、則應指定次要原則標籤。</block>
   <block id="21c50f2705444dd3390a81b7b2265c1d" category="admonition">您也可以按一下 * * 來建立原則<block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block>。</block>
   <block id="1fdb686d7eb7b44f458d7be7367ce764" category="doc">在 ASA R2 系統上建立資源群組，並啟用 IBM DB2 資源的次要保護</block>
   <block id="58500be789107a86aa8893793e67951d" category="inline-image-macro">分割複本</block>
@@ -10060,4 +10022,52 @@ Snapshot 作業。</block>
   <block id="c6cd54ad2b3bca5fe6357919d1ec62e7" category="list-text">您應該安裝 ASP.NET Core Runtime 8.0.12 （以及所有後續的 8.0.x 修補程式）代管 Bundle 和 PowerShell 7.4.2 或更新版本。</block>
   <block id="088d994d276e3b7e6090022acb48aaf7" category="list-text">SnapCenter 6.1 支援執行 ONTAP 9.16.1 的 NetApp ASA R2 系統。</block>
   <block id="a1c01ec21d4b8df32fe29facff7e7688" category="paragraph">ASA R2 系統為所有 Flash 平台上建置的僅 SAN 環境提供統一化的硬體與軟體解決方案。</block>
+  <block id="9044893459e9f46e1e17047570a05298" category="list-text">All Access 命令： ONTAP 9.12.1 及更新版本所需的最低 Privileges 需求</block>
+  <block id="a70835f5bcf15a6863468bb82abc19de" category="inline-link">從其父Volume分割FlexClone Volume</block>
+  <block id="fc3cc01cd9612e6f3077d4a6505ead8a" category="list-text">如需 FlexClone Volume 分割作業的相關資訊，請參閱<block ref="5db08c189f8e967bc5a82064aa92c31e" category="inline-link-rx"></block>。</block>
+  <block id="41fbf2c9674d14c871b1a98dff345ddd" category="paragraph">NetApp ONTAP 事件 genere-log-log AutoSupport 權限已授予儲存虛擬機器（ SVM ）使用者。</block>
+  <block id="251c52ce7ef8b529e63b81a2f40b7a26" category="paragraph">下列Cmdlet會在SnapCenter iSCSI LUN中意外刪除備份檔案時、還原MySQL的功能。對於 VMDK ，請手動從 ONTAP 快照還原備份。</block>
+  <block id="b9832b10a87d0c3793ed3b413ee1d839" category="section-title">REST API支援</block>
+  <block id="bc9f5cd1669f71a2b0bd213a944d8fdb" category="paragraph">根據預設，所有與 ONTAP 和 ASA R2 儲存系統的儲存連線都會透過 ZAPI 。REST API 可針對特定 ONTAP 版本啟用。</block>
+  <block id="421f02448bcd1490276fcd375668a6be" category="paragraph">您可以修改下列組態檔案中的組態金鑰：</block>
+  <block id="94b74299dc7f33d5bf8e4fc497c26334" category="list-text">IsRestEnabledForStorageConnection</block>
+  <block id="cbd8678f4d2dba6d97b2ccfc54882755" category="paragraph">預設值為假。</block>
+  <block id="f0688c9d46cbff7f5beea9484384b94b" category="list-text">MinOntapVersionToUseREST</block>
+  <block id="d4c8b7e3186cc7a235889624e991da17" category="paragraph">預設值為 9.13.1 。</block>
+  <block id="47d8f56926b22a7924da528e4f31b5c0" category="list-title">透過 REST API 啟用連線</block>
+  <block id="3417b0a11f8af3b1f8164a8e20bf282c" category="list-text">將 IsRestEnabledForStorageConnection 設置爲 true 。</block>
+  <block id="ddba2c3830da989226db244ba9e5c6e5" category="list-text">在伺服器和 Windows 外掛程式主機上，新增 SMCoreServiceHost.dll.config 和 SnapDriveService.dll.config 中的金鑰。</block>
+  <block id="b11d97cb8b208a769f494e058b30b6b7" category="paragraph">&lt;add key="IsRestEnabledForStorageConnection" value="true" /&gt;</block>
+  <block id="4a4a2eb369b6eb05f8fff0bc1a85bd94" category="list-title">將透過 REST API 的連線限制為特定版本的 ONTAP</block>
+  <block id="e533a16b31a9f8c3587cecc2af8a8fe1" category="list-text">將組態參數 MinOntapVersionToUseREST 設定為 TRUE 。</block>
+  <block id="3718cae69e88fbef374d622befa883f6" category="paragraph">&lt;add key="MinOntapVersionToUseREST" value="9.13.1" /&gt;</block>
+  <block id="4cfd86a863ba0d1e8735375105b45c40" category="list-text">重新啟動伺服器上的 SmCore 服務，以及外掛程式機器上的外掛程式和 SnapDrive 服務。</block>
+  <block id="b80a17415adfb59b3e776fff090809b3" category="list-text">ONTAP FAS ， AFF 或 ASA 主要系統上的資料，並複寫至 ONTAP FAS ， AFF 或 ASA 次要系統</block>
+  <block id="cdd64112d524e2506ad9aaa5ea6bf0f8" category="paragraph">如果您使用SnapCenter VMware vCenter外掛程式來提供VM一致的資料保護、vCenter Server會提供額外的RBAC層級。SnapCenter VMware 外掛程式支援 vCenter Server RBAC 和 NetApp ONTAP RBAC 。</block>
+  <block id="7e3e9dbf627ec3409c614f9c9b2cb57e" category="paragraph">FAS ， AFF ， ASA 所需</block>
+  <block id="82d07a027b5d595de4499a5069c4ccf5" category="paragraph">SnapCenter 標準授權是以控制器為基礎的授權，隨附於 NetApp ONTAP One 中。如果您擁有SnapManager 此產品的不支援功能、您也可以取得SnapCenter 「不支援即用」的授權。如果您想要試用 FAS ， AFF 或 ASA 儲存設備來安裝 SnapCenter ，請聯絡銷售代表以取得 NetApp ONTAP One 試用授權。</block>
+  <block id="173cbb56fed3c8d1bffc40cfe1678533" category="inline-link">NetApp ONTAP One 隨附授權</block>
+  <block id="94875c624efb32d934c5cd2c0c78f2f0" category="paragraph">如需 NetApp ONTAP One 隨附授權的相關資訊，請<block ref="0ab66dfac600c25af9e742e0f8819421" category="inline-link-rx"></block>參閱。</block>
+  <block id="8bf34d96b4ef3036d5fecf25c54f239f" category="list-text">可透過 ONTAP 系統管理員或 ONTAP CLI 將其直接新增至 FAS ， AFF 或 ASA 儲存控制器。</block>
+  <block id="f59cbb2508b7e0a4a75f1eddabac7e1e" category="paragraph">如果您使用的是 FAS ， ASA 或 AFF 儲存設備，您可以先從 NetApp 支援網站擷取 SnapCenter 控制器型授權，然後再使用 ONTAP 命令列進行安裝。</block>
+  <block id="ab396c0026ca30099e9b89003c80fcf5" category="list-text">SnapCenter 支援 Amazon FSX for NetApp ONTAP 來保護您的資料。</block>
+  <block id="9efdf202df78f9a33e298564c835e4ba" category="summary">當儲存系統執行叢集式 NetApp ONTAP 時，您可以使用安全登入命令來新增 NetApp ONTAP RBAC 角色。</block>
+  <block id="2ad5f6ef1c47048e237f2fafae87313a" category="doc">使用安全登入命令新增 NetApp ONTAP RBAC 角色</block>
+  <block id="e1be0500812e131476a1a2d9b7429541" category="paragraph">當儲存系統執行叢集式 ONTAP 時，您可以使用安全登入命令來新增 NetApp ONTAP RBAC 角色。</block>
+  <block id="34a087679e427c81dd4b62602fb6e759" category="paragraph">若要簡化在儲存系統上設定這些角色的程序，您可以使用 NetApp 社群論壇上發佈的 RBAC 使用者建立工具來建立 NetApp ONTAP 。</block>
+  <block id="cd63f10378363da86bcf8672b918512a" category="paragraph">此工具會自動ONTAP 正確處理設定功能不正確的功能。例如， NetApp ONTAP 的 RBAC 使用者建立工具會以正確順序自動新增 Privileges ，讓 All Access Privileges 最先出現。如果您先新增唯讀權限、然後新增全存取權限、ONTAP 則將全存取權限標示為重複、並予以忽略。</block>
+  <block id="0715b20c4e81f0c852f66480ef00c667" category="admonition">如果您稍後升級 SnapCenter 或 ONTAP ，則應重新執行 RBAC User Creator for NetApp ONTAP 工具，以更新您先前建立的使用者角色。為SnapCenter 舊版的版本的使用者角色無法ONTAP 在升級版本中正常運作。當您重新執行此工具時、它會自動處理升級作業。您不需要重新建立角色。</block>
+  <block id="30962a20671f7b70a267e94343e24484" category="list-text">FAS ， ASA 或 AFF ONTAP 的物件儲存功能，以及 NetApp ONTAP 儲存系統的 Amazon FSX 不受支援。</block>
+  <block id="02cf8992ec066e2a6c94ef201a56fde4" category="list-text">如需 FlexClone Volume 分割作業的相關資訊，請參閱<block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block>。</block>
+  <block id="d664b55967efa51159bf2dcaad494f28" category="admonition">最大保留值為 1018 。如果保留設定的值高於基礎ONTAP 版支援的值、則備份將會失敗。</block>
+  <block id="45674f4fab4d30d82c5e48053de84a2d" category="paragraph">ONTAP 主要和次要可以是 ONTAP FAS ， AFF ， ASA ， ONTAP Select 或 Cloud Volumes ONTAP 。</block>
+  <block id="5809b9053ee07314ee267cf4861e2fe2" category="paragraph">外掛程式版本。可同時包含主要和次要版本。例如， 5.0 ， 6.0 ， 6.1</block>
+  <block id="04421acf26388af407e2e444d1d9a4ea" category="paragraph">+ 若要避免節點之間的資料落後，您可以在執行重新輸入作業之前建立新備份，或是選擇具有最新備份的主機。</block>
+  <block id="0002a57eb89728985300757fccb645db" category="inline-link">ONTAP 9 SAN 管理一節</block>
+  <block id="9b84e6db97d84dfea46f94fa87561146" category="list-text">您可以指定LUN路徑自動固定的頻率、方法是將lunpath_監 控時間間隔參數的值（以小時為單位）指派給lunpath_監 控時間間隔參數。有關 SLM 的信息，請參閱<block ref="791bce609970821d75a70463f2e5a4f8" category="inline-link-rx"></block>。</block>
+  <block id="d51e2f3016053dc7090b1d16e111cc04" category="list-text">從次儲存系統還原</block>
+  <block id="bf1764b9ff5a6e7b28ab3b2166bff7a4" category="admonition">NetApp ONTAP 支援從次要位置進行就地還原。</block>
+  <block id="cdc0da196ab05c60eaebdca9a2459cd1" category="list-text">如需 FlexClone Volume 分割作業的相關資訊，請參閱<block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block></block>
+  <block id="dc4d7bf5602b12335597fd5350deab23" category="admonition">最大保留值為 1018 。如果將保留設定為高於基礎 NetApp ONTAP 版本所支援的值，備份將會失敗。</block>
+  <block id="ee96dd48de878c0191d0701d853dd514" category="paragraph">此範例將記錄快照保留設定為 2 ：</block>
 </blocks>

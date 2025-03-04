@@ -6,8 +6,6 @@ summary: 有關從功能執行的各種操作的資訊SnapCenter 、會儲存在
 ---
 = 管理SnapCenter 伺服器儲存庫
 :allow-uri-read: 
-:icons: font
-:imagesdir: ../media/
 
 
 [role="lead"]
@@ -96,7 +94,7 @@ _Protect - SmRepository_ Cmdlet可完成下列工作：
 C:\PS>Restore-SmRepositoryBackup -BackupName MYSQL_DS_SC_Repository_mva-x3550-s09_09-15-2016_10.32.00.4445
 ----
 +
-下列Cmdlet會在SnapCenter iSCSI LUN中意外刪除備份檔案時、還原MySQL的功能。對於 VMDK 、請手動從 ONTAP 快照還原備份。
+下列Cmdlet會在SnapCenter iSCSI LUN中意外刪除備份檔案時、還原MySQL的功能。對於 VMDK ，請手動從 ONTAP 快照還原備份。
 
 +
 [listing]

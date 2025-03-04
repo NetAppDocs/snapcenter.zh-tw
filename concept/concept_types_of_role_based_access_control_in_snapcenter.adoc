@@ -65,7 +65,7 @@ NOTE: 如果您建立自訂角色、則必須包含SnapCenter 所有的「管理
 
 == VMware vSphere RBAC的插件SnapCenter
 
-如果您使用SnapCenter VMware vCenter外掛程式來提供VM一致的資料保護、vCenter Server會提供額外的RBAC層級。VMware支援vCenter Server RBAC和VMware RBAC外掛程式。SnapCenter Data ONTAP
+如果您使用SnapCenter VMware vCenter外掛程式來提供VM一致的資料保護、vCenter Server會提供額外的RBAC層級。SnapCenter VMware 外掛程式支援 vCenter Server RBAC 和 NetApp ONTAP RBAC 。
 
 如需相關資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_role_based_access_control.html["VMware vSphere RBAC的插件SnapCenter"^]
 

@@ -23,7 +23,7 @@ summary: 您可以使用SnapCenter 此功能從父資源分割複製的資源。
 分割clone2之後、您可以在clone1上執行實體複本分割作業、因為clone1不再是中繼複本。
 
 * 當您分割複本時、複本的備份複本會被刪除。
-* 如需有關實體複本分割作業限制的資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 9 邏輯儲存管理指南》 ONTAP"^]。
+* 如需 FlexClone Volume 分割作業的相關資訊，請參閱https://docs.netapp.com/us-en/ontap/volumes/split-flexclone-from-parent-task.html["從其父Volume分割FlexClone Volume"]
 * 確保儲存系統上的磁碟區或Aggregate已上線。
 
 

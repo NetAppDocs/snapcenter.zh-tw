@@ -13,7 +13,7 @@ summary: 所需的最低限度驗證權限會因您使用的資料保護功能�
 [role="lead"]
 所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter
 
-* All Access命令：ONTAP 要求最低權限才能執行支援
+* All Access 命令： ONTAP 9.12.1 及更新版本所需的最低 Privileges 需求
 +
 ** 事件generate-autosup-log
 ** 工作歷史記錄顯示

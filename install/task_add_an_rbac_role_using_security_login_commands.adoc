@@ -1,17 +1,17 @@
 ---
 permalink: install/task_add_an_rbac_role_using_security_login_commands.html 
 sidebar: sidebar 
-keywords: RBAC roles, add, ONTAP RBAC role 
-summary: 當儲存系統執行叢集式的動作時、您可以使用安全登入命令來新增ONTAP 一個無法使用的RBAC角色ONTAP 。 
+keywords: RBAC roles, add, NetApp ONTAP RBAC role 
+summary: 當儲存系統執行叢集式 NetApp ONTAP 時，您可以使用安全登入命令來新增 NetApp ONTAP RBAC 角色。 
 ---
-= 使用ONTAP 安全登入命令新增一個RBAC角色
+= 使用安全登入命令新增 NetApp ONTAP RBAC 角色
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-當儲存系統執行叢集式的動作時、您可以使用安全登入命令來新增ONTAP 一個無法使用的RBAC角色ONTAP 。
+當儲存系統執行叢集式 ONTAP 時，您可以使用安全登入命令來新增 NetApp ONTAP RBAC 角色。
 
 .開始之前
 * 在您為ONTAP 執行叢集ONTAP 式功能的儲存系統建立一套不必要的RBAC角色之前、您必須先識別下列項目：
@@ -37,12 +37,12 @@ summary: 當儲存系統執行叢集式的動作時、您可以使用安全登�
 
 *關於此工作*
 
-為了簡化儲存系統上的角色設定、您可以使用Data ONTAP NetApp社群論壇上發佈的RBAC User Creator for Soliding工具。
+若要簡化在儲存系統上設定這些角色的程序，您可以使用 NetApp 社群論壇上發佈的 RBAC 使用者建立工具來建立 NetApp ONTAP 。
 
-此工具會自動ONTAP 正確處理設定功能不正確的功能。例如、RBAC User Creator for Data ONTAP BIOS工具會自動以正確順序新增權限、以便先顯示所有存取權限。如果您先新增唯讀權限、然後新增全存取權限、ONTAP 則將全存取權限標示為重複、並予以忽略。
+此工具會自動ONTAP 正確處理設定功能不正確的功能。例如， NetApp ONTAP 的 RBAC 使用者建立工具會以正確順序自動新增 Privileges ，讓 All Access Privileges 最先出現。如果您先新增唯讀權限、然後新增全存取權限、ONTAP 則將全存取權限標示為重複、並予以忽略。
 
 
-NOTE: 如果您稍後升級SnapCenter 了版本的功能、ONTAP 應該重新執行RBAC User Creator for Data ONTAP BIOS工具、以更新您先前建立的使用者角色。為SnapCenter 舊版的版本的使用者角色無法ONTAP 在升級版本中正常運作。當您重新執行此工具時、它會自動處理升級作業。您不需要重新建立角色。
+NOTE: 如果您稍後升級 SnapCenter 或 ONTAP ，則應重新執行 RBAC User Creator for NetApp ONTAP 工具，以更新您先前建立的使用者角色。為SnapCenter 舊版的版本的使用者角色無法ONTAP 在升級版本中正常運作。當您重新執行此工具時、它會自動處理升級作業。您不需要重新建立角色。
 
 如需設定ONTAP RBAC角色的詳細資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.pow-adm-auth-rbac/home.html["《Administrator驗證與RBAC電源指南》（英文）ONTAP"^]。
 

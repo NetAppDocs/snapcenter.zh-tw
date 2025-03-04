@@ -99,3 +99,38 @@ NOTE: 您無法選取屬於叢集一部分的SVM。
 NOTE: 如果SVM是ONTAP 使用ONTAP 無法修復的GUI從叢集刪除、SnapCenter 請在BIOS GUI中按一下「*重新探索*」以更新SVM清單。
 
 
+
+
+
+== REST API支援
+
+根據預設，所有與 ONTAP 和 ASA R2 儲存系統的儲存連線都會透過 ZAPI 。REST API 可針對特定 ONTAP 版本啟用。
+
+您可以修改下列組態檔案中的組態金鑰：
+
+* IsRestEnabledForStorageConnection
++
+預設值為假。
+
+* MinOntapVersionToUseREST
++
+預設值為 9.13.1 。
+
+
+
+.透過 REST API 啟用連線
+. 將 IsRestEnabledForStorageConnection 設置爲 true 。
+. 在伺服器和 Windows 外掛程式主機上，新增 SMCoreServiceHost.dll.config 和 SnapDriveService.dll.config 中的金鑰。
++
+<add key="IsRestEnabledForStorageConnection" value="true" />
+
+
+
+.將透過 REST API 的連線限制為特定版本的 ONTAP
+. 將組態參數 MinOntapVersionToUseREST 設定為 TRUE 。
+. 在伺服器和 Windows 外掛程式主機上，新增 SMCoreServiceHost.dll.config 和 SnapDriveService.dll.config 中的金鑰。
++
+<add key="MinOntapVersionToUseREST" value="9.13.1" />
+
+. 重新啟動伺服器上的 SmCore 服務，以及外掛程式機器上的外掛程式和 SnapDrive 服務。
+

@@ -11,13 +11,13 @@ summary: 如果您使用的是 FAS 、 AFF 或 ASA 儲存控制器、則需要 S
 
 
 [role="lead"]
-如果您使用的是 FAS 、 AFF 或所有 SAN 陣列（ ASA ）儲存控制器、則需要 SnapCenter 標準控制器型授權。
+如果您使用的是 FAS 、 AFF 或 ASA 儲存控制器、則需要 SnapCenter 標準控制器型授權。
 
 控制器型授權具有下列特性：
 
 * 隨附於購買Premium或Flash產品組合的標準授權（不含基礎套件）SnapCenter
 * 無限使用儲存設備
-* 可透過 ONTAP 系統管理員或儲存叢集命令列、將其直接新增至 FAS 、 AFF 或 ASA 儲存控制器
+* 可透過 ONTAP 系統管理員或 ONTAP CLI 將其直接新增至 FAS ， AFF 或 ASA 儲存控制器。
 +
 
 NOTE: 您不需要在SnapCenter 「介紹GUI」中輸入SnapCenter 任何授權資訊、以取得以控制器為基礎的授權。
@@ -162,7 +162,7 @@ All-Flash Optimized: false
 
 == 步驟 4 ：擷取控制器型授權的序號
 
-如果您使用FAS 的是功能不全或AFF 功能不全的儲存設備、您可以先SnapCenter 從NetApp支援網站擷取以支援控制器為基礎的授權、然後再使用ONTAP 功能不全的命令列進行安裝。
+如果您使用的是 FAS ， ASA 或 AFF 儲存設備，您可以先從 NetApp 支援網站擷取 SnapCenter 控制器型授權，然後再使用 ONTAP 命令列進行安裝。
 
 .開始之前
 * 您應該擁有有效的NetApp支援網站登入認證資料。

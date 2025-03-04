@@ -29,7 +29,7 @@ NOTE: 如果命令清單中不存在這些命令、則作業將會失敗。* 對
 
 .關於這項工作
 * 您無法保護複製的 MySQL 執行個體。
-* 如需有關複本切割作業限制的資訊、請參閱 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["《 9 邏輯儲存管理指南》 ONTAP"^]。
+* 如需 FlexClone Volume 分割作業的相關資訊，請參閱https://docs.netapp.com/us-en/ontap/volumes/split-flexclone-from-parent-task.html["從其父Volume分割FlexClone Volume"]。
 * 若為 ONTAP 9 。 12.1 及更早版本，從 SnapLock 資料保險箱快照建立的複本作為還原的一部分，將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
 
 

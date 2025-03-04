@@ -14,6 +14,9 @@ summary: 您應該知道支援的儲存系統、應用程式和資料庫。
 您應該知道支援的儲存系統、應用程式和資料庫。
 
 * SnapCenter 支援 ONTAP 9.12.1 及更新版本、可保護您的資料。
++
+對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。
+
 * SnapCenter 6.1 支援執行 ONTAP 9.16.1 的 NetApp ASA R2 系統。
 +
 ASA R2 系統為所有 Flash 平台上建置的僅 SAN 環境提供統一化的硬體與軟體解決方案。
@@ -21,7 +24,7 @@ ASA R2 系統為所有 Flash 平台上建置的僅 SAN 環境提供統一化的�
 +
 如需 ASA R2 系統的相關資訊，請參閱 https://docs.netapp.com/us-en/asa-r2/index.html["ASA R2 說明文件"^]。
 
-* 支援Amazon FSX for NetApp功能、保護資料不受來自於更新版的支援。SnapCenter ONTAP SnapCenter
+* SnapCenter 支援 Amazon FSX for NetApp ONTAP 來保護您的資料。
 +
 如果您使用Amazon FSX for NetApp ONTAP Sfor NetApp的話、請確保SnapCenter 將支援此功能的支援伺服器主機外掛程式升級至4.5 P1或更新版本、以執行資料保護作業。
 

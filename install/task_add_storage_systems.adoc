@@ -130,9 +130,6 @@ NOTE: 如果SVM是以簡短名稱或FQDN新增、則必須同時從SnapCenter �
 
 
 
-
-NOTE: 如果您已將 FAS 或 AFF 儲存系統升級至 All SAN Array （ ASA ）、則必須重新整理 SnapCenter 伺服器中的儲存連線、以反映 SnapCenter 中的新儲存類型。
-
 *完成後*
 
 叢集管理員必須在AutoSupport 每個儲存系統節點上啟用「支援功能」、SnapCenter 才能從所有可存取的儲存系統傳送電子郵件通知、方法是從儲存系統命令列執行下列命令：

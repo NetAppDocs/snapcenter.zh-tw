@@ -20,11 +20,11 @@ summary: 支援資料保護作業需要數個授權。SnapCenter安裝的不完�
  a| 
 以標準控制器為基礎SnapCenter
  a| 
-FAS 、 AFF 、 All SAN Array （ ASA ）所需的
+FAS ， AFF ， ASA 所需
 
-SnapCenter 標準授權是以控制器為基礎的授權，隨附於 ONTAP One 中。如果您擁有SnapManager 此產品的不支援功能、您也可以取得SnapCenter 「不支援即用」的授權。如果您想要試用 FAS ， AFF 或 ASA 儲存設備來安裝 SnapCenter ，請聯絡銷售代表以取得 ONTAP One 試用授權。
+SnapCenter 標準授權是以控制器為基礎的授權，隨附於 NetApp ONTAP One 中。如果您擁有SnapManager 此產品的不支援功能、您也可以取得SnapCenter 「不支援即用」的授權。如果您想要試用 FAS ， AFF 或 ASA 儲存設備來安裝 SnapCenter ，請聯絡銷售代表以取得 NetApp ONTAP One 試用授權。
 
-如需 ONTAP One 隨附授權的相關資訊，請 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["ONTAP One 隨附授權"]參閱。
+如需 NetApp ONTAP One 隨附授權的相關資訊，請 https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["NetApp ONTAP One 隨附授權"]參閱。
 
 
 NOTE: 此外、也提供資料保護套裝組合的一部分。SnapCenter如果您已購買A400或更新版本、則應購買資料保護套裝組合。

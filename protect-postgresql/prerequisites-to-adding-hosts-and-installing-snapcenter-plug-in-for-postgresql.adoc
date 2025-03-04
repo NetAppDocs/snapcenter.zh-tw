@@ -86,7 +86,7 @@ NOTE: 您不應使用萬用字元項目（ * ）來允許所有命令。
 
 == 為Linux主機的非root使用者設定Sudo權限
 
-非root使用者可利用發行版本的更新版本安裝適用於Linux的《SUSE外掛程式套件」、並開始外掛程序。SnapCenter SnapCenter外掛程式程序將以有效的非root使用者身分執行。您應該為非root使用者設定Sudo權限、以提供對多個路徑的存取權。
+SnapCenter 可讓非 root 使用者安裝適用於 Linux 的 SnapCenter 外掛程式套件，並啟動外掛程式程序。外掛程式程序將以有效的非root使用者身分執行。您應該為非root使用者設定Sudo權限、以提供對多個路徑的存取權。
 
 *您需要的是什麼*
 

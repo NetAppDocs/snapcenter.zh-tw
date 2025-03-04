@@ -31,7 +31,7 @@ summary: 您可以使用 NetApp 支援的外掛程式來執行資料保護作業
 
 * 使用 SnapCenter 原則、利用現有的複寫關係（ Snapvault / SnapMirror/ 統一複寫）、將主要快照更新為 ONTAP 次要快照
 +
-ONTAP 主要和次要可以是 ONTAP FAS 、 AFF 、 All SAN Array （ ASA ）、 Select 或 Cloud ONTAP 。
+ONTAP 主要和次要可以是 ONTAP FAS ， AFF ， ASA ， ONTAP Select 或 Cloud Volumes ONTAP 。
 
 * 恢復完整ONTAP 的實體磁碟區、LUN或檔案。
 +

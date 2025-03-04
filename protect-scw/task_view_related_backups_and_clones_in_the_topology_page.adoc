@@ -25,7 +25,6 @@ NOTE: 在鏡射保存庫類型磁碟區上、版本彈性鏡像的備份複本�
 * image:../media/topology_vault_secondary_storage.gif["次要保存庫圖示"] 顯示使用SnapVault NetApp技術複寫到二線儲存設備的備份與複製數量。
 +
 ** 顯示的備份數包括從二線儲存設備刪除的備份數。例如、如果您已使用原則建立6個備份、僅保留4個備份、則顯示的備份數為6。
-** 如果您已從SnapCenter 還原1.1升級、則次要（鏡射或保存庫）上的複本不會顯示在「拓撲」頁面的「鏡射複本」或「保存庫複本」下。所有使用SnapCenter NetApp 1.1建立的複本、都會顯示在SnapCenter 本機版本下方、以支援NetApp 3.0。
 
 
 
