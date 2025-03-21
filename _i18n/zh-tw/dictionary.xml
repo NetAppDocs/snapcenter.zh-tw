@@ -8034,7 +8034,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="98950caea953c79d817eba870ba7ae48" category="summary">在 SnapCenter 中建立 Azure 認證、以存取 Azure NetApp 帳戶。</block>
   <block id="1ed01bab203e8745a0dcfe58f019c1d9" category="doc">在 SnapCenter 中建立 Azure 認證</block>
   <block id="df807c6f76450e7af962b9ec2ffe867e" category="paragraph">您應該在 SnapCenter 中建立 Azure 認證、以存取 Azure NetApp 帳戶。</block>
-  <block id="c564c60262d5040cb9b4b2cb05c8532d" category="paragraph">在建立 Azure 認證之前、請確定您已在 Azure 中建立服務主體。建立 Azure 認證時、需要與服務主體相關的租戶 ID 、用戶端 ID 和秘密金鑰。</block>
   <block id="aeec85b47cdcde0a1bea1e8a52e7efae" category="paragraph">從下拉式清單中選取 * Azure Credential* 。</block>
   <block id="7131a7a6bfe81200d21d5a33c64847b6" category="paragraph">租戶 ID</block>
   <block id="797fc8989dfaa45ed85ce3b352fc0fb9" category="paragraph">輸入租戶 ID 。</block>
@@ -10070,4 +10069,11 @@ Snapshot 作業。</block>
   <block id="cdc0da196ab05c60eaebdca9a2459cd1" category="list-text">如需 FlexClone Volume 分割作業的相關資訊，請參閱<block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block></block>
   <block id="dc4d7bf5602b12335597fd5350deab23" category="admonition">最大保留值為 1018 。如果將保留設定為高於基礎 NetApp ONTAP 版本所支援的值，備份將會失敗。</block>
   <block id="ee96dd48de878c0191d0701d853dd514" category="paragraph">此範例將記錄快照保留設定為 2 ：</block>
+  <block id="ab6d9fe11358cebc1d2cc02fa1c47496" category="list-text">請確定您已在 Azure 中建立服務主體。</block>
+  <block id="6f346066b074941885d0989051206e4e" category="list-text">請確定您擁有與服務主體相關的租戶 ID ，用戶端 ID 和秘密金鑰。</block>
+  <block id="db4af27eace345776f29f9a3dbb3b5ff" category="list-text">租戶 ID 可在 Azure Portal 的「 Entra ID 總覽」頁面上找到。</block>
+  <block id="dc2337ddc542969fd93e297dc61108a9" category="list-text">用戶端 ID 也稱為企業應用程式 / 服務主體的應用程式 ID 。您可以在 Azure 入口網站的「總覽」頁面上找到這項資訊，瞭解您為擔任 SnapCenter 服務主體而建立的企業應用程式。</block>
+  <block id="ee69fc7e193d5b369d8bd7792465c781" category="list-text">用戶端秘密金鑰也稱為秘密值。您可以在 Azure Portal 中建立此用戶端機密，方法是在「 Entra ID 」下瀏覽至 * 應用程式登錄 * 。選取您建立的企業應用程式後，請瀏覽至 * 憑證與機密 * ，然後瀏覽 * 新用戶端機密 * 。</block>
+  <block id="732f79401041a0ecc8df586c30756a84" category="admonition">只有在建立時才能存取機密值。您稍後無法存取。</block>
+  <block id="f221207f0adcd828979d33693cf006d5" category="list-text">服務主體需要獲得權限。「貢獻者」的角色可讓服務主體在 Azure 中執行必要的動作。這可從「訂閱」頁面中的存取控制（ IAM ）頁面授予。</block>
 </blocks>
