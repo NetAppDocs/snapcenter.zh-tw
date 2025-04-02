@@ -1643,7 +1643,6 @@
   <block id="f367d650e57088caf7b808e01235016d" category="inline-link">如何使用SnapCenter NetApp從SMBR的二線儲存設備還原</block>
   <block id="41b4c689a8b0e3ba8bfecb2a1e608e46" category="list-text"><block ref="41b4c689a8b0e3ba8bfecb2a1e608e46" category="inline-link-rx"></block></block>
   <block id="f004280f6db6ea5f9302c9851388d751" category="inline-link">使用SMBR從SnapVault 功能中還原Microsoft Exchange郵件</block>
-  <block id="1b0fb59a5bc951f7dc82cb43fe362145" category="list-text"><block ref="00a76af185a73b84e54e96058031aef5" category="inline-link-rx"></block></block>
   <block id="e1470cbc380c0e4285ea434aa1f30381" category="doc">準備儲存系統以進行SnapMirror和SnapVault 資訊複寫</block>
   <block id="9bcf17f4427582cfbb783f46971b1eb0" category="summary">在建立備份工作之前定義備份策略、有助於確保您擁有成功還原資料庫所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、主要決定您的備份策略。</block>
   <block id="7fc686e60d66e170f709548904c946f0" category="doc">定義Exchange Server資源的備份策略</block>
@@ -6976,7 +6975,6 @@
   <block id="a8d03bc12fa704a66e02c6802c0766f8" category="summary">當 SnapCenter Plug-in for SQL Server 當機時、請執行下列手動步驟來恢復外掛程式。</block>
   <block id="112fa4c1243fe1af31b4cf57c26ced23" category="list-text">使用「*新增主機*」或「*修改主機*」頁面、將SnapCenter 適用於SQL Server的「功能不全」外掛程式推送到替代主機。請參閱 <block ref="fc11fadbfb2b2b87f8c260a133d75ad2" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步驟</block>
-  <block id="ab9238ca6f628634f6f6f2cf63502cdb" category="paragraph">請參閱 <block ref="44de5c9fafab2e4e76e19e3717abc2e2" category="inline-link-macro-rx"></block> 影片：</block>
   <block id="94c4200231b3891f27561beda5d4e31f" category="doc">SnapCenter 災難恢復</block>
   <block id="1da5a00a663269fc81a2098b0d91e4d6" category="paragraph">您可以使用 SnapCenter 災難恢復（ DR ）功能、在發生資源毀損或伺服器損毀等災難時恢復 SnapCenter 伺服器。您可以恢復SnapCenter 不中斷的儲存庫、伺服器排程和伺服器組態元件。您也可以恢復SnapCenter 適用於SQL Server的支援功能、SnapCenter 以及適用於SQL Server儲存設備的支援功能。</block>
   <block id="68e856b5be6554a8e4ee8b393b327b0b" category="paragraph">本節說明 SnapCenter 中的兩種災難恢復（ DR ）類型：</block>
@@ -10076,4 +10074,6 @@ Snapshot 作業。</block>
   <block id="ee69fc7e193d5b369d8bd7792465c781" category="list-text">用戶端秘密金鑰也稱為秘密值。您可以在 Azure Portal 中建立此用戶端機密，方法是在「 Entra ID 」下瀏覽至 * 應用程式登錄 * 。選取您建立的企業應用程式後，請瀏覽至 * 憑證與機密 * ，然後瀏覽 * 新用戶端機密 * 。</block>
   <block id="732f79401041a0ecc8df586c30756a84" category="admonition">只有在建立時才能存取機密值。您稍後無法存取。</block>
   <block id="f221207f0adcd828979d33693cf006d5" category="list-text">服務主體需要獲得權限。「貢獻者」的角色可讓服務主體在 Azure 中執行必要的動作。這可從「訂閱」頁面中的存取控制（ IAM ）頁面授予。</block>
+  <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
+  <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">觀看 <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> 影片。</block>
 </blocks>

@@ -19,5 +19,5 @@ summary: 單一信箱恢復（SMBR）軟體可讓您還原及恢復郵件或信�
 
 * https://kb.netapp.com/Legacy/SMBR/How_to_manually_restore_a_single_item_with_SMBR["如何使用 SMBR 手動還原單一項目（也適用於 Ontrack 電源控制還原）"]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Single_Mailbox_Recovery_(SMBR)/How_to_restore_from_secondary_storage_in_SMBR_with_SnapCenter["如何使用SnapCenter NetApp從SMBR的二線儲存設備還原"^]
-* https://www.youtube.com/watch?v=fOMuaaXrreI&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg&index=3["使用SMBR從SnapVault 功能中還原Microsoft Exchange郵件"^]
+* https://www.youtube.com/watch?v=wMSo049rREY&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg&index=3["使用SMBR從SnapVault 功能中還原Microsoft Exchange郵件"^]
 

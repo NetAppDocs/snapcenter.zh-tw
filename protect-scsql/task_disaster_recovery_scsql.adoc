@@ -25,4 +25,4 @@ SnapCenter Plug-in for SQL Server 當機時、請使用下列步驟切換至不�
 
 
 .相關資訊
-請參閱 link:https://www.youtube.com/watch?v=Nbr_wm9Cnd4&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["災難恢復API"^] 影片：
+觀看 link:https://www.youtube.com/watch?v=_8NG-tTGy8k&list=PLdXI3bZJEw7nofM6lN44eOe4aOSoryckg["災難恢復API"^] 影片。
