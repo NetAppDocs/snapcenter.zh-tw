@@ -19,6 +19,6 @@ SnapCenter 支援單一執行個體 MySQL 設定。您可以在 Linux 和 Window
 
 適用於 MySQL 的 SnapCenter 外掛程式支援 ONTAP 和 Azure NetApp 檔案儲存配置上的 NFS 和 SAN 。
 
-支援 VMDK 或虛擬儲存配置。
+支援 VMDK ， VVol 和 RDM 虛擬儲存配置。
 
 不支援符號連結。

@@ -8768,7 +8768,6 @@ Snapshot 作業。</block>
   <block id="bed33f0d8ca7a361d2db96468ec4530a" category="paragraph">SnapCenter 支援單一執行個體和多個執行個體 DB2 設定。您可以在 Linux 和 Windows 環境中使用適用於 IBM DB2 資料庫的外掛程式。在 Windows 環境中、 DB2 將支援為手動資源。</block>
   <block id="c3395454ca09d74ac87021eb3fc9f403" category="paragraph">安裝 IBM DB2 資料庫外掛程式時、您可以使用 SnapCenter 搭配 NetApp SnapMirror 技術、在另一個磁碟區上建立備份集的鏡射複本。您也可以使用外掛程式搭配NetApp SnapVault 支援技術來執行磁碟對磁碟備份複寫、以符合標準。</block>
   <block id="ee9977908b8afee30488e8caec66d0fb" category="paragraph">SnapCenter Plug-in for DB2 支援 ONTAP 和 Azure NetApp 檔案儲存配置上的 NFS 和 SAN 。</block>
-  <block id="d63a091b1a9135cd24b47b631680f297" category="paragraph">不支援 VMDK 或虛擬儲存配置。</block>
   <block id="f36fcdaf30a6f579eb56856f5e83318d" category="summary">支援實體機器和虛擬機器（VM）上的各種儲存類型。SnapCenter您必須先確認儲存類型的支援、才能安裝適用於 IBM DB2 的 SnapCenter 外掛程式。</block>
   <block id="6426213ce16798143b0b51f16c7f4f53" category="doc">適用於 IBM DB2 的 SnapCenter 外掛程式支援的儲存類型</block>
   <block id="571cf05bca5a2c1b66a39de8869e3134" category="summary">備份類型指定您要建立的備份類型。SnapCenter 支援 IBM DB2 資料庫的 Snapshot 複製型備份類型。</block>
@@ -8907,7 +8906,6 @@ Snapshot 作業。</block>
   <block id="7f30d362b46650080b9026ef95dfe5f2" category="paragraph">SnapCenter 支援單一執行個體 MySQL 設定。您可以在 Linux 和 Windows 環境中使用適用於 MySQL 資料庫的外掛程式。在 Windows 環境中、 MySQL 將支援為手動資源。</block>
   <block id="e417b7c5210d9ffe922c02319c459751" category="paragraph">安裝適用於 MySQL 資料庫的外掛程式時、您可以使用 SnapCenter 搭配 NetApp SnapMirror 技術、在另一個磁碟區上建立備份集的鏡射複本。您也可以使用外掛程式搭配NetApp SnapVault 支援技術來執行磁碟對磁碟備份複寫、以符合標準。</block>
   <block id="8a1b03bf3dea7ac1c1925685477e35ea" category="paragraph">適用於 MySQL 的 SnapCenter 外掛程式支援 ONTAP 和 Azure NetApp 檔案儲存配置上的 NFS 和 SAN 。</block>
-  <block id="72f4f1f1ebc26a28eb085ea04d34b5db" category="paragraph">支援 VMDK 或虛擬儲存配置。</block>
   <block id="aeb9838805bc067b8277d80da271966d" category="paragraph">不支援符號連結。</block>
   <block id="3a16a89981eac15a65e1d123f0f768f0" category="summary">支援實體機器和虛擬機器（VM）上的各種儲存類型。SnapCenter安裝適用於 MySQL 的 SnapCenter 外掛程式之前、您必須先確認儲存類型的支援。</block>
   <block id="a8e3ba965f3e160532b9d3ee582e1c53" category="doc">適用於 MySQL 的 SnapCenter 外掛程式支援的儲存類型</block>
@@ -10076,4 +10074,5 @@ Snapshot 作業。</block>
   <block id="f221207f0adcd828979d33693cf006d5" category="list-text">服務主體需要獲得權限。「貢獻者」的角色可讓服務主體在 Azure 中執行必要的動作。這可從「訂閱」頁面中的存取控制（ IAM ）頁面授予。</block>
   <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
   <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">觀看 <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> 影片。</block>
+  <block id="5c8b8bc332cb41802ffbe6c5cda258ab" category="paragraph">支援 VMDK ， VVol 和 RDM 虛擬儲存配置。</block>
 </blocks>

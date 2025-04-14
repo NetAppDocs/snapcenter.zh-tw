@@ -26,4 +26,4 @@ NOTE: 不支援 DB2 PureScale 環境和 DB2 多節點（ DPF ）系統。
 
 SnapCenter Plug-in for DB2 支援 ONTAP 和 Azure NetApp 檔案儲存配置上的 NFS 和 SAN 。
 
-不支援 VMDK 或虛擬儲存配置。
+支援 VMDK ， VVol 和 RDM 虛擬儲存配置。
