@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-  <block id="7608e75619cff3eeb4e8bce40481b456" category="doc">軟件文檔SnapCenter</block>
   <block id="087af862ce66495658dd0b639b76b8e8" category="summary">當支援對象移除主機時、它會先移除「資源庫」頁面上所列該主機的備份、複製、複製工作、資源群組和資源、然後在主機上解除安裝外掛程式套件。SnapCenter SnapCenter</block>
   <block id="2425983d8196e314ffb29c49e451ba2e" category="doc">移除主機</block>
   <block id="78166ce4ccceeedfbf6aeb8682851072" category="paragraph">*關於此工作*</block>
@@ -3176,7 +3175,6 @@
   <block id="23a33f41bad6f33cfd0a34e05aac4424" category="paragraph">您必須使用具有本機系統管理員權限的本機帳戶。</block>
   <block id="b9bb47785399146845eaead624481439" category="paragraph">雖然支援網域信任、多網域樹系和跨網域信任、但不支援跨樹系網域。Microsoft的Active Directory網域及信任相關文件包含更多資訊。</block>
   <block id="017007d9e00e31e53994cdd0aad0c593" category="admonition">安裝SnapCenter 完支援服務器後、您不應變更SnapCenter 支援該主機的網域。如果您從SnapCenter 安裝了支援服務器的網域中移除此伺服器主機SnapCenter 、然後嘗試解除安裝SnapCenter 支援服務器、則解除安裝作業會失敗。</block>
-  <block id="14c90652b0a2e523d6e8630706107e75" category="summary">可在多個瀏覽器上使用此軟體。SnapCenter</block>
   <block id="6d84e3718084e0db779da4ff8791a2f2" category="doc">支援的瀏覽器</block>
   <block id="4ce9ef971363d62abcf2c6d2b1234486" category="summary">匯出SnapCenter 功能證書。</block>
   <block id="4b7e01d00c62bc7cc219f57128db2b48" category="doc">匯出SnapCenter 功能證書</block>
@@ -6317,7 +6315,6 @@
   <block id="413d9db5e9371c72c8a46ca2aa854b0b" category="paragraph">當您建立資源群組並附加原則時、可能會將資源群組設定為每日執行完整備份、以及每小時執行記錄備份的另一個排程。</block>
   <block id="ac79b4abc4dc6d0e9ec4abc5ca6b78a2" category="image-alt">資料集與原則圖表</block>
   <block id="a2736a5a798a9322639036f21c70d1d1" category="paragraph">下圖說明Windows檔案系統的資源、資源群組和原則之間的關係：</block>
-  <block id="0344fda8fff2d8c5a125ffa5ba5f19a7" category="summary">支援簡單、集中化、可擴充的平台、可為在混合雲任何地方的不間斷系統上執行的應用程式、資料庫、主機檔案系統及VM提供應用程式一致的資料保護。SnapCenter ONTAP</block>
   <block id="6309043436d4e7e5bad9a81c89ff15e4" category="doc">概述SnapCenter</block>
   <block id="edaafea0543ae64ebb79a2ed2e7a055b" category="paragraph">利用NetApp Snapshot、功能豐富、FlexClone、SnapMirror和支援技術、提供下列功能：SnapCenter SnapRestore SnapVault</block>
   <block id="6d02db19251dfec578c356202bfb1bdc" category="list-text">快速、節省空間、應用程式一致的磁碟型備份</block>
@@ -9996,8 +9993,6 @@ Snapshot 作業。</block>
   <block id="4a3f09c73e2dacacbebddfd96cac1948" category="inline-link">SnapCenter Software 6.1 版本資訊</block>
   <block id="77400fe4524142ac29310162939726cb" category="paragraph">如需已知問題，限制，修正問題及新增及變更命令的詳細資訊，請參閱<block ref="5c68c6454568b27710c4196bb910da4f" category="inline-link-rx"></block>。您必須使用 NetApp 帳戶登入、或建立帳戶才能存取版本資訊。</block>
   <block id="d6eb82c324cab2f36e345863fad95090" category="cell">6.1</block>
-  <block id="e62d168588d6c1af2fbd37668a7343da" category="summary">SnapCenter 軟體 6.1 版包含數項新功能與增強功能。</block>
-  <block id="0220307da5eec95fc03c435ffbbc2bfa" category="doc">SnapCenter 軟體 6.1 的新功能</block>
   <block id="1e095c69621645fccc8f12cd7f35f6fc" category="inline-link-macro">支援 ASA R2 系統</block>
   <block id="cf1b0e66e5b65c6a3b32f92fdc6552c4" category="cell"><block ref="cf1b0e66e5b65c6a3b32f92fdc6552c4" category="inline-link-macro-rx"></block></block>
   <block id="cc753d144910e12701641281c8cb88ed" category="paragraph">SnapCenter 現在支援 ASA R2 系統，可針對僅限 SAN 的客戶需求，提供簡化的體驗。</block>
@@ -10006,8 +10001,6 @@ Snapshot 作業。</block>
   <block id="92d37724657724129ae0451584c728aa" category="inline-link">移除SnapCenter VMware vSphere的功能性外掛程式</block>
   <block id="79cfb9f00fa8ea603f631e679e453fad" category="paragraph">如需解除安裝 SnapCenter Plug-in for VMware vSphere 的相關資訊、請參閱<block ref="cae8a6db54fa4da6d80207fee61e78d1" category="inline-link-rx"></block>。</block>
   <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">如果您要升級多個主機、請選取所有主機、按一下、然後按一 <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>下 * 升級 * &gt; * 確定 * 。</block>
-  <block id="eafbda6a16d2997896c70ba8ded3db33" category="sidebar">支援簡單、集中化、可擴充的平台、可為在混合雲中任何位置的不間斷系統上執行的應用程式、資料庫、主機檔案系統及VM提供應用程式一致的資料保護。SnapCenter ONTAP此文件庫包含 6.1 版的資訊。</block>
-  <block id="888e5b40ea166427f96db1a9c08af7fc" category="sidebar">SnapCenter Software 6.1 文件</block>
   <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">物件儲存備份不支援 Oracle 和 SAP HANA 裝載和目錄工作流程，但支援快照。</block>
   <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">物件儲存備份不支援 Oracle PDB 複本，但快照支援 Oracle PDB 複本。</block>
   <block id="6eec14240810faadbd60c3ec98b543e7" category="paragraph">共用磁碟並非使用Windows的外掛程式建立。您應該建立共享LUN、然後將其新增至叢集中的每個虛擬機器。如需相關資訊，請參閱<block ref="0564b16166a6e24aa234d21e5bcdc18a" category="inline-link-rx"></block>。</block>
@@ -10075,4 +10068,11 @@ Snapshot 作業。</block>
   <block id="c23d56866a5b11fd0d8dc189fcf21298" category="list-text"><block ref="341e3fddad4b27511133b6917a75bb8a" category="inline-link-rx"></block></block>
   <block id="57cf9c4ee485623172a5c60cbee423a4" category="paragraph">觀看 <block ref="96716f545c5cf1a209bf10c1a798ce38" category="inline-link-macro-rx"></block> 影片。</block>
   <block id="5c8b8bc332cb41802ffbe6c5cda258ab" category="paragraph">支援 VMDK ， VVol 和 RDM 虛擬儲存配置。</block>
+  <block id="e5385a9de21528bfedd644f4c0331eb1" category="summary">SnapCenter 軟體是一個簡單，集中且可擴充的平台，可為混合雲中任何位置的 ONTAP 系統上執行的應用程式，資料庫，主機檔案系統和 VM 提供應用程式一致的資料保護。</block>
+  <block id="0d391616b89aaac354c13202aaccb4ba" category="summary">SnapCenter 軟體可用於多個瀏覽器。</block>
+  <block id="68578ccfcf5117ca8a9a2d7d884e320f" category="summary">6.1 版的 SnapCenter 軟體包含數項新功能和增強功能。</block>
+  <block id="600ede45d5c4a07242a73e3a5a885e15" category="doc">SnapCenter 軟體 6.1 的新功能</block>
+  <block id="8f13c7650e8ef95e186d64196ea879a5" category="sidebar">SnapCenter 軟體是一個簡單，集中且可擴充的平台，可為混合雲中任何位置的 ONTAP 系統上執行的應用程式，資料庫，主機檔案系統和 VM 提供應用程式一致的資料保護。此文件庫包含 6.1 版的資訊。</block>
+  <block id="8127605cde4cee83a23b35f1207c7572" category="sidebar">SnapCenter 軟體文件</block>
+  <block id="f3e84c2e19a0aa80c716ba1fc7f07e0e" category="sidebar">SnapCenter 軟體 6.1 文件</block>
 </blocks>

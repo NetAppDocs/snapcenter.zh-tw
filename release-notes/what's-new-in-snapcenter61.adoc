@@ -2,7 +2,7 @@
 permalink: 'release-notes/what"s-new-in-snapcenter61.html' 
 sidebar: sidebar 
 keywords: what is new, features, enhancements, 6.1 
-summary: SnapCenter 軟體 6.1 版包含數項新功能與增強功能。 
+summary: 6.1 版的 SnapCenter 軟體包含數項新功能和增強功能。 
 ---
 = SnapCenter 軟體 6.1 的新功能
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: SnapCenter 軟體 6.1 版包含數項新功能與增強功能。
 
 
 [role="lead"]
-SnapCenter 軟體 6.1 版包含數項新功能與增強功能。
+6.1 版的 SnapCenter 軟體包含數項新功能和增強功能。
 
 |===
 | 更新 | 說明 

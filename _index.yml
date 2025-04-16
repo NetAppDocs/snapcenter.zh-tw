@@ -1,10 +1,10 @@
 ---
 indexpage:
-  title: 軟件文檔SnapCenter
+  title: SnapCenter 軟體文件
   keywords: snapcenter server, plug-in, data protection, applications, databases,
     host file systems, VmWare, backup, restore, clone
-  lead: 支援簡單、集中化、可擴充的平台、可為在混合雲中任何位置的不間斷系統上執行的應用程式、資料庫、主機檔案系統及VM提供應用程式一致的資料保護。SnapCenter
-    ONTAP此文件庫包含 6.1 版的資訊。
+  lead: SnapCenter 軟體是一個簡單，集中且可擴充的平台，可為混合雲中任何位置的 ONTAP 系統上執行的應用程式，資料庫，主機檔案系統和 VM 提供應用程式一致的資料保護。此文件庫包含
+    6.1 版的資訊。
   tiles:
   - title: 開始使用
     links:
