@@ -14,8 +14,8 @@ summary: 在 Azure 虛擬機器上下載並安裝 SnapCenter 。
 您可以從 NetApp 支援網站 下載 SnapCenter 軟體、並在 Azure 虛擬機器上安裝軟體。
 
 .開始之前
-* 確保 Azure Windows 虛擬機器符合 SnapCenter 伺服器安裝需求。如需相關資訊、請參閱 link:../install/reference_domain_and_workgroup_requirements.html["準備安裝SnapCenter 完此伺服器"]。
-* 如果您是 Azure NetApp Files 新手、而且沒有現有的 NetApp 帳戶、請確定您已註冊、以便存取 SnapCenter 軟體。
+* 確保 Azure Windows 虛擬機器符合 SnapCenter 伺服器安裝需求。如需相關資訊，請參閱 link:../install/requirements-to-install-snapcenter-server.html["安裝 SnapCenter 伺服器的需求"]。
+* 如果您是 Azure NetApp Files 新手、而且沒有現有的 NetApp 帳戶、請確定您已註冊、以便存取 SnapCenter 軟體。如需詳細link:../install/register_enable_software_access.html["註冊以存取 SnapCenter 軟體"]資訊，請參閱。
 
 
 .步驟

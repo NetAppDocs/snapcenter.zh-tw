@@ -23,3 +23,7 @@ NetApp 單一信箱恢復是 Ontrack 提供的合作夥伴產品。Ontrack Power
 Exchange 外掛程式支援 SnapMirror 主動式同步（最初以 SnapMirror Business Continuity [SM-BC] 發行）、即使整個站台發生故障、商業服務也能繼續運作、支援應用程式使用次要複本進行透明容錯移轉。使用 SnapMirror 主動式同步觸發容錯移轉時、不需要手動介入或額外的指令碼處理。
 
 它支援 SnapMirror Active Sync 的非對稱、容錯移轉或非雙工模式。這是指最佳化路徑僅來自主側 LUN 擁有節點的解決方案。任何進入次要叢集路徑的 I/O 都是透過將其代理至主要叢集來提供服務。同步複寫是單向的、方向是從一級到二級。
+
+* 在SnapCenter 您的支援環境中、自動化Microsoft Exchange Server資料庫和資料庫可用度群組（DAG）的應用程式感知備份與還原作業
+* 當您部署適用於 VMware vSphere 的 SnapCenter 外掛程式，並向 SnapCenter 註冊外掛程式時，可在 RDM LUN 上支援虛擬化 Exchange Server 。
+

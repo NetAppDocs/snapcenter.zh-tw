@@ -31,8 +31,7 @@ NOTE: 您不應在SnapCenter 擁有Microsoft Exchange Server、Active Directory�
 
 
 
-*步驟*
-
+.步驟
 . 請SnapCenter 從下載《停止更新》安裝套件 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支援網站"^]。
 . 連按兩下下載的.exe檔案、即可啟動SnapCenter 安裝程式。
 +
@@ -63,23 +62,4 @@ NOTE: 如果您按一下「*取消*」按鈕、將會完成正在執行的步驟
 +
 記錄檔一律會列在管理使用者的%temp%資料夾中（最舊的優先）。如果您想重新導向記錄位置、SnapCenter 請執行：'C：\installer_location\installer_name.exe /log"C：\""、從命令提示字元啟動安裝
 
-
-
-
-
-== 註冊產品以啟用支援
-
-如果您是 NetApp 產品的新手、而且沒有現有的 NetApp 帳戶、您應該註冊產品以啟用支援。
-
-.步驟
-. 安裝 SnapCenter 之後、請瀏覽 * 說明 > 關於 * 。
-. 在 _ 關於 SnapCenter _ 對話方塊中、記下以 971 開頭的 20 位數 SnapCenter 執行個體。
-. 單擊。 https://register.netapp.com[]
-. 按一下「 * 我不是註冊的 NetApp 客戶 * 」。
-. 請指定您的詳細資料以自行註冊。
-. 將 NetApp 參考 SN 欄位保留空白。
-. 從產品線下拉式清單中選取 * SnapCenter * 。
-. 選擇帳單供應商。
-. 輸入 20 位數的 SnapCenter 執行個體 ID 。
-. 按一下*提交*。
 

@@ -1,0 +1,29 @@
+---
+permalink: get-started/snapmirror-active-sync-snapcenter.html 
+sidebar: sidebar 
+keywords: snapmirror active sync 
+summary: 如果發生資源毀損或伺服器當機等災難、您可以SnapCenter 使用SnapCenter 「還原災難恢復」功能來還原此伺服器。 
+---
+= SnapCenter 中的 SnapMirror 作用中同步
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapMirror 主動式同步可讓業務服務持續運作、即使整個站台故障也沒問題、支援應用程式使用次要複本以透明方式容錯移轉。使用 SnapMirror 主動式同步觸發容錯移轉時、不需要手動介入或額外的指令碼處理。
+
+有關 SnapMirror 活動同步的詳細信息，請參閱 https://docs.netapp.com/us-en/ontap/smbc/index.html["SnapMirror 主動式同步總覽"]。
+
+對於 SnapMirror 主動式同步、請確保您符合各種硬體、軟體和系統組態需求。如需詳細資訊，請參閱 https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_prerequisites.html["先決條件"]
+
+此功能支援的外掛程式包括適用於 SQL Server 的 SnapCenter 外掛程式、適用於 Windows 的 SnapCenter 外掛程式、適用於 Oracle 資料庫的 SnapCenter 外掛程式、適用於 SAP HANA 資料庫的 SnapCenter 外掛程式、適用於 Microsoft Exchange Server 的 SnapCenter 外掛程式、以及適用於 Unix 的 SnapCenter 外掛程式。
+
+
+NOTE: 為了支援主機啟動器在 SnapCenter 中的鄰近性、其值應在 ONTAP 中設定來源或目的地。
+
+SnapCenter 不支援的使用案例：
+
+* 如果通過將 SnapMirror 活動同步關係上的策略從 ONTAP 中的 _automatedfailover_ 更改爲 _automatedfailoverduplex ，將現有的非對稱 SnapMirror 活動同步工作負載轉換爲對稱工作負載，則 SnapCenter 中不支持該策略。
+* 如果有資源群組的備份（已在 SnapCenter 中受到保護）、則 SnapMirror 主動式同步關係的儲存原則會從 _ 自動容錯移轉 _ 變更為 _ 自動故障轉移雙工 _ ONTAP 、 SnapCenter 則不支援相同的設定。
+

@@ -14,3 +14,9 @@ summary: 適用於Microsoft SQL Server的《支援功能》外掛程式是NetApp
 適用於Microsoft SQL Server的《支援功能》外掛程式是NetApp支援應用程式感知的Microsoft SQL Server資料庫資料保護管理功能的NetApp支援軟體主機端元件。SnapCenter SnapCenterSQL Server外掛程式可在SnapCenter 您的支援環境中、自動執行SQL Server資料庫備份、驗證、還原及複製作業。
 
 當安裝SQL Server外掛程式時、您可以使用SnapCenter NetApp SnapMirror技術搭配使用、在另一個磁碟區上建立備份集的鏡射複本、並使用NetApp SnapVault 支援技術執行磁碟對磁碟備份複寫、以符合標準或用於歸檔。
+
+* 在SnapCenter 您的支援環境中、自動化Microsoft SQL Server資料庫的應用程式感知備份、還原及複製作業。
+* 當您部署SnapCenter VMware vSphere的VMware vSphere支援Microsoft SQL Server資料庫、並使用SnapCenter VMware vCenter登錄外掛程式時、可支援VMDK上的Microsoft SQL Server資料庫和原始裝置對應（RDM）LUN
+* 僅支援資源配置SMB共用區。不支援在SMB共用區上備份SQL Server資料庫。
+* 支援將備份從SnapManager Microsoft SQL Server的支援功能匯入SnapCenter 到支援功能。
+

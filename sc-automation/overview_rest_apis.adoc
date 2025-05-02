@@ -4,16 +4,14 @@ sidebar: sidebar
 keywords: REST APIs, swagger 
 summary: 說明如何使用REST API來執行多SnapCenter 項功能完善的管理作業。REST API會透過Swagger網頁公開。 
 ---
-= REST API總覽
+= 使用 REST API 的 SnapCenter 自動化
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-REST API可用於執行多SnapCenter 項功能完善的管理作業。REST API會透過Swagger網頁公開。
-
-您可以存取Swagger網頁、網址為：_https://<SnapCenter_IP_address_or_name>:<SnapCenter_port>/swagger/_、以顯示REST API文件、以及手動發出API呼叫。
+您可以使用REST API來執行多SnapCenter 項功能完善的管理作業。REST API會透過Swagger網頁公開。您可以存取 Swagger 網頁、網址為： _\https ： <SnapCenter_IP_address_or_name> ： <SnapCenter_port> / swagger/ _ 、以顯示 REST API 文件、以及手動發出 API 呼叫。
 
 支援REST API的外掛程式包括：
 
@@ -22,3 +20,5 @@ REST API可用於執行多SnapCenter 項功能完善的管理作業。REST API�
 * 自訂外掛程式
 * Oracle資料庫的外掛程式
 
+
+如需SnapCenter VMware vSphere REST API的靜態外掛程式資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_rest_apis_overview.html["VMware vSphere REST API的VMware外掛程式SnapCenter"^]

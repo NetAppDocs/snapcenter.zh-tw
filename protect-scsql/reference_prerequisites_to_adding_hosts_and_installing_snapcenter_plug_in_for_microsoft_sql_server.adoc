@@ -21,7 +21,7 @@ summary: 在新增主機並安裝外掛程式套件之前、您必須先完成�
 適用於Microsoft SQL Server的VMware vCenter外掛程式使用Microsoft VDI架構、需要系統管理員存取權。SnapCenter
 
 +
-http://support.microsoft.com/kb/2926557/["Microsoft支援文件編號2926557：SQL Server VDI備份與還原作業需要Sysadmin權限"]
+https://mskb.pkisolutions.com/kb/2926557["Microsoft支援文件編號2926557：SQL Server VDI備份與還原作業需要Sysadmin權限"]
 
 * 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.
 * 如果安裝了適用於Microsoft SQL Server的功能、您必須停止或停用服務和排程。SnapManager

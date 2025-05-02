@@ -34,4 +34,6 @@ Oracle資料庫外掛程式利用Oracle Recovery Manager（RMAN）、驗證、�
 * 排程備份與驗證作業。
 * 監控所有作業。
 * 檢視備份、還原及複製作業的報告。
+* 自動化應用程式感知備份、還原、還原、驗證、掛載、 在SnapCenter 您的整個環境中卸載及複製Oracle資料庫的作業
+* 支援Oracle資料庫for SAP、但不提供SAP BR* Tools整合
 

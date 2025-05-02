@@ -2,32 +2,12 @@
 section: install
 title: 安裝伺服器SnapCenter
 entries:
-- title: 安裝工作流程
-  url: "/install/install_workflow.html"
 - title: 準備安裝SnapCenter 完此伺服器
   entries:
-  - title: 網域與工作群組需求
-    url: "/install/reference_domain_and_workgroup_requirements.html"
-  - title: 空間與規模需求
-    url: "/install/reference_space_and_sizing_requirements.html"
-  - title: SAN主機需求
-    url: "/install/reference_san_host_requirements.html"
-  - title: 支援的儲存系統與應用程式
-    url: "/install/reference_supported_storage_systems_and_applications.html"
-  - title: 瞭解如何在 SnapCenter 中支援 ASA R2 系統
-    url: "/install/learn-about-supporting-asa-r2-in-snapcenter.html"
-  - title: 支援的瀏覽器
-    url: "/install/reference_supported_browsers.html"
-  - title: 連線與連接埠需求
-    url: "/install/reference_connection_and_port_requirements.html"
-  - title: 不需要授權SnapCenter
-    url: "/install/concept_snapcenter_licenses.html"
-  - title: 註冊以存取 SnapCenter 軟體
+  - title: 需求
+    url: "/install/requirements-to-install-snapcenter-server.html"
+  - title: 在 NetApp 支援網站上註冊
     url: "/install/register_enable_software_access.html"
-  - title: 認證方法
-    url: "/install/concept_authentication_methods_for_your_credentials.html"
-  - title: 儲存虛擬機器連線與認證
-    url: "/install/concept_svm_connections_and_credentials.html"
   - title: 多因素驗證（MFA）
     entries:
     - title: 管理多因素驗證（ MFA ）
@@ -36,12 +16,22 @@ entries:
       url: "/install/enable_multifactor_authentication_using_RestAPI_PowerShell_SCCLI.html"
     - title: 使用 PowerShell 、 sccli 和 REST API 在 SnapCenter 伺服器中設定 MFA
       url: "/install/configure_mfa_using_powershell_sccli_restapi.html"
-- title: 在 Windows 主機上安裝 SnapCenter 伺服器
-  url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
-- title: 在 Linux 主機上安裝 SnapCenter 伺服器
-  url: "/install/install_snapcenter_server_linux.html"
-- title: 登入SnapCenter 到
-  url: "/install/task_log_in_to_snapcenter.html"
+- title: 安裝SnapCenter 伺服器
+  entries:
+  - title: 在 Windows 主機上安裝 SnapCenter 伺服器
+    url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
+  - title: 在 Linux 主機上安裝 SnapCenter 伺服器
+    url: "/install/install_snapcenter_server_linux.html"
+  - title: 註冊 SnapCenter
+    url: "/install/register-snapcenter-software.html"
+  - title: 登入SnapCenter 到
+    url: "/install/task_log_in_to_snapcenter.html"
+  - title: 安裝期間在Windows主機上啟用的功能
+    url: "/install/reference_features_enabled_on_your_windows_host_during_installation.html"
+  - title: 安裝期間在 Linux 主機上啟用的功能
+    url: "/install/features_enabled_on_linux_host.html"
+- title: 設定憑證型驗證
+  url: "/install/configure_certificate_based_authentication.html"
 - title: 設定 Windows 主機的 CA 憑證
   entries:
   - title: 產生CA認證CSR檔案
@@ -70,22 +60,6 @@ entries:
     url: "/install/configure_two_way_ssl_linux.html"
   - title: 在 Linux 主機上啟用 SSL 通訊
     url: "/install/enable_two_way_ssl_linux.html"
-- title: 設定憑證型驗證
-  entries:
-  - title: 從 SnapCenter 伺服器匯出憑證授權單位（ CA ）憑證
-    url: "/install/task_export_ca_certificates_from_snapcenter_server.html"
-  - title: 將 CA 憑證匯入 Windows 主機外掛程式
-    url: "/install/task_import_ca_certificate_to_windows_plugin_hosts.html"
-  - title: 將 CA 憑證匯入 UNIX 主機外掛程式、並將根或中繼憑證設定為 SPL 信任存放區
-    entries:
-    - title: 將 CA 憑證匯入 UNIX 主機外掛程式
-      url: "/install/task_import_ca_certificate_to_unix_plugin_hosts.html"
-    - title: 將根或中繼憑證設定為SPL信任存放區
-      url: "/install/task_configure_root_or_intermediate_certificates_to_trust_store.html"
-  - title: 啟用憑證型驗證
-    url: "/install/task_enable_certificate_based_authentication.html"
-  - title: 匯出SnapCenter 功能證書
-    url: "/install/task_export_snapcenter_certificates.html"
 - title: 設定Active Directory、LDAP和LDAPS
   entries:
   - title: 登錄不受信任的Active Directory網域
@@ -120,6 +94,8 @@ entries:
   url: "/install/task_configure_audit_log_settings.html"
 - title: 新增儲存系統
   url: "/install/task_add_storage_systems.html"
+- title: 儲存虛擬機器連線與認證
+  url: "/install/concept_svm_connections_and_credentials.html"
 - title: 新增SnapCenter 以控制器為基礎的功能
   url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
 - title: 配置您的儲存系統
@@ -142,7 +118,3 @@ entries:
     url: "/install/concept_provision_storage_in_vmware_environments.html"
 - title: 使用SnapCenter 伺服器設定安全的MySQL連線
   url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
-- title: 安裝期間在Windows主機上啟用的功能
-  url: "/install/reference_features_enabled_on_your_windows_host_during_installation.html"
-- title: 安裝期間在 Linux 主機上啟用的功能
-  url: "/install/features_enabled_on_linux_host.html"

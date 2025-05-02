@@ -1,0 +1,35 @@
+---
+permalink: get-started/concept_disaster_recovery.html 
+sidebar: sidebar 
+keywords: Disaster Recovery, DR, crash, resource deleted 
+summary: 如果發生資源毀損或伺服器當機等災難、您可以SnapCenter 使用SnapCenter 「還原災難恢復」功能來還原此伺服器。 
+---
+= SnapCenter 中的災難恢復
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapCenter 災難恢復（ DR ）功能可讓您從資源毀損或伺服器當機等災難中恢復。它有助於還原 SnapCenter 儲存庫，伺服器排程，組態元件，以及適用於 SQL Server 及其儲存設備的 SnapCenter 外掛程式。
+
+本節說明 SnapCenter 中的兩種災難恢復類型：
+
+
+
+== SnapCenter 伺服器災難恢復
+
+* SnapCenter 伺服器資料已備份、可在不新增任何外掛程式或由 SnapCenter 伺服器管理的情況下進行還原。
+* 次要SnapCenter 版的伺服器應安裝在相同的安裝目錄中、並與主SnapCenter 版的SURL伺服器安裝在同一個連接埠上。
+* 針對多因素驗證（ MFA ），請在 SnapCenter 伺服器 DR 期間，關閉所有瀏覽器索引標籤，然後重新開啟瀏覽器以重新登入。這會清除現有或作用中的工作階段 Cookie 、並更新正確的組態資料。
+* SnapCenter 災難恢復功能使用 REST API 來備份 SnapCenter 伺服器。請參閱。 link:../tech-refresh/task_tech_refresh_server_host.html["REST API工作流程、可用於SnapCenter 支援還原至支援的伺服器災難恢復"]
+* 還原作業之後，與稽核設定相關的組態檔案不會備份在 DR 備份中，也不會備份在 DR 伺服器上。您應該手動重複稽核記錄設定。
+
+
+
+
+== SnapCenter 外掛程式與儲存災難恢復
+
+DR 僅適用於 SQL Server 的 SnapCenter 外掛程式。如果外掛程式關閉，請切換至另一部 SQL 主機，然後依照幾個步驟來恢復資料。請參閱。 link:../protect-scsql/task_disaster_recovery_scsql.html["SQL Server適用的支援功能SnapCenter"]
+
+SnapCenter 使用 ONTAP SnapMirror 來複寫資料，透過將資料同步至次要站台，可用於災難恢復。若要啟動容錯移轉，請中斷 SnapMirror 複寫。在還原期間，反轉同步作業，將資料從 DR 站台複寫回主要位置。

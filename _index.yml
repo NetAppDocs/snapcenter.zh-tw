@@ -11,17 +11,13 @@ indexpage:
     - title: 版本資訊
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665
     - title: 深入瞭解SnapCenter
-      url: "/concept/concept_snapcenter_overview.html"
+      url: "/get-started/concept_snapcenter_overview.html"
+    - title: SnapCenter 軟體快速入門
+      url: "/get-started/quick-start-snapcenter.html"
     - title: 升級SnapCenter 功能：伺SnapCenter 服器和功能不全的外掛程式
       url: "/upgrade/upgrade_workflow.html"
   - title: 安裝SnapCenter 伺服器
     links:
-    - title: 必要的授權
-      url: "/install/concept_snapcenter_licenses.html"
-    - title: 設定連接埠
-      url: "/install/reference_connection_and_port_requirements.html"
-    - title: 註冊以存取 SnapCenter 軟體
-      url: "/install/register_enable_software_access.html"
     - title: 在 Windows 主機上安裝 SnapCenter 伺服器
       url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
     - title: 在 Linux 主機上安裝 SnapCenter 伺服器

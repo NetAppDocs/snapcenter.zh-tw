@@ -390,7 +390,7 @@ IMPORTANT: 此範例只能做為建立自己資料的參考。
 
 *關於此工作*
 
-您應該檢閱Oracle資料庫支援的不同驗證方法。如需相關資訊、請參閱link:../install/concept_authentication_methods_for_your_credentials.html["認證方法"^]。
+您應該檢閱Oracle資料庫支援的不同驗證方法。如需相關資訊，請參閱 link:../get-started/concept_authentication_methods_for_your_credentials.html["認證方法"^]。
 
 如果您為個別資源群組設定認證、且使用者名稱沒有完整的管理權限、則使用者名稱至少必須具有資源群組和備份權限。
 

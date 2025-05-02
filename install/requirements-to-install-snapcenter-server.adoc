@@ -1,0 +1,361 @@
+---
+permalink: install/requirements-to-install-snapcenter-server.html 
+sidebar: sidebar 
+keywords: active directory domain, workgroups, multi-domain forests, cross-domain, cross-forest domains, browsers, chrome, IE, Edge, ports, port requirements, host utilities, Microsoft DSM, Windows MPIO 
+summary: 安裝 SnapCenter 伺服器之前，您應該確定已符合所有需求 
+---
+= 安裝 SnapCenter 伺服器的需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 Windows 或 Linux 主機上安裝 SnapCenter 伺服器之前，您應該先檢閱並確定符合您環境的所有需求。
+
+
+
+== Windows 主機的網域和工作群組需求
+
+SnapCenter 伺服器可以安裝在網域或工作群組中的 Windows 主機上。
+
+擁有管理 Privileges 的使用者可以安裝 SnapCenter 伺服器。
+
+* Active Directory 網域：您必須使用具有本機系統管理員權限的網域使用者。網域使用者必須是Windows主機上本機系統管理員群組的成員。
+* 工作群組：您必須使用具有本機系統管理員權限的本機帳戶。
+
+
+雖然支援網域信任、多網域樹系和跨網域信任、但不支援跨樹系網域。Microsoft的Active Directory網域及信任相關文件包含更多資訊。
+
+
+NOTE: 安裝SnapCenter 完支援服務器後、您不應變更SnapCenter 支援該主機的網域。如果您從SnapCenter 安裝了支援服務器的網域中移除此伺服器主機SnapCenter 、然後嘗試解除安裝SnapCenter 支援服務器、則解除安裝作業會失敗。
+
+
+
+== 空間與規模需求
+
+您應該熟悉空間和規模需求。
+
+|===
+| 項目 | Windows 主機需求 | Linux 主機需求 
+
+
+ a| 
+作業系統
+ a| 
+Microsoft Windows
+
+僅支援英文、德文、日文及簡體中文版的作業系統。
+
+如需支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121033;&solution=1258&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+ a| 
+* Red Hat Enterprise Linux （ RHEL ） 8 和 9
+* SUSE Linux Enterprise Server （ SLES ） 15.
+
+
+如需支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121032;&solution=1258&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+
+
+
+ a| 
+最小CPU數
+ a| 
+4核心
+ a| 
+4核心
+
+
+
+ a| 
+最低RAM
+ a| 
+8 GB
+
+
+NOTE: MySQL伺服器緩衝資源池使用總RAM的20%。
+ a| 
+8 GB
+
+
+
+ a| 
+不需佔用SnapCenter 太多硬碟空間、即可容納整個伺服器軟體和記錄
+ a| 
+7 GB
+
+
+NOTE: 如果SnapCenter 您在SnapCenter 安裝了S什麼 伺服器的同一個磁碟機上有這個版本的資訊庫、建議您使用15 GB的容量。
+ a| 
+15 GB
+
+
+
+ a| 
+不需SnapCenter 佔用太多硬碟空間
+ a| 
+8 GB
+
+
+NOTE: 附註：如果SnapCenter 您在SnapCenter 安裝了該系統資訊庫的同一個磁碟機中安裝了該伺服器、則建議您使用15 GB的容量。
+ a| 
+不適用
+
+
+
+ a| 
+必要的軟體套件
+ a| 
+* ASP.NET Core Runtime 8.0.12 （以及所有後續 8.0.x 修補程式）代管產品組合
+* PowerShell 7.4.2 或更新版本
+
+
+如需 .NET 特定疑難排解資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["對於沒有網際網路連線的舊版系統、 SnapCenter 升級或安裝失敗"^]。
+ a| 
+* NET Framework 8.0.12 （以及所有後續的 8.0.x 修補程式）
+* PowerShell 7.4.2 或更新版本
+* Nginx 是可做為反向 Proxy 的 Web 伺服器
+* Pam-devel
++
+PAM （可插拔驗證模組）是一種系統安全工具、可讓系統管理員設定驗證原則、而無需重新編譯執行驗證的程式。
+
+
+
+|===
+
+NOTE: ASP.NET 核心需要 IIS_IUSRS 來存取 Windows 上 SnapCenter Server 中的暫存檔系統。
+
+
+
+== SAN主機需求
+
+SnapCenter 不包含主機公用程式或 DSM 。如果 SnapCenter 主機是 SAN （ FC/iSCSI ）環境的一部分，您可能需要在 SnapCenter 伺服器主機上安裝及設定其他軟體。
+
+* 主機公用程式：主機公用程式支援 FC 和 iSCSI ，可讓您在 Windows 伺服器上使用 MPIO 。 https://docs.netapp.com/us-en/ontap-sanhost/hu_sanhost_index.html["深入瞭解"^]。
+* Microsoft DSM for Windows MPIO ：此軟體可搭配 Windows MPIO 驅動程式使用，以管理 NetApp 和 Windows 主機電腦之間的多個路徑。高可用度組態需要DSM。
++
+
+NOTE: 如果您使用ONTAP 的是功能不實的DSM、則應移轉至Microsoft DSM。如需詳細資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Data_ONTAP_DSM_for_Windows_MPIO/How_to_migrate_from_Data_ONTAP_DSM_4.1p1_to_Microsoft_native_DSM["如何從ONTAP 功能需求DSM移轉至Microsoft DSM"^]。
+
+
+
+
+
+== 瀏覽器需求
+
+SnapCenter 軟體支援 Chrome 125 及更新版本，以及 Microsoft Edge 110.0.1587.17 及更新版本。
+
+
+
+== 連接埠需求
+
+SnapCenter 軟體需要不同的連接埠，才能在不同元件之間進行通訊。
+
+* 應用程式無法共用連接埠。
+* 對於可自訂的連接埠、如果您不想使用預設連接埠、可以在安裝期間選取自訂連接埠。
+* 對於固定連接埠、您應該接受預設的連接埠號碼。
+* 防火牆
++
+** 防火牆、Proxy或其他網路裝置不應干擾連線。
+** 如果您在安裝SnapCenter 時指定自訂連接埠、則應在外掛主機上新增防火牆規則、以供SnapCenter 該連接埠用於「支援程式載入器」。
+
+
+
+
+下表列出不同的連接埠及其預設值。
+
+|===
+| 連接埠名稱 | 連接埠編號 | 傳輸協定 | 方向 | 說明 
+
+
+ a| 
+連接埠SnapCenter
+ a| 
+8146
+ a| 
+HTTPS
+ a| 
+雙向
+ a| 
+此連接埠用於 SnapCenter 用戶端（ SnapCenter 使用者）與 SnapCenter 伺服器之間的通訊，也用於從外掛主機與 SnapCenter 伺服器之間的通訊。
+
+您可以自訂連接埠號碼。
+
+
+
+ a| 
+WSSMCore通訊連接埠SnapCenter
+ a| 
+8145
+ a| 
+HTTPS
+ a| 
+雙向
+ a| 
+此連接埠可用於SnapCenter 在Sfor the Sfor Server和SnapCenter 安裝了該插件的主機之間進行通訊。
+
+您可以自訂連接埠號碼。
+
+
+
+ a| 
+排程器服務連接埠
+ a| 
+8154
+ a| 
+HTTPS
+ a| 
+ a| 
+此連接埠用於 SnapCenter 集中化伺服器主機內所有受管理外掛程式的 SnapCenter 排程器工作流程。
+
+您可以自訂連接埠號碼。
+
+
+
+ a| 
+RabbitMQ 連接埠
+ a| 
+5672
+ a| 
+TCP
+ a| 
+ a| 
+這是 RabbitMQ 接聽的預設連接埠、用於排程器服務與 SnapCenter 之間的發行者訂購者模式通訊。
+
+
+
+ a| 
+MySQL連接埠
+ a| 
+3306
+ a| 
+HTTPS
+ a| 
+ a| 
+連接埠用於與 SnapCenter 儲存庫資料庫通訊。您可以建立從 SnapCenter 伺服器到 MySQL 伺服器的安全連線。 link:../install/concept_configure_secured_mysql_connections_with_snapcenter_server.html["深入瞭解"]
+
+
+
+ a| 
+Windows外掛程式主機
+ a| 
+135 、 445
+ a| 
+TCP
+ a| 
+ a| 
+此連接埠用於 SnapCenter 伺服器與正在安裝外掛程式的主機之間的通訊。Microsoft 指定的其他動態連接埠範圍也應該是開放的。
+
+
+
+ a| 
+Linux或AIX外掛程式主機
+ a| 
+22
+ a| 
+SSH
+ a| 
+單向
+ a| 
+此連接埠用於 SnapCenter 伺服器與主機之間的通訊，從伺服器啟動至用戶端主機。
+
+
+
+ a| 
+適用於 Windows ， Linux 或 AIX 的 SnapCenter 外掛程式套件
+ a| 
+8145
+ a| 
+HTTPS
+ a| 
+雙向
+ a| 
+此連接埠用於 SMCore 與安裝外掛程式套件的主機之間的通訊。可自訂。
+
+您可以自訂連接埠號碼。
+
+
+
+ a| 
+Oracle資料庫的支援外掛程式SnapCenter
+ a| 
+27216
+ a| 
+ a| 
+ a| 
+Oracle的外掛程式會使用預設的JDBC連接埠來連線至Oracle資料庫。
+
+
+
+ a| 
+SnapCenter Plug-in for Exchange 資料庫
+ a| 
+909
+ a| 
+ a| 
+ a| 
+預設的 NET 。 Windows 外掛程式使用 TCP 連接埠來連線至 Exchange VSS 回撥。
+
+
+
+ a| 
+NetApp 支援的 SnapCenter 外掛程式
+ a| 
+9090
+ a| 
+HTTPS
+ a| 
+ a| 
+這是僅用於自訂外掛程式主機的內部連接埠、不需要防火牆例外。
+
+透過連接埠8145、即可在伺服SnapCenter 器與自訂外掛程式之間進行通訊。
+
+
+
+ a| 
+叢集或SVM通訊連接埠ONTAP
+ a| 
+* 443（HTTPS）
+* 80（HTTP）
+
+ a| 
+* HTTPS
+* HTTP
+
+ a| 
+雙向
+ a| 
+此連接埠由SAL（Storage Abstraction Layer、Storage Abstraction Layer）使用、用於執行SnapCenter 支援服務器和SVM的主機之間的通訊。此連接埠目前也用於SnapCenter Windows外掛程式主機上的SAL、用於SnapCenter 在支援該外掛程式的主機和SVM之間進行通訊。
+
+
+
+ a| 
+SAP HANA資料庫適用的插件SnapCenter
+ a| 
+* 3instance_number13
+* 3instance_number15
+
+ a| 
+* HTTPS
+* HTTP
+
+ a| 
+雙向
+ a| 
+對於多租戶資料庫容器（MDC）單一租戶、連接埠編號以13結尾；對於非MDC、連接埠編號以15結尾。
+
+您可以自訂連接埠號碼。
+
+
+
+ a| 
+適用於 PostgreSQL 的 SnapCenter 外掛程式
+ a| 
+5432
+ a| 
+ a| 
+ a| 
+此連接埠是預設的 PostgreSQL 連接埠，可讓 PostgreSQL 外掛程式與 PostgreSQL 叢集進行通訊。
+
+您可以自訂連接埠號碼。
+
+|===

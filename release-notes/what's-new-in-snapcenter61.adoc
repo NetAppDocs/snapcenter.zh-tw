@@ -17,7 +17,7 @@ summary: 6.1 版的 SnapCenter 軟體包含數項新功能和增強功能。
 | 更新 | 說明 
 
 
-| link:../install/learn-about-supporting-asa-r2-in-snapcenter.html["支援 ASA R2 系統"]  a| 
+| link:../get-started/reference_supported_storage_systems_and_applications.html["支援 ASA R2 系統"]  a| 
 SnapCenter 現在支援 ASA R2 系統，可針對僅限 SAN 的客戶需求，提供簡化的體驗。
 
 

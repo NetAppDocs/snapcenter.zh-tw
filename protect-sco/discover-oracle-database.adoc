@@ -45,7 +45,7 @@ RAC One Node 資料庫只會根據 /etc/oratab 項目來探索。資料庫應處
 
 
 
-== 適用於 Oracle 版本 12cR2 至 18c
+== 適用於 Oracle 版本 12cR2 至 18c ， 19c 或 21c
 
 .RAC 資料庫
 RAC 資料庫是使用 srvctl config 命令來探索。您應該在/etc/oratab檔案中有資料庫項目。

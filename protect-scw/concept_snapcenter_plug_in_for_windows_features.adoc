@@ -35,7 +35,7 @@ Windows 外掛程式使用 NetApp Snapshot 技術。這可讓您在數秒內備�
 * RBAC支援的安全性與集中式角色委派
 * 使用NetApp FlexClone技術建立生產檔案系統的空間效率複本、以供測試或資料擷取之用
 +
-如需FlexClone授權資訊、請參閱 link:../install/concept_snapcenter_licenses.html["不需要授權SnapCenter"^]。
+如需 FlexClone 授權資訊，請參閱 link:../get-started/concept_snapcenter_licenses.html["不需要授權SnapCenter"^]。
 
 * 能夠在多個伺服器上同時執行多個備份
 * PowerShell Cmdlet可執行備份、還原及複製作業的指令碼

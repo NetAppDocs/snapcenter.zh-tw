@@ -1,7 +1,7 @@
 ---
 permalink: protect-sco/task_create_resource_groups_and_attach_policies_for_oracle_databases.html 
 sidebar: sidebar 
-keywords: run as 
+keywords: run as, resource groups, policies, Oracle database 
 summary: 資源群組是一個容器、您可以在其中新增要備份和保護的資源。資源群組可讓您同時備份與指定應用程式相關的所有資料。 
 ---
 = 建立Oracle資料庫的資源群組及附加原則

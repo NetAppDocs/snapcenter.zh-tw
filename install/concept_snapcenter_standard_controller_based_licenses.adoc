@@ -25,7 +25,7 @@ NOTE: 您不需要在SnapCenter 「介紹GUI」中輸入SnapCenter 任何授權�
 * 鎖定至控制器的序號
 
 
-如需所需授權的相關資訊、請參閱 link:../install/concept_snapcenter_licenses.html["不需要授權SnapCenter"^]。
+如需所需授權的相關資訊，請參閱 link:../get-started/concept_snapcenter_licenses.html["不需要授權SnapCenter"]。
 
 
 

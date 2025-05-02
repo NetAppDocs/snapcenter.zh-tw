@@ -1,0 +1,26 @@
+---
+section: get-started
+title: 開始使用
+entries:
+- title: 瞭解 SnapCenter 軟體
+  entries:
+  - title: 總覽
+    url: "/get-started/concept_snapcenter_overview.html"
+  - title: 安全性與驗證
+    url: "/get-started/reference_data_security.html"
+  - title: 角色型存取控制
+    url: "/get-started/rbac-snapcenter.html"
+  - title: 災難恢復
+    url: "/get-started/concept_disaster_recovery.html"
+  - title: 授權
+    url: "/get-started/concept_snapcenter_licenses.html"
+  - title: SnapMirror 主動同步
+    url: "/get-started/snapmirror-active-sync-snapcenter.html"
+  - title: 資料保護的關鍵概念
+    url: "/get-started/concept_resources_resource_groups_and_policies.html"
+  - title: 支援的儲存系統與應用程式
+    url: "/get-started/reference_supported_storage_systems_and_applications.html"
+  - title: 驗證方法
+    url: "/get-started/concept_authentication_methods_for_your_credentials.html"
+- title: 快速入門
+  url: "/get-started/quick-start-snapcenter.html"

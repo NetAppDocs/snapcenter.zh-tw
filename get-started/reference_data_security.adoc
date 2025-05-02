@@ -1,10 +1,10 @@
 ---
-permalink: concept/reference_data_security.html 
+permalink: get-started/reference_data_security.html 
 sidebar: sidebar 
-keywords: security,authentication, CA certificates 
+keywords: security, authentication, CA certificates, FIPS, SSL, AES, TLS, RBAC, MFA, multi-factor authentication 
 summary: 利用嚴苛的安全性與驗證功能、確保資料安全無虞。SnapCenter 
 ---
-= 安全功能
+= SnapCenter 的安全功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,23 +17,20 @@ summary: 利用嚴苛的安全性與驗證功能、確保資料安全無虞。Sn
 
 * 所有與SnapCenter 之通訊均使用HTTP over SSL（HTTPS）。
 * 支援使用進階加密標準（AES）加密來保護所有的認證資料SnapCenter 。
-* 使用符合聯邦資訊處理標準（FIPS）的安全演算法。SnapCenter
-* 支援使用客戶提供的授權CA憑證。SnapCenter
-* SnapCenter 4.1.1 或更新版本支援傳輸層安全性（ TLS ） 1.2 以與 ONTAP 通訊。您也可以使用 TLS 1.2 在用戶端和伺服器之間進行通訊。
-+
-從 5.0 開始、 SnapCenter 支援（ TLS ） 1.3 與 ONTAP 通訊。
-
-* 支援一組SSL密碼套件、以提供跨網路通訊的安全性。SnapCenter
-+
-如需詳細資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_the_supported_SSL_Cipher_Suite["如何設定支援的SSL加密套件"]。
-
+* 支援符合聯邦資訊處理標準（ FIPS ）的安全演算法。
+* 支援使用客戶提供的授權 CA 憑證。
+* 支援傳輸層安全性（ TLS ） 1.3 以與 ONTAP 通訊。您也可以使用 TLS 1.2 在用戶端和伺服器之間進行通訊。
+* 支援一組特定的 SSL Cipher 套件，以提供跨網路通訊的安全性。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_the_supported_SSL_Cipher_Suite["深入瞭解"]。
 * 系統會在貴公司的防火牆內安裝支援功能、以便存取該伺服器、並可在該伺服器與外掛程式之間進行通訊。SnapCenter SnapCenter SnapCenter
 * 支援使用AES加密的Token、24小時後即過期。SnapCenter
 * 利用Windows Active Directory整合的功能、可控制存取權限的登入和角色型存取控制（RBAC）SnapCenter 。
 * Windows SnapCenter 和Linux主機機器的支援以支援使用支援VMware的功能ONTAP 。 https://docs.netapp.com/us-en/ontap/networking/configure_ip_security_@ipsec@_over_wire_encryption.html#use-ipsec-identities["深入瞭解"]。
 * 可保護工作階段安全的指令程式。SnapCenter
-* 預設的閒置時間為15分鐘後SnapCenter 、此功能會警告您5分鐘內就會登出。若無活動20分鐘、SnapCenter 則會將您登出、您必須重新登入。您可以修改登出期間。
-* 登入嘗試不正確5次以上後、登入功能會暫時停用。
+* 預設的閒置時間為15分鐘後SnapCenter 、此功能會警告您5分鐘內就會登出。
++
+若無活動20分鐘、SnapCenter 則會將您登出、您必須重新登入。您可以修改登出期間。
+
+* 5 次不正確的登入嘗試後，登入會暫時停用。
 * 支援SnapCenter 在伺服器和ONTAP 功能區之間進行CA認證驗證。 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_securely_connect_SnapCenter_with_ONTAP_using_CA_certificate["深入瞭解"]。
 * 完整性驗證器會新增至SnapCenter 支援服務器和外掛程式、並在全新安裝和升級作業期間驗證所有隨附的二進位檔案。
 

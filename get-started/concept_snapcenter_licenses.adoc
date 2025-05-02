@@ -1,10 +1,10 @@
 ---
-permalink: install/concept_snapcenter_licenses.html 
+permalink: get-started/concept_snapcenter_licenses.html 
 sidebar: sidebar 
 keywords: licenses, FAS, AFF, ASA, SnapMirror, SnapVault, SnapRestore, FlexClone, SMBR, Single Mailbox Recovery 
 summary: 支援資料保護作業需要數個授權。SnapCenter安裝的不完整授權類型SnapCenter 取決於您的儲存環境和您想要使用的功能。 
 ---
-= 不需要授權SnapCenter
+= SnapCenter 所需的授權
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -67,7 +67,7 @@ FlexClone
 
 
  a| 
-通訊協定
+傳輸協定授權
  a| 
 * LUN的iSCSI或FC授權
 * 適用於SMB共用的CIFS授權
@@ -87,18 +87,19 @@ SnapMirror目的地系統需要在來源磁碟區無法使用時提供資料。
 
 NOTE: 我們建議您將SnapCenter 不需要的「不二用」授權新增至次要目的地。如果SnapCenter 在次要目的地上未啟用「支援支援功能」、SnapCenter 則在執行容錯移轉作業之後、您將無法使用「支援功能」在次要目的地上備份資源。不過、次要目的地需要FlexClone授權才能執行複製與驗證作業。
 
-|===
-
-NOTE: 不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenterAmazon FSX for NetApp ONTAP ， ONTAP Select ， Cloud Volumes ONTAP 和 Azure NetApp Files 不再需要標準授權和容量型授權。
-
-您應該安裝一SnapCenter 或多個版本的不二授權。有關如何添加許可證的信息，請參見 link:../install/concept_snapcenter_standard_controller_based_licenses.html["新增SnapCenter 以控制器為基礎的功能"]。
 
 
-
-== 單一信箱恢復（SMBR）授權
-
+ a| 
+單一信箱恢復（SMBR）授權
+ a| 
 如果您使用SnapCenter Exchange的還原外掛程式來管理Microsoft Exchange Server資料庫和單一信箱恢復（SMBR）、則您需要額外的SMBR授權、而此授權必須根據使用者信箱另行購買。
 
 NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA ）。如需詳細資訊、請參閱 link:https://mysupport.netapp.com/info/communications/ECMLP2885729.html["CPS-00507"]。NetApp 將持續支援已於 2020 年 6 月 24 日推出的行銷零件編號、以支援購買信箱容量、維護和支援的客戶。
 
 NetApp 單一信箱恢復是 Ontrack 提供的合作夥伴產品。Ontrack PowerControl 提供的功能與 NetApp 單一信箱恢復功能類似。客戶可從 Ontrack （透過 licensingteam@ontrack.com ）取得新的 Ontrack PowerControl 軟體授權、以及 Ontrack PowerControl 的維護與支援續約、以便在 2023 年 5 月 12 日結束後進行精細信箱恢復。
+
+|===
+
+NOTE: 不再提供「進階」和「不適用的NAS檔案服務」授權。SnapCenter SnapCenterAmazon FSX for NetApp ONTAP ， ONTAP Select ， Cloud Volumes ONTAP 和 Azure NetApp Files 不再需要標準授權和容量型授權。
+
+您應該安裝一SnapCenter 或多個版本的不二授權。有關如何添加許可證的信息，請參見 link:../install/concept_snapcenter_standard_controller_based_licenses.html["新增SnapCenter 以控制器為基礎的功能"]。

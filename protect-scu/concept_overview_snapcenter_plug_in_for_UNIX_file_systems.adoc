@@ -95,3 +95,18 @@ NFS 和 SAN 上的 VVOL 資料存放區。 VVOL 資料存放區只能使用適�
 * NVMe 不受支援。
 * 不支援資源配置。
 
+
+
+
+== 功能
+
+* 讓Oracle資料庫外掛程式能夠處理Linux或AIX系統上的基礎主機儲存堆疊、在Oracle資料庫上執行資料保護作業
+* 支援執行ONTAP 支援的儲存系統上的網路檔案系統（NFS）和儲存區域網路（SAN）傳輸協定。
+* 對於Linux系統、當您部署SnapCenter 適用於VMware vSphere的VMware vSphere的VMware vCenter外掛程式、並使用SnapCenter VMware vCenter登錄外掛程式時、即可支援VMDK和RDM LUN上的Oracle資料庫。
+* 在SAN檔案系統和LVM配置上支援Mount Guard for AIX。
+* 支援增強的日誌式檔案系統（JFS2）、只有在SAN檔案系統上進行即時記錄、以及僅適用於AIX系統的LVM配置。
++
+SAN原生裝置、檔案系統及以SAN裝置為建置基礎的LVM配置均受到支援。
+
+* 自動化 SnapCenter 環境中 UNIX 檔案系統的應用程式感知備份、還原及複製作業
+
