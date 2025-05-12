@@ -143,14 +143,9 @@ Defaults: _LINUX_USER_ !visiblepw
 Defaults: _LINUX_USER_ !requiretty
 ----
 +
-
-NOTE: 如果您有RAC設定、以及其他允許的命令、您應該將下列項目新增至/etc/udoers檔案：「/setc/bin/olsnodes <crs_home> 」
-
-
-
-您可以從/etc/oracle/OLR.loc_檔案取得_crs_home_的 值。
-
 _Linux使用者_是您所建立的非root使用者名稱。
+
+
 
 您可以從 *SC_UNIT_plugins_checksum ． txt* 檔案取得 _checksum 值 _ 、檔案位於：
 

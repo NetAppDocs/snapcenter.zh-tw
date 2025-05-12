@@ -111,6 +111,7 @@ Web伺服器
 NOTE: 確保沒有其他應用程式使用SnapCenter 可用來建立及管理的msmqmq.服務。
 
 * RabbitMQ
+* Erlang
 
 
 
