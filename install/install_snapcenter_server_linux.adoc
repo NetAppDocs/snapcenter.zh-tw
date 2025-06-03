@@ -141,3 +141,13 @@ _webapp_extal_port_ 的預設值為 8146
 
 
 
+
+
+
+== 安裝期間在 Linux 主機上啟用的功能
+
+SnapCenter 伺服器安裝以下軟體包，可協助排除故障和維護主機系統。
+
+* RabbitMQ
+* Erlang
+

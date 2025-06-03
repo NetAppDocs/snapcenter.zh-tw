@@ -2368,7 +2368,6 @@
   <block id="736f3871653c42d5fc23c7b63472291d" category="paragraph">您應該以「SnapCenterAdmin」角色登入。</block>
   <block id="b65c1e59593548dad4a7a0a8af00e702" category="list-text">在「設定」頁面中、按一下「*角色*」。</block>
   <block id="009dc93979222b8650a313a069bc7b26" category="list-text">按一下 <block ref="db9d5f6f137b990473b3ea783cd913f5" category="inline-image-macro-rx" type="image"></block>。</block>
-  <block id="5c53e4d8c07d4cd65ccef16c0c161e93" category="list-text">在「新增角色」頁面中、指定新角色的名稱和說明。</block>
   <block id="6796f46044b1e944ba537cec849ce2dc" category="list-text">選取*此角色的所有成員都可以看到其他成員的物件*、以便其他角色成員在重新整理資源清單之後、能夠查看資源、例如磁碟區和主機。</block>
   <block id="bdc510da052289a87e1a226330d7f96c" category="paragraph">如果不希望此角色的成員看到指派給其他成員的物件、則應取消選取此選項。</block>
   <block id="ded362adb32c7d3904226c777c650579" category="admonition">啟用此選項時、如果使用者與建立物件或資源的使用者具有相同角色、則不需要指派使用者存取物件或資源的權限。</block>
@@ -2632,15 +2631,10 @@
   <block id="32b2dd2ad5bcd04617f8049be39f3a4e" category="list-text">「安全性登入角色create -vserver Svm_name -role Svm_rouse_Name -cmd目錄名稱「vserver EXECT-policy」-access all」</block>
   <block id="070716b587ce6b006f4906a8222fc505" category="list-text">「安全登入角色create -vserver Svm_name -role Svm_rous_Name -cmd目錄名稱「vserver iSCSI」-access all」</block>
   <block id="a69e754efca1b9623b6b0f65a2d8dc73" category="doc">使用ONTAP 安全登入命令新增一個RBAC角色</block>
-  <block id="474d9e4d882e646ea038c1c3f1057d2e" category="list-text">在您為ONTAP 執行叢集ONTAP 式功能的儲存系統建立一套不必要的RBAC角色之前、您必須先識別下列項目：</block>
-  <block id="ebe591ae9d43ae4398d95940e9fd9562" category="list-text">您要執行的工作</block>
-  <block id="7a0abee5eccc23660191580add8cd728" category="list-text">執行這些工作所需的權限</block>
-  <block id="f8d5d5371173552fd813059761bfc086" category="list-text">若要設定RBAC角色、您必須執行下列動作：</block>
   <block id="1559a0574adcf52bb6e38eec37381b49" category="list-text">授予命令和（或）命令目錄的權限。</block>
   <block id="875c5aedd735db244786063faf6da722" category="paragraph">每個命令/命令目錄都有兩種存取層級：All存取和唯讀。</block>
   <block id="dee6c2623edcbb8e68bfe81ea75668fa" category="paragraph">您必須一律先指派所有存取權限。</block>
   <block id="1deb5fee27bfdda7d20d4c10f6e8f273" category="list-text">指派角色給使用者。</block>
-  <block id="407e9947315902e28583d3951a4332d4" category="list-text">根據SnapCenter 您的不確定插件是連接至整個叢集的叢集管理員IP、還是直接連接至叢集內的SVM、而有所不同。</block>
   <block id="9dc5053bca32e6394932747f3adab2c4" category="inline-link">《Administrator驗證與RBAC電源指南》（英文）ONTAP</block>
   <block id="cf450319b4b50a20dcf243d6273acbf4" category="paragraph">如需設定ONTAP RBAC角色的詳細資訊、請參閱<block ref="4054a3747c1ed1604c443c75434e693a" category="inline-link-rx"></block>。</block>
   <block id="eaa07c06fe679751494bfd4b2951b580" category="list-text">在儲存系統上、輸入下列命令以建立新角色：</block>
@@ -2663,8 +2657,6 @@
   <block id="af0a6ea22dad5952ae57a4085df7f018" category="list-text">輸入下列命令、確認使用者已正確建立：</block>
   <block id="07c1ab7f978b1eea65254e331b2a8733" category="paragraph">「安全登入show–vserver &lt;Svm_name\&gt;-user-or group name &lt;user_name\&gt;」</block>
   <block id="5c47cbaa537c35e208658ea0c916ea4f" category="paragraph">user_name是您在步驟3中建立的使用者名稱。</block>
-  <block id="b6ac2f945924adc12a6cced3f4732d89" category="summary">安裝過程中、支援Windows主機上的Windows功能和角色。SnapCenter這些問題可能有針對疑難排解和主機系統維護的意義。</block>
-  <block id="03b777e98e70f41a1b91fc53f61e82ae" category="doc">安裝期間在Windows主機上啟用的功能</block>
   <block id="3adbdb3ac060038aa0e6e6c138ef9873" category="cell">類別</block>
   <block id="21021ea0e52be8e9c599f4dff41e5be0" category="cell">功能</block>
   <block id="3e197446d1794d1838e3734e66b2162c" category="paragraph">Web伺服器</block>
@@ -2912,9 +2904,7 @@
   <block id="11ed0a0d13245c242749913d8aee1584" category="paragraph">「使用NSM、'Delete from NSM_License、其中NSM_License_Serial_number='510000050'；」</block>
   <block id="e0b8c0081a448231b99fbbd92c77468c" category="summary">在執行資料保護作業之前、您應該先設定儲存連線、並新增SnapCenter 功能、以供使用。SnapCenter</block>
   <block id="1dd26f6fcf67127f078a9bb0e9318802" category="doc">儲存連線與認證</block>
-  <block id="6a57d2f6137b4e66b867cbd6a5c2622a" category="list-text">*儲存連線*</block>
   <block id="96da08df10311c05ab070820f34934cd" category="paragraph">儲存連線可讓SnapCenter Sfor Sfor Server和SnapCenter Sfor插座存取ONTAP 功能豐富的功能。設定這些連線時、也需要設定AutoSupport 功能性的功能性和事件管理系統（EMS）。</block>
-  <block id="3a8e375f86c81e7b283b9ee0db531e4d" category="list-text">*認證*</block>
   <block id="d85f921b47758996b8653f3b79ea9ec4" category="list-text">_username@UPN_</block>
   <block id="3d6fa605604b40d3883d094bc10103f4" category="paragraph">對於屬於工作群組的系統、請在安裝SnapCenter 此插件的系統上指定內建的本機管理員。如果使用者帳戶擁有較高的權限、或主機系統上的使用者存取控制功能已停用、您可以指定屬於本機系統管理員群組的本機使用者帳戶。</block>
   <block id="a8e47e30e292005e707c23a6a28b0aec" category="paragraph">「使用者名稱」欄位的有效格式為：_username_</block>
@@ -3048,10 +3038,6 @@
   <block id="8e9816159074c93c5490453d542c7149" category="doc">SAN主機需求</block>
   <block id="d04afbb4d7f1781315d7bc4ec33607b1" category="inline-link">如何從ONTAP 功能需求DSM移轉至Microsoft DSM</block>
   <block id="ee3284f7f1fefd9961639a467c5b6dc1" category="admonition">如果您使用ONTAP 的是功能不實的DSM、則應移轉至Microsoft DSM。如需詳細資訊、請參閱<block ref="4f5fd7a8056222d0373d84e9f0e66279" category="inline-link-rx"></block>。</block>
-  <block id="248724fdb43c06d73682eae495a17c67" category="summary">您可以使用SnapCenter 支援功能來設定FC連接或iSCSI連接的LUN。您也可以使用SnapCenter 支援功能將現有的LUN連線至Windows主機。</block>
-  <block id="30837f98cbd95f5a4cd8f19178a695e8" category="doc">設定LUN儲存設備</block>
-  <block id="9660abd0b48a5f9635c3e498547f1163" category="inline-link">《支援SAN組態指南》（英文）ONTAP</block>
-  <block id="e44dc355289fca4137269dc7b5607927" category="paragraph">LUN是SAN組態中的基本儲存單元。Windows主機將系統上的LUN視為虛擬磁碟。如需詳細資訊、請參閱<block ref="9216224738613ab52bfe8b66b8e2b039" category="inline-link-rx"></block>。</block>
   <block id="ad5caf46af1da5ea3bb28f96c57941f2" category="section-title">建立iSCSI工作階段</block>
   <block id="5702420822d09ff123dca89121a7edb1" category="paragraph">如果您使用iSCSI連線至LUN、則必須先建立iSCSI工作階段、再建立LUN以啟用通訊。</block>
   <block id="17e2d63e3b45ecbfe13bcc32fec929d0" category="paragraph">*開始之前*</block>
@@ -3080,11 +3066,6 @@
   <block id="e56e6eb9f96878a5d909655ad543a59d" category="list-text">當您對輸入項目感到滿意時、請按一下*「Connect（連線）」*。</block>
   <block id="8103ea1f974b6fe78b3263b7a1107692" category="paragraph">建立iSCSI工作階段。SnapCenter</block>
   <block id="d92abf366bd9060c59bb86c051a977d0" category="list-text">重複此程序、為每個目標建立工作階段。</block>
-  <block id="4abe930f7ed4aa8557d64ff364aa1be7" category="section-title">中斷iSCSI工作階段的連線</block>
-  <block id="cbb23b8d6f2ddac05adf3b8df4d48c63" category="paragraph">有時候、您可能需要中斷iSCSI工作階段與具有多個工作階段的目標之間的連線。</block>
-  <block id="8604cb873c825c8a47d73b5809f9ece3" category="list-text">從iSCSI工作階段清單中、選取您要中斷連線的工作階段、然後按一下*中斷連線工作階段*。</block>
-  <block id="404198fd96b17670e542d194555e13b5" category="list-text">在「中斷連線工作階段」對話方塊中、按一下「*確定*」。</block>
-  <block id="690d3c16f8977d088a13175ac12ac454" category="paragraph">中斷iSCSI工作階段連線。SnapCenter</block>
   <block id="21b55e1babd986a5f3ed39019361ea07" category="summary">您可以在SnapCenter VMware環境中使用適用於Microsoft Windows的解決方案、來建立及管理LUN、以及管理Snapshot備份複本。</block>
   <block id="e2d0fdb0252253026c4030313d523287" category="doc">在VMware環境中配置儲存設備</block>
   <block id="68e27484ae284c9fc298973714df92ff" category="section-title">支援的VMware來賓作業系統平台</block>
@@ -4991,7 +4972,6 @@
   <block id="5d365fedd8db2449d52b5be4a9205fb5" category="list-text">使用-Clean輔助備份參數清除二線備份數。</block>
   <block id="7372096d67d7a00d21e644f03bd6b3f6" category="summary">如果無法從Windows GUI遠端安裝外掛程式、您可以SnapCenter 在Windows主機本機上安裝適用於Microsoft Windows的支援功能。SnapCenter您可以SnapCenter 從Windows命令列、以無訊息模式在無人值守的情況下執行Microsoft Windows安裝程式的功能。</block>
   <block id="3065bc79c85488f5e9c34540aa589dee" category="doc">從命令列以無訊息方式安裝SnapCenter 適用於Microsoft Windows的功能</block>
-  <block id="45305b0c2be46c68805c14c7667e37d1" category="list-text">您必須開啟Windows訊息佇列。</block>
   <block id="3f9e658ebdc571b944cc7a6bb94fa2fc" category="list-text">您必須是主機上的本機管理員。</block>
   <block id="012cef6769a01d5c95c3bd84a1587de6" category="list-text">從SnapCenter 您的安裝位置下載適用於Microsoft Windows的功能更新外掛程式。</block>
   <block id="e0080a28dd770f19702e65fb9e7b8c86" category="paragraph">例如、預設安裝路徑為C：\ProgramData\NetApp\SnapCenter\Package儲存庫。</block>
@@ -6363,15 +6343,12 @@
   <block id="3decceabe454f8ecfa994c03d979b0bb" category="sidebar">安裝SnapCenter 適用於Microsoft Exchange Server的功能外掛程式</block>
   <block id="16a46d711b809ec337c7f5488089048a" category="sidebar">備份Exchange資源</block>
   <block id="e846bcfd3a099fef65a4bf829013b44e" category="sidebar">還原Exchange資源</block>
-  <block id="ab5f4e39159ac71e7f3f1e7080905a20" category="sidebar">安裝伺服器SnapCenter</block>
   <block id="f514139bd8bb4cc318cbbff458dd2226" category="sidebar">準備安裝SnapCenter 完此伺服器</block>
-  <block id="bb8e9cdba9e13f92c0ca73c3ae3f6c05" category="sidebar">儲存虛擬機器連線與認證</block>
   <block id="d816b0b5150b290e2a4a44bdb570d328" category="sidebar">匯入CA憑證</block>
   <block id="d15484ff4ea42a9f2e2b7d78bd97103b" category="sidebar">啟用SnapCenter 適用於伺服器的CA憑證</block>
   <block id="0095bd100c1750fd3bff002bda60502e" category="sidebar">設定Active Directory、LDAP和LDAPS</block>
   <block id="055367d73c719054881d2c3df6cfb418" category="sidebar">設定高可用度</block>
   <block id="66533c4e3134a6b220ad1336cd288c49" category="sidebar">設定角色型存取控制（RBAC）</block>
-  <block id="5d4caff07857398d579cdda92ce3f34f" category="sidebar">配置您的儲存系統</block>
   <block id="0daccd45abdac281e7508c5de0fa492c" category="sidebar">在Windows主機上配置儲存設備</block>
   <block id="50dd81eadc28deda5586552678161af6" category="sidebar">Oracle資料庫的支援功能概述SnapCenter</block>
   <block id="463da88e9b9043684d0979147f719cf3" category="sidebar">Oracle外掛程式的功能</block>
@@ -6701,7 +6678,6 @@
   <block id="59080c688ea671f9f0cc2eed3afb7bf8" category="paragraph">請勿在密碼中使用雙引號（"）或反引號（"）。請勿使用小於（&lt;）和驚嘆號（！） 密碼中的符號。例如、lessthan&lt;!10、lessthan10&lt;!、backtick'12。</block>
   <block id="0352418be0d30e5f0f0b3f664c74e1aa" category="admonition">在外掛程式的容錯移轉或容錯回復期間、外掛程式的整體狀態不會立即重新整理。主機和外掛程式的整體狀態會在後續的主機重新整理作業期間更新。</block>
   <block id="db73b4bff7f9b92f00d36e2a3fa01152" category="paragraph">次要SnapCenter 版的伺服器應安裝在相同的安裝目錄中、並與主SnapCenter 版的SURL伺服器安裝在同一個連接埠上。</block>
-  <block id="74fec6bb431ffa93b327d4933607ec3f" category="admonition">為了保持一致性、SnapCenter 本文檔將角色稱為使用權限。這個「系統管理員GUI」OnCommand 使用術語_attributes_而非_privation_。在設定ONTAP 支援RBAC角色時、這兩個詞彙代表相同的意義。</block>
   <block id="654c0ff0573689496c47502d09cfe7a8" category="list-text">您應該在來源資料庫參數檔中將exclude _seed_cdb_view的值設為假、以擷取與複製12_c_資料庫備份相關的種子pdb資訊。</block>
   <block id="dfb3e8f24407538f95c7f42d27411d1b" category="admonition">備份12_c_資料庫之前、應先設定值。</block>
   <block id="0d51371cbb850772d2130a36f4368df4" category="list-text">展示MetroCluster</block>
@@ -8220,14 +8196,10 @@ Snapshot 作業。</block>
   <block id="d980d1319cdc2e847ec81791913617aa" category="list-text"><block ref="20c46755c96f02dde2f4eed87e68d5d1" prefix="" category="inline-code"></block></block>
   <block id="c9d5338c9cdd07e93595b944d815cb6b" category="list-text"><block ref="eaba2b789999def4688a2d7d4052792b" prefix="" category="inline-code"></block></block>
   <block id="e37068689bf336f6598b2d7e4c655d04" category="list-text"><block ref="eca0518c19e4265640a4cff88fbe761b" prefix="" category="inline-code"></block></block>
-  <block id="e2d84dceaeb159e34341cf9ed5c25d5b" category="summary">SnapCenter 伺服器安裝程式可在安裝期間啟用 Linux 主機上的 Linux 功能和角色。這些問題可能有針對疑難排解和主機系統維護的意義。</block>
   <block id="0615d0e2ee2ca176a2602bdbb3cbf96e" category="doc">安裝期間在 Linux 主機上啟用的功能</block>
-  <block id="bff6720248dd6aaffe2e42a4d70ef683" category="paragraph">SnapCenter 伺服器會安裝在下列軟體套件下方、這些套件可能對疑難排解和主機系統維護有興趣。</block>
   <block id="2ac5f63d0bb2ab4a9898d18445391caf" category="list-text">RabbitMQ</block>
-  <block id="62e0b5b350c9e3d2c19aa801d9442ba9" category="list-text">恩靈思</block>
   <block id="f7e853158b776246c53345b938159cc1" category="list-text">Erlang</block>
   <block id="21624173efc06090951170116cd13563" category="list-text">Pam-devel</block>
-  <block id="3d265b4e1eeef0ddf17881fa003b18cc" category="list-text">PowerShell</block>
   <block id="6e3da1e6c4de3ddc55b5442f3d8fbf10" category="summary">您可以在 Linux 主機上安裝 SnapCenter 伺服器。</block>
   <block id="a5133039db74945642b3f4bbb769135d" category="doc">在 Linux 主機上安裝 SnapCenter 伺服器</block>
   <block id="1f4157da0a0359b1f842a4aae6fa96a5" category="list-text">如果您想要使用非 root 使用者安裝 SnapCenter 伺服器、但該使用者沒有足夠的權限來安裝 SnapCenter 、請從 NetApp 支援網站取得 sudoers checksum 檔案。您應該根據 Linux 版本使用適當的 Checksum 檔案。</block>
@@ -9495,7 +9467,6 @@ Snapshot 作業。</block>
   <block id="8c4149a5e3a16e71c373cac16eab56eb" category="list-text"><block ref="8031b6dd89dc17bc568c9124170bb66a" prefix="" category="inline-code"></block></block>
   <block id="1f46b6eec6f3def165a94aea4fbd2de8" category="list-text"><block ref="d873942b6f54bbecd97eb915c6e95c45" prefix="" category="inline-code"></block></block>
   <block id="73c050ddeaec2b5e5a856c81666f8026" category="list-text">按一下 <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block> 圖示、然後按一下 * 啟用憑證驗證 * 。</block>
-  <block id="920adb74812a2a6ff8228ec39336b73d" category="list-text">NET Runtime 8.0.12 （以及所有後續的 8.0.x 修補程式）</block>
   <block id="233125590fad11d81c05c1b0279c56f1" category="admonition">SnapCenter 僅支援 ASA R2 系統上的 VMware 虛擬機器檔案系統（ VMFS ）。</block>
   <block id="989977a18a476a92018e04dd60ec37c1" category="inline-link">深入瞭解 ASA R2 系統</block>
   <block id="b3c78f6e772922673e6d35ae6df26cbd" category="list-text">透過 VMDK 建立應用程式的主要備份</block>
@@ -9776,7 +9747,6 @@ Snapshot 作業。</block>
   <block id="9efdf202df78f9a33e298564c835e4ba" category="summary">當儲存系統執行叢集式 NetApp ONTAP 時，您可以使用安全登入命令來新增 NetApp ONTAP RBAC 角色。</block>
   <block id="2ad5f6ef1c47048e237f2fafae87313a" category="doc">使用安全登入命令新增 NetApp ONTAP RBAC 角色</block>
   <block id="e1be0500812e131476a1a2d9b7429541" category="paragraph">當儲存系統執行叢集式 ONTAP 時，您可以使用安全登入命令來新增 NetApp ONTAP RBAC 角色。</block>
-  <block id="34a087679e427c81dd4b62602fb6e759" category="paragraph">若要簡化在儲存系統上設定這些角色的程序，您可以使用 NetApp 社群論壇上發佈的 RBAC 使用者建立工具來建立 NetApp ONTAP 。</block>
   <block id="cd63f10378363da86bcf8672b918512a" category="paragraph">此工具會自動ONTAP 正確處理設定功能不正確的功能。例如， NetApp ONTAP 的 RBAC 使用者建立工具會以正確順序自動新增 Privileges ，讓 All Access Privileges 最先出現。如果您先新增唯讀權限、然後新增全存取權限、ONTAP 則將全存取權限標示為重複、並予以忽略。</block>
   <block id="0715b20c4e81f0c852f66480ef00c667" category="admonition">如果您稍後升級 SnapCenter 或 ONTAP ，則應重新執行 RBAC User Creator for NetApp ONTAP 工具，以更新您先前建立的使用者角色。為SnapCenter 舊版的版本的使用者角色無法ONTAP 在升級版本中正常運作。當您重新執行此工具時、它會自動處理升級作業。您不需要重新建立角色。</block>
   <block id="30962a20671f7b70a267e94343e24484" category="list-text">FAS ， ASA 或 AFF ONTAP 的物件儲存功能，以及 NetApp ONTAP 儲存系統的 Amazon FSX 不受支援。</block>
@@ -9995,4 +9965,19 @@ Snapshot 作業。</block>
   <block id="2eadd26d0e5aeb8538a0e0d8cf0e68bf" category="sidebar">驗證方法</block>
   <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">快速入門</block>
   <block id="a9246bf3c3eb55a8aee642477b14a8f7" category="sidebar">在 NetApp 支援網站上註冊</block>
+  <block id="f8f43715a5fc1f86f8da231ed019b0c6" category="section-title">儲存連接</block>
+  <block id="596fc94bf8faf17d4f6a3ec6fc53437f" category="paragraph">SnapCenter 伺服器安裝以下軟體包，可協助排除故障和維護主機系統。</block>
+  <block id="74b83e8446b3a82f3063984fb362fc4a" category="paragraph">如果您不想使用 SnapCenter GUI 執行主機設定和空間回收作業，則可以使用 PowerShell cmdlet。您可以直接使用Cmdlet或將Cmdlet新增至指令碼。</block>
+  <block id="63865c4d9ae769f19103f3ee2d977184" category="list-text">確定您要執行的任務以及執行這些任務所需的權限。</block>
+  <block id="d7d6797642e09c2dc77b50ef5e78df62" category="list-text">根據您的 SnapCenter 外掛程式是連接到整個叢集的叢集管理員 IP 還是直接連接到叢集內的 SVM 來確定您的配置。</block>
+  <block id="02db4b32d20778ef679bcd2da9e5e94a" category="paragraph">為了簡化儲存系統上這些角色的配置，您可以使用 NetApp ONTAP 的 RBAC 使用者建立器工具，該工具發佈在 NetApp 社群論壇上。</block>
+  <block id="edb8104325c03cc5ddc6550b87275741" category="paragraph">若要建立自己的角色，必須以「SnapCenterAdmin」角色登入。</block>
+  <block id="8116454de7e5e8911f5a289d793b43d9" category="list-text">為新角色指定名稱和描述。</block>
+  <block id="0d27cfd920c0e17d1df5689d46baa774" category="admonition">使用者名稱和群組名稱中只能使用以下特殊字元：空格（ ）、連字號（-）、底線（_）和冒號（:）。</block>
+  <block id="28dbcf5fe30fd921ce51a9e1c3a6c30f" category="section-title">安裝期間在 Windows 主機上啟用的功能</block>
+  <block id="83e7de52a01e78e22c88a405e22e660a" category="paragraph">安裝過程中、支援Windows主機上的Windows功能和角色。SnapCenter這些可能對故障排除和維護主機系統有用。</block>
+  <block id="76335228f2ee14e5df4e858ae5e7684c" category="sidebar">安裝並設定 SnapCenter 伺服器</block>
+  <block id="d39d360863f3fda3c5d615dc978e14ae" category="sidebar">安裝SnapCenter 此伺服器</block>
+  <block id="3199d4d0758d0f4f53db9a8f36670c18" category="sidebar">配置 SnapCenter 伺服器</block>
+  <block id="4c975961e88401702aa6aac167300031" category="sidebar">新增並配置儲存系統</block>
 </blocks>

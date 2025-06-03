@@ -1,7 +1,7 @@
 ---
 permalink: install/task_install_the_snapcenter_server_using_the_install_wizard.html 
 sidebar: sidebar 
-keywords: install, snapcenter software, install wizard 
+keywords: install, snapcenter software, install wizard, features enabled 
 summary: 您可以執行SnapCenter 《伺服器安裝程式執行檔」來安裝SnapCenter 《伺服器版」。 
 ---
 = 在 Windows 主機上安裝 SnapCenter 伺服器
@@ -63,3 +63,127 @@ NOTE: 如果您按一下「*取消*」按鈕、將會完成正在執行的步驟
 記錄檔一律會列在管理使用者的%temp%資料夾中（最舊的優先）。如果您想重新導向記錄位置、SnapCenter 請執行：'C：\installer_location\installer_name.exe /log"C：\""、從命令提示字元啟動安裝
 
 
+
+
+
+== 安裝期間在 Windows 主機上啟用的功能
+
+安裝過程中、支援Windows主機上的Windows功能和角色。SnapCenter這些可能對故障排除和維護主機系統有用。
+
+|===
+| 類別 | 功能 
+
+
+ a| 
+Web伺服器
+ a| 
+* 網際網路資訊服務
+* 全球網路服務
+* 一般HTTP功能
++
+** 預設文件
+** 目錄瀏覽
+** HTTP錯誤
+** HTTP重新導向
+** 靜態內容
+** WebDAWeb.發佈
+
+
+* 健全狀況與診斷
++
+** 自訂記錄
+** HTTP記錄
+** 記錄工具
+** 要求監控
+** 追蹤
+
+
+* 效能特色
++
+** 靜態內容壓縮
+
+
+* 安全性
++
+** IP安全性
+** 基本驗證
+** 集中式SSL憑證支援
+** 用戶端憑證對應驗證
+** 「IIS用戶端憑證對應驗證」
+** IP和網域限制
+** 要求篩選
+** URL授權
+** Windows驗證
+
+
+* 應用程式開發功能
++
+** .NET擴充性4.5
+** 應用程式初始化
+** ASP.NET Core Runtime 8.0.12 （以及所有後續 8.0.x 修補程式）代管產品組合
+** 伺服器端隨附
+** WebSocket傳輸協定
+
+
+* 管理工具
++
+** IIS管理主控台
+
+
+
+
+
+
+ a| 
+「IIS管理指令碼與工具」
+ a| 
+* IIS管理服務
+* 網路管理工具
+
+
+
+
+ a| 
++.NET Framework 8.0.12 Features+
+ a| 
+* ASP.NET Core Runtime 8.0.12 （以及所有後續 8.0.x 修補程式）代管產品組合
+* Windows Communication Foundation（WCF）HTTP Activation45
++
+** TCP啟動
+** HTTP啟動
+
+
+
+
+如需 .NET 特定疑難排解資訊、請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_upgrade_or_install_fails_with_%22This_KB_is_not_related_to_the_OS%22["對於沒有網際網路連線的舊版系統、 SnapCenter 升級或安裝失敗"^]。
+
+
+
+ a| 
+訊息佇列
+ a| 
+* 訊息佇列服務
++
+
+NOTE: 確保沒有其他應用程式使用SnapCenter 可用來建立及管理的msmqmq.服務。
+
+* RabbitMQ
+* Erlang
+
+
+
+
+ a| 
+Windows處理程序啟動服務
+ a| 
+* 程序模式
+
+
+
+
+ a| 
+組態API
+ a| 
+全部
+
+|===

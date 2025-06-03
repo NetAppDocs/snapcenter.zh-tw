@@ -11,7 +11,7 @@ summary: 如果您不想使用SnapCenter 現象GUI來執行主機資源配置和
 
 
 [role="lead"]
-如果您不想使用SnapCenter 現象GUI來執行主機資源配置和空間回收工作、可以使用SnapCenter 適用於Microsoft Windows的更新程式所提供的PowerShell Cmdlet。您可以直接使用Cmdlet或將Cmdlet新增至指令碼。
+如果您不想使用 SnapCenter GUI 執行主機設定和空間回收作業，則可以使用 PowerShell cmdlet。您可以直接使用Cmdlet或將Cmdlet新增至指令碼。
 
 如果您是在遠端外掛程式主機上執行Cmdlet、則必須執行SnapCenter 《The支援不中斷連線指令程式」、才能開啟與SnapCenter 該伺服器的連線。
 

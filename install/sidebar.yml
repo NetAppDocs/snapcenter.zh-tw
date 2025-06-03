@@ -1,6 +1,6 @@
 ---
 section: install
-title: 安裝伺服器SnapCenter
+title: 安裝並設定 SnapCenter 伺服器
 entries:
 - title: 準備安裝SnapCenter 完此伺服器
   entries:
@@ -16,7 +16,7 @@ entries:
       url: "/install/enable_multifactor_authentication_using_RestAPI_PowerShell_SCCLI.html"
     - title: 使用 PowerShell 、 sccli 和 REST API 在 SnapCenter 伺服器中設定 MFA
       url: "/install/configure_mfa_using_powershell_sccli_restapi.html"
-- title: 安裝SnapCenter 伺服器
+- title: 安裝SnapCenter 此伺服器
   entries:
   - title: 在 Windows 主機上安裝 SnapCenter 伺服器
     url: "/install/task_install_the_snapcenter_server_using_the_install_wizard.html"
@@ -26,10 +26,56 @@ entries:
     url: "/install/register-snapcenter-software.html"
   - title: 登入SnapCenter 到
     url: "/install/task_log_in_to_snapcenter.html"
-  - title: 安裝期間在Windows主機上啟用的功能
-    url: "/install/reference_features_enabled_on_your_windows_host_during_installation.html"
-  - title: 安裝期間在 Linux 主機上啟用的功能
-    url: "/install/features_enabled_on_linux_host.html"
+- title: 配置 SnapCenter 伺服器
+  entries:
+  - title: 新增並配置儲存系統
+    entries:
+    - title: 新增儲存系統
+      url: "/install/task_add_storage_systems.html"
+    - title: 儲存連線與認證
+      url: "/install/concept_svm_connections_and_credentials.html"
+    - title: 在Windows主機上配置儲存設備
+      entries:
+      - title: 建立及管理igroup
+        url: "/install/concept_create_and_manage_igroups.html"
+      - title: 建立及管理磁碟
+        url: "/install/task_create_and_manage_disks.html"
+      - title: 建立及管理SMB共用區
+        url: "/install/concept_create_and_manage_smb_shares.html"
+      - title: 回收儲存系統上的空間
+        url: "/install/task_reclaim_space_on_the_storage_system.html"
+      - title: 使用PowerShell Cmdlet來配置儲存設備
+        url: "/install/reference_provision_storage_using_powershell_cmdlets.html"
+    - title: 在VMware環境中配置儲存設備
+      url: "/install/concept_provision_storage_in_vmware_environments.html"
+  - title: 新增SnapCenter 以控制器為基礎的功能
+    url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
+  - title: 設定高可用度
+    entries:
+    - title: 設定 SnapCenter 伺服器的高可用度
+      url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
+    - title: 高可用度：SnapCenter 適用於MySQL的功能
+      url: "/install/concept_high_availability_for_snapcenter_mysql_repository.html"
+  - title: 設定角色型存取控制（RBAC）
+    entries:
+    - title: 建立角色
+      url: "/install/task_create_a_role.html"
+    - title: 使用ONTAP 安全登入命令新增一個RBAC角色
+      url: "/install/task_add_an_rbac_role_using_security_login_commands.html"
+    - title: 以最低權限建立SVM角色
+      url: "/install/create-svm-roles-minimum-privileges.html"
+    - title: 為 ASA R2 系統建立 SVM 角色
+      url: "/install/create-svm-roles-asa-r2-resources.html"
+    - title: 以ONTAP 最低權限建立叢集角色
+      url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
+    - title: 為 ASA R2 系統建立 ONTAP 叢集角色
+      url: "/install/create-cluster-roles-asa-r2-resources.html"
+    - title: 新增使用者或群組、並指派角色和資產
+      url: "/install/task_add_a_user_or_group_and_assign_role_and_assets.html"
+  - title: 設定稽核日誌設定
+    url: "/install/task_configure_audit_log_settings.html"
+  - title: 使用SnapCenter 伺服器設定安全的MySQL連線
+    url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
 - title: 設定憑證型驗證
   url: "/install/configure_certificate_based_authentication.html"
 - title: 設定 Windows 主機的 CA 憑證
@@ -64,57 +110,7 @@ entries:
   entries:
   - title: 登錄不受信任的Active Directory網域
     url: "/install/task_register_untrusted_active_directory_domains.html"
-  - title: 設定LDAPS的CA用戶端憑證
-    url: "/install/task_configure_CA_client_certificate_for_LDAPS.html"
-- title: 設定高可用度
-  entries:
-  - title: 設定 SnapCenter 伺服器的高可用度
-    url: "/install/concept_configure_snapcenter_servers_for_high_availabiity_using_f5.html"
-  - title: 高可用度：SnapCenter 適用於MySQL的功能
-    url: "/install/concept_high_availability_for_snapcenter_mysql_repository.html"
-- title: 設定角色型存取控制（RBAC）
-  entries:
-  - title: 新增使用者或群組、並指派角色和資產
-    url: "/install/task_add_a_user_or_group_and_assign_role_and_assets.html"
-  - title: 建立角色
-    url: "/install/task_create_a_role.html"
-  - title: 使用ONTAP 安全登入命令新增一個RBAC角色
-    url: "/install/task_add_an_rbac_role_using_security_login_commands.html"
-  - title: 以最低權限建立SVM角色
-    url: "/install/create-svm-roles-minimum-privileges.html"
-  - title: 為 ASA R2 系統建立 SVM 角色
-    url: "/install/create-svm-roles-asa-r2-resources.html"
-  - title: 以ONTAP 最低權限建立叢集角色
-    url: "/install/task_create_an_ontap_cluster_role_with_minimum_privileges.html"
-  - title: 為 ASA R2 系統建立 ONTAP 叢集角色
-    url: "/install/create-cluster-roles-asa-r2-resources.html"
   - title: 設定「IIS應用程式集區」以啟用Active Directory讀取權限
     url: "/install/task_configure_iis_application_pools_to_enable_active_directory_read_permissions.html"
-- title: 設定稽核日誌設定
-  url: "/install/task_configure_audit_log_settings.html"
-- title: 新增儲存系統
-  url: "/install/task_add_storage_systems.html"
-- title: 儲存虛擬機器連線與認證
-  url: "/install/concept_svm_connections_and_credentials.html"
-- title: 新增SnapCenter 以控制器為基礎的功能
-  url: "/install/concept_snapcenter_standard_controller_based_licenses.html"
-- title: 配置您的儲存系統
-  entries:
-  - title: 在Windows主機上配置儲存設備
-    entries:
-    - title: 設定LUN儲存設備
-      url: "/install/concept_configure_lun_storage.html"
-    - title: 建立及管理igroup
-      url: "/install/concept_create_and_manage_igroups.html"
-    - title: 建立及管理磁碟
-      url: "/install/task_create_and_manage_disks.html"
-    - title: 建立及管理SMB共用區
-      url: "/install/concept_create_and_manage_smb_shares.html"
-    - title: 回收儲存系統上的空間
-      url: "/install/task_reclaim_space_on_the_storage_system.html"
-    - title: 使用PowerShell Cmdlet來配置儲存設備
-      url: "/install/reference_provision_storage_using_powershell_cmdlets.html"
-  - title: 在VMware環境中配置儲存設備
-    url: "/install/concept_provision_storage_in_vmware_environments.html"
-- title: 使用SnapCenter 伺服器設定安全的MySQL連線
-  url: "/install/concept_configure_secured_mysql_connections_with_snapcenter_server.html"
+  - title: 設定LDAPS的CA用戶端憑證
+    url: "/install/task_configure_CA_client_certificate_for_LDAPS.html"
