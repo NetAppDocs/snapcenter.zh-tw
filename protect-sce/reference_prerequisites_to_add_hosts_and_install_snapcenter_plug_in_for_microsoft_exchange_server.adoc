@@ -57,7 +57,7 @@ summary: 新增主機並安裝外掛程式套件之前、您必須先完成所�
  a| 
 Microsoft Windows
 
-如需支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊，請參閱 https://imt.netapp.com/imt/imt.jsp?components=134502;&solution=1258&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 
@@ -144,7 +144,7 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
  a| 
 Microsoft Windows
 
-如需支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊，請參閱 https://imt.netapp.com/imt/imt.jsp?components=134502;&solution=1258&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 

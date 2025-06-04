@@ -17,6 +17,10 @@ summary: 在新增主機並安裝外掛程式套件之前、您必須先完成�
 NOTE: AIX 支援儲存設備和 Oracle 應用程式。
 
 * 您必須在 Linux ， Windows 或 AIX 主機上安裝 Java 11 。
++
+
+NOTE: IBM Java 在 Windows 和 Linux 主機上不受支援。
+
 * 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.
 * NetApp 支援的外掛程式（例如 MongoDB ， ORASCPM ， Oracle 應用程式， SAP ASE ， SAP MaxDB 和儲存外掛程式）必須可在執行新增主機作業的用戶端主機上使用。
 
@@ -34,6 +38,9 @@ NOTE: AIX 支援儲存設備和 Oracle 應用程式。
 * 您必須擁有具有本機系統管理員權限的網域使用者、並在遠端主機上具有本機登入權限。
 * 如果您管理SnapCenter 的是叢集節點、則必須有擁有叢集中所有節點管理權限的使用者。
 * 您必須手動選擇適用於 Microsoft Windows 的 SnapCenter 外掛程式。
++
+http://www.java.com/en/download/manual.jsp["下載適用於 Windows 的 JAVA"]
+
 
 
 
@@ -49,7 +56,10 @@ NOTE: AIX 支援儲存設備和 Oracle 應用程式。
 如果您使用 Windows Server 2019 或 Windows Server 2016 作為 SnapCenter 伺服器主機、則必須安裝 Java 11 。互通性對照表工具IMT （英文）包含有關需求的最新資訊。
 
 +
-http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
+http://www.java.com/en/download/manual.jsp["下載適用於 Linux 的 JAVA"]
+
++
+https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["下載適用於 AIX 的 JAVA"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]

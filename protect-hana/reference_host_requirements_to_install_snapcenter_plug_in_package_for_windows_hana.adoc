@@ -22,7 +22,7 @@ summary: 在安裝SnapCenter 適用於Windows的整套解決方案之前、您�
  a| 
 Microsoft Windows
 
-如需支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+如需支援版本的最新資訊，請參閱 https://imt.netapp.com/imt/imt.jsp?components=134502;&solution=1258&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 

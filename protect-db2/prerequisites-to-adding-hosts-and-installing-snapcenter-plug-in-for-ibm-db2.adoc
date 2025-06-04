@@ -16,7 +16,7 @@ summary: 新增主機並安裝外掛程式套件之前、您必須先完成所�
 * 您必須在主機上安裝 Java 11 。
 +
 
-NOTE: 不支援IBM Java。
+NOTE: IBM Java 在 Windows 和 Linux 主機上不受支援。
 
 * 對於 Windows 、外掛程式建立者服務應使用「 'LocalSystem' 」 Windows 使用者執行、這是以網域管理員身分安裝適用於 IBM DB2 的外掛程式時的預設行為。
 * 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.SnapCenter Plug-in for Microsoft Windows 預設會在 Windows 主機上與 IBM DB2 外掛程式一起部署。
@@ -32,7 +32,7 @@ NOTE: 不支援IBM Java。
 * 您必須為root或非root使用者啟用密碼型SSH連線。
 * 您必須在 Windows 主機上安裝 Java 11 。
 +
-http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
+http://www.java.com/en/download/manual.jsp["下載適用於 Windows 的 JAVA"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
@@ -46,7 +46,10 @@ https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src
 * 您必須為root或非root使用者啟用密碼型SSH連線。
 * 您必須在 Linux 主機上安裝 Java 11 。
 +
-http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
+http://www.java.com/en/download/manual.jsp["下載適用於 Linux 的 JAVA"]
+
++
+https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["下載適用於 AIX 的 JAVA"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]

@@ -6767,7 +6767,6 @@
   <block id="04f76259e3406e39f106d09b85354906" category="inline-link">Exchange備份僅將一半快照保留在Vault目的地記錄磁碟區上SnapCenter</block>
   <block id="67e1d332319e6fe55fd35967c2ec989e" category="admonition">處理Exchange磁碟區（LUN）時、請為記錄和資料庫建立個別的資料保存原則、並使用相同的標籤、將記錄原則的保留（保留）設定為每個標籤的兩倍數量作為資料庫原則。如需詳細資訊、請參閱：<block ref="069d987d34ba2a5b3f4862b42bb7f849" category="inline-link-rx"></block></block>
   <block id="b885eb831c1b0ea66dc957240ef0bacd" category="admonition">還原控制檔時、請確定目錄結構存在、或是應以正確的使用者和群組擁有者（如果有）建立、以允許還原程序將檔案複製到目標位置。如果目錄不存在、還原工作將會失敗。</block>
-  <block id="3a6eb59ee064b09b020c1a87c5de4988" category="admonition">不支援IBM Java。</block>
   <block id="bb92d00cc055d1fa0c3023946870bfd5" category="paragraph">如需 .NET 特定疑難排解資訊、請參閱<block ref="d20f19fe60cd205f06739b1a5caeb450" category="inline-link-rx"></block></block>
   <block id="9756c6d75626032c8da05d425c1d0ca9" category="inline-link">對於沒有網際網路連線的舊版系統、 SnapCenter 升級或安裝失敗</block>
   <block id="462fbac4d281be78bedf063a9dbd9f61" category="paragraph">如需 .NET 特定疑難排解資訊、請參閱<block ref="b173f6267e94bec8cf82a1d95b991ed7" category="inline-link-rx"></block>。</block>
@@ -8723,7 +8722,6 @@ Snapshot 作業。</block>
   <block id="0b12a00876503fb1813afee6ad9b0a76" category="list-text">ora_temp 指定暫存檔的目錄。</block>
   <block id="e1ab4aa639aa539548c7d55759dc7004" category="list-text">oracle_home 指定安裝 Oracle 軟體的目錄。</block>
   <block id="57808f9033b6670d0e1ff1ecc8197488" category="list-text">archive 記錄檔僅指定是否要備份歸檔記錄檔。</block>
-  <block id="6d6058c414d1170875e11ce8a19484f0" category="list-text">oracle_backup_mode 指定是執行線上或離線備份。</block>
   <block id="c4e433903376436b2e77e2cfdc6f5913" category="summary">如果個別 NetApp 支援的外掛程式資源不是任何資源群組的一部分、您可以從「資源」頁面備份資源。您可以隨需備份資源、或者、如果資源已附加原則並已設定排程、則會根據排程自動進行備份。</block>
   <block id="6ce5278b296a0a5a39af4a4d0cbd927c" category="doc">備份個別 NetApp 支援的外掛程式資源</block>
   <block id="37a077fe53864717026a312c9cfed412" category="doc">備份 NetApp 支援的外掛程式資源</block>
@@ -9980,4 +9978,16 @@ Snapshot 作業。</block>
   <block id="d39d360863f3fda3c5d615dc978e14ae" category="sidebar">安裝SnapCenter 此伺服器</block>
   <block id="3199d4d0758d0f4f53db9a8f36670c18" category="sidebar">配置 SnapCenter 伺服器</block>
   <block id="4c975961e88401702aa6aac167300031" category="sidebar">新增並配置儲存系統</block>
+  <block id="81f9b64ab1987ed2d00f4d52a80ca52b" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="315018c067f16596ddc2e2de507c24d0" category="inline-link-rx"></block>。</block>
+  <block id="0885e9f12d8cb35b0f02655c34c87004" category="admonition">IBM Java 在 Windows 和 Linux 主機上不受支援。</block>
+  <block id="48c9a1bf5de7bf57f1efa648f3bc8d17" category="inline-link">下載適用於 Windows 的 JAVA</block>
+  <block id="a4560fe71d10d98deabf55fdf50b90f0" category="paragraph"><block ref="a4560fe71d10d98deabf55fdf50b90f0" category="inline-link-rx"></block></block>
+  <block id="25827211b51e5a08cc74ddb2f845f386" category="inline-link">下載適用於 Linux 的 JAVA</block>
+  <block id="0632a773655c14c1b1e9ced88bc550ed" category="paragraph"><block ref="0632a773655c14c1b1e9ced88bc550ed" category="inline-link-rx"></block></block>
+  <block id="ffef625a5852f63e8c97e120b261e871" category="inline-link">下載適用於 AIX 的 JAVA</block>
+  <block id="1cf0cff6e7cd05dac4238e50abe74627" category="paragraph"><block ref="1cf0cff6e7cd05dac4238e50abe74627" category="inline-link-rx"></block></block>
+  <block id="67366bdaf9086e6015fe527a27beb845" category="inline-link">下載適用於所有作業系統的 JAVA</block>
+  <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
+  <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE 指定是否執行線上或離線備份。</block>
+  <block id="849d9298ad9d6def4918273148b3d4bf" category="list-text">ORACLE_EXPORT_PARAMETERS 指定在執行 _bin/su_ 時是否可以匯出環境變數。 ORACLE_EXPORT_PARAMETERS的值應設定為 *y*。</block>
 </blocks>

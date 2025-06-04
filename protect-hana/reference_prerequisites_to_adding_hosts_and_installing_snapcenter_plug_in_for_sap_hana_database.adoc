@@ -16,7 +16,7 @@ summary: 新增主機並安裝外掛程式套件之前、您必須先完成所�
 * 您必須在主機上安裝 Java 11 。
 +
 
-NOTE: 不支援IBM Java。
+NOTE: IBM Java 在 Windows 和 Linux 主機上不受支援。
 
 * 您必須在主機上安裝SAP HANA資料庫互動終端機（HDBSQL用戶端）。
 * 對於Windows、外掛程式Creator Service應使用「'LocalSystem'」Windows使用者執行、這是以網域管理員身分安裝SAP HANA資料庫外掛程式時的預設行為。
@@ -35,7 +35,7 @@ NOTE: 不支援IBM Java。
 * 您必須為root或非root使用者啟用密碼型SSH連線。
 * 您必須在 Windows 主機上安裝 Java 11 。
 +
-http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
+http://www.java.com/en/download/manual.jsp["下載適用於所有作業系統的 JAVA"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"]
@@ -49,7 +49,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src
 * 您必須為root或非root使用者啟用密碼型SSH連線。
 * 您必須在 Linux 主機上安裝 Java 11 。
 +
-http://www.java.com/en/download/manual.jsp["適用於所有作業系統的Java下載"]
+http://www.java.com/en/download/manual.jsp["下載適用於所有作業系統的 JAVA"]
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"]

@@ -197,5 +197,6 @@ UNIX 所需。如果執行 Snap Creator Agent start 和 stop 命令的使用者�
 * ora_temp 指定暫存檔的目錄。
 * oracle_home 指定安裝 Oracle 軟體的目錄。
 * archive 記錄檔僅指定是否要備份歸檔記錄檔。
-* oracle_backup_mode 指定是執行線上或離線備份。
+* ORACLE_BACKUPMODE 指定是否執行線上或離線備份。
+* ORACLE_EXPORT_PARAMETERS 指定在執行 _bin/su_ 時是否可以匯出環境變數。 ORACLE_EXPORT_PARAMETERS的值應設定為 *y*。
 
