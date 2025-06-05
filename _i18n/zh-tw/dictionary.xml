@@ -9989,5 +9989,5 @@ Snapshot 作業。</block>
   <block id="67366bdaf9086e6015fe527a27beb845" category="inline-link">下載適用於所有作業系統的 JAVA</block>
   <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
   <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE 指定是否執行線上或離線備份。</block>
-  <block id="849d9298ad9d6def4918273148b3d4bf" category="list-text">ORACLE_EXPORT_PARAMETERS 指定在執行 _bin/su_ 時是否可以匯出環境變數。 ORACLE_EXPORT_PARAMETERS的值應設定為 *y*。</block>
+  <block id="e787bc810fe0c9919da5538cad8cb1f1" category="list-text">ORACLE_EXPORT_PARAMETERS 指定在執行 /bin/su &lt;user running sqlplus&gt; -c sqlplus /nolog &lt;cmd&gt; 時是否應重新匯出上述定義的環境變數。通常情況下，當執行 sqlplus 的使用者尚未設定使用 connect / as sysdba 連接資料庫所需的所有環境變數時，就會發生這種情況。</block>
 </blocks>
