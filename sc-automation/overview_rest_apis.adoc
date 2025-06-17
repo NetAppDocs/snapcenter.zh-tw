@@ -17,7 +17,6 @@ summary: 說明如何使用REST API來執行多SnapCenter 項功能完善的管�
 
 * Microsoft SQL Server的外掛程式
 * SAP HANA資料庫的外掛程式
-* 自訂外掛程式
 * Oracle資料庫的外掛程式
 
 

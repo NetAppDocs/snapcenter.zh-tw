@@ -1,7 +1,7 @@
 ---
 permalink: protect-hana/reference_host_requirements_to_install_snapcenter_plug_in_package_for_windows_hana.html 
 sidebar: sidebar 
-keywords: SAP HANA,Custom plug-ins 
+keywords: SAP HANA, plug-ins 
 summary: 在安裝SnapCenter 適用於Windows的整套解決方案之前、您應該先熟悉一些基本的主機系統空間需求和規模調整需求。 
 ---
 = 安裝SnapCenter 適用於Windows的功能性外掛程式套件的主機需求

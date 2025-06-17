@@ -18,11 +18,11 @@ summary: 您可以為使用的應用程式開發 NetApp 支援的外掛程式、
 
 NOTE: SnapCenterCLI 不支援 NetApp 支援的外掛程式命令。
 
-NetApp提供儲存外掛程式、ONTAP 以使用SnapCenter 內建於支援中的自訂外掛架構、在支援的情況下、在支援資料的整套儲存設備上執行資料磁碟區的資料保護作業。
+NetApp 提供儲存插件，使用 SnapCenter 內建的插件框架對 ONTAP 儲存體上的資料磁碟區執行資料保護作業。
 
 您可以從「新增主機」頁面安裝 NetApp 支援的外掛程式。
 
 link:add_hosts_and_install_plug_in_packages_on_remote_hosts.html["新增主機並在遠端主機上安裝外掛程式套件。"^]
 
 
-NOTE: 支援支援政策涵蓋支援功能、包括支援功能不全的自訂外掛程式架構、核心引擎及相關API。SnapCenter SnapCenter支援不涵蓋外掛程式原始程式碼及建置於自訂外掛程式架構上的相關指令碼。
+NOTE: SnapCenter 支援政策將涵蓋對外掛程式框架、核心引擎和相關 API 的支援。支援不涵蓋插件原始程式碼以及基於插件框架構建的相關腳本。

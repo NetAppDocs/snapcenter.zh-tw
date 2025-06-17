@@ -15,7 +15,7 @@ summary: 您可以使用 SnapCenter 來複製使用檔案系統備份的 Unix �
 
 .開始之前
 * 您可以將 _agent.properties_ 檔案中的值 _SKI_Fst_update_ 設定為 *true* 、該檔案位於： /opt/NetApp/snapcenter/SCC/etc_ 。
-* 您可以在位於下列位置的 _agent.properties_ 檔案中、將 _use_custom_clone_volume 名稱和交會路徑的值設為 * true* 、以獲得靜態複製磁碟區名稱和交會路徑：更新檔案之後、您應該執行下列命令、重新啟動 SnapCenter 以取得自訂外掛程式服務： `/opt/NetApp/snapcenter/scc/bin/scc restart`。
+* 您可以在位於下列位置的 _agent.properties_ 檔案中、將 _use_custom_clone_volume 名稱和交會路徑的值設為 * true* 、以獲得靜態複製磁碟區名稱和交會路徑：更新檔案後，您應該透過執行以下命令重新啟動 SnapCenter 插件建立者服務：  `/opt/NetApp/snapcenter/scc/bin/scc restart` 。
 +
 範例：如果沒有此內容、複製磁碟區名稱和交會路徑將類似於 <Source_volume_name> 複製 <Timestamp> 、但現在則是 <Source_volume_name> 複製 <Clone_Name>
 

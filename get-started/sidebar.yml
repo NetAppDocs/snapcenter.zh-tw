@@ -22,5 +22,7 @@ entries:
     url: "/get-started/reference_supported_storage_systems_and_applications.html"
   - title: 驗證方法
     url: "/get-started/concept_authentication_methods_for_your_credentials.html"
+- title: ASA r2 系統支援的 SnapCenter 操作
+  url: "/get-started/learn-about-snapcenter-support-for-asa-r2-systems.html"
 - title: 快速入門
   url: "/get-started/quick-start-snapcenter.html"

@@ -11,16 +11,16 @@ summary: 為 Linux 主機上的 NetApp 支援外掛程式服務設定 CA 憑證
 
 
 [role="lead"]
-您應該管理自訂外掛程式Keystore的密碼及其憑證、設定CA憑證、設定根或中繼憑證至自訂外掛程式信任存放區、以及設定CA簽署金鑰配對至自訂外掛程式信任存放區、並使用SnapCenter 「依賴自訂外掛程式」服務啟動已安裝的數位憑證。
+您應該管理插件金鑰庫及其憑證的密碼，配置 CA 證書，將根或中間證書配置到插件信任庫，並使用 SnapCenter 插件服務將 CA 簽章金鑰對配置到插件信任庫以啟動已安裝的數位憑證。
 
-自訂外掛程式會使用位於_/opt /NetApp/snapcenter/sccc/etc_的「keystore .jks」檔案做為其信任存放區和金鑰存放區。
+插件使用位於 _/opt/NetApp/snapcenter/scc/etc_ 的檔案「keystore.jks」作為其信任庫和金鑰庫。
 
 
 
-== 管理自訂外掛程式Keystore的密碼、以及使用中的CA簽署金鑰配對別名
+== 管理插件金鑰庫的密碼以及正在使用的 CA 簽章金鑰對的別名
 
 .步驟
-. 您可以從自訂外掛程式代理程式內容檔擷取自訂外掛程式Keystore預設密碼。
+. 您可以從外掛程式代理屬性檔案中檢索外掛程式密鑰庫預設密碼。
 +
 這是對應至金鑰「keystore _pass」的值。
 
@@ -37,16 +37,16 @@ summary: 為 Linux 主機上的 NetApp 支援外掛程式服務設定 CA 憑證
 
 
 
-NOTE: 自訂外掛程式Keystore的密碼、以及私密金鑰的所有相關別名密碼均應相同。
+NOTE: 插件金鑰庫的密碼和所有相關私鑰別名的密碼應該相同。
 
 
 
-== 將根或中繼憑證設定為自訂外掛程式信任存放區
+== 設定根憑證或中間憑證以插入信任庫
 
-您應該設定根或中繼憑證、而不使用私密金鑰、以自訂外掛程式信任存放區。
+您應該配置沒有私鑰的根憑證或中間憑證來插入信任庫。
 
 .步驟
-. 瀏覽至包含自訂外掛程式Keystore的資料夾：/opp/NetApp/snapcenter/scc/等
+. 導航至包含插件金鑰庫的資料夾：/opt/NetApp/snapcenter/scc/etc。
 . 找到「keystore .jks」檔案。
 . 在Keystore中列出新增的憑證：
 +
@@ -55,7 +55,7 @@ NOTE: 自訂外掛程式Keystore的密碼、以及私密金鑰的所有相關別
 . 新增根或中繼憑證：
 +
  keytool -import -trustcacerts -alias myRootCA -file /root/USERTrustRSA_Root.cer -keystore keystore.jks
-. 將根或中繼憑證設定為自訂外掛程式信任存放區之後、請重新啟動服務。
+. 設定根憑證或中間憑證以插入信任庫後重新啟動服務。
 
 
 
@@ -63,12 +63,12 @@ NOTE: 您應該先新增根CA憑證、然後再新增中繼CA憑證。
 
 
 
-== 將CA簽署金鑰配對設定為自訂外掛程式信任存放區
+== 配置 CA 簽署金鑰對以插入信任庫
 
-您應該將CA簽署金鑰配對設定為自訂外掛程式信任存放區。
+您應該將 CA 簽署的金鑰對配置到插件信任庫中。
 
 .步驟
-. 瀏覽至包含自訂外掛程式Keystore /opp/NetApp/snapcenter/scc/等的資料夾
+. 導航至包含插件金鑰庫 /opt/NetApp/snapcenter/scc/etc 的資料夾。
 . 找到「keystore .jks」檔案。
 . 在Keystore中列出新增的憑證：
 +
@@ -85,7 +85,7 @@ NOTE: 您應該先新增根CA憑證、然後再新增中繼CA憑證。
 . 驗證密鑰庫是否包含與新CA憑證對應的別名、該CA憑證已新增至金鑰庫。
 . 將CA憑證的新增私密金鑰密碼變更為金鑰庫密碼。
 +
-預設的自訂外掛程式Keystore密碼是agent.properties檔案中KeyKeyKeystore _pass的值。
+預設插件密鑰庫密碼是 agent.properties 檔案中密鑰 KEYSTORE_PASS 的值。
 
 +
  keytool -keypasswd -alias "alias_name_in_CA_cert" -keystore keystore.jks
@@ -96,16 +96,16 @@ NOTE: 您應該先新增根CA憑證、然後再新增中繼CA憑證。
 +
 請根據SCC_IDATure_ALIAS金鑰更新此值。
 
-. 將CA簽署金鑰配對設定為自訂外掛程式信任存放區之後、請重新啟動服務。
+. 配置 CA 簽署的金鑰對以插入信任庫後重新啟動服務。
 
 
 
 
-== 針對SnapCenter 「不一樣的自訂外掛程式」設定憑證撤銷清單（CRL）
+== 為插件配置憑證撤銷清單 (CRL)
 
 .關於這項工作
-* 「自訂外掛程式」會在預先設定的目錄中搜尋CRL檔案。SnapCenter
-* 適用於「SetcCustom Plug-in」的CRL檔案預設目錄SnapCenter 為「opt /NetApp/snapcenter/scc / etc/crl」。
+* SnapCenter 插件將在預先配置的目錄中搜尋 CRL 檔案。
+* SnapCenter 插件的 CRL 檔案的預設目錄是「 opt / NetApp / snapcenter / scc / etc / crl 」。
 
 
 .步驟

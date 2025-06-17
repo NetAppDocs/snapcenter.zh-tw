@@ -20,7 +20,7 @@ summary: 如果資源不在資源群組中、您可以從「資源」頁面隨�
 NOTE: 備份檔案系統時SnapCenter 、不備份掛載於要備份之檔案系統的Volume掛載點（VMP）上的LUN。
 
 
-IMPORTANT: 如果您使用的是Windows檔案系統內容、請勿備份資料庫檔案。這樣做會造成備份不一致、而且在還原時可能會遺失資料。若要保護資料庫檔案、您必須針對SnapCenter 資料庫使用適當的支援程式（例如SnapCenter 、Microsoft SQL Server的支援程式、SnapCenter Microsoft Exchange Server的支援程式、或資料庫檔案的自訂外掛程式）。
+IMPORTANT: 如果您使用的是Windows檔案系統內容、請勿備份資料庫檔案。這樣做會造成備份不一致、而且在還原時可能會遺失資料。若要保護資料庫文件，必須使用適合資料庫的 SnapCenter 外掛程式（例如，適用於 Microsoft SQL Server 的 SnapCenter 外掛程式或適用於 Microsoft Exchange Server 的 SnapCenter 外掛程式）。
 
 [role="tabbed-block"]
 ====

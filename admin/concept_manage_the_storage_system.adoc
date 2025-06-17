@@ -104,7 +104,9 @@ NOTE: 如果SVM是ONTAP 使用ONTAP 無法修復的GUI從叢集刪除、SnapCent
 
 == REST API支援
 
-根據預設，所有與 ONTAP 和 ASA R2 儲存系統的儲存連線都會透過 ZAPI 。REST API 可針對特定 ONTAP 版本啟用。
+預設情況下，所有 ASA、AFF 或 FAS 系統與 ONTAP 的連線都將透過 ZAPI 進行。您可以針對特定 ONTAP 版本啟用 REST API。
+
+SnapCenter 利用 REST API 在 ASA r2 系統上執行所有操作，而 ASA r2 系統不支援 ZAPI。
 
 您可以修改下列組態檔案中的組態金鑰：
 

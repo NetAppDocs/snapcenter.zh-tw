@@ -60,9 +60,9 @@ entries:
       url: "/protect-nsp/get_the_CA_certificate_thumbprint.html"
     - title: 使用Windows主機外掛程式服務設定CA憑證
       url: "/protect-nsp/configure_CA_certificate_with_Windows_host_plug-in_services.html"
-    - title: 在SnapCenter Linux主機上設定「CA憑證」以使用「支援整套自訂外掛程式」服務
+    - title: 為 Linux 主機上的 SnapCenter 插件服務設定 CA 憑證
       url: "/protect-nsp/configure_CA_certificate_on_Linux_host.html"
-    - title: 在SnapCenter Windows主機上設定「CA憑證」以使用「更新自訂外掛程式」服務
+    - title: 為 Windows 主機上的 SnapCenter 插件服務設定 CA 憑證
       url: "/protect-nsp/configure_CA_certificate_on_windows_host.html"
     - title: 啟用外掛程式的CA憑證
       url: "/protect-nsp/enable_ca_certificates_for_plug-ins.html"

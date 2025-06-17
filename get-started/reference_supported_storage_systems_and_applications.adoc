@@ -27,43 +27,6 @@ summary: 您應該知道支援的儲存系統、應用程式和資料庫。
 如需Amazon FSX for NetApp ONTAP 功能的相關資訊、請參閱 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP 的支援文件"^]。
 
 * 執行 NetApp ONTAP 9.16.1 的 NetApp ASA R2 系統。
-+
-ASA R2 系統為所有 Flash 平台上建置的僅 SAN 環境提供統一化的硬體與軟體解決方案。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["深入瞭解 ASA R2 系統"]。
-
-+
-
-NOTE: SnapCenter 僅支援 ASA R2 系統上的 VMware 虛擬機器檔案系統（ VMFS ）。
-
-+
-|===
-| 支援的作業 | 不支援作業 
-
-
- a| 
-** 透過 VMDK 建立應用程式的主要備份
-** 將一致性群組快照傳輸至次要儲存系統
-** 從其他位置還原備份和還原
-+
-*** 使用 VMware VMotion 從主要與次要儲存設備進行原位還原
-*** 從主要與次要儲存設備連接並複製還原
-
-
-** 複製備份，並將複製複製到其他位置
-
- a| 
-** 原始裝置對應（ RDM ）
-** 適用於 Oracle 的應用程式磁碟區
-** SAP HANA NDV
-** LockVault
-** 防竄改快照
-** Flex Group
-** 階層式一致性群組
-** 從 ONTAP 9.x 移轉至 ASA R2 系統
-** 重新命名快照
-** SnapCenter 不支援 SQL 外掛主機的記錄目錄次要資源配置。您應該使用 ONTAP CLI 或系統管理員手動設定。
-
-
-|===
 
 
 

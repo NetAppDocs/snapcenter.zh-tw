@@ -38,7 +38,6 @@ link:task_configure_gMSA_on_windows_server_2012_or_later.html["在Windows Server
 ** Microsoft Exchange Server
 ** Microsoft SQL Server
 ** SAP HANA
-** 自訂外掛程式
 
 
 * 在叢集上安裝外掛程式

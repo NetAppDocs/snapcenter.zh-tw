@@ -55,10 +55,7 @@ SnapCenter 提供下列主要功能：
 
 * 集中化，應用程式一致的資料保護功能，可保護不同的應用程式
 +
-Microsoft Exchange Server ， Microsoft SQL Server ， Linux 或 AIX 上的 Oracle 資料庫， SAP HANA 資料庫， IBM DB2 ， PostgreSQL ， MySQL 和 ONTAP 系統上執行的 Windows 主機檔案系統均支援資料保護。
-
-+
-其他標準或自訂應用程式和資料庫也支援資料保護、提供架構以建立使用者定義SnapCenter 的功能表外掛程式。如此一來、其他應用程式和資料庫就能從同一個單一窗口進行資料保護。藉由運用此架構， NetApp 已發行適用於 MongoDB ， Storage ， MaxDB ， Sybase ASE ， ORASCPM 的 SnapCenter 外掛程式。您也可以使用開發人員指南建立自己的外掛程式。
+Microsoft Exchange Server ， Microsoft SQL Server ， Linux 或 AIX 上的 Oracle 資料庫， SAP HANA 資料庫， IBM DB2 ， PostgreSQL ， MySQL 和 ONTAP 系統上執行的 Windows 主機檔案系統均支援資料保護。SnapCenter 也支援 MongoDB、Storage、MaxDB、Sybase ASE、ORASCPM 等應用程式的保護。
 
 * 原則型備份
 +
@@ -182,19 +179,6 @@ Linux或AIX
 適用於 UNIX 的外掛程式或適用於 Windows 的外掛程式
  a| 
 HDBSQL用戶端主機
- a| 
-Linux或Windows
-
-
-
- a| 
-不適用的自訂外掛程式SnapCenter
- a| 
-適用於 Linux 的外掛程式套件，以及適用於 Windows 的外掛程式套件
- a| 
-若要進行檔案系統備份，請使用適用於 Windows 的外掛程式
- a| 
-自訂應用程式主機
  a| 
 Linux或Windows
 

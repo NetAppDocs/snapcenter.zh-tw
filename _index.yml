@@ -12,6 +12,8 @@ indexpage:
       url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665
     - title: 深入瞭解SnapCenter
       url: "/get-started/concept_snapcenter_overview.html"
+    - title: ASA r2 系統支援的 SnapCenter 操作
+      url: "/get-started/learn-about-snapcenter-support-for-asa-r2-systems.html"
     - title: SnapCenter 軟體快速入門
       url: "/get-started/quick-start-snapcenter.html"
     - title: 升級SnapCenter 功能：伺SnapCenter 服器和功能不全的外掛程式

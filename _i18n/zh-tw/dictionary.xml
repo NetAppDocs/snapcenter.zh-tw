@@ -63,7 +63,6 @@
   <block id="f3442009cf8c0e228473ba15a66ac563" category="paragraph">您可以使用SnapCenter 無法辨識的GUI移除主機、並解除安裝個別的外掛程式或外掛程式套件。您也可以在遠端主機上使用SnapCenter 命令列介面（CLI）、或在任何主機上使用Windows *解除安裝程式*選項、來解除安裝個別外掛程式或外掛程式套件。</block>
   <block id="bf3d95dececb2ee8a103358b2c9b04f2" category="paragraph">在您從SnapCenter 「支援伺服器」移除主機之前、您應該先完成先決條件。</block>
   <block id="af429d236566c534d6dc055192e779cf" category="list-text">您應該以系統管理員的身分登入。</block>
-  <block id="50f2247c873481cfb368dd204a79a45d" category="list-text">如果您使用SnapCenter 的是「無法自訂的外掛程式」、則應刪除SnapCenter 所有與主機相關的實體複本。</block>
   <block id="9030d3b6bdc2b1e3d07fcc87c359b081" category="list-text">您應該確定探索工作未在主機上執行。</block>
   <block id="7cf2b1be955f9e0063c5ff9339bec7a6" category="list-text">您應該被指派具有必要權限的角色、以便移除與主機相關聯的所有物件。否則、移除作業將會失敗。</block>
   <block id="58577ea8db4fe9fa7618604aa126c15d" category="list-text">如果SSH金鑰在將主機新增SnapCenter 至支援功能後已修改、您應該確認指紋。</block>
@@ -249,10 +248,7 @@
   <block id="30b65b6968f11ce5399cacf995839f65" category="list-text">在「通知」頁面的*電子郵件喜好設定*下拉式清單中、選取您要傳送電子郵件的案例。</block>
   <block id="53582adf49551bf81650e7c9447e3a03" category="paragraph">您也必須指定寄件者和接收者的電子郵件地址、以及電子郵件的主旨。您也必須在「*設定*&gt;*全域設定*」頁面中設定SMTP。</block>
   <block id="8b9460bf38a68108bcdd278a386b3156" category="list-text">按一下*監控*&gt;*工作*來監控作業進度。</block>
-  <block id="49ee0af5f7bb584f9569b5628fd1170e" category="paragraph">NetApp提供儲存外掛程式、ONTAP 以使用SnapCenter 內建於支援中的自訂外掛架構、在支援的情況下、在支援資料的整套儲存設備上執行資料磁碟區的資料保護作業。</block>
   <block id="a344a2fc65197b27dcccc38ac1ef85a3" category="inline-link-macro">新增主機並在遠端主機上安裝外掛程式套件。</block>
-  <block id="022c56789408e44b04cf1944babfa527" category="admonition">支援支援政策涵蓋支援功能、包括支援功能不全的自訂外掛程式架構、核心引擎及相關API。SnapCenter SnapCenter支援不涵蓋外掛程式原始程式碼及建置於自訂外掛程式架構上的相關指令碼。</block>
-  <block id="07af457ed5409f58b0d5ca2b41b5ec39" category="inline-link-macro">為應用程式開發外掛程式</block>
   <block id="bf48a7e0eb56785cdc1ed4c661d3583f" category="summary">您可以從「資源」頁面隨需備份資源群組。如果資源群組已附加原則並設定排程、則會根據排程自動進行備份。</block>
   <block id="92ae04a417b2b1bf95cb914953f21cce" category="list-text">您必須已建立附加原則的資源群組。</block>
   <block id="0dd1baa389f6493ff89ba4f1d23f127b" category="list-text">如果您要備份與二線儲存設備有SnapMirror關係的資源、ONTAP 指派給儲存設備使用者的「還原角色」應包含「全部快照」權限。不過、如果您使用「vsadmin」角色、則不需要「全部快照鏡像」權限。</block>
@@ -284,60 +280,10 @@
   <block id="550b8e3545b2126ab5138fd027e787fa" category="list-text">使用Add-Smhost Cmdlet和必要參數、將主機新增SnapCenter 至SetcServer。</block>
   <block id="d959bbdfecd7dd6a3f75f5a871cbbe02" category="inline-link-macro">新增主機並在遠端主機上安裝外掛程式套件</block>
   <block id="6d61da8537780fd23a681da23103b991" category="paragraph">Cmdlet說明及Cmdlet參考資訊包含更多PowerShell Cmdlet的相關資訊。SnapCenter</block>
-  <block id="2ed40d52224af2dfedf93c8eb0550f77" category="summary">您可以使用SnapCenter 支援應用程式資料保護的功能、在主機上安裝所建立的自訂外掛程式。</block>
-  <block id="3a08617a6dcc882e91018fc505870b76" category="doc">自訂SnapCenter 插件</block>
-  <block id="b5c77f66454d4e3d57521e8099507412" category="paragraph">使用Java、Perl或原生樣式所建立的自訂外掛程式、可以使用SnapCenter 支援應用程式資料保護的功能、安裝在主機上。您必須先匯出外掛程式、SnapCenter 才能使用本教學課程所提供的程序將其安裝在支援主機上。</block>
-  <block id="def6cbe35e3566226b7c54e977f98930" category="section-title">建立外掛程式說明檔案</block>
-  <block id="976aa48091e83c884b1bc20161aa0e8d" category="paragraph">對於每個建立的外掛程式、您都必須擁有說明檔案。說明檔案會說明外掛程式的詳細資料。檔案名稱必須是Plugin_filer.xml。</block>
-  <block id="2a858e5af94e1d82cb7fd1f759d4baca" category="section-title">使用外掛程式描述元檔案屬性及其重要性</block>
-  <block id="f2bbdf9f72c085adc4d0404e370f0f4c" category="cell">屬性</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">說明</block>
   <block id="49ee3087348e8d44e1feda1917443987" category="paragraph">名稱</block>
-  <block id="ee951528ab77b8d58d90d5ab615dd4aa" category="paragraph">外掛程式的名稱。允許使用英數字元。例如DB2、MySQL、MongoDB</block>
-  <block id="ff1642648bf25086a549307da08e818d" category="paragraph">對於以原生樣式建立的外掛程式、請確定您未提供檔案副檔名。例如、如果外掛程式名稱為MongoDB.sh、請將名稱指定為MongoDB。</block>
   <block id="34b6cd75171affba6957e308dcbd92be" category="paragraph">版本</block>
-  <block id="3b868ced6f60acf5ee565ac021d42941" category="paragraph">顯示名稱</block>
-  <block id="0c5cf3f9437d836d57e97dfa37ce8453" category="paragraph">顯示在SnapCenter Is供 伺服器中的外掛程式名稱。如果寫入相同外掛程式的多個版本、請確認所有版本的顯示名稱都相同。</block>
-  <block id="54d2dab039ee358ddca7d63d0f413e56" category="paragraph">PluginType</block>
-  <block id="326b513459a506fbe18fb4f520147f3a" category="paragraph">用於建立外掛程式的語言。支援的值包括Perl、Java和Native。原生外掛程式類型包括Unix/Linux Shell指令碼、Windows指令碼、Python或任何其他指令碼語言。</block>
-  <block id="fa1a5da2f5e6077f069628887da13577" category="paragraph">OSName</block>
-  <block id="17c0dd84a508c3b3e37bfd914e437f4e" category="paragraph">安裝外掛程式的主機OS名稱。有效值為Windows和Linux。單一外掛程式可以部署在多種作業系統類型上、例如Perl類型的外掛程式。</block>
-  <block id="3c25d129875719f5f76e5fa54f1b1eb6" category="paragraph">作業系統版本</block>
-  <block id="2f3304349b38afaa2855ab50c05c0003" category="paragraph">安裝外掛程式的主機作業系統版本。</block>
-  <block id="68754c5409cf75557f589988d16e70a8" category="paragraph">資源名稱</block>
-  <block id="45ca72149d5299e90bdfd0611fdaef0a" category="paragraph">外掛程式可支援的資源類型名稱。例如資料庫、執行個體、集合。</block>
-  <block id="30269022e9d8f51beaabb52e5d0de2b7" category="paragraph">父</block>
-  <block id="6e8218f013ee42d0412f9d978960d8a0" category="paragraph">在這種情況下、資源名稱會階層式相依於其他資源類型、然後由父資源類型決定父資源類型。</block>
-  <block id="356fa51a18abd3979458137c245e26dd" category="paragraph">例如，DB2外掛程式的資源名稱「資料庫」具有父「執行個體」。</block>
-  <block id="2d1c51425a11058cd7d38ce3e170cac2" category="paragraph">RequireFileSystemPlugin</block>
-  <block id="12e4a7a7f5584eca1707daff9799ddcb" category="paragraph">是或否決定還原精靈中是否顯示「恢復」索引標籤。</block>
-  <block id="99d7049aa2436fc0274fe8143ee9980d" category="paragraph">資源要求驗證</block>
-  <block id="682ea36f3e6a876888f478562923ef91" category="paragraph">是或否決定自動探索或未自動探索的資源、在探索儲存設備後、是否需要認證資料來執行資料保護作業。</block>
-  <block id="3b6e31accf8f7d471ccede19bef9c46e" category="paragraph">RequireFileSystemClone</block>
-  <block id="12ddbad8eb62f87e7653d4724c724ae8" category="paragraph">是或否決定外掛程式是否需要檔案系統外掛程式整合、才能完成複製工作流程。</block>
-  <block id="08468ea67deda9eabf4c738efb3e0a08" category="paragraph">以下是自訂外掛程式DB2的Plugin_descriptor.xml檔案範例：</block>
-  <block id="8594c7cccef100e5c0eb21345360ebac" category="section-title">建立壓縮檔</block>
-  <block id="3f3dfb2bed1ad4a9c0c24a5f9d35ee33" category="paragraph">在開發外掛程式並建立描述元檔案之後、您必須將外掛程式檔案和Plugin_descriptor.xml檔案新增至資料夾、然後將其壓縮。</block>
-  <block id="5eb723e8c62415c9fa399f579b9e3a0c" category="paragraph">在建立ZIP檔案之前、您必須考量下列事項：</block>
-  <block id="97b7d14580cb5042f27c97545e119962" category="list-text">指令碼名稱必須與外掛程式名稱相同。</block>
-  <block id="8294fc13032dd7dea44bf40d376c0536" category="list-text">對於Perl外掛程式、ZIP資料夾必須包含含有指令碼檔案的資料夾、且描述元檔案必須位於此資料夾之外。資料夾名稱必須與外掛程式名稱相同。</block>
-  <block id="24058605bd3c5f43ac3119235935f3dd" category="list-text">對於Perl外掛程式以外的外掛程式、ZIP資料夾必須包含描述元和指令碼檔案。</block>
-  <block id="0b09ff35492353da9faf3a44ec77f0b1" category="list-text">作業系統版本必須為數字。</block>
   <block id="fd05d7f6bfc90e815087880e8e915b43" category="paragraph">範例：</block>
-  <block id="14f6f665a52b2f183f6d5b54aed98391" category="list-text">DB2外掛程式：將DB2.PM和Plugin_descriptor.xml檔案新增至「DB2.zip」。</block>
-  <block id="caa156f24a82b8a7670c99f131312f67" category="list-text">使用Java開發的外掛程式：將Jar檔案、相依的Jar檔案和Plugin_descriptor.xml檔案新增至資料夾、然後將其壓縮。</block>
-  <block id="bd4678e87b1f9d0f9ca2818993233e7b" category="section-title">正在上傳外掛程式ZIP檔案</block>
-  <block id="82c8db559767b2ba0d057500c849d4ef" category="paragraph">您必須將外掛程式的ZIP檔案上傳SnapCenter 至Sfor the plug-in Server、以便在所需的主機上部署外掛程式。</block>
-  <block id="c99cbda86a0df9c85a90522320e83b3c" category="paragraph">您可以使用UI或Cmdlet上傳外掛程式。</block>
-  <block id="0bbe49164732887d91aedfbb7323cd9f" category="paragraph">*使用者介面：*</block>
-  <block id="ff266e0a81aeb28d8bd639d0e6747ca5" category="list-text">將外掛程式ZIP檔案上傳為「*新增*」或「*修改主機*」工作流程精靈的一部分</block>
-  <block id="b1ce1fadb8885384867d388e4cb04034" category="list-text">按一下*「Select to upload custom plug-in（選擇上傳自訂外掛程式）」*</block>
-  <block id="d903a152f577e4c5d7d652897f5b1937" category="paragraph">* PowerShell：*</block>
-  <block id="55b8e92bcb8dde8186cf4ceac6338bce" category="list-text">uple-SmPluginPackage Cmdlet</block>
-  <block id="3b1bcb11ca95b8e7cac83075102f8b18" category="paragraph">例如、PS-Ups&gt;Upse-SmPluginPackage -AbsolutePath c：\DB2_1.zip</block>
-  <block id="30b91011e7233366bf6fe72b9e39581e" category="paragraph">如需PowerShell Cmdlet的詳細資訊、請使用SnapCenter 支援程式指令程式說明或參閱Cmdlet參考資訊。</block>
-  <block id="fdd90a3a6fddb98b5af79243529077e9" category="section-title">部署自訂外掛程式</block>
-  <block id="22a9a756176e1eda572d9437ffccee0c" category="paragraph">上傳的自訂外掛程式現在可在*新增*和*修改主機*工作流程的所需主機上進行部署。您可以將多個版本的外掛程式上傳至SnapCenter 支援伺服器、也可以選擇要部署在特定主機上的版本。</block>
   <block id="b1d3c10985fe921d1cd4f1920df9beb6" category="list-text">*統一化圖形使用者介面*</block>
   <block id="7140c9ed643472273949574e79ba9b60" category="paragraph">此支援介面可在外掛程式與環境之間提供標準化與一致性。SnapCenter利用此支援介面、您可以完成跨外掛程式的一致備份、還原、還原及複製作業、使用集中式報告、使用概覽儀表板檢視、設定角色型存取控制（RBAC）、以及監控所有外掛程式的工作。SnapCenter</block>
   <block id="8cab777e8f4d0f3134b1e688de9e3a14" category="list-text">*自動化中央管理*</block>
@@ -349,7 +295,6 @@
   <block id="77f89c57ca9a76d1b05a0a6547343371" category="list-text">使用NetApp FlexClone技術建立空間效率與時間點資源複本、以供測試或資料擷取之用</block>
   <block id="da7d10a7d1bd2a2e5acc1a7e98e314b4" category="paragraph">您要建立複本的儲存系統需要FlexClone授權。</block>
   <block id="b2d4bf2086608858ce65205273756f72" category="list-text">能夠在多個資源主機之間同時執行多個備份</block>
-  <block id="e26fb7c625f4366f8f4f984c45ecd6fc" category="list-text">您必須已建立自訂外掛程式。如需詳細資訊、請參閱開發人員資訊。</block>
   <block id="0653ebf18e2e782a5156c7cfd676052f" category="list-text">在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.</block>
   <block id="0db377921f4ce762c62526131097968f" category="section-title">一般</block>
   <block id="8dd7d2aae8c4a449ae4eb17577d64964" category="paragraph">如果您使用iSCSI、則必須執行iSCSI服務。</block>
@@ -359,7 +304,6 @@
   <block id="cfe19b0ae08454358fbe515d88fd6095" category="section-title">Linux主機</block>
   <block id="92f854eabda8c2aa761e01fba1c6ffd4" category="list-text">您必須為root或非root使用者啟用密碼型SSH連線。</block>
   <block id="6919c26b69875a76335f5a1dd643e508" category="inline-link">適用於所有作業系統的Java下載</block>
-  <block id="9226092112d9484949841b47e3b0500e" category="paragraph"><block ref="9226092112d9484949841b47e3b0500e" category="inline-link-rx"></block></block>
   <block id="04a9cf8066f01cc2ca9e6a6e6b25a340" category="summary">所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter</block>
   <block id="f29e68a537349e874e09abd00f21d020" category="paragraph">事件generate-autosup-log</block>
   <block id="e3890e588ffa00d05486b60aaec37e39" category="paragraph">工作歷史記錄顯示</block>
@@ -502,121 +446,13 @@
   <block id="e2bd14bf4c88f10bd2230039f5ac5538" category="list-text">使用Get-SmBackup和Get-SmBackupReport Cmdlet擷取您要還原的一或多個備份相關資訊。</block>
   <block id="d1024e540ddbde0c895907728f551025" category="paragraph">此範例顯示2015年1月29日至2015年2月3日備份的詳細資訊：</block>
   <block id="4544315cf8cf4a9ef7dd5ae463d9557d" category="list-text">使用Restore-SmBackup Cmdlet從備份還原資料。</block>
-  <block id="3c67b94e6822d49d50263c7db382c071" category="summary">使用Java樣式開發外掛程式。</block>
-  <block id="731641b378060335e231f40a61efb08e" category="doc">Java樣式</block>
-  <block id="8a01447d4257ebcaab42390ee2f4240d" category="paragraph">Java自訂外掛程式會直接與資料庫、執行個體等應用程式互動。</block>
   <block id="e646e16bee8b32e6ea29e30d01970a6c" category="section-title">限制</block>
-  <block id="19560bbbab2877a2271992ff54c2acf6" category="paragraph">使用Java程式設計語言開發外掛程式時、您應該注意到某些限制。</block>
-  <block id="109df424c58b79c2ecda4d66296b6c11" category="cell">外掛程式特性</block>
-  <block id="18c21c5db5968d04ad5d182fe7fa9835" category="cell">Java外掛程式</block>
-  <block id="7971813474da107714e72f8fd7b40a67" category="paragraph">複雜度</block>
-  <block id="63bcaffdaf5f82923762b545238b463d" category="paragraph">從低到中</block>
-  <block id="5feb6a47efae7a2d8887389df8701873" category="paragraph">記憶體佔用空間</block>
-  <block id="e6044c19b3a51182a3d4997958319ec9" category="paragraph">最高10至20 MB</block>
-  <block id="47fafe578fde976b0ee978115a8d193b" category="paragraph">相依於其他程式庫</block>
-  <block id="ae048ccf4cb143d7894ff3509eed7c9e" category="paragraph">用於應用程式通訊的程式庫</block>
-  <block id="5906becd36463d6d7a26b280f6afaa5e" category="paragraph">執行緒數量</block>
-  <block id="c4ca4238a0b923820dcc509a6f75849b" category="paragraph">1.</block>
-  <block id="a23d40c086cc8a7ddcc39dd3d7747fd5" category="paragraph">執行緒執行時間</block>
-  <block id="d69f265ea27772294d467d9ce2f7c976" category="paragraph">不到一小時</block>
-  <block id="70709e4ff5198c12de87c5bb1ef4d7e1" category="section-title">Java限制的理由</block>
-  <block id="95c0a67d0cfd35b1a8a48578d91c0495" category="paragraph">此解決方案的目標SnapCenter 是確保應用程式整合持續、安全且健全。藉由支援Java外掛程式、外掛程式可能會導致記憶體洩漏及其他不必要的問題。這些問題很難解決、尤其是為了讓事情變得簡單易用。如果外掛程式的複雜度不太複雜、則開發人員較不可能導入錯誤。Java外掛程式的危險在於它們與SnapCenter Sof the Sof the Sof the Same JVM.外掛程式當機或洩漏記憶體時、也可能對代理程式造成負面影響。</block>
-  <block id="5516fae9f196982df00a03b33d90be7d" category="section-title">支援的方法</block>
-  <block id="4c3880bb027f159e801041b1021e88e8" category="cell">方法</block>
-  <block id="b651efdb98a5d6bd2b3935d0c3f4a5e2" category="cell">必要</block>
-  <block id="a9e54eef51002049412033909783cd2f" category="cell">何時及由誰呼叫？</block>
   <block id="93cba07454f06a4a960172bbd6e2a435" category="paragraph">是的</block>
-  <block id="6034a2219adc98364247fafa6c7ac86e" category="paragraph">需要傳回外掛程式的版本。</block>
-  <block id="158432aca9b72e6906771c2e2fddbb8c" category="paragraph">由伺服器或代理程式要求外掛程式的版本。SnapCenter</block>
-  <block id="b55904d7759e5a6f24d4ca0dbdafd019" category="paragraph">靜止</block>
-  <block id="15f6d11fd1f65efe57d9b506c0e06313" category="paragraph">在該伺服器SnapCenter 建立Snapshot複本或執行一般備份之前。</block>
-  <block id="b52dd62394b28fe653e8d770689ea60c" category="paragraph">取消靜止</block>
-  <block id="09ed5f9b77aca4b8dd337f525d41ea4c" category="paragraph">需要在應用程式上執行靜止。在大多數情況下、這表示應用程式會恢復正常運作狀態。</block>
-  <block id="8c6384dda98d8864d00e29dc96179970" category="paragraph">清理</block>
   <block id="bafd7322c6e97d25b6299b5d6fe8920b" category="paragraph">否</block>
-  <block id="ff36b404767cd635ab945ad85f4f04b9" category="paragraph">負責清除外掛程式需要清理的任何項目。</block>
-  <block id="5c34b664bab5b91f3ebdcd206cf4d801" category="paragraph">當在伺服器SnapCenter 上完成工作流程（成功或失敗）時。</block>
-  <block id="2dba998b900ac4660779ce6a046d48b2" category="paragraph">clonewePre</block>
-  <block id="47f24b1cf1e23bb722f60f453ffd948b" category="paragraph">應在執行複製作業之前執行必要的動作。</block>
-  <block id="dc3a3a59937dce595851a0e3c9e62ed8" category="paragraph">當使用者觸發「clonewal Vol」或「clonewlun」動作、並使用內建的複製精靈（GUI / CLI）。</block>
-  <block id="42db709c3bb49ea37396262616eeac0b" category="paragraph">clonePost</block>
-  <block id="f7e930c0ca4b6495b9a8cb8417e2f98c" category="paragraph">應在執行複製作業之後執行必要的動作。</block>
-  <block id="359714a793ff358ab1a5390adaa15c7f" category="paragraph">重述預先發</block>
-  <block id="5690bc55e76e08851a976d18b9bc3459" category="paragraph">應在叫用還原作業之前執行必要的動作。</block>
-  <block id="cfb841a76e5c0388b7181075bba9ada0" category="paragraph">當使用者觸發還原作業時。</block>
   <block id="2bd339d85ee3b33e513359ce781b60cc" category="paragraph">還原</block>
-  <block id="d063ebca2216dedd83b697b745d3372e" category="paragraph">負責執行應用程式的還原/還原。</block>
-  <block id="b64c136408bbb80dfa6717a62d239726" category="paragraph">應用程式版本</block>
-  <block id="34baf03c93a4a627f25d6fc913b37041" category="paragraph">擷取由外掛程式管理的應用程式版本。</block>
-  <block id="665d60e7553e146d8e88c2b9877fa0e0" category="paragraph">在每個工作流程（例如備份/還原/複製）中、ASUP資料收集的一部分。</block>
-  <block id="368fe771261fcb18f7988833c9294a20" category="section-title">教學課程</block>
-  <block id="1cecf8d2916dc8f549c641e76e5c659a" category="paragraph">本節說明如何使用Java程式設計語言建立自訂外掛程式。</block>
-  <block id="dd2ea46cec759c9daa1731186a69847a" category="section-title">設定月食</block>
-  <block id="5059336e047b64e5cc20bd336d53cded" category="list-text">在Eclipse中建立新的Java專案「圖則外掛程式」</block>
-  <block id="b978a7bf524628221c941358ed3b236b" category="list-text">單擊*完成*</block>
-  <block id="da571635edcc3b6941bcbb47f042963f" category="list-text">右鍵單擊*新項目*-&gt;*屬性*-&gt;* Java建置路徑*-&gt;*資源庫*-&gt;*新增外部JAR*</block>
-  <block id="afce1d4d057bf9e937eca261048a8a7d" category="list-text">瀏覽至主機代理程式的./lib/資料夾、然後選取Jar scAgent-5.0-core.jar和common-5.0.jar</block>
-  <block id="4c2d5f28ee3c2d47fa766db121601ccc" category="list-text">選取專案、然後在* src資料夾*-&gt;*新增*-&gt;套件*上按一下滑鼠右鍵、然後建立名稱為com.netapp.snapcreator.agent.plugin.TutorialPlugin的新套件</block>
-  <block id="9aa678f69b6fbd924a453ac88be2da01" category="list-text">在新套件上按一下滑鼠右鍵、然後選取「New（新增）」-&gt;「Java Class（Java類別）」。</block>
-  <block id="cc5b6288914bdaaf663a91781a25ff9e" category="list-text">輸入圖則外掛程式名稱。</block>
-  <block id="8a5763cf603724a39de4260b78d1c6ef" category="list-text">按一下超類別瀏覽按鈕、然後搜尋「*抽象外掛程式」。只能顯示一個結果：</block>
   <block id="1859e92122e266181cafb9c13d7400a0" category="list-text">單擊*完成*。</block>
-  <block id="8c7e2b6bfd819565c59f2b392665abef" category="list-text">Java類別：</block>
-  <block id="27b2b5799cd8f27199a041f901952b56" category="section-title">實作所需方法</block>
-  <block id="ee5587e793308a8685469da87916cd09" category="paragraph">靜止、取消靜止和版本是每個自訂Java外掛程式必須實作的必要方法。</block>
-  <block id="a385e5de06fb17f83d17b95cff5edd39" category="paragraph">以下是傳回外掛程式版本的版本方法。</block>
-  <block id="cf7c15f920ccc654c43c2a5340be404e" category="paragraph">方法會在內容物件中傳遞。其中包含多個協助工具、例如Logger和內容存放區、以及目前作業的相關資訊（工作流程ID、工作ID）。我們可以呼叫最終Logger logger = context.getLogger（）；來取得記錄程式。記錄程式物件提供類似於其他記錄架構的方法、例如登入。在結果物件中、您也可以指定結束程式碼。在此範例中、零會傳回、因為沒有問題。其他結束代碼可對應至不同的故障情況。</block>
-  <block id="61880f414ea2ba4bed74bf724a7efde5" category="section-title">使用結果物件</block>
-  <block id="d15e98368b4822d2679ffe319f70bca0" category="paragraph">結果物件包含下列參數：</block>
-  <block id="7a1920d61156abc05a60135aefe8bc67" category="cell">預設</block>
-  <block id="fa535ffb25e1fd20341652f9be21e06e" category="paragraph">組態</block>
-  <block id="84c917becdd45097d9cc6311fe2d384c" category="paragraph">空組態</block>
-  <block id="91c257476f447587fd9c6bbc2d3fd998" category="paragraph">此參數可用於將組態參數傳回伺服器。它可以是外掛程式想要更新的參數。此變更是否實際反映在SnapCenter 支援伺服器上的組態中、取決於組態中的APP_CON_PONY面=Y或N參數。</block>
-  <block id="dc64d90dcdc95c2383f1db1b60ae0079" category="paragraph">exitCode</block>
-  <block id="cfcd208495d565ef66e7dff9f98764da" category="paragraph">0</block>
-  <block id="04b19c92f619855670b011d1450a3753" category="paragraph">表示作業狀態。「0」表示作業已成功執行。其他值表示錯誤或警告。</block>
-  <block id="21d983484658a89e3070776fae2261f5" category="paragraph">stdout</block>
-  <block id="7314d91688d87d3e5c9b52feb712ab26" category="paragraph">空白清單</block>
-  <block id="655ca11c9140ec6288b58b79c6bb4a09" category="paragraph">這可用來將stdout訊息傳回SnapCenter 至該伺服器。</block>
-  <block id="8c475733023face864f545eeca057033" category="paragraph">stderr</block>
-  <block id="21ef94ba119907117f364df896f3dec8" category="paragraph">這可用來將stderr訊息傳回SnapCenter 至該伺服器。</block>
-  <block id="41de6d6cfb8953c021bbe4ba0701c8a1" category="paragraph">訊息</block>
-  <block id="987747103127b1269c03daef522318fe" category="paragraph">此清單包含外掛程式要傳回伺服器的所有訊息。該伺服器會在CLI或GUI中顯示這些訊息。SnapCenter</block>
-  <block id="99753828b61fb11a098d17cc40833de4" category="inline-link">建構者模式</block>
-  <block id="3950454679ab5b1fb320d0285a746f19" category="paragraph">此功能可為建置者提供支援SnapCenter <block ref="3144c223957296a77caf645e6d0ca2e0" category="inline-link-rx"></block>）的所有結果類型。這讓使用者變得非常簡單：</block>
-  <block id="f16224a7d2e117c1c6004388a38e5a1f" category="paragraph">例如、將結束程式碼設為0、設定stdout和Stderr的清單、設定組態參數、以及附加將傳送回伺服器的記錄訊息。如果您不需要所有參數、請只傳送所需的參數。由於每個參數都有一個預設值、因此如果您從下列程式碼中移除.withExitCode（0）、則不會影響結果：</block>
-  <block id="8860923af296bdac25a4497406b57662" category="section-title">版本結果</block>
-  <block id="5e2c436a0c1116523458920900625aa7" category="paragraph">版本結果會將SnapCenter 外掛程式版本通知到該伺服器。由於它也從結果繼承、因此包含config、exitCode、stdout、stderr和Messages參數。</block>
-  <block id="3b329734e45b57e60f3df64c2cf412a9" category="paragraph">主要</block>
-  <block id="e9fe51210c5ecbbdc30bc9326fa943b1" category="paragraph">外掛程式的主要版本欄位。</block>
-  <block id="6fed0c378a4b4e8c1e7dc5c16dabb388" category="paragraph">次要</block>
-  <block id="3550287ffc4359734a0031c175193fdd" category="paragraph">外掛程式的次要版本欄位。</block>
-  <block id="156e10596fdc76ee5300bab931d89c0f" category="paragraph">修補程式</block>
-  <block id="76e77e1098ad643957d7c5c9df22f01b" category="paragraph">外掛程式的「修補版本」欄位。</block>
-  <block id="c74c1f42f141c011ca6bd8b1114fc3d0" category="paragraph">建置</block>
-  <block id="04feeef72aa7060480f2ff21cb04404b" category="paragraph">外掛程式的建置版本欄位。</block>
   <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">例如：</block>
-  <block id="fdd378ed98ea7cd4f7a8bd10d40352b3" category="section-title">使用內容物件</block>
-  <block id="1d2371f72c4ef61cbb3e573ca275f8f3" category="paragraph">內容物件提供下列方法：</block>
-  <block id="237c5740526e5a5fabdce09eb2155078" category="cell">內容方法</block>
-  <block id="261addf78c7b2c961032b3dd08ba0b1f" category="cell">目的</block>
-  <block id="ed90d972be4b4cc0150929cd58469816" category="paragraph">字串getWorkflowId()；</block>
-  <block id="df1e3aa8600b8512002fe0822a7d768d" category="paragraph">傳回SnapCenter 目前工作流程使用的流程ID。</block>
-  <block id="bdb6c277ff6a1becf6660510785d77b3" category="paragraph">config getconfig（）；</block>
-  <block id="0ed8b4c7dca05c28c63be3280f70e3d7" category="paragraph">傳回SnapCenter 正在從功能表伺服器傳送至代理程式的組態。</block>
-  <block id="04b3c4ea531620d4fc4ced9c79e3dfb0" category="section-title">工作流程ID</block>
-  <block id="9654c976940a07a77d7f08ca8e9ca7c7" category="paragraph">Workflow ID是SnapCenter 指由伺服器用來參照特定執行中工作流程的ID。</block>
-  <block id="37d64f01ccd77885519f2a946af921e6" category="paragraph">此物件包含（大部分）使用者可在SnapCenter 物件伺服器的組態中設定的參數。不過、由於安全性原因、部分參數可能會在伺服器端篩選。以下是如何存取Config和擷取參數的範例：</block>
-  <block id="fb4b95f7efbccbc9f673de67cb4a063c" category="paragraph">現在、「//myParexer」包含SnapCenter 從效能分析伺服器上的組態讀取的參數。如果組態參數鍵不存在、則會傳回空白字串（""）。</block>
-  <block id="308a084b70c4908d42de7192cbf8efe1" category="section-title">匯出外掛程式</block>
-  <block id="7cac39bd02f3b909f147bea7e251deba" category="paragraph">您必須匯出外掛程式、才能將其安裝在SnapCenter 該支援主機上。</block>
-  <block id="ff0741643ca10baccfc83aad90426d28" category="paragraph">在Eclipse中執行下列工作：</block>
-  <block id="9b3f778b7349e7c6a31e5dd3a35d16f3" category="list-text">在外掛程式的基礎套件上按一下滑鼠右鍵（請參閱範例com.netapp.snapcreator.agent.plugin.TutorialPlugin）。</block>
-  <block id="37233c4c635b4449c6d038a07e100c20" category="list-text">選擇*匯出*-&gt;* Java*-&gt;* Jar檔案*</block>
   <block id="5a378b18f7bf0c4cabc6c655cd2f535e" category="list-text">單擊 * 下一步 * 。</block>
-  <block id="8167729e48b2ebf78082747fb306ad04" category="list-text">在下列視窗中、指定目的地Jar檔案路徑：tutorial_plugin.jar外掛程式的基礎類別名稱為"TutorialPlugin.class"、外掛程式必須新增至名稱相同的資料夾。</block>
-  <block id="956dcc9eb4dcc7a9760461455f0c02d3" category="paragraph">如果外掛程式取決於其他程式庫、您可以建立下列資料夾：lib/</block>
-  <block id="bc60c50c66a380f1b4c5ad98a8a84f77" category="paragraph">您可以新增與外掛程式相依的Jar檔案（例如資料庫驅動程式）。當程式庫載入外掛程式時、它會自動將此資料夾中的所有Jar檔案與其相關聯、並將其新增至類路徑。SnapCenter</block>
   <block id="44b5e99e5c2bcf037907be7f6d205be8" category="summary">當您準備備備備份或複製資源時、您可能會發現在一線和二線儲存設備上檢視所有備份和複製的圖形化表示方式很有幫助。在「拓撲」頁面中、您可以看到可供所選資源或資源群組使用的所有備份和複本。您可以檢視這些備份與複製的詳細資料、然後選取這些資料以執行資料保護作業。</block>
   <block id="922c1e484efed735234f02ac16b9c465" category="paragraph">您可以在「管理複本」檢視中檢閱下列圖示、以判斷主要或次要儲存設備（鏡射複本或Vault複本）上是否有可用的備份與複本。</block>
   <block id="2fba02e5bdaaf564b94e2a8a3c87c198" category="inline-image-macro">主要儲存設備圖示</block>
@@ -672,11 +508,6 @@
   <block id="a28133afd7846d1e77aa696930846108" category="list-text">從*狀態*下拉式清單中、選取還原狀態。</block>
   <block id="e12538143afda34a18dc094aa39a01ff" category="list-text">按一下「*套用*」以檢視已成功完成的作業。</block>
   <block id="ece9c93963dca272468918a5414d7e34" category="list-text">選取還原工作、然後按一下*詳細資料*以檢視工作詳細資料。</block>
-  <block id="56e9f299379f1f27ee946b3cc5197ca7" category="summary">在SnapCenter Windows主機上設定「CA憑證」以使用「更新自訂外掛程式」服務</block>
-  <block id="51a29df7437c4fa534c9d8e3649160c0" category="paragraph">您應該管理自訂外掛程式Keystore的密碼及其憑證、設定CA憑證、設定根或中繼憑證至自訂外掛程式信任存放區、以及設定CA簽署金鑰配對至自訂外掛程式信任存放區、並使用SnapCenter 「依賴自訂外掛程式」服務啟動已安裝的數位憑證。</block>
-  <block id="1b212b031e5ee4eaf1c77f008a7bd0b9" category="paragraph">自訂外掛程式使用檔案_keyKeystore。jks_、位於_C：\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_、兩者都是其信任存放區和金鑰存放區。</block>
-  <block id="9da463b2b61e23d3fe7ab13642c5e3aa" category="section-title">管理自訂外掛程式Keystore的密碼、以及使用中的CA簽署金鑰配對別名</block>
-  <block id="b741c1960e79b37abf87bc732960670f" category="list-text">您可以從自訂外掛程式代理程式內容檔擷取自訂外掛程式Keystore預設密碼。</block>
   <block id="4f2ba1a9b499a3443a6a6c444cbd8466" category="paragraph">它是對應於key_keystore _pass的值。</block>
   <block id="e32ebbb17be02a7eaf806904e218c1c1" category="list-text">變更Keystore密碼：</block>
   <block id="19dced36a23aa4c7507c49068eb2c03e" category="paragraph">_keytool-storepasswd -keystore keystor.jks_</block>
@@ -686,36 +517,23 @@
   <block id="fae24c68746428bc01a6976996e11eb6" category="paragraph">_keytool-keypasswd -alias "alias name_in_cert - keystore keystore .jks_</block>
   <block id="d4cf07e2f6f2f8f14d91659efdc82d0f" category="paragraph">在_agent.properties_檔案中更新keyKeystore _pass的相同更新。</block>
   <block id="e1114844301394bfab9164689b3f9f77" category="list-text">變更密碼後重新啟動服務。</block>
-  <block id="1746a736dc1a04cee7ebe7c17449348d" category="admonition">自訂外掛程式Keystore的密碼、以及私密金鑰的所有相關別名密碼均應相同。</block>
-  <block id="256bd726c5c8cab1c5ea0f9e796f5965" category="section-title">將根或中繼憑證設定為自訂外掛程式信任存放區</block>
-  <block id="155033ac3710d50f11dcf73b23618ff9" category="paragraph">您應該設定根或中繼憑證、而不使用私密金鑰、以自訂外掛程式信任存放區。</block>
-  <block id="ce01b951440a84341498063a416262a0" category="list-text">瀏覽至包含自訂外掛程式Keystore _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_的資料夾</block>
   <block id="7d315e2f30c60f7b0d5a4fe26f119ab2" category="list-text">找到「keystore .jks」檔案。</block>
   <block id="706343adbd839cf9e73fb5f15c1cb3b9" category="list-text">在Keystore中列出新增的憑證：</block>
   <block id="40fdd302087eb1ad5eb70b4d6ab94188" category="paragraph">_keytool-list -v -keystore keyKeystore .jks_</block>
   <block id="e792c32ecac1acaff7821d45e1e214d7" category="list-text">新增根或中繼憑證：</block>
   <block id="c9e96240b81287a92a56796f491e6a47" category="paragraph">_keytool-import -cactacerts -alias myRootCA -file /root/USERTrustra_root.cer -keystore keyKeystore .jks_</block>
-  <block id="9712b66959e53dd56caee0b446a4b341" category="list-text">將根或中繼憑證設定為自訂外掛程式信任存放區之後、請重新啟動服務。</block>
   <block id="1df512af62f1258662a90107366384d7" category="admonition">您應該先新增根CA憑證、然後再新增中繼CA憑證。</block>
-  <block id="fa022a8acd4a44b539e8d7e8455ffe19" category="section-title">將CA簽署金鑰配對設定為自訂外掛程式信任存放區</block>
-  <block id="9d74dd7b3f156596731e7aa28b4bb608" category="paragraph">您應該將CA簽署金鑰配對設定為自訂外掛程式信任存放區。</block>
-  <block id="da800a422c568642a01c09610b340ea4" category="list-text">瀏覽至包含自訂外掛程式Keystore _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_的資料夾</block>
   <block id="86970546fa51f1a9590e947c5a0e3735" category="list-text">找到檔案_keystore。jks_。</block>
   <block id="bf9029c481f886c6ac95d1935371b6f0" category="list-text">新增具有私密金鑰和公開金鑰的CA憑證。</block>
   <block id="7814f27ab5a9368264f40840cdf8b5bc" category="paragraph">_keytool-importkeystore -srckeystore /root/snapcenter.ssl.test.netapp.com.pfx -srcstoretype.kcs12 -destkeystore keyKeystore .jks -deststoretype.jks_</block>
   <block id="ea64c68df49294aed2c5b2fcf603e243" category="list-text">在Keystore中列出新增的憑證。</block>
   <block id="d57e9c478525aa47932eeb7d8b217240" category="list-text">驗證密鑰庫是否包含與新CA憑證對應的別名、該CA憑證已新增至金鑰庫。</block>
   <block id="4b80542fc3ef5daca43d02c37fe3b113" category="list-text">將CA憑證的新增私密金鑰密碼變更為金鑰庫密碼。</block>
-  <block id="da4bc7b82286be276a29a9685b0b51a1" category="paragraph">預設的自訂外掛程式Keystore密碼是agent.properties檔案中KeyKeyKeystore _pass的值。</block>
   <block id="008f667e8b400f4409460460559f3b36" category="paragraph">_keytool-keypasswd -alias "alias name_in_CA_cert "-keystore keyKeystore .jks_</block>
   <block id="78fbcacb199632d7e1e185a59b3d6969" category="list-text">在_agent.properties_檔案中設定CA憑證的別名。</block>
   <block id="56362f2790b041340e92aa3c79fb1cf8" category="paragraph">請根據SCC_IDATure_ALIAS金鑰更新此值。</block>
-  <block id="c3600e2dd0c2139061208ea301e0862e" category="list-text">將CA簽署金鑰配對設定為自訂外掛程式信任存放區之後、請重新啟動服務。</block>
-  <block id="a6d1b1f70aba7a076e87d9ee31c17824" category="section-title">針對SnapCenter 「不一樣的自訂外掛程式」設定憑證撤銷清單（CRL）</block>
   <block id="f754813b7455488818507c1642b87112" category="inline-link">如何更新SnapCenter 「驗證CA憑證」中的憑證撤銷清單檔案</block>
   <block id="24a2e65207c09cf282d93673b4d914e6" category="list-text">若要下載相關CA憑證的最新CRL檔案、請參閱<block ref="1355b024e4e4799b05a4da32dd5811b2" category="inline-link-rx"></block>。</block>
-  <block id="64b09f6e0509cd50f9f53e4d3b8816dc" category="list-text">「自訂外掛程式」會在預先設定的目錄中搜尋CRL檔案。SnapCenter</block>
-  <block id="078b96147129ddd471a2936a85c4743b" category="list-text">適用於「不適用自訂外掛程式」的CRL檔案預設目錄SnapCenter 為：_C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-In Creator\ etc\crl__。</block>
   <block id="30a5a3b4225672f77174a7923dcd20be" category="list-text">您可以根據金鑰CRP_path修改及更新_agent.properties_檔案中的預設目錄。</block>
   <block id="0915303fa7e4b0735941130c587f9dbe" category="list-text">您可以在此目錄中放置多個CRL檔案。</block>
   <block id="08a3d5b2eaf4018edc7c9931318d54df" category="paragraph">傳入的憑證會根據每個CRL進行驗證。</block>
@@ -724,40 +542,6 @@
   <block id="7c18f9fe3e82229bbf88d4133dde72bd" category="list-text">從*狀態*下拉式清單中、選取實體複本狀態。</block>
   <block id="33edcafc3b101b5da89793db6c9151a5" category="list-text">按一下「*套用*」以檢視成功完成的作業。</block>
   <block id="eeb79409fc232a879e36607073907346" category="list-text">選取複製工作、然後按一下*詳細資料*以檢視工作詳細資料。</block>
-  <block id="75358aefb0b5382303d826391e171b80" category="summary">使用原生樣式開發外掛程式。</block>
-  <block id="a53167d736047727cea2a026673cbf9c" category="doc">原生風格</block>
-  <block id="b61671fc72387581a19e7fa9168cddd9" category="paragraph">支援非Perl程式設計或指令碼語言來建立外掛程式。SnapCenter這稱為原生樣式程式設計、可以是指令碼或批次檔。</block>
-  <block id="9e1d95a32a87ab7a7016653485b2c883" category="paragraph">原生型外掛程式必須遵循下列特定慣例：</block>
-  <block id="9105be47cce360c85333e7099eb4c750" category="paragraph">外掛程式必須可執行</block>
-  <block id="fd0fc4f6fd59d6453ab6ed576feea21e" category="list-text">對於Unix系統、執行代理程式的使用者必須擁有外掛程式的執行權限</block>
-  <block id="cf193b9eadc1f00e9060d96e39debdf8" category="list-text">對於Windows系統、PowerShell外掛程式必須有.ps1字尾、其他Windows指令碼必須有.cmd或.bat字尾、而且必須由使用者執行</block>
-  <block id="c5e258fd4d379f7ee29c2741de49c400" category="list-text">外掛程式必須回應命令列引數、例如「-quiesce」、「-unquiesce」</block>
-  <block id="7f57e2af384da47f51bbde01334bdb02" category="list-text">外掛程式必須傳回結束代碼99、以防未實作任何作業或功能</block>
-  <block id="7f3d3a1e6ed5d85b534a958e89ca7425" category="list-text">外掛程式必須使用特定語法、才能將結果傳回伺服器</block>
-  <block id="375c26c661581c12f82c94065d73be46" category="section-title">一般外掛處理</block>
-  <block id="930c14b6cb69ee7acceefefc56797566" category="section-title">記錄錯誤訊息</block>
-  <block id="b17bab2e169e781f68778276e3c1ff06" category="paragraph">每項作業都能將訊息傳回伺服器、以顯示及儲存內容。訊息包含訊息層級、時間戳記及訊息文字。支援多行訊息。</block>
-  <block id="fb2ea703b13d059f6b7ea5da806021df" category="paragraph">格式：</block>
-  <block id="125c7bffe5ed1068b5bc10027f14f7b4" category="section-title">使用外掛程式存根</block>
-  <block id="ef7349bf7e64c5812dde44dfe1ea9ed5" category="paragraph">選購外掛程式必須實作外掛程式存根。SnapCenter以上是SnapCenter 根據特定工作流程、由伺服器呼叫的方法。</block>
-  <block id="5081968c60b2b22a3c3a6539101eab58" category="cell">外掛程式Stub</block>
-  <block id="27a8a8bedafd19538124ce3fdb309e4e" category="cell">選用/必要</block>
-  <block id="80f9d1ce28ebdbb90f6e6b35c5c789ad" category="paragraph">靜止</block>
-  <block id="ac67ede5a84eb5a1add7ff4440e9a485" category="paragraph">必要</block>
-  <block id="aa092af188e3be05b1a73b3b230ec735" category="paragraph">取消靜止</block>
-  <block id="6cf49b275e3f780958fd8f3a3d44acb5" category="paragraph">Clone預先複製</block>
-  <block id="d57c24f3fe52d16e7169b912dd647f0d" category="paragraph">選用</block>
-  <block id="f7eeb12c0ae87e1a428729d93636f705" category="paragraph">此存根負責執行預先複製工作。這是假設您使用內建SnapCenter 的還原複製介面、而且只會在執行「clone_vol或clone_LUN」動作時觸發。</block>
-  <block id="ee2aa59563c4e74a0c51b3581f20083e" category="paragraph">Clone複製POST</block>
-  <block id="ebb061953c0454b2c8ee7b0ac615ebcd" category="paragraph">選用</block>
-  <block id="7d08df91908649fc980c6e4561c46d42" category="paragraph">此存根負責執行複製後的工作。這假設您使用內建SnapCenter 的還原複製介面、而且只會在執行「clone_vol或clone_LUN」作業時觸發。</block>
-  <block id="a407f96cd552cb223b9e4711ef984ed7" category="paragraph">reet_pre</block>
-  <block id="aadbc30f9f18452d76bb86a523d4013d" category="paragraph">此存根負責執行預先還原工作。這假設您使用內建SnapCenter 的還原介面、而且只有在執行還原作業時才會觸發。</block>
-  <block id="bb2ac0b8da1f64a3498af147ba43fc10" category="paragraph">還原</block>
-  <block id="2403fd80c93c90b1c0cd4c37ae4a7227" category="paragraph">此存根負責執行所有還原動作。假設您未使用內建還原介面。在執行還原作業時觸發。</block>
-  <block id="ff7c0fcd6a31e735a61c001f75426961" category="section-title">範例</block>
-  <block id="bf448b76d11422f4a518bec20eb47937" category="section-title">Windows PowerShell</block>
-  <block id="39607e626df161fbad55aa17c0d5c725" category="paragraph">檢查指令碼是否可在您的系統上執行。如果無法執行指令碼、請為指令碼設定Set-ExecutionPolicy略過、然後重試該作業。</block>
   <block id="48f5a315d78b006c306e66d7b35fa6f4" category="summary">您必須新增要備份或複製的資源。視您的環境而定、資源可能是您要備份或複製的資料庫執行個體或集合。</block>
   <block id="04e793c2d8facdc933edd3335c890a34" category="list-text">您必須已完成安裝SnapCenter 完「支援服務器」、新增主機、建立儲存系統連線、以及新增認證等工作。</block>
   <block id="797f1e031962d70e46335925184febf4" category="list-text">您必須已將外掛程式上傳至SnapCenter 更新伺服器。</block>
@@ -906,58 +690,6 @@
   <block id="0930cbd774389ffda4b953dfada42944" category="list-text">恢復完整ONTAP 的實體磁碟區、LUN或檔案。</block>
   <block id="01416c60ab0c357d59811f108a67d5bd" category="paragraph">您應該手動提供個別的檔案路徑、因為瀏覽或索引功能並未內建於產品中。</block>
   <block id="17f0138477115892c87d600e535c1ed0" category="paragraph">不支援qtree或目錄還原、但只有在Qtree層級定義備份範圍時、才能複製及匯出Qtree。</block>
-  <block id="6edd2daf14dde352ee9ebb9ecbfb2fc4" category="summary">使用Perl開發外掛程式。</block>
-  <block id="3f272cbd9f3d98a46dc5be01d6d1c28f" category="doc">基於Perl的開發</block>
-  <block id="11190b0b920a84adaeb302d40a45ce80" category="paragraph">使用Perl開發外掛程式時、您必須遵循特定慣例。</block>
-  <block id="1a5265d73355a139c4fc8415f55a7a75" category="list-text">內容必須可讀取</block>
-  <block id="c355814a69aed5dc3c7043e4e911e1b7" category="list-text">必須實作必要的作業設定、靜止和取消靜止</block>
-  <block id="24217546d978eb20d25b4a8e23476c5e" category="list-text">必須使用特定語法將結果傳回代理程式</block>
-  <block id="7e8a9233aabfc19acbe7c8db2f6496b8" category="list-text">內容應儲存為&lt;plugin_name&gt;.PM檔案</block>
-  <block id="ffbd4f869a45a0eb33f8c5a8782dd924" category="paragraph">可用的作業包括</block>
-  <block id="702ca092b068045e4b2a46bde0a6b8ae" category="list-text">設定</block>
-  <block id="b7c58211de9baee1e71f10e4d6beb2de" category="list-text">Clone（克隆）_pre, clone（複製）_POST</block>
-  <block id="547c4772ea7f61438244cb3b06eb4c00" category="list-text">reet_pre,還原</block>
-  <block id="ecfb9f08f09baba9587e427bc8a820b1" category="list-text">清理</block>
-  <block id="23470f65b59c12a53de5d619a2341725" category="section-title">使用結果物件</block>
-  <block id="8a394f3ff75e356a00bc923e2d3a24bb" category="paragraph">每個自訂外掛程式作業都必須定義結果物件。此物件會將訊息、結束程式碼、stdout和stderr傳回主機代理程式。</block>
-  <block id="baab955e25314f23a1e534211ed3c5ef" category="paragraph">結果物件：</block>
-  <block id="d27ee45005dfdaf4349666580bb9be73" category="paragraph">傳回結果物件：</block>
-  <block id="f820ed664a4b8487fe2f25ae4bcb8cb9" category="section-title">維持資料一致性</block>
-  <block id="e972893c09832e7d698c9f7367e2dfae" category="paragraph">在執行相同工作流程時、可以保留作業之間的資料（清除除外）。這是使用金鑰值配對來完成。關鍵值資料配對會設定為結果物件的一部分、並保留在相同工作流程的後續作業中。</block>
-  <block id="6cf3334937a25069e083aa3194d19562" category="paragraph">下列程式碼範例會設定要保留的資料：</block>
-  <block id="79baca2ff9e61f20978b854c76a89ef4" category="paragraph">上述程式碼會設定兩個金鑰值配對、作為後續作業的輸入。可使用下列程式碼存取兩個金鑰值配對：</block>
-  <block id="1a433a5ec4d06561757ffdd94aec551b" category="paragraph">每項作業都能將訊息傳回主機代理程式、以顯示及儲存內容。訊息包含訊息層級、時間戳記及訊息文字。支援多行訊息。</block>
-  <block id="d24d2a5d893e94e9391c84ea41254a56" category="paragraph">使用msgobj使用collect方法擷取訊息。</block>
-  <block id="d865f2a752b423058b8d44eb74362907" category="paragraph">將訊息套用至結果物件：</block>
-  <block id="2507f897ba239023fb34486297f3f9e4" category="paragraph">自訂外掛程式必須公開外掛程式存根。這些是SnapCenter 根據工作流程、由伺服器呼叫的方法。</block>
-  <block id="84ad2bc533ff1fd26e84106c755353ec" category="paragraph">此存根會設定環境和組態物件。</block>
-  <block id="1d7698b4eaa4207bc437a7978e65fe43" category="paragraph">任何環境剖析或處理都應在此處完成。每次呼叫一個存根時、就會先呼叫setenv存根。只有Perl型外掛程式才需要。</block>
-  <block id="a8a94f37b262c1f49012caf671d0c45b" category="paragraph">此存根可用來取得應用程式版本。</block>
-  <block id="abfc3a65538a6ec86502b2b498b6b4a6" category="paragraph">探索</block>
-  <block id="e0a2f30f2f2475916ba71c6ad7a65096" category="paragraph">此存根可用來探索代理程式或主機上裝載的執行個體或資料庫等應用程式物件。</block>
-  <block id="f4cd43f678664ff68fad4028fb6a40c4" category="paragraph">外掛程式預期會以特定格式傳回探索到的應用程式物件、做為回應的一部分。只有在應用程式與SnapDrive 適用於Unix的解決方法整合時、才會使用此存根。</block>
-  <block id="34c6a8e1099863a52dbf55536f87b658" category="admonition">支援Linux檔案系統（Linux Flavors）。不支援AIX/Solaris（Unix Flavors）。</block>
-  <block id="8cf57b0816d44a1b975402b721da2725" category="paragraph">探索完成</block>
-  <block id="ce9d724a7186956382a6ad763f302ffc" category="admonition">支援Linux檔案系統（Linux Flavors）。不支援AIX和Solaris（Unix Flavors）。</block>
-  <block id="34db83eb305843e804a58cb6bd2946a1" category="paragraph">此存根負責執行預先複製工作。這假設您使用內建SnapCenter 的「還原伺服器複製」介面、並在執行複製作業時觸發。</block>
-  <block id="91ebd6a2af6dffd236dfae9ec811613c" category="paragraph">此存根負責執行複製後的工作。這假設您使用內建SnapCenter 的「還原伺服器複製」介面、而且只有在執行複製作業時才會觸發。</block>
-  <block id="04aa63c67e2110767959dc93267c3482" category="paragraph">此存根負責執行預先儲存的工作。這假設您使用內建SnapCenter 的還原伺服器介面、並在執行還原作業時觸發。</block>
-  <block id="b436cb5751d3f78735122bbbbc5fbcae" category="paragraph">此存根負責執行應用程式還原工作。這是假設您使用內建SnapCenter 的「還原伺服器」介面、而且只有在執行還原作業時才會觸發。</block>
-  <block id="627a1357fb9b62d60cc9248505d3e500" category="paragraph">此存根負責在備份、還原或複製作業之後執行清除作業。清除作業可以是在正常工作流程執行期間、或是在工作流程失敗時進行。您可以參照組態參數動作來推斷呼叫清除的工作流程名稱、此動作可以是備份、cloneVolAndLun或fileVolRestore。組態參數error_message會指出執行工作流程時是否有任何錯誤。如果已定義「錯誤」訊息而非「空」、則會在工作流程失敗執行期間呼叫清除。</block>
-  <block id="5e603fe8549380dcb8b43465eef93edd" category="paragraph">app_version</block>
-  <block id="e55578a72ee7d0d6a8dd80db1eadc9de" category="paragraph">這個虛設常式是SnapCenter 由效能分析用來取得外掛程式所管理的應用程式版本詳細資料。</block>
-  <block id="b931464c4daac142af5d9024d181308d" category="section-title">外掛程式套件資訊</block>
-  <block id="53bb9f86994f54a34977830fee345c0b" category="paragraph">每個外掛程式都必須具備下列資訊：</block>
-  <block id="456d0deba6a86c9585590550c797502d" category="section-title">營運</block>
-  <block id="4d57719f8e32047d1cae3a5ddb0172f7" category="paragraph">您可以對自訂外掛程式所支援的各種作業進行程式碼處理、例如：setenv、Version、Quiesce和unquiesce。</block>
-  <block id="4f8f149ca6bb5234a087b671085eeaf4" category="section-title">setenv作業</block>
-  <block id="3eee7d4df3f419567cb503c91871613e" category="paragraph">使用Perl建立的外掛程式需要設定作業。您可以設定ENV並輕鬆存取外掛程式參數。</block>
-  <block id="7b7666de772bf908b0fe869a75e4f8dd" category="section-title">版本作業</block>
-  <block id="0a6e6f5e5a5a02cca44ae7aade91bf90" category="paragraph">版本作業會傳回應用程式版本資訊。</block>
-  <block id="ecf480bc589751647a8416a2af91ddb1" category="section-title">靜止作業</block>
-  <block id="64443c9749b5ec77960e18487a9628cc" category="paragraph">靜止作業會對資源參數中所列的資源執行應用程式靜止作業。</block>
-  <block id="9061e762662985a3ffadd9af623ea433" category="section-title">取消靜止作業</block>
-  <block id="96ebe9d14f194daa158da373ecb5b686" category="paragraph">若要取消靜止應用程式、必須執行「取消靜止」作業。資源清單可在資源參數中找到。</block>
   <block id="e7fe1684e0925197f6b04ba8221741ad" category="summary">您必須先建立儲存虛擬機器（SVM）連線和認證、才能使用PowerShell Cmdlet執行資料保護作業。</block>
   <block id="7dae2f9bbc61653b98d6b0f906ccb0dc" category="doc">使用PowerShell Cmdlet建立儲存系統連線和認證</block>
   <block id="2d3dd877f482d5e495bedaecc930ab1e" category="list-text">您應該已經準備好PowerShell環境來執行PowerShell Cmdlet。</block>
@@ -993,78 +725,14 @@
   <block id="fe2df42a6411c7acd38e945324686a20" category="list-text">從「狀態」下拉式功能表中、選取安裝狀態。</block>
   <block id="400fae8e788b3721b9ac25fe01f04f50" category="list-text">按一下「 * 套用 * 」。</block>
   <block id="5b946f392253bfdf03165c0157bb4a9e" category="list-text">選取安裝工作、然後按一下*詳細資料*以檢視工作詳細資料。</block>
-  <block id="a761057277bd72c46a263ca5ddd62742" category="summary">在SnapCenter Linux主機上設定「CA憑證」以使用「支援整套自訂外掛程式」服務</block>
-  <block id="e585ba53f75038fd8dca93c08078885c" category="paragraph">您應該管理自訂外掛程式Keystore的密碼及其憑證、設定CA憑證、設定根或中繼憑證至自訂外掛程式信任存放區、以及設定CA簽署金鑰配對至自訂外掛程式信任存放區、並使用SnapCenter 「依賴自訂外掛程式」服務啟動已安裝的數位憑證。</block>
-  <block id="cf47054fd8ae4e335b6638a86a798a1a" category="paragraph">自訂外掛程式會使用位於_/opt /NetApp/snapcenter/sccc/etc_的「keystore .jks」檔案做為其信任存放區和金鑰存放區。</block>
   <block id="98da4d648a6b6a09c02dc4412d8c0e0f" category="paragraph">這是對應至金鑰「keystore _pass」的值。</block>
-  <block id="e7d98cce277602959c429147cc1b190e" category="list-text">瀏覽至包含自訂外掛程式Keystore的資料夾：/opp/NetApp/snapcenter/scc/等</block>
   <block id="4713a041a2807fdb6a09974cfc241836" category="paragraph">「keytool-list -v -keystore keystore .jks」</block>
-  <block id="8b671385ba9f578c2d4665cf8a08dacb" category="list-text">瀏覽至包含自訂外掛程式Keystore /opp/NetApp/snapcenter/scc/等的資料夾</block>
   <block id="3cd11cc425dd94ba261d4cd011a9f11e" category="paragraph">「keytool-importkeystore -srckeystore /root/snapcenter.ssl.test.netapp.com.pfx -srcstoretype.kcs12 -destkeystore keyKeystore .jks -deststoretype.jks」</block>
   <block id="97814763a021bc6959932c2ea2dbfb8b" category="list-text">如果CA憑證中的別名很長且包含空格或特殊字元（「*」、「」、」）、請將別名變更為簡單名稱：</block>
   <block id="35f7e8cf7bad794e99c08792680394bd" category="list-text">在agent.properties檔案中設定CA憑證的別名。</block>
-  <block id="26e84c8fe3deb08970e1f17fbc4649f5" category="list-text">適用於「SetcCustom Plug-in」的CRL檔案預設目錄SnapCenter 為「opt /NetApp/snapcenter/scc / etc/crl」。</block>
   <block id="4f1ac502e9d4dc79e3c307cd196d50fb" category="list-text">您可以根據金鑰CRP_path修改及更新agent.properties檔案中的預設目錄。</block>
   <block id="1b782c06b199c89589ed8bcf1a6ca9ab" category="paragraph">您可以在此目錄中放置多個CRL檔案。傳入的憑證會根據每個CRL進行驗證。</block>
-  <block id="8c1af9a95c5ff9086ee5697a78397ae5" category="summary">利用此伺服器SnapCenter 、您可以將應用程式部署及管理為SnapCenter 支援的外掛程式。</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="doc">總覽</block>
-  <block id="72631a8144cabf57a431e307c720be4b" category="paragraph">利用此伺服器SnapCenter 、您可以將應用程式部署及管理為SnapCenter 支援的外掛程式。您可將所選的應用程式插入SnapCenter 到《資料保護與管理功能》的《伺服器》中。</block>
-  <block id="3e4caa3106c658c78cb8f07a8040c65b" category="paragraph">使用支援各種程式設計語言、開發自訂外掛程式。SnapCenter您可以使用Perl、Java、批次或其他指令碼語言來開發自訂外掛程式。</block>
-  <block id="9849d87f4a93f5d4014f828811411be7" category="paragraph">若要在SnapCenter Suse中使用自訂外掛程式、您必須執行下列工作：</block>
-  <block id="b8b5e387feaa3019653b29082e61092a" category="list-text">依照本指南的指示、為應用程式建立外掛程式</block>
-  <block id="fb254bad9756ac882a9a0ba12cc7f1a3" category="list-text">建立說明檔案</block>
-  <block id="79b97ed047d15d26a3a56e559a6ee5c1" category="list-text">匯出自訂外掛程式、將其安裝在SnapCenter 支援的主機上</block>
-  <block id="eb433b0d697c578418f0cd3d4afc4c2b" category="list-text">將外掛程式的壓縮檔上傳至SnapCenter 32個伺服器</block>
-  <block id="e496e0539b9dd2e96430fc87371ed61a" category="section-title">所有API呼叫的一般外掛處理</block>
-  <block id="8f666ea75217f50d6b8e5b63ca8751e2" category="paragraph">對於每個API呼叫、請使用下列資訊：</block>
-  <block id="ae72a628ad181d8f535ebd38c3104e8a" category="list-text">外掛程式參數</block>
-  <block id="25fa01d9ae5853b4c852556532e7eb4b" category="list-text">結束代碼</block>
-  <block id="3630b6a87abf72b5c44dff83a2dea610" category="list-text">記錄錯誤訊息</block>
-  <block id="78e3ac100920c9872e08c76930a7e91d" category="list-text">資料一致性</block>
-  <block id="bfe440282107a24a7f07fb7cde8d910e" category="section-title">使用外掛程式參數</block>
-  <block id="35db931c36efc6fd97acd3861031f51b" category="paragraph">每次API呼叫時、都會將一組參數傳送至外掛程式。下表列出參數的特定資訊。</block>
-  <block id="e58a1b00942e66d8b4abc960da7877ab" category="paragraph">行動</block>
-  <block id="c34381ed69c7f02b4dfb02bf8b48cbd2" category="paragraph">決定工作流程名稱。例如、探索、備份、檔案VolRestore或cloneVolAndLun</block>
-  <block id="85132af6b5f14319cb4c91ec6ddffe43" category="paragraph">資源</block>
-  <block id="33d565acf954a6f64930fc8a33b8887e" category="paragraph">列出要保護的資源。資源會以UID和類型來識別。清單會以下列格式呈現給外掛程式：</block>
-  <block id="5bcb0da9a36a1c572d065a30f8bf053e" category="paragraph">「&lt;UID&gt;、&lt;type &gt;、&lt;UID&gt;、&lt;type &gt;」。例如「Instance1、Instance;instance2\DB1、Database」</block>
-  <block id="73ac956100d167ecf25451e02d702abf" category="paragraph">app_name</block>
-  <block id="d98b83ea9db8d1b781f919f903e371d2" category="paragraph">決定要使用的外掛程式。例如DB2、MySQL。支援所列應用程式的內建支援。SnapCenter此參數區分大小寫。</block>
-  <block id="bf0c17384b9ca428972bdedc4d300472" category="paragraph">app_ignore錯誤</block>
-  <block id="58ddfd237075f98aaf9a2d3ce090ba23" category="paragraph">（Y或N）SnapCenter 這會導致出現應用程式錯誤時、不退出或不退出。當您正在備份多個資料庫、但不希望單一故障停止備份作業時、此功能非常實用。</block>
-  <block id="a6c02d2ac0e23234c7d73d00796cf9ca" category="paragraph">&lt;resource_name&gt;_APP_instance_username</block>
-  <block id="571d40fbca77d57e458825ee9fec7d81" category="paragraph">設定資源的認證資料。SnapCenter</block>
-  <block id="ac12b35e15b7bf0fe21aedd97341ea12" category="paragraph">&lt;resource_name&gt;_APP_instance_password</block>
-  <block id="69fb88b801201290c49c951f3495b0fc" category="paragraph">&lt;resource_name&gt;_&lt;custom_Param&gt;</block>
-  <block id="78b0bbec6424e6db00f54a699cf409f7" category="paragraph">每個資源層級的自訂金鑰值都可用於以「&lt;resource_name&gt;_」開頭的外掛程式。例如，如果名稱為「MySQLDB」之資源的自訂金鑰為「master_slave」，則該金鑰會以MySQLDB_master_slave的形式提供</block>
-  <block id="9a3e4e66558b9e88155f13dabd069d1b" category="section-title">使用結束代碼</block>
-  <block id="47133f388993d841298613bc6cb0c588" category="paragraph">外掛程式會透過結束代碼、將作業狀態傳回主機。每個程式碼都有特定意義、而且外掛程式會使用正確的結束程式碼來表示相同的意義。</block>
-  <block id="027d514221d3a080cc31a97eca829e35" category="paragraph">下表說明錯誤代碼及其意義。</block>
-  <block id="4e1209f3613deab3181eef2bb07b5abf" category="cell">結束代碼</block>
-  <block id="3cdc0e6cbe36c89d83cc097e8eb9ae0e" category="paragraph">成功營運。</block>
-  <block id="ac627ab1ccbdb62ec96e702f07f6425b" category="paragraph">99</block>
-  <block id="531ad89069f8f8f15f4fbe6b5106144d" category="paragraph">不支援或實作要求的作業。</block>
-  <block id="f899139df5e1059396431415e770c6dd" category="paragraph">100</block>
-  <block id="a02c5c002d95db500c8de596769f3b32" category="paragraph">失敗的作業、跳過取消靜止、然後結束。依預設、取消靜止。</block>
-  <block id="38b3eff8baf56627478ec76a704e9b52" category="paragraph">101.</block>
-  <block id="5fd968dddc0f547ae55ad643501730f9" category="paragraph">作業失敗、請繼續備份作業。</block>
-  <block id="795f3202b17cb6bc3d4b771d8c6c9eaf" category="paragraph">其他</block>
-  <block id="cf6768b0593033ad3660ef5d8ec95ab1" category="paragraph">失敗的作業、執行Unquiesce、然後結束。</block>
-  <block id="6c09649d97d8d1b80bdcd8b29909efa0" category="paragraph">錯誤訊息會從外掛程式傳遞至SnapCenter 該伺服器。訊息包括訊息、記錄層級和時間戳記。</block>
-  <block id="b6586b3851e09c9af6725f25ffaefa5f" category="paragraph">下表列出層級及其用途。</block>
-  <block id="551b723eafd6a31d444fcb2f5920fbd3" category="paragraph">資訊</block>
-  <block id="6905d11030694877d5bd1b6fc5418232" category="paragraph">資訊訊息</block>
-  <block id="32bd8a1db2275458673903bdb84cb277" category="paragraph">警告</block>
-  <block id="9b3ec49fce0de74c3bf44404f9ff5fed" category="paragraph">警告訊息</block>
-  <block id="bb1ca97ec761fc37101737ba0aa2e7c5" category="paragraph">錯誤</block>
-  <block id="c5bbc13af6039ac4cf215911e482b5d4" category="paragraph">錯誤訊息</block>
-  <block id="dc30ec20708ef7b0f641ef78b7880a15" category="paragraph">偵錯</block>
-  <block id="d42e0a7293390bdb767f2ef26688c1dd" category="paragraph">偵錯訊息</block>
-  <block id="2d3e4144aa384b18849ab9a8abad74d6" category="paragraph">追蹤</block>
-  <block id="55c8a5aea70abd0da5bad464b4622442" category="paragraph">追蹤訊息</block>
-  <block id="1b767ffb7a06925c6ffafd5f616d41d9" category="section-title">維持資料一致性</block>
-  <block id="e7ad26b22ddd01feb4792581738bc23a" category="paragraph">自訂外掛程式會在執行相同工作流程的作業之間保留資料。例如、外掛程式可以在靜止結束時儲存資料、以便在靜止作業期間使用。</block>
-  <block id="4cf477198b533ad0884bbb1836790433" category="paragraph">要保留的資料會透過外掛程式設定為結果物件的一部分。它採用特定格式、並在每種外掛程式開發方式下詳細說明。</block>
   <block id="2a14698c3a18b1800683bb1310ae1313" category="summary">您可以產生憑證簽署要求（CSR）並匯入憑證。</block>
   <block id="5c4de78a2b621074bf68ab1c644af297" category="doc">產生CA認證CSR檔案</block>
   <block id="6a5ce9ba522162f4bb58d769f8ff4c45" category="paragraph">您可以產生「憑證簽署要求」（CSR）、然後匯入可以使用產生的CSR從「憑證授權單位」（CA）取得的憑證。憑證將會有與其相關的私密金鑰。</block>
@@ -1119,10 +787,6 @@
   <block id="5dc1b0641298a4446796a3eaf96c13d9" category="paragraph">安裝路徑</block>
   <block id="379d6944e6fc810a2d3e6719a4897b18" category="list-text">針對適用於Windows的「更新程式套件」、預設路徑為C:\Program Files\NetApp\SnapCenter。SnapCenter</block>
   <block id="d71af843d2746ce96eb5d7b9a854feec" category="paragraph">您也可以自訂路徑。</block>
-  <block id="dbd5f1a081ee2b60f9256f0d615c8572" category="list-text">針對「不需要自訂的外掛程式」SnapCenter ：</block>
-  <block id="908b8e036ea9ce39ce7b1ef72289d440" category="paragraph">壓縮資料夾包含自訂外掛程式碼和描述元.xml檔案。</block>
-  <block id="14c63a85dc0d2eb17d6a4de481e630f9" category="paragraph">壓縮自訂外掛程式資料夾中的描述元.xml檔案會在上傳套件之前驗證。</block>
-  <block id="22b9c22ece0544103d4ef5fde3f3591c" category="paragraph">會列出上傳至SnapCenter Sfor the Sfor the Sfor the Server的自訂外掛程式。</block>
   <block id="8c52a2170baa38b939bd1890216f50b0" category="paragraph">跳過預先安裝檢查</block>
   <block id="66fbc10672da3dc1e4451a1850b5e5b1" category="paragraph">如果您已手動安裝外掛程式、但不想驗證主機是否符合安裝外掛程式的需求、請選取此核取方塊。</block>
   <block id="193c67ad9a593e499fcbd4795d42fe04" category="paragraph">使用群組託管服務帳戶（GMSA）來執行外掛程式服務</block>
@@ -2953,8 +2617,6 @@
   <block id="31287d49a8a96de2e8d195c76a865396" category="paragraph">Linux或AIX外掛程式主機</block>
   <block id="2e41c2081a8838f41650e76a978d4057" category="paragraph">Oracle資料庫的支援外掛程式SnapCenter</block>
   <block id="7d75ac58eb57fae611a633f5e57d62d0" category="paragraph">Oracle的外掛程式會使用預設的JDBC連接埠來連線至Oracle資料庫。</block>
-  <block id="8274b92467b904471dd368868a40cf7c" category="paragraph">這是僅用於自訂外掛程式主機的內部連接埠、不需要防火牆例外。</block>
-  <block id="640e1e1057328dc7a71ff3efe908fb8c" category="paragraph">透過連接埠8145、即可在伺服SnapCenter 器與自訂外掛程式之間進行通訊。</block>
   <block id="48552dce4d9810446c70f66f21f08120" category="paragraph">叢集或SVM通訊連接埠ONTAP</block>
   <block id="a26bff28c23606c7396b4619af8af1bd" category="paragraph">此連接埠由SAL（Storage Abstraction Layer、Storage Abstraction Layer）使用、用於執行SnapCenter 支援服務器和SVM的主機之間的通訊。此連接埠目前也用於SnapCenter Windows外掛程式主機上的SAL、用於SnapCenter 在支援該外掛程式的主機和SVM之間進行通訊。</block>
   <block id="5afe34fece774db451a111901841c2f9" category="paragraph">對於多租戶資料庫容器（MDC）單一租戶、連接埠編號以13結尾；對於非MDC、連接埠編號以15結尾。</block>
@@ -4740,7 +4402,6 @@
   <block id="535a045ab09a3efb03cb36f59e57279c" category="paragraph">支援REST API的外掛程式包括：</block>
   <block id="989300043d75df1f584271de0f5b22cb" category="list-text">Microsoft SQL Server的外掛程式</block>
   <block id="ec068fb3d4dea4c520ab13a179930564" category="list-text">SAP HANA資料庫的外掛程式</block>
-  <block id="98c5825b9b497a5e2a61777325ed802f" category="list-text">自訂外掛程式</block>
   <block id="85101367016c9d3b3a2358db405464f9" category="list-text">Oracle資料庫的外掛程式</block>
   <block id="5f5192bbcb78a1952f0c1de27add636d" category="summary">存取API可在您開始使用API之前、先提供一些觀點、讓您在即時設定中使用更複雜的工作流程程序。</block>
   <block id="6f800f16fa2f6cc79e50877afd6a63ea" category="doc">開始使用REST API</block>
@@ -4760,7 +4421,6 @@
   <block id="c808fe33c523c6c0014718e7feeac182" category="list-text">如果您要備份與二線儲存設備具有SnapMirror關係的資源、則指派給儲存設備使用者的角色應包含「全部快照鏡射」權限。不過、如果您使用「vsadmin」角色、則不需要「全部快照鏡像」權限。</block>
   <block id="bf27fad69812da8f1ea6b50d511517e0" category="list-text">如果某個資源群組有來自不同主機的多個資料庫、某些主機上的備份作業可能會因為網路問題而延遲啟動。您應該使用Set-SmConfigSettings PowerShell Cmdlet來設定網路設定中的MaxRetryForUninitalizedHoes值</block>
   <block id="cd56c631927fec23fdd13a60faf10217" category="admonition">備份檔案系統時SnapCenter 、不備份掛載於要備份之檔案系統的Volume掛載點（VMP）上的LUN。</block>
-  <block id="22f16e8b28f69b96450fdb879b633af1" category="admonition">如果您使用的是Windows檔案系統內容、請勿備份資料庫檔案。這樣做會造成備份不一致、而且在還原時可能會遺失資料。若要保護資料庫檔案、您必須針對SnapCenter 資料庫使用適當的支援程式（例如SnapCenter 、Microsoft SQL Server的支援程式、SnapCenter Microsoft Exchange Server的支援程式、或資料庫檔案的自訂外掛程式）。</block>
   <block id="757701cec0ed310dbf31948edd1073df" category="admonition">針對Oracle資料庫的支援功能外掛程式、如果您有一個具有兩個資料庫的聯盟資源群組、而其中一個資料庫在非NetApp儲存設備上有資料檔案、則即使另一個資料庫位於NetApp儲存設備上、備份作業仍會中止。SnapCenter</block>
   <block id="54f5c477b691c07c69aae1e40705b234" category="list-text">如果您在VMDK上備份應用程式資料、SnapCenter 而針對VMware vSphere的VMware vSphere的Java堆疊大小不夠大、則備份可能會失敗。若要增加Java堆大小、請找出指令碼檔案「/opt / netapp/init_scripts/scvservice」。在該指令碼中、「do_start方法」命令會啟動SnapCenter VMware插件服務。將該命令更新為：「java -jar -Xmx8192M -Xms4096M」。</block>
   <block id="bf9022cd459d82bda5c1defee5acb8ac" category="summary">當SnapCenter 您在環境中安裝適用於Microsoft Windows的還原外掛程式時、SnapCenter 可以使用還原來備份Windows檔案系統。您可以備份單一檔案系統或包含多個檔案系統的資源群組。您可以根據需求或根據定義的保護排程進行備份。</block>
@@ -4799,7 +4459,6 @@
   <block id="a561a8020c6cf9c0bfcf2c0057ac1550" category="list-text">Microsoft Exchange Server</block>
   <block id="78898e52fcbdc5337204a384f2456d4f" category="list-text">Microsoft SQL Server</block>
   <block id="86083f3ea21c2385b4f013aae3c57858" category="list-text">SAP HANA</block>
-  <block id="9633d377e08af5a450ec353928e1d24b" category="list-text">自訂外掛程式</block>
   <block id="f66a5076dc4b38e6e6f6d1850002d8e7" category="list-text">在叢集上安裝外掛程式</block>
   <block id="d5567ab77d3010f86325ff6576826879" category="paragraph">如果您在叢集（WSFC、Oracle RAC或Exchange DAG）上安裝外掛程式、這些外掛程式會安裝在叢集的所有節點上。</block>
   <block id="6b138857d259637a1bf0819ec12805f4" category="list-text">E系列儲存設備</block>
@@ -4922,7 +4581,6 @@
   <block id="b651b2481c776bf3bf9ea345a8be10ad" category="summary">當您準備備備備份或複製資源時、可以檢視一線與二線儲存設備上所有備份與複本的圖形化呈現。在「拓撲」頁面中、您可以看到可供所選資源或資源群組使用的所有備份和複本。您可以檢視這些備份與複製的詳細資料、然後選取這些資料以執行資料保護作業。</block>
   <block id="1b756b9da2644838105069f2ae8ca2a5" category="doc">在「拓撲」頁面中檢視相關的備份與複本</block>
   <block id="a5034055581c83d2fec0b4b410e664f4" category="paragraph">「摘要卡」區段會顯示備份與複本的總數。僅限Oracle資料庫、Summary Card區段也會顯示記錄備份的總數。</block>
-  <block id="80c82fe3ce8c148b5edc714385f5f5b1" category="paragraph">如果您使用SnapCenter 的是「還原自訂外掛程式」、則無法重新命名主要儲存系統上的備份。</block>
   <block id="890d45c40e49f2dabb2c7635de46d483" category="inline-image-macro">主儲存設備中的備份與複製拓撲檢視。</block>
   <block id="1a8413b6d25d17625bc85e11bb87aaa7" category="paragraph"><block ref="1a8413b6d25d17625bc85e11bb87aaa7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2b286ead8eb2ff2974da65dbfdfc72f0" category="summary">在安裝Windows外掛程式之前、您應該瞭解某些安裝需求。</block>
@@ -5049,7 +4707,6 @@
   <block id="6fda2f87af8e800dc50fc786018c1415" category="cell">適用於Microsoft Windows</block>
   <block id="f97144a19325ae2c28181b14dbfc9c09" category="cell">適用於Oracle資料庫</block>
   <block id="9a25c2912d576f11de7680d7fd2769c7" category="cell">適用於SAP HANA資料庫</block>
-  <block id="f8bad27d582beaf32e0a7dd92962e679" category="cell">適用於自訂外掛程式</block>
   <block id="19a9d9cc3f765deef85b382b8bac0c2c" category="paragraph">新增主機並安裝外掛程式套件</block>
   <block id="ec9599aa901a863223904d72d168af71" category="paragraph">更新主機的ESXi資訊</block>
   <block id="320cffd49992ddc2ff397b2f5ed9ff37" category="paragraph">暫停排程並將主機置於維護模式</block>
@@ -6222,7 +5879,6 @@
   <block id="d2d37741a3c204436d78ca699e0e7154" category="paragraph">適用於UNIX的外掛程式或適用於Windows的外掛程式</block>
   <block id="5d5cde1005f814f00d44032094a9a04f" category="paragraph">HDBSQL用戶端主機</block>
   <block id="4abb41aae1dfe9c81afb3c3672df559c" category="paragraph">Linux或Windows</block>
-  <block id="0c6a45824d8aa208ef88a943b710cb80" category="paragraph">自訂應用程式主機</block>
   <block id="a364132418180f0b14b5eb7db8b87808" category="admonition">VMware vSphere的支援VMware vSphere的VMware vCenter外掛程式可支援虛擬機器（VM）、資料存放區和虛擬機器磁碟（VMDK）的損毀一致與VM一致的備份與還原作業、並支援以應用程式為特定的外掛程式、以保護虛擬化資料庫和檔案系統的應用程式一致備份與還原作業。SnapCenter SnapCenter</block>
   <block id="50e95eafa6faf8d2ee3f01921820b42b" category="list-text">在SnapCenter 您的支援環境中、自動化Microsoft SQL Server資料庫的應用程式感知備份、還原及複製作業。</block>
   <block id="e40237d2b53363bc373f8134071d1be1" category="list-text">當您部署SnapCenter VMware vSphere的VMware vSphere支援Microsoft SQL Server資料庫、並使用SnapCenter VMware vCenter登錄外掛程式時、可支援VMDK上的Microsoft SQL Server資料庫和原始裝置對應（RDM）LUN</block>
@@ -6323,7 +5979,6 @@
   <block id="66bdd10c104f52b4f8519b652bc8e084" category="sidebar">NetApp知識庫SnapCenter</block>
   <block id="76eb854ee139a484003d75645a214f2b" category="sidebar">解除安裝SnapCenter 伺服器和外掛程式</block>
   <block id="60bea4969590084ae9e74b765b209fad" category="sidebar">解除安裝SnapCenter 這個外掛程式套件</block>
-  <block id="eada736bfcfe3be151f853e6f08f6d26" category="sidebar">原生風格</block>
   <block id="e94a41320f7b470ab4c94c28575be94e" category="sidebar">設定CA憑證</block>
   <block id="0e1b3005c7d7fef8012117ae579df248" category="sidebar">備份工作流程</block>
   <block id="f2098dd68244eba28833e305c4c720a3" category="sidebar">取消備份作業</block>
@@ -6506,7 +6161,6 @@
   <block id="d4c6b8eab0d95c64db4fab0b39d86dca" category="list-text">還原SQL資料庫備份</block>
   <block id="7b55eb37603aaec85de642c9761138e1" category="list-text">還原Oracle資料庫備份</block>
   <block id="b2a27804c27c83e05c725b342e1b42b3" category="list-text">還原自訂的應用程式備份</block>
-  <block id="1f99ce4c7ce86789f3d81cc35f531f17" category="list-text">建立自訂外掛程式資源</block>
   <block id="b867b97647a809df3c6e5231f0bef598" category="list-text">建立SAP HANA資源</block>
   <block id="cbc56a4c2ad51ccea1242d4d4d348ae1" category="list-text">使用自訂應用程式的外掛程式來保護自訂資源</block>
   <block id="2b42cb8c0a099907ef8a3de2f16f80a4" category="list-text">使用Microsoft SQL Server的外掛程式來保護Microsoft SQL Server資源</block>
@@ -6661,15 +6315,6 @@
   <block id="2dd7c4421097b3d796ff9bf355ebaa6e" category="admonition">如果命令清單中不存在這些命令、則作業將會失敗。</block>
   <block id="e61e5d73b3b042b28dcdf96a5c438a4e" category="list-text">對於preclone或POST clone命令、您應該從下列路徑檢查外掛程式主機上可用的命令清單中是否存在命令：</block>
   <block id="3c8f1b708d97734299340f633acf1b28" category="paragraph">如果您使用iSCSI、iSCSI服務應該會執行。</block>
-  <block id="9415aa73bf3f3a2a034e0e07c5d506cf" category="section-title">SHA512雜湊</block>
-  <block id="c0d35e9a1cb18fc944b55e22f446f2b2" category="list-text">對於Linux主機、SHA512雜湊位於_/var/opt/snapcenter/scc/cust_plugin_checksum _list.txt_</block>
-  <block id="d0f01849d252d5215ffa795d5e7a4791" category="list-text">對於Windows主機、SHA512雜湊位於_C:\Program Files\NetApp\SnapCenter Plug-in Creator\etc\custom_plugin_checksum _list.txt_</block>
-  <block id="f362104a88b92368af76c609011528ab" category="paragraph">對於自訂安裝路徑、SHA512雜湊位於_&lt;CUSTOM路徑&gt;\NetApp\SnapCenter\Snapcenter Plug-In Creator\etc\custom_plugin_checksum list.txt_</block>
-  <block id="f550adf3d7f52f3afc0e6e45b71e2055" category="list-text">已產生外掛程式壓縮檔的SHA512雜湊。</block>
-  <block id="9e4265226dcf4f703d217f82220d17ea" category="paragraph">您可以使用像這樣的線上工具<block ref="4aa52332da75b2ec4912a713935bc342" category="inline-link-rx"></block>。</block>
-  <block id="94e0e32bde2e2ee99521f81221ceee7a" category="list-text">將產生的SHA512雜湊新增至custom_plugin_checksum清單檔案的新行。</block>
-  <block id="17bc29e04b5123febcd35bdbc90142b4" category="paragraph">註解以#符號開頭、以識別雜湊所屬的外掛程式。</block>
-  <block id="7867996900fccc9a8502aad8682cccfe" category="paragraph">以下是Checksum檔案中SHA512雜湊項目的範例：</block>
   <block id="49e317595cf8eea53ae1d965b4173dbc" category="list-text">您應該是指派給角色的使用者、該角色具有外掛程式安裝和解除安裝權限、例如SnapCenter 「支援管理員」角色。</block>
   <block id="fb6661786b7d5b1cfb5df7ffe94a3009" category="paragraph">第三方備份排程與SnapCenter 不支援的備份排程重疊時、將不受支援。您不應修改排程、並重新命名在Windows排程器或SQL Server代理程式中建立的備份工作。</block>
   <block id="5891deda92209d1d45144775b7d5c20d" category="admonition">您不應重新命名在Windows排程器或SQL Server代理程式中建立的備份工作。</block>
@@ -6960,7 +6605,6 @@
   <block id="f389a38ece1c258dbc71da8826870236" category="paragraph">其中 policy_name 是您選取的原則名稱。</block>
   <block id="7444cb400c788a3d3aad71fb264fbbee" category="list-text">檢閱摘要、然後選取 * 完成 * 。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">開始之前</block>
-  <block id="be2d786365162f9949969e2f176ef13a" category="inline-link-macro">已為您的應用程式建立自訂外掛程式</block>
   <block id="b828f6db4e08909e879dfbf229208eff" category="list-text">在「資源」頁面中、選取 * 新增資源 * 。</block>
   <block id="20fc40c342831a6dee50cd66efb74566" category="list-text">在「提供儲存空間」頁面中、選取儲存系統、然後選擇一或多個磁碟區、 LUN 和 qtree 、然後選取 * 儲存 * 。</block>
   <block id="1e5544d55f6c9334a30e6a4bef8c3c4a" category="inline-image-macro">加號圖示</block>
@@ -7305,8 +6949,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="d40040f6fe85caa89878dd7a41e7b55b" category="list-text">從「 * 通知 * 」頁面的 * 電子郵件偏好設定 * 下拉式清單中、選取您要傳送電子郵件的情境。</block>
   <block id="6e495826070e65e2f969743716fcc30b" category="list-text">在左側導覽窗格中、選取*主機*。</block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">選取*「Add*」。</block>
-  <block id="7b8c46b7e7cbdb1b301a0eea6904e6e8" category="list-text">在「自訂外掛程式」區段中、選取 * 瀏覽 * 、然後選取壓縮的自訂外掛程式資料夾。</block>
-  <block id="3268d25ce0e47e87022d19706bd20155" category="list-text">選取 * 上傳 * 。</block>
   <block id="b623e6ded9a852f4e7cd9765578d0c08" category="list-text">選擇*提交*。</block>
   <block id="8fa2fcad4f9983d73cc8cf50dc7850bb" category="list-text">如果主機類型為 Linux 、請驗證指紋、然後選取 * 確認並提交 * 。</block>
   <block id="c2726cace6e0f9e9086903f875043343" category="list-text">在「設定」頁面中、選取 * 認證 * 。</block>
@@ -7389,8 +7031,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="1343db4284f9e4d2640bb43d96c2b68b" category="list-text">在「設定所選原則的排程」區段中、按一下*<block ref="b45fdb91c5c7d010bf6dc162ec4fd533" category="inline-image-macro-rx" type="image"></block>*在您要為其設定排程的原則的「設定排程」欄中。</block>
   <block id="82df92bf63205eb90f0513c131abc2dd" category="list-text">如果您要刪除複本、請從表格中選取複本、然後按一下 <block ref="f790bf9188cee374d2bb1f3790c6a393" category="inline-image-macro-rx" type="image"></block> 刪除複本。</block>
   <block id="8d0f784440712961abfe38c36944b52a" category="paragraph-title">顯示主要儲存設備上備份和複本的範例</block>
-  <block id="1737705dbef82bb547572b98803f1837" category="list-text">對於 SnapCenter Plug-in 套件 for Linux 、預設路徑為<block ref="ad6569b575c0a3830082f4336038186a" prefix=" " category="inline-code"></block>。</block>
-  <block id="f32c4686d8ce92964750c998b8d606a6" category="paragraph">若為儲存外掛程式、請瀏覽至<block ref="b674835168d7ff13979b400c993ce08f" prefix=" " category="inline-code"></block> 然後選擇<block ref="1ae0ec02713418737a2965bdbb97e689" prefix=" " category="inline-code"></block> 資料夾。</block>
   <block id="31b463f293ed77bac56a34d46826de49" category="paragraph">安裝特定的記錄檔位於<block ref="beb5ec5a83e557b91eccba92e6ac85e2" prefix=" " category="inline-code"></block> 記錄。</block>
   <block id="24bd2a51bea1471986ab3ac20960699e" category="summary">您必須先建立儲存系統連線和認證、才能使用 PowerShell Cmdlet 執行資料保護作業。</block>
   <block id="ee5dc0e4ad2a255f15e5b8206b5f42e1" category="inline-image-macro">應用程式設定頁面</block>
@@ -7478,7 +7118,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="a5ca52319667a9026b1bc2e22f2beb97" category="doc">複製 Unix 檔案系統備份</block>
   <block id="e9c28603a5457f192761e9b2f99dbd6f" category="paragraph">您可以使用 SnapCenter 來複製使用檔案系統備份的 Unix 檔案系統。</block>
   <block id="c047b1e4cdd418f78d9226b059701f24" category="list-text">您可以將 _agent.properties_ 檔案中的值 _SKI_Fst_update_ 設定為 *true* 、該檔案位於： /opt/NetApp/snapcenter/SCC/etc_ 。</block>
-  <block id="89085a9fdaa76a7c7b97a098e68225e5" category="list-text">您可以在位於下列位置的 _agent.properties_ 檔案中、將 _use_custom_clone_volume 名稱和交會路徑的值設為 * true* 、以獲得靜態複製磁碟區名稱和交會路徑：更新檔案之後、您應該執行下列命令、重新啟動 SnapCenter 以取得自訂外掛程式服務：<block ref="f4da0aeb9d91444725fc84b066ea329b" prefix=" " category="inline-code"></block>。</block>
   <block id="acd9911e42880fa2170c4c68b4e0559a" category="paragraph">範例：如果沒有此內容、複製磁碟區名稱和交會路徑將類似於 &lt;Source_volume_name&gt; 複製 &lt;Timestamp&gt; 、但現在則是 &lt;Source_volume_name&gt; 複製 &lt;Clone_Name&gt;</block>
   <block id="b3881d2c47f92a4fc24d4bd513af4d3a" category="paragraph">這會保持名稱不變、以便在不想透過 SnapCenter 更新 fstab 時、手動保持 Fstab 檔案的更新。</block>
   <block id="6fefea88d23f9f3cedd5fd8b05ce984f" category="list-text">在「資源」頁面中、從 * 檢視 * 清單中選取 * 路徑 * 或 * 資源群組 * 。</block>
@@ -7887,11 +7526,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="af3d150952bdf0ab3693bd9da33bd032" category="list-text">建立 Oracle 資料庫與應用程式磁碟區的備份。</block>
   <block id="39240126e5a114efbf72c14cc21a7094" category="list-text">建立資料庫的複本、以及直到時間點的應用程式磁碟區。</block>
   <block id="c3f918653f9d61e3b2472e16235d9f90" category="list-text">檢視備份和複製作業的報告。</block>
-  <block id="726d39dceafdcf2a244cb0bcdb262380" category="paragraph">此存根負責執行靜止。它放置了
-應用程式進入我們可以建立 Snapshot 的狀態。這在儲存 Snapshot 作業之前稱為。</block>
-  <block id="2b8b2c493b09b013588a02ac57204e14" category="paragraph">此存根負責執行取消靜止。IT 所在位置
-應用程式處於正常狀態。這是在儲存後呼叫的
-Snapshot 作業。</block>
   <block id="e337fc3b0c344eaa85525958668d8591" category="admonition">如果資源包含磁碟區或 qtree 、則會刪除選定要在這類磁碟區或 qtree 上還原的 Snapshot 之後所拍攝的 Snapshot 、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。</block>
   <block id="ad8d3fc8faebdc68585dd1240b9fc90c" category="paragraph">選取此核取方塊、然後輸入您要用於 Snapshot 名稱的自訂名稱格式。</block>
   <block id="f73a752fef5027614ec32183c0ee993b" category="paragraph">例如、_customtext資源group原則主機名稱或資源group主機名稱_。根據預設、 Snapshot 名稱會附加時間戳記。</block>
@@ -7932,14 +7566,9 @@ Snapshot 作業。</block>
   <block id="4cdad3fc327406a192cf8fddec7132e3" category="paragraph">SnapCenter 使用 Windows 外掛程式將檔案系統置於一致的狀態、然後製作 Snapshot</block>
   <block id="d03489d8edb47ae534fd09e8de3121c2" category="paragraph">可輸入命令以創建 Snapshot</block>
   <block id="60c069fc0d03d8cbfeabe67ca031a729" category="paragraph">選取 * 其他 * 、然後輸入命令以建立 Snapshot 。</block>
-  <block id="0fd08e22cd8a21cd901e68b42968c2e6" category="paragraph">此存根負責執行一項「冷場」、也就是將應用程式置於可建立 Snapshot 的狀態。這在 Snapshot 作業之前稱為。應將要保留的應用程式中繼資料設為回應的一部分、並在後續的複製或還原作業中以組態參數的形式、在對應的儲存 Snapshot 上傳回。</block>
-  <block id="7371795f7797164be99265838bc9b9fa" category="paragraph">此存根負責執行靜止、也就是將應用程式置於正常狀態。這是在您建立 Snapshot 之後才會呼叫的。</block>
   <block id="b57d7f6c59e14cd0c1b2ec157185a6bc" category="paragraph">當應用程式資源分散於多個磁碟區時、用於備份的 SnapLock 到期時間將是磁碟區中為 Snapshot 設定的最長 SnapLock 到期時間。從 ONTAP 擷取最長的 SnapLock 過期時間。</block>
   <block id="433b97b9fd0c63b0de421dea32bde9c2" category="list-text">跨 ONTAP 叢集取得儲存磁碟區的一致性群組快照。</block>
   <block id="b24c71863603f1e22b9646ccb63beac7" category="list-text">使用 SnapCenter 原則、利用現有的複寫關係（ Snapvault / SnapMirror/ 統一複寫）、將主要快照更新為 ONTAP 次要快照</block>
-  <block id="7a7937f1bd01629dfc078d9cfaca3c7f" category="paragraph">需要在應用程式上執行靜止。在大多數情況下、這表示將應用程式置於 SnapCenter 伺服器可以建立備份的狀態（例如、 Snapshot ）。</block>
-  <block id="2de9454fcd2f1befcb26b81a260ae3c9" category="paragraph">在 SnapCenter 伺服器建立 Snapshot 或擁有之後
-一般執行備份。</block>
   <block id="2033dc98d1198d5069b9ced87c4c15a3" category="list-text">如果您要將快照複製到鏡射或資料保險箱、 SnapCenter 管理員必須為來源磁碟區和目的地磁碟區指派儲存虛擬機器（ SVM ）。</block>
   <block id="5c2dc81500d1cc825407033c35b56981" category="paragraph">如果資源包含磁碟區或 qtree 作為儲存空間、則此類磁碟區或 qtree 上的新快照將會刪除、而且無法還原。此外、如果任何其他資源裝載在相同的磁碟區或qtree上、則該資源也會被刪除。</block>
   <block id="970623891ebb3c641166d7ce5d32a406" category="paragraph">SnapCenter 會在完成 Snapshot 作業之後、執行 SnapMirror 和 SnapVault 的更新。SnapMirror和SnapVault SnapMirror更新是SnapCenter 執行功能不全的工作之一、請勿建立個別ONTAP 的功能不全。</block>
@@ -8673,7 +8302,6 @@ Snapshot 作業。</block>
   <block id="70c702908f3d7b1a5e1c952c1cddbde7" category="list-text">SAP MaxDB</block>
   <block id="f10287c6f08b8cd9f2eb337e2b486270" category="list-text">（可選）選擇 * 更多選項 * 以安裝其他插件。</block>
   <block id="fdadbc4689c75884565947c7d9c98734" category="doc">將資源新增至 NetApp 支援的外掛程式</block>
-  <block id="2f1bb1e2ce78c864a4c44750e9b9b27c" category="list-text">您必須擁有 <block ref="e6320dc4470de75ec154297543865168" category="inline-link-macro-rx"></block>。</block>
   <block id="5b31c6defa650e8eede236c9a524ad39" category="admonition">NetApp 支援的外掛程式不支援自動探索資源。實體與虛擬環境的儲存詳細資料也不會自動探索。您必須在建立資源的同時、提供實體和虛擬環境的儲存資訊。</block>
   <block id="5c2c5b6203d8891127217c96e3fbe1b9" category="admonition">確定自訂金鑰名稱為大寫。</block>
   <block id="908ce55b9da44ee27d03ed171ddea2e7" category="inline-link-macro">設定資源的參數</block>
@@ -8736,12 +8364,10 @@ Snapshot 作業。</block>
   <block id="c8decdbf430021dfc0d8d243973909b6" category="summary">在使用 SnapCenter 備份 NetApp 支援的外掛程式特定資源之前、您必須為要備份的資源或資源群組建立備份原則。</block>
   <block id="3dd6642ca499d1f7ea549635f37b1c82" category="doc">為 NetApp 支援的外掛程式資源建立原則</block>
   <block id="19648bb3ed0d97dbf793f0f414a626a8" category="paragraph">如需詳細資訊、請參閱有關定義 NetApp 支援外掛程式的資料保護策略的資訊。</block>
-  <block id="cba124a80c7364b61d7d348bd9115983" category="paragraph">如需如何上傳外掛程式的詳細資訊、請參閱 <block ref="f72fab5b6c914bbb8d5e6637ea3f5a3f" category="inline-link-macro-rx"></block></block>
   <block id="8e3a492a9b736283405d7d14febefe64" category="paragraph">Java 11 Oracle Java 或 OpenJDK</block>
   <block id="3d409e4955bb3de9bcf0382e6ed02f3c" category="doc">如何使用資源、資源群組和原則來保護 NetApp 支援的外掛程式資源</block>
   <block id="041c2bc239865621fefddc8c25a37009" category="summary">如果您想要保護 NetApp 支援的外掛程式資源、請安裝並設定 SnapCenter NetApp 支援的外掛程式。</block>
   <block id="51810f5f2de2f019cb898ee5bb825600" category="doc">SnapCenter NetApp 支援外掛程式的安裝工作流程</block>
-  <block id="935a5e63802feb7c41be8f11c154dcc4" category="paragraph"><block ref="935a5e63802feb7c41be8f11c154dcc4" category="inline-link-macro-rx"></block></block>
   <block id="d3b3bbe44f365266410ca923ecee56a6" category="summary">您應該使用 SnapCenter 使用者介面（ UI ）來安裝 SnapCenter NetApp 支援的外掛程式。如果您的環境不允許從 SnapCenter UI 遠端安裝外掛程式、您可以使用命令列介面（ CLI ）、在主控台模式或無訊息模式下安裝 NetApp 支援的外掛程式。</block>
   <block id="d2c5b20234fc44c2f17c36b2966fd013" category="doc">使用命令列介面、在 Linux 主機上安裝 NetApp 支援的外掛程式</block>
   <block id="b521e7c0d833ea4b54c3d92cf04ae64b" category="paragraph">您應該使用 SnapCenter 使用者介面（ UI ）來安裝 NetApp 支援的外掛程式。如果您的環境不允許從 SnapCenter UI 遠端安裝外掛程式、您可以使用命令列介面（ CLI ）、在主控台模式或無訊息模式下安裝 NetApp 支援的外掛程式。</block>
@@ -8760,14 +8386,12 @@ Snapshot 作業。</block>
   <block id="0ef428737d69052be8c7b16e117c7af7" category="paragraph">安裝 NetApp 支援的外掛程式時、您可以使用 SnapCenter 搭配 NetApp SnapMirror 技術、在另一個磁碟區上建立備份集的鏡射複本、並使用 NetApp SnapVault 技術執行磁碟對磁碟備份複寫。NetApp 支援的外掛程式可同時用於 Windows 和 Linux 環境。</block>
   <block id="051fcccc818f247e161e5bd9fe65741b" category="admonition">SnapCenterCLI 不支援 NetApp 支援的外掛程式命令。</block>
   <block id="5c02c38860d64c515a98f74285c5e9af" category="paragraph"><block ref="5c02c38860d64c515a98f74285c5e9af" category="inline-link-macro-rx"></block></block>
-  <block id="858560511f7cf57cf79818f39ae5e7e5" category="paragraph">您可以參照指南來建立自己的自訂外掛程式 <block ref="07744b4146eed8737957be4236ad4ea6" category="inline-link-macro-rx"></block> 。</block>
   <block id="031130cc740dce019fe31437829d3261" category="doc">為 SnapMirror 和 SnapVault 複寫準備儲存系統、以供 NetApp 支援的外掛程式使用</block>
   <block id="b5d24747e2254cd74a278959e55db769" category="summary">在使用 SnapCenter NetApp 支援的外掛程式之前、 SnapCenter 管理員必須先安裝及設定 SnapCenter 伺服器、然後執行必要的工作。</block>
   <block id="6f9abdf4e6349ffead799b7fe0fb5848" category="doc">使用 NetApp 支援外掛程式的先決條件</block>
   <block id="b64964f7c6cb3e2d0ad50647f28415f4" category="list-text">如果適用、請在外掛主機上安裝 Java 11 。</block>
   <block id="70470fa292d95a8fc9a82053e4e3efc0" category="paragraph">除了 SnapCenter 所需的其他連接埠之外、連接埠 9090 必須保留供 NetApp 支援的外掛程式使用。</block>
   <block id="db39871b690a95f007f3b71acd6533d2" category="doc">新增主機和安裝 NetApp 支援外掛程式的必要條件</block>
-  <block id="896f53a1228bbdd8ed2cd52ad89184a3" category="list-text">您必須在 Linux 或 Windows 主機上安裝 Java 11 。</block>
   <block id="1bd7b03e9e6f0b21298c8109c8f483ce" category="paragraph">如果您使用 Windows Server 2019 或 Windows Server 2016 作為 SnapCenter 伺服器主機、則必須安裝 Java 11 。互通性對照表工具IMT （英文）包含有關需求的最新資訊。</block>
   <block id="06489e5a01873cf102f78c0da703ea59" category="list-text">預設還原作業只會還原儲存物件。只有在 NetApp 支援的外掛程式提供該功能時、才能在應用程式層級執行還原作業。</block>
   <block id="67d899b4318f9296298e7c4bb8999573" category="doc">還原 NetApp 支援的外掛程式資源</block>
@@ -9272,7 +8896,6 @@ Snapshot 作業。</block>
   <block id="f4bbec82b72e54df820fc15b640e3b5d" category="paragraph">如果您尚未選取「 * 略過預先檢查 * 」核取方塊，則外掛程式主機會經過驗證，以查看是否符合安裝外掛程式的需求。如果未達到最低需求，則會顯示適當的錯誤或警告訊息。修復問題後、按一下*升級*。</block>
   <block id="a24cb0112e51902b6b3ed4606a7cd727" category="cell">6.0.1.</block>
   <block id="db1c2c3cb6f2d1f2978caf1a4dce483c" category="sidebar">使用 NetApp 支援的外掛程式來保護應用程式</block>
-  <block id="e66b727df529163e059dccac755199b5" category="paragraph">Microsoft Exchange Server ， Microsoft SQL Server ， Linux 或 AIX 上的 Oracle 資料庫， SAP HANA 資料庫， IBM DB2 ， PostgreSQL ， MySQL 和 ONTAP 系統上執行的 Windows 主機檔案系統均支援資料保護。</block>
   <block id="309dab896f56b3d37ea98a7bf810fbfa" category="paragraph">MongoDB 主機</block>
   <block id="5cee7b6aa7ee8f8137a525779101e458" category="paragraph">SAP ASE 的外掛程式</block>
   <block id="a1ed78eb846876547dbbead9faf94c49" category="paragraph">SAP 主機</block>
@@ -9308,84 +8931,6 @@ Snapshot 作業。</block>
   <block id="7327f5f0e2968d1fa35822d7d6f788aa" category="paragraph">選取您要使用的驗證類型。</block>
   <block id="43cc85c69233f4440d07f2e3061c15a5" category="admonition">僅適用於 Linux 和 AIX 使用者。</block>
   <block id="d2359afa8132d4e27ade60817ab1a816" category="paragraph">您可以使用 NetApp 支援的外掛程式，例如 MongoDB ， ORASCPM ， Oracle 應用程式， SAP ASE ， SAP MaxDB 和儲存外掛程式，來執行資料保護作業。</block>
-  <block id="14aee625cd152256e849c1aa7031d871" category="admonition">自訂外掛程式可在Windows和Linux環境中使用。</block>
-  <block id="e535346a3db70ff385fc97189dce883d" category="paragraph">SnapCenter 自訂外掛程式可以安裝在 Windows 系統或 Linux 系統上。</block>
-  <block id="5acceba2cee4fe40d121e90d997fa439" category="doc">將資源新增至SnapCenter 「支援自訂外掛程式」</block>
-  <block id="1f3ce8cb4c6bb4bf02aa0b3d1e189ae7" category="paragraph">新增資源之後、您可以修改資源詳細資料。</block>
-  <block id="a426ad547c71e321ba843cef964120d7" category="doc">備份 SnapCenter 自訂外掛程式資源</block>
-  <block id="9378c23d00fd78b8947bd7e11f09030a" category="summary">如果個別的 SnapCenter 自訂外掛程式資源不是任何資源群組的一部分，您可以從「資源」頁面備份資源。您可以隨需備份資源、或者、如果資源已附加原則並已設定排程、則會根據排程自動進行備份。</block>
-  <block id="08b954c361c2ce7b23e572ce828859aa" category="doc">備份個別的 SnapCenter 自訂外掛程式資源</block>
-  <block id="a37b4d82e3dae7c24db9d5162f48fd96" category="paragraph">如果個別自訂外掛程式資源不是任何資源群組的一部分，您可以從「資源」頁面備份資源。您可以隨需備份資源、或者、如果資源已附加原則並已設定排程、則會根據排程自動進行備份。</block>
-  <block id="665e27cacd5b140b3ca5a518bbd41724" category="doc">備份自訂外掛程式資源的資源群組</block>
-  <block id="e4e0cadac57fe2f7fc1d76c019a73967" category="doc">自訂外掛程式資源的備份排程</block>
-  <block id="79db142fcc9311cc0f07d756c08b4ca0" category="doc">取消 SnapCenter 自訂外掛程式的備份作業</block>
-  <block id="f574c5c8b76c4ae3d8e59b1478323386" category="doc">複製 SnapCenter 自訂外掛程式資源備份</block>
-  <block id="89f4fce6715ddef3315f9c412063572c" category="list-text">預設的複製作業僅會複製儲存物件。只有在自訂外掛程式提供該功能時、才能在應用程式層級執行實體複製作業。</block>
-  <block id="15af88bae18a779b0123b601ed1f33b1" category="summary">在使用SnapCenter 支援功能來備份自訂外掛程式特定資源之前、您必須先為要備份的資源或資源群組建立備份原則。</block>
-  <block id="45ff3f433bdb1ede8743b649a4ecb7c3" category="doc">建立自訂外掛程式資源的原則</block>
-  <block id="90de5bc1543ef2c832e0acbf4e27cc39" category="paragraph">如需詳細資訊、請參閱定義自訂外掛程式資料保護策略的相關資訊。</block>
-  <block id="75b3f5ccaa0a432666656554ea274cd8" category="inline-link-macro">在「拓撲」頁面中檢視自訂外掛程式資源相關備份與複製</block>
-  <block id="f14c7af4999f47dba1e2a191fea8c11f" category="paragraph">請參閱。 <block ref="0bc29e24db2bfeb522f90f83680fcdb4" category="inline-link-macro-rx"></block></block>
-  <block id="6ad653f84eed0c76647686ab11205da7" category="doc">如何使用資源、資源群組和原則來保護自訂外掛程式資源</block>
-  <block id="2fc5c212a0ba7f3f442fe029d893a845" category="summary">若要保護自訂外掛程式資源，您應該安裝並設定 SnapCenter 自訂外掛程式。</block>
-  <block id="d9ac41630ae6a20177466403e2d328d8" category="doc">安裝流程：不需安裝程式SnapCenter</block>
-  <block id="caef6d3f9e7cdd9ed1d3eaabe29db549" category="paragraph">如果您想要保護自訂外掛程式資源、請安裝並設定SnapCenter 「支援」功能。</block>
-  <block id="8f328255df3c97c90d7cfcc63b284018" category="image-alt">SnapCenter 自訂外掛程式的工作流程</block>
-  <block id="0d137907411e77ba81a3c7f3193d7c4a" category="summary">您應該使用 SnapCenter 使用者介面（ UI ）來安裝 SnapCenter 自訂外掛程式。如果您的環境不允許從 SnapCenter UI 遠端安裝外掛程式，您可以使用命令列介面（ CLI ），在主控台模式或無聲模式下安裝自訂外掛程式。</block>
-  <block id="b5c24629ead5c583e2208216205af10a" category="doc">使用命令列介面、在SnapCenter Linux主機上安裝《程式集指令集自訂外掛程式」</block>
-  <block id="0f18e8aaa7478aae88b697e6b89d15f0" category="paragraph">您應該SnapCenter 使用SnapCenter 「版本資訊」使用者介面（UI）來安裝「版本資訊」自訂外掛程式。如果您的環境不允許從SnapCenter SIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、在主控台模式或無聲模式下安裝自訂外掛程式。</block>
-  <block id="ef5b54514d2bc2cec099dbe31b43d400" category="list-text">將SnapCenter 適用於Linux的支援功能套件安裝檔案（snapcenter_Linux _host_plugin.bin）從C：\ProgramData \NetApp\SnapCenter\Package儲存庫複製到您要安裝自訂外掛程式的主機。</block>
-  <block id="f96e2a1e803fa28017557015321ddb3a" category="list-text">登入SnapCenter 以供使用者介面或PowerShell Cmdlet上傳自訂外掛程式。</block>
-  <block id="bdc72ebb02dfcda19f5dd85c44715b14" category="paragraph">您可以參考一節、從 UI 上傳自訂外掛程式 <block ref="f72fab5b6c914bbb8d5e6637ea3f5a3f" category="inline-link-macro-rx"></block> 。</block>
-  <block id="301724bd950c161b79552d6f655df446" category="doc">自訂外掛程式所需的ONTAP 最低需求權限</block>
-  <block id="322752ebdea85a56b4a5d899f24c4325" category="doc">監控自訂外掛程式資源複製作業</block>
-  <block id="ea74c30d0b14b0ca9fd30f2713505fb0" category="doc">監控自訂外掛程式資源備份作業</block>
-  <block id="78d6b4b75546fc8aa5983130521da2da" category="doc">監控自訂外掛程式資源還原作業</block>
-  <block id="36c1f2ec62294c41aad60383fd84873d" category="doc">監控安裝自訂外掛程式的狀態</block>
-  <block id="6af1ebe4d54e4d359cfda12fdfc23a05" category="doc">為儲存系統做好準備、以便進行SnapMirror和SnapVault 針對自訂外掛程式的等化複寫</block>
-  <block id="c338295edd6028b8881fc2e030e0af4c" category="summary">使用 SnapCenter 自訂外掛程式之前， SnapCenter 管理員必須先安裝及設定 SnapCenter 伺服器，然後執行必要的工作。</block>
-  <block id="2f2b7315a3ee2bd24ebcb2968f2d7471" category="doc">使用SnapCenter 「Solutions自訂外掛程式」的先決條件</block>
-  <block id="563eeaf2ba85a493983bca82e8f08302" category="paragraph">除了 SnapCenter 所需的其他連接埠之外，連接埠 9090 必須保留供自訂外掛程式使用。</block>
-  <block id="cfc5bf454b40740731ed76f94a8f970c" category="summary">在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。自訂外掛程式可在Windows和Linux環境中使用。</block>
-  <block id="d4a7ff82c08a07473e6db99d099607ac" category="doc">新增主機和安裝SnapCenter 「更新自訂」外掛程式的先決條件</block>
-  <block id="af0b5aed7941c6f843b87c68b201035e" category="paragraph">在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。自訂外掛程式可在Windows和Linux環境中使用。</block>
-  <block id="f6435544e19487a5d349a72241d6531d" category="list-text">自訂外掛程式必須在執行新增主機作業的用戶端主機上可用。</block>
-  <block id="d0304f4e107917a8451ca9cbb3d3b342" category="list-text">對於自訂外掛程式，您應該確定已將自訂外掛程式檔案的 SHA512 雜湊新增至 _custom_plugin_checksum _list_ 檔案。</block>
-  <block id="a05404237ea51ddb4ea1e7c6debd0079" category="paragraph">custom_plugin_checksum清單是主機SnapCenter 上自訂外掛程式安裝的一部分、作者為</block>
-  <block id="8af2774827e3e07de108382c962be1a0" category="list-text">針對為應用程式建立的自訂外掛程式、您應該已執行下列步驟：</block>
-  <block id="2124f96b55bd8bcfe23c27d4d7c30129" category="list-text">預設還原作業只會還原儲存物件。只有在自訂外掛程式提供該功能時、才能在應用程式層級執行還原作業。</block>
-  <block id="d586cfbb655ff9a83e5820c52931584f" category="doc">還原自訂外掛程式資源</block>
-  <block id="08bd15b8d89877f65879f0e9486f22f7" category="doc">設定SnapCenter 認證資料以供「不一樣的自訂外掛程式」使用</block>
-  <block id="4f0a79bbbb1c2f86716f750b2620d7ca" category="list-text">自訂外掛程式應用程式</block>
-  <block id="eaa33d42e6fa75d8b2d8dabc59d645aa" category="summary">可與外掛應用程式及儲存系統上的NetApp技術整合。SnapCenter若要使用自訂外掛程式，請使用 SnapCenter 圖形化使用者介面。</block>
-  <block id="7e2dbe0ceba88df5406b9c6925b9b55b" category="doc">「自訂外掛程式」SnapCenter 功能</block>
-  <block id="be729a6539659c901e8d8721dbd4263d" category="paragraph">SnapCenter 使用 NetApp Snapshot 技術搭配自訂外掛程式來備份資源。快照消耗的儲存空間最小。</block>
-  <block id="15b52e4150617b0308c95562aaf68617" category="paragraph">使用自訂外掛程式功能也有下列優點：</block>
-  <block id="f5f43eea7e5881f7c06831585bdf5df3" category="summary">您可以為使用的應用程式開發自訂外掛程式、然後使用SnapCenter 支援功能來備份、還原或複製這些應用程式。如同其他SnapCenter 的不支援程式外掛程式、您的自訂外掛程式可做為NetApp SnapCenter 支援軟體的主機端元件、提供應用程式感知資料保護及資源管理功能。</block>
-  <block id="d30c90ed422af36347bce4755fe70260" category="doc">「自訂外掛程式」總覽SnapCenter</block>
-  <block id="caa41de91fb5b317c8ea619089e3c365" category="paragraph">您可以為使用的應用程式開發自訂外掛程式、然後使用SnapCenter 支援功能來備份、還原或複製這些應用程式。您的自訂外掛程式是 NetApp SnapCenter 軟體的主機端元件，可提供應用程式感知的資料保護及資源管理。</block>
-  <block id="cb5170fba0d79e8f77791b01b65474cb" category="paragraph">安裝自訂外掛程式時，您可以使用 SnapCenter with NetApp SnapMirror 技術，在另一個磁碟區上建立備份集的鏡射複本，並使用 NetApp SnapVault 技術執行磁碟對磁碟備份複寫。自訂外掛程式可在Windows和Linux環境中使用。</block>
-  <block id="612ec908f9242be88271aff279afcb8c" category="admonition">SnapCenterCLI 不支援自訂外掛程式命令。</block>
-  <block id="ac1853e1b8c52dcd72090686ddcea0a4" category="paragraph">您可以從「新增主機」頁面安裝自訂外掛程式。</block>
-  <block id="83aeb7b594481ad598eb0b519836777b" category="summary">支援實體與虛擬機器上的各種儲存類型。SnapCenter您必須先驗證儲存類型的支援、才能安裝SnapCenter 「更新自訂外掛程式」。</block>
-  <block id="c48a2f5430d3aff55420b834363bcc46" category="doc">支援的儲存類型SnapCenter 由「支援的儲存類型」由「支援的自訂外掛程式</block>
-  <block id="c646559470c5e7c2ce007b2f588217ce" category="summary">您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。手動新增自訂外掛程式資源的還原策略有兩種類型。您無法恢復手動新增的自訂外掛程式資源。</block>
-  <block id="74f3688654489538321178bb35e0308a" category="doc">手動新增自訂外掛程式資源所支援的還原策略類型</block>
-  <block id="d09f169f58ca3636a49dbb1d90c5ccb2" category="paragraph">您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。手動新增自訂外掛程式資源的還原策略有兩種類型。</block>
-  <block id="10b4ebc3af3b43078bbe14cbd2f856b5" category="admonition">您無法恢復手動新增的自訂外掛程式資源。</block>
-  <block id="068e66f9f630e931ca9256c9d49a4894" category="doc">在「拓撲」頁面中檢視自訂外掛程式資源相關的備份和複本</block>
-  <block id="ffcbfe2535c5e409d12457d03945597a" category="summary">您可以使用自訂外掛程式來執行資料保護作業。</block>
-  <block id="91ed5f58b9ed12fe9c0ba6ac5fbaa1b7" category="doc">SnapCenter 自訂外掛程式的功能</block>
-  <block id="5bb2f9bf573dcbada2bc999d2acc3d80" category="paragraph">您可以使用自訂外掛程式來執行資料保護作業。</block>
-  <block id="f130b1c1614c0136264ae62249141b2f" category="sidebar">保護自訂應用程式</block>
-  <block id="ad41f7a9e85843a998743e132424a395" category="sidebar">不適用的自訂外掛程式SnapCenter</block>
-  <block id="27a900f1a63545d14b71e4b2d44fc8a9" category="sidebar">您可以使用SnapCenter 「不一樣的自訂外掛程式」來做什麼</block>
-  <block id="3d8a9e359cdf4b956d6850836e03a25e" category="sidebar">自訂外掛程式的備份策略</block>
-  <block id="08759ac851b4d644eddfd819f2b366e9" category="sidebar">準備安裝SnapCenter 「精選」外掛程式</block>
-  <block id="834849dd07442651b1ce8092c92186f0" category="sidebar">安裝SnapCenter 「不一樣的自訂外掛程式」</block>
-  <block id="33e8da2f20646df222fc0acf35201fe4" category="sidebar">備份自訂外掛程式資源</block>
-  <block id="8ffa4ba0dd2df5995fd397c72a149679" category="sidebar">備份個別的自訂外掛程式資源</block>
-  <block id="e734e6e2e702d38ebab6ed3c050a5e72" category="sidebar">複製自訂外掛程式資源備份</block>
   <block id="881a29d62175189b1872a856fce933da" category="paragraph">您可以使用SnapCenter 支援功能、使用資料庫的備份來複製Oracle資料庫。建立的複本是複本複本，並建立在父容量集區上。</block>
   <block id="57507899dd312cf4de9c076e90990d6a" category="paragraph">您可以使用 SnapCenter ，使用資料庫的備份來複製 SAP HANA 資料庫。建立的複本是複本複本，並建立在父容量集區上。</block>
   <block id="73c291e6ad930a577bf1c1d0267ecd80" category="paragraph">您可以使用 SnapCenter 來複製使用資料庫備份的 SQL 資料庫。建立的複本是複本複本，並建立在父容量集區上。</block>
@@ -9465,24 +9010,15 @@ Snapshot 作業。</block>
   <block id="8c4149a5e3a16e71c373cac16eab56eb" category="list-text"><block ref="8031b6dd89dc17bc568c9124170bb66a" prefix="" category="inline-code"></block></block>
   <block id="1f46b6eec6f3def165a94aea4fbd2de8" category="list-text"><block ref="d873942b6f54bbecd97eb915c6e95c45" prefix="" category="inline-code"></block></block>
   <block id="73c050ddeaec2b5e5a856c81666f8026" category="list-text">按一下 <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block> 圖示、然後按一下 * 啟用憑證驗證 * 。</block>
-  <block id="233125590fad11d81c05c1b0279c56f1" category="admonition">SnapCenter 僅支援 ASA R2 系統上的 VMware 虛擬機器檔案系統（ VMFS ）。</block>
   <block id="989977a18a476a92018e04dd60ec37c1" category="inline-link">深入瞭解 ASA R2 系統</block>
   <block id="b3c78f6e772922673e6d35ae6df26cbd" category="list-text">透過 VMDK 建立應用程式的主要備份</block>
   <block id="7e358fa759baa4f70a96f79cf29b4c61" category="list-text">將一致性群組快照傳輸至次要儲存系統</block>
-  <block id="e4cc11f5ac51267a510e423fca1a6266" category="list-text">從其他位置還原備份和還原</block>
-  <block id="eaf84a062a0d8e38f825a0f02f3d1272" category="list-text">使用 VMware VMotion 從主要與次要儲存設備進行原位還原</block>
-  <block id="74307ec7ea96b1aa508fc7b092900aec" category="list-text">從主要與次要儲存設備連接並複製還原</block>
-  <block id="9b0e5d4aa3544e7e2154f18fb865684a" category="list-text">複製備份，並將複製複製到其他位置</block>
   <block id="a0f3e47cc5179a026d7b861797055f6d" category="list-text">原始裝置對應（ RDM ）</block>
   <block id="b47dab3c647bba9b7ad0a8fc0cde81dc" category="list-text">適用於 Oracle 的應用程式磁碟區</block>
   <block id="7236f926bc1402ad0d847fd55a34001d" category="list-text">SAP HANA NDV</block>
   <block id="da612433b3e7d1bdc94a92a26f362677" category="list-text">LockVault</block>
-  <block id="32003f26ce5a5c05fba8d25bec258e4d" category="list-text">防竄改快照</block>
-  <block id="b4bc3604610d39195e11a5ae303f5af1" category="list-text">Flex Group</block>
   <block id="425514993f273b658b0218c334836b26" category="list-text">階層式一致性群組</block>
-  <block id="4e8cbbcd8088f634c6f45af755c363c9" category="list-text">從 ONTAP 9.x 移轉至 ASA R2 系統</block>
   <block id="980869fd79cd78a3682752206f149791" category="list-text">重新命名快照</block>
-  <block id="63d730ecaee7f6e096a0f2026e24241b" category="list-text">SnapCenter 不支援 SQL 外掛主機的記錄目錄次要資源配置。您應該使用 ONTAP CLI 或系統管理員手動設定。</block>
   <block id="bc3c828cce582fafd1e35e77b8c84327" category="cell">連接埠名稱</block>
   <block id="f78fb51edae6a69d5e1e911a2b6fc268" category="cell">連接埠編號</block>
   <block id="02674a4ef33e11c879283629996c8ff8" category="cell">方向</block>
@@ -9590,7 +9126,6 @@ Snapshot 作業。</block>
   <block id="a01b7da75a123f67d2bd092bd390357b" category="inline-link-macro">在「拓撲」頁面中檢視 PostgreSQL 資源相關備份和複本</block>
   <block id="8cc434d6a6795129514dec808d2a0b5f" category="paragraph">請參閱。 <block ref="ba5835b9b929a25573989def442b6620" category="inline-link-macro-rx"></block></block>
   <block id="74bf63bf6d2c3ea39571d20c69e750c5" category="doc">在 ASA R2 系統上建立資源群組，並啟用 PostgreSQL 資源的次要保護</block>
-  <block id="2fa3565e934ce96d4dfda01caf5687f0" category="paragraph">按一下 <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>，然後選取主機名稱和資源類型以篩選資源。接著您可以按一下 <block ref="5daa1c5d91da80c848b68dcd336ec220" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
   <block id="049723d2545fe83b1346dfc8b0e73157" category="inline-image-macro">備份工作流程交換器伺服器資料庫</block>
   <block id="17867b811722d46682fd65b7a3aa094d" category="paragraph"><block ref="17867b811722d46682fd65b7a3aa094d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="11347fc37982208b4dafefd65b23ac33" category="paragraph"><block ref="11347fc37982208b4dafefd65b23ac33" category="inline-image-macro-rx" type="image"></block></block>
@@ -9721,7 +9256,6 @@ Snapshot 作業。</block>
   <block id="41fbf2c9674d14c871b1a98dff345ddd" category="paragraph">NetApp ONTAP 事件 genere-log-log AutoSupport 權限已授予儲存虛擬機器（ SVM ）使用者。</block>
   <block id="251c52ce7ef8b529e63b81a2f40b7a26" category="paragraph">下列Cmdlet會在SnapCenter iSCSI LUN中意外刪除備份檔案時、還原MySQL的功能。對於 VMDK ，請手動從 ONTAP 快照還原備份。</block>
   <block id="b9832b10a87d0c3793ed3b413ee1d839" category="section-title">REST API支援</block>
-  <block id="bc9f5cd1669f71a2b0bd213a944d8fdb" category="paragraph">根據預設，所有與 ONTAP 和 ASA R2 儲存系統的儲存連線都會透過 ZAPI 。REST API 可針對特定 ONTAP 版本啟用。</block>
   <block id="421f02448bcd1490276fcd375668a6be" category="paragraph">您可以修改下列組態檔案中的組態金鑰：</block>
   <block id="94b74299dc7f33d5bf8e4fc497c26334" category="list-text">IsRestEnabledForStorageConnection</block>
   <block id="cbd8678f4d2dba6d97b2ccfc54882755" category="paragraph">預設值為假。</block>
@@ -9751,7 +9285,6 @@ Snapshot 作業。</block>
   <block id="02cf8992ec066e2a6c94ef201a56fde4" category="list-text">如需 FlexClone Volume 分割作業的相關資訊，請參閱<block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block>。</block>
   <block id="d664b55967efa51159bf2dcaad494f28" category="admonition">最大保留值為 1018 。如果保留設定的值高於基礎ONTAP 版支援的值、則備份將會失敗。</block>
   <block id="45674f4fab4d30d82c5e48053de84a2d" category="paragraph">ONTAP 主要和次要可以是 ONTAP FAS ， AFF ， ASA ， ONTAP Select 或 Cloud Volumes ONTAP 。</block>
-  <block id="5809b9053ee07314ee267cf4861e2fe2" category="paragraph">外掛程式版本。可同時包含主要和次要版本。例如， 5.0 ， 6.0 ， 6.1</block>
   <block id="04421acf26388af407e2e444d1d9a4ea" category="paragraph">+ 若要避免節點之間的資料落後，您可以在執行重新輸入作業之前建立新備份，或是選擇具有最新備份的主機。</block>
   <block id="0002a57eb89728985300757fccb645db" category="inline-link">ONTAP 9 SAN 管理一節</block>
   <block id="9b84e6db97d84dfea46f94fa87561146" category="list-text">您可以指定LUN路徑自動固定的頻率、方法是將lunpath_監 控時間間隔參數的值（以小時為單位）指派給lunpath_監 控時間間隔參數。有關 SLM 的信息，請參閱<block ref="791bce609970821d75a70463f2e5a4f8" category="inline-link-rx"></block>。</block>
@@ -9816,7 +9349,6 @@ Snapshot 作業。</block>
   <block id="be01a357ae2c9752875b5385c732b017" category="section-title">主要功能</block>
   <block id="167ec2cbfb2138b492dfdc49a527d301" category="paragraph">SnapCenter 提供下列主要功能：</block>
   <block id="8cf888c772c03c3d648b58558da6e63e" category="list-text">集中化，應用程式一致的資料保護功能，可保護不同的應用程式</block>
-  <block id="969aec922664277bd496cc9933e20159" category="paragraph">其他標準或自訂應用程式和資料庫也支援資料保護、提供架構以建立使用者定義SnapCenter 的功能表外掛程式。如此一來、其他應用程式和資料庫就能從同一個單一窗口進行資料保護。藉由運用此架構， NetApp 已發行適用於 MongoDB ， Storage ， MaxDB ， Sybase ASE ， ORASCPM 的 SnapCenter 外掛程式。您也可以使用開發人員指南建立自己的外掛程式。</block>
   <block id="fbe4c82f71e9d38697b35f4a20991f38" category="paragraph">SnapCenter 提供一個 GUI ，是單一的一站式介面，用於管理混合雲中任何目的地的資源備份和複本。</block>
   <block id="7c3bb00618d034ac43cb570a8e2d7a19" category="paragraph">SnapCenter 提供 REST API ，可用於大多數功能，以整合任何協調軟體，以及使用 Windows PowerShell Cmdlet 和命令列介面。</block>
   <block id="14b689a9c9a340e9114e5ea589110eca" category="list-text">集中式資料保護儀表板與報告</block>
@@ -9839,7 +9371,6 @@ Snapshot 作業。</block>
   <block id="8ec3dce9728ccf15c37266b6c382c785" category="paragraph">適用於 SAP HANA 資料庫的 SnapCenter 外掛程式</block>
   <block id="aabe8e5d9d24c243240731f0310c18bb" category="paragraph">適用於 Linux 的外掛程式套件，以及適用於 Windows 的外掛程式套件</block>
   <block id="d28c7359652d719e6982acbdc3c49f95" category="paragraph">適用於 UNIX 的外掛程式或適用於 Windows 的外掛程式</block>
-  <block id="889c03fdc6c55696632723dd9c7bd2b3" category="paragraph">若要進行檔案系統備份，請使用適用於 Windows 的外掛程式</block>
   <block id="ce9bfd38dcbd5fc4c9c9c8f23dfe195b" category="paragraph">適用於 IBM DB2 的 SnapCenter 外掛程式</block>
   <block id="c6a2afa4c0921c400b8b7c2be39a338e" category="paragraph">適用於 Linux 的外掛程式套件，以及適用於 Windows 的外掛程式套件</block>
   <block id="8ab4d821b694c7a4a2ccc5b89c6bb24e" category="paragraph">Linux ， AIX 或 Windows</block>
@@ -9906,9 +9437,6 @@ Snapshot 作業。</block>
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="list-text">Azure NetApp Files</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSX for NetApp ONTAP 產品</block>
   <block id="ababa124e254733f565e62afc357fc79" category="list-text">執行 NetApp ONTAP 9.16.1 的 NetApp ASA R2 系統。</block>
-  <block id="c00f42dba6437d6e7cbff9b51cdc87bf" category="paragraph">ASA R2 系統為所有 Flash 平台上建置的僅 SAN 環境提供統一化的硬體與軟體解決方案。<block ref="b840388ca7e01a42ddc42d721bbbf472" category="inline-link-rx"></block>。</block>
-  <block id="8f01bf34bec2cec23a4702e931ee94b0" category="cell">支援的作業</block>
-  <block id="ff887f516fdd30d87fb1832af91506bf" category="cell">不支援作業</block>
   <block id="0b4e0166878acdd36f882f2270445c06" category="section-title">支援的應用程式和資料庫</block>
   <block id="29756d78461f8a62cb986dc97f47496b" category="paragraph">支援不同應用程式和資料庫的保護。SnapCenter如需支援應用程式和資料庫的詳細資訊，請參閱<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>。</block>
   <block id="ee0febdaba6d4c618d2cca84b2c49df1" category="paragraph">SnapCenter 支援在 VMware Cloud on Amazon Web Services （ AWS ）軟體定義資料中心（ SDDC ）環境中保護 Oracle 和 Microsoft SQL 工作負載。<block ref="95513dc65edb533209d1910ac5e4b37d" category="inline-link-rx"></block>。</block>
@@ -9990,4 +9518,72 @@ Snapshot 作業。</block>
   <block id="230f7d0fc162c3a559cd8b29556f41f4" category="paragraph"><block ref="230f7d0fc162c3a559cd8b29556f41f4" category="inline-link-rx"></block></block>
   <block id="17103b09b3247a2b39032b11b995b325" category="list-text">ORACLE_BACKUPMODE 指定是否執行線上或離線備份。</block>
   <block id="e787bc810fe0c9919da5538cad8cb1f1" category="list-text">ORACLE_EXPORT_PARAMETERS 指定在執行 /bin/su &lt;user running sqlplus&gt; -c sqlplus /nolog &lt;cmd&gt; 時是否應重新匯出上述定義的環境變數。通常情況下，當執行 sqlplus 的使用者尚未設定使用 connect / as sysdba 連接資料庫所需的所有環境變數時，就會發生這種情況。</block>
+  <block id="a6f6a01605d225b6eccb8bc600198254" category="doc">管理插件金鑰庫的密碼以及正在使用的 CA 簽章金鑰對的別名</block>
+  <block id="177f575b5a8eadec287bb6d168449027" category="paragraph">您應該管理插件金鑰庫及其憑證的密碼，配置 CA 證書，將根或中間證書配置到插件信任庫，並使用 SnapCenter 插件服務將 CA 簽章金鑰對配置到插件信任庫以啟動已安裝的數位憑證。</block>
+  <block id="8593559b9e887ff645a2a050b5b8f36c" category="paragraph">插件使用位於 _/opt/NetApp/snapcenter/scc/etc_ 的檔案「keystore.jks」作為其信任庫和金鑰庫。</block>
+  <block id="181646988f2fcb9185be86e172665b21" category="list-text">您可以從外掛程式代理屬性檔案中檢索外掛程式密鑰庫預設密碼。</block>
+  <block id="65ae86cb8ec34e4ba158707d94c60dfb" category="admonition">插件金鑰庫的密碼和所有相關私鑰別名的密碼應該相同。</block>
+  <block id="d02bf6c91e930dd1afe81c8526ca7b7f" category="section-title">設定根憑證或中間憑證以插入信任庫</block>
+  <block id="c95c637d3299603ad3c7196bc054ae99" category="paragraph">您應該配置沒有私鑰的根憑證或中間憑證來插入信任庫。</block>
+  <block id="8b71edfb7cf1a59a74ff54b086516e28" category="list-text">導航至包含插件金鑰庫的資料夾：/opt/NetApp/snapcenter/scc/etc。</block>
+  <block id="983edb30b4dfb1a2ba42f9f9cc14950e" category="list-text">設定根憑證或中間憑證以插入信任庫後重新啟動服務。</block>
+  <block id="00abca26ff8eb112359137dcfb9ea01a" category="section-title">配置 CA 簽署金鑰對以插入信任庫</block>
+  <block id="45731a3aa52bf1909e9e9dc6161cc898" category="paragraph">您應該將 CA 簽署的金鑰對配置到插件信任庫中。</block>
+  <block id="d1d422661c78b9eab46b9f8b1765e58e" category="list-text">導航至包含插件金鑰庫 /opt/NetApp/snapcenter/scc/etc 的資料夾。</block>
+  <block id="f992e83f751357f9d9ccabefb7ab5af0" category="paragraph">預設插件密鑰庫密碼是 agent.properties 檔案中密鑰 KEYSTORE_PASS 的值。</block>
+  <block id="3755aa47db20dfb4e7857d21af35c6f3" category="list-text">配置 CA 簽署的金鑰對以插入信任庫後重新啟動服務。</block>
+  <block id="202758a186edfc5ecc21db45129fcefb" category="section-title">為插件配置憑證撤銷清單 (CRL)</block>
+  <block id="1448a860ca909fe5a4b713898b4d9e26" category="list-text">SnapCenter 插件將在預先配置的目錄中搜尋 CRL 檔案。</block>
+  <block id="c3c1d60ea5e2b53ad2638c5cdea5f89c" category="list-text">SnapCenter 插件的 CRL 檔案的預設目錄是「 opt / NetApp / snapcenter / scc / etc / crl 」。</block>
+  <block id="60e92bca5961a0f4e81c024688a1272c" category="paragraph">您應該管理插件金鑰庫及其憑證的密碼，配置 CA 證書，將根或中間證書配置到插件信任庫，並使用 SnapCenter 插件服務將 CA 簽章金鑰對配置到插件信任庫以啟動已安裝的數位憑證。</block>
+  <block id="4ee0dfdd2373ec8e5a3ddda3da0957dc" category="paragraph">外掛程式使用位於 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_ 的檔案 _keystore.jks_ 作為其信任庫和金鑰庫。</block>
+  <block id="8800bf627a6fbf38d58c52773ec76fe4" category="list-text">導覽至包含外掛程式金鑰庫的資料夾 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_</block>
+  <block id="6a9186e5073444d4dfe469c0ec025eeb" category="list-text">導覽至包含外掛程式金鑰庫的資料夾 _C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc_</block>
+  <block id="c32f72f0e4fef5bd690d9026e9a2280f" category="section-title">為 SnapCenter 外掛程式設定憑證撤銷清單 (CRL)</block>
+  <block id="75ef750cae4cd63d012437bf3a7d1602" category="list-text">SnapCenter 插件將在預先配置的目錄中搜尋 CRL 檔案。</block>
+  <block id="0e3a5e9fc260fc0d407d8321dcc8003b" category="list-text">SnapCenter 外掛程式的 CRL 檔案的預設目錄是 'C:\Program Files\NetApp\SnapCenter\Snapcenter Plug-in Creator\etc\crl'_。</block>
+  <block id="2fad35de9dcd671455c9e72f29a4b223" category="paragraph">預設情況下，所有 ASA、AFF 或 FAS 系統與 ONTAP 的連線都將透過 ZAPI 進行。您可以針對特定 ONTAP 版本啟用 REST API。</block>
+  <block id="599bdb9ade4d424c1d0e46738185a553" category="paragraph">SnapCenter 利用 REST API 在 ASA r2 系統上執行所有操作，而 ASA r2 系統不支援 ZAPI。</block>
+  <block id="c2ecaf82710b87f701c30b03217ce358" category="paragraph">Microsoft Exchange Server ， Microsoft SQL Server ， Linux 或 AIX 上的 Oracle 資料庫， SAP HANA 資料庫， IBM DB2 ， PostgreSQL ， MySQL 和 ONTAP 系統上執行的 Windows 主機檔案系統均支援資料保護。SnapCenter 也支援 MongoDB、Storage、MaxDB、Sybase ASE、ORASCPM 等應用程式的保護。</block>
+  <block id="856b104aa0e600cd87dcca68d37108cd" category="doc">ASA r2 系統支援的 SnapCenter 操作</block>
+  <block id="b7e8225960284afe2c6e37957709cd90" category="paragraph">從 SnapCenter 6.1 開始支援 ASA r2 儲存系統。 <block ref="b840388ca7e01a42ddc42d721bbbf472" category="inline-link-rx"></block></block>
+  <block id="9495c0bfae580f7cd9a35b1c4bda619f" category="paragraph">*SnapCenter for ASA r2 系統支援的操作*</block>
+  <block id="48a4a4a55c074d578a28288306965ebc" category="list-text">將主儲存系統和輔助儲存系統的備份還原到原始主機或備用主機</block>
+  <block id="88f032fba4d12f7f4fad32b78d6163d7" category="list-text">使用 VMware vMotion 從主儲存系統和輔助儲存系統進行就地恢復</block>
+  <block id="5eaeee1ce928de977b68a25b9c1b1a94" category="list-text">連接主儲存系統和輔助儲存系統並複製復原</block>
+  <block id="2ac74f7e56e1eda352b17c65251f4a20" category="list-text">將備份複製到原始主機或備用主機</block>
+  <block id="1ad6d2de484cb785da5c2ff1e4e68a57" category="paragraph">SnapCenter 可以發現或建立 ONTAP 一致性群組。它還可以配置並初始化與目標叢集的 SnapMirror 關係，以提供二級保護。</block>
+  <block id="6f04bce7ee68a94f8a7107a6ec8f82ef" category="paragraph">有關在 ASA r2 系統上為您的應用程式啟用二級保護的信息，請參閱：</block>
+  <block id="1cc48bfa9deb8cbe9ac86aa7814eafc2" category="inline-link">為 Microsoft SQL Server 資源啟用二級保護</block>
+  <block id="6a7bda8e55fec33c0e84308f3a7487d9" category="list-text"><block ref="6a7bda8e55fec33c0e84308f3a7487d9" category="inline-link-rx"></block></block>
+  <block id="5c1b83640f350debd19233ccd7049769" category="inline-link">為 SAP HANA 資源啟用二級保護</block>
+  <block id="d131b0bb4a16e5b8478497ccfbef33c2" category="list-text"><block ref="d131b0bb4a16e5b8478497ccfbef33c2" category="inline-link-rx"></block></block>
+  <block id="efbcba99976e07d78be176f7a90cf7c3" category="inline-link">啟用 Oracle 資源的二級保護</block>
+  <block id="762704371851ac78abed72b308f150fd" category="list-text"><block ref="762704371851ac78abed72b308f150fd" category="inline-link-rx"></block></block>
+  <block id="0f7bcbbc798cf4cdc39bcef282b498c5" category="inline-link">為 Windows 檔案系統啟用二級保護</block>
+  <block id="fcb42b4cc88ab54bad8c728c28ce5cf1" category="list-text"><block ref="fcb42b4cc88ab54bad8c728c28ce5cf1" category="inline-link-rx"></block></block>
+  <block id="08afd0e5f77c43d4c319bd80bc5b8c42" category="inline-link">為 IBM Db2 資源啟用二級保護</block>
+  <block id="d4ff69210257038e91bba291abba0cf1" category="list-text"><block ref="d4ff69210257038e91bba291abba0cf1" category="inline-link-rx"></block></block>
+  <block id="9c0d7b7516b5687a46d05b9ace283b3c" category="inline-link">為 PostgreSQL 資源啟用二級保護</block>
+  <block id="4849562b6b637f3d2719b247874cc4be" category="list-text"><block ref="4849562b6b637f3d2719b247874cc4be" category="inline-link-rx"></block></block>
+  <block id="3944a1fa201376f3d60be17195d11a58" category="inline-link">啟用 MySQL 資源的二級保護</block>
+  <block id="3e9349ede03e4e736f3e3c2ecdd0127c" category="list-text"><block ref="3e9349ede03e4e736f3e3c2ecdd0127c" category="inline-link-rx"></block></block>
+  <block id="0a056b3a2b95775025d0fee578294c1f" category="inline-link">為 Unix 檔案系統啟用二級保護</block>
+  <block id="e0c95c8b145fa66da52032a54146f332" category="list-text"><block ref="e0c95c8b145fa66da52032a54146f332" category="inline-link-rx"></block></block>
+  <block id="9ce9bd6fed2b4f30097bcf0873565710" category="paragraph">*SnapCenter 不支援 ASA r2 系統的操作*</block>
+  <block id="c4bf0f56feeec9a45e973768fbc4f47e" category="list-text">防竄改快照</block>
+  <block id="ee1ef6cf0f3971b44eb2abcac958fb8d" category="list-text">資料量FlexGroup</block>
+  <block id="29a720af33d29332fae31060b6910f77" category="list-text">從 ASA、AFF 或 FAS 儲存系統遷移到 ASA r2 儲存系統</block>
+  <block id="7abee40aa1933e637766c0d692411a73" category="list-text">保護混合有 ASA、AFF 或 FAS 資源和 ASA r2 資源的資料庫</block>
+  <block id="dbc2c133826d732ac86927b2062c928d" category="list-text">SQL插件宿主機日誌目錄二次配置</block>
+  <block id="e29e29246a71235f47845c88c4a61f52" category="paragraph">這是僅在插件主機上使用的內部連接埠；不需要防火牆例外。</block>
+  <block id="225b299c2a6edae75ebfaff049e07f4e" category="paragraph">SnapCenter 伺服器和插件之間的通訊透過連接埠 8145 進行。</block>
+  <block id="0b30312a6625cb4a7b0de67a44ddd45a" category="summary">為 Linux 主機上的 SnapCenter IBM Db2Plug-ins 服務設定 CA 憑證</block>
+  <block id="65acd7dc10bede8dffde6b75a88e10ce" category="summary">為 Linux 主機上的 SnapCenter MySQL 插件服務設定 CA 憑證</block>
+  <block id="755c3af5dacbed1425beceef56b811a7" category="paragraph">NetApp 提供儲存插件，使用 SnapCenter 內建的插件框架對 ONTAP 儲存體上的資料磁碟區執行資料保護作業。</block>
+  <block id="4d76fbc52a6896285d31894d4b91bb5a" category="admonition">SnapCenter 支援政策將涵蓋對外掛程式框架、核心引擎和相關 API 的支援。支援不涵蓋插件原始程式碼以及基於插件框架構建的相關腳本。</block>
+  <block id="1cf1276b6cea0875fbd56150cf88c2ad" category="list-text">您可以在位於下列位置的 _agent.properties_ 檔案中、將 _use_custom_clone_volume 名稱和交會路徑的值設為 * true* 、以獲得靜態複製磁碟區名稱和交會路徑：更新檔案後，您應該透過執行以下命令重新啟動 SnapCenter 插件建立者服務： <block ref="f4da0aeb9d91444725fc84b066ea329b" prefix=" " category="inline-code"></block> 。</block>
+  <block id="a537fd276cd3fe8ae075cca47114fd6a" category="admonition">如果您使用的是Windows檔案系統內容、請勿備份資料庫檔案。這樣做會造成備份不一致、而且在還原時可能會遺失資料。若要保護資料庫文件，必須使用適合資料庫的 SnapCenter 外掛程式（例如，適用於 Microsoft SQL Server 的 SnapCenter 外掛程式或適用於 Microsoft Exchange Server 的 SnapCenter 外掛程式）。</block>
+  <block id="6fea498808c5d97bb251d0bdbc3943eb" category="sidebar">為 Linux 主機上的 SnapCenter 插件服務設定 CA 憑證</block>
+  <block id="5c1418af1ce8eeaeb3745b659e1fcfe8" category="sidebar">為 Windows 主機上的 SnapCenter 插件服務設定 CA 憑證</block>
 </blocks>
