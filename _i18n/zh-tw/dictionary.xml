@@ -8760,7 +8760,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="83e606e7229254f977fc3348f76ce3d4" category="doc">設定 SnapCenter 伺服器的高可用度</block>
   <block id="3f885fa4441e45ab56f7266ba93b9290" category="paragraph">若要在 Windows 或 Linux 上執行的 SnapCenter 中支援高可用度（ HA ），您可以安裝 F5 負載平衡器。在同SnapCenter 一位置的最多兩部主機中、使用F5可支援主動-被動組態。若要在SnapCenter 整個過程中使用F5負載平衡器、您應該設定SnapCenter 「伺服器」並設定「F5負載平衡器」。</block>
   <block id="08966309e9619d374846ea7cc8ead3ed" category="paragraph">對於雲端環境，您可以使用 Amazon Web Services （ AWS ） Elastic Load Balancing （ Elb ）和 Azure 負載平衡器來設定高可用度。</block>
-  <block id="026c74cf033fccdbeac6574d083691f5" category="paragraph">工作流程影像會列出使用SnapCenter F5負載平衡器設定高可用度的功能步驟。如需詳細指示，請<block ref="4d4c1b07c3f7cab3f346d17a2617da56" category="inline-link-rx"></block>參閱。</block>
   <block id="43279440aa73faeb0bd5bf72d7a0b48c" category="paragraph">如需詳細資訊、請<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>參閱。</block>
   <block id="0f68b904e33d9ac04605aecc958bcf52" category="paragraph">其他資訊</block>
   <block id="5d8d9a5294b7f49c7e6eda95dc97aa5e" category="list-text">在負載平衡器設定（ NLB 或 F5 ）中，如果您新增的主機有部分由 NLB 或 F5 主機解析，而且 SnapCenter 主機無法連線至此主機，則 SnapCenter 主機頁面會經常在主機停機和執行中狀態之間切換。若要解決此問題，您應該確定兩台 SnapCenter 主機都能解決 NLB 或 F5 主機中的主機問題。</block>
@@ -8979,7 +8978,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="6e13f804ad8be111cf6ad70744afe388" category="list-text">ONTAP ASA R2 主要和次要系統上的資料</block>
   <block id="651f8f48e0ff0ede39a3224558b4b516" category="paragraph">輔助保護</block>
   <block id="f9c655f2d65a07a71b2deab50b74ffae" category="paragraph">您也可以設定網路負載平衡（ NLB ）來設定 SnapCenter 高可用度。您應該在 SnapCenter 安裝之外手動設定 NLB ，以獲得高可用度。</block>
-  <block id="0a0bca773054c9a47b687411e5ff20e8" category="image-alt">F5組態工作流程</block>
   <block id="27c157ca432e76f965ac30465e4a7d94" category="paragraph">您可以設定網路負載平衡（ NLB ）來設定 SnapCenter 高可用度。您應該在 SnapCenter 安裝之外手動設定 NLB ，以獲得高可用度。</block>
   <block id="731ac89bec4a57f1e740c167b65c6f53" category="summary">您應該為 ASA R2 系統建立 ONTAP 叢集角色，這樣就不需要使用 ONTAP 管理員角色來執行 SnapCenter 中的作業。</block>
   <block id="abdbfb1150ad2e22831c6bdbf7bac8d8" category="doc">為 ASA R2 系統建立 ONTAP 叢集角色</block>
@@ -9586,4 +9584,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="a537fd276cd3fe8ae075cca47114fd6a" category="admonition">如果您使用的是Windows檔案系統內容、請勿備份資料庫檔案。這樣做會造成備份不一致、而且在還原時可能會遺失資料。若要保護資料庫文件，必須使用適合資料庫的 SnapCenter 外掛程式（例如，適用於 Microsoft SQL Server 的 SnapCenter 外掛程式或適用於 Microsoft Exchange Server 的 SnapCenter 外掛程式）。</block>
   <block id="6fea498808c5d97bb251d0bdbc3943eb" category="sidebar">為 Linux 主機上的 SnapCenter 插件服務設定 CA 憑證</block>
   <block id="5c1418af1ce8eeaeb3745b659e1fcfe8" category="sidebar">為 Windows 主機上的 SnapCenter 插件服務設定 CA 憑證</block>
+  <block id="f890e4e7d1398542e6dfe99fa9cf5732" category="paragraph">有關使用 F5 負載平衡器設定SnapCenter伺服器以實現高可用性的說明，請參閱<block ref="4d4c1b07c3f7cab3f346d17a2617da56" category="inline-link-rx"></block> 。</block>
+  <block id="78805a221a988e79ef3f42d7c5bfd418" category="paragraph">映像</block>
 </blocks>
