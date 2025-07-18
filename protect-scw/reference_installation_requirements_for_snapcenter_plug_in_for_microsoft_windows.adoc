@@ -41,6 +41,8 @@ Microsoft Windows
 
 如需支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
+如果您使用的是 Windows 叢集設置，您還應該安裝和設定 Windows 遠端管理 (WinRM)。
+
 
 
  a| 

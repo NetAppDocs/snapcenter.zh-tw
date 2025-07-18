@@ -9585,5 +9585,5 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="6fea498808c5d97bb251d0bdbc3943eb" category="sidebar">為 Linux 主機上的 SnapCenter 插件服務設定 CA 憑證</block>
   <block id="5c1418af1ce8eeaeb3745b659e1fcfe8" category="sidebar">為 Windows 主機上的 SnapCenter 插件服務設定 CA 憑證</block>
   <block id="f890e4e7d1398542e6dfe99fa9cf5732" category="paragraph">有關使用 F5 負載平衡器設定SnapCenter伺服器以實現高可用性的說明，請參閱<block ref="4d4c1b07c3f7cab3f346d17a2617da56" category="inline-link-rx"></block> 。</block>
-  <block id="78805a221a988e79ef3f42d7c5bfd418" category="paragraph">映像</block>
+  <block id="c0f10ba70433b3a51c779845827cf459" category="paragraph">如果您使用的是 Windows 叢集設置，您還應該安裝和設定 Windows 遠端管理 (WinRM)。</block>
 </blocks>

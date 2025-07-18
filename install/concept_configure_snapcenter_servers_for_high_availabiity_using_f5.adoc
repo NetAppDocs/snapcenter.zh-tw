@@ -23,8 +23,6 @@ summary: 使用 F5 ，網路負載平衡或 Amazon Web Services 在 SnapCenter �
 --
 有關使用 F5 負載平衡器設定SnapCenter伺服器以實現高可用性的說明，請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_SnapCenter_Servers_for_high_availability_using_F5_Load_Balancer["如何使用SnapCenter F5負載平衡器設定高可用度的功能"^] 。
 
-映像
-
 您必須是SnapCenter 本機「管理員」群組的成員（除了指派給SnapCenterAdmin角色之外）、才能使用下列Cmdlet來新增和移除F5叢集：
 
 * add-SmServerCluster
