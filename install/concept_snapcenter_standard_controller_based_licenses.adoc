@@ -17,10 +17,10 @@ summary: 如果您使用的是 FAS 、 AFF 或 ASA 儲存控制器、則需要 S
 
 * 隨附於購買Premium或Flash產品組合的標準授權（不含基礎套件）SnapCenter
 * 無限使用儲存設備
-* 可透過 ONTAP 系統管理員或 ONTAP CLI 將其直接新增至 FAS ， AFF 或 ASA 儲存控制器。
+* 使用ONTAP系統管理器或ONTAP CLI 直接加入到FAS、 AFF或ASA儲存控制器。
 +
 
-NOTE: 您不需要在SnapCenter 「介紹GUI」中輸入SnapCenter 任何授權資訊、以取得以控制器為基礎的授權。
+NOTE: 您無需在SnapCenter使用者介面中輸入基於SnapCenter控制器的授權的任何授權資訊。
 
 * 鎖定至控制器的序號
 
@@ -31,10 +31,10 @@ NOTE: 您不需要在SnapCenter 「介紹GUI」中輸入SnapCenter 任何授權�
 
 == 步驟 1 ：確認是否已安裝 SnapManager 套件授權
 
-您可以使用 SnapCenter GUI 來檢視 SnapManager 套件授權是安裝在 FAS 、 AFF 或 ASA 主儲存系統上、並識別哪些儲存系統可能需要 SnapManager 套件授權。SnapManager 套件授權僅適用於主要儲存系統上的 FAS 、 AFF 和 ASA SVM 或叢集。
+您可以使用SnapCenter使用者介面檢查FAS、 AFF或ASA主儲存系統上是否安裝了SnapManager Suite 許可證，並確定哪些系統需要許可證。  SnapManager Suite 授權僅適用於主儲存系統上的FAS、 AFF和ASA SVM 或叢集。
 
 
-NOTE: 如果SnapManager 您的控制器上已經有一個用作支援的版本、SnapCenter 則會自動提供以支援控制器為基礎的支援服務。SnapManagerSuite授權和SnapCenter 以控制器為基礎的SESS-授權名稱可互換使用、但它們指的是相同的授權。
+NOTE: 如果您的控制器上已有SnapManager Suite 許可證， SnapCenter會自動提供基於標準控制器的授權授權。  SnapManagerSuite 授權和基於SnapCenter Standard 控制器的授權這兩個名稱可以互換使用，但它們指的是同一個授權。
 
 .步驟
 . 在左導覽窗格中、選取 * 儲存系統 * 。
@@ -66,11 +66,11 @@ NOTE: 如果SnapManager 您的控制器上已經有一個用作支援的版本�
 您可以使用ONTAP 效益指令列來檢視控制器上安裝的所有授權。您應該是 FAS 、 AFF 或 ASA 系統上的叢集管理員。
 
 
-NOTE: 以控制器為基礎的「以程式控制器為基礎」授權會顯示為SnapManagerSuite授權。SnapCenter
+NOTE: 控制器將基於SnapCenter Standard 控制器的授權顯示為 SnapManagerSuite 授權。
 
 .步驟
 . 使用ONTAP flexfline命令列登入NetApp控制器。
-. 輸入license show命令、然後檢視輸出以判斷是否已安裝SnapManagerSuite授權。
+. 輸入 license show 命令，然後查看輸出以查看是否已安裝 SnapManagerSuite 授權。
 +
 .輸出範例
 [%collapsible]
@@ -110,7 +110,7 @@ SnapManagerSuite  license  SnapManagerSuite License -
 
 == 步驟 3 ：擷取控制器序號
 
-您需要有控制器序號、才能擷取控制器型授權的序號。您可以使用ONTAP 下列命令列擷取控制器序號：您應該是 FAS 、 AFF 或 ASA 系統上的叢集管理員。
+使用ONTAP命令列取得控制器序號。您必須是FAS、 AFF或ASA系統上的叢集管理員才能取得基於控制器的許可證序號。
 
 .步驟
 . 使用ONTAP flexfline命令列登入控制器。
@@ -162,12 +162,12 @@ All-Flash Optimized: false
 
 == 步驟 4 ：擷取控制器型授權的序號
 
-如果您使用的是 FAS ， ASA 或 AFF 儲存設備，您可以先從 NetApp 支援網站擷取 SnapCenter 控制器型授權，然後再使用 ONTAP 命令列進行安裝。
+如果您使用的是FAS、 ASA或AFF存儲，則可以先從NetApp支援站點擷取基於SnapCenter控制器的許可證，然後再使用ONTAP命令列進行安裝。
 
 .開始之前
 * 您應該擁有有效的NetApp支援網站登入認證資料。
 +
-如果您未輸入有效的認證資料、則不會傳回任何資訊供您搜尋。
+如果您沒有輸入有效的憑證，系統將不會傳回任何有關您搜尋的資訊。
 
 * 您應該有控制器序號。
 
@@ -220,7 +220,7 @@ image::../media/nss_controller_license_select.gif[選擇條件和序號輸入的
 
 == 步驟 6 ：移除試用授權
 
-如果您使用的SnapCenter 是以控制器為基礎的VMware認證、而且需要移除容量型試用授權（以「50」結尾的序號）、您應該使用MySQL命令手動移除試用版授權。試用版授權無法使用SnapCenter VMware GUI刪除。
+如果您正在使用基於控制器的SnapCenter標準許可證，並且需要刪除基於容量的試用許可證（序號以「50」結尾），則應使用 MySQL 命令手動刪除試用許可證。無法使用SnapCenter使用者介面刪除試用許可證。
 
 
 NOTE: 只有在使用SnapCenter 以VMware控制器為基礎的授權時、才需要手動移除試用授權。
@@ -228,10 +228,10 @@ NOTE: 只有在使用SnapCenter 以VMware控制器為基礎的授權時、才需
 .步驟
 . 在伺服SnapCenter 器上、開啟PowerShell視窗以重設MySQL密碼。
 +
-.. 執行Open-SmConnection Cmdlet、針對SnapCenter SnapCenterAdmin帳戶、啟動與該伺服器的連線工作階段。
+.. 執行 Open-SmConnection cmdlet 為 SnapCenterAdmin 帳戶與SnapCenter伺服器建立連線。
 .. 執行Set-SmRegitoryPassword以重設MySQL密碼。
 +
-如需 Cmdlet 的相關資訊，請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP2886205["《軟件指令程式參考指南》SnapCenter"^]。
+有關 cmdlet 的信息，請參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"^]。
 
 
 
@@ -241,6 +241,6 @@ MySQL會提示您輸入密碼。輸入您在重設密碼時提供的認證資料
 
 . 從資料庫移除試用授權：
 +
-「使用NSM、'Delete from NSM_License、其中NSM_License_Serial_number='510000050'；」
+`use nsm;DELETE FROM nsm_License WHERE nsm_License_Serial_Number='510000050';`
 
 

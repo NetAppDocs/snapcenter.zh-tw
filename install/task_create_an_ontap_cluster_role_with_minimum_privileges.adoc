@@ -25,7 +25,7 @@ NOTE: 您應該針對每個權限重複此命令。
 
 . 建立使用者並將角色指派給該使用者。
 +
-「安全性登入建立-使用者<user_name\>-vserver <cluster名稱\>-應用程式ontapi -auth方法 密碼-role <role名稱\>」
+`security login create -user <user_name\> -vserver <cluster_name\> -application ontapi http -authmethod password -role <role_name\>`
 
 . 解除鎖定使用者。
 +

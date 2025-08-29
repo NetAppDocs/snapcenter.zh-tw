@@ -11,20 +11,20 @@ summary: SnapCenter 軟體是一個簡單，集中且可擴充的平台，可為
 
 
 [role="lead"]
-SnapCenter 軟體是一個簡單，集中且可擴充的平台，可為混合雲中 ONTAP 系統上的應用程式，資料庫，主機檔案系統和 VM 提供應用程式一致的資料保護。
+SnapCenter software是一個簡單、集中且可擴展的平台，用於應用程式一致的資料保護。它保護混合雲中ONTAP系統上的應用程式、資料庫、主機檔案系統和虛擬機器。
 
-利用NetApp Snapshot、功能豐富、FlexClone、SnapMirror和支援技術、提供下列功能：SnapCenter SnapRestore SnapVault
+SnapCenter使用NetApp Snapshot、 SnapRestore、 FlexClone、 SnapMirror和SnapVault技術提供：
 
 * 快速、節省空間、應用程式一致的磁碟型備份
-* 快速、精細的還原、以及應用程式一致的還原
+* 快速、詳細的恢復和應用程式一致的恢復
 * 快速、節省空間的複製
 
 
-包含不支援的伺服器和個別輕量外掛程式。SnapCenter SnapCenter您可以將外掛程式部署自動化至遠端應用程式主機，排程備份，驗證及複製作業，以及監控所有資料保護作業。
+SnapCenter包括SnapCenter伺服器和輕量級插件。您可以自動將外掛程式部署到遠端應用程式主機，安排備份、驗證和複製操作，並監控資料保護操作。
 
-SnapCenter 可以安裝在內部部署或公有雲上，以保護資料。
+您可以在本機或公有雲上安裝SnapCenter來保護資料。
 
-* 內部部署以保護下列項目：
+* 在地保護以下內容：
 +
 ** ONTAP FAS ， AFF 或 ASA 主要系統上的資料，並複寫至 ONTAP FAS ， AFF 或 ASA 次要系統
 ** 資料位於不整系統上ONTAP Select
@@ -32,7 +32,7 @@ SnapCenter 可以安裝在內部部署或公有雲上，以保護資料。
 ** ONTAP ASA R2 主要和次要系統上的資料
 
 
-* 內部部署於混合雲中、以保護下列項目：
+* 在混合雲中本地保護以下內容：
 +
 ** ONTAP FAS 、 AFF 或 ASA 主要系統上的資料、並複寫至 Cloud Volumes ONTAP
 ** 位於 ONTAP FAS 、 AFF 或 ASA 主要和次要系統上、並受雲端物件和歸檔儲存保護的資料（使用 BlueXP 備份和還原整合）
@@ -59,11 +59,11 @@ Microsoft Exchange Server ， Microsoft SQL Server ， Linux 或 AIX 上的 Orac
 
 * 原則型備份
 +
-原則型備份利用 NetApp Snapshot 技術來建立快速、節省空間、應用程式一致、磁碟型的備份。或者、您也可以更新現有的保護關係、將這些備份作業自動化至二線儲存設備。
+基於策略的備份利用NetApp Snapshot 技術來創建快速、節省空間、應用程式一致的基於磁碟的備份。您也可以透過更新現有的保護關係來設定這些備份到二級儲存的自動保護。
 
-* 備份多種資源
+* 多種資源的備份
 +
-您可以使用SnapCenter 資源群組、同時備份同類型的多個資源（應用程式、資料庫或主機檔案系統）。
+您可以使用SnapCenter資源組一次備份相同類型的多個資源（應用程式、資料庫或主機檔案系統）。
 
 * 還原與還原
 +
@@ -71,11 +71,11 @@ Microsoft Exchange Server ， Microsoft SQL Server ， Linux 或 AIX 上的 Orac
 
 * 複製
 +
-提供快速、節省空間、應用程式一致的複製功能、可加速軟體開發。SnapCenter您可以在混合雲中的任何目的地上複製。
+SnapCenter提供快速、節省空間且應用程式一致的克隆。您可以在混合雲中的任何目的地進行複製。
 
-* 單一使用者管理圖形化使用者介面（GUI）
+* 單一使用者管理圖形使用者介面
 +
-SnapCenter 提供一個 GUI ，是單一的一站式介面，用於管理混合雲中任何目的地的資源備份和複本。
+SnapCenter提供單一介面來管理任何混合雲目標中的備份和複製。
 
 * REST API、Windows Cmdlet、UNIX命令
 +
@@ -96,7 +96,7 @@ SnapCenter 提供 REST API ，可用於大多數功能，以整合任何協調�
 
 == SnapCenter 架構與元件
 
-SnapCenter 平台是以多層架構為基礎，其中包含集中式管理伺服器和外掛式主機。支援多站台資料中心。SnapCenterSnapCenter 伺服器主機和外掛主機可以位於不同的地理位置。
+SnapCenter採用分層設計，包含中央管理伺服器和插件主機。伺服器和插件主機可以位於不同的位置。
 
 image::../media/saphana-br-scs-image6.png[此圖顯示輸入 / 輸出對話方塊或表示寫入內容]
 
@@ -108,7 +108,7 @@ SnapCenter 包括 SnapCenter 伺服器，適用於 Windows 的 SnapCenter 外掛
 
 SnapCenter 伺服器支援 Microsoft Windows 和 Linux （ RHEL 8.x ， RHEL 9.x ， SLES 15 SP5 ）作業系統。SnapCenter 伺服器包含 Web 伺服器，集中式 HTML5 使用者介面， PowerShell Cmdlet ， REST API 及 SnapCenter 儲存庫。
 
-支援使用HTTPS的支援伺服器和外掛程式與主機代理程式通訊。SnapCenter關於功能的資訊SnapCenter 會儲存在SnapCenter 資訊庫中。
+SnapCenter將其操作的相關資訊儲存在SnapCenter儲存庫中。
 
 
 
@@ -287,9 +287,9 @@ Linux或Windows
 Linux或Windows
 
 |===
-VMware vSphere的支援VMware vSphere的VMware vCenter外掛程式可支援虛擬機器（VM）、資料存放區和虛擬機器磁碟（VMDK）的損毀一致與VM一致的備份與還原作業、並支援以應用程式為特定的外掛程式、以保護虛擬化資料庫和檔案系統的應用程式一致備份與還原作業。SnapCenter SnapCenter
+SnapCenter Plug-in for VMware vSphere支援虛擬機器 (VM)、資料儲存庫和虛擬機器磁碟 (VMDK) 的崩潰一致性和 VM 一致性備份和還原作業。它還支援虛擬化資料庫和檔案系統的應用程式一致的備份和復原作業。
 
-如果您的資料庫或檔案系統儲存在 VM 上，或者您想要保護 VM 和資料存放區，則必須部署適用於 VMware vSphere 虛擬應用裝置的 SnapCenter 外掛程式。如需相關資訊、請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["VMware vSphere文件的VMware外掛程式SnapCenter"^]。
+若要保護資料庫、檔案系統、虛擬機器或虛擬機器上的資料儲存區，請部署SnapCenter Plug-in for VMware vSphere。欲了解詳細信息，請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["VMware vSphere文件的VMware外掛程式SnapCenter"^]。
 
 
 
@@ -297,9 +297,9 @@ VMware vSphere的支援VMware vSphere的VMware vCenter外掛程式可支援虛�
 
 此系統庫有時也稱為NSM資料庫、可儲存每個環節的資訊和中繼資料。SnapCenter SnapCenter
 
-MySQL Server儲存庫資料庫預設會在您安裝SnapCenter 此伺服器時安裝。如果已經安裝MySQL Server、而且您正在執行SnapCenter 全新安裝的功能、則應該解除安裝MySQL Server。
+SnapCenter Server 安裝預設安裝 MySQL Server 儲存庫資料庫。如果您已經安裝了 MySQL Server 並且想要執行SnapCenter Server 的全新安裝，則必須解除安裝 MySQL Server。
 
-支援MySQL Server 8.0.37或更新版本作為不支援的儲存庫資料庫。SnapCenter SnapCenter如果您使用舊版的MySQL Server搭配舊版SnapCenter 的功能、SnapCenter 在進行更新時、MySQL Server會升級至8.0.37或更新版本。
+SnapCenter支援 MySQL Server 8.0.37 或更高版本作為SnapCenter儲存庫資料庫。如果您將早期版本的 MySQL Server 與早期版本的SnapCenter一起使用，則SnapCenter升級程序會將 MySQL Server 升級至版本 8.0.37 或更高版本。
 
 此產品庫儲存下列資訊和中繼資料：SnapCenter
 
