@@ -214,48 +214,33 @@ NOTE: 如果您排定在上午2：00、則在夏令時間（Dst）期間不會�
 +
 ... 若要指定要保留的快照數目，請選取 * 要保留的複本 * 。
 ... 如果快照數量超過指定數量、則會先刪除最舊的複本、然後刪除快照。
-
-
-
-
-
-
++
 
 IMPORTANT: 根據預設、保留計數的值設為2。如果將保留計數設為 1 、則保留作業可能會失敗、因為第一個快照是 SnapVault 關係的參考快照、直到較新的快照複寫到目標為止。
 
++
 
 NOTE: 最大保留值為 1018 。如果將保留設定為高於基礎 NetApp ONTAP 版本所支援的值，備份將會失敗。
+
+
+
+
+
+
 
 . 保留快照的時間長度
 +
 .. 如果您想要指定在刪除快照之前保留快照的天數，請選取 * 保留複本 * 。
 
 
-. 如果您要指定主要快照複本鎖定期間，請選取 * 主要快照複本鎖定期間 * ，然後選取天，月或年。
+. 選擇*Snapshot 副本鎖定期限*並指定天、月或年的持續時間。
 +
 SnapLock 保留期應少於 100 年。
 
-. 如果您要指定次要快照複本鎖定期間，請選取 * 次要快照複本鎖定期間 * ，然後選取天，月或年。
-+
-此範例將記錄快照保留設定為 2 ：
-
-+
-.範例
-[]
-====
-Set-SmPolicy -PolicyName 'newpol' -PolicyType 'Backup' -PluginPolicyType 'SSQL' -sqlbackuptype 'FullBackupAndLogBackup' -RetentionSettings @{BackupType='Data';ScheduleType='Hour';RetentionschedulerCount=2}@{BackupType='Log_ScheduleType=Retenthoure2;RetenteType='Type='LogOnClinthouring@'
-
-====
-+
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_retains_Snapshot_copies_of_the_database["可保留資料庫的Snapshot複本SnapCenter"]
-
-. 選取 Snapshot 標籤
-+
-根據您選取的 Snapshot 標籤、 ONTAP 會套用符合標籤的次要 Snapshot 保留原則。
-
+. 選取原則標籤。
 +
 
-NOTE: 如果您在建立本機Snapshot複本之後選擇*更新SnapMirror、您可以選擇性地指定次要原則標籤。不過、如果SnapVault 您在建立本機Snapshot複本*之後選擇*更新SUpdate、則應指定次要原則標籤。
+NOTE: 您可以為遠端複製的主快照指派SnapMirror標籤，從而允許主快照將快照複製作業從SnapCenter卸載到ONTAP二級系統。無需在策略頁面中啟用SnapMirror或SnapVault選項即可完成此操作。
 
 
 
@@ -264,10 +249,6 @@ NOTE: 如果您在建立本機Snapshot複本之後選擇*更新SnapMirror、您�
 == 步驟 7 ：設定次要複寫選項
 
 . 在 [ 選取次要複寫選項 ] 區段中，選取下列其中一個或兩個次要複寫選項：
-+
-
-NOTE: 您必須為 * 次快照複本鎖定期間 * 選取次要複寫選項，才能生效。
-
 
 
 [role="tabbed-block"]

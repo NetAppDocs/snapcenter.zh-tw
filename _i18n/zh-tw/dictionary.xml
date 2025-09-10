@@ -1527,7 +1527,6 @@
   <block id="993129239b6168608f9de64f4e71982a" category="paragraph">選取此選項可將備份集的鏡射複本保留在另一個磁碟區（SnapMirror）上。</block>
   <block id="5599318ff76ac470ccc995aab6f33577" category="paragraph">建立本機Snapshot複本後再更新SnapVault</block>
   <block id="74634d46f4094928b9a2dbffb638ae7f" category="paragraph">選取此選項以執行磁碟對磁碟備份複寫。</block>
-  <block id="58d70fc926069f010ab51ffa86e123d8" category="paragraph">次要原則標籤</block>
   <block id="e64e99351ad3ec8079ffd2d91fbd7f12" category="paragraph">重試次數錯誤</block>
   <block id="39007747bb71ef47183e492e75b22469" category="paragraph">輸入在程序停止之前應進行的複寫嘗試次數。</block>
   <block id="8a24b0ef145ce6b12a15abff3b19d28f" category="list-text">在「指令碼」頁面中、分別輸入備份作業之前或之後應執行的指令碼或指令碼路徑和引數。</block>
@@ -3220,7 +3219,6 @@
   <block id="57af7cc9669227d9ac6afec5db802561" category="paragraph">選取*從所有目的地刪除歸檔記錄*。</block>
   <block id="be859d432cb8f72f5fb9b4c1622d56b1" category="paragraph">從備份的記錄目的地刪除歸檔記錄</block>
   <block id="3330083979ff2e07d7e4609ee2228f08" category="paragraph">選取*從備份的目的地刪除歸檔記錄*。</block>
-  <block id="9696f79f02f1b72ee2751fa3ac8cee1b" category="admonition">只有在您選擇歸檔記錄檔做為備份的一部分時、才能保留歸檔記錄備份。</block>
   <block id="92690dd16a9c4d48908bc7f3eaf042ac" category="list-text">在「指令碼」頁面中、分別輸入您要在備份作業之前或之後執行的指令碼或指令碼路徑和引數。</block>
   <block id="ffb3ae9f69a62e97d1deccf8e6b8f1ff" category="paragraph">您必須將預先編寫的內容和指令碼儲存在_/var/opt/snapcenter/spl/scripts_或此路徑內的任何資料夾中。依預設、會填入_/var/opt/snapcenter/spl/scripts_路徑。如果您在此路徑中建立任何資料夾來儲存指令碼、則必須在路徑中指定這些資料夾。</block>
   <block id="1b4b1a8701700f9bb0245d7c920ebd16" category="paragraph">您也可以指定指令碼逾時值。預設值為60秒。</block>
@@ -5341,8 +5339,6 @@
   <block id="95f62fbbdd8b59bc3cdee3bd3e382046" category="admonition">在叢集組態中、備份會根據原則中設定的保留設定保留在叢集的每個節點上。如果AG的擁有者節點變更、則會根據保留設定進行備份、並保留先前擁有者節點的備份。AG保留僅適用於節點層級。</block>
   <block id="1947481e76eb40f4adf8f5246fa95ff6" category="admonition">您可以在建立資源群組時、指定備份作業的排程（開始日期、結束日期和頻率）。這可讓您建立共用相同原則和備份頻率的資源群組、但可讓您為每個原則指派不同的備份排程。</block>
   <block id="9bbf41d74c8f89f293d3299ea7bebf83" category="paragraph">選取*保留記錄備份適用於上次的完整備份天數*選項、並指定保留記錄備份複本的天數。</block>
-  <block id="f2d35fb96ac070e63c88b1b43cf8c70b" category="inline-link">可保留資料庫的Snapshot複本SnapCenter</block>
-  <block id="96df6a4d32e4546cfd055ffa3e9a7097" category="paragraph"><block ref="96df6a4d32e4546cfd055ffa3e9a7097" category="inline-link-rx"></block></block>
   <block id="aec87100b169f0f2c41c04f01deccfff" category="list-text">在「執行下列備份排程驗證」區段中、選取排程頻率。</block>
   <block id="78b5b7c604c7bf8d28d141a67b26385f" category="list-text">在Database Consistency Check options（資料庫一致性檢查選項）區段中、執行下列動作：</block>
   <block id="369cd91c3e11b99e6fa5850b92b3090a" category="paragraph">將完整性結構限制為資料庫的實體結構（僅限實體）</block>
@@ -6551,8 +6547,6 @@
   <block id="619f22faf39c2dfe9a11af29647bb1a6" category="list-text">選取*保留記錄備份適用於最後的&lt;number&gt;天*選項、然後指定保留天數。如果您接近此限制、可能會想要刪除舊版複本。</block>
   <block id="fe9e179b8597c5b1e7f1e2ff0644a5c8" category="open-title">特定天數</block>
   <block id="82c2224d099110596a9863d056598afe" category="paragraph">將備份複本保留一段特定天數。</block>
-  <block id="92ac5fc0212c94ee50e6dc85913caeec" category="example-title">範例</block>
-  <block id="8047dd542f0833c625160d18deaef831" category="paragraph">Set-SmPolicy -PolicyName 'newpol' -PolicyType 'Backup' -PluginPolicyType 'SSQL' -sqlbackuptype 'FullBackupAndLogBackup' -RetentionSettings @{BackupType='Data';ScheduleType='Hour';RetentionschedulerCount=2}@{BackupType='Log_ScheduleType=Retenthoure2;RetenteType='Type='LogOnClinthouring@'</block>
   <block id="df5624cba097e4a1613f2162cfe02d72" category="open-title">更新 SnapMirror</block>
   <block id="4fbf861fa73d7c46a9d919de9dba7f88" category="paragraph">在建立本機 Snapshot 複本之後更新 SnapMirror 。</block>
   <block id="721dcaba6ffe06898a1264f811fd7874" category="open-title">更新 SnapVault</block>
@@ -7035,7 +7029,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="7389de2f41b1c6eb64e4d894ab05e286" category="paragraph">當 SnapLock 僅在「 SnapLock 資料保險箱」的次要 ONTAP 上設定時、按一下「拓撲」頁面中的「 * 重新整理 * 」按鈕、即可重新整理從 ONTAP 擷取的次要裝置上的鎖定期間。</block>
   <block id="d5d1fb88800eaa5cdf83e2dae3c93633" category="inline-link">將Snapshot複本提交至保存目的地上的WORM</block>
   <block id="64c2ad2359ef41b8550053e63b4db5d2" category="paragraph">如需 SnapLock Vault 的詳細資訊、請參閱<block ref="8b200d34c0f23901ee8d0559f7380d4b" category="inline-link-rx"></block></block>
-  <block id="86b78accb82bf0596de946657114e7dd" category="paragraph">選取 Snapshot 複本鎖定期間、然後選取天、月或年。</block>
   <block id="cad9d181a2b84fefcf0bef1326b5660c" category="paragraph">在次要複寫期間、 SnapLock 到期時間會載入主要 SnapLock 到期時間。</block>
   <block id="08ec8ae585abf03648f1d4e2cb173c27" category="paragraph">按一下「拓撲」頁面中的 * 重新整理 * 按鈕、即可重新整理從 ONTAP 擷取的次要和主要 SnapLock 到期時間。</block>
   <block id="40b141d81ebc81d0277454ddd95983be" category="paragraph">在隨需備份之後、按一下 * 重新整理 * 按鈕可重新整理備份或複製的詳細資料。</block>
@@ -7506,12 +7499,9 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="4fcec4fe97075a54e91b04a9e79f56ff" category="list-text">指定 Snapshot 鎖定期間可防止在保留期間到期之前刪除 Snapshot 。這可能會導致保留的快照數量超過原則中指定的數量。</block>
   <block id="f2c85d871e7c5ae1520349e8a3869fea" category="list-text">對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
   <block id="cee00ab879a477aea09f4b1f404b14fc" category="paragraph">保留一定數量的快照</block>
-  <block id="b19465911649130b0ad9e7ed87b43f2f" category="paragraph">選取 * 要保留的 Snapshot 複本總數 * 、然後指定要保留的 Snapshot 數。</block>
   <block id="7537e0d42ad63b5bae18964aee575640" category="paragraph">如果快照數量超過指定數量、則會先刪除最舊的複本、然後刪除快照。</block>
   <block id="95dfd611f9419ea2abdea4d84377aeab" category="admonition">如果您打算啟用SnapVault 此功能、則必須將保留數設為2或更高。如果將保留計數設為 1 、則保留作業可能會失敗、因為第一個 Snapshot 是 SnapVault 關係的參考 Snapshot 、直到較新的 Snapshot 複寫到目標為止。</block>
   <block id="298d4bea409e146b0187ec130a39fb72" category="paragraph">將快照保留一定天數</block>
-  <block id="e736f4106d35f31cff1a51f091e56c06" category="paragraph">選取 * 保留 Snapshot 複本 * 、然後指定您要保留 Snapshot 的天數、再將其刪除。</block>
-  <block id="7cd1d77689881addd5facf23970563df" category="paragraph">選取 Snapshot 鎖定期間、然後選取天、月或年。</block>
   <block id="7630e21f8142849489483b7354d0643a" category="paragraph">如果 ONTAP 中的保護關係類型為鏡射和資料保險箱、且您只選取此選項、則在主要節點上建立的 Snapshot 不會傳輸至目的地、但會列在目的地中。如果從目的地選取此 Snapshot 以執行還原作業、則會顯示下列錯誤訊息：次要位置無法用於所選的保存 / 鏡射備份。</block>
   <block id="d2f577cb0769d7c31f2785dd590b9f27" category="paragraph">如需 SnapLock 資料保險箱的詳細資訊、請參閱在資料保險箱上將快照提交至 WORM
 目的地</block>
@@ -7566,7 +7556,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="40e1269ad4c969b2e34a183b8fe9f42e" category="list-text">輸入應為每個 Snapshot 備份的資料庫數目上限。
 預設值為 100</block>
   <block id="8822b1db0297028652e02db3e4af760f" category="paragraph">僅保留特定數量的快照。</block>
-  <block id="149450cb3a9e3ecae5eaba7a4573516f" category="paragraph">根據您選取的 Snapshot 標籤、 ONTAP 會套用符合標籤的次要 Snapshot 保留原則。</block>
   <block id="dccc8011e6f51f002aae83ff00479c7d" category="admonition">您必須在 ONTAP 中設定 SnapMirror 保留原則、使次要儲存設備不會達到快照的最大限制。</block>
   <block id="610559e33fd2c1c02990a8421918d746" category="list-text">限制檢查並取得鎖定、而非使用內部資料庫 Snapshot （ TABLOCK ）</block>
   <block id="3ec8d83deb8081e2273aae284a9a87c1" category="list-text">選取 * 限制檢查並取得鎖定、而非使用內部資料庫 Snapshot 複本（ TABLOCK ） * 來限制檢查並取得鎖定、而非使用內部資料庫 Snapshot 。</block>
@@ -7582,7 +7571,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="0bfdfbd1ef58fc826a8deec759820453" category="summary">使用SnapCenter 支援功能來備份SQL Server系統和使用者資料庫時、您必須選擇資源類型、例如資料庫、SQL Server執行個體和可用度群組（AG）。Snapshot 技術可用於建立資源所在磁碟區的線上唯讀複本。</block>
   <block id="b4d3eba987f9528647b8ea2102ac055f" category="paragraph">若要使用SnapCenter 支援功能來備份SQL Server系統和使用者資料庫、您必須選擇資源類型、例如資料庫、SQL Server執行個體和可用度群組（AG）。Snapshot 技術可用於建立資源所在磁碟區的線上唯讀複本。</block>
   <block id="37467ff0195d6765df22bdc34e035d04" category="list-text">如果您要將快照複製到鏡像或資料保險箱次要儲存設備、 SnapCenter 管理員必須將來源和目的地磁碟區的 SVM 指派給您。</block>
-  <block id="099321e862ba2170dc1c3e6b1f02ef72" category="paragraph">對於 ONTAP 9.12.1 及更低版本、從 SnapLock 資料保險箱快照建立的複本作為還原的一部分、將會繼承 SnapLock 資料保險箱到期時間。儲存管理員應在 SnapLock 到期後手動清理複本。</block>
   <block id="1635764350a12c1ff0349008881e57dd" category="paragraph">Snapshot 鎖定期間</block>
   <block id="3c2828ba75d966a57611ae076f53de62" category="paragraph">在建立本機 Snapshot 之後更新 SnapMirror</block>
   <block id="d515aa4634219e7d2319e5e18234ff1a" category="paragraph">建立本機快照後更新 SnapVault</block>
@@ -9039,8 +9027,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="51c4ef6c91626ee6bcba80f0f3a8fd59" category="list-text">在「 Snapshot and Replication 」（快照與複寫）頁面中，執行下列動作。</block>
   <block id="e70a56107961334e45231ff9d5f1bda8" category="list-text">在 Snapshot settings （快照設定）區段中，執行下列動作：</block>
   <block id="d21b6c7742082098834aa7ac817fc423" category="paragraph">選取 * 保留複本 * ，然後指定您要保留快照的天數，再將其刪除。</block>
-  <block id="a37760bcf65acb1e666f7880b234b107" category="paragraph">主要快照複本鎖定期間</block>
-  <block id="8c4df87df7072888db58abdf493c82ba" category="paragraph">如果您要指定主要快照鎖定期間，請選取 Snapshot 複本鎖定期間，然後選取天，月或年。</block>
   <block id="37f001fbef310181d8f4577b4c03a798" category="paragraph">次快照鎖定期間</block>
   <block id="2e37f31a39b30876eff1858ef3d01783" category="paragraph">選取 * 次快照複本鎖定期間 * ，然後選取天，月或年。</block>
   <block id="49d10f32e6045f6eb1e87608c6663036" category="list-text">在 [ 選取次要複寫選項 ] 區段中，選取下列其中一個或兩個次要複寫選項：</block>
@@ -9062,13 +9048,11 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="8945d91112d6305825278287a12463cf" category="list-text">在「 Snapshot and Replication 」（快照與複寫）頁面中，執行下列步驟：</block>
   <block id="26c5fd73c2f414e21745bac4c9061520" category="list-text">在「 Snapshot and Replication 」（快照與複寫）頁面中，指定備份類型的保留設定，以及在「 Backup Type 」（備份類型）頁面中選取的排程類型：</block>
   <block id="eff059db75a3581eefbc224fcb754955" category="paragraph">選取 * 要保留的複本 * ，然後指定要保留的快照數。</block>
-  <block id="75653881b192c0f71e63eff99df780b0" category="paragraph">次 Snapshot 複本鎖定期間</block>
   <block id="ad6c4cefab999b5d3b0c637f45be0c1e" category="list-text">對於 Snapshot 複本型備份，請在 Select secondary replification options （選取次要複寫選項）區段中，選取下列其中一個或兩個次要複寫選項：</block>
   <block id="c0cfc52080e2a067b98e24711aebb894" category="paragraph"><block ref="c0cfc52080e2a067b98e24711aebb894" category="inline-image-macro-rx" type="image"></block></block>
   <block id="90f9660dfd88af9a8e7316dbe773ef8d" category="list-text">在「自訂備份設定」區段中，提供必須以金鑰值格式傳遞至外掛程式的任何特定備份設定。</block>
   <block id="8ec0c5b593d331f0bf00c2469725e303" category="list-text">在 Snapshot settings （快照設定）區段中，指定備份類型的保留設定，以及在 * Backup Type* （備份類型 * ）頁面中選取的排程類型：</block>
   <block id="b794f07b4da865ba0ea5b2e45e40e2d7" category="list-text">選取原則標籤。</block>
-  <block id="d8321bde9335ee452a7c54b922588669" category="paragraph">根據您選取的原則標籤， ONTAP 會套用符合標籤的次要 Snapshot 保留原則。</block>
   <block id="40760df99ad1881cc4099caa2853c64b" category="inline-link-macro">在「拓撲」頁面中檢視與 MySQL 資源相關的備份和複本</block>
   <block id="81a788b178a1784f4d3b3c98f0a5c0fd" category="paragraph">請參閱。 <block ref="6710edbd3b148f1744e483f97807e560" category="inline-link-macro-rx"></block></block>
   <block id="c708e7888448bf0b8b9020a354adbf4d" category="doc">在 ASA R2 系統上建立資源群組，並啟用 MySQL 資源的次要保護</block>
@@ -9095,7 +9079,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="5c72942e47dd59d535a0243e01b915c5" category="paragraph">您可以在搜尋方塊中輸入資源群組名稱、或按一下 * * 、然後選取標記、以搜尋資源群組<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>。然後按一下 *<block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>即可關閉篩選窗格。</block>
   <block id="75dd626c2900bf0ae903a1af9ff5bb4d" category="list-text">在「備份類型與複寫」頁面中，執行下列步驟：</block>
   <block id="66e5ec1722ee55d19932c5bc96d7c5c3" category="list-text">選取原則標籤。</block>
-  <block id="5a448dc3de839f6ccafc3c5c79832c90" category="admonition">您必須為 * 次快照複本鎖定期間 * 選取次要複寫選項，才能生效。「保留」頁面提供 * 次快照複本鎖定期間 * 選項。</block>
   <block id="41b7523d6eb2b3d6f06599d202b36bc2" category="paragraph">主快照鎖定期間</block>
   <block id="bdb12321d80003b575f05b8f7554d39f" category="paragraph">選取 * 主要快照複本鎖定期間 * ，然後選取天，月或年。</block>
   <block id="a76a81f87730cc587fdae2f40fc9d18b" category="paragraph">按一下 <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> 並選取主機名稱和 Exchange Server 以篩選資源。接著您可以按一下 <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> 以關閉篩選窗格。</block>
@@ -9132,8 +9115,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="1524074fad20a78ac464c12b7c0ab1be" category="paragraph"><block ref="1524074fad20a78ac464c12b7c0ab1be" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5116143fc568cf90dd6d42f66fce7458" category="list-text">在「 Snapshot and Replication 」（快照與複寫）頁面中，執行下列步驟：</block>
   <block id="eb1d9d00c6e807619cab9ea37bcf137a" category="list-text">在「資料快照保留設定」區段中，指定備份類型的保留設定，以及在「備份類型」頁面中選取的排程類型：</block>
-  <block id="a5f1bd1f3375b552f48386ca5d05e45a" category="paragraph">如果您要指定主要快照複本鎖定期間，請選取 * 主要快照複本鎖定期間 * ，然後選取天，月或年。</block>
-  <block id="2c1e6867a6e3b711ba7c5a6b89167c44" category="paragraph">如果您要指定次要快照複本鎖定期間，請選取 * 次要快照複本鎖定期間 * ，然後選取天，月或年。</block>
   <block id="218bd996ffd443419d26b630b917d4da" category="list-text">在「歸檔記錄快照保留設定」區段中，指定備份類型的保留設定，以及在「備份類型」頁面中選取的排程類型：</block>
   <block id="17e51acfcdd274bfcfeb54ea63213736" category="list-text">選取原則標籤。</block>
   <block id="e38051a0d9227426e5f8160402a78211" category="paragraph">您可以執行Get-Help命令名稱來取得有關可與命令搭配使用之參數及其說明的資訊。或者、您也可以參閱<block ref="a6987fd1f481831496b6e000c63cd27d" category="inline-link-rx"></block>。</block>
@@ -9165,7 +9146,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="955e59c39a685284fed2337a93e106ba" category="admonition">根據預設、保留計數的值設為2。如果將保留計數設為 1 、則保留作業可能會失敗、因為第一個快照是 SnapVault 關係的參考快照、直到較新的快照複寫到目標為止。</block>
   <block id="de89a185c7194c68782b531cfd26fd28" category="list-text">保留快照的時間長度</block>
   <block id="baf9bfd10581e4153f7ec33ae67cdfc2" category="list-text">如果您想要指定在刪除快照之前保留快照的天數，請選取 * 保留複本 * 。</block>
-  <block id="d2f6ae7e40615559468909d9d4717552" category="list-text">選取 Snapshot 標籤</block>
   <block id="6eeddb49abf2b478b28ef816bcc9d4b5" category="section-title">步驟 7 ：設定次要複寫選項</block>
   <block id="81acf3e2ad702e58e6f17b488f420f60" category="paragraph">請參閱。 <block ref="a3a1de85b36025c39faacf264d5c19f2" category="inline-link-macro-rx"></block></block>
   <block id="ef37f84ddc9d52086dc669514422940b" category="section-title">步驟 8 ：設定指令碼設定</block>
@@ -9178,7 +9158,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="ea64a472e78bd4b210304f394bbe8e3a" category="list-text">按一下 <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block>、然後選取主機名稱和 Unix 檔案系統以篩選資源。</block>
   <block id="fe87c152ea8a027207bc606ca85f3c4c" category="list-text">指定備份設定。</block>
   <block id="9cda14399e82414944fcea8fffd39485" category="list-text">在「保留」頁面中，指定備份類型的保留設定，以及在「備份與複寫」頁面中選取的排程類型：</block>
-  <block id="5f455fba952d07764d32e75250b5ba52" category="paragraph">如果您要指定主要快照鎖定期間，請選取 * 主要快照複本鎖定期間 * ，然後選取天，月或年。</block>
   <block id="68cdec5e109e43073b7bf9bf31a79009" category="doc">在 ASA R2 系統上建立資源群組，並啟用 Windows 檔案系統的次要保護</block>
   <block id="6f939f8b76abcb6333b6300620a5e0f3" category="image-alt">備份工作流程</block>
   <block id="6af63e081593a62ed023786db3b2e4ee" category="paragraph">如果現有原則不符合您的需求、您可以複製現有原則並加以修改、或按一下以啟動原則精靈來建立新原則 <block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block> 。如果現有原則不符合您的需求、您可以複製現有原則並加以修改、或按一下以啟動原則精靈來建立新原則 <block ref="7b8f66898e8dfce6b3b454cf0514c993" category="inline-image-macro-rx" type="image"></block> 。</block>
@@ -9248,7 +9227,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="bf1764b9ff5a6e7b28ab3b2166bff7a4" category="admonition">NetApp ONTAP 支援從次要位置進行就地還原。</block>
   <block id="cdc0da196ab05c60eaebdca9a2459cd1" category="list-text">如需 FlexClone Volume 分割作業的相關資訊，請參閱<block ref="a740171a60876518d945f2e24ddd79f9" category="inline-link-rx"></block></block>
   <block id="dc4d7bf5602b12335597fd5350deab23" category="admonition">最大保留值為 1018 。如果將保留設定為高於基礎 NetApp ONTAP 版本所支援的值，備份將會失敗。</block>
-  <block id="ee96dd48de878c0191d0701d853dd514" category="paragraph">此範例將記錄快照保留設定為 2 ：</block>
   <block id="ab6d9fe11358cebc1d2cc02fa1c47496" category="list-text">請確定您已在 Azure 中建立服務主體。</block>
   <block id="6f346066b074941885d0989051206e4e" category="list-text">請確定您擁有與服務主體相關的租戶 ID ，用戶端 ID 和秘密金鑰。</block>
   <block id="db4af27eace345776f29f9a3dbb3b5ff" category="list-text">租戶 ID 可在 Azure Portal 的「 Entra ID 總覽」頁面上找到。</block>
@@ -9593,4 +9571,17 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="0f6e39c02439e0ed8443edc2be967e14" category="paragraph">有關 cmdlet 的信息，請參閱<block ref="bc822c4319e03a98720e4951c1009810" category="inline-link-rx"></block>。</block>
   <block id="87592b536cbfa9f8d915045e1c7873f1" category="paragraph"><block ref="2c04bf704e48a12576c63de2102c1c43" prefix="" category="inline-code"></block></block>
   <block id="fa091713eff4575bdb9b210ff2415c9c" category="paragraph"><block ref="b883ee9ba55ef21bf483fd5986981580" prefix="" category="inline-code"></block></block>
+  <block id="971b3c1d99a5aa6f2b187690d01d852c" category="paragraph">快照副本鎖定期</block>
+  <block id="6b98a909e75e4d7d49461b7870f270bb" category="paragraph">選擇*Snapshot 副本鎖定期限*並指定天、月或年。</block>
+  <block id="7f9c21c186057efab059e539477e7cb8" category="list-text">指定策略標籤。</block>
+  <block id="2c5bee50fa6fe5f3871c65e5847d0382" category="paragraph">您可以為遠端複製的主快照指派SnapMirror標籤，從而允許主快照將快照複製作業從SnapCenter卸載到ONTAP二級系統。無需在策略頁面中啟用SnapMirror或SnapVault選項即可完成此操作。</block>
+  <block id="4dd3845fa1427b8270fec6409779e3ce" category="paragraph">如果快照數量超過指定數量，則先刪除最舊的快照。</block>
+  <block id="9f4dc04b028094d2b50c905cb66cb584" category="admonition">最大保留值為 1018。如果保留設定的值高於ONTAP版本支援的值，則備份將會失敗。</block>
+  <block id="1df9ce8f8ee70d4668259711a2f20cd1" category="paragraph">選擇*Snapshot 副本鎖定期限*，並指定天、月或年。</block>
+  <block id="83c353dab613896fa690239dff46e104" category="admonition">最大保留值為 1018。如果保留設定的值高於ONTAP版本支援的值，則備份將會失敗。</block>
+  <block id="3300240ffba2f4633a53323d37d6b7e1" category="paragraph">+ 指定快照鎖定期可防止在保留期到期之前刪除快照。這可能導致保留的快照數量超過策略中指定的數量。</block>
+  <block id="dca9965d6a6b336628078d10c70a83d6" category="paragraph">+ 對於ONTAP 9.12.1 及以下版本，作為復原的一部分從SnapLock Vault 快照建立的克隆將繼承SnapLock Vault 到期時間。儲存管理員應在SnapLock到期後手動清理克隆。</block>
+  <block id="bd4112ff24244ca0e669eb1f5a3bae9b" category="paragraph">選擇*Snapshot 副本鎖定期限*並指定天、月或年的持續時間。</block>
+  <block id="4b0801e52b058b04e3451f31a90447e6" category="list-text">選擇*Snapshot 副本鎖定期限*並指定天、月或年的持續時間。</block>
+  <block id="5c2f59b69b9e772c86d6723464bda765" category="paragraph">選擇快照鎖定期限，並指定持續時間（天、月或年）。</block>
 </blocks>
