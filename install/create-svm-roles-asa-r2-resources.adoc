@@ -11,7 +11,7 @@ summary: 如果您在 ASA R2 系統中設定 SVM 以搭配 SanpCenter 使用，�
 
 
 [role="lead"]
-您必須執行數個 ONTAP CLI 命令，才能在 ASA R2 系統中為新的 SVM 使用者建立角色。如果您在 ASA R2 系統中將 SVM 設定為與 SnapCenter 搭配使用，且不想使用 vsadmin 角色，則需要此角色。
+您必須執行多個ONTAP CLI 命令才能在ASA r2 系統中為新的 SVM 使用者建立角色。如果您在ASA r2 系統中設定 SVM 以與SnapCenter一起使用且不想使用 vsadmin 角色，則需要此角色。
 
 *步驟*
 

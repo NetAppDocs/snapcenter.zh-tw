@@ -19,6 +19,18 @@ SnapMirror 主動式同步可讓業務服務持續運作、即使整個站台故
 
 此功能支援的外掛程式包括適用於 SQL Server 的 SnapCenter 外掛程式、適用於 Windows 的 SnapCenter 外掛程式、適用於 Oracle 資料庫的 SnapCenter 外掛程式、適用於 SAP HANA 資料庫的 SnapCenter 外掛程式、適用於 Microsoft Exchange Server 的 SnapCenter 外掛程式、以及適用於 Unix 的 SnapCenter 外掛程式。
 
+安裝SnapCenter伺服器和插件後，您應該啟用SnapCenter的 REST API 來偵測SnapMirror活動同步關係。
+
+* 在SnapCenter伺服器主機上，編輯 _C:\Program Files\ NetApp\SMCore\SMCoreServiceHost.dll.config_ 檔案以將 _IsRestEnabledForStorageConnection_ 參數的值修改為 _true_，然後重新啟動SnapCenter SMCore 服務。
+* 在 Windows 插件主機上：
++
+** 編輯 _C:\Program Files\ NetApp\ SnapCenter\SMCore\SMCoreServiceHost.dll.config_ 文件，將 _IsRestEnabledForStorageConnection_ 參數的值修改為 _true_。
+** 編輯 _C:\Program Files\ NetApp\ SnapCenter\SMCore\SnapDriveService.dll.config_ 文件，將 _IsRestEnabledForStorageConnection_ 參數的值修改為 _true_。
+** 重新啟動SnapCenter SMCore 服務。
+
+
+
+
 
 NOTE: 為了支援主機啟動器在 SnapCenter 中的鄰近性、其值應在 ONTAP 中設定來源或目的地。
 

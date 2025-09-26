@@ -1,28 +1,25 @@
 ---
 permalink: 'release-notes/what"s-new-in-snapcenter61.html' 
 sidebar: sidebar 
-keywords: what is new, features, enhancements, 6.1 
+keywords: what is new, features, enhancements, 6.2 
 summary: 6.1 版的 SnapCenter 軟體包含數項新功能和增強功能。 
 ---
-= SnapCenter 軟體 6.1 的新功能
+= SnapCenter software6.2 中的新增功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-6.1 版的 SnapCenter 軟體包含數項新功能和增強功能。
+SnapCenter software6.2 版本包含以下新功能。
 
 |===
 | 更新 | 說明 
 
 
 | link:../get-started/reference_supported_storage_systems_and_applications.html["支援 ASA R2 系統"]  a| 
-SnapCenter 現在支援 ASA R2 系統，可針對僅限 SAN 的客戶需求，提供簡化的體驗。
+SnapCenter 6.2（伺服器和外掛程式）以及ONTAP 9.17.1 利用分層一致性群組支援在實體系統（Linux 和 Windows）和虛擬機器檔案系統 (VMFS) 上執行的應用程式的主要和次要保護。
 
-
-
-| 支援二次防竄改快照  a| 
-SnapCenter 可讓您指定次要快照的鎖定期間。
+升級至SnapCenter 6.2 和ONTAP 9.17.1 後， SnapCenter會在第一次排程備份期間將平面一致性群組變更為分層一致性群組。
 
 |===

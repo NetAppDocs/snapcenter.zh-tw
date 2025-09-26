@@ -79,7 +79,7 @@ Check Alignment of PHs>`/sccli Get-SmBackup -BackupNamediskGroupname_sid_backupi
 "/sccli Get-Smupde-Backup備份名稱BACKup_name"
 
 +
-您可以執行Get-Help _command_name_來取得可搭配命令使用之參數及其說明的相關資訊。或者、您也可以參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666["《軟件命令參考指南》SnapCenter"^]。
+可以透過執行 Get-Help _command_name_ 來取得有關可與命令一起使用的參數及其描述的資訊。或者，您也可以參考 https://library.netapp.com/ecm/ecm_download_file/ECMLP3359469["《軟件命令參考指南》SnapCenter"^]。
 
 
 

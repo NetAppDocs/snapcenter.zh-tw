@@ -3,13 +3,13 @@ indexpage:
   title: SnapCenter 軟體文件
   keywords: snapcenter server, plug-in, data protection, applications, databases,
     host file systems, VmWare, backup, restore, clone, asa r2
-  lead: SnapCenter 軟體是一個簡單，集中且可擴充的平台，可為混合雲中任何位置的 ONTAP 系統上執行的應用程式，資料庫，主機檔案系統和 VM 提供應用程式一致的資料保護。此文件庫包含
-    6.1 版的資訊。
+  lead: SnapCenter software是一個簡單、集中、可擴展的平台，可為混合雲中任何位置的ONTAP系統上運行的應用程式、資料庫、主機檔案系統和虛擬機器提供應用程式一致的資料保護。該文件庫包含
+    6.2 版本的資訊。
   tiles:
   - title: 開始使用
     links:
     - title: 版本資訊
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467
     - title: 深入瞭解SnapCenter
       url: "/get-started/concept_snapcenter_overview.html"
     - title: ASA r2 系統支援的 SnapCenter 操作
@@ -81,7 +81,7 @@ indexpage:
     - title: Cmdlet參考指南
       url: https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html
     - title: 命令參考指南
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337666
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3359469
     - title: 先前版本SnapCenter 的不適用資料
       url: https://www.netapp.com/data-protection/backup-recovery/snapcenter-backup-management/documentation/#ProseArticleLinkList13
     - title: NetApp知識庫SnapCenter

@@ -21,12 +21,15 @@ summary: 您應該知道支援的儲存系統、應用程式和資料庫。
 * Azure NetApp Files
 * Amazon FSX for NetApp ONTAP 產品
 +
-支援非揮發性記憶體高速（ NVMe ） over Transport Control Protocol （ TCP ）。
+Amazon FSx for NetApp ONTAP支援透過傳輸控制協定 (TCP) 實現的非揮發性記憶體快速傳輸 (NVMe)。
 
 +
 如需Amazon FSX for NetApp ONTAP 功能的相關資訊、請參閱 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP 的支援文件"^]。
 
-* 執行 NetApp ONTAP 9.16.1 的 NetApp ASA R2 系統。
+* 運行NetApp ONTAP 9.16.1 及更高版本的NetApp ASA r2 系統
++
+如果您使用的是SnapCenter Server 6.2 和SnapCenter插件 6.2，則應該使用ONTAP 9.17.1。
+
 
 
 

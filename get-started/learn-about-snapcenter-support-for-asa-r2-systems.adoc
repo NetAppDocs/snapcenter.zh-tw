@@ -11,14 +11,14 @@ summary: 您應該知道支援的儲存系統、應用程式和資料庫。
 
 
 [role="lead"]
-從 SnapCenter 6.1 開始支援 ASA r2 儲存系統。  https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["深入瞭解 ASA R2 系統"]
+從SnapCenter 6.1 開始支援ASA r2 儲存系統。 https://docs.netapp.com/us-en/asa-r2/get-started/learn-about.html["深入瞭解 ASA R2 系統"^] 。
 
-SnapCenter 利用 REST API 在 ASA r2 系統上執行所有操作，而 ASA r2 系統不支援 ZAPI。
+SnapCenter支援在實體系統和虛擬機器檔案系統 (VMFS) 上執行的應用程式的主要保護和次要保護。  SnapCenter使用 REST API 對ASA r2 系統上的所有操作進行操作。  ASA r2 系統不支援 ZAPI。
 
 *SnapCenter for ASA r2 系統支援的操作*
 
-* 透過 VMDK 建立應用程式的主要備份
-* 將一致性群組快照傳輸至次要儲存系統
+* 建立應用程式的主要備份
+* 將分層一致性組快照移至二級儲存系統
 * 將主儲存系統和輔助儲存系統的備份還原到原始主機或備用主機
 +
 ** 使用 VMware vMotion 從主儲存系統和輔助儲存系統進行就地恢復
@@ -26,11 +26,19 @@ SnapCenter 利用 REST API 在 ASA r2 系統上執行所有操作，而 ASA r2 �
 
 
 * 將備份複製到原始主機或備用主機
+* 原始裝置對應（ RDM ）
+* 保護 Oracle 的應用程式捲
+* SAP HANA NDV 保護
+* LockVault
+* SQL插件宿主機日誌目錄二次配置
 
 
-SnapCenter 可以發現或建立 ONTAP 一致性群組。它還可以配置並初始化與目標叢集的 SnapMirror 關係，以提供二級保護。
+SnapCenter發現或建立ONTAP一致性組。它在目標叢集上設定SnapMirror關係以提供二次保護。 https://docs.netapp.com/us-en/ontap/consistency-groups["了解有關ONTAP一致性組的更多信息"^] 。
 
-有關在 ASA r2 系統上為您的應用程式啟用二級保護的信息，請參閱：
+
+NOTE: 升級至SnapCenter 6.2（伺服器和外掛程式）和ONTAP 9.17.1 後， SnapCenter會在第一次排程備份期間將平面一致性群組變更為分層一致性群組。
+
+若要了解如何在ASA r2 系統上為您的應用程式啟用二級保護，請參閱：
 
 * https://docs.netapp.com/us-en/snapcenter/protect-scsql/create-resource-groups-secondary-protection-for-asa-r2-mssql-resources.html["為 Microsoft SQL Server 資源啟用二級保護"]
 * https://docs.netapp.com/us-en/snapcenter/protect-hana/create-resource-groups-secondary-protection-for-asa-r2-hana-resources.html["為 SAP HANA 資源啟用二級保護"]
@@ -44,15 +52,15 @@ SnapCenter 可以發現或建立 ONTAP 一致性群組。它還可以配置並�
 
 *SnapCenter 不支援 ASA r2 系統的操作*
 
-* 原始裝置對應（ RDM ）
-* 適用於 Oracle 的應用程式磁碟區
-* SAP HANA NDV
-* LockVault
 * 防竄改快照
 * 資料量FlexGroup
-* 階層式一致性群組
 * 從 ASA、AFF 或 FAS 儲存系統遷移到 ASA r2 儲存系統
-* 保護混合有 ASA、AFF 或 FAS 資源和 ASA r2 資源的資料庫
+* 使用ASA、 AFF或FAS資源和ASA r2 資源的混合保護資料庫
 * 重新命名快照
-* SQL插件宿主機日誌目錄二次配置
+* Windows 資源配置
+* 如果存在SnapMirror主動同步故障轉移，則提供二級保護
+* 如果啟用了SnapMirror主動同步，則使用非揮發性記憶體快速 (NVMe) 協議
+* 保護在 AIX 上運行的應用程式
+* 技術更新
+* Microsoft SQL 資源的災難復原
 

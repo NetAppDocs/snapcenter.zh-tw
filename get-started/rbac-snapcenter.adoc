@@ -11,18 +11,18 @@ summary: 以角色為基礎的存取控制（RBAC）和權限功能可讓管理�
 
 
 [role="lead"]
-以角色為基礎的存取控制（RBAC）和權限功能可讓管理員將對各種資源的控制權委派給不同的使用者或使用者群組。SnapCenter ONTAP SnapCenter SnapCenter這項集中管理的存取功能可讓應用程式管理員在委派的環境中安全地工作。
+SnapCenter基於角色的存取控制 (RBAC) 和ONTAP權限允許SnapCenter管理員向使用者或群組指派資源存取權。這種集中管理的存取使應用程式管理員能夠在指定環境中安全地工作。
 
-您可以隨時建立及修改角色，並將資源存取權新增至使用者。不過，當您第一次設定 SnapCenter 時，至少應將 Active Directory 使用者或群組新增至角色，然後將資源存取權新增至這些使用者或群組。
+您應該建立或修改角色並為使用者新增資源存取權。首次設定SnapCenter時，將 Active Directory 使用者或群組新增至角色並將資源指派給這些使用者或群組。
 
 
-NOTE: 您無法使用SnapCenter 無法建立使用者或群組帳戶。您應該在作業系統或資料庫的Active Directory中建立使用者或群組帳戶。
+NOTE: SnapCenter不會建立使用者或群組帳戶。在作業系統或資料庫的 Active Directory 中建立使用者或群組帳戶。
 
 
 
 == SnapCenter 中的 RBAC 類型
 
-使用下列類型的角色型存取控制：SnapCenter
+SnapCenter支援以下類型的角色為基礎的存取控制：
 
 * RBAC SnapCenter
 * 應用程式層級RBAC
@@ -34,7 +34,7 @@ NOTE: 您無法使用SnapCenter 無法建立使用者或群組帳戶。您應該
 
 === RBAC SnapCenter
 
-SnapCenter 具有預先定義的角色，您可以將使用者或使用者群組指派給這些角色。預先定義的角色為：
+SnapCenter具有預先定義的角色，您可以將使用者或群組指派給這些角色。
 
 * 系統管理員角色SnapCenter
 * 應用程式備份與複製管理員角色
@@ -42,16 +42,16 @@ SnapCenter 具有預先定義的角色，您可以將使用者或使用者群組
 * 基礎架構管理員角色
 
 
-當您將角色指派給使用者時，只有與該使用者相關的工作會顯示在「工作」頁面中，除非您已指派 SnapCenterAdmin 角色。
+當您為使用者指派角色時， SnapCenter會在「作業」頁面上顯示與該使用者相關的作業，除非該使用者有 SnapCenterAdmin 角色。
 
 您也可以建立新角色、並管理權限和使用者。您可以指派權限給使用者或群組、以存取SnapCenter 諸如主機、儲存連線和資源群組等物件。
 
 您可以將RBAC權限指派給同一個樹系中的使用者和群組、以及屬於不同樹系的使用者。您無法將RBAC權限指派給跨樹系屬於巢狀群組的使用者。
 
 
-NOTE: 如果您建立自訂角色，則必須包含 SnapCenterAdmin 角色的所有權限。如果您只複製部分權限、例如「主機新增」或「主機移除」、就無法執行這些作業。
+NOTE: 建立自訂角色時，請確保它包含 SnapCenterAdmin 角色的所有權限。如果您僅複製部分權限， SnapCenter將阻止您執行所有操作。
 
-使用者必須在登入期間、透過圖形使用者介面（GUI）或使用PowerShell Cmdlet來提供驗證。如果使用者是多個角色的成員、則在輸入登入認證之後、系統會提示使用者指定想要使用的角色。使用者也必須提供驗證、才能執行API。
+使用者透過使用者介面或 PowerShell cmdlet 登入時必須進行身份驗證。如果使用者有多個角色，則登入後選擇一個角色。運行 API 也需要身份驗證。
 
 
 
@@ -59,9 +59,9 @@ NOTE: 如果您建立自訂角色，則必須包含 SnapCenterAdmin 角色的所
 
 使用認證資料來驗證獲授權的使用者是否也擁有應用程式層級的權限。SnapCenter SnapCenter
 
-例如，如果您要在 SQL Server 環境中執行資料保護作業，則必須使用適當的 Windows 或 SQL 認證來設定認證。此伺服器SnapCenter 會使用任一種方法驗證認證集。如果您想要在 ONTAP 儲存設備上的 Windows 檔案系統環境中執行資料保護作業，則 SnapCenter 管理員角色必須在 Windows 主機上具有管理 Privileges 。
+例如，若要在 SQL Server 環境中執行資料保護操作，請設定正確的 Windows 或 SQL 憑證。如果要在ONTAP儲存上的 Windows 檔案系統環境中執行資料保護操作， SnapCenter管理員角色必須在 Windows 主機上具有管理員權限。
 
-同樣地、如果您要在Oracle資料庫上執行資料保護作業、而且資料庫主機中的作業系統（OS）驗證已停用、則必須使用Oracle資料庫或Oracle ASM認證來設定認證資料。根據作業情況、此伺服器會使用下列其中一種方法來驗證認證集。SnapCenter
+同樣，如果您想在 Oracle 資料庫上執行資料保護操作，並且如果資料庫主機上停用了作業系統 (OS) 驗證，則必須使用 Oracle 資料庫或 Oracle ASM 憑證設定憑證。  SnapCenter伺服器根據操作使用其中一種方法對設定的憑證進行身份驗證。
 
 
 
@@ -69,11 +69,8 @@ NOTE: 如果您建立自訂角色，則必須包含 SnapCenterAdmin 角色的所
 
 如果您使用SnapCenter VMware vCenter外掛程式來提供VM一致的資料保護、vCenter Server會提供額外的RBAC層級。SnapCenter VMware 外掛程式支援 vCenter Server RBAC 和 ONTAP RBAC 。 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_types_of_rbac_for_snapcenter_users.html["深入瞭解"^]
 
-|===
+注意： NetApp建議您為SnapCenter Plug-in for VMware vSphere建立ONTAP角色，並為其指派所有必要的權限。
 
-
-| *最佳實務做法：* NetApp建議您為ONTAP VMware vSphere作業建立一個適用於SnapCenter VMware vSphere的解決方案、並指派所有必要的權限給它。 
-|===
 
 
 === 權限ONTAP
@@ -84,9 +81,9 @@ NOTE: 如果您建立自訂角色，則必須包含 SnapCenterAdmin 角色的所
 
 == 指派給預先定義的 SnapCenter 角色的權限
 
-將使用者新增至角色時、您必須指派StorageConnection權限以啟用儲存虛擬機器（SVM）通訊、或指派SVM給使用者、以啟用使用SVM的權限。儲存連線權限可讓使用者建立SVM連線。
+將使用者新增至角色時，指派 StorageConnection 權限以啟用儲存虛擬機器 (SVM) 通信，或將 SVM 指派給使用者以授予使用 SVM 的權限。儲存連線權限允許使用者建立 SVM 連線。
 
-例如、具有SnapCenter 「管理員」角色的使用者可以建立SVM連線、並將其指派給具有「應用程式備份與複製管理」角色的使用者、此角色預設無權建立或編輯SVM連線。如果沒有SVM連線、使用者將無法完成任何備份、複製或還原作業。
+例如， SnapCenter管理員可以建立 SVM 連線並將其指派給 App Backup 和 Clone Admin 用戶，而這些用戶無法建立或編輯 SVM 連線。如果沒有 SVM 連接，使用者就無法執行備份、複製或復原作業。
 
 
 
@@ -376,7 +373,7 @@ NOTE: 如果您建立自訂角色，則必須包含 SnapCenterAdmin 角色的所
 
 === 備份與複製檢視器角色
 
-「備份與複製檢視器」角色具有所有權限的唯讀檢視。此角色也具備探索、報告及儀表板存取權限。
+備份和克隆查看者角色具有所有權限的唯讀檢視。此角色還具有發現、報告和存取儀表板的權限。
 
 |===
 | 權限 | 已啟用 | 建立 | 讀取 | 更新 | 刪除 
