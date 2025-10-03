@@ -15,4 +15,4 @@ summary: 提供SnapCenter 此版本的《支援服務器》和SnapCenter 《支�
 
 有關新功能和增強功能的完整列表，請參閱link:what's-new-in-snapcenter61.html["SnapCenter 6.2 中的新增功能"] 。
 
-有關已知問題、限制、已修復問題以及新命令和更改命令的詳細信息，請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3337665["SnapCenter軟體 6.2 發行說明"^]。您必須使用您的NetApp帳戶登入或建立帳戶才能存取發行說明。
+有關已知問題、限制、已修復問題以及新命令和更改命令的詳細信息，請參閱 https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter軟體 6.2 發行說明"^]。您必須使用您的NetApp帳戶登入或建立帳戶才能存取發行說明。
