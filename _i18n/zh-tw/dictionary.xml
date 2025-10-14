@@ -2600,7 +2600,6 @@
   <block id="718d9231009edb9654b9f6f52346a835" category="list-text">防火牆、Proxy或其他網路裝置不應干擾連線。</block>
   <block id="eceb61ca100437ca326b49341fc1f909" category="list-text">如果您在安裝SnapCenter 時指定自訂連接埠、則應在外掛主機上新增防火牆規則、以供SnapCenter 該連接埠用於「支援程式載入器」。</block>
   <block id="29e256a27c9d420cee02c5cda005de01" category="paragraph">下表列出不同的連接埠及其預設值。</block>
-  <block id="ed00b70cc595a411eff2cc42510a291f" category="paragraph">連接埠SnapCenter</block>
   <block id="18622e175ff22b2375f9cbc2314b3285" category="paragraph">WSSMCore通訊連接埠SnapCenter</block>
   <block id="91ca015b30de2a05aff2f16ec93231dd" category="paragraph">MySQL連接埠</block>
   <block id="4abc501abe98e95144eba2c4d17174ad" category="paragraph">Windows外掛程式主機</block>
@@ -9612,4 +9611,5 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="995c8f79a8e07fbd8d519e45d03d6004" category="paragraph">NetApp控制台建立在增強和重組的BlueXP基礎之上，可在企業級內部和雲端環境中集中管理NetApp儲存和NetApp資料服務，提供即時洞察、更快的工作流程和簡化的管理，並且高度安全且合規。</block>
   <block id="2ef9d641d45afe99b74ad6f9a9f797ad" category="inline-link-macro">NetApp控制台發行說明</block>
   <block id="1e3eeac5409758903bc21870184a640a" category="paragraph">有關更改的詳細信息，請參閱<block ref="06d876b9fcdfcba8772d93beac1ca38b" category="inline-link-macro-rx"></block>。</block>
+  <block id="e6f36a956625505e0a3733e3e0073fa0" category="paragraph">SnapCenter Web 連接埠</block>
 </blocks>
