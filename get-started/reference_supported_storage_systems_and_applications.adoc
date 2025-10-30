@@ -36,6 +36,6 @@ Amazon FSx for NetApp ONTAP支援透過傳輸控制協定 (TCP) 實現的非揮�
 
 == 支援的應用程式和資料庫
 
-支援不同應用程式和資料庫的保護。SnapCenter如需支援應用程式和資料庫的詳細資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+SnapCenter支援不同應用程式和資料庫的保護。
 
 SnapCenter 支援在 VMware Cloud on Amazon Web Services （ AWS ）軟體定義資料中心（ SDDC ）環境中保護 Oracle 和 Microsoft SQL 工作負載。https://community.netapp.com/t5/Tech-ONTAP-Blogs/Protect-Oracle-MS-SQL-workloads-using-NetApp-SnapCenter-in-VMware-Cloud-on-AWS/ba-p/449168["深入瞭解"^]。

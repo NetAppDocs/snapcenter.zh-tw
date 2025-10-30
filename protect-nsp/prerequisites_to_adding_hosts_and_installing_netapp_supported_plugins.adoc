@@ -53,16 +53,13 @@ NOTE: AIX 支援儲存設備和 Oracle 應用程式。
 * 您必須為root或非root使用者啟用密碼型SSH連線。
 * 您必須在 Linux 主機上安裝 Java 11 。
 +
-如果您使用 Windows Server 2019 或 Windows Server 2016 作為 SnapCenter 伺服器主機、則必須安裝 Java 11 。互通性對照表工具IMT （英文）包含有關需求的最新資訊。
+如果您使用 Windows Server 2019 或 Windows Server 2016 作為SnapCenter Server 主機，則必須安裝 Java 11。
 
 +
 http://www.java.com/en/download/manual.jsp["下載適用於 Linux 的 JAVA"]
 
 +
 https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["下載適用於 AIX 的 JAVA"]
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
 * 您必須為非root使用者設定Sudo權限、才能存取多個路徑。使用visudo Linux公用程式、將下列行新增至/etc/udoers檔案。
 +
@@ -148,8 +145,6 @@ Java 11 IBM Java
 如果您已將Java升級至最新版本、則必須確定位於/var/opt/snapcenter/spl/etc/spl.properties的Java_home選項已設定為正確的Java版本和正確的路徑。
 
 |===
-如需支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
-
 
 
 === 為非root使用者設定適用於AIX主機的Sudo權限

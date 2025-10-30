@@ -156,14 +156,13 @@ NOTE: 對於電子郵件通知、您必須使用GUI或PowerShell命令Set-SmtpSe
 
 . 檢閱摘要、然後選取 * 完成 * 。
 . 選取 * 監控 * > * 工作 * 來監控作業進度。
++
+
+NOTE: 建立複本之後、您絕不能重新命名複本。
 
 
-.完成後
-建立複本之後、您絕不能重新命名複本。
 
 .相關資訊
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["複製作業可能會失敗、或需要較長時間才能完成預設的TCP_timeout值"]
-
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/The_failover_cluster_instance_database_clone_fails["容錯移轉叢集執行個體資料庫複製失敗"]
 
 --

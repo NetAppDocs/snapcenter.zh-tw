@@ -34,9 +34,6 @@ NOTE: IBM Java 在 Windows 和 Linux 主機上不受支援。
 +
 http://www.java.com/en/download/manual.jsp["下載適用於 Windows 的 JAVA"]
 
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
-
 
 
 
@@ -50,9 +47,6 @@ http://www.java.com/en/download/manual.jsp["下載適用於 Linux 的 JAVA"]
 
 +
 https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["下載適用於 AIX 的 JAVA"]
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
 * 對於在 Linux 主機上執行的 IBM DB2 資料庫、當安裝適用於 IBM DB2 的外掛程式時、會自動安裝適用於 UNIX 的 SnapCenter 外掛程式。
 * 您應該將 * bash* 作為外掛程式安裝的預設 Shell 。

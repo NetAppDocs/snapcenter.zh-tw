@@ -4,7 +4,7 @@
 
 支援實體機器和虛擬機器上的各種儲存類型。SnapCenter在安裝主機套件之前、您必須先確認儲存類型是否支援。
 
-Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+Windows Server 上提供SnapCenter設定和資料保護支援。有關受支援版本的最新信息，請參閱 https://imt.netapp.com/imt/imt.jsp?components=180321;180339;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 |===
 | 機器 | 儲存類型 | 資源配置使用 | 支援附註 

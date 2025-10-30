@@ -37,9 +37,6 @@ NOTE: IBM Java 在 Windows 和 Linux 主機上不受支援。
 +
 http://www.java.com/en/download/manual.jsp["下載適用於所有作業系統的 JAVA"]
 
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"]
-
 
 
 
@@ -50,9 +47,6 @@ https://imt.netapp.com/matrix/imt.jsp?components=121074;&solution=1257&isHWU&src
 * 您必須在 Linux 主機上安裝 Java 11 。
 +
 http://www.java.com/en/download/manual.jsp["下載適用於所有作業系統的 JAVA"]
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121073;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"]
 
 * 對於在Linux主機上執行的SAP HANA資料庫、在安裝SAP HANA資料庫外掛程式時SnapCenter 、會自動安裝適用於UNIX的整套外掛程式。
 * 您應該將 * bash* 作為外掛程式安裝的預設 Shell 。

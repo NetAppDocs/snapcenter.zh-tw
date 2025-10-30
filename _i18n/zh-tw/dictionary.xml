@@ -869,7 +869,6 @@
   <block id="d444fb67779b9c8a26850d1ce6c0e031" category="paragraph">您應該SnapCenter 使用SnapCenter 穩定使用者介面（UI）來安裝適用於SAP HANA資料庫的功能。如果您的環境不允許從SnapCenter SIUI遠端安裝外掛程式、您可以使用命令列介面（CLI）、在主控台模式或無聲模式下安裝SAP HANA資料庫的外掛程式。</block>
   <block id="c20d8d729a2cb1909e6c92aa4b0635a1" category="list-text">您應該在HDBSQL用戶端所在的每個Linux主機上安裝SAP HANA資料庫外掛程式。</block>
   <block id="9638dcdc640dbf6662834e293cbc12b3" category="list-text">您要安裝SnapCenter 適用於SAP HANA資料庫的支援功能的Linux主機、必須符合相依的軟體、資料庫和作業系統需求。</block>
-  <block id="9e8c841a17bd4c0ec7d85ab94b954bca" category="paragraph">互通性對照表工具IMT （Interoperability Matrix Tool、簡稱「互通性對照表工具」）包含有關支援組態的最新資訊。</block>
   <block id="33a8f9c4fe2c0cd8ae505b8d4831fe28" category="list-text">適用於SAP HANA資料庫的功能就是適用於Linux的功能性外掛套件的一部分。SnapCenter SnapCenter在安裝SnapCenter 適用於Linux的支援功能套件之前、您應該已經在SnapCenter Windows主機上安裝了支援功能。</block>
   <block id="14121664b691a3085947fb503ee4883e" category="list-text">將SnapCenter 適用於Linux的支援功能套件安裝檔案（snapcenter_Linux _host_plugin.bin）從C：\ProgramData \NetApp\SnapCenter\Package儲存庫複製到您要安裝SAP HANA資料庫外掛程式的主機。</block>
   <block id="b3f72639442ac8dbec9806a234d5e8db" category="list-text">編輯//NetApp/snapcenter/scc/etc/SC_SMS_Services.properties檔案、然後新增plugins_enabled = HANA：3.0參數。</block>
@@ -3245,7 +3244,6 @@
   <block id="ba09c94fed381b580a726fc94531b160" category="list-text">如果您在Oracle Linux或RHEL作業系統的LVM上有Oracle資料庫、請安裝最新版的邏輯Volume Management（LVM）。</block>
   <block id="8770246977269a639c8c2818412dc3ac" category="list-text">如果您使用SnapManager 的是適用於Oracle的支援功能、而且想要移轉至SnapCenter 適用於Oracle資料庫的支援功能、您可以SnapCenter 使用sccli命令sc-migrate、將設定檔移轉至適用於Oracle資料庫的原則和資源群組。</block>
   <block id="4c893189fecc8b6e5c41ae931ffd7f89" category="list-text">如果SnapVault 您想要備份複寫、請設定ONTAP SnapMirror和支援功能</block>
-  <block id="918d32b75f0ab883abba3a8dc0c3ae8d" category="inline-link">互通性對照表工具</block>
   <block id="50295902d444d01e41805e9bc1b0598e" category="list-text"><block ref="50295902d444d01e41805e9bc1b0598e" category="inline-link-rx"></block></block>
   <block id="a909d5db254f7262bb93275a07812330" category="inline-link">在RHEL 7及更新版本的非多重路徑環境中、資料保護作業會失敗</block>
   <block id="637e979b90ef1f6ab2dd922a7436fbec" category="list-text"><block ref="637e979b90ef1f6ab2dd922a7436fbec" category="inline-link-rx"></block></block>
@@ -5178,8 +5176,6 @@
   <block id="50e1edb21a598f492619b01f99e77a4f" category="paragraph"><block ref="50e1edb21a598f492619b01f99e77a4f" category="inline-link-macro-rx"></block></block>
   <block id="9b51fddaf011faab92bf06f41ccf6d11" category="inline-link-macro">建立SQL Server的資源群組和附加原則</block>
   <block id="35002a531b4134648eef7b46ee445a29" category="paragraph"><block ref="35002a531b4134648eef7b46ee445a29" category="inline-link-macro-rx"></block></block>
-  <block id="db9c751c1327ee48b470f3140421daf6" category="inline-link">由於TCP_timeout延遲、導致MySQL連線錯誤導致備份作業失敗</block>
-  <block id="0cd607c6c3ab41f1a5532b188171495c" category="paragraph"><block ref="0cd607c6c3ab41f1a5532b188171495c" category="inline-link-rx"></block></block>
   <block id="c473dc65af16d92c688e88cffad5b825" category="inline-link">Windows排程器錯誤導致備份失敗</block>
   <block id="ee70f525f7b0b70b3e7de9d8f872cbe4" category="paragraph"><block ref="ee70f525f7b0b70b3e7de9d8f872cbe4" category="inline-link-rx"></block></block>
   <block id="dc894d281805d8d1c222c04f94404928" category="doc">SQL Server適用的支援功能SnapCenter</block>
@@ -5414,8 +5410,6 @@
   <block id="4b70ba28cecacc0b972de64bf00eafac" category="paragraph">如需EMS、請參閱<block ref="6a6cc2b71a11174970b94b5318ade705" category="inline-link-rx"></block></block>
   <block id="b8ceb1eaf0d60af03679989562024d6b" category="paragraph">建立複本之後、您絕不能重新命名複本。</block>
   <block id="8a2bd81e968aaadb6ec10a1b58f541cc" category="inline-link-macro">備份SQL Server資料庫、執行個體或可用度群組</block>
-  <block id="68f8e37f5b3d7c3c6c34a481b33a736f" category="inline-link">複製作業可能會失敗、或需要較長時間才能完成預設的TCP_timeout值</block>
-  <block id="f7e7f0dd9d36aec3d609775de2dbbd0b" category="paragraph"><block ref="f7e7f0dd9d36aec3d609775de2dbbd0b" category="inline-link-rx"></block></block>
   <block id="1e9ab426973a56020f8d1db85cb07f06" category="inline-link">容錯移轉叢集執行個體資料庫複製失敗</block>
   <block id="2df5362c7aa8c12a0dd2f1b211cdf61d" category="paragraph"><block ref="2df5362c7aa8c12a0dd2f1b211cdf61d" category="inline-link-rx"></block></block>
   <block id="d050ee33bc723342413319851e1c3dd2" category="summary">當SnapCenter 您在環境中安裝適用於Microsoft SQL Server的解決方案時、SnapCenter 可以使用支援程序來備份SQL Server資源。</block>
@@ -5432,10 +5426,7 @@
   <block id="b7d4e9465660c3654b7e3da747496c5c" category="paragraph">資料庫複製作業會根據工作ID產生報告。</block>
   <block id="999e40363ae36d8696166b52a3c23152" category="paragraph">下列工作流程顯示您必須執行複製作業的順序：</block>
   <block id="70124670f70878681ab7bb78e2860796" category="image-alt">複製工作流程圖</block>
-  <block id="a121a292ca8a39c5591cdcc69d0f0ff8" category="paragraph"><block ref="a121a292ca8a39c5591cdcc69d0f0ff8" category="inline-link-macro-rx"></block></block>
   <block id="024d2125c4de994f5780d700157a8f8a" category="inline-link-macro">執行Clone生命週期</block>
-  <block id="b5fb765366530fd4f75c7c5c651544bd" category="paragraph"><block ref="b5fb765366530fd4f75c7c5c651544bd" category="inline-link-macro-rx"></block></block>
-  <block id="5f2b3d8994098e5cded686a40b8bb7c9" category="paragraph"><block ref="5f2b3d8994098e5cded686a40b8bb7c9" category="inline-link-macro-rx"></block></block>
   <block id="e120fc76fd23e12235b495bc6454901a" category="doc">SQL外掛程式所需的ONTAP 最低支援權限</block>
   <block id="4311a9aa7335c4d3eaea1abc109915e9" category="summary">在您使用SnapCenter 適用於Microsoft Windows的支援功能更新NetApp儲存系統後、您可以使用SnapCenter 「支援功能」圖形化使用者介面（GUI）或PowerShell Cmdlet、將資源移轉至NetApp儲存系統、或從一個NetApp LUN移轉至另一個NetApp LUN。</block>
   <block id="1da241185bd7824666c55b0362d4f620" category="doc">將資源移轉至NetApp儲存系統</block>
@@ -7271,7 +7262,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="106eca4a643cd4a82ba724aaf63cf399" category="sidebar">還原及還原 Unix 檔案系統</block>
   <block id="acebdece1b3734e875859ee761ab347e" category="sidebar">複製 Unix 檔案系統</block>
   <block id="1121f6eb8ee08b3fbbc4d05a5ee6ca76" category="sidebar">技術更新</block>
-  <block id="4bb4114cf33351f203faec5f1e34960e" category="paragraph"><block ref="11d2d1b194d6948e42dc38dca8202191" category="inline-link-rx"></block></block>
   <block id="9166c380efba6c6a0d61dc08bcc135ee" category="summary">為您要備份的資源或資源群組建立備份原則。</block>
   <block id="73f45971c435fbf9828b3c34fe76a670" category="paragraph">在使用SnapCenter 支援功能來備份Oracle資料庫資源之前、您必須先為要備份的資源或資源群組建立備份原則。</block>
   <block id="32005b30ff172564875bf82c9538168f" category="list-text">從下拉式清單中選取 Oracle 資料庫。</block>
@@ -8324,7 +8314,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="b64964f7c6cb3e2d0ad50647f28415f4" category="list-text">如果適用、請在外掛主機上安裝 Java 11 。</block>
   <block id="70470fa292d95a8fc9a82053e4e3efc0" category="paragraph">除了 SnapCenter 所需的其他連接埠之外、連接埠 9090 必須保留供 NetApp 支援的外掛程式使用。</block>
   <block id="db39871b690a95f007f3b71acd6533d2" category="doc">新增主機和安裝 NetApp 支援外掛程式的必要條件</block>
-  <block id="1bd7b03e9e6f0b21298c8109c8f483ce" category="paragraph">如果您使用 Windows Server 2019 或 Windows Server 2016 作為 SnapCenter 伺服器主機、則必須安裝 Java 11 。互通性對照表工具IMT （英文）包含有關需求的最新資訊。</block>
   <block id="06489e5a01873cf102f78c0da703ea59" category="list-text">預設還原作業只會還原儲存物件。只有在 NetApp 支援的外掛程式提供該功能時、才能在應用程式層級執行還原作業。</block>
   <block id="67d899b4318f9296298e7c4bb8999573" category="doc">還原 NetApp 支援的外掛程式資源</block>
   <block id="f62ecec13f26504ecae9b49f3ed6b228" category="paragraph">您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原及複製作業。如需 PowerShell Cmdlet 的相關資訊，請使用 SnapCenter Cmdlet 說明或參閱<block ref="b1f5996558dd020cdfc2747708228767" category="inline-link-rx"></block>。</block>
@@ -8626,26 +8615,7 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="a2706d1c365c79f6f2378228b67eb95a" category="admonition">Azure NetApp Files 不需要標準授權和容量型授權。</block>
   <block id="9e19caeb431a5e29a1a63e3cee4b36c9" category="inline-link">使用 ONTAP 保護 Oracle 資料</block>
   <block id="d118010bb2b3542007c6749bfd237123" category="list-text"><block ref="d118010bb2b3542007c6749bfd237123" category="inline-link-rx"></block></block>
-  <block id="3fd57bbce38ee807b2553fd56f562c3a" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>。</block>
-  <block id="e688fd8ff964975e518ba6e9fff48630" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block>。</block>
-  <block id="580a1e1b3bc67640f27785bacfdba10c" category="paragraph">如需支援版本的最新資訊，請參閱 <block ref="fd691abce396db29ca9081f79eea36a4" category="inline-link-rx"></block>。</block>
-  <block id="f773b518874c315e0079bcc43b41dafb" category="paragraph">如需支援版本的最新資訊，請參閱 <block ref="7e664c06fb213184870ee71fe5278749" category="inline-link-rx"></block>。</block>
-  <block id="5ff7954c3f2b829e25e83d1cec41fd90" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="bf4b590a983f5498451b0eaa24cb5904" category="inline-link-rx"></block>。</block>
-  <block id="0a2ff1c0a6b2aee7bcd66cc2b6860aee" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="fe8a65f917aada6df3764fc6c6209a28" category="inline-link-rx"></block>。</block>
-  <block id="752a11b4b210ea35436698a7cd80caea" category="paragraph"><block ref="e7d7a2115bf371d0f0089011e31cda38" category="inline-link-rx"></block></block>
-  <block id="f2a30e95b118ce2c4e84d94437f4a891" category="paragraph"><block ref="441e536b7611a093a15728d219a7454c" category="inline-link-rx"></block></block>
-  <block id="ae40aaa559a1bbbe76fec5e022433b75" category="paragraph"><block ref="351286a887d0b0d2fc33bf3b0aea6c46" category="inline-link-rx"></block></block>
-  <block id="9739b5dca00527fc095cb7d7328ae9a7" category="paragraph"><block ref="4ff8a1baebd27154daa6b321538c5ed7" category="inline-link-rx"></block></block>
-  <block id="56a209ac4190647592f4f2269ba15e4b" category="paragraph"><block ref="c8cd869b77fffd17e64627cb1aa57436" category="inline-link-rx"></block></block>
-  <block id="15819c8f1b3ff9ce9e18a6765617b72f" category="paragraph"><block ref="370c38cf447e1e69e1ad058e85ef81da" category="inline-link-rx"></block></block>
   <block id="b292068e5bdee43d554d534df100834f" category="paragraph">如需支援版本的最新資訊、請參閱<block ref="bf4b590a983f5498451b0eaa24cb5904" category="inline-link-rx"></block></block>
-  <block id="26c29286acbcac90c9ca148d0edc6829" category="paragraph"><block ref="f4c726cc6a480d91bc287e4e17640f59" category="inline-link-rx"></block></block>
-  <block id="cbf06340cf7e3ebe82b098559b7d3b1d" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊、請參閱<block ref="ac8016761c99410cb5502fc617daf49f" category="inline-link-rx"></block> NetApp 互通性對照表工具 ^] 。</block>
-  <block id="dd51beca21dafbea1327c8a54048049f" category="paragraph">SnapCenter Plug-in for Oracle Database 支援的組態列於中<block ref="f921a84bb94ef2f856de2002022c7838" category="inline-link-rx"></block>。</block>
-  <block id="ea7066cba2f5864f04733d3067090883" category="list-text"><block ref="24657c22d8d7f925e015eed9a43e11c5" category="inline-link-rx"></block></block>
-  <block id="93c316672b17211820e2eaed5f45f68f" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="b02065f5fe9f591a1587fb1e13c5796e" category="inline-link-rx"></block>。</block>
-  <block id="b394be29329a30bfde3ff6670085b4f8" category="paragraph"><block ref="df4d48b0823cb16de0f94c0dcd83ea6f" category="inline-link-rx"></block>包含支援版本的最新資訊。</block>
-  <block id="54634901ea136d581a907da437231faa" category="paragraph">如需支援 Oracle 版本的最新資訊，請參閱<block ref="f921a84bb94ef2f856de2002022c7838" category="inline-link-rx"></block>。</block>
   <block id="f726f8fd5eef7b55d41228aa71d0a7e9" category="list-text">執行主機重新整理 API<block ref="b37cd34fbbf7b073a1b5c2fd52ee92dd" prefix=" " category="inline-code"></block> ：或 Cmdlet ： _invoke-SmTechRefreshHost_ 。</block>
   <block id="875d7a3460c60f3568be1f2abe89a635" category="list-text">使用 API: 或 Cmdlet:_New-SmServerBackup_ 在舊主機上建立 SnapCenter 伺服器的備份<block ref="88422de128aef85dbcc043bb5e99d727" prefix=" " category="inline-code"></block> 。</block>
   <block id="717c72270ce876f743856a621389e967" category="list-text">使用 API: 或 Cmdlet:_Restore-SmServerBackup_ 在新主機上還原 SnapCenter 伺服器的備份<block ref="4c4a6e8508df6259fb36bbdfd36c0086" prefix=" " category="inline-code"></block> 。</block>
@@ -8660,7 +8630,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="cc0cce77e1e28838ab6e9078eb7da114" category="list-text">驗證儲存詳細資料後、將 _IsDryRun_ 屬性設為 False 、然後執行儲存重新整理 API ：<block ref="84d2bad3561662612c0f19102d8af171" prefix=" " category="inline-code"></block> 或 Cmdlet ： _invoke-SmTechRefreshPrimaryStorage_ 。</block>
   <block id="c81b0a7466aafc83de0beda501358cdd" category="list-text">（可選）如果所有快照均未從舊的主儲存設備移至新的主儲存設備、請執行下列 API ：<block ref="6e088a1a2676abbb3b6434c32a05fa0c" prefix=" " category="inline-code"></block> 或 Cmdlet _invoke-SmPrimaryBackupsExistenceCheck_ 。</block>
   <block id="da838fd656a52206a5571426cdea502d" category="list-text">成功建立主機中所有資源的備份後、請執行次要儲存設備重新整理 API<block ref="519c39228e07d21e137e72515657a3cf" prefix=" " category="inline-code"></block> ：或 Cmdlet ： _Invoke-SmTechRefreshSecondaryStorage_ 。</block>
-  <block id="4f76be6e3e78147f069df76d367c9608" category="paragraph">Windows Server提供支援的支援功能。SnapCenter如需支援版本的最新資訊，請參閱 <block ref="1b8aeeaa3467913188c00052ded68716" category="inline-link-rx"></block>。</block>
   <block id="e41c493e675bae82cb792b14a41ea23d" category="list-text">更新 SnapManager ． Web.ui.dll ． config 檔案中的 MySQLProtocol 金鑰值。</block>
   <block id="195748e3bf5f1bb6db5e627914555154" category="paragraph">下列範例顯示在 SnapManager ． Web.ui.dll ． config 檔案中更新的 MySQLProtocol 金鑰值。</block>
   <block id="fc8660e632799d14ef937c4ca79726ab" category="list-text">使用 my.ini 檔案 [ 用戶端 ] 區段中提供的路徑、更新 SnapManager 。 Web.UI.dll.config 檔案。</block>
@@ -9312,7 +9281,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="list-text">Azure NetApp Files</block>
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="list-text">Amazon FSX for NetApp ONTAP 產品</block>
   <block id="0b4e0166878acdd36f882f2270445c06" category="section-title">支援的應用程式和資料庫</block>
-  <block id="29756d78461f8a62cb986dc97f47496b" category="paragraph">支援不同應用程式和資料庫的保護。SnapCenter如需支援應用程式和資料庫的詳細資訊，請參閱<block ref="734369dbdcbe00444fc7be843d617a6c" category="inline-link-rx"></block>。</block>
   <block id="ee0febdaba6d4c618d2cca84b2c49df1" category="paragraph">SnapCenter 支援在 VMware Cloud on Amazon Web Services （ AWS ）軟體定義資料中心（ SDDC ）環境中保護 Oracle 和 Microsoft SQL 工作負載。<block ref="95513dc65edb533209d1910ac5e4b37d" category="inline-link-rx"></block>。</block>
   <block id="b9c10c8dd3cdddca3cd9a96c6f110517" category="doc">SnapCenter 中的 SnapMirror 作用中同步</block>
   <block id="24a4022d37c99455611842cdead9d299" category="paragraph">有關 SnapMirror 活動同步的詳細信息，請參閱<block ref="014166fe18ae8fdd05d96b765aaf21c5" category="inline-link-rx"></block>。</block>
@@ -9380,7 +9348,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="d39d360863f3fda3c5d615dc978e14ae" category="sidebar">安裝SnapCenter 此伺服器</block>
   <block id="3199d4d0758d0f4f53db9a8f36670c18" category="sidebar">配置 SnapCenter 伺服器</block>
   <block id="4c975961e88401702aa6aac167300031" category="sidebar">新增並配置儲存系統</block>
-  <block id="81f9b64ab1987ed2d00f4d52a80ca52b" category="paragraph">如需支援版本的最新資訊，請參閱<block ref="315018c067f16596ddc2e2de507c24d0" category="inline-link-rx"></block>。</block>
   <block id="0885e9f12d8cb35b0f02655c34c87004" category="admonition">IBM Java 在 Windows 和 Linux 主機上不受支援。</block>
   <block id="48c9a1bf5de7bf57f1efa648f3bc8d17" category="inline-link">下載適用於 Windows 的 JAVA</block>
   <block id="a4560fe71d10d98deabf55fdf50b90f0" category="paragraph"><block ref="a4560fe71d10d98deabf55fdf50b90f0" category="inline-link-rx"></block></block>
@@ -9613,4 +9580,25 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="1e3eeac5409758903bc21870184a640a" category="paragraph">有關更改的詳細信息，請參閱<block ref="06d876b9fcdfcba8772d93beac1ca38b" category="inline-link-macro-rx"></block>。</block>
   <block id="e6f36a956625505e0a3733e3e0073fa0" category="paragraph">SnapCenter Web 連接埠</block>
   <block id="da994c44eacde8f5cafe8883779cb695" category="sidebar">SnapCenter技術報告</block>
+  <block id="a5ae087d92fe3db87c6e8de8e579868c" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="845d98cf9e1414112b381d552d9c8014" category="inline-link-rx"></block>。</block>
+  <block id="96210757b8412d030188fecde28ceb9d" category="paragraph">Windows Server 上提供SnapCenter設定和資料保護支援。有關受支援版本的最新信息，請參閱 <block ref="6c9a8409bf98d8a8939e1ebaf2e43454" category="inline-link-rx"></block>。</block>
+  <block id="cf12f1baaed2b3c195374322d8d857bc" category="paragraph">SnapCenter支援不同應用程式和資料庫的保護。</block>
+  <block id="02ad1debcdf6904dd2ade67597e4c26e" category="paragraph">有關受支援版本的最新信息，請參閱 <block ref="0bd5b4c33632bb634c82faaae99e0602" category="inline-link-rx"></block>。</block>
+  <block id="73f538f8783386e78b66d9443bb98bd0" category="paragraph">有關受支援版本的最新信息，請參閱 <block ref="9ba7ed904923f6110f4eb8cece054441" category="inline-link-rx"></block>。</block>
+  <block id="891f174b4f7f5c2ac6b414ca9ea01713" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="00e02cae149cc9de4aea278bb76f630e" category="inline-link-rx"></block>。</block>
+  <block id="2a38b23cace66a1ff7fcaae540c065e1" category="paragraph">+ 有關受支援版本的最新信息，請參閱<block ref="6191699ded4b56fe00b3328a9193fb3c" category="inline-link-rx"></block>。</block>
+  <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">互通性矩陣工具（IMT）</block>
+  <block id="298397a9c073629495179c7913e1c3ce" category="paragraph">這<block ref="af6eb6bb2f15f565365a0be0579b55eb" category="inline-link-rx"></block> 包含有關所支援配置的最新資訊。</block>
+  <block id="c09f9355ffec7a4ebce82be71a8c243f" category="paragraph">這<block ref="fb864633e8f65af932ce118a1d181b8d" category="inline-link-rx"></block> 包含有關所支援配置的最新資訊。</block>
+  <block id="d289bbfe1554f83d213d5958a481c248" category="paragraph">有關受支援版本的最新信息，請參閱有關受支援版本的最新信息，請參閱<block ref="00e02cae149cc9de4aea278bb76f630e" category="inline-link-rx"></block>。</block>
+  <block id="0be174a8508a59f21b484245da1e1605" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="845d98cf9e1414112b381d552d9c8014" category="inline-link-rx"></block>。</block>
+  <block id="57c12b0c6639b8884c79259831fa9f28" category="paragraph">這<block ref="45ef37a4bb1edb251808bfcdb0b9e22c" category="inline-link-rx"></block> 包含有關所支援配置的最新資訊。</block>
+  <block id="f101abf86e878a2ecb48d889221777be" category="paragraph">如果您使用 Windows Server 2019 或 Windows Server 2016 作為SnapCenter Server 主機，則必須安裝 Java 11。</block>
+  <block id="a0d1f8ac2dd9261f6193237061098514" category="paragraph">這<block ref="b6383984df7f2080eb1163b0aa6a5917" category="inline-link-rx"></block> 包含有關所支援配置的最新資訊。</block>
+  <block id="6fc7bf078a50f1c4ddd79c0229afe3ff" category="doc">SnapCenter Microsoft Exchange Server 外掛程式支援的儲存類型</block>
+  <block id="08fed5985d86e1f1278601d57e1bff6b" category="paragraph">Windows Server 上提供SnapCenter設定和資料保護支援。有關受支援版本的最新信息，請參閱<block ref="bf4b37302d584cabdf50327923359db4" category="inline-link-rx"></block>。</block>
+  <block id="a9ac2dfd2f149cd6721af54e0c2be71a" category="paragraph">SnapCenter Oracle 資料庫插件支援的配置列於此。<block ref="58ad8fcd3a707b69946dbf79718bb07e" category="inline-link-rx"></block>。</block>
+  <block id="3c5c3e6bd14b3e4e352c8002cf589e92" category="paragraph">有關支援的 Oracle 版本的最新信息，請參閱<block ref="a89f191aac75a149b4bd1d52674271e1" category="inline-link-rx"></block>。</block>
+  <block id="376e524c167313cb5049a67eee645bf3" category="paragraph">您也可以手動或在腳本中使用 PowerShell cmdlet 來執行備份、還原、還原、驗證和複製作業。有關 PowerShell cmdlet 的詳細信息，請使用SnapCenter cmdlet 協助或參閱以下內容：<block ref="b1f5996558dd020cdfc2747708228767" category="inline-link-rx"></block>。</block>
+  <block id="de59c74d77a24fb63e10ea5992296495" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="80c012152b8b3575d1f77200bc55e9c0" category="inline-link-rx"></block>。</block>
 </blocks>

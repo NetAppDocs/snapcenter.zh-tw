@@ -60,7 +60,7 @@ NOTE: 不支援pdb移轉和pdb複製作業。
 
 
 
-如需支援 Oracle 版本的最新資訊，請參閱 https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
+有關支援的 Oracle 版本的最新信息，請參閱 https://imt.netapp.com/imt/imt.jsp?components=180338;180332;134509;180320;&solution=1257&isHWU&src=IMT["NetApp 互通性對照表工具"^]。
 
 
 

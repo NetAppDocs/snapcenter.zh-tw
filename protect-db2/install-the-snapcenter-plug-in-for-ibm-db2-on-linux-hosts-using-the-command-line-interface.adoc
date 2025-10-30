@@ -17,10 +17,7 @@ summary: 您應該使用 SnapCenter 使用者介面（ UI ）來安裝適用於 
 * 您應該在 IBM DB2 用戶端所在的每個 Linux 主機上安裝適用於 IBM DB2 資料庫的外掛程式。
 * 您要在其上安裝 SnapCenter Plug-in for IBM DB2 資料庫的 Linux 主機必須符合相關軟體、資料庫和作業系統的需求。
 +
-互通性對照表工具IMT （Interoperability Matrix Tool、簡稱「互通性對照表工具」）包含有關支援組態的最新資訊。
-
-+
-https://imt.netapp.com/matrix/imt.jsp?components=121066;&solution=1259&isHWU&src=IMT["NetApp 互通性對照表工具"]
+這 https://imt.netapp.com/imt/imt.jsp?components=180320;180326;&solution=1257&isHWU&src=IMT["互通性矩陣工具（IMT）"] 包含有關所支援配置的最新資訊。
 
 * 適用於 IBM DB2 資料庫的 SnapCenter 外掛程式是適用於 Linux 的 SnapCenter 外掛程式套件的一部分。在安裝SnapCenter 適用於Linux的支援功能套件之前、您應該已經在SnapCenter Windows主機上安裝了支援功能。
 

@@ -19,12 +19,4 @@ summary: 從備份複製資料庫資源之前、您必須先使用SnapCenter 支
 
 image::../media/scsql_clone_workflow.gif[複製工作流程圖]
 
-您也可以手動或在指令碼中使用PowerShell Cmdlet來執行備份、還原、還原、驗證及複製作業。如需 PowerShell Cmdlet 的詳細資訊 , 請使用 SnapCenter Cmdlet 說明或參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"]
-
-*瞭解更多資訊*
-
-link:task_clone_from_a_sql_server_database_backup.html["從SQL Server資料庫備份複製"]
-
-link:task_perform_clone_lifecycle_management.html["執行Clone生命週期"]
-
-link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Clone_operation_might_fail_or_take_longer_time_to_complete_with_default_TCP_TIMEOUT_value["複製作業可能會失敗、或需要較長時間才能完成預設的TCP_timeout值"]
+您也可以手動或在腳本中使用 PowerShell cmdlet 來執行備份、還原、還原、驗證和複製作業。有關 PowerShell cmdlet 的詳細信息，請使用SnapCenter cmdlet 協助或參閱以下內容： https://docs.netapp.com/us-en/snapcenter-cmdlets/index.html["《軟件指令程式參考指南》SnapCenter"]。

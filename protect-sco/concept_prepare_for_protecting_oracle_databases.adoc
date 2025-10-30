@@ -53,7 +53,6 @@ NOTE: 不支援在不同叢集上使用相同名稱的多個SVM。SnapCenter每�
 
 *瞭解更多資訊*
 
-* https://imt.netapp.com/matrix/imt.jsp?components=121071;&solution=1259&isHWU&src=IMT["互通性對照表工具"^]
 * https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/index.html["VMware vSphere文件的VMware外掛程式SnapCenter"^]
 * https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Data_protection_operation_fails_in_a_non-multipath_environment_in_RHEL_7_and_later["在RHEL 7及更新版本的非多重路徑環境中、資料保護作業會失敗"^]
 
