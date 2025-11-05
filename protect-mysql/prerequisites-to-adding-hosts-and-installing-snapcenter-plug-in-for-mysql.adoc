@@ -22,6 +22,7 @@ NOTE: IBM Java 在 Windows 和 Linux 主機上不受支援。
 * 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.SnapCenter Plug-in for Microsoft Windows 預設會與 Windows 主機上的 MySQL 外掛程式一起部署。
 * SnapCenter 伺服器應可存取適用於 MySQL 主機的 8145 或自訂外掛程式連接埠。
 * 對於 MySQL 5.7 、應該在 mysql config （ my.cnf 或 mysql-server.cnf ）檔案中指定 binlog 。
+* 如果您使用的是低於 8.0 版本的 MySQL，則需要手動安裝並啟用 MySQLX 外掛程式。 MySQLX 外掛程式在 MySQL 8.0 或更高版本中預設安裝並啟用。
 
 
 

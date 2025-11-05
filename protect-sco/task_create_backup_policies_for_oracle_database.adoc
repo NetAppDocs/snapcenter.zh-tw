@@ -25,9 +25,9 @@ summary: 在使用SnapCenter 支援功能來備份Oracle資料庫資源之前、
 .關於這項工作
 如果選取「保留特定天數的備份複本」選項、則 SnapLock 保留期間必須小於或等於所述保留天數。
 
-+ 指定快照鎖定期可防止在保留期到期之前刪除快照。這可能導致保留的快照數量超過策略中指定的數量。
+指定 Snapshot 鎖定期間可防止在保留期間到期之前刪除 Snapshot 。這可能會導致保留的快照數量超過原則中指定的數量。
 
-+ 對於ONTAP 9.12.1 及以下版本，作為復原的一部分從SnapLock Vault 快照建立的克隆將繼承SnapLock Vault 到期時間。儲存管理員應在SnapLock到期後手動清理克隆。
+對於ONTAP 9.12.1 及以下版本、作為復原的一部分從SnapLock Vault 快照建立的克隆將繼承SnapLock Vault 到期時間。儲存管理員應在SnapLock到期後手動清理克隆。
 
 *步驟*
 

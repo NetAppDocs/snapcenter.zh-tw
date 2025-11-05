@@ -5876,15 +5876,12 @@
   <block id="5045fb7fa597d081bf2426b83c9cdd64" category="list-text">如果您是非root使用者、可以存取Linux機器、則在執行升級作業之前、應先使用最新的Checksum值來更新/etc/udoers_檔案。</block>
   <block id="953da7cb078e246536e2103b53508984" category="list-text">根據預設SnapCenter 、此功能會從環境中偵測Java_Home。如果您想要使用固定的Java_Home、而且要升級Linux主機上的外掛程式、您應該在位於_/var/opt/snapcenter/spl/etc/_的_spl.properties_檔案中、手動新增SKip_JAVAHOME_update參數、並將值設為true。</block>
   <block id="28cc8014ba404c5800363561063ce630" category="paragraph">當外掛程式升級或SnapCenter 重新啟動時、Java_Home的值會更新。在升級或重新啟動SPL之前、如果您新增SKip_JAVAHOME_update參數並將值設為true、則Java_homeTM的值不會更新。</block>
-  <block id="35702b2ddcae5a0a26dfc495c46421b5" category="list-text">您應該已經備份SnapCenter 所有已在SnapCenter 支援伺服器主機或外掛主機上修改的支援功能組態檔案。</block>
   <block id="77b44cc84c18e6f68f7831889cfc9abd" category="paragraph">例如：SnapDriveService.exe.config、SMCoreServiceHost.exe.config等。SnapCenter</block>
   <block id="dd9f485e72f96875e028693823f26e70" category="inline-link">升級SnapCenter VMware vSphere的插件</block>
   <block id="25878f69131b31b18aeda7ba36139c1b" category="admonition">如需升級SnapCenter VMware vSphere的VMware vSphere的VMware vCenter外掛程式的相關資訊、請參閱<block ref="9fa07c2f7a59d2185d48077e327b705e" category="inline-link-rx"></block>。</block>
   <block id="f957674174a2517cb9b6bb5f34a9d71f" category="list-text">在左側導覽窗格中、按一下*主機*&gt;*受管理主機*。</block>
   <block id="313500fb86a172e846d699cb256626d3" category="list-text">執行下列其中一項工作來升級主機：</block>
   <block id="f6e8db7e26c18ff77395c70107114b81" category="list-text">按一下*升級*。</block>
-  <block id="cb2e95d4ff0d177df515e750d19325ff" category="admonition">套件中的所有外掛程式都會被選取、但只SnapCenter 有隨舊版的更新安裝的外掛程式會被升級、而其餘的外掛程式則不會安裝。您必須使用*新增外掛程式*選項來安裝任何新的外掛程式。</block>
-  <block id="5b0ab4f13189d5492729a711510fe362" category="admonition">如果錯誤與磁碟空間或RAM有關、您可以更新位於C:\Program Files\NetApp\SnapCenter Webapp的Web.config或位於C：\Windows\System32\Windows PowerShell\v1.0\Modules\SnapCenter\的PowerShell組態檔案、以修改預設值。如果錯誤與剩餘參數有關、則您必須修正問題、然後再次驗證需求。</block>
   <block id="c589a9c8b3b9ae7adc1d5609288b15f4" category="summary">您可以使用SnapCenter 「伺服器安裝程式執行檔」來升級SnapCenter 「伺服器」。</block>
   <block id="7a705c8931c016f06134daebf36e80fe" category="paragraph">如需相關資訊、請參閱 <block ref="e8b16a01919e198d9e965cee62b54323" category="inline-link-macro-rx"></block>。</block>
   <block id="d6d9056bd3ccaf6f2ea25c46f86b217c" category="list-text">從SnapCenter NetApp支援網站下載《支援伺服器》安裝套件。</block>
@@ -7335,7 +7332,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="13bc47d703b82b962d33b3cf47bf64fb" category="list-text">在「名稱」頁面中、選取 *PDB Clone * 、然後指定其他詳細資料。</block>
   <block id="92336218cb59d91f7080fee85c60b95f" category="list-text">在「作業後」頁面中、依預設會選取 * 直到取消 * 、以執行複製資料庫的還原。</block>
   <block id="06297b8a736154148ec90e3788831eaa" category="doc">還原及還原 SQL Server 資料庫</block>
-  <block id="b01943524a657671dfae0f3f1f0948e5" category="paragraph">您可以使用SnapCenter 支援功能來還原備份的SQL Server資料庫。資料庫還原是一個多階段程序、可將所有資料和記錄頁面從指定的 SQL Server 備份複製到指定的資料庫。</block>
   <block id="ddec2d3a4d88b9b7250ed10e6ef19f3f" category="list-text">從「管理複本」檢視中、從儲存系統選取 * 備份 * 。</block>
   <block id="6408662ebc634bb326a1dde94a44620f" category="list-text">選取 * 所有記錄備份 * 直到最新的備份還原作業、以在完整備份後還原所有可用的記錄備份。</block>
   <block id="aa9472a7b9cb1fc29c7cbe53b4716e81" category="summary">在 SnapCenter 中設定 Azure 儲存帳戶。</block>
@@ -7874,8 +7870,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="4259e3437165dc8c448fb7e7c934cf49" category="paragraph">您應該確定複製的目標執行個體是由屬於 SMB ADActive Directory 網域的 Active Directory 使用者所設定、並具有適當設定檔案權限的權限。您應該在執行個體層級的 SnapCenter 中設定認證。</block>
   <block id="c745abafca2439668c22da62ac6e4d96" category="paragraph">SMB 組態不支援目標執行個體的 SQL 驗證。目標執行個體應在 SnapCenter 中設定、 Active Directory 使用者必須擁有必要的權限。</block>
   <block id="4b3d1f66eceeae661d2edef9b116c87e" category="paragraph">如果 SnapCenter 外掛程式服務帳戶不是 Active Directory 使用者、則在執行複製時、需要對來源磁碟區擁有完整控制權的使用者、才能模擬並執行必要的作業。</block>
-  <block id="d57ab9c40b6ffc9dcc2fc7f01323fd00" category="paragraph">您應該確定還原的目標執行個體是由屬於 SMB ADActive Directory 網域的 Active Directory 使用者所設定、並具有適當設定檔案權限的權限。您應該在執行個體層級的 SnapCenter 中設定認證。</block>
-  <block id="a100da424c2475757cbb38f72d7cb1e9" category="paragraph">如果 SnapCenter 外掛程式服務帳戶不是 Active Directory 使用者、則在執行還原至替代主機時、需要對來源磁碟區擁有完整控制權的使用者、才能模擬並執行所需的作業。</block>
   <block id="5ae66aec97f2faf97a351f36d528053c" category="list-text">如果 SnapCenter 伺服器主機的作業系統為 Windows 2019 、而外掛主機的作業系統為 Windows 2022 、則應執行下列步驟：</block>
   <block id="49e0aad8716e0dbb7231841900443133" category="list-text">升級至 Windows Server 2019 （ OS Build 17763.5936 ）或更新版本</block>
   <block id="c174e6f1e3fc4dbc9bbc743e12554a33" category="list-text">升級至 Windows Server 2022 （ OS Build 20348.2402 ）或更新版本</block>
@@ -8788,10 +8782,7 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="ac4db59a3117eb625954347693361d30" category="inline-image-macro">新增原則表單資源群組</block>
   <block id="490e9071957ca8b80f7019e9cb2a8b99" category="list-text">您應該在伺服器主機上執行新的資源探索。</block>
   <block id="86b796a66464051399647b9c6f8c917f" category="list-text">升級伺服器主機之後，您也必須先升級外掛程式，才能新增任何儲存系統。</block>
-  <block id="c58e9b1492d681b897440ca05419e132" category="paragraph">您不需要手動將每個要升級至維護模式的外掛主機放入維護模式，因為升級程序會將 Windows ， Linux 或 AIX 外掛主機置於維護模式。維護模式可防止在升級期間在外掛主機上執行任何排程工作。</block>
-  <block id="5e8cc9f28d33dd253f7204b7723e45b6" category="list-text">如果「整體狀態」欄顯示其中一個外掛式主機的「升級可用」，請按一下外掛式主機名稱，然後執行下列步驟：</block>
   <block id="4a6523c97d32192c20325b06357138e5" category="list-text">如果您不想驗證外掛主機是否符合升級外掛程式的要求，請選取 * 略過預先檢查 * 。</block>
-  <block id="f4bbec82b72e54df820fc15b640e3b5d" category="paragraph">如果您尚未選取「 * 略過預先檢查 * 」核取方塊，則外掛程式主機會經過驗證，以查看是否符合安裝外掛程式的需求。如果未達到最低需求，則會顯示適當的錯誤或警告訊息。修復問題後、按一下*升級*。</block>
   <block id="a24cb0112e51902b6b3ed4606a7cd727" category="cell">6.0.1.</block>
   <block id="db1c2c3cb6f2d1f2978caf1a4dce483c" category="sidebar">使用 NetApp 支援的外掛程式來保護應用程式</block>
   <block id="309dab896f56b3d37ea98a7bf810fbfa" category="paragraph">MongoDB 主機</block>
@@ -8860,7 +8851,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="7b016ac7bac6fbf2fc99bb1ca2112dfe" category="admonition">SnapCenter 不支援叢集與 SVM 對等關係。您應該使用系統管理員或 ONTAP CLI 來執行叢集和 SVM 對等關係。</block>
   <block id="a65d82cfebb383a017ed83c52e387db8" category="admonition">如果資源已在 SnapCenter 之外受到保護，這些資源將會顯示在「次要受保護的資源」區段中。</block>
   <block id="5d8c9a4bb6e8d1777bae069ef096beea" category="list-text">ASP.NET Core Runtime 8.0.12 （以及所有後續 8.0.x 修補程式）代管產品組合</block>
-  <block id="06c4f26f61be470dd3c5f2224d734b82" category="paragraph">只有 SAP HANA ， IBM DB2 ， PostgreSQL ， MySQL ， NetApp 支援的外掛程式，以及其他可安裝在 Windows 主機上的自訂應用程式，才需要 Java 11 Oracle Java 和 OpenJDK 。</block>
   <block id="74d26a36312c4111c79f5a49e9e0b24f" category="list-text">啟動複製作業後、按一下 <block ref="64eace402f8f00b7a999e38fb6d87e55" category="inline-image-macro-rx" type="image"></block> 「活動」窗格以檢視最近五次的作業。</block>
   <block id="f7e244689831620cc4531ae6c4d2e935" category="list-text">開始還原作業後、按一下 <block ref="64eace402f8f00b7a999e38fb6d87e55" category="inline-image-macro-rx" type="image"></block> 「活動」窗格以檢視最近五次的作業。</block>
   <block id="75c43dfa09fd33ec50ad9523e384b113" category="list-text">按一下 <block ref="ef7fd6a62d3d2e73b9eef702ebac01ef" category="inline-image-macro-rx" type="image"></block> 以篩選清單、僅列出備份作業。</block>
@@ -9487,8 +9477,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="9f4dc04b028094d2b50c905cb66cb584" category="admonition">最大保留值為 1018。如果保留設定的值高於ONTAP版本支援的值，則備份將會失敗。</block>
   <block id="1df9ce8f8ee70d4668259711a2f20cd1" category="paragraph">選擇*Snapshot 副本鎖定期限*，並指定天、月或年。</block>
   <block id="83c353dab613896fa690239dff46e104" category="admonition">最大保留值為 1018。如果保留設定的值高於ONTAP版本支援的值，則備份將會失敗。</block>
-  <block id="3300240ffba2f4633a53323d37d6b7e1" category="paragraph">+ 指定快照鎖定期可防止在保留期到期之前刪除快照。這可能導致保留的快照數量超過策略中指定的數量。</block>
-  <block id="dca9965d6a6b336628078d10c70a83d6" category="paragraph">+ 對於ONTAP 9.12.1 及以下版本，作為復原的一部分從SnapLock Vault 快照建立的克隆將繼承SnapLock Vault 到期時間。儲存管理員應在SnapLock到期後手動清理克隆。</block>
   <block id="bd4112ff24244ca0e669eb1f5a3bae9b" category="paragraph">選擇*Snapshot 副本鎖定期限*並指定天、月或年的持續時間。</block>
   <block id="4b0801e52b058b04e3451f31a90447e6" category="list-text">選擇*Snapshot 副本鎖定期限*並指定天、月或年的持續時間。</block>
   <block id="5c2f59b69b9e772c86d6723464bda765" category="paragraph">選擇快照鎖定期限，並指定持續時間（天、月或年）。</block>
@@ -9586,7 +9574,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="02ad1debcdf6904dd2ade67597e4c26e" category="paragraph">有關受支援版本的最新信息，請參閱 <block ref="0bd5b4c33632bb634c82faaae99e0602" category="inline-link-rx"></block>。</block>
   <block id="73f538f8783386e78b66d9443bb98bd0" category="paragraph">有關受支援版本的最新信息，請參閱 <block ref="9ba7ed904923f6110f4eb8cece054441" category="inline-link-rx"></block>。</block>
   <block id="891f174b4f7f5c2ac6b414ca9ea01713" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="00e02cae149cc9de4aea278bb76f630e" category="inline-link-rx"></block>。</block>
-  <block id="2a38b23cace66a1ff7fcaae540c065e1" category="paragraph">+ 有關受支援版本的最新信息，請參閱<block ref="6191699ded4b56fe00b3328a9193fb3c" category="inline-link-rx"></block>。</block>
   <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">互通性矩陣工具（IMT）</block>
   <block id="298397a9c073629495179c7913e1c3ce" category="paragraph">這<block ref="af6eb6bb2f15f565365a0be0579b55eb" category="inline-link-rx"></block> 包含有關所支援配置的最新資訊。</block>
   <block id="c09f9355ffec7a4ebce82be71a8c243f" category="paragraph">這<block ref="fb864633e8f65af932ce118a1d181b8d" category="inline-link-rx"></block> 包含有關所支援配置的最新資訊。</block>
@@ -9601,4 +9588,24 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="3c5c3e6bd14b3e4e352c8002cf589e92" category="paragraph">有關支援的 Oracle 版本的最新信息，請參閱<block ref="a89f191aac75a149b4bd1d52674271e1" category="inline-link-rx"></block>。</block>
   <block id="376e524c167313cb5049a67eee645bf3" category="paragraph">您也可以手動或在腳本中使用 PowerShell cmdlet 來執行備份、還原、還原、驗證和複製作業。有關 PowerShell cmdlet 的詳細信息，請使用SnapCenter cmdlet 協助或參閱以下內容：<block ref="b1f5996558dd020cdfc2747708228767" category="inline-link-rx"></block>。</block>
   <block id="de59c74d77a24fb63e10ea5992296495" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="80c012152b8b3575d1f77200bc55e9c0" category="inline-link-rx"></block>。</block>
+  <block id="f587e89ab918fcf18ed5c0ffdedc9786" category="paragraph">您可以使用SnapCenter還原 SQL Server 資料庫。資料庫還原是一個多階段過程，它將所有資料和日誌頁從指定的 SQL Server 備份複製到指定的資料庫。</block>
+  <block id="a19742e4f79508fd2f82ea91c9e7a5e3" category="list-text">使用屬於 SMB AD 活動目錄網域且具有設定檔案權限權限的活動目錄使用者設定目標實例。</block>
+  <block id="01035fbbef8f1d9bed3ad2d75910a86c" category="list-text">在SnapCenter實例層級配置憑證。</block>
+  <block id="700a7bc7d0744345e2640d52fba1df4a" category="list-text">如果 SQL 資料庫位於 CIFS 共用上，則外掛程式主機的 RunAS 帳戶和 SQL 服務帳戶（網域帳戶）需要是下列元件的一部分：<block ref="b8c01e6d87a4102e23290347adb462dd" prefix=" " category="inline-code"></block> ONTAP中的 CIFS 伺服器群組。</block>
+  <block id="09da854586f602a61d3fc60a97bbbb5b" category="list-text">SMB 設定不支援目標執行個體的 SQL 驗證。在SnapCenter中配置目標實例，使用具有所需權限的活動目錄使用者。</block>
+  <block id="f7e59a77fa11340fef8227a328e62d86" category="list-text">如果SnapCenter插件服務帳戶不是活動目錄用戶，請確保在恢復到備用主機時，具有對來源磁碟區的完全控制權限的使用者可用。</block>
+  <block id="603fd2d976f1d2209eb474e981bba40d" category="list-text">選擇「將資料庫還原到已建立備份的相同主機」可將資料庫還原到相同 SQL 伺服器。</block>
+  <block id="c01dc1fd63429e8cff63cb032a3be876" category="list-text">如果要將資料庫還原到同一台主機或其他主機上的另一個 SQL 伺服器（該主機用於備份），請選擇「將資料庫還原到備用主機」。</block>
+  <block id="31ae52b0966c33f60d2eddd47c4462bc" category="paragraph">有關受支援版本的最新信息，請參閱<block ref="6191699ded4b56fe00b3328a9193fb3c" category="inline-link-rx"></block>。</block>
+  <block id="a297d3c29a77573953e92a4001fb1ee1" category="list-text">如果您使用的是低於 8.0 版本的 MySQL，則需要手動安裝並啟用 MySQLX 外掛程式。 MySQLX 外掛程式在 MySQL 8.0 或更高版本中預設安裝並啟用。</block>
+  <block id="099321e862ba2170dc1c3e6b1f02ef72" category="paragraph">對於ONTAP 9.12.1 及以下版本、作為復原的一部分從SnapLock Vault 快照建立的克隆將繼承SnapLock Vault 到期時間。儲存管理員應在SnapLock到期後手動清理克隆。</block>
+  <block id="c409d3675d172c2cf6427c7f99ed6a77" category="list-text">由於 Oracle 插件不會備份臨時文件，因此需要還原暫存文件。</block>
+  <block id="f98d06e0365bbdb788bff3b7d98e015e" category="doc">升級SnapCenter插件包</block>
+  <block id="5afd668caa3def0cebf1f64a3e6a9d0c" category="paragraph">插件包作為SnapCenter升級的一部分進行分發。升級過程會自動將您的 Windows、Linux 或 AIX 插件主機置於維護模式。維護模式會阻止插件主機在升級期間執行任何排程任務。</block>
+  <block id="50263858fed39155040b6bb90507bcee" category="paragraph">系統會選擇軟體包中的所有插件，但只會升級您在早期版本的SnapCenter中安裝的插件。系統不會安裝剩餘的插件。使用“新增插件”選項安裝任何新插件。</block>
+  <block id="6d49197dab9dd6c6555e0981f8aa6207" category="list-text">確保 Windows 外掛主機上已安裝 PowerShell Core 7.4.2。</block>
+  <block id="0b1004975d827c800b2ea1d2934ebcdd" category="list-text">確保在 Windows 和 Linux 外掛主機上安裝了 Java 11、Oracle Java 和 OpenJDK。</block>
+  <block id="9ece03be74b25dcc59b19ce7d0ef2dfb" category="list-text">備份SnapCenter伺服器主機或插件主機上所有已修改的SnapCenter設定檔（例如 SnapDriveService.exe.config、SMCoreServiceHost.exe.config 等）。</block>
+  <block id="def9934ca3f718accf65ee67850cf9eb" category="list-text">如果“整體狀態”列顯示某個外掛程式主機“可升級”，請按一下該外掛程式主機名稱並執行下列操作：</block>
+  <block id="25c5cc506d7be2c3d358fc8fd23f0e8f" category="admonition">如果您不選擇“跳過預檢查”， SnapCenter將檢查插件主機是否符合要求。如果未滿足要求，則會顯示錯誤或警告訊息。如果錯誤與磁碟空間或 RAM 有關，您可以更新位於 _C:\Program Files\ NetApp\ SnapCenter WebApp_ 的 web.config 文件，或更新位於 _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_ 的 PowerShell 配置文件，以修改預設值。如果錯誤與剩餘參數有關，那麼您必須解決問題，然後再次驗證要求。</block>
 </blocks>
