@@ -37,6 +37,3 @@ summary: 當您的環境中安裝了適用於Microsoft SQL Server的支援程式
 * 排程備份作業和複製作業
 * 監控備份作業、還原作業及複製作業
 
-
-
-NOTE: SQL Server外掛程式不支援在SMB共用區上備份及還原SQL Server資料庫。

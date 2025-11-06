@@ -160,24 +160,9 @@ Web伺服器
 
 
  a| 
-訊息佇列
- a| 
-* 訊息佇列服務
-+
-
-NOTE: 確保沒有其他應用程式使用SnapCenter 可用來建立及管理的msmqmq.服務。
-
-* RabbitMQ
-* Erlang
-
-
-
-
- a| 
 Windows處理程序啟動服務
  a| 
-* 程序模式
-
+程序模式
 
 
 

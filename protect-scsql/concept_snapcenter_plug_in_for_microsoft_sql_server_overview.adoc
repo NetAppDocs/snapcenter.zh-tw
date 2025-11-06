@@ -17,6 +17,5 @@ summary: 適用於Microsoft SQL Server的《支援功能》外掛程式是NetApp
 
 * 在SnapCenter 您的支援環境中、自動化Microsoft SQL Server資料庫的應用程式感知備份、還原及複製作業。
 * 當您部署SnapCenter VMware vSphere的VMware vSphere支援Microsoft SQL Server資料庫、並使用SnapCenter VMware vCenter登錄外掛程式時、可支援VMDK上的Microsoft SQL Server資料庫和原始裝置對應（RDM）LUN
-* 僅支援資源配置SMB共用區。不支援在SMB共用區上備份SQL Server資料庫。
 * 支援將備份從SnapManager Microsoft SQL Server的支援功能匯入SnapCenter 到支援功能。
 
