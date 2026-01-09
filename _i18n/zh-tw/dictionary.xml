@@ -2360,9 +2360,6 @@
   <block id="623ef35114e69633221d2c9bf99f6cab" category="list-text">Windows Communication Foundation（WCF）HTTP Activation45</block>
   <block id="c38d32373eca3e6335e44b42893f0034" category="list-text">TCP啟動</block>
   <block id="cb6ddd90b08469e2479460ec34538fe2" category="list-text">HTTP啟動</block>
-  <block id="c3dbd8c35d4829310dd57365a749f10f" category="paragraph">訊息佇列</block>
-  <block id="9c7750973d73f078f45c6bfd80cbfc85" category="list-text">訊息佇列服務</block>
-  <block id="be0efd214f0b56cf8372d18ec1837f53" category="admonition">確保沒有其他應用程式使用SnapCenter 可用來建立及管理的msmqmq.服務。</block>
   <block id="a8e1305e0c86caf1fec261807b3362ef" category="paragraph">Windows處理程序啟動服務</block>
   <block id="494ecde4fb6ee77e99799902ed23cd14" category="list-text">程序模式</block>
   <block id="293616622aeda675821b42e39b4d4e7b" category="paragraph">組態API</block>
@@ -5237,7 +5234,6 @@
   <block id="c48d82f0b1e5949ce3d34dc8ac74b4b5" category="paragraph">不支援驗證SQL Server系統資料庫。執行驗證作業時、使用實體複製資料庫。SnapCenter無法複製SQL Server系統資料庫、因此不支援驗證這些資料庫。SnapCenter</block>
   <block id="c27ceb4a4892c429a975a62841762540" category="list-text">排程備份作業和複製作業</block>
   <block id="aa71cd3a5a90a32aafb3072b19a68b09" category="list-text">監控備份作業、還原作業及複製作業</block>
-  <block id="c343d8ab7af87f16e58b8e8040d7813a" category="admonition">SQL Server外掛程式不支援在SMB共用區上備份及還原SQL Server資料庫。</block>
   <block id="2c7601a19492319211a48972b06186ec" category="summary">在備份SQL資源之前、您必須確保符合多項需求。</block>
   <block id="fb84146353d16d3119b204fb3e1ae3c5" category="doc">備份SQL資源的需求</block>
   <block id="383f069e9a025d3ba57152fa44fc4f74" category="list-text">您必須已將資源從非NetApp儲存系統移轉至NetApp儲存系統。</block>
@@ -5839,7 +5835,6 @@
   <block id="4abb41aae1dfe9c81afb3c3672df559c" category="paragraph">Linux或Windows</block>
   <block id="50e95eafa6faf8d2ee3f01921820b42b" category="list-text">在SnapCenter 您的支援環境中、自動化Microsoft SQL Server資料庫的應用程式感知備份、還原及複製作業。</block>
   <block id="e40237d2b53363bc373f8134071d1be1" category="list-text">當您部署SnapCenter VMware vSphere的VMware vSphere支援Microsoft SQL Server資料庫、並使用SnapCenter VMware vCenter登錄外掛程式時、可支援VMDK上的Microsoft SQL Server資料庫和原始裝置對應（RDM）LUN</block>
-  <block id="a7e3ff2bca34971756f1600032ff8b61" category="list-text">僅支援資源配置SMB共用區。不支援在SMB共用區上備份SQL Server資料庫。</block>
   <block id="6bff10ef4d0d0d6d7ed28de9adc0169d" category="list-text">支援將備份從SnapManager Microsoft SQL Server的支援功能匯入SnapCenter 到支援功能。</block>
   <block id="1b789581aeaa48640561ebae3b263a76" category="list-text">為SnapCenter 執行於Windows主機上的其他外掛程式啟用應用程式感知資料保護功能、以保護您的支援環境</block>
   <block id="d764b7be86ece9a7b21fa445a8e1493c" category="list-text">在SnapCenter 您的支援環境中、自動化Microsoft檔案系統的應用程式感知備份、還原及複製作業</block>
@@ -7827,7 +7822,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="10dbf6dc6b3b30fd58efded1253516d8" category="paragraph">SnapCenter Plug-in for Exchange 資料庫</block>
   <block id="b0ca30368b247fa738c8bdba36dd4d73" category="paragraph">預設的 NET 。 Windows 外掛程式使用 TCP 連接埠來連線至 Exchange VSS 回撥。</block>
   <block id="cc0974b8a511f2e4b4d021cda6e5e820" category="paragraph">NetApp 支援的 SnapCenter 外掛程式</block>
-  <block id="7eaa993723e57b3bfc99923c196e2e17" category="list-text">RabbitMQ</block>
   <block id="6905661e5d7f8f3e6a4faffbbab0f627" category="cell">Windows 主機需求</block>
   <block id="e7074f744b12e993cbdc6c77ee980b3e" category="list-text">Red Hat Enterprise Linux （ RHEL ） 8 和 9</block>
   <block id="447430d602cceb081264e037425cd96e" category="list-text">SUSE Linux Enterprise Server （ SLES ） 15.</block>
@@ -9608,4 +9602,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="9ece03be74b25dcc59b19ce7d0ef2dfb" category="list-text">備份SnapCenter伺服器主機或插件主機上所有已修改的SnapCenter設定檔（例如 SnapDriveService.exe.config、SMCoreServiceHost.exe.config 等）。</block>
   <block id="def9934ca3f718accf65ee67850cf9eb" category="list-text">如果“整體狀態”列顯示某個外掛程式主機“可升級”，請按一下該外掛程式主機名稱並執行下列操作：</block>
   <block id="25c5cc506d7be2c3d358fc8fd23f0e8f" category="admonition">如果您不選擇“跳過預檢查”， SnapCenter將檢查插件主機是否符合要求。如果未滿足要求，則會顯示錯誤或警告訊息。如果錯誤與磁碟空間或 RAM 有關，您可以更新位於 _C:\Program Files\ NetApp\ SnapCenter WebApp_ 的 web.config 文件，或更新位於 _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_ 的 PowerShell 配置文件，以修改預設值。如果錯誤與剩餘參數有關，那麼您必須解決問題，然後再次驗證要求。</block>
+  <block id="ef99553115dfc1718a9b51a970da1ae9" category="paragraph">指定歸檔日誌檔案的副檔名。</block>
+  <block id="7f051ce525ea23f09ed6b21ec49fa590" category="paragraph">例如，如果歸檔日誌檔案為 log_backup_0_1.log，則指定 .log 作為檔案副檔名。</block>
 </blocks>
