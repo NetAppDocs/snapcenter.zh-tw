@@ -134,4 +134,10 @@ NOTE: ESX 5.5i之前的版本不支援此功能。
 
 在使用FC RDM LUN在Microsoft叢集中的節點之間共用儲存設備之前、您必須先建立共用仲裁磁碟和共用儲存磁碟、然後將它們新增至叢集中的兩個虛擬機器。
 
-共用磁碟並非使用Windows的外掛程式建立。您應該建立共享LUN、然後將其新增至叢集中的每個虛擬機器。如需相關資訊，請參閱 https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-7/setup-for-failover-clustering-and-microsoft-cluster-service.html["跨實體主機叢集虛擬機器"^]。
+共享磁碟並非使用 Plug-in for Windows 建立。您需要建立共用 LUN，然後將其新增至叢集中的每個虛擬機器。
+
+
+
+== 相關資訊
+
+請參閱 link:https://techdocs.broadcom.com["Broadcom 技術文件"^] 並搜尋有關跨實體主機對虛擬機器進行叢集以及為 Microsoft 叢集建立共用 FC RDM LUN 的文件。

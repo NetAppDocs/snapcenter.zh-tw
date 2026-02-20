@@ -2768,7 +2768,6 @@
   <block id="b88dbedd8fcea13adf629d85780a25e4" category="list-text">Windows外掛程式不支援Microsoft叢集中虛擬機器上的MPIO。</block>
   <block id="5010ac065b072d3a5a66d4913af22358" category="section-title">建立共享的FC RDM LUN</block>
   <block id="10680a7aa79949d8b454b29a782cc64a" category="paragraph">在使用FC RDM LUN在Microsoft叢集中的節點之間共用儲存設備之前、您必須先建立共用仲裁磁碟和共用儲存磁碟、然後將它們新增至叢集中的兩個虛擬機器。</block>
-  <block id="cbdb6828febec04786f22df9a1ccc748" category="inline-link">跨實體主機叢集虛擬機器</block>
   <block id="b9bb47785399146845eaead624481439" category="paragraph">雖然支援網域信任、多網域樹系和跨網域信任、但不支援跨樹系網域。Microsoft的Active Directory網域及信任相關文件包含更多資訊。</block>
   <block id="017007d9e00e31e53994cdd0aad0c593" category="admonition">安裝SnapCenter 完支援服務器後、您不應變更SnapCenter 支援該主機的網域。如果您從SnapCenter 安裝了支援服務器的網域中移除此伺服器主機SnapCenter 、然後嘗試解除安裝SnapCenter 支援服務器、則解除安裝作業會失敗。</block>
   <block id="4ce9ef971363d62abcf2c6d2b1234486" category="summary">匯出SnapCenter 功能證書。</block>
@@ -9092,7 +9091,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="9792c7ba1a8a833a1c75e11c4a7b46c3" category="list-text">如果您要升級多個主機、請選取所有主機、按一下、然後按一 <block ref="725f4bf2ffc300942027282d0182533f" category="inline-image-macro-rx" type="image"></block>下 * 升級 * &gt; * 確定 * 。</block>
   <block id="fc8e535c7339f77157a0f93f32cb1f80" category="list-text">物件儲存備份不支援 Oracle 和 SAP HANA 裝載和目錄工作流程，但支援快照。</block>
   <block id="2128757ca4207f5d5000cd4894d8c58f" category="list-text">物件儲存備份不支援 Oracle PDB 複本，但快照支援 Oracle PDB 複本。</block>
-  <block id="6eec14240810faadbd60c3ec98b543e7" category="paragraph">共用磁碟並非使用Windows的外掛程式建立。您應該建立共享LUN、然後將其新增至叢集中的每個虛擬機器。如需相關資訊，請參閱<block ref="0564b16166a6e24aa234d21e5bcdc18a" category="inline-link-rx"></block>。</block>
   <block id="744d48cfa6032e04d109166f7ff6aeaf" category="paragraph">如需疑難排解資訊，請參閱<block ref="361c774ee5cb22be42ef8ea152ed45ad" category="inline-link-rx"></block>。</block>
   <block id="a141599a0eec0e6d9aea907fc97ea039" category="list-text">選擇 * 信賴方信任 * 。</block>
   <block id="458f1b484cf2f93e8e2f35b3f5a3b94a" category="list-text">在為 SnapCenter 建立的信賴方信任上按一下滑鼠右鍵，然後選取 * 刪除 * 。</block>
@@ -9604,4 +9602,8 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="25c5cc506d7be2c3d358fc8fd23f0e8f" category="admonition">如果您不選擇“跳過預檢查”， SnapCenter將檢查插件主機是否符合要求。如果未滿足要求，則會顯示錯誤或警告訊息。如果錯誤與磁碟空間或 RAM 有關，您可以更新位於 _C:\Program Files\ NetApp\ SnapCenter WebApp_ 的 web.config 文件，或更新位於 _C:\Windows\System32\WindowsPowerShell\v1.0\Modules\ SnapCenter\_ 的 PowerShell 配置文件，以修改預設值。如果錯誤與剩餘參數有關，那麼您必須解決問題，然後再次驗證要求。</block>
   <block id="ef99553115dfc1718a9b51a970da1ae9" category="paragraph">指定歸檔日誌檔案的副檔名。</block>
   <block id="7f051ce525ea23f09ed6b21ec49fa590" category="paragraph">例如，如果歸檔日誌檔案為 log_backup_0_1.log，則指定 .log 作為檔案副檔名。</block>
+  <block id="1e70ac4737c2e839c6fd901789e3bafb" category="paragraph">共享磁碟並非使用 Plug-in for Windows 建立。您需要建立共用 LUN，然後將其新增至叢集中的每個虛擬機器。</block>
+  <block id="ae0aa1a81eb18e69d5fc662eaee0efd5" category="inline-link-macro">Broadcom 技術文件</block>
+  <block id="35108ed715245e1479e838ca41d91463" category="paragraph">請參閱 <block ref="fba62a4233b1f0aa3ff3e46f7f59037b" category="inline-link-macro-rx"></block> 並搜尋有關跨實體主機對虛擬機器進行叢集以及為 Microsoft 叢集建立共用 FC RDM LUN 的文件。</block>
+  <block id="82b9e59bccf9587b5e339fa8a0f02dd5" category="list-text">NVMe 控制器僅支援 NVMe 資料存放區。</block>
 </blocks>
