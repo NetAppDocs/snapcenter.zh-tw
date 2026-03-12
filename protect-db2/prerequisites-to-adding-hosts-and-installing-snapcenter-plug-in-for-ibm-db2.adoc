@@ -32,7 +32,7 @@ NOTE: IBM Java 在 Windows 和 Linux 主機上不受支援。
 * 您必須為root或非root使用者啟用密碼型SSH連線。
 * 您必須在 Windows 主機上安裝 Java 11 。
 +
-http://www.java.com/en/download/manual.jsp["下載適用於 Windows 的 JAVA"]
+link:https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html["下載適用於 Windows 的 JAVA"^]
 
 
 
@@ -41,12 +41,12 @@ http://www.java.com/en/download/manual.jsp["下載適用於 Windows 的 JAVA"]
 == Linux 和 AIX 主機
 
 * 您必須為root或非root使用者啟用密碼型SSH連線。
-* 您必須在 Linux 主機上安裝 Java 11 。
+* 您必須在 Linux 或 AIX 主機上安裝 Java 11。
 +
-http://www.java.com/en/download/manual.jsp["下載適用於 Linux 的 JAVA"]
+link:https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html["下載適用於 Linux 的 JAVA"^]
 
 +
-https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["下載適用於 AIX 的 JAVA"]
+link:https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["下載適用於 AIX 的 JAVA"^]
 
 * 對於在 Linux 主機上執行的 IBM DB2 資料庫、當安裝適用於 IBM DB2 的外掛程式時、會自動安裝適用於 UNIX 的 SnapCenter 外掛程式。
 * 您應該將 * bash* 作為外掛程式安裝的預設 Shell 。
