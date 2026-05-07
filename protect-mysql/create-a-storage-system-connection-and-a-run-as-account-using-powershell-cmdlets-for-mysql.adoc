@@ -27,7 +27,7 @@ summary: 在使用 PowerShell Cmdlet 備份、還原或複製 MySQL 資料庫之
 
 
 .步驟
-. 使用 Open-SmConnection Cmdlet 啟動 PowerShell Core 連線工作階段。
+. 使用Open-SmConnection Cmdlet啟動PowerShell連線工作階段。
 +
 [listing]
 ----

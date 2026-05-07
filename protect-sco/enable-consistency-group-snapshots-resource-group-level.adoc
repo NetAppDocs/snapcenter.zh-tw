@@ -1,0 +1,28 @@
+---
+permalink: protect-sco/enable-consistency-group-snapshots-resource-group-level.html 
+sidebar: sidebar 
+keywords: consistency group, enable, create, resource group level 
+summary: 資源群組是一個容器、您可以在其中新增要備份和保護的資源。資源群組可讓您同時備份與指定應用程式相關的所有資料。 
+---
+= 在資源群組層級啟用一致性群組 Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+預設情況下， SnapCenter Plug-in for Oracle Database 會在自動儲存管理 (ASM) 磁碟組或邏輯磁碟區管理 (LVM) 磁碟區組層級建立一致性群組快照。最佳實務是，同一資源組內的資料庫不應跨 ASM 磁碟組或 LVM 磁碟區組共用 ONTAP 磁碟區。
+
+但是，如果 ASM 磁碟群組或 LVM 磁碟區群組共用基礎 ONTAP 磁碟區，則一致性群組快照可能會因重複快照衝突而失敗。在這種情況下、SnapCenter 會自動回復至磁碟區層級快照。
+
+.關於這項工作
+在跨 ASM 磁碟群組或 LVM 磁碟區群組共用磁碟區的案例中、SnapCenter 支援在資源群組層級啟用一致性群組快照。這可確保資源群組內與資料庫相關的所有 ASM 磁碟群組或 LVM 磁碟區群組都會在單一一致性群組快照下擷取。下列步驟概述如何使用此功能。
+
+.步驟
+. 導覽至 SnapCenter 伺服器上的下列組態檔案：
++
+`C:\Program Files\NetApp\SMCore\SMCoreServiceHost.dll.config`.
+
+. 找到  `isCgSnapshotForRg` 參數，並將其值從 *false* 變更為 *true*。
+. 重新啟動  `SMCoreService` 服務以使變更生效。
+

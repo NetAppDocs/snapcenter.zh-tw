@@ -96,6 +96,8 @@ entries:
   entries:
   - title: 備份工作流程
     url: "/protect-postgresql/back-up-postgresql-resources.html"
+  - title: 設定 PostgreSQL 叢集的認證資料
+    url: "/protect-postgresql/configure-credentials-for-postgresql-cluster.html"
   - title: 自動探索叢集
     url: "/protect-postgresql/discover-the-clusters-automatically.html"
   - title: 將資源手動新增至外掛程式主機

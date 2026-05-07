@@ -17,8 +17,8 @@ summary: 外掛程式套件是SnapCenter 隨附於升級版的一部分而發佈
 
 .開始之前
 * 如果您是非root使用者、可以存取Linux機器、則在執行升級作業之前、應先使用最新的Checksum值來更新/etc/udoers_檔案。
-* 確保 Windows 外掛主機上已安裝 PowerShell Core 7.4.2。
-* 確保在 Windows 和 Linux 外掛主機上安裝了 Java 11、Oracle Java 和 OpenJDK。
+* 確保在 Windows 插件主機上已安裝 PowerShell 7.4.13。
+* 確保 Windows 和 Linux 外掛程式主機上已安裝 Java 17（Oracle Java 和 OpenJDK）。
 * 根據預設SnapCenter 、此功能會從環境中偵測Java_Home。如果您想要使用固定的Java_Home、而且要升級Linux主機上的外掛程式、您應該在位於_/var/opt/snapcenter/spl/etc/_的_spl.properties_檔案中、手動新增SKip_JAVAHOME_update參數、並將值設為true。
 +
 當外掛程式升級或SnapCenter 重新啟動時、Java_Home的值會更新。在升級或重新啟動SPL之前、如果您新增SKip_JAVAHOME_update參數並將值設為true、則Java_homeTM的值不會更新。
