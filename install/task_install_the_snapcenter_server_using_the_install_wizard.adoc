@@ -120,7 +120,7 @@ Web伺服器
 +
 ** .NET擴充性4.5
 ** 應用程式初始化
-** ASP.NET Core Runtime 8.0.12 （以及所有後續 8.0.x 修補程式）代管產品組合
+** ASP.NET Core Runtime 8.0.24 （及所有後續 8.0.x 修補程式） Hosting Bundle
 ** 伺服器端隨附
 ** WebSocket傳輸協定
 
@@ -144,9 +144,9 @@ Web伺服器
 
 
  a| 
-+.NET Framework 8.0.12 Features+
++.NET Framework 功能+
  a| 
-* ASP.NET Core Runtime 8.0.12 （以及所有後續 8.0.x 修補程式）代管產品組合
+* ASP.NET Core Runtime 8.0.24 （及所有後續 8.0.x 修補程式） Hosting Bundle
 * Windows Communication Foundation（WCF）HTTP Activation45
 +
 ** TCP啟動
