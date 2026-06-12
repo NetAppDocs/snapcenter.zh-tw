@@ -15,7 +15,7 @@ summary: 如果無法從Windows GUI遠端安裝外掛程式、您可以SnapCente
 
 .開始之前
 * 您必須安裝 ASP.NET Core Runtime 8.0.24（以及所有後續的 8.0.x 修補程式）Hosting Bundle。
-* 您必須已安裝 PowerShell 7.4.2 或更新版本。
+* 您必須安裝 PowerShell 7.4.13 或更高版本。
 * 您必須是主機上的本機管理員。
 
 

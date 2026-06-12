@@ -16,7 +16,7 @@ summary: 您可以使用SnapCenter 「伺服器安裝程式執行檔」來升級
 .開始之前
 * 使用最新的 Windows 更新來更新SnapCenter Server 主機，並確保沒有待處理的系統重新啟動。
 * 確保在開始升級之前沒有其他操作正在運行。
-* 安裝 ASP.NET Core Runtime 8.0.24（以及所有後續的 8.0.x 修補程式）託管包和 PowerShell 7.4.2 或更高版本。
+* 安裝 ASP.NET Core Runtime 8.0.24（以及所有後續的 8.0.x 修補程式）託管包和 PowerShell 7.4.13 或更高版本。
 * 確保沒有正在執行的作業後，備份SnapCenter儲存庫（MySQL）資料庫。在升級SnapCenter Server 和 Exchange 插件之前建議這樣做。
 +
 如需相關資訊、請參閱 link:../admin/concept_manage_the_snapcenter_server_repository.html#back-up-the-snapcenter-repository["備份SnapCenter 這個資訊庫"^]。
