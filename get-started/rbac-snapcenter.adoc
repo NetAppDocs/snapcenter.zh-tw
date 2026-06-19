@@ -200,7 +200,7 @@ NOTE: 建立自訂角色時，請確保它包含 SnapCenterAdmin 角色的所有
  a| 
 是的
  a| 
-否
+是的
  a| 
 否
 
