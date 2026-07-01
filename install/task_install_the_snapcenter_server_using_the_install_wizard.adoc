@@ -120,7 +120,7 @@ Web伺服器
 +
 ** .NET擴充性4.5
 ** 應用程式初始化
-** ASP.NET Core Runtime 8.0.24 （及所有後續 8.0.x 修補程式） Hosting Bundle
+** ASP.NET Core 10.0.7 Hosting Bundle（或更高版本）請參閱 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 軟體發行說明"^] 以取得適用於您特定 SnapCenter 版本的最新合格 ASP.NET Core 版本。
 ** 伺服器端隨附
 ** WebSocket傳輸協定
 
@@ -146,11 +146,11 @@ Web伺服器
  a| 
 +.NET Framework 功能+
  a| 
-* ASP.NET Core Runtime 8.0.24 （及所有後續 8.0.x 修補程式） Hosting Bundle
+* ASP.NET Core Runtime 10.0.7 Hosting Bundle （或更高版本）
 * Windows Communication Foundation（WCF）HTTP Activation45
 +
 ** TCP啟動
-** HTTP啟動
+** HTTP Activation 請參閱 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 軟體發行說明"^]，以取得適用於您特定 SnapCenter 版本的最新合格 ASP.NET Core 版本。
 
 
 

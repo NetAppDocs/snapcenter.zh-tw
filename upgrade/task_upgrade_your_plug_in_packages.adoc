@@ -17,8 +17,11 @@ summary: 外掛程式套件是SnapCenter 隨附於升級版的一部分而發佈
 
 .開始之前
 * 如果您是非root使用者、可以存取Linux機器、則在執行升級作業之前、應先使用最新的Checksum值來更新/etc/udoers_檔案。
-* 確保在 Windows 插件主機上安裝了 ASP.NET Core Runtime 8.0.24（以及所有後續的 8.0.x 修補程式）託管包和 PowerShell 7.4.13 或更高版本。
-* 確保在 Windows 和 Linux 外掛主機上安裝了 Java 17（Oracle Java 或 OpenJDK）（適用於 SnapCenter 6.2.1 及更高版本）或 Java 11（適用於 SnapCenter 6.2 及更早版本）。
+* 確保 Windows 插件主機上已安裝 ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更新版本）和 PowerShell 7.6.1（或更新版本）。
++
+請參閱 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 軟體發行說明"^]，以取得適用於您特定 SnapCenter 版本的最新合格 ASP.NET Core 與 PowerShell 版本。
+
+* 確保在 Windows 和 Linux 外掛主機上安裝了適用於 SnapCenter 6.2.1 及更新版本的 Java 17（Oracle Java、OpenJDK 或 SAP JDK），或適用於 SnapCenter 6.2 及更早版本的 Java 11。
 * 根據預設SnapCenter 、此功能會從環境中偵測Java_Home。如果您想要使用固定的Java_Home、而且要升級Linux主機上的外掛程式、您應該在位於_/var/opt/snapcenter/spl/etc/_的_spl.properties_檔案中、手動新增SKip_JAVAHOME_update參數、並將值設為true。
 +
 當外掛程式升級或SnapCenter 重新啟動時、Java_Home的值會更新。在升級或重新啟動SPL之前、如果您新增SKip_JAVAHOME_update參數並將值設為true、則Java_homeTM的值不會更新。

@@ -11,7 +11,7 @@ summary: SnapCenter software 6.2 版本包含多項新功能和增強功能。
 
 
 [role="lead"]
-SnapCenter software 6.2 版本包含以下擴充功能。
+SnapCenter 軟體的 6.2 版本包含已知的錯誤修正，以及 SnapCenter Server 和外掛程式合格版本的更新。它還包含以下擴充功能。請參閱 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 6.2.2 版本說明"^] 以取得詳細資訊。
 
 |===
 | 更新 | 說明 
