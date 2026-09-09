@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, new customer, NetApp account, enable support 
 summary: 如果您沒有現有的 NetApp 帳戶，則應註冊產品以啟用支援。 
 ---
-= 註冊 SnapCenter
+= 註冊 SnapCenter 以啟用支援
 :allow-uri-read: 
 
 

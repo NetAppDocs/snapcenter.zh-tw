@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Server 
 summary: 您可以使用SnapCenter 「更新工作」頁面來監控不同備份作業的進度。您可能需要檢查進度、以判斷何時完成或是否有問題。 
 ---
-= 監控 IBM DB2 備份作業
+= 在 SnapCenter 中監控 IBM Db2 備份作業
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,6 +49,7 @@ NOTE: 雖然會顯示備份工作狀態image:../media/success_icon.gif["已完�
 
 
 
+[[monitor-data-protection-operations-on-ibm-db2-databases-in-the-activity-pane]]
 == 在「活動」窗格中監控 IBM DB2 資料庫的資料保護作業
 
 「活動」窗格會顯示最近執行的五項作業。「活動」窗格也會顯示啟動作業的時間和作業狀態。

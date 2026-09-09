@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: 適用於 PostgreSQL 的 SnapCenter 外掛程式是 NetApp SnapCenter 軟體的主機端元件、可支援應用程式感知的 PostgreSQL 叢集資料保護管理。PostgreSQL 叢集外掛程式可在 SnapCenter 環境中自動備份、還原及複製 PostgreSQL 叢集。 
 ---
-= 適用於 PostgreSQL 的 SnapCenter 外掛程式總覽
+= 了解 SnapCenter PostgreSQL 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

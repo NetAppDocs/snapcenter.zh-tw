@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle, preparation for protection, prerequisites 
 summary: 在執行任何資料保護作業（例如備份、複製或還原作業）之前、您必須先定義策略並設定環境。您也可以設定SnapCenter 使用SnapMirror和SnapVault SnapMirror技術的「支援伺服器」。 
 ---
-= 準備保護Oracle資料庫
+= 使用 SnapCenter 保護 Oracle 資料庫的前提條件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

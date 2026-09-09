@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,disable two-way SSL,enable two-way SSL, windows host 
 summary: 您可以啟用雙向 SSL 通訊、以使用 PowerShell 命令保護 Windows 主機上的 SnapCenter 伺服器與外掛程式之間的相互通訊。 
 ---
-= 在 Windows 主機上啟用雙向 SSL 通訊
+= 在 SnapCenter Windows 主機上啟用雙向 SSL 通訊
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -39,6 +39,7 @@ summary: 您可以啟用雙向 SSL 通訊、以使用 PowerShell 命令保護 Wi
 
 
 
+[[disable-two-way-ssl-communication]]
 == 停用雙向 SSL 通訊
 
 您可以使用 PowerShell 命令停用雙向 SSL 通訊。

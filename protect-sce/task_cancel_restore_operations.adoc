@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 您可以取消佇列中的還原工作。 
 ---
-= 取消Exchange資料庫的還原作業
+= 在 SnapCenter 中取消 Exchange 資料庫的還原操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restoring an Exchange database 
 summary: 從SnapCenter 適用於Microsoft Exchange Server備份的還原元件中還原Exchange Server資料庫之前、您必須確保符合多項需求。 
 ---
-= 還原Exchange資料庫的需求
+= Microsoft Exchange Server 的 SnapCenter 外掛還原需求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

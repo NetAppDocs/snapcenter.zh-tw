@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, remove, remove host 
 summary: 當支援對象移除主機時、它會先移除「資源庫」頁面上所列該主機的備份、複製、複製工作、資源群組和資源、然後在主機上解除安裝外掛程式套件。SnapCenter SnapCenter 
 ---
-= 移除主機
+= 從 SnapCenter 移除主機
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

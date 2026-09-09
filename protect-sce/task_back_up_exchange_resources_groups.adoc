@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 資源群組是主機或Exchange DAG上的資源集合、資源群組可以包含整個DAG或個別資料庫。您可以從「資源」頁面備份資源群組。 
 ---
-= 備份Exchange資源群組
+= 使用 SnapCenter 備份 Exchange 資源群組
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

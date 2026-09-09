@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: RBAC roles, add, NetApp ONTAP RBAC role, storage system 
 summary: 當儲存系統執行叢集式 NetApp ONTAP 時，您可以使用安全登入命令來新增 NetApp ONTAP RBAC 角色。 
 ---
-= 使用安全登入命令新增 NetApp ONTAP RBAC 角色
+= 使用安全性登入指令為 SnapCenter 新增 ONTAP RBAC 角色
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

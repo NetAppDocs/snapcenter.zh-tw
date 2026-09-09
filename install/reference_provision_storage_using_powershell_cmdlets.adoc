@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Provision storage, snapcenter 
 summary: 如果您不想使用SnapCenter 現象GUI來執行主機資源配置和空間回收工作、可以使用SnapCenter 適用於Microsoft Windows的更新程式所提供的PowerShell Cmdlet。您可以直接使用Cmdlet或將Cmdlet新增至指令碼。 
 ---
-= 使用PowerShell Cmdlet來配置儲存設備
+= SnapCenter PowerShell 用於儲存資源配置的 cmdlet
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

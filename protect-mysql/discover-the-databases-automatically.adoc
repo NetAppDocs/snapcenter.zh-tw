@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 資源是由 SnapCenter 管理的 Linux 主機上的 MySQL 資料庫。您可以在探索可用的 MySQL 資料庫之後、將這些資源新增至資源群組、以執行資料保護作業。 
 ---
-= 自動探索資料庫
+= 在 SnapCenter 中自動探索 MySQL 資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

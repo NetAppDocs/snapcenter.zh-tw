@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, PDB, clone PDB 
 summary: 如果不再需要、您可以刪除可插拔資料庫（pdb）的複本。 
 ---
-= 刪除可插拔資料庫的實體複本
+= 在 SnapCenter 中刪除可插拔資料庫的 Clone
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

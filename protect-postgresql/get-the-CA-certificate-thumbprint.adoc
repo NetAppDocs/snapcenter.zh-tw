@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 取得CA憑證指紋。 
 ---
-= 取得CA憑證指紋
+= 在 SnapCenter 中取得 CA 憑證指紋
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

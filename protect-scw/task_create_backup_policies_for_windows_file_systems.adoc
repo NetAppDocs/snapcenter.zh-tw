@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policy 
 summary: 您可以先建立新的資源備份原則、再使用SnapCenter 支援功能來備份Windows檔案系統、也可以在建立資源群組時或備份資源時建立新的備份原則。 
 ---
-= 為Windows檔案系統建立備份原則
+= 為 Windows 檔案系統建立 SnapCenter 備份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

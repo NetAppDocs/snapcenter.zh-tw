@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, resource group, back up, database 
 summary: 您可以備份僅包含應用程式磁碟區的資源群組、或是應用程式磁碟區與資料庫的混合。 
 ---
-= 備份應用程式磁碟區資源群組
+= 在 SnapCenter 中備份應用程式 Volumes 資源群組
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

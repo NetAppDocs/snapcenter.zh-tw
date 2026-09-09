@@ -17,6 +17,7 @@ SnapCenter 災難恢復（ DR ）功能可讓您從資源毀損或伺服器當�
 
 
 
+[[snapcenter-server-dr]]
 == SnapCenter 伺服器災難恢復
 
 * SnapCenter 伺服器資料已備份、可在不新增任何外掛程式或由 SnapCenter 伺服器管理的情況下進行還原。
@@ -28,6 +29,7 @@ SnapCenter 災難恢復（ DR ）功能可讓您從資源毀損或伺服器當�
 
 
 
+[[snapcenter-plug-in-and-storage-dr]]
 == SnapCenter 外掛程式與儲存災難恢復
 
 DR 僅適用於 SQL Server 的 SnapCenter 外掛程式。如果外掛程式關閉，請切換至另一部 SQL 主機，然後依照幾個步驟來恢復資料。請參閱。 link:../protect-scsql/task_disaster_recovery_scsql.html["SQL Server適用的支援功能SnapCenter"]

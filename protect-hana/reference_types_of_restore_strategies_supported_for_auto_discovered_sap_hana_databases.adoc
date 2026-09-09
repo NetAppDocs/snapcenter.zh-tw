@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Databases 
 summary: 您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。自動探索SAP HANA資料庫的還原策略有兩種類型。 
 ---
-= 自動探索的SAP HANA資料庫所支援的還原策略類型
+= 針對自動探索的 SAP HANA 資料庫的 SnapCenter 還原策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 您必須先定義策略、才能使用SnapCenter 還原成功執行還
 
 
 
+[[complete-resource-restore]]
 == 完成資源還原
 
 * 還原資源的所有磁碟區、qtree和LUN
@@ -30,6 +31,7 @@ NOTE: 如果資源包含磁碟區或 qtree 、則會刪除選定要在這類磁�
 
 
 
+[[tenant-database]]
 == 租戶資料庫
 
 * 還原租戶資料庫

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: SnapCenter 如何探索 Oracle 資料庫。 
 ---
-= RAC設定中的慣用節點
+= SnapCenter 如何在 RAC 設定中使用首選節點
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,12 +26,14 @@ RAC 資料庫 cdrac 有三個執行個體： node1 上的 cdrcbra1 、 node2 上
 
 
 
+[[flex-asm-setup]]
 == Flex ASM 設定
 
 在Flex ASM設定中、如果基數小於RAC叢集中的節點數、則不會將葉節點列為偏好的節點。如果Flex ASM叢集節點角色有任何變更、您應該手動探索、以便重新整理偏好的節點。
 
 
 
+[[required-database-state]]
 == 必要的資料庫狀態
 
 偏好的節點上的RAC資料庫執行個體必須處於必要狀態、備份才能成功完成：

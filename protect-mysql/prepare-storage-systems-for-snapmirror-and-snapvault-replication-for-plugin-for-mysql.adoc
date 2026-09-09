@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapmirror, snapvault, storage system, replication 
 summary: 您可以搭配SnapCenter 使用支援ONTAP SnapMirror和SnapVault SnapMirror技術的功能 
 ---
-= 為適用於 MySQL 的 SnapMirror 和 SnapVault 複寫準備儲存系統
+= 準備儲存系統以進行 MySQL 資料的 SnapMirror 與 SnapVault 複寫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, prerequisites, plug-in, plug-in packages 
 summary: 如果您不想再使用SnapCenter 支援功能來管理資料保護工作、可以移除主機。例如、如果主機不再有需要保護的資料、您可能會想要移除該主機。在將主機從SnapCenter 支援伺服器移除之前、您必須先執行必要的工作。 
 ---
-= 移除主機的必要條件
+= 從 SnapCenter 移除主機的前提條件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -24,6 +24,7 @@ summary: 如果您不想再使用SnapCenter 支援功能來管理資料保護工
 
 
 
+[[prerequisites-to-remove-a-host-using-role-based-access-control]]
 == 使用角色型存取控制來移除主機的必要條件
 
 * 您應該已使用具有讀取、刪除主機、安裝、解除安裝外掛程式及刪除物件權限的RBAC角色登入。
@@ -37,6 +38,7 @@ summary: 如果您不想再使用SnapCenter 支援功能來管理資料保護工
 
 
 
+[[prerequisites-to-remove-a-host-with-clones-created-from-clone-lifecycle-operation]]
 == 移除主機的先決條件、並從實體複本生命週期作業中建立複本
 
 * 您應該已經使用SQL資料庫的複製生命週期管理來建立複製工作。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: view backups, view clones 
 summary: 當您準備備備備份或複製資源時、可以檢視一線與二線儲存設備上所有備份與複本的圖形化呈現。在「拓撲」頁面中、您可以看到可供所選資源或資源群組使用的所有備份和複本。您可以檢視這些備份與複製的詳細資料、然後選取這些資料以執行資料保護作業。 
 ---
-= 在「拓撲」頁面中檢視相關的備份與複本
+= 在 Windows 的 SnapCenter 拓撲頁面中檢視相關的備份與 Clone
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

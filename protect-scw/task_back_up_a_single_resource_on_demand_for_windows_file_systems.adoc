@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backing up 
 summary: 如果資源不在資源群組中、您可以從「資源」頁面隨需備份資源。 
 ---
-= 隨需備份單一資源以供Windows檔案系統使用
+= 在 SnapCenter 中隨需備份 Windows 檔案系統資源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 如果資料庫不是任何資源群組的一部分、您可以從「資源」頁面備份資料庫或「資料庫可用度群組」。 
 ---
-= 備份Exchange資料庫
+= 使用 SnapCenter 備份 Exchange 資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

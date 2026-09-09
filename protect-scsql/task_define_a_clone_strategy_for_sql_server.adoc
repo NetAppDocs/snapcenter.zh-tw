@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone strategy 
 summary: 定義複製策略可讓您成功複製資料庫。 
 ---
-= 定義SQL Server的複製策略
+= SnapCenter 中的 SQL Server Clone 策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ summary: 定義複製策略可讓您成功複製資料庫。
 
 
 
+[[limitations-of-clone-operations]]
 == 複製作業的限制
 
 在複製資料庫之前、您應該瞭解複製作業的限制。
@@ -31,6 +32,7 @@ summary: 定義複製策略可讓您成功複製資料庫。
 
 
 
+[[types-of-clone-operations]]
 == 複製作業類型
 
 您可以使用SnapCenter 支援功能來複製SQL Server資料庫備份或正式作業資料庫。

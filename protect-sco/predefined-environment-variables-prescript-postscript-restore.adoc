@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: environment variable, predefined, prescript, postscript, restore 
 summary: 還原資料庫時、可使用預先定義的環境變數執行預先記錄和PostScript。SnapCenter 
 ---
-= 預先定義的環境變數、用於還原特定的pretced和postscript
+= SnapCenter 用於還原的 prescript 和 postscript 環境變數
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

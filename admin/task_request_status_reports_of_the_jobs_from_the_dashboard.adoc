@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: dashboard, snapcenter 
 summary: 您可以從儀表板頁面要求備份、還原及複製工作的相關報告。如果您想找出SnapCenter 在您的環境中成功或失敗的工作總數、這很有用。 
 ---
-= 從儀表板要求工作狀態報告
+= 從 SnapCenter 儀表板請求作業狀態報告
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

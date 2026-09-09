@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policies, policies, unix file systems, file systems 
 summary: 為您要備份的 Unix 檔案系統建立備份原則。 
 ---
-= 為 Unix 檔案系統建立備份原則
+= 在 SnapCenter 中為 UNIX 檔案系統建立備份原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

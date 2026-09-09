@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, storage system, 
 summary: 將資料從舊儲存設備移至新儲存設備、將新儲存設備掛載至各自的主機、然後啟動資料庫、以執行儲存系統的技術更新。 
 ---
-= 儲存系統的技術更新
+= 在 SnapCenter 中對儲存系統進行技術更新
 :allow-uri-read: 
 
 
@@ -33,6 +33,7 @@ summary: 將資料從舊儲存設備移至新儲存設備、將新儲存設備�
 
 
 
+[[update-the-backups-of-the-primary-storage]]
 == 更新主儲存設備的備份
 
 當儲存設備技術更新時、您應執行儲存技術更新 API 或 Cmdlet 、以更新 SnapCenter 中的舊備份、並提供新的儲存詳細資料。
@@ -104,6 +105,7 @@ NOTE: 複製階層架構無法在 ONTAP 中移轉。如果要移轉的儲存設�
 
 
 
+[[update-the-backups-of-the-secondary-storage]]
 == 更新次要儲存設備的備份
 
 當儲存設備技術更新時、您應執行儲存技術更新 API 或 Cmdlet 、以更新 SnapCenter 中的舊備份、並提供新的儲存詳細資料。

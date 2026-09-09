@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone 
 summary: 您可以使用SnapCenter 支援功能來複製SQL Server資料庫備份。如果您想要存取或還原舊版資料、可以隨需複製資料庫備份。 
 ---
-= 從SQL Server資料庫備份複製
+= 使用 SnapCenter 從 SQL Server 資料庫備份 Clone
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -152,7 +152,7 @@ NOTE: 預先編寫或後製指令碼路徑不應包含磁碟機或共用區。�
 NOTE: 對於電子郵件通知、您必須使用GUI或PowerShell命令Set-SmtpServer來指定SMTP伺服器詳細資料。
 
 +
-如需EMS、請參閱 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["管理EMS資料收集"]
+關於 EMS ，您可以參考 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["在 SnapCenter 中管理 EMS 資料收集"]
 
 . 檢閱摘要、然後選取 * 完成 * 。
 . 選取 * 監控 * > * 工作 * 來監控作業進度。

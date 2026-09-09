@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, recover, CLI 
 summary: 還原與還原工作流程包括規劃、執行還原與還原作業、以及監控作業。 
 ---
-= 使用UNIX命令還原及還原Oracle資料庫
+= 在 SnapCenter 中使用 UNIX 指令還原與恢復 Oracle 資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 在 Windows 主機上設定 SnapCenter MySQL 外掛程式服務的 CA 憑證 
 ---
-= 在 Windows 主機上設定 SnapCenter MySQL 外掛程式服務的 CA 憑證
+= 在 Windows 主機上設定 MySQL 的 SnapCenter 外掛 CA 憑證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ summary: 在 Windows 主機上設定 SnapCenter MySQL 外掛程式服務的 CA �
 
 
 
+[[manage-password-for-plug-in-keystore-and-alias-of-the-ca-signed-key-pair-in-use]]
 == 管理插件金鑰庫的密碼以及正在使用的 CA 簽章金鑰對的別名
 
 .步驟
@@ -51,6 +52,7 @@ NOTE: 插件金鑰庫的密碼和所有相關私鑰別名的密碼應該相同�
 
 
 
+[[configure-root-or-intermediate-certificates-to-plug-in-trust-store]]
 == 設定根憑證或中間憑證以插入信任庫
 
 您應該配置沒有私鑰的根憑證或中間憑證來插入信任庫。
@@ -74,6 +76,7 @@ NOTE: 您應該先新增根CA憑證、然後再新增中繼CA憑證。
 
 
 
+[[configure-ca-signed-key-pair-to-plug-in-trust-store]]
 == 配置 CA 簽署金鑰對以插入信任庫
 
 您應該將 CA 簽署的金鑰對配置到插件信任庫中。
@@ -110,6 +113,7 @@ _keytool-keypasswd -alias "alias name_in_CA_cert "-keystore keyKeystore .jks_
 
 
 
+[[configure-certificate-revocation-list-crl-for-snapcenter-plug-ins]]
 == 為 SnapCenter 外掛程式設定憑證撤銷清單 (CRL)
 
 .關於這項工作

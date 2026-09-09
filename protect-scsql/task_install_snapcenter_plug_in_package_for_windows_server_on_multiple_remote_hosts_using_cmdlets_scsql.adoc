@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、在多個主機上同時安裝適用於Microsoft SQL Server的VMware®更新外掛程式。 
 ---
-= 使用Cmdlet在SnapCenter 多個遠端主機上安裝適用於Microsoft SQL Server的支援功能外掛程式
+= 使用 cmdlet 在多部主機上安裝適用於 Microsoft SQL Server 的 SnapCenter 外掛程式
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

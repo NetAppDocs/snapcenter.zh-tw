@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: 您可以使用SnapCenter 效益管理功能、從一或多個備份中還原及恢復資料。 
 ---
-= 還原並恢復自動探索到的叢集備份
+= 使用 SnapCenter PostgreSQL 外掛程式還原與恢復自動發現的叢集備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

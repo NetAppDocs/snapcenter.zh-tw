@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server Database, clone, database, backups 
 summary: 您可以使用SnapCenter 支援功能來複製備份。 
 ---
-= 複製 SQL Server 資料庫備份
+= 使用 SnapCenter Clone SQL Server 資料庫備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -50,6 +50,7 @@ SMB 組態不支援目標執行個體的 SQL 驗證。目標執行個體應在 S
 
 
 
+[[perform-clone-lifecycle]]
 == 執行Clone生命週期
 
 使用這個功能、您可以從資源群組或資料庫建立複本。SnapCenter您可以執行隨需複製、也可以排程資源群組或資料庫的循環複製作業。如果您定期複製備份、可以使用複本來開發應用程式、填入資料或恢復資料。

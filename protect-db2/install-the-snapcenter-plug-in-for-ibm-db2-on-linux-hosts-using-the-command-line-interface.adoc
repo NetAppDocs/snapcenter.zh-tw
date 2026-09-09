@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, SnapCenter Plug-in for IBM Db2 
 summary: 您應該使用 SnapCenter 使用者介面（ UI ）來安裝適用於 IBM DB2 資料庫的 SnapCenter 外掛程式。如果您的環境不允許從 SnapCenter UI 遠端安裝外掛程式、您可以使用命令列介面（ CLI1 ）、以主控台模式或無訊息模式安裝適用於 IBM DB2 資料庫的外掛程式。 
 ---
-= 使用命令列介面、在 Linux 主機上安裝適用於 IBM DB2 的 SnapCenter 外掛程式
+= 使用 CLI 在 Linux 主機上安裝適用於 IBM Db2 的 SnapCenter 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

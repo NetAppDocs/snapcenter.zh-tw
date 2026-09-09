@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 某些HANA執行個體不支援自動探索。您必須手動新增這些資源。 
 ---
-= 將資源手動新增至外掛程式主機
+= 手動為 SAP HANA 的 SnapCenter 外掛主機新增資源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

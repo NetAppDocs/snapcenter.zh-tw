@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: 實體複本工作流程包括執行實體複本作業及監控作業。 
 ---
-= 複製工作流程
+= MySQL 備份 Clone 工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

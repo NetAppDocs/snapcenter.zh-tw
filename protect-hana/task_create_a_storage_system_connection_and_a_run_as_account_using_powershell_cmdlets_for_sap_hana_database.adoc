@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 您必須先建立儲存虛擬機器（SVM）連線和認證、才能使用PowerShell Cmdlet備份、還原或複製SAP HANA資料庫。 
 ---
-= 使用適用於SAP HANA資料庫的PowerShell Cmdlet建立儲存系統連線和認證
+= 使用適用於 SAP HANA 資料庫的 SnapCenter PowerShell cmdlet 建立儲存系統連線和認證資料
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

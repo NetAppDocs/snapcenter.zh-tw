@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 使用這個功能、您可以從資源群組或資料庫建立複本。SnapCenter您可以執行隨需複製、也可以排程資源群組或資料庫的循環複製作業。如果您定期複製備份、可以使用複本來開發應用程式、填入資料或恢復資料。 
 ---
-= 執行Clone生命週期
+= 執行 SnapCenter Clone 生命週期管理
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -110,7 +110,7 @@ NOTE: 預先編寫或後製指令碼路徑不應包含磁碟機或共用區。�
 NOTE: 對於電子郵件通知、您必須使用GUI或PowerShell命令Set-SmtpServer來指定SMTP伺服器詳細資料。
 
 +
-如需EMS、請參閱 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["管理EMS資料收集"]
+關於 EMS ，您可以參考 https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_ems_data_collection.html["在 SnapCenter 中管理 EMS 資料收集"]
 
 . 檢閱摘要、然後按一下「*完成*」。
 

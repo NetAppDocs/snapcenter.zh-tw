@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 您可以建立資源（資料庫）或資源群組的備份。備份工作流程包括規劃、識別備份資料庫、管理備份原則、建立資源群組及附加原則、建立備份及監控作業。 
 ---
-= 備份 IBM DB2 資源
+= SnapCenter 中的 IBM Db2 備份工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

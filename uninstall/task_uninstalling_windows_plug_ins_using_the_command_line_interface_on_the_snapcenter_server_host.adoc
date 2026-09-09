@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, windows plug-ins, powershell cmdlet 
 summary: 您可以使用SnapCenter 支援於支援服務器主機命令列介面的Uninstall-SmHostPackage Cmdlet、從一或多個主機解除安裝個別外掛程式或解除安裝外掛程式套件。 
 ---
-= 使用PowerShell Cmdlet解除安裝Windows外掛程式
+= 使用 PowerShell 解除安裝 SnapCenter Windows 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

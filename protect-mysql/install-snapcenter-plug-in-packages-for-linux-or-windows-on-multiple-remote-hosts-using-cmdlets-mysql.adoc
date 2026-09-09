@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in Packages for Linux, SnapCenter Plug-in Packages for Windows 
 summary: 您SnapCenter 可以使用Install-SmHostPackage PowerShell Cmdlet、同時在多個主機上安裝適用於Linux或Windows的VMware®更新套件。 
 ---
-= 使用Cmdlet在SnapCenter 多個遠端主機上安裝適用於Linux或Windows的支援功能外掛套件
+= 使用 cmdlet 在多個遠端主機上安裝 SnapCenter 外掛套件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

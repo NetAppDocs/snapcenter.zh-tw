@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 您可以取消執行中、佇列中或無回應的備份作業。 
 ---
-= 取消Oracle資料庫的備份作業
+= 在 SnapCenter 中取消 Oracle 資料庫備份作業
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database, clone, database, backups 
 summary: 您可以使用SnapCenter 支援功能來複製備份。 
 ---
-= 複製 SAP HANA 資料庫備份
+= 使用 SnapCenter Clone SAP HANA 資料庫備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

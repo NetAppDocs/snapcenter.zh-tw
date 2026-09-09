@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM DB2 
 summary: 資源是由 SnapCenter 管理的 Linux 主機上的 IBM DB2 資料庫和執行個體。安裝 SnapCenter Plug-in for IBM DB2 外掛程式後、系統會自動探索該 Linux 主機上的 IBM DB2 資料庫、並顯示在「資源」頁面中。 
 ---
-= 自動探索Linux主機上的資源
+= SnapCenter 如何在 Linux 主機上自動發現 IBM Db2 資源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: exporting certificates, enable certificate-based authentication, certificate-based authentication, configure CA signed key pair, configure root, configure intermediate certificates, security,authentication, export CA certificates 
 summary: 匯出SnapCenter 功能證書。 
 ---
-= 設定憑證型驗證
+= 為 SnapCenter 設定憑證型驗證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 匯出SnapCenter 功能證書。
 
 
 
+[[enable-certificate-based-authentication]]
 == 啟用憑證型驗證
 
 若要為 SnapCenter Server 和 Windows 外掛程式主機啟用憑證型驗證、請執行下列 PowerShell Cmdlet 。  對於 Linux 外掛主機、當您啟用雙向 SSL 時、將會啟用憑證型驗證。
@@ -31,6 +32,7 @@ summary: 匯出SnapCenter 功能證書。
 
 
 
+[[export-certificate-authority-ca-certificates-from-snapcenter-server]]
 == 從 SnapCenter 伺服器匯出憑證授權單位（ CA ）憑證
 
 您應該使用 Microsoft 管理主控台（ MMC ）、將 CA 憑證從 SnapCenter 伺服器匯出至外掛主機。
@@ -84,6 +86,7 @@ NOTE: SnapCenter HA 組態和 SnapCenter Plug-in for VMware vSphere 不支援憑
 
 
 
+[[import-ca-certificate-to-the-windows-plug-in-hosts]]
 == 將 CA 憑證匯入 Windows 外掛主機
 
 若要使用匯出的 SnapCenter 伺服器 CA 憑證、您應該使用 Microsoft 管理主控台（ MMC ）、將相關的憑證匯入 SnapCenter Windows 外掛主機。
@@ -131,6 +134,7 @@ NOTE: SnapCenter HA 組態和 SnapCenter Plug-in for VMware vSphere 不支援憑
 |===
 
 
+[[import-ca-certificate-to-the-unix-plug-in-hosts]]
 == 將 CA 憑證匯入 UNIX 外掛主機
 
 您應該將 CA 憑證匯入 UNIX 外掛主機。
@@ -154,6 +158,7 @@ NOTE: SnapCenter HA 組態和 SnapCenter Plug-in for VMware vSphere 不支援憑
 
 
 
+[[configure-root-or-intermediate-certificates-to-spl-trust-store]]
 === 將根或中繼憑證設定為SPL信任存放區
 
 您應該將根或中繼憑證設定為 SPL 信任存放區。您應該先新增根CA憑證、然後再新增中繼CA憑證。
@@ -171,6 +176,7 @@ NOTE: SnapCenter HA 組態和 SnapCenter Plug-in for VMware vSphere 不支援憑
 
 
 
+[[configure-ca-signed-key-pair-to-spl-trust-store]]
 === 將CA簽署金鑰配對設定為SPL信任存放區
 
 您應該將 CA 簽署金鑰配對設定為 SPL 信任存放區。
@@ -202,6 +208,7 @@ NOTE: SnapCenter HA 組態和 SnapCenter Plug-in for VMware vSphere 不支援憑
 
 
 
+[[export-snapcenter-certificates]]
 == 匯出SnapCenter 功能證書
 
 您應該匯出 .pfp 格式的 SnapCenter 憑證。

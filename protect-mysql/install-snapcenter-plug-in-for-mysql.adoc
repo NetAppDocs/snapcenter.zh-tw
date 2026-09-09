@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installing 
 summary: 如果要保護 MySQL 、您應該安裝並設定適用於 MySQL 的 SnapCenter 外掛程式。 
 ---
-= 適用於 MySQL 的 SnapCenter 外掛程式安裝工作流程
+= SnapCenter 適用於 MySQL 的外掛安裝與設定工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

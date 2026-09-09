@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, cli, commands 
 summary: 備份工作流程包括規劃、識別備份資源、建立備份原則、建立資源群組及附加原則、建立備份及監控作業。 
 ---
-= 使用UNIX命令備份Oracle資料庫
+= 在 SnapCenter 中使用 UNIX 指令備份 Oracle 資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

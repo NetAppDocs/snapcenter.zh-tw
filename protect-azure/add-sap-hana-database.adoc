@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, add SAP HANA database, manual discovery, automatic discovery 
 summary: 新增 SAP HANA 資料庫。 
 ---
-= 新增 SAP HANA 資料庫
+= 在 SnapCenter 中新增 SAP HANA 資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup copy verification 
 summary: 您可以在主要儲存磁碟區或SnapMirror或SnapVault 支援的二線儲存磁碟區上驗證備份複本。使用次要儲存磁碟區進行驗證、可降低主要儲存磁碟區的負載。 
 ---
-= 使用SQL Server外掛程式的主要或次要儲存Volume進行備份複本驗證
+= SnapCenter SQL Server 外掛程式的備份複本驗證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

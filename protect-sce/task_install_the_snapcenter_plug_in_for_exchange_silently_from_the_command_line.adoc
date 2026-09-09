@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 您應該從SnapCenter 「版本資訊」使用者介面中安裝Exchange外掛程式。不過、如果您因為某些原因無法執行、您可以從Windows命令列以無訊息模式執行外掛程式的Exchange安裝程式。 
 ---
-= 從命令列以無訊息方式安裝SnapCenter Exchange的功能
+= 從命令列安裝適用於 Exchange 的 SnapCenter 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

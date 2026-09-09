@@ -15,6 +15,7 @@ summary: 提供安裝 SnapCenter Server for Microsoft SQL Server 的指示。
 
 
 
+[[step-1-download-and-install-snapcenter-server]]
 == 步驟 1 ：下載並安裝 SnapCenter 伺服器
 
 . 從下載SnapCenter 《the》的《the》（英文）《the》（英文 https://mysupport.netapp.com/site/products/all/details/snapcenter/downloads-tab["NetApp 支援網站"^] 然後按兩下exe。
@@ -34,6 +35,7 @@ NOTE: 自訂安裝路徑不支援特殊字元「%」。如果您在路徑中加�
 
 
 
+[[step-2-log-in-to-snapcenter]]
 == 步驟 2 ：登入 SnapCenter
 
 . 從SnapCenter 主機桌面上的捷徑或安裝所提供的URL啟動支援（預設連接埠8146安裝SnapCenter 了支援支援服務器的端口為_\https://server:8146_）。
@@ -49,6 +51,7 @@ NOTE: 自訂安裝路徑不支援特殊字元「%」。如果您在路徑中加�
 
 
 
+[[step-3-add-a-snapcenter-standard-controller-based-license]]
 == 步驟 3 ：新增 SnapCenter 標準控制器型授權
 
 . 使用ONTAP 下列命令列登入控制器：
@@ -63,6 +66,7 @@ NOTE: 自訂安裝路徑不支援特殊字元「%」。如果您在路徑中加�
 
 
 
+[[step-4-set-up-storage-system-connections]]
 == 步驟 4 ：設定儲存系統連線
 
 . 在左窗格中、按一下*儲存系統>新增*。

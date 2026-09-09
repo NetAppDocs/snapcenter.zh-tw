@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reseed 
 summary: 重新編頁是還原可用度群組（AG）資料庫的選項。如果次要資料庫無法與AG中的主要資料庫同步、您可以重新建立次要資料庫。 
 ---
-= 重新建立可用度群組資料庫
+= 在 SnapCenter 中重新播種可用性群組資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

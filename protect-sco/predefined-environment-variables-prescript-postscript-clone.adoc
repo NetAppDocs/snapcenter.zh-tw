@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: environment variable, predefined, prescript, postscript, clone 
 summary: 利用此功能、您可以在複製資料庫時、使用預先定義的環境變數來執行預先記錄和PostScript。SnapCenter 
 ---
-= 針對特定實體複本的預先定義環境變數、以及PostScript
+= SnapCenter Clone 的 prescript 和 postscript 環境變數
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: sc-automation/concept_input_variables_controlling_an_api_request.html
 keywords: http methods, request headers, request body, filtering objects, size, pagination 
 summary: 您可以透過HTTP要求中設定的參數和變數來控制API呼叫的處理方式。 
 ---
-= 控制API要求的輸入變數
+= 控制 SnapCenter REST API 請求的輸入變數
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 您可以透過HTTP要求中設定的參數和變數來控制API呼叫�
 
 
 
+[[http-methods]]
 == HTTP方法
 
 下表顯示了由REST API支援的HTTP方法SnapCenter 。
@@ -39,30 +40,35 @@ NOTE: 並非所有的HTTP方法都可在每個REST端點上使用。
 |===
 
 
+[[request-headers]]
 == 要求標頭
 
 您應該在HTTP要求中包含多個標頭。
 
 
 
+[[content-type]]
 === 內容類型
 
 如果要求本文包含JSON,則此標頭應設定為_application/json_。
 
 
 
+[[accept]]
 === 接受
 
 此標頭應設定為_application/json_。
 
 
 
+[[authorization]]
 === 授權
 
 基本驗證應以使用者名稱和密碼編碼為基礎64字串。
 
 
 
+[[request-body]]
 == 申請本文
 
 申請本文的內容會因特定通話而有所不同。HTTP要求本文包含下列其中一項：
@@ -73,6 +79,7 @@ NOTE: 並非所有的HTTP方法都可在每個REST端點上使用。
 
 
 
+[[filtering-objects]]
 == 篩選物件
 
 發出使用Get的API呼叫時、您可以根據任何屬性來限制或篩選傳回的物件。例如、您可以指定要符合的確切值：
@@ -115,24 +122,28 @@ NOTE: 任何未設定的欄位通常都會排除在相符查詢之外。
 
 
 
+[[requesting-specific-object-fields]]
 == 要求特定物件欄位
 
 根據預設、使用Get發出API呼叫時、只會傳回唯一識別物件的屬性。這組最小欄位可做為每個物件的金鑰、而且會根據物件類型而有所不同。您可以使用「功能變數」查詢參數、以下列方式選取其他物件內容：
 
 
 
+[[common-or-standard-fields]]
 === 一般或標準欄位
 
 指定*功能變數=*以擷取最常用的物件欄位。這些欄位通常會保留在本機伺服器記憶體中、或只需少量處理即可存取。使用Get搭配URL路徑金鑰（UUID）之後、傳回的物件內容相同。
 
 
 
+[[all-fields]]
 === 所有欄位
 
 指定*功能變數=***以擷取所有物件欄位、包括需要額外伺服器處理才能存取的欄位。
 
 
 
+[[custom-field-selection]]
 === 自訂欄位選擇
 
 使用* field=<field_name>*來指定所需的確切欄位。要求多個欄位時、必須使用不含空格的逗號分隔值。
@@ -142,6 +153,7 @@ IMPORTANT: 最佳實務做法是、務必找出您想要的特定欄位。您只
 
 
 
+[[sorting-objects-in-the-output-set]]
 == 排序輸出集中的物件
 
 資源集合中的記錄會以物件定義的預設順序傳回。您可以使用「order_by」查詢參數、以下列欄位名稱和排序方向來變更順序：
@@ -158,6 +170,7 @@ IMPORTANT: 最佳實務做法是、務必找出您想要的特定欄位。您只
 
 
 
+[[pagination-when-retrieving-objects-in-a-collection]]
 == 擷取集合中的物件時分頁
 
 使用Get存取同一類型物件的集合時發出API呼叫SnapCenter 、根據兩個限制、嘗試傳回盡可能多的物件。您可以使用要求上的其他查詢參數來控制這些限制。針對特定Get要求所達成的第一個限制會終止要求、因此會限制傳回的記錄數目。
@@ -167,6 +180,7 @@ NOTE: 如果要求在重複所有物件之前結束、回應會包含擷取下�
 
 
 
+[[limiting-the-number-of-objects]]
 === 限制物件數量
 
 根據預設、SnapCenter 針對Get要求、最多可傳回10、000個物件。您可以使用_mast_Records_query參數來變更此限制。例如：
@@ -177,6 +191,7 @@ NOTE: 如果要求在重複所有物件之前結束、回應會包含擷取下�
 
 
 
+[[limiting-the-time-used-to-retrieve-the-objects]]
 === 限制擷取物件所用的時間
 
 根據預設、SnapCenter 在允許的取得要求時間內、將盡可能多的物件傳回。預設的逾時時間為15秒。您可以使用_reture_timeout_查詢參數來變更此限制。例如：
@@ -187,6 +202,7 @@ NOTE: 如果要求在重複所有物件之前結束、回應會包含擷取下�
 
 
 
+[[narrowing-the-result-set]]
 === 縮小結果集
 
 如有需要、您可以將這兩個參數與其他查詢參數結合、以縮小結果集範圍。例如、下列項目最多會傳回指定時間之後產生的10個EMS事件：
@@ -197,6 +213,7 @@ NOTE: 如果要求在重複所有物件之前結束、回應會包含擷取下�
 
 
 
+[[size-properties]]
 == 大小屬性
 
 某些API呼叫所使用的輸入值以及某些查詢參數均為數值。您可以選擇使用下表所示的字尾、而不是提供以位元組為單位的整數。

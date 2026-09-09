@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: SnapCenter 如何探索 Oracle 資料庫。 
 ---
-= 如何使用Oracle Recovery Manager對備份進行目錄編錄
+= SnapCenter 如何使用 Oracle RMAN 對備份進行編目
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,12 +21,14 @@ summary: SnapCenter 如何探索 Oracle 資料庫。
 
 
 
+[[external-catalog-database]]
 == 外部目錄資料庫
 
 根據預設、目標資料庫控制檔會用於分類。如果您想要新增外部目錄資料庫、可以使用SnapCenter 「資料庫設定」精靈、從圖形化使用者介面（GUI）指定外部目錄的認證和透明網路基底（TNS）名稱來設定。您也可以從CLI中設定外部目錄資料庫、方法是使用-OracleRmanCatalogCredentialName和-OracleRmanCatalogTnsName選項執行「Configure - SmOracleDatabase」命令。
 
 
 
+[[rman-command]]
 == RMAN 命令
 
 如果您在SnapCenter 從還原GUI建立Oracle備份原則時啟用目錄選項、則備份會使用Oracle RMAN進行目錄化、作為備份作業的一部分。您也可以執行來執行備份的延後目錄 `Catalog-SmBackupWithOracleRMAN` 命令。
@@ -35,6 +37,7 @@ summary: SnapCenter 如何探索 Oracle 資料庫。
 
 
 
+[[naming-format]]
 == 命名格式
 
 如果ASM磁碟群組名稱大於或等於16個字元、則SnapCenter 用於備份的命名格式為SC_HASHCODEofDISKKKROUP_DBSID_BACKUPID。不過、如果磁碟群組名稱少於16個字元、則用於備份的命名格式為DISKKROUPNAM_DBSID_BACKUPID、其格式與SnapCenter 在S16 2.0中使用的格式相同。
@@ -43,6 +46,7 @@ HASHCODEofDISKKROUP是每個ASM磁碟群組自動產生的數字（2到10位數�
 
 
 
+[[crosscheck-operations]]
 == 交叉檢查作業
 
 您可以執行交叉檢查、以更新過時的RMAN儲存庫資訊、瞭解儲存庫記錄與其實體狀態不符的備份。例如、如果使用者使用作業系統命令從磁碟移除已歸檔的記錄、控制檔仍會指出記錄是在磁碟上、實際上並不是。
@@ -53,6 +57,7 @@ HASHCODEofDISKKROUP是每個ASM磁碟群組自動產生的數字（2到10位數�
 
 
 
+[[remove-catalog-information]]
 == 移除目錄資訊
 
 您可以執行Uncategor-SmBackupWithOracleRMAN命令來移除目錄資訊。您無法使用SnapCenter 無法使用程式庫GUI移除目錄資訊。不過、刪除備份或刪除與該目錄備份相關的保留與資源群組時、會移除已編製備份的資訊。

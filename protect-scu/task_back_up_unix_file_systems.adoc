@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, Unix file system, policy, schedule, resources 
 summary: 如果資源不屬於任何資源群組、您可以從「資源」頁面備份資源。 
 ---
-= 備份 Unix 檔案系統
+= 使用 SnapCenter 備份 UNIX 檔案系統
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

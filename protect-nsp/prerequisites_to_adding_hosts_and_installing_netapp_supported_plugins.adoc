@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。NetApp 支援的外掛程式可同時用於 Windows ， Linux 或 AIX 環境。 
 ---
-= 新增主機和安裝 Windows ， Linux 或 AIX 外掛程式套件的必要條件
+= 新增主機與安裝 SnapCenter 外掛的必要條件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,12 +27,14 @@ NOTE: IBM Java 在 Windows 和 Linux 主機上不受支援。
 
 
 
+[[general]]
 == 一般
 
 如果您使用iSCSI、iSCSI服務應該會執行。
 
 
 
+[[windows-hosts]]
 == Windows主機
 
 * 您必須擁有具有本機系統管理員權限的網域使用者、並在遠端主機上具有本機登入權限。
@@ -45,6 +47,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["下載適用於
 
 
 
+[[linux-and-aix-hosts]]
 == Linux 和 AIX 主機
 
 
@@ -99,6 +102,7 @@ IMPORTANT: 此範例只能做為建立自己資料的參考。
 
 
 
+[[aix-host-requirements]]
 == AIX主機需求
 
 在安裝SnapCenter 適用於AIX的支援套件之前、您應確保主機符合要求。
@@ -148,6 +152,7 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
 |===
 
 
+[[configure-sudo-privileges-for-non-root-users-for-aix-host]]
 === 為非root使用者設定適用於AIX主機的Sudo權限
 
 支援非root使用者安裝適用於AIX的支援套件、並啟動外掛程式的程序。SnapCenter SnapCenter外掛程式程序將以有效的非root使用者身分執行。您應該為非root使用者設定Sudo權限、以提供對多個路徑的存取權。

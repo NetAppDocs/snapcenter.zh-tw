@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup types, restore methods, connect-and-copy restore, full restore, partial restore, in-place restore, recovery type, limitations 
 summary: 您必須先定義策略、才能還原及還原資料庫、以便順利執行還原及還原作業。 
 ---
-= 定義Oracle資料庫的還原與還原策略
+= 了解 Oracle 資料庫在 SnapCenter 中的還原和恢復策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 您必須先定義策略、才能還原及還原資料庫、以便順�
 
 
 
+[[types-of-backups-supported-for-restore-and-recovery-operations]]
 == 支援還原與還原作業的備份類型
 
 支援還原及還原不同類型的Oracle資料庫備份。SnapCenter
@@ -39,6 +40,7 @@ NOTE: 您無法執行Active Data Guard待命資料庫的還原。
 
 
 
+[[types-of-restore-methods-supported-for-oracle-databases]]
 == Oracle資料庫支援的還原方法類型
 
 支援Oracle資料庫的連線與複製或就地還原。SnapCenter在還原作業期間、SnapCenter 還原決定適合用於還原檔案系統的還原方法、而不會遺失任何資料。
@@ -48,6 +50,7 @@ NOTE: 不支援Volume型的功能。SnapCenter SnapRestore
 
 
 
+[[connect-and-copy-restore]]
 === 連線與複製還原
 
 如果資料庫配置與備份不同、或在建立備份之後有任何新檔案、則會執行連線與複製還原。在連線與複製還原方法中、會執行下列工作：
@@ -76,6 +79,7 @@ NOTE: 若為Flex ASM設定（其中基數小於RAC叢集中的節點數）或VMD
 
 
 
+[[in-place-restore]]
 === 原地還原
 
 如果資料庫配置與備份類似、而且尚未對儲存設備和資料庫堆疊進行任何組態變更、則會執行就地還原、在ONTAP 其中還原檔案或LUN。作爲就地還原方法的一部分、支援僅單一檔案還原（SFSR）SnapCenter SnapRestore 。
@@ -110,6 +114,7 @@ NOTE: 您也可以使用GUI、SnapCenter S還原CLI或PowerShell Cmdlet強制啟
 
 
 
+[[types-of-restore-operations-supported-for-oracle-databases]]
 == Oracle資料庫支援的還原作業類型
 
 利用此功能、您可以針對Oracle資料庫執行不同類型的還原作業。SnapCenter
@@ -118,6 +123,7 @@ NOTE: 您也可以使用GUI、SnapCenter S還原CLI或PowerShell Cmdlet強制啟
 
 
 
+[[full-restore]]
 === 完整還原
 
 * 僅還原資料檔案
@@ -128,6 +134,7 @@ NOTE: 您也可以使用GUI、SnapCenter S還原CLI或PowerShell Cmdlet強制啟
 
 
 
+[[partial-restore]]
 === 部分還原
 
 * 僅還原選取的資料表空間
@@ -137,6 +144,7 @@ NOTE: 您也可以使用GUI、SnapCenter S還原CLI或PowerShell Cmdlet強制啟
 
 
 
+[[types-of-recovery-operations-supported-for-oracle-databases]]
 == Oracle資料庫支援的恢復作業類型
 
 利用此功能、您可以為Oracle資料庫執行不同類型的恢復作業。SnapCenter
@@ -157,6 +165,7 @@ NOTE: 如果您使用以資料庫角色為待命狀態所建立的備份來還�
 
 
 
+[[limitations-related-to-restore-and-recovery-of-oracle-databases]]
 == 與Oracle資料庫的還原與還原有關的限制
 
 在執行還原與還原作業之前、您必須瞭解這些限制。
@@ -186,6 +195,7 @@ NOTE: 如果您使用以資料庫角色為待命狀態所建立的備份來還�
 
 
 
+[[limitations-related-to-point-in-time-recovery-of-tablespaces]]
 == 與表空間時間點還原有關的限制
 
 * 不支援系統、SYSAUX和復原表格空間的時間點還原（PIDR）
@@ -212,18 +222,21 @@ NOTE: 如果您使用以資料庫角色為待命狀態所建立的備份來還�
 
 
 
+[[sources-and-destinations-for-restoring-oracle-databases]]
 == 用於還原Oracle資料庫的來源和目的地
 
 您可以從主要儲存設備或次要儲存設備上的備份複本還原Oracle資料庫。您只能將資料庫還原至同一個資料庫執行個體上的相同位置。不過、在Real Application Cluster（RAC）設定中、您可以將資料庫還原至其他節點。
 
 
 
+[[sources-for-restore-operations]]
 === 還原作業來源
 
 您可以從主要儲存設備或次要儲存設備上的備份還原資料庫。如果您想要從多重鏡射組態中的次要儲存設備備份還原、可以選取次要儲存鏡射作為來源。
 
 
 
+[[destinations-for-restore-operations]]
 === 還原作業的目的地
 
 您只能將資料庫還原至同一個資料庫執行個體上的相同位置。

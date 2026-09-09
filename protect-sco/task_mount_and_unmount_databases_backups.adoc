@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mount, unmount, backup, ASM, asm_diskstring 
 summary: 若要存取備份中的檔案、您可以掛載單一或多個資料、並只記錄備份。您可以將備份掛載到建立備份的同一部主機、或掛載到具有相同類型Oracle和主機組態的遠端主機。如果您已手動掛載備份、則應在完成作業後手動卸載備份。您只能在特定資料庫的主機上掛載資料庫備份一次。執行作業時、您只能掛載單一備份。 
 ---
-= 掛載及卸載資料庫備份
+= 在 SnapCenter 中掛載和取下資料庫備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: 在Flex ASM設定中、如果基數小於RAC叢集中的節點數、則無
 
 
 
+[[mount-a-database-backup]]
 == 掛載資料庫備份
 
 若要存取備份中的檔案、您應該手動掛載資料庫備份。
@@ -85,6 +86,7 @@ Check Alignment of PHs>`/sccli Get-SmBackup -BackupNamediskGroupname_sid_backupi
 
 
 
+[[unmount-a-database-backup]]
 == 卸載資料庫備份
 
 當您不想再存取備份上的檔案時、可以手動卸載掛載的資料庫備份。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, certificate signing request, ca, 
 summary: 您可以產生「憑證簽署要求」（CSR）、然後匯入可以使用產生的CSR從「憑證授權單位」（CA）取得的憑證。憑證將會有與其相關的私密金鑰。 
 ---
-= 產生CA認證CSR檔案
+= CA 憑證 CSR 檔案於 SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

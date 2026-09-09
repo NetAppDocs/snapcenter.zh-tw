@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: 在使用 PowerShell Cmdlet 備份、還原或複製 MySQL 資料庫之前、您必須先建立儲存虛擬機器（ SVM ）連線和認證。 
 ---
-= 使用適用於 MySQL 的 PowerShell Cmdlet 建立儲存系統連線和認證
+= 使用適用於 MySQL 的 SnapCenter PowerShell cmdlet 建立儲存系統連線與認證資料
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

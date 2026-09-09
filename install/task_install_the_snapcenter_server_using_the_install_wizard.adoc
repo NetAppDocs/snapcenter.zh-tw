@@ -66,6 +66,7 @@ NOTE: 如果您按一下「*取消*」按鈕、將會完成正在執行的步驟
 
 
 
+[[features-enabled-on-windows-host-during-installation]]
 == 安裝期間在 Windows 主機上啟用的功能
 
 安裝過程中、支援Windows主機上的Windows功能和角色。SnapCenter這些可能對故障排除和維護主機系統有用。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recovery operations 
 summary: SnapCenter 可讓您針對 PostgreSQL 執行不同類型的還原作業。 
 ---
-= PostgreSQL 叢集支援的恢復作業類型
+= SnapCenter 中的 PostgreSQL 叢集恢復操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

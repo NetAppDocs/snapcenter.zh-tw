@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Exchange Server 
 summary: 適用於Microsoft Exchange Server的功能區外掛程式是NetAppSnapCenter軟體的主機端元件、可讓您對Exchange資料庫進行應用程式感知資料保護管理。SnapCenterExchange外掛程式可在SnapCenter 您的支援環境中自動備份及還原Exchange資料庫。 
 ---
-= 適用於Microsoft Exchange Server的插件概述SnapCenter
+= 了解適用於 Microsoft Exchange Server 的 SnapCenter 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

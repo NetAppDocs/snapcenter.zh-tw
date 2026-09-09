@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: svm role, privileges 
 summary: 如果您將SVM設定ONTAP 為搭配SanpCenter使用、但不想使用vsadmin角色、則應該建立SVM角色。 
 ---
-= 以最低權限建立SVM角色
+= 在 SnapCenter 中建立具有最低權限的 SVM 角色
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,6 +35,7 @@ NOTE: 您應該針對每個權限重複此命令。
 
 
 
+[[ontap-cli-commands-for-creating-svm-roles-and-assigning-permissions]]
 == 用於建立SVM角色和指派權限的CLI命令ONTAP
 
 您應該執行幾ONTAP 個SVM命令來建立SVM角色並指派權限。

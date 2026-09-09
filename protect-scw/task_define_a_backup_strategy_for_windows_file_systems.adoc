@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup strategy 
 summary: 在建立備份之前定義備份策略、可提供您成功還原或複製檔案系統所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、都是您備份策略的主要決定因素。 
 ---
-= 定義Windows檔案系統的備份策略
+= SnapCenter 中的 Windows 檔案系統備份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ SLA定義預期的服務層級、並解決許多與服務相關的問題、包�
 
 
 
+[[backup-schedules-for-windows-file-systems]]
 == Windows檔案系統的備份排程
 
 備份頻率是在原則中指定；備份排程是在資源群組組態中指定。決定備份頻率或排程的最關鍵因素是資源的變更率和資料的重要性。您可以每小時備份大量使用的資源、而每天備份一次極少使用的資源。其他因素包括資源對貴組織的重要性、服務層級協議（SLA）、以及您的恢復點目標（RPO）。
@@ -39,12 +40,14 @@ SLA定義預期的服務層級、並解決許多與服務相關的問題、包�
 
 
 
+[[number-of-backups-needed-for-windows-file-systems]]
 == Windows檔案系統所需的備份數量
 
 決定所需備份數量的因素包括Windows檔案系統的大小、使用的磁碟區數目、檔案系統變更率、以及您的服務層級協議（SLA）。
 
 
 
+[[backup-naming-convention-for-windows-file-systems]]
 == Windows檔案系統的備份命名慣例
 
 Windows 檔案系統備份使用預設的 Snapshot 命名慣例。預設備份命名慣例會在 Snapshot 名稱中新增時間戳記、協助您識別複本建立的時間。
@@ -68,6 +71,7 @@ dts1_mach1x88_03-12-2015_23.17.26
 
 
 
+[[backup-retention-options]]
 == 備份保留選項
 
 您可以選擇保留備份複本的天數、或指定您要保留的備份複本數量、最多ONTAP 255份。例如、貴組織可能需要保留10天的備份複本或130個備份複本。

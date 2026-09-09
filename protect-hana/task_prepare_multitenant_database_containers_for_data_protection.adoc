@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: multitenant database containers 
 summary: 若SAP HANA主機直接登錄SnapCenter 到位、安裝或升級SnapCenter 適用於SAP HANA資料庫的整套功能、將會觸發自動探索主機上的資源。安裝或升級外掛程式之後、對於外掛程式主機上的每個多租戶資料庫容器（MDM\）資源、將會自動以不同的GUID格式探索另一個MDC資源、並在SnapCenter 其中進行登錄。新資源將處於「鎖定」狀態。 
 ---
-= 準備多租戶資料庫容器以進行資料保護
+= 在 SnapCenter 中準備多租戶資料庫容器以進行資料保護
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backups 
 summary: 您可以使用 Remove-SmBackup Cmdlet 來清理沒有 Snapshot 的次要備份數。當「管理複本」拓撲中顯示的總快照數與次要儲存 Snapshot 保留設定不符時、您可能需要使用此 Cmdlet 。 
 ---
-= 使用PowerShell Cmdlet清除次要備份數
+= 使用 SnapCenter PowerShell cmdlet 清理輔助備份計數
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

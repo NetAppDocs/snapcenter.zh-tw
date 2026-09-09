@@ -15,6 +15,7 @@ summary: 安裝 SnapCenter 伺服器之前，您應該確定已符合所有需�
 
 
 
+[[domain-and-workgroup-requirements-for-windows-host]]
 == Windows 主機的網域和工作群組需求
 
 SnapCenter 伺服器可以安裝在網域或工作群組中的 Windows 主機上。
@@ -32,6 +33,7 @@ NOTE: 安裝SnapCenter 完支援服務器後、您不應變更SnapCenter 支援�
 
 
 
+[[space-and-sizing-requirements]]
 == 空間與規模需求
 
 您應該熟悉空間和規模需求。
@@ -129,6 +131,7 @@ NOTE: ASP.NET 核心需要 IIS_IUSRS 來存取 Windows 上 SnapCenter Server 中
 
 
 
+[[san-host-requirements]]
 == SAN主機需求
 
 SnapCenter 不包含主機公用程式或 DSM 。如果 SnapCenter 主機是 SAN （ FC/iSCSI ）環境的一部分，您可能需要在 SnapCenter 伺服器主機上安裝及設定其他軟體。
@@ -143,12 +146,14 @@ NOTE: 如果您使用ONTAP 的是功能不實的DSM、則應移轉至Microsoft D
 
 
 
+[[browser-requirements]]
 == 瀏覽器需求
 
 SnapCenter 軟體支援 Chrome 125 及更新版本，以及 Microsoft Edge 110.0.1587.17 及更新版本。
 
 
 
+[[port-requirements]]
 == 連接埠需求
 
 SnapCenter 軟體需要不同的連接埠，才能在不同元件之間進行通訊。

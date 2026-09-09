@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backing up 
 summary: 資源群組是主機或叢集上的資源集合。資源群組上的備份作業會對資源群組中定義的所有資源執行。您可以從「資源」頁面隨需備份資源群組。如果資源群組已附加原則並設定排程、則會根據排程自動進行備份。 
 ---
-= 備份Windows檔案系統的資源群組
+= 在 SnapCenter 中備份 Windows 檔案系統資源群組
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

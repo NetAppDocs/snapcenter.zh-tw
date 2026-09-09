@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installing 
 summary: 如果SnapCenter 您想保護Exchange資料庫、應該安裝並設定Microsoft Exchange Server的功能完善的外掛程式。 
 ---
-= 適用於Microsoft Exchange Server的安裝流程SnapCenter
+= SnapCenter 適用於 Microsoft Exchange Server 的外掛安裝工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

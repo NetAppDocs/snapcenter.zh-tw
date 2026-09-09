@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,authentication, export CA certificates 
 summary: 您應該將 CA 憑證從 SnapCenter 伺服器匯出至外掛主機。 
 ---
-= 從 SnapCenter 伺服器匯出憑證授權單位（ CA ）憑證
+= 從 SnapCenter 伺服器匯出 CA 憑證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

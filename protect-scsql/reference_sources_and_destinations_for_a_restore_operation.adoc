@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore operation 
 summary: 您可以從主要或次要儲存設備上的備份複本還原SQL Server資料庫。您也可以將資料庫還原至不同目的地、以及其原始位置、讓您選擇支援需求的目的地。 
 ---
-= 還原作業的來源和目的地
+= SQL Server 還原作業在 SnapCenter 中的來源和目標
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,12 +15,14 @@ summary: 您可以從主要或次要儲存設備上的備份複本還原SQL Serv
 
 
 
+[[sources-for-a-restore-operation]]
 == 還原作業的來源
 
 您可以從一線或二線儲存設備還原資料庫。
 
 
 
+[[destinations-for-a-restore-operation]]
 == 還原作業的目的地
 
 您可以將資料庫還原至各種目的地：

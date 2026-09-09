@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Backup workflow 
 summary: 當SnapCenter 您在環境中安裝適用於Microsoft Exchange Server的還原外掛程式時、您可以使用SnapCenter 效益管理功能來備份Exchange資源。 
 ---
-= 備份工作流程
+= 適用於 Microsoft Exchange Server 的 SnapCenter 外掛備份工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

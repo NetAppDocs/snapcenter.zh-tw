@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, overview, backup, non-data volumes 
 summary: 應用程式 Volume 是儲存 Oracle 資料庫相關資訊的儲存設備。 
 ---
-= 什麼是應用程式磁碟區
+= 了解 SnapCenter Oracle 資料庫外掛中的應用程式 Volume
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

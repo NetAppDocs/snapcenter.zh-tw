@@ -49,6 +49,7 @@ NOTE: 雖然會顯示備份工作狀態image:../media/success_icon.gif["已完�
 
 
 
+[[monitor-data-protection-operations-on-sql-resources-in-the-activity-pane]]
 == 監控「活動」窗格中SQL資源的資料保護作業
 
 「活動」窗格會顯示最近執行的五項作業。「活動」窗格也會顯示啟動作業的時間和作業狀態。

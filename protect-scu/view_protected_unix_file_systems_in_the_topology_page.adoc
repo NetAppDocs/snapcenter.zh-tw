@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: topology, unix file systems, 
 summary: 當您準備備備份、還原或複製資源時、您可能會發現檢視主要與次要儲存設備上所有備份、還原的檔案系統和複本的圖形化呈現、是很有幫助的。 
 ---
-= 在「拓撲」頁面中檢視受保護的 Unix 檔案系統
+= 在 SnapCenter 拓撲頁面中查看受保護的 UNIX 檔案系統
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

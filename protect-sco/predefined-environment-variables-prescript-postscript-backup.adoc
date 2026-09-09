@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: environment variable, predefined, prescript, postscript, backup, policy 
 summary: 利用此功能、您可以在建立備份原則的同時、使用預先定義的環境變數來執行預先記錄和PostScript。SnapCenter 
 ---
-= 預先定義的環境變數、用於備份特定的pretced和postscript
+= SnapCenter 用於備份的 prescript 與 postscript 環境變數
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ summary: 利用此功能、您可以在建立備份原則的同時、使用預�
 
 
 
+[[supported-predefined-environment-variables-for-creating-backup-policy]]
 == 支援建立備份原則的預先定義環境變數
 
 * * sc_job_ID*指定作業的工作ID。
@@ -232,6 +233,7 @@ summary: 利用此功能、您可以在建立備份原則的同時、使用預�
 
 
 
+[[supported-delimiters]]
 == 支援的分隔符號
 
 * *：*用於分隔SVM名稱和Volume名稱

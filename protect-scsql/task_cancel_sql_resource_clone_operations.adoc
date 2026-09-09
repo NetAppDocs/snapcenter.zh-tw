@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone, cancel 
 summary: 您可以取消佇列中的複製作業。 
 ---
-= 取消SQL資源複製作業
+= 取消 SnapCenter 中的 SQL 資源 Clone 作業
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

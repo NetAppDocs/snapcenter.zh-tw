@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, restore, clone, oracle database 
 summary: 您可以使用Oracle資料庫的外掛程式來備份、驗證、還原、還原、掛載、 卸載並複製Oracle資料庫及其資源。您也可以使用Oracle Recovery Manager（RMAN）來編錄或取消資料庫備份目錄。 
 ---
-= 如何使用Oracle資料庫的外掛程式
+= 適用於 Oracle 資料庫的 SnapCenter 外掛功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -15,6 +15,7 @@ SnapCenter Server 儲存庫有時也被稱為 NSM 資料庫。有關所有可用
 
 
 
+[[prerequisites-for-protecting-the-snapcenter-repository]]
 == 保護SnapCenter 知識庫的先決條件
 
 您的環境必須符合保護SnapCenter 該資訊庫的特定先決條件。
@@ -38,6 +39,7 @@ SnapCenter Server 儲存庫有時也被稱為 NSM 資料庫。有關所有可用
 
 
 
+[[back-up-the-snapcenter-repository]]
 == 備份SnapCenter 這個資訊庫
 
 備份 SnapCenter Server 儲存庫有助於防止資料遺失。您可以透過執行  `Protect-SmRepository` cmdlet 來備份儲存庫。
@@ -64,6 +66,7 @@ SnapCenter Server 儲存庫有時也被稱為 NSM 資料庫。有關所有可用
 
 
 
+[[view-backups-of-the-snapcenter-repository]]
 == 檢視SnapCenter 還原儲存庫的備份
 
 您可以透過執行  `Get-SmRepositoryBackups` cmdlet 來顯示 SnapCenter Server 資料庫儲存庫備份清單。如需詳細資訊，請參閱 https://docs.netapp.com/us-en/snapcenter-cmdlets/Get-SmRepositoryBackups.html["SnapCenter Software Cmdlet 參考指南 - Get-SmRepositoryBackups"^]。
@@ -78,6 +81,7 @@ SnapCenter Server 儲存庫有時也被稱為 NSM 資料庫。有關所有可用
 
 
 
+[[restore-the-snapcenter-database-repository]]
 == 還原SnapCenter 還原還原資料庫儲存庫
 
 您可以透過執行  `Restore-SmRepositoryBackup` cmdlet 來還原 SnapCenter 儲存庫。
@@ -111,6 +115,7 @@ NOTE: 執行還原作業之後擷取儲存庫備份時、不會列出用來執�
 
 
 
+[[migrate-the-snapcenter-repository]]
 == 移轉SnapCenter 此系統資訊庫
 
 您可以將SnapCenter 預設位置的還原伺服器資料庫儲存庫移轉到另一個磁碟。當您想要將儲存庫重新部署到空間較多的磁碟時、可以移轉儲存庫。
@@ -135,6 +140,7 @@ NOTE: 執行還原作業之後擷取儲存庫備份時、不會列出用來執�
 
 
 
+[[reset-the-snapcenter-repository-password]]
 == 重設SnapCenter 資訊儲存庫密碼
 
 MySQL Server儲存庫資料庫密碼會在SnapCenter 從SnapCenter 還原4.2安裝時自動產生。這個自動產生的密碼在SnapCenter 任何時候都不知道。如果您要存取儲存庫資料庫、應重設密碼。

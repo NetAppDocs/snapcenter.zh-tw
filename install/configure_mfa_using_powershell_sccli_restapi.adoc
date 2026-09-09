@@ -15,6 +15,7 @@ summary: 您可以使用 REST API 、 PowerShell 和 sccli 介面來設定 MFA �
 
 
 
+[[snapcenter-mfa-cli-authentication]]
 == SnapCenter MFA CLI 驗證
 
 在 PowerShell 和 sccli 中、現有的 Cmdlet （ Open-SmConnection ）會以另一個稱為「 AccessToken 」的欄位來延伸、以使用承載權杖來驗證使用者。
@@ -25,12 +26,14 @@ summary: 您可以使用 REST API 、 PowerShell 和 sccli 介面來設定 MFA �
 
 
 
+[[snapcenter-mfa-rest-api-authentication]]
 == SnapCenter MFA REST API 驗證
 
 在 REST API 用戶端（例如 Postman 或 swagger ）中使用 _Authorization=B承載 <access token> 格式的承載權杖、並在標頭中提及使用者 RoleName 、以取得 SnapCenter 的成功回應。
 
 
 
+[[mfa-rest-api-workflow]]
 == MFA REST API 工作流程
 
 當 MFA 設定為 AD FS 時、您應該使用存取（承載）權杖進行驗證、以便透過任何 REST API 存取 SnapCenter 應用程式。
@@ -80,6 +83,7 @@ summary: 您可以使用 REST API 、 PowerShell 和 sccli 介面來設定 MFA �
 
 
 
+[[enable-or-disable-snapcenter-mfa-functionality-for-rest-api-cli-and-gui]]
 == 啟用或停用 REST API 、 CLI 和 GUI 的 SnapCenter MFA 功能
 
 * 圖形使用者介面 *

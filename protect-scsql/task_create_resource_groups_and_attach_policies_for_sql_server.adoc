@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: run as 
 summary: 資源群組是一個容器、您可以在其中新增要一起備份及保護的資源。資源群組可讓您同時備份與特定應用程式相關聯的所有資料。任何資料保護工作都需要資源群組。您也必須將一或多個原則附加至資源群組、以定義您要執行的資料保護工作類型。 
 ---
-= 建立SQL Server的資源群組和附加原則
+= 在 SnapCenter 中為 SQL Server 建立資源群組並附加原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

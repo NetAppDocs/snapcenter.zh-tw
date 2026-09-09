@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 新增主機並安裝外掛程式套件之前、您必須先完成所有需求。適用於 MySQL 的 SnapCenter 外掛程式適用於 Windows 和 Linux 環境。 
 ---
-= 新增主機及安裝適用於 MySQL 的 SnapCenter 外掛程式的先決條件
+= 新增主機並安裝 SnapCenter MySQL 外掛的先決條件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -27,6 +27,7 @@ NOTE: IBM Java 在 Windows 和 Linux 主機上不受支援。
 
 
 
+[[windows-hosts]]
 == Windows主機
 
 * 您必須擁有具有本機系統管理員權限的網域使用者、並在遠端主機上具有本機登入權限。
@@ -40,6 +41,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["下載適用於
 
 
 
+[[linux-hosts]]
 == Linux主機
 
 * 您必須為root或非root使用者啟用密碼型SSH連線。
@@ -53,6 +55,7 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["下載適用於
 
 
 
+[[supplemental-commands]]
 == 補充命令
 
 若要在適用於 MySQL 的 SnapCenter 外掛程式上執行補充命令，您必須將其包含在 _allowed_commands.config_ 檔案中。
@@ -80,6 +83,7 @@ NOTE: 您不應使用萬用字元項目（ * ）來允許所有命令。
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-linux-host]]
 == 為Linux主機的非root使用者設定Sudo權限
 
 SnapCenter 可讓非 root 使用者安裝適用於 Linux 的 SnapCenter 外掛程式套件，並啟動外掛程式程序。外掛程式程序將以有效的非root使用者身分執行。您應該為非root使用者設定Sudo權限、以提供對多個路徑的存取權。

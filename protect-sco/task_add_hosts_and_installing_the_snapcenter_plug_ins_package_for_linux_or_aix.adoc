@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials, install plug-in, Linux, AIX, GUI, add host, monitor 
 summary: 您可以使用SnapCenter 「SingsAdd Host」頁面來新增主機、然後安裝SnapCenter 適用於Linux的「版本資訊」或SnapCenter 適用於AIX的「版本資訊」外掛程式套件。外掛程式會自動安裝在遠端主機上。 
 ---
-= 使用GUI新增主機並安裝適用於Linux或AIX的外掛程式套件
+= 新增主機並安裝 SnapCenter 適用於 Linux 或 AIX 的外掛套件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -162,6 +162,7 @@ NOTE: 即使先前已將同一部主機新增至SnapCenter 更新版本、而且
 
 
 
+[[monitor-installation-status]]
 == 監控安裝狀態
 
 您SnapCenter 可以使用「工作」頁面來監控安裝過程。您可能需要檢查安裝進度、以判斷何時完成或是否有問題。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2,run as 
 summary: 您可以使用SnapCenter 支援功能來複製備份。您可以從主要或次要備份複製。 
 ---
-= 複製 IBM DB2 備份
+= 使用 SnapCenter Clone IBM Db2 備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

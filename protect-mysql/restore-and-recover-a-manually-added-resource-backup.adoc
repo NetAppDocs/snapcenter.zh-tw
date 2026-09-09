@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: 您可以使用SnapCenter 效益管理功能、從一或多個備份中還原及恢復資料。 
 ---
-= 還原及還原手動新增的資源備份
+= 還原與恢復手動新增的 MySQL 資源備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

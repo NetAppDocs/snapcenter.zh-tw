@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: requirements, prerequisites 
 summary: 在備份Oracle資料庫之前、您應確保已完成先決條件。 
 ---
-= 備份Oracle資料庫的需求
+= 使用 SnapCenter 備份 Oracle 資料庫的要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

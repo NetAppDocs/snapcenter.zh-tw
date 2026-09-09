@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disks, create, manage, clustered disks, view 
 summary: Windows主機將儲存系統上的LUN視為虛擬磁碟。您可以使用SnapCenter 支援功能來建立及設定FC連接或iSCSI連接的LUN。 
 ---
-= 建立及管理磁碟
+= 在 SnapCenter 中建立和管理磁碟
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,6 +23,7 @@ NOTE: 不支援重新命名磁碟。SnapCenter如果SnapCenter 以這個名稱�
 
 
 
+[[view-the-disks-on-a-host]]
 == 檢視主機上的磁碟
 
 您可以在每個使用SnapCenter 支援的Windows主機上檢視磁碟。
@@ -39,6 +40,7 @@ NOTE: 不支援重新命名磁碟。SnapCenter如果SnapCenter 以這個名稱�
 
 
 
+[[view-clustered-disks]]
 == 檢視叢集式磁碟
 
 您可以檢視SnapCenter 叢集上的叢集式磁碟、並使用NetApp進行管理。叢集式磁碟只有在您從「主機」下拉式清單中選取叢集時才會顯示。
@@ -55,6 +57,7 @@ NOTE: 不支援重新命名磁碟。SnapCenter如果SnapCenter 以這個名稱�
 
 
 
+[[establish-an-iscsi-session]]
 == 建立iSCSI工作階段
 
 如果您使用iSCSI連線至LUN、則必須先建立iSCSI工作階段、再建立LUN以啟用通訊。
@@ -129,6 +132,7 @@ iSCSI目標的節點名稱
 
 
 
+[[create-fc-connected-or-iscsi-connected-luns-or-disks]]
 == 建立FC連接或iSCSI連接的LUN或磁碟
 
 Windows主機將儲存系統上的LUN視為虛擬磁碟。您可以使用SnapCenter 支援功能來建立及設定FC連接或iSCSI連接的LUN。
@@ -359,6 +363,7 @@ NOTE: 不支援統一化可延伸韌體介面（UEFI）分割磁碟。
 
 
 
+[[resize-a-disk]]
 == 調整磁碟大小
 
 您可以隨著儲存系統的需求變更而增加或減少磁碟的大小。
@@ -398,6 +403,7 @@ NOTE: 如果您手動輸入大小、則必須在適當啟用「縮小或擴充�
 
 
 
+[[connect-a-disk]]
 == 連接磁碟
 
 您可以使用「連線磁碟」精靈、將現有的LUN連線至主機、或重新連線已中斷連線的LUN。
@@ -580,6 +586,7 @@ LUN由使用CSV的Windows Server容錯移轉叢集中的主機共用。
 
 
 
+[[disconnect-a-disk]]
 == 中斷磁碟連線
 
 您可以中斷LUN與主機的連線、而不影響LUN的內容、但有一項例外：如果您在將實體複本分割之前中斷連線、則會遺失該實體複本的內容。
@@ -613,6 +620,7 @@ LUN由使用CSV的Windows Server容錯移轉叢集中的主機共用。
 
 
 
+[[delete-a-disk]]
 == 刪除磁碟
 
 您可以在不再需要時刪除磁碟。刪除磁碟之後、您無法取消刪除該磁碟。

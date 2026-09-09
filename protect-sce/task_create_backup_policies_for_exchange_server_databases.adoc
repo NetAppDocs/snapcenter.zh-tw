@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 您可以先為Exchange資源或資源群組建立備份原則、再使用SnapCenter 支援功能來備份Microsoft Exchange Server資源、也可以在建立資源群組或備份單一資源時建立備份原則。 
 ---
-= 為Exchange Server資料庫建立備份原則
+= 在 SnapCenter 中建立 Exchange Server 資料庫的備份原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

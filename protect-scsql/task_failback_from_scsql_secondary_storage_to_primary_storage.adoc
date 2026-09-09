@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: failback, snapcenter 
 summary: 當SQL Server主要儲存設備的「支援還原」外掛程式重新連線後SnapCenter 、您應該容錯回復至主要儲存設備。 
 ---
-= 從SnapCenter SQL Server二線儲存設備的支援程式容錯回復到一線儲存設備
+= 適用於 SQL Server 的 SnapCenter 外掛程式容錯回復至主儲存設備
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

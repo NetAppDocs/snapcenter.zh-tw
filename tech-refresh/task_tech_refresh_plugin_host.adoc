@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, plug-in host, supported plug-ins, prerequisites to refresh plug-in hosts, application hosts, limitations for tech refresh of plug-in hosts 
 summary: 將資源從舊主機移至新主機、以執行外掛主機的技術更新。 
 ---
-= SnapCenter 外掛主機的技術更新
+= 對 SnapCenter 外掛主機進行技術更新
 :allow-uri-read: 
 
 

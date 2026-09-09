@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add host, install, install plug-in, oracle, database 
 summary: 新增主機、然後安裝外掛程式套件。 
 ---
-= 新增主機並安裝 SnapCenter 外掛程式以供 Oracle 資料庫使用
+= 新增主機並安裝適用於 Oracle Database 的 SnapCenter 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

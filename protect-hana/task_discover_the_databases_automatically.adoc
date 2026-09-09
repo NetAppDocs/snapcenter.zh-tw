@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 資源包括SAP HANA資料庫和SnapCenter 非資料Volume、位於由支援的Linux主機上。探索可用的SAP HANA資料庫之後、您可以將這些資源新增至資源群組、以執行資料保護作業。 
 ---
-= 自動探索資料庫
+= 在 SnapCenter 中自動探索 SAP HANA 資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

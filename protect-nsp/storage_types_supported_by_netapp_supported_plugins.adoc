@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins 
 summary: 支援實體與虛擬機器上的各種儲存類型。SnapCenter安裝 NetApp 支援的外掛程式之前、您必須先確認儲存類型的支援。 
 ---
-= NetApp 支援外掛程式支援的儲存類型
+= 受 NetApp 支援的外掛在 SnapCenter 中所支援的儲存類型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

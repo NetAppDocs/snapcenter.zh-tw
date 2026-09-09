@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: asa r2, secondary protection, consistency group, primary consistency group, secondary consistency group 
 summary: 資源群組是一個容器、您可以在其中新增要備份和保護的資源。資源群組可讓您同時備份與指定應用程式相關的所有資料。 
 ---
-= 在 ASA R2 系統上建立資源群組，並啟用 IBM DB2 資源的次要保護
+= 在 SnapCenter 中為 ASA r2 系統上的 IBM Db2 資源群組啟用次要保護
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

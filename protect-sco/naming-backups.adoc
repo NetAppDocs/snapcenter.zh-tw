@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases discover 
 summary: SnapCenter 如何探索 Oracle 資料庫。 
 ---
-= 備份命名慣例
+= SnapCenter 備份命名規則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

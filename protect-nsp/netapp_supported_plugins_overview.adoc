@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: 您可以為使用的應用程式開發 NetApp 支援的外掛程式、然後使用 SnapCenter 來備份、還原或複製這些應用程式。與其他 SnapCenter 外掛程式一樣、您的 NetApp 支援外掛程式也可做為 NetApp SnapCenter 軟體的主機端元件、提供應用程式感知的資料保護與資源管理。 
 ---
-= NetApp 支援的外掛程式總覽
+= 了解 NetApp 支援的 SnapCenter 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

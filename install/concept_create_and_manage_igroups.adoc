@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: igroup 
 summary: 您可以建立啟動器群組（igroup）、以指定哪些主機可以存取儲存系統上的特定LUN。您可以使用SnapCenter 支援功能來建立、重新命名、修改或刪除Windows主機上的igroup。 
 ---
-= 建立及管理igroup
+= 在 SnapCenter 中建立和管理 igroups
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 您可以建立啟動器群組（igroup）、以指定哪些主機可�
 
 
 
+[[create-an-igroup]]
 == 建立igroup
 
 您可以使用SnapCenter 支援功能在Windows主機上建立igroup。當您將igroup對應至LUN時、即可在Create Disk（建立磁碟）或Connect Disk（連線磁碟）精靈中使用igroup。
@@ -72,6 +73,7 @@ igroup名稱
 
 
 
+[[rename-an-igroup]]
 == 重新命名igroup
 
 您可以使用SnapCenter 效益管理功能來重新命名現有的igroup。
@@ -87,6 +89,7 @@ igroup名稱
 
 
 
+[[modify-an-igroup]]
 == 修改igroup
 
 您可以使用SnapCenter 效益管理功能將igroup啟動器新增至現有的igroup。建立igroup時、您只能新增一部主機。如果您要為叢集建立igroup、可以修改igroup以新增其他節點至該igroup。
@@ -103,6 +106,7 @@ igroup名稱
 
 
 
+[[delete-an-igroup]]
 == 刪除igroup
 
 當您不再需要igroup時、可以使用SnapCenter 功能表來刪除它。

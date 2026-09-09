@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 資源包括SAP HANA資料庫和SnapCenter 非資料Volume、位於由支援的Linux主機上。安裝SnapCenter 完SAP HANA資料庫外掛程式後、該Linux主機上的SAP HANA資料庫會自動探索並顯示在「資源」頁面中。 
 ---
-= 自動探索Linux主機上的資源
+= 在 SnapCenter 中自動探索 Linux 主機上的資源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

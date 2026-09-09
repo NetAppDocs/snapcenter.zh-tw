@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SMB shares 
 summary: 若要在儲存虛擬機器（SVM）上設定SMb3共用區、您可以使用SnapCenter 物件使用者介面或PowerShell Cmdlet。 
 ---
-= 建立及管理SMB共用區
+= 在 SnapCenter 中建立和管理 SMB 共享
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,6 +25,7 @@ TIP: 如果您覺得這樣做很舒服、可以依照所提供的模型來建立
 
 
 
+[[create-an-smb-share]]
 == 建立SMB共用區
 
 您可以使用SnapCenter 「不共用」頁面、在儲存虛擬機器（SVM）上建立SMB3共用區。
@@ -84,6 +85,7 @@ TIP: 如果您覺得這樣做很舒服、可以依照所提供的模型來建立
 
 
 
+[[delete-an-smb-share]]
 == 刪除SMB共用區
 
 您可以在不再需要SMB共用時刪除它。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: 支援實體機器和虛擬機器上的各種儲存類型。SnapCenter在安裝主機套件之前、您必須先確認儲存類型是否支援。 
 ---
-= SnapCenter Microsoft Exchange Server 外掛程式支援的儲存類型
+= Microsoft Exchange Server 的 SnapCenter 外掛支援的儲存類型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

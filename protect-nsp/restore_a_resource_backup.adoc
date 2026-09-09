@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore 
 summary: 您可以使用SnapCenter 支援功能來還原資源。還原作業的功能取決於您所使用的外掛程式。 
 ---
-= 還原資源備份
+= 在 SnapCenter 中還原資源備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

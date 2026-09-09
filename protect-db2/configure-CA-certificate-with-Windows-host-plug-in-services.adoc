@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 使用Windows主機外掛程式服務設定CA憑證 
 ---
-= 使用Windows主機外掛程式服務設定CA憑證
+= 使用 SnapCenter Windows 主機外掛服務設定 CA 憑證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

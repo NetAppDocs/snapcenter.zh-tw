@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials 
 summary: 在使用 SnapCenter NetApp 支援的外掛程式之前、 SnapCenter 管理員必須先安裝及設定 SnapCenter 伺服器、然後執行必要的工作。 
 ---
-= 使用 NetApp 支援外掛程式的先決條件
+= 搭配 SnapCenter 使用 NetApp 支援的外掛之先決條件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

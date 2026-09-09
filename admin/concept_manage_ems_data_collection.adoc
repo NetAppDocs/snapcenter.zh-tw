@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: EMS data collection 
 summary: 您可以使用PowerShell Cmdlet排程及管理事件管理系統（EMS）資料收集。EMS資料收集作業包括收集SnapCenter 有關下列項目的詳細資料：《SesfServer》（《SesfServer》）、「Installed SnapCenter 》（已安裝的）插件套件、「Host」（主機）及類似資訊、然後將其傳送至指定ONTAP 的《SVM\》（《SVM\》）。 
 ---
-= 管理EMS資料收集
+= 在 SnapCenter 中管理 EMS 資料收集
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: 資料收集工作進行時、系統CPU使用率會很高。無論資料�
 
 
 
+[[stop-ems-data-collection]]
 == 停止EMS資料收集
 
 依預設、系統會啟用EMS資料收集功能、並在安裝日期後每隔七天執行一次。您可以隨時使用PowerShell Cmdlet _Disable-SmDataCollectionEMS_停用資料收集。
@@ -29,6 +30,7 @@ NOTE: 資料收集工作進行時、系統CPU使用率會很高。無論資料�
 
 
 
+[[start-ems-data-collection]]
 == 開始EMS資料收集
 
 依預設、系統會啟用EMS資料收集功能、排定在安裝日期後每七天執行一次。如果您已停用、可以使用_Enable - SmDataCollectionEEMS _ Cmdlet再次啟動EMS資料收集。
@@ -42,6 +44,7 @@ NetApp ONTAP 事件 genere-log-log AutoSupport 權限已授予儲存虛擬機器
 
 
 
+[[change-ems-data-collection-schedule-and-target-svm]]
 == 變更EMS資料收集排程和目標SVM
 
 您可以使用PowerShell Cmdlet變更EMS資料收集排程或目標儲存虛擬機器（SVM）。
@@ -54,6 +57,7 @@ NetApp ONTAP 事件 genere-log-log AutoSupport 權限已授予儲存虛擬機器
 
 
 
+[[monitor-ems-data-collection-status]]
 == 監控EMS資料收集狀態
 
 您可以使用數個PowerShell Cmdlet來監控EMS資料集合的狀態。您可以取得排程、儲存虛擬機器（SVM）目標和狀態的相關資訊。

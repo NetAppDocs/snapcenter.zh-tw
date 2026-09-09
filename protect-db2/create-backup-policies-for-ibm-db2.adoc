@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 在使用 SnapCenter 備份 IBM DB2 資料庫資源之前、您必須先為要備份的資源或資源群組建立備份原則。備份原則是一組規則、可管理您管理、排程及保留備份的方式。 
 ---
-= 為 IBM DB2 建立備份原則
+= 在 SnapCenter 中為 IBM Db2 建立備份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

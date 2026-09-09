@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Minimum ONTAP privileges 
 summary: 所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter 
 ---
-= NetApp 支援外掛程式所需的最低 ONTAP 權限
+= NetApp 支援的外掛在 SnapCenter 中所需的最低 ONTAP 權限
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

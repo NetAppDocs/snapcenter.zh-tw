@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage types, iSCSI, NFS, RDM, VMDK, NFS, LVM, ASM, SAN filesystem 
 summary: 支援實體與虛擬機器上的各種儲存類型。SnapCenter您必須先確認儲存類型的支援、才能安裝SnapCenter 適用於Linux的支援功能套件或SnapCenter 適用於AIX的支援功能。 
 ---
-= Oracle資料庫外掛程式支援的儲存類型
+= SnapCenter Oracle 資料庫外掛支援的儲存設備類型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ summary: 支援實體與虛擬機器上的各種儲存類型。SnapCenter您必�
 
 
 
+[[storage-types-supported-on-linux]]
 == Linux支援的儲存類型
 
 下表列出Linux支援的儲存類型。
@@ -76,6 +77,7 @@ NOTE: VMware 以外不支援資料存放區和原始裝置呈現。
 |===
 
 
+[[storage-types-supported-on-aix]]
 == AIX上支援的儲存類型
 
 下表列出AIX上支援的儲存類型。

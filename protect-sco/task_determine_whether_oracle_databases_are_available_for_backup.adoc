@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials,SnapCenter Plug-in for Oracle Databases, non-database entries, oratab 
 summary: 資源是SnapCenter 由Oracle管理的主機上的Oracle資料庫。您可以將這些資料庫新增至資源群組、以便在探索可用的資料庫之後執行資料保護作業。 
 ---
-= 探索可供備份的 Oracle 資料庫
+= 探索 SnapCenter 中可用於備份的 Oracle 資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -25,6 +25,7 @@ summary: 資源是SnapCenter 由Oracle管理的主機上的Oracle資料庫。您
 
 
 
+[[step-1-prevent-snapcenter-from-discovering-non-database-entries]]
 == 步驟 1 ：防止 SnapCenter 探索非資料庫項目
 
 您可以避免SnapCenter 使用不含資料庫的功能來探索在oratab檔案中新增的非資料庫項目。
@@ -66,6 +67,7 @@ IMPORTANT: 建議您務必先備份SC_oratab.config檔案、再升級SnapCenter 
 
 
 
+[[step-2-discover-resources]]
 == 步驟 2 ：探索資源
 
 安裝外掛程式之後、該主機上的所有資料庫都會自動探索並顯示在「資源」頁面中。

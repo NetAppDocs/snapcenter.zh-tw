@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 如果某個資源尚未納入任何資源群組、您可以從「資源」頁面備份該資源。 
 ---
-= 備份SAP HANA資料庫
+= 使用 SnapCenter 備份 SAP HANA 資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

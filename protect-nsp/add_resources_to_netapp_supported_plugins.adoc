@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-in, resources, NetApp supported plug-ins, MongoDB, ORASCPM, Oracle Applications, SAP ASE, SAP MaxDB, Storage plug-in 
 summary: 您必須新增要備份或複製的資源。視您的環境而定、資源可能是您要備份或複製的資料庫執行個體或集合。 
 ---
-= 將資源新增至 NetApp 支援的外掛程式
+= 新增資源至 NetApp 支援的 SnapCenter 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -101,12 +101,14 @@ IMPORTANT: 如果資料庫重新命名為SnapCenter 不屬於支援範圍、您�
 
 
 
+[[parameters-to-configure-the-resource]]
 == 設定資源的參數
 
 如果您是手動新增外掛程式、您可以使用下列參數、在「資源設定」頁面中設定資源。
 
 
 
+[[plug-in-for-mongodb]]
 === MongoDB 外掛程式
 
 資源設定：
@@ -130,6 +132,7 @@ IMPORTANT: 如果資料庫重新命名為SnapCenter 不屬於支援範圍、您�
 
 
 
+[[plug-in-for-maxdb]]
 === 適用於 MaxDB 的外掛程式
 
 資源設定：
@@ -163,6 +166,7 @@ NOTE: 對於 Windows 環境、路徑必須在雙引號（ "..." ）內。
 
 
 
+[[plug-in-for-sap-ase]]
 === SAP ASE 的外掛程式
 
 資源設定：
@@ -187,6 +191,7 @@ UNIX 所需。如果執行 Snap Creator Agent start 和 stop 命令的使用者�
 
 
 
+[[plug-in-for-oracle-applications-orascpm]]
 === Oracle 應用程式外掛程式（ ORASCPM ）
 
 資源設定：

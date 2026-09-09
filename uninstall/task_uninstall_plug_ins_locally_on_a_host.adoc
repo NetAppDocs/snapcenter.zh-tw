@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: uninstall, uninstall plug-in locally, uninstall plug-in from a host 
 summary: 如果無法從S仰賴 伺服器連線到主機、您可以在SnapCenter 主機上本機解除安裝支援程式。SnapCenter 
 ---
-= 在主機本機上解除安裝外掛程式
+= 在主機上本機解除安裝 SnapCenter 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

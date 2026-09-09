@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: alternate methods, install, plug-ins package, linux, aix, remote hosts, cmdlets, cluster host, silent mode, console mode 
 summary: 您也可以使用其他替代方法來安裝SnapCenter 適用於Linux的不二插件套件或SnapCenter 適用於AIX的不二插件套件。 
 ---
-= 安裝適用於Linux或AIX的外掛程式套件的其他方法
+= 手動安裝適用於 Linux 或 AIX 的 SnapCenter 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,6 +26,7 @@ NOTE: 確保要安裝外掛程式的主機上已安裝* OpenSSL 1.0.2G/*。
 
 
 
+[[install-on-multiple-remote-hosts-using-cmdlets]]
 == 使用Cmdlet在多個遠端主機上安裝
 
 您應該使用_Install-SmHostPackage_PowerShell Cmdlet在SnapCenter 多個主機上安裝適用於Linux或SnapCenter 適用於AIX的VMware外掛套件。
@@ -53,6 +54,7 @@ NOTE: 如果在防火牆拒絕規則中指定外掛程式連接埠防火牆狀�
 
 
 
+[[install-on-cluster-host]]
 == 安裝在叢集主機上
 
 您應該在SnapCenter 叢集主機的兩個節點上安裝適用於Linux或SnapCenter 適用於AIX的支援不支援功能外掛程式套件。
@@ -79,6 +81,7 @@ NOTE: 如果容錯移轉發生在SnapCenter 執行任何其他的動作時、則
 
 
 
+[[install-plug-ins-package-for-linux-in-silent-mode]]
 == 以無聲模式安裝適用於Linux的外掛程式套件
 
 您可以SnapCenter 使用命令列介面（CLI）、以無聲模式安裝適用於Linux的支援功能。
@@ -115,6 +118,7 @@ IMPORTANT: 外掛程式套件的安裝會在主機上登錄外掛程式、而非
 
 
 
+[[install-plug-ins-package-for-aix-in-silent-mode]]
 == 在無聲模式下安裝Plug-ins套件for AIX
 
 您可以SnapCenter 使用命令列介面（CLI）、以無聲模式安裝適用於AIX的Sf2外掛程式套件。

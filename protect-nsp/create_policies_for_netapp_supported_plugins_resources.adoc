@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, NetApp supported plug-in 
 summary: 在使用 SnapCenter 備份 NetApp 支援的外掛程式特定資源之前、您必須為要備份的資源或資源群組建立備份原則。 
 ---
-= 為 NetApp 支援的外掛程式資源建立原則
+= 為 NetApp 支援的外掛資源建立 SnapCenter 策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

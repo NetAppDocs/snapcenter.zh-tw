@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials, alternate host, clone, FRA, OMF 
 summary: 您可以使用SnapCenter 支援功能、使用資料庫的備份來複製Oracle資料庫。 
 ---
-= 複製Oracle資料庫備份
+= 使用 SnapCenter Clone Oracle 資料庫備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -358,6 +358,7 @@ NOTE: 如果您在複製時尚未執行還原、則複製資料庫的備份可�
 
 
 
+[[update-the-preferred-ip-on-the-host]]
 == 更新主機上的慣用 IP
 
 複製作業完成後，儲存存取層（ SAL ）提供的複製路徑將會是 <nfs_lif_IP> ： <JunctionPath> 格式。若要提供偏好的 IP ，您必須使用 scclis 命令在主機上進行設定。

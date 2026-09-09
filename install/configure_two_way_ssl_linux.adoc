@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,two-way ssl,configure two-way ssl, linux host 
 summary: 您應該設定雙向 SSL 通訊、以保護 Linux 主機上的 SnapCenter 伺服器與外掛程式之間的相互通訊。 
 ---
-= 在 Linux 主機上設定雙向 SSL 通訊
+= 在 SnapCenter Linux 主機上設定雙向 SSL 通訊
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

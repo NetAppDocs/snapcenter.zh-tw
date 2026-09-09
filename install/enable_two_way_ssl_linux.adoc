@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,enable two-way ssL, windows host, one-way ssl 
 summary: 您可以啟用 SSL 通訊、以使用 PowerShell 命令保護 Linux 主機上的 SnapCenter 伺服器與外掛程式之間的相互通訊。 
 ---
-= 在 Linux 主機上啟用 SSL 通訊
+= 在 SnapCenter Linux 主機上啟用雙向 SSL 通訊
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

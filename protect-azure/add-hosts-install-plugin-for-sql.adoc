@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add host, install, install plug-in, SQL 
 summary: 新增主機、然後安裝外掛程式套件。 
 ---
-= 新增主機並安裝 SQL Server 資料庫的 SnapCenter 外掛程式
+= 新增主機並安裝適用於 Microsoft SQL Server 的 SnapCenter 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

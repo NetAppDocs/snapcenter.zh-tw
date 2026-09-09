@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 若要讓SnapCenter Microsoft Exchange Server的支援功能可與SnapManager 適用於Microsoft Exchange Server的支援功能共存、您必須在SnapCenter 安裝了適用於Microsoft Exchange Server的支援功能的Exchange Server上安裝適用於Microsoft Exchange Server的支援功能、SnapManager 停用SnapManager 適用於Exchange排程的支援功能、 並使用SnapCenter 適用於Microsoft Exchange Server的還原外掛程式來設定新的排程和備份。 
 ---
-= 設定SnapManager 讓Exchange SnapCenter 和VMware能夠共存的版本
+= 設定 SnapManager for Exchange 與 SnapCenter 共存
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

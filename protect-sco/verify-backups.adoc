@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: oracle databases backup 
 summary: 使用主要或次要儲存磁碟區驗證備份複本。 
 ---
-= 驗證備份複本的位置
+= SnapCenter 如何驗證備份複本
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

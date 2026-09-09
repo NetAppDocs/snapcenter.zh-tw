@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, clone, split a clone 
 summary: 您可以使用SnapCenter 功能介紹來複製應用程式磁碟區備份、分割複本、以及刪除複本。 
 ---
-= 複製應用程式Volume備份
+= 在 SnapCenter 中 Clone 應用程式 Volume 備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -62,6 +62,7 @@ NOTE: 對於電子郵件通知、您必須使用GUI或PowerShell命令Set-SmtpSe
 
 
 
+[[split-an-application-volume-clone]]
 == 分割應用程式Volume複製
 
 您可以使用SnapCenter 此功能從父資源分割複製的資源。分割的實體複本會變成獨立於父資源的實體複本。
@@ -77,6 +78,7 @@ NOTE: 對於電子郵件通知、您必須使用GUI或PowerShell命令Set-SmtpSe
 
 
 
+[[delete-an-application-volume-clone]]
 == 刪除應用程式Volume複製
 
 您可以刪除不再需要的複本。您無法刪除與其他複本來源類似的複本。

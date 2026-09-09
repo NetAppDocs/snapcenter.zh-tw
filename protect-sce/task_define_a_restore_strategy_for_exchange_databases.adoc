@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 定義Exchange Server的還原策略可讓您成功還原資料庫。 
 ---
-= 定義Exchange資料庫的還原策略
+= 在 SnapCenter 中定義 Exchange 資料庫的還原策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 定義Exchange Server的還原策略可讓您成功還原資料庫。
 
 
 
+[[sources-for-a-restore-operation-in-exchange-server]]
 == Exchange Server中還原作業的來源
 
 您可以從主要儲存設備上的備份複本還原Exchange Server資料庫。
@@ -23,6 +24,7 @@ summary: 定義Exchange Server的還原策略可讓您成功還原資料庫。
 
 
 
+[[types-of-restore-operations-supported-for-exchange-server]]
 == Exchange Server支援的還原作業類型
 
 您可以使用SnapCenter 支援功能來對Exchange資源執行不同類型的還原作業。
@@ -33,6 +35,7 @@ summary: 定義Exchange Server的還原策略可讓您成功還原資料庫。
 
 
 
+[[restore-up-to-the-minute]]
 === 直到現在恢復
 
 在最新的還原作業中、資料庫會恢復到故障點。執行下列順序、即可達成此目的：SnapCenter
@@ -64,6 +67,7 @@ Exchange會在還原完成後建立新的記錄鏈。
 
 
 
+[[restore-to-a-previous-point-in-time]]
 === 還原到先前的時間點
 
 在時間點還原作業中、資料庫只會還原到過去的特定時間。在下列還原情況下、會執行時間點還原作業：

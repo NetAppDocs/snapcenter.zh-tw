@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: PDB, pluggable database, restore, CDB, PITR, point-in-time recovery, RMAN 
 summary: 您可以還原及還原已毀損或遺失的可插拔資料庫（pdb）、而不會影響容器資料庫（CDB）中的其他PDF。使用RMAN執行pdb的時間點恢復（PITR\）SnapCenter 。 
 ---
-= 使用時間點還原來還原及還原可插拔的資料庫
+= 在 SnapCenter 中使用時間點恢復來還原可插拔資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapmirror, snapvault, storage system, replication 
 summary: 您可以搭配SnapCenter 使用支援ONTAP SnapMirror和SnapVault SnapMirror技術的功能 
 ---
-= 準備儲存系統以進行SnapMirror和SnapVault SQL Server外掛程式的不全複寫
+= SnapMirror 與 SnapVault 搭配適用於 Microsoft SQL Server 的 SnapCenter 外掛程式進行複寫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

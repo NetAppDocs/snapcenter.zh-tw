@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: prerequisites, iSCSI, Oracle path, host requirement for Linux, sudo privileges, non-root user, host requirements for AIX, credentials, authenticate, domain administrator, local administrator, workgroup, sudo, root user 
 summary: 在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。 
 ---
-= 新增主機及安裝適用於Linux或AIX的外掛程式套件的必要條件
+= 新增主機並安裝適用於 Linux 或 AIX 的 SnapCenter 外掛程式套件的先決條件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,6 +49,7 @@ NOTE: 不支援SnapCenter 位於/etc/stab檔案中的UUID對應。
 
 
 
+[[linux-host-requirements]]
 == Linux主機需求
 
 在安裝SnapCenter 適用於Linux的支援套件之前、您應確保主機符合要求。
@@ -104,6 +105,7 @@ NOTE: 請確保您在 Linux 主機上僅安裝了適用於 SnapCenter 6.2.1 及�
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-linux-host]]
 === 為Linux主機的非root使用者設定Sudo權限
 
 非root使用者可利用發行版本的更新版本安裝適用於Linux的《SUSE外掛程式套件」、並開始外掛程序。SnapCenter SnapCenter外掛程式程序將以有效的非root使用者身分執行。您應該為非root使用者設定Sudo權限、以提供對多個路徑的存取權。
@@ -182,6 +184,7 @@ IMPORTANT: 此範例只能做為建立自己資料的參考。
 
 
 
+[[aix-host-requirements]]
 == AIX主機需求
 
 在安裝SnapCenter 適用於AIX的支援套件之前、您應確保主機符合要求。
@@ -230,6 +233,7 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
 
 
 
+[[configure-sudo-privileges-for-non-root-users-for-aix-host]]
 === 為非root使用者設定適用於AIX主機的Sudo權限
 
 支援非root使用者安裝適用於AIX的支援套件、並啟動外掛程式的程序。SnapCenter SnapCenter外掛程式程序將以有效的非root使用者身分執行。您應該為非root使用者設定Sudo權限、以提供對多個路徑的存取權。
@@ -307,6 +311,7 @@ IMPORTANT: 此範例只能做為建立自己資料的參考。
 
 
 
+[[set-up-credentials]]
 == 設定認證資料
 
 使用認證資料驗證使用者執行的不中斷作業。SnapCenter SnapCenter您應該建立認證、以便在Linux或AIX主機上安裝外掛程式套件。
@@ -380,6 +385,7 @@ CAUTION: 雖然您可以在部署主機和安裝外掛程式之後建立認證�
 
 
 
+[[configure-credentials-for-an-oracle-database]]
 == 設定Oracle資料庫的認證資料
 
 您必須設定用於在Oracle資料庫上執行資料保護作業的認證資料。

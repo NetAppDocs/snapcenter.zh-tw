@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: import, SnapManager for Oracle, SnapManager for SAP 
 summary: 從SnapManager 適用於Oracle的支援中心和SnapManager 從適用於SAP SnapCenter 的支援中心匯入資料以供參考、讓您能夠繼續使用舊版的資料。 
 ---
-= 從SnapManager Oracle的支援中心和SnapManager SAP的支援中心將資料匯入SnapCenter 到支援中心
+= SnapCenter 如何從適用於 Oracle 和 SAP 的 SnapManager 匯入資料
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -31,6 +31,7 @@ NOTE: 不支援SnapCenter 從無法從圖形化使用者介面（GUI）匯入資
 
 
 
+[[configurations-supported-for-importing-data]]
 == 支援匯入資料的組態
 
 在您將資料從SnapManager 適用於Oracle的物件3.4.x和SnapManager 適用於SAP的物件3.4.x匯入SnapCenter 到物件之前、您應該先瞭解SnapCenter 適用於Oracle資料庫的支援使用此功能的組態。
@@ -39,6 +40,7 @@ SnapCenter Oracle 資料庫插件支援的配置列於此。 https://imt.netapp.
 
 
 
+[[what-gets-imported-to-snapcenter]]
 == 哪些內容會匯入SnapCenter 到無法解的地方
 
 您可以匯入使用設定檔執行的設定檔、排程和作業。
@@ -195,6 +197,7 @@ Oracle與SAP的支援功能使用天數和次數來設定保留時間。SnapMana
 |===
 
 
+[[what-does-not-get-imported-to-snapcenter]]
 == 無法匯入SnapCenter 的項目
 
 匯入工具不會將所有內容匯入SnapCenter 到物件中。
@@ -216,6 +219,7 @@ Oracle與SAP的支援功能使用天數和次數來設定保留時間。SnapMana
 
 
 
+[[prepare-to-import-data]]
 == 準備匯入資料
 
 在將資料匯入SnapCenter 到物件之前、您必須執行某些工作、才能成功執行匯入作業。
@@ -268,6 +272,7 @@ NOTE: 您必須針對主機上的每個設定檔執行smsap認證集命令。
 
 
 
+[[import-data]]
 == 匯入資料
 
 您可以從資料庫主機執行匯入工具來匯入資料。

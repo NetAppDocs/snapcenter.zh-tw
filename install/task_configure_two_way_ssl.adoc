@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security,two-way ssl,configure two-way ssl, windows host 
 summary: 您應該設定雙向 SSL 通訊、以確保 Windows 主機上的 SnapCenter 伺服器與外掛程式之間的相互通訊安全無虞。 
 ---
-= 在 Windows 主機上設定雙向 SSL 通訊
+= 在 SnapCenter Windows 主機上設定雙向 SSL 通訊
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -113,6 +113,7 @@ summary: 您應該設定雙向 SSL 通訊、以確保 Windows 主機上的 SnapC
 
 
 
+[[configure-snapcenter-windows-plug-in-for-two-way-ssl-communication]]
 == 設定 SnapCenter Windows 外掛程式進行雙向 SSL 通訊
 
 您應該使用 PowerShell 命令設定 SnapCenter Windows 外掛程式、以進行雙向 SSL 通訊。

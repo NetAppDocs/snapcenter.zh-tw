@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 在使用SnapCenter 支援功能來備份SAP HANA資料庫資源之前、您必須先為要備份的資源或資源群組建立備份原則。備份原則是一組規則、可管理您管理、排程及保留備份的方式。 
 ---
-= 為SAP HANA資料庫建立備份原則
+= 為 SAP HANA 資料庫建立 SnapCenter 備份原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Database, clone, database, backups. split clone, pluggable database 
 summary: 您可以使用SnapCenter 支援功能來複製備份。 
 ---
-= 複製 Oracle 資料庫備份
+= 使用 SnapCenter Clone Oracle 資料庫備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -59,6 +59,7 @@ summary: 您可以使用SnapCenter 支援功能來複製備份。
 
 
 
+[[clone-a-pluggable-database]]
 == 複製可插拔的資料庫
 
 您可以將可插拔資料庫（pdb）複製到同一主機或替代主機上的不同或相同目標CDB。您也可以將複製的pdb恢復至所需的SCN或日期與時間。

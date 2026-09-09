@@ -19,6 +19,7 @@ summary: 設計完善的儲存配置可讓SnapCenter 支援服務器備份資料
 
 
 
+[[lun-and-vmdk-requirements]]
 == LUN與VMDK需求
 
 您可以選擇使用專屬的LUN或VMDK、為下列資料庫提供最佳效能與管理：
@@ -36,6 +37,7 @@ summary: 設計完善的儲存配置可讓SnapCenter 支援服務器備份資料
 
 
 
+[[lun-and-vmdk-sample-layouts]]
 == LUN和VMDK範例配置
 
 下圖顯示如何設定LUN上大型資料庫的儲存配置：

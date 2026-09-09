@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, SnapCenter Plug-in for SAP HANA Database 
 summary: 您應該SnapCenter 使用SnapCenter 穩定使用者介面（UI）來安裝適用於SAP HANA資料庫的功能。如果您的環境不允許從SnapCenter Oracle UI遠端安裝外掛程式、您可以使用命令列介面（CLI1）、在主控台模式或無聲模式下安裝SAP HANA資料庫的外掛程式。 
 ---
-= 使用命令列介面、在SnapCenter Linux主機上安裝適用於SAP HANA資料庫的功能
+= 使用 CLI 在 Linux 主機上安裝適用於 SAP HANA 資料庫的 SnapCenter 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

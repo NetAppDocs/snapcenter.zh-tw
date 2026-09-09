@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: plug-in for Oracle features 
 summary: 適用於Oracle資料庫的外掛程式可與Linux或AIX主機上的Oracle資料庫整合、並與儲存系統上的NetApp技術整合。 
 ---
-= Oracle資料庫外掛程式的功能
+= 適用於 Oracle 資料庫的 SnapCenter 外掛功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

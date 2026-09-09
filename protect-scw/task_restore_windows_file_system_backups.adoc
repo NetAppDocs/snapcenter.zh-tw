@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore 
 summary: 您可以使用SnapCenter 還原功能來還原檔案系統備份。檔案系統還原是一個多階段程序、可將所有資料從指定的備份複製到檔案系統的原始位置。 
 ---
-= 還原Windows檔案系統備份
+= 使用 SnapCenter 還原 Windows 檔案系統備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

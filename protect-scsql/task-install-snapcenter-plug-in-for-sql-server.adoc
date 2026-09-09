@@ -15,6 +15,7 @@ summary: 提供安裝 Microsoft SQL Server SnapCenter 外掛程式的指示。
 
 
 
+[[step-1-set-up-run-as-credentials-to-install-the-plug-in-for-microsoft-sql-server]]
 == 步驟 1 ：設定執行身分證明以安裝 Microsoft SQL Server 外掛程式
 
 . 在左窗格中、按一下*設定>認證>新增*。
@@ -29,6 +30,7 @@ summary: 提供安裝 Microsoft SQL Server SnapCenter 外掛程式的指示。
 
 
 
+[[step-2-add-a-host-and-install-the-plug-in-for-microsoft-sql-server]]
 == 步驟 2 ：新增主機並安裝 Microsoft SQL Server 外掛程式
 
 . 在「S16GUI」左窗格中、按一下SnapCenter 「*主機>託管主機>新增*」。

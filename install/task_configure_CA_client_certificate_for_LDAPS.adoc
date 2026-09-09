@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: CA client certificate, LDAPS 
 summary: 當Windows Active Directory LDAPS設定為使用CA憑證時、您應該在SnapCenter 列舉伺服器上設定LDAPS的CA用戶端憑證。 
 ---
-= 設定LDAPS的CA用戶端憑證
+= 在 SnapCenter 中設定 LDAPS 的 CA 用戶端憑證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

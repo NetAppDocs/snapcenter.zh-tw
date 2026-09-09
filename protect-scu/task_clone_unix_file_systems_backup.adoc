@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: alternate host, clone, Unix file systems, file systems 
 summary: 您可以使用 SnapCenter 來複製使用檔案系統備份的 Unix 檔案系統資料庫。 
 ---
-= 複製 Unix 檔案系統備份
+= 使用 SnapCenter Clone UNIX 檔案系統備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

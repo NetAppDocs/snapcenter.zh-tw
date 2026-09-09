@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: monitor, install, snapCenter plug-in for postgresql 
 summary: 您SnapCenter 可以使用「工作」頁面來監控安裝過程。您可能需要檢查安裝進度、以判斷何時完成或是否有問題。 
 ---
-= 監控安裝 PostgreSQL 外掛程式的狀態
+= 監控 SnapCenter PostgreSQL 外掛安裝的狀態
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

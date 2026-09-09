@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: installing 
 summary: 如果SnapCenter 您想要保護SAP HANA資料庫、應該安裝並設定SAP HANA資料庫的功能完善的功能。 
 ---
-= SAP HANA資料庫適用的安裝流程SnapCenter
+= SnapCenter SAP HANA 資料庫外掛安裝工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone, pluggable database, PDB 
 summary: 您可以將可插拔資料庫（pdb）複製到同一主機或替代主機上的不同或相同目標CDB。您也可以將複製的pdb恢復至所需的SCN或日期與時間。 
 ---
-= 複製可插拔的資料庫
+= 使用 SnapCenter Clone Oracle 可插拔資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

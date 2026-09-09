@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, resource group 
 summary: 資源群組上的備份作業會對資源群組中定義的所有資源執行。 
 ---
-= 備份 Unix 檔案系統資源群組
+= 備份 SnapCenter UNIX 檔案系統資源群組
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

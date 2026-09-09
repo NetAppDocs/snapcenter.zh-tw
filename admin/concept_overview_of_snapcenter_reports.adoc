@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter reports 
 summary: 提供各種報告選項、讓您監控及管理系統健全狀況和運作成功。SnapCenter 
 ---
-= 概述功能SnapCenter
+= 了解 SnapCenter 報告功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -55,6 +55,7 @@ Clone Report（Clone報告）提供SnapCenter 有關您的支援環境的完整�
 |===
 
 
+[[access-reports]]
 == 存取報告
 
 您可以使用SnapCenter 「解決方案資訊儀表板」快速瞭解系統的健全狀況。您可以從儀表板深入瞭解更多詳細資料。或者、您也可以直接存取詳細報告。
@@ -67,6 +68,7 @@ Clone Report（Clone報告）提供SnapCenter 有關您的支援環境的完整�
 
 
 
+[[filter-your-report]]
 == 篩選您的報告
 
 您可能會想要根據各種參數來篩選報告資料、視所需資訊的詳細程度和時間範圍而定。
@@ -91,6 +93,7 @@ Clone Report（Clone報告）提供SnapCenter 有關您的支援環境的完整�
 
 
 
+[[export-or-print-reports]]
 == 匯出或列印報告
 
 匯出SnapCenter 功能豐富的報告、讓您能夠以各種不同的替代格式檢視報告。您也可以列印報告。
@@ -110,6 +113,7 @@ Clone Report（Clone報告）提供SnapCenter 有關您的支援環境的完整�
 
 
 
+[[set-the-smtp-server-for-email-notifications]]
 == 設定電子郵件通知的SMTP伺服器
 
 您可以指定要用來傳送資料保護工作報告給自己或其他人的SMTP伺服器。您也可以傳送測試電子郵件來驗證組態。這些設定會全域套用至SnapCenter 您設定電子郵件通知的任何項目。
@@ -126,6 +130,7 @@ Clone Report（Clone報告）提供SnapCenter 有關您的支援環境的完整�
 
 
 
+[[configure-the-option-to-email-reports]]
 == 設定電子郵件報告選項
 
 如果您想要定期SnapCenter 將更新的資料保護工作傳送給自己或其他人、以便監控這些更新的狀態、您可以設定在SnapCenter 建立資源群組時、以電子郵件傳送該報告的選項。

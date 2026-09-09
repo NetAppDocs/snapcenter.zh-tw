@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SAP HANA, NetApp supported plug-in 
 summary: 在安裝SnapCenter 適用於Windows的整套解決方案之前、您應該先熟悉一些基本的主機系統空間需求和規模調整需求。 
 ---
-= 安裝SnapCenter 適用於Windows的功能性外掛程式套件的主機需求
+= 適用於 Windows 的 SnapCenter 外掛套件主機需求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

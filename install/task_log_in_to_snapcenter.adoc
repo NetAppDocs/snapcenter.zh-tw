@@ -92,6 +92,7 @@ NOTE: 如果SnapCenter 您是第一次登入到此資訊中心、則必須使用
 
 
 
+[[log-in-to-snapcenter-using-multi-factor-authentication-mfa]]
 == 使用多因素驗證（MFA）登入SnapCenter
 
 支援MFA的網域帳戶是作用中目錄的一部分。SnapCenter
@@ -125,6 +126,7 @@ NOTE: 如果SnapCenter 您是第一次登入到此資訊中心、則必須使用
 
 
 
+[[modify-the-snapcenter-default-gui-session-timeout]]
 == 修改SnapCenter 功能不全的GUI工作階段逾時時間
 
 您可以修改SnapCenter 不必要的GUI工作階段逾時期間、使其低於或大於預設的逾時期間20分鐘。
@@ -140,6 +142,7 @@ NOTE: 如果SnapCenter 您是第一次登入到此資訊中心、則必須使用
 
 
 
+[[secure-the-snapcenter-web-server-by-disabling-ssl-3-0]]
 == 停用SSL 3.0來保護SnapCenter Web伺服器的安全
 
 基於安全考量、如果在SnapCenter 您的支援網頁伺服器上啟用安全通訊端層（SSL）3.0傳輸協定、您應該在Microsoft IIS中停用該傳輸協定。

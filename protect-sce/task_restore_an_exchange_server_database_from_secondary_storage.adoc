@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 您可以從次要儲存設備（鏡射或保存庫）還原備份的Exchange Server資料庫。 
 ---
-= 從次要儲存設備還原Exchange Server資料庫
+= 在 SnapCenter 中從次要儲存設備還原 Exchange 資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

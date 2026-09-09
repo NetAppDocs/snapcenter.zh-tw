@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, CA certificate 
 summary: 匯入SnapCenter 支援物件的CA認證和Windows主機外掛程式 
 ---
-= 匯入CA憑證
+= 在 SnapCenter 中匯入 CA 憑證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: install, snapcenter 
 summary: 如果您想SnapCenter 要同時在多個主機上安裝適用於Microsoft Windows的效能提升外掛程式、可以使用Install-SmHostPackage PowerShell Cmdlet來執行此作業。 
 ---
-= 使用PowerShell Cmdlet在SnapCenter 多個遠端主機上安裝適用於Microsoft Windows的支援功能外掛程式
+= 使用 PowerShell Cmdlet 在多台主機上安裝 SnapCenter Plug-in for Microsoft Windows
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

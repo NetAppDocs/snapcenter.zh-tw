@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup types, cloning type, clone name, limitations 
 summary: 在複製資料庫之前定義策略、可確保複製作業成功。 
 ---
-= 定義Oracle資料庫的複製策略
+= 了解 SnapCenter 中的 Oracle 資料庫 Clone 策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 在複製資料庫之前定義策略、可確保複製作業成功。
 
 
 
+[[types-of-backups-supported-for-cloning]]
 == 支援複製的備份類型
 
 支援複製不同類型的Oracle資料庫備份。SnapCenter
@@ -37,6 +38,7 @@ NOTE: 不支援複製歸檔記錄備份。
 
 
 
+[[types-of-cloning-supported-for-oracle-databases]]
 == Oracle資料庫支援的複製類型
 
 在Oracle資料庫環境中SnapCenter 、支援複製資料庫備份。您可以從一線和二線儲存系統複製備份。
@@ -50,6 +52,7 @@ NOTE: 只能使用UNIX命令執行實體複本重新整理作業。
 
 
 
+[[clone-naming-conventions-for-oracle-databases]]
 == Oracle資料庫的複製命名慣例
 
 從3.0開始SnapCenter 、檔案系統複製所使用的命名慣例與ASM磁碟群組的複本不同。
@@ -63,6 +66,7 @@ HASHCODEofDISKKROUP是自動產生的數字（2到10位數）、每個ASM磁碟�
 
 
 
+[[limitations-of-cloning-oracle-databases]]
 == 複製Oracle資料庫的限制
 
 在複製資料庫之前、您應該瞭解複製作業的限制。

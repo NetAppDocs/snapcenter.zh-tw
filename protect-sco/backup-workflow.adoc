@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, workflow 
 summary: 您可以建立資源（資料庫）或資源群組的備份。 
 ---
-= 備份程序總覽
+= SnapCenter Oracle 資料庫備份工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

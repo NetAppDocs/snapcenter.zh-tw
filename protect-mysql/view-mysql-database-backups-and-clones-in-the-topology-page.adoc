@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: 當您準備備備備份或複製資源時、您可能會發現在一線和二線儲存設備上檢視所有備份和複製的圖形化表示方式很有幫助。 
 ---
-= 在「拓撲」頁面中檢視 MySQL 備份和複本
+= 在 SnapCenter 「拓樸」頁面中查看 MySQL 備份和 Clone
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

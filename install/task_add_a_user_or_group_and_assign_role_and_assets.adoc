@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: RBAC, add user, add group, assign role, assign assets 
 summary: 若要設定SnapCenter 適用於哪些使用者的角色型存取控制、您可以新增使用者或群組並指派角色。角色決定SnapCenter 了使用者可以存取的選項。 
 ---
-= 新增使用者或群組、並指派角色和資產
+= 在 SnapCenter 中新增使用者或群組，並指派角色和資產
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

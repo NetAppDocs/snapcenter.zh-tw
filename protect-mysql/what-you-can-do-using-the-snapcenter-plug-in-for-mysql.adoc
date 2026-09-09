@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: 在環境中安裝適用於 MySQL 的外掛程式時、您可以使用 SnapCenter 來備份、還原及複製 MySQL 及其資源。您也可以執行支援這些作業的工作。 
 ---
-= 如何使用適用於 MySQL 的 SnapCenter 外掛程式
+= 了解 SnapCenter MySQL 外掛的功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

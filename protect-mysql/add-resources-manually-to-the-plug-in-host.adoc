@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: 某些 MySQL 執行個體不支援自動探索。您必須手動新增這些資源。 
 ---
-= 將資源手動新增至外掛程式主機
+= 手動將 MySQL 資源新增至外掛主機
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

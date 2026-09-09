@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups, attach policies, snapcenter, sql, backup polices, schedule 
 summary: 資源群組是您必須新增要備份及保護之資源的容器。 
 ---
-= 建立資源群組並附加 SQL 備份原則
+= 建立 SnapCenter 資源群組並附加 SQL Server 備份原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

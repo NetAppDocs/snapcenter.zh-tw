@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Resources page 
 summary: 您可以從「資源」頁面探索資源並執行資料保護作業。您可以執行的作業會因您用來管理資源的外掛程式而有所不同。 
 ---
-= 「資源」頁面支援的作業
+= 從 SnapCenter 資源頁面支援的操作
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for postgresql 
 summary: 在環境中安裝 PostgreSQL 外掛程式時、您可以使用 SnapCenter 來備份、還原及複製 PostgreSQL 及其資源。您也可以執行支援這些作業的工作。 
 ---
-= 使用 SnapCenter Plug-In for PostgreSQL 可以做什麼
+= PostgreSQL 的 SnapCenter 外掛功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

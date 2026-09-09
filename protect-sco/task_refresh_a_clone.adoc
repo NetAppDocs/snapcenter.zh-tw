@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: refresh clone, clone 
 summary: 您可以執行「Refresh-SmClone」命令來重新整理實體複本。此命令會建立資料庫的備份、刪除現有的實體複本、並建立名稱相同的實體複本。 
 ---
-= 重新整理實體複本
+= 在 SnapCenter 中刷新 Oracle 資料庫的 Clone
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

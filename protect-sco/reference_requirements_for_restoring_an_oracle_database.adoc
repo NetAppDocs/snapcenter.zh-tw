@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 在還原Oracle資料庫之前、您應確保已完成先決條件。 
 ---
-= 還原Oracle資料庫的需求
+= SnapCenter 還原 Oracle 資料庫的需求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

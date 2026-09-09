@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for mysql 
 summary: 您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。自動探索的 MySQL 資料庫有兩種還原策略。 
 ---
-= 自動探索的 MySQL 支援的還原策略類型
+= 在 SnapCenter 中自動探索的 MySQL 資料庫還原策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

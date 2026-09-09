@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup policy 
 summary: 您可以先為資源或資源群組建立備份原則、再使用SnapCenter 支援功能來備份SQL Server資源、也可以在建立資源群組或備份單一資源時建立備份原則。 
 ---
-= 建立SQL Server資料庫的備份原則
+= 在 SnapCenter 中建立 SQL Server 資料庫的備份原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -58,6 +58,7 @@ summary: 您可以先為資源或資源群組建立備份原則、再使用SnapC
 
 
 
+[[step-1-create-policy-name]]
 == 步驟 1 ：建立原則名稱
 
 . 在左導覽窗格中、選取 * 設定 * 。
@@ -68,6 +69,7 @@ summary: 您可以先為資源或資源群組建立備份原則、再使用SnapC
 
 
 
+[[step-2-configure-policy-options]]
 == 步驟 2 ：設定原則選項
 
 . 在「原則類型」頁面中，執行下列步驟：
@@ -129,6 +131,7 @@ NOTE: Microsoft SQL不支援*僅複製備份*選項、以及*完整備份與記�
 
 
 
+[[step-3-configure-availability-group-settings]]
 == 步驟 3 ：設定可用性群組設定
 
 . 在「可用度群組設定」區段中、執行下列動作：
@@ -158,6 +161,7 @@ NOTE: 在叢集組態中、備份會根據原則中設定的保留設定保留�
 
 
 
+[[step-4-configure-snapshot-and-replication-settings]]
 == 步驟 4 ：設定 Snapshot 和 Replication 設定
 
 . 在「 Snapshot and Replication 」（快照與複寫）頁面中，執行下列步驟：
@@ -180,6 +184,7 @@ NOTE: 如果您排定在上午2：00、則在夏令時間（Dst）期間不會�
 
 
 
+[[step-5-configure-up-to-the-minute-retention-settings]]
 == 步驟 5 ：設定直到分鐘的保留設定
 
 . 根據備份類型頁面中選取的備份類型，在「直到分鐘保留設定」區段中，執行下列一或多項動作：
@@ -206,6 +211,7 @@ NOTE: 如果您排定在上午2：00、則在夏令時間（Dst）期間不會�
 ====
 
 
+[[step-6-configure-snapshot-settings]]
 == 步驟 6 ：設定 Snapshot 設定
 
 . 如需完整備份保留設定，請執行下列動作：
@@ -246,6 +252,7 @@ NOTE: 您可以為遠端複製的主快照指派SnapMirror標籤，從而允許�
 
 
 
+[[step-7-configure-secondary-replication-options]]
 == 步驟 7 ：設定次要複寫選項
 
 . 在 [ 選取次要複寫選項 ] 區段中，選取下列其中一個或兩個次要複寫選項：
@@ -299,6 +306,7 @@ NOTE: 您可以為遠端複製的主快照指派SnapMirror標籤，從而允許�
 ====
 
 
+[[step-8-configure-script-settings]]
 == 步驟 8 ：設定指令碼設定
 
 . 在「指令碼」頁面中、分別輸入備份作業之前或之後應執行的指令碼或指令碼路徑和引數。
@@ -317,6 +325,7 @@ NOTE: 您必須在 ONTAP 中設定 SnapMirror 保留原則、使次要儲存設�
 
 
 
+[[step-9-configure-verification-settings]]
 == 步驟 9 ：設定驗證設定
 
 在「驗證」頁面中、執行下列步驟：
@@ -361,6 +370,7 @@ NOTE: 預先編寫或後製指令碼路徑不應包含磁碟機或共用區。�
 
 
 
+[[step-10-review-summary]]
 == 步驟 10 ：檢視摘要
 
 . 檢閱摘要、然後選取 * 完成 * 。

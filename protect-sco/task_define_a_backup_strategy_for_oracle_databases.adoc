@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
 summary: 定義備份策略可確保您擁有成功還原或複製資料庫的方法。 
 ---
-= 定義Oracle資料庫的備份策略
+= 在 SnapCenter 中為 Oracle 資料庫定義備份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -22,6 +22,7 @@ summary: 定義備份策略可確保您擁有成功還原或複製資料庫的�
 
 
 
+[[supported-oracle-database-configurations-for-backups]]
 == 支援的Oracle資料庫備份組態
 
 支援不同Oracle資料庫組態的備份。SnapCenter
@@ -64,12 +65,14 @@ NOTE: 不支援pdb移轉和pdb複製作業。
 
 
 
+[[types-of-backup-supported-for-oracle-databases]]
 == Oracle資料庫支援的備份類型
 
 備份類型指定您要建立的備份類型。支援Oracle資料庫的線上和離線備份類型。SnapCenter
 
 
 
+[[online-backup]]
 === 線上備份
 
 當資料庫處於線上狀態時所建立的備份稱為線上備份。線上備份也稱為熱備份、可讓您在不關閉資料庫的情況下建立資料庫備份。
@@ -83,6 +86,7 @@ NOTE: 不支援pdb移轉和pdb複製作業。
 
 
 
+[[offline-backup]]
 === 離線備份
 
 當資料庫處於掛載或關機狀態時所建立的備份稱為離線備份。離線備份也稱為冷備份。您只能在離線備份中包含資料檔案和控制檔案。您可以建立離線掛載或離線關機備份。
@@ -99,6 +103,7 @@ NOTE: 不支援pdb移轉和pdb複製作業。
 
 
 
+[[how-snapcenter-discovers-oracle-databases]]
 == 如何探索Oracle資料庫SnapCenter
 
 「資源」是SnapCenter 指主機上由NetApp維護的Oracle資料庫。您可以將這些資料庫新增至資源群組、以便在探索可用的資料庫之後執行資料保護作業。您應該瞭解SnapCenter 以下流程、瞭解Oracle資料庫的不同類型和版本。
@@ -169,6 +174,7 @@ NOTE: 如果/etc/oratab檔案中有任何Oracle 12__c_R2和18_c__資料庫項目
 
 
 
+[[preferred-nodes-in-rac-setup]]
 == RAC設定中的慣用節點
 
 在Oracle Real Application Cluster（RAC）設定中、您可以指定要執行備份作業的慣用節點。如果您未指定偏好的節點、SnapCenter 則會自動將節點指派為偏好的節點、並在該節點上建立備份。
@@ -181,6 +187,7 @@ NOTE: 如果/etc/oratab檔案中有任何Oracle 12__c_R2和18_c__資料庫項目
 
 
 
+[[required-database-state]]
 === 必要的資料庫狀態
 
 偏好的節點上的RAC資料庫執行個體必須處於必要狀態、備份才能成功完成：
@@ -192,6 +199,7 @@ NOTE: 如果/etc/oratab檔案中有任何Oracle 12__c_R2和18_c__資料庫項目
 
 
 
+[[how-to-catalog-backups-with-oracle-recovery-manager]]
 == 如何使用Oracle Recovery Manager對備份進行目錄編錄
 
 Oracle資料庫的備份可透過Oracle Recovery Manager（RMAN）進行目錄、以將備份資訊儲存在Oracle RMAN儲存庫中。
@@ -233,6 +241,7 @@ NOTE: 當您強制刪除SnapCenter 該主機時、不會移除與該主機相關
 
 
 
+[[backup-schedules]]
 == 備份排程
 
 備份頻率（排程類型）是在原則中指定、備份排程則是在資源群組組態中指定。決定備份頻率或排程的最關鍵因素是資源的變更率和資料的重要性。您可以每小時備份大量使用的資源、而每天備份一次極少使用的資源。其他因素包括資源對貴組織的重要性、服務層級協議（SLA）、以及您的恢復點目標（RPO）。
@@ -255,6 +264,7 @@ SLA定義預期的服務層級、並解決許多與服務相關的問題、包�
 
 
 
+[[backup-naming-conventions]]
 == 備份命名慣例
 
 您可以使用預設的 Snapshot 命名慣例、或使用自訂的命名慣例。預設備份命名慣例會在 Snapshot 名稱中新增時間戳記、協助您識別複本建立的時間。
@@ -280,6 +290,7 @@ dts1_mach1x88_03-12-2015_23.17.26
 
 
 
+[[backup-retention-options]]
 == 備份保留選項
 
 您可以選擇保留備份複本的天數、或指定您要保留的備份複本數量、最多ONTAP 255份。例如、貴組織可能需要保留10天的備份複本或130個備份複本。
@@ -295,6 +306,7 @@ NOTE: 若要長期保留備份複本、您應該使用SnapVault 此功能進行�
 
 
 
+[[verify-backup-copy-using-the-primary-or-secondary-storage-volume]]
 == 使用主要或次要儲存磁碟區驗證備份複本
 
 您可以在主要儲存磁碟區或SnapMirror或SnapVault 支援的二線儲存磁碟區上驗證備份複本。使用次要儲存磁碟區進行驗證、可降低主要儲存磁碟區的負載。

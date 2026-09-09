@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 您應該設定CA憑證、並在SnapCenter 伺服器和對應的外掛程式主機上部署CA憑證。 
 ---
-= 啟用外掛程式的CA憑證
+= 為 SnapCenter 外掛啟用 CA 憑證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore resources, snapcenter 
 summary: 還原資源備份包括啟動與SnapCenter 還原伺服器的連線工作階段、列出備份與擷取備份資訊、以及還原備份。 
 ---
-= 使用PowerShell Cmdlet還原資源
+= 使用 PowerShell cmdlet 還原 SnapCenter 資源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for UNIX file systems, discovery,file systems, UNIX, Unix file systems 
 summary: 安裝適用於 Unix 檔案系統的外掛程式後、會自動探索主機上的檔案系統、並顯示在「資源」頁面中。 
 ---
-= 探索可供備份的 UNIX 檔案系統
+= 探索在 SnapCenter 中可用於備份的 UNIX 檔案系統
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

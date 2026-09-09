@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 您可以使用SnapCenter 效益管理功能、從一或多個備份中還原及恢復資料。 
 ---
-= 還原及還原自動探索的資料庫備份
+= 在 SnapCenter 中還原與恢復自動探索的資料庫備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

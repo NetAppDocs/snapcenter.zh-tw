@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: prerequisites, iSCSI, host requirement for Linux, sudo privileges, non-root user, credentials, authenticate, domain administrator, local administrator, workgroup, sudo, root user 
 summary: 在新增主機並安裝外掛程式套件之前、您必須先完成所有需求。 
 ---
-= 新增主機和安裝適用於 Linux 的外掛程式套件的必要條件
+= 新增主機與安裝 SnapCenter Linux 外掛程式套件的先決條件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -36,6 +36,7 @@ NOTE: 請確保您在 Linux 主機上僅安裝了適用於 SnapCenter 6.2.1 及�
 
 
 
+[[linux-host-requirements]]
 == Linux主機需求
 
 在安裝SnapCenter 適用於Linux的支援套件之前、您應確保主機符合要求。

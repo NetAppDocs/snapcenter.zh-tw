@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recovery operations 
 summary: 利用此解決方案、您可以為SAP HANA資料庫執行不同類型的還原作業。SnapCenter 
 ---
-= SAP HANA資料庫支援的恢復作業類型
+= SAP HANA 資料庫在 SnapCenter 中的恢復操作類型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

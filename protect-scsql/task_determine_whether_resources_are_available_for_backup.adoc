@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 資源是資料庫、應用程式執行個體、可用度群組、以及您安裝的外掛程式所維護的類似元件。您可以將這些資源新增至資源群組、以便執行資料保護工作、但必須先找出可用的資源。確定可用資源也會驗證外掛程式安裝是否已成功完成。 
 ---
-= 判斷資源是否可供備份
+= 確定 SQL Server 資源在 SnapCenter 中是否可用於備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

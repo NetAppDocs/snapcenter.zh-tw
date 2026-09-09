@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ONTAP cluster role, privileges 
 summary: 您應該建立ONTAP 具有最低權限的支援功能、以便不必使用ONTAP 這個功能來SnapCenter 執行動作。 
 ---
-= 以ONTAP 最低權限建立叢集角色
+= 為 SnapCenter 建立具有最低權限的 ONTAP 叢集角色
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,6 +35,7 @@ NOTE: 您應該針對每個權限重複此命令。
 
 
 
+[[ontap-cli-commands-for-creating-cluster-roles-and-assigning-permissions]]
 == 用於建立叢集角色和指派權限的CLI命令ONTAP
 
 您應該執行幾ONTAP 個CLI命令來建立叢集角色並指派權限。

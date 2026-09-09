@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 在複製Oracle資料庫之前、您應確保已完成先決條件。 
 ---
-= 複製Oracle資料庫的需求
+= 使用 SnapCenter Clone Oracle 資料庫的要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

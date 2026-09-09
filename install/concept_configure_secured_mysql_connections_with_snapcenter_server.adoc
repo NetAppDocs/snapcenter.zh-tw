@@ -15,6 +15,7 @@ summary: 如果您想要在SnapCenter 獨立組態或網路負載平衡（NLB）
 
 
 
+[[configure-secured-mysql-connections-for-standalone-snapcenter-server-configurations]]
 == 設定安全的MySQL連線、以利獨立SnapCenter 式的伺服器組態
 
 如果您想要保護SnapCenter 整個伺服器與MySQL伺服器之間的通訊安全、可以產生安全通訊端層（SSL）憑證和金鑰檔。您必須在MySQL伺服器和SnapCenter 還原伺服器中設定憑證和金鑰檔案。
@@ -128,6 +129,7 @@ ssl-key="C:/ProgramData/NetApp/SnapCenter/MySQL Data/Data/client-key.pem"
 
 
 
+[[configure-secured-mysql-connections-for-ha-configurations]]
 == 針對HA組態設定安全的MySQL連線
 
 如果您想要保護SnapCenter 穩定支援服務器與MySQL伺服器之間的通訊、可以為高可用度（HA）節點產生安全通訊端層（SSL）憑證和金鑰檔。您必須在MySQL伺服器和HA節點上設定憑證和金鑰檔。

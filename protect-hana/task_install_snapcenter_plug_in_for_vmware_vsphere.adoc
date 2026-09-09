@@ -17,12 +17,14 @@ summary: 如果資料庫儲存在虛擬機器（VM）上、或是想要保護VM�
 
 
 
+[[deploy-ca-certificate]]
 == 部署CA憑證
 
 若要使用 SnapCenter Plug-in for VMware vSphere 設定 CA 憑證，請參閱 https://kb.netapp.com/data-mgmt/SnapCenter/SC_KBs/How_to_create_and_or_import_an_SSL_certificate_to_SnapCenter_Plug-in_for_VMware_vSphere["建立或匯入SSL憑證"^]。
 
 
 
+[[configure-the-crl-file]]
 == 設定CRL檔案
 
 VMware vSphere的還原外掛程式會在預先設定的目錄中尋找CRL檔案。SnapCenterVMware vSphere適用的VMware vSphere的CRL檔案預設目錄SnapCenter 為：_/opt/NetApp/config/crl_。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database, back up, databases, Azure NetApp Files 
 summary: 從「資源」頁面備份資源。 
 ---
-= 備份在 Azure NetApp Files 上執行的 SAP HANA 資料庫
+= 使用 SnapCenter 備份 Azure NetApp Files 上的 SAP HANA 資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapcenter, azure, azure storage account, subscription ID, azure credential, azure netapp account 
 summary: 在 SnapCenter 中設定 Azure 儲存帳戶。 
 ---
-= 設定 Azure 儲存設備帳戶
+= 在 SnapCenter 中設定 Azure 儲存設備帳戶
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

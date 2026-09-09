@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: SnapCenter Plug-in for IBM DB2 是 NetApp SnapCenter 軟體的主機端元件、可讓您管理 IBM DB2 資料庫的應用程式感知資料保護。適用於 IBM DB2 資料庫的外掛程式可在您的 SnapCenter 環境中自動化 IBM DB2 資料庫的備份、還原及複製作業。 
 ---
-= 適用於 IBM DB2 的 SnapCenter 外掛程式總覽
+= 了解適用於 IBM Db2 的 SnapCenter 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

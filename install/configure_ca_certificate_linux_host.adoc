@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, configure, CA certificate, linux, linux host 
 summary: 您應該在 Linux 主機上使用 SnapCenter 伺服器來設定 CA 憑證。 
 ---
-= 設定 Linux 主機的 CA 憑證
+= 在 Linux 主機上為 SnapCenter 設定 CA 憑證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 您應該在 Linux 主機上使用 SnapCenter 伺服器來設定 CA 憑
 
 
 
+[[configure-nginx-certificate]]
 == 設定 Nginx 憑證
 
 .步驟
@@ -28,6 +29,7 @@ summary: 您應該在 Linux 主機上使用 SnapCenter 伺服器來設定 CA 憑
 
 
 
+[[configure-audit-log-certificate]]
 == 設定稽核記錄憑證
 
 .步驟
@@ -45,6 +47,7 @@ _install_DIR_ 的預設值為： __/opt_ 。
 
 
 
+[[configure-snapcenter-certificate]]
 == 配置SnapCenter證書
 
 .步驟

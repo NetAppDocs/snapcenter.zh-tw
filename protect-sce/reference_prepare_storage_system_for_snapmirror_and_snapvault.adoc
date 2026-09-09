@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: requirements 
 summary: 您可以使用SnapCenter 支援ONTAP SnapMirror技術的支援功能來在另一個Volume上建立備份集的鏡射複本、ONTAP SnapVault 並使用支援此技術的支援功能來執行磁碟對磁碟備份複寫、以符合標準及其他治理相關用途。在執行這些工作之前、您必須先設定來源與目的地磁碟區之間的資料保護關係、然後初始化關係。 
 ---
-= 準備儲存系統以進行SnapMirror和SnapVault 資訊複寫
+= SnapMirror 與 SnapVault 在 SnapCenter 中的複寫要求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

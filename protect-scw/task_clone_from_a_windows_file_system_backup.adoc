@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone 
 summary: 您可以使用SnapCenter 支援功能來複製Windows檔案系統備份。如果您想要刪除或變更錯誤的單一檔案複本、可以複製備份、並在複本中存取該檔案。 
 ---
-= 從Windows檔案系統備份複製
+= 使用 SnapCenter Clone Windows 檔案系統備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

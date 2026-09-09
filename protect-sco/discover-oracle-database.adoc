@@ -17,6 +17,7 @@ summary: SnapCenter 如何探索 Oracle 資料庫。
 
 
 
+[[for-oracle-versions-11g-to-12cr1]]
 == 適用於Oracle版本11_g__至12_c_R1
 
 .RAC 資料庫
@@ -45,6 +46,7 @@ RAC One Node 資料庫只會根據 /etc/oratab 項目來探索。資料庫應處
 
 
 
+[[for-oracle-versions-12cr2-to-18c-19c-or-21c]]
 == 適用於 Oracle 版本 12cR2 至 18c ， 19c 或 21c
 
 .RAC 資料庫

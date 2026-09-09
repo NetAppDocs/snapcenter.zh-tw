@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disaster recovery 
 summary: 當 SnapCenter Plug-in for SQL Server 當機時、請執行下列手動步驟來恢復外掛程式。 
 ---
-= SQL Server適用的支援功能SnapCenter
+= 災難後恢復適用於 SQL Server 的 SnapCenter 外掛程式
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,7 +15,7 @@ SnapCenter Plug-in for SQL Server 當機時、請使用下列步驟切換至不�
 
 .開始之前
 * 次要主機的作業系統、應用程式和主機名稱應與主要主機相同。
-* 使用「*新增主機*」或「*修改主機*」頁面、將SnapCenter 適用於SQL Server的「功能不全」外掛程式推送到替代主機。請參閱 link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["管理主機"] 以取得更多資訊。
+* 使用 *新增主機* 或 *修改主機* 頁面，將 SnapCenter SQL Server 外掛程式推送到備用主機。如需詳細資訊，請參閱 link:https://docs.netapp.com/us-en/snapcenter/admin/concept_manage_hosts.html["在 SnapCenter 中管理主機"]。
 
 
 .步驟

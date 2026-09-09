@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 您應該從SnapCenter 無法使用的GUI安裝Exchange外掛程式。如果您不想使用GUI、可以在SnapCenter 支援伺服器的主機或遠端主機上使用PowerShell Cmdlet。 
 ---
-= 使用PowerShell Cmdlet從SnapCenter 支援伺服器的支援伺服器主機安裝Exchange外掛程式
+= 使用 PowerShell Cmdlet 安裝 SnapCenter Plug-in for Exchange
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore and recovery strategy, IBM Db2 resources, snapcenter 
 summary: 您必須先定義策略、才能還原及還原資料庫、以便順利執行還原與還原作業。 
 ---
-= 定義 IBM DB2 資源的還原與還原策略
+= 在 SnapCenter 中定義 IBM Db2 資源的還原與恢復策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

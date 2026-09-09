@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。手動新增 NetApp 支援外掛程式資源有兩種還原策略。您無法恢復手動新增的 NetApp 支援外掛程式資源。 
 ---
-= 支援手動新增 NetApp 支援外掛程式資源的還原策略類型
+= NetApp 在 SnapCenter 中支援的外掛資源還原策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ NOTE: 您無法恢復手動新增的 NetApp 支援外掛程式資源。
 
 
 
+[[complete-resource-restore]]
 == 完成資源還原
 
 * 還原資源的所有磁碟區、qtree和LUN
@@ -28,6 +29,7 @@ NOTE: 如果資源包含磁碟區或 qtree 、則會刪除選定要在這類磁�
 
 
 
+[[file-level-restore]]
 == 檔案層級還原
 
 * 從磁碟區、qtree或目錄還原檔案

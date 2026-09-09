@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: application volume, back up 
 summary: 如果應用程式磁碟區不是任何資源群組的一部分、您可以從「資源」頁面備份應用程式磁碟區。 
 ---
-= 備份應用程式Volume
+= 在 SnapCenter 中備份應用程式 Volume
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

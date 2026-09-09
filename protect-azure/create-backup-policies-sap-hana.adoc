@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, SAP HANA, backup policies 
 summary: 為您要備份的資源或資源群組建立備份原則。 
 ---
-= 為SAP HANA資料庫建立備份原則
+= 在 SnapCenter 中建立 SAP HANA 資料庫的備份原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

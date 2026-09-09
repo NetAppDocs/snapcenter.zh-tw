@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, enable ca certificate, ca certificate 
 summary: 您應該設定CA憑證、並在Oracle外掛主機中部署CA憑證。 
 ---
-= 啟用外掛程式的CA憑證
+= 在 SnapCenter 中為外掛程式啟用 CA 憑證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

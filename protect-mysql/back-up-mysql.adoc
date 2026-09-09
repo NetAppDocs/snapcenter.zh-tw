@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for MySQL 
 summary: 如果某個資源尚未納入任何資源群組、您可以從「資源」頁面備份該資源。 
 ---
-= 備份 MySQL
+= 使用 SnapCenter 備份 MySQL 資源
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

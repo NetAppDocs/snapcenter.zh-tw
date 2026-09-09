@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 您必須使用SnapCenter 「更新主機」頁面來新增主機、然後安裝外掛程式套件。外掛程式會自動安裝在遠端主機上。您可以為個別主機或叢集新增主機並安裝外掛程式套件。 
 ---
-= 新增主機並在遠端主機上安裝外掛程式套件
+= 新增主機並在遠端主機上安裝 SnapCenter PostgreSQL 外掛套件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

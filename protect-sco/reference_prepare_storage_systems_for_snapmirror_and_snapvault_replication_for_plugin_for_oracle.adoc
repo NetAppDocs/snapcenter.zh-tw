@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: snapmirror, snapvault, storage system, replication 
 summary: 您可以搭配SnapCenter 使用支援ONTAP SnapMirror和SnapVault SnapMirror技術的功能 
 ---
-= 準備儲存系統以進行SnapMirror和SnapVault Oracle外掛程式的等化複寫
+= SnapMirror 與 SnapVault 複寫要求（適用於 Oracle 資料庫的 SnapCenter 外掛）
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

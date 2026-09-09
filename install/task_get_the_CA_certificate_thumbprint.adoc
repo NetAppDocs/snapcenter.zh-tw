@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, certificate thumbprint 
 summary: 憑證指紋是用來識別憑證的十六進位字串。指紋是使用指紋演算法、從憑證內容中計算出來。 
 ---
-= 取得CA憑證指紋
+= 在 SnapCenter 中取得 CA 憑證指紋
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

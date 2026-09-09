@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ALM 
 summary: 適用於Microsoft SQL Server的支援在SQL Server 2012及更新版本中探索、適用於高可用度的非對稱LUN對應（ALM\）組態、以及用於災難恢復的可用性群組。SnapCenter當發現資源時SnapCenter 、利用ALM組態探索本機主機和遠端主機上的資料庫。 
 ---
-= 支援Windows叢集中的非對稱LUN對應
+= SnapCenter 支援 Windows 叢集中的非對稱 LUN 對應
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

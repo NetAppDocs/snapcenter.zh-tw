@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unix file systems, preparation for protection, prerequisites 
 summary: 在執行任何資料保護作業（例如備份、複製或還原作業）之前、您應該先設定環境。 
 ---
-= 準備好保護 Unix 檔案系統
+= 使用 SnapCenter 保護 UNIX 檔案系統的先決條件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

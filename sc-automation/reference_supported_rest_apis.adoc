@@ -15,12 +15,14 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[auth]]
 == 驗證
 
 您可以使用此API登入SnapCenter 到此伺服器。此API會傳回用於驗證後續要求的使用者授權權杖。
 
 
 
+[[domains]]
 == 網域
 
 您可以使用API執行不同的作業。
@@ -33,6 +35,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[jobs]]
 == 工作
 
 您可以使用API執行不同的作業。
@@ -44,6 +47,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[settings]]
 == 設定
 
 您可以使用API執行不同的作業。
@@ -59,6 +63,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[hosts]]
 == 主機
 
 您可以使用API執行不同的作業。
@@ -89,6 +94,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[resources]]
 == 資源
 
 您可以使用API執行不同的作業。
@@ -143,6 +149,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[backups]]
 == 備份
 
 您可以使用API執行不同的作業。
@@ -160,6 +167,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[clones]]
 == 複製
 
 您可以使用API執行不同的作業。
@@ -176,6 +184,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[clone-split]]
 == 實體複本分割
 
 您可以使用API執行不同的作業。
@@ -187,6 +196,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[resource-groups]]
 == 資源群組
 
 您可以使用API執行不同的作業。
@@ -207,6 +217,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[policies]]
 == 原則
 
 您可以使用API執行不同的作業。
@@ -223,6 +234,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[storage]]
 == 儲存設備
 
 您可以使用API執行不同的作業。
@@ -239,6 +251,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[share]]
 == 分享
 
 您可以使用API執行不同的作業。
@@ -251,6 +264,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[plugins]]
 == 外掛程式
 
 您可以使用API執行不同的作業。
@@ -293,6 +307,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[reports]]
 == 報告
 
 您可以使用API執行不同的作業。
@@ -304,6 +319,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[alerts]]
 == 警示
 
 您可以使用API執行不同的作業。
@@ -315,6 +331,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[rbac]]
 == RBAC
 
 您可以使用API執行不同的作業。
@@ -333,6 +350,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[configuration]]
 == 組態
 
 您可以使用API執行不同的作業。
@@ -343,6 +361,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[certificatesettings]]
 == 認證設定
 
 您可以使用API執行不同的作業。
@@ -353,6 +372,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[repository]]
 == 儲存庫
 
 您可以使用API執行不同的作業。
@@ -366,6 +386,7 @@ summary: 透過「靜態API」提供的資源SnapCenter 會依照類別進行組
 
 
 
+[[version]]
 == 版本
 
 您可以使用此API來檢視SnapCenter 此版本的功能。

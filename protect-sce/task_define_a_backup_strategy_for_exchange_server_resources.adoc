@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 在建立備份工作之前定義備份策略、有助於確保您擁有成功還原資料庫所需的備份。您的服務層級協議（SLA）、恢復時間目標（RTO）和恢復點目標（RPO）、主要決定您的備份策略。 
 ---
-= 定義Exchange Server資源的備份策略
+= 在 SnapCenter 中為 Exchange Server 資源定義備份策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -17,6 +17,7 @@ SLA定義預期的服務層級、並解決許多與服務相關的問題、包�
 
 
 
+[[types-of-backups-supported-for-exchange-database]]
 == Exchange資料庫支援的備份類型
 
 使用SnapCenter 支援功能來備份Exchange信箱時、您必須選擇資源類型、例如資料庫和資料庫可用度群組（DAG）。Snapshot 技術可用於建立資源所在磁碟區的線上唯讀複本。
@@ -55,6 +56,7 @@ SLA定義預期的服務層級、並解決許多與服務相關的問題、包�
 |===
 
 
+[[backup-schedules-for-database-plug-ins]]
 == 資料庫外掛程式的備份排程
 
 備份頻率（排程類型）是在原則中指定、備份排程則是在資源群組組態中指定。決定備份頻率或排程的最關鍵因素是資源的變更率和資料的重要性。您可以每小時備份大量使用的資源、而每天備份一次極少使用的資源。其他因素包括資源對貴組織的重要性、服務層級協議（SLA）、以及您的恢復點目標（RPO）。
@@ -77,12 +79,14 @@ SLA定義預期的服務層級、並解決許多與服務相關的問題、包�
 
 
 
+[[number-of-backup-jobs-needed-for-databases]]
 == 資料庫所需的備份工作數
 
 決定所需備份工作數目的因素包括資源大小、使用的磁碟區數目、資源變更率、以及服務層級協議（SLA）。
 
 
 
+[[backup-naming-conventions]]
 == 備份命名慣例
 
 您可以使用預設的 Snapshot 命名慣例、或使用自訂的命名慣例。預設備份命名慣例會在 Snapshot 名稱中新增時間戳記、協助您識別複本建立的時間。
@@ -108,6 +112,7 @@ dts1_mach1x88_03-12-2015_23.17.26
 
 
 
+[[backup-retention-options]]
 == 備份保留選項
 
 您可以選擇保留備份複本的天數、或指定您要保留的備份複本數量、最多ONTAP 255份。例如、貴組織可能需要保留10天的備份複本或130個備份複本。
@@ -123,6 +128,7 @@ NOTE: 若要長期保留備份複本、您應該使用SnapVault 此功能進行�
 
 
 
+[[how-long-to-retain-transaction-log-backups-on-the-source-storage-volume-for-exchange-server]]
 == 在Exchange Server的來源儲存磁碟區上保留交易記錄備份的時間
 
 適用於Microsoft Exchange Server的還原外掛程式需要交易記錄備份、才能執行最新的還原作業、將資料庫還原至兩次完整備份之間的一段時間。SnapCenter

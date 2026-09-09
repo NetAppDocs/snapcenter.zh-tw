@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: 您可以將SnapCenter 一或多個備份還原至使用中的檔案系統、使用此功能來還原Exchange資料庫。 
 ---
-= 還原工作流程
+= SnapCenter 中的 Exchange 資料庫還原工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

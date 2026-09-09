@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: space, storage system, reclaim 
 summary: 雖然NTFS會在刪除或修改檔案時追蹤LUN上的可用空間、但不會向儲存系統報告新資訊。您可以在Windows主機的外掛程式上執行空間回收PowerShell Cmdlet、以確保新釋出的區塊已標示為可用於儲存設備。 
 ---
-= 回收儲存系統上的空間
+= 使用 SnapCenter 回收儲存系統上的空間
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

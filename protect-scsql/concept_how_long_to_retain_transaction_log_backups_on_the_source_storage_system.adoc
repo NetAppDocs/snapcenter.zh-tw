@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retain transaction log backups 
 summary: 適用於Microsoft SQL Server的解決方案外掛程式需要交易記錄備份、才能執行最新的還原作業、將資料庫還原至兩次完整備份之間的一段時間。SnapCenter 
 ---
-= 在來源儲存系統上保留交易記錄備份的時間
+= 在 SnapCenter 中保留交易日誌備份多久
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

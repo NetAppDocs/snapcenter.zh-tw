@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource group 
 summary: 任何資料保護工作都需要資源群組。您也必須將一或多個原則附加至資源群組、以定義您要執行的資料保護工作類型和保護排程。 
 ---
-= 建立Exchange Server的資源群組及附加原則
+= 在 SnapCenter 中建立資源群組並為 Exchange Server 附加原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

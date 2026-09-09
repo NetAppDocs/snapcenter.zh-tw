@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split, PDB, cloned PDB 
 summary: 您可以使用SnapCenter 物件分割複製的可插拔資料庫（pdb）。 
 ---
-= 分割可插拔資料庫的實體複本
+= 在 SnapCenter 中拆分可插拔資料庫 Clone
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

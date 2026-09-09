@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: role, create, permission 
 summary: 除了使用現有SnapCenter 的功能、您還可以建立自己的角色、並自訂權限。 
 ---
-= 建立角色
+= 在 SnapCenter 中建立角色
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

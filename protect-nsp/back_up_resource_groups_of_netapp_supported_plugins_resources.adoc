@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup, NetApp supported plug-ins 
 summary: 您可以從「資源」頁面隨需備份資源群組。如果資源群組已附加原則並設定排程、則會根據排程自動進行備份。 
 ---
-= 備份 NetApp 支援外掛程式資源的資源群組
+= 備份 NetApp 支援的外掛資源群組於 SnapCenter
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

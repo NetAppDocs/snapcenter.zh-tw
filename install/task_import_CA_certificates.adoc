@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, import, import ca certificate, mmc, microsoft management console 
 summary: 您必須SnapCenter 使用Microsoft管理主控台（MMC）、將CA憑證匯入到S倚賴 者支援的伺服器和Windows主機外掛程式。 
 ---
-= 匯入CA憑證
+= 為 SnapCenter 匯入 CA 憑證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 當您在環境中安裝適用於 IBM DB2 的外掛程式時、可以使用 SnapCenter 來備份、還原及複製 IBM DB2 及其資源。您也可以執行支援這些作業的工作。 
 ---
-= 您可以使用 SnapCenter Plug-in for IBM DB2 執行哪些工作
+= 了解 SnapCenter IBM Db2 外掛的功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

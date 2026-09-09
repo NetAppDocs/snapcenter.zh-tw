@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups 
 summary: 資源群組是一個容器、您可以在其中新增多個您要保護的檔案系統。您也必須將一或多個原則附加至資源群組、以定義您要執行的資料保護工作類型、然後指定備份排程。 
 ---
-= 為Windows檔案系統建立資源群組
+= 為 Windows 檔案系統建立 SnapCenter 資源群組
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create policies, sql, backup policies 
 summary: 為您要備份的資源或資源群組建立備份原則。 
 ---
-= 建立SQL Server資料庫的備份原則
+= 在 SnapCenter 中建立 SQL Server 資料庫的備份原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

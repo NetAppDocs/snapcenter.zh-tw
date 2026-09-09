@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, upgrade snapcenter server, windows 
 summary: 您可以使用SnapCenter 「伺服器安裝程式執行檔」來升級SnapCenter 「伺服器」。 
 ---
-= 升級 Windows 主機上的 SnapCenter 伺服器
+= 在 Windows 主機上升級 SnapCenter 伺服器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

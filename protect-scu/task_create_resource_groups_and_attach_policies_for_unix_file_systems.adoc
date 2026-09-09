@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: unix file systems, resource group, policy 
 summary: 資源群組是一個容器、您可以在其中新增要備份和保護的資源。 
 ---
-= 為 Unix 檔案系統建立資源群組和附加原則
+= 在 SnapCenter 中建立資源群組並為 UNIX 檔案系統附加原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

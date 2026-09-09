@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage hosts 
 summary: 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套件、新增驗證伺服器、移除主機、移轉備份工作、以及更新主機以升級外掛程式套件或新增外掛程式套件。視所使用的外掛程式而定、您也可以配置磁碟、管理SMB共用、管理啟動器群組（igroups\）、管理iSCSI工作階段、以及移轉資料。 
 ---
-= 管理主機
+= 在 SnapCenter 中管理主機
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -248,6 +248,7 @@ summary: 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套
 |===
 
 
+[[refresh-virtual-machine-information]]
 == 重新整理虛擬機器資訊
 
 當VMware vCenter認證變更或資料庫或檔案系統主機重新啟動時、您應該重新整理虛擬機器資訊。在更新虛SnapCenter 擬機器資訊時、會啟動與VMware vSphere vCenter的通訊、並取得vCenter認證。
@@ -265,6 +266,7 @@ NOTE: RDM型磁碟是由SnapCenter 安裝在資料庫主機上的Microsoft Windo
 
 
 
+[[modify-plug-in-hosts]]
 == 修改外掛程式主機
 
 安裝外掛程式之後、您可以視需要修改外掛程式主機詳細資料。您可以修改認證、安裝路徑、外掛程式、SnapCenter 適用於Microsoft SQL Server的更新目錄詳細資料、群組管理服務帳戶（GMSA）及外掛程式連接埠。
@@ -311,6 +313,7 @@ NOTE: 請確定外掛程式版本與SnapCenter 版本的版本相同。
 
 
 
+[[start-or-restart-plug-in-services]]
 == 啟動或重新啟動外掛程式服務
 
 如果SnapCenter 服務未在執行中、則啟動支援功能可讓您啟動服務、如果服務正在執行、則可重新啟動服務。您可能需要在執行維護之後重新啟動服務。
@@ -330,6 +333,7 @@ NOTE: 請確定外掛程式版本與SnapCenter 版本的版本相同。
 
 
 
+[[suspend-schedules-for-host-maintenance]]
 == 暫停排程以進行主機維護
 
 當您想要防止主機執行SnapCenter 任何的功能不完善的排程工作時、您可以將主機置於維護模式。您應該在升級外掛程式之前、或是在主機上執行維護工作時執行此動作。

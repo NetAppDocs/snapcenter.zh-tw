@@ -47,6 +47,7 @@ NOTE: 如果您按一下「*取消*」按鈕、將會完成正在執行的步驟
 
 
 
+[[register-the-product-to-enable-support]]
 == 註冊產品以啟用支援
 
 如果您是 NetApp 新手、而且沒有現有的 NetApp 帳戶、則應註冊產品以啟用支援。

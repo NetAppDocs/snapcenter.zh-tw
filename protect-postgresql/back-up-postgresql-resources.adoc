@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: 您可以建立資源（叢集）或資源群組的備份。備份工作流程包括規劃、識別備份叢集、管理備份原則、建立資源群組及附加原則、建立備份及監控作業。 
 ---
-= 備份 PostgreSQL 資源
+= SnapCenter PostgreSQL 資源的備份工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

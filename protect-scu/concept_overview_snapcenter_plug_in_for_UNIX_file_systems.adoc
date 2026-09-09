@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: overview, unix file system, plug-in for unix file system, backup, restore, clone 
 summary: 適用於 Unix 檔案系統的外掛程式支援 Unix 檔案系統的備份、還原及複製。 
 ---
-= SnapCenter Plug-in for Unix 檔案系統的功能
+= 了解適用於 UNIX 檔案系統的 SnapCenter 外掛程式
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -23,6 +23,7 @@ summary: 適用於 Unix 檔案系統的外掛程式支援 Unix 檔案系統的�
 
 
 
+[[supported-configurations]]
 == 支援的組態
 
 |===
@@ -84,6 +85,7 @@ NFS 和 SAN 上的 VVOL 資料存放區。 VVOL 資料存放區只能使用適�
 |===
 
 
+[[limitations]]
 == 限制
 
 * 不支援在磁碟區群組中混合使用 RDM 和虛擬磁碟。
@@ -98,6 +100,7 @@ NFS 和 SAN 上的 VVOL 資料存放區。 VVOL 資料存放區只能使用適�
 
 
 
+[[features]]
 == 功能
 
 * 讓Oracle資料庫外掛程式能夠處理Linux或AIX系統上的基礎主機儲存堆疊、在Oracle資料庫上執行資料保護作業

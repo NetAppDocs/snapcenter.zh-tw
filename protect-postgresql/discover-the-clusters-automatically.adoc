@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: credentials 
 summary: 資源是由 SnapCenter 管理的 Linux 主機上的 PostgreSQL 叢集。您可以在發現可用的 PostgreSQL 叢集之後、將這些資源新增至資源群組、以執行資料保護作業。 
 ---
-= 自動探索叢集
+= 在 SnapCenter 中自動探索 PostgreSQL 叢集
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

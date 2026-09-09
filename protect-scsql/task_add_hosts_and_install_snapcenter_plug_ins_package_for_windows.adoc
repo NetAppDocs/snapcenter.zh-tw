@@ -34,7 +34,7 @@ link:task_configure_gMSA_on_windows_server_2012_or_later.html["在Windows Server
 
 您可以為個別主機或叢集新增主機並安裝外掛程式套件。如果您要在叢集或Windows Server容錯移轉叢集（WSFC）上安裝外掛程式、則外掛程式會安裝在叢集的所有節點上。
 
-如需管理主機的相關資訊、請參閱 link:../admin/concept_manage_hosts.html["管理主機"^]。
+如需管理主機的相關資訊，請參閱link:../admin/concept_manage_hosts.html["在 SnapCenter 中管理主機"^]。
 
 .步驟
 . 在左側導覽窗格中、選取*主機*。

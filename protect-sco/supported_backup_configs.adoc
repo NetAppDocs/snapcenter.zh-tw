@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: backup type, preferred nodes, catalog backups, schedules, backup name format, retention, verification 
 summary: 支援不同Oracle資料庫組態的備份。SnapCenter 
 ---
-= 支援的Oracle資料庫備份組態
+= 在 SnapCenter 中備份所支援的 Oracle 資料庫配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

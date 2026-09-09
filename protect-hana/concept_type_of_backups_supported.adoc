@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SAP HANA Database 
 summary: 備份類型指定您要建立的備份類型。支援SAP HANA資料庫的檔案型備份和Snapshot複本型備份類型。SnapCenter 
 ---
-= 支援的備份類型
+= SnapCenter 支援的 SAP HANA 資料庫備份類型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,12 +15,14 @@ summary: 備份類型指定您要建立的備份類型。支援SAP HANA資料庫
 
 
 
+[[file-based-backup]]
 == 檔案型備份
 
 檔案型備份可驗證資料庫的完整性。您可以排定在特定時間間隔執行檔案型備份作業。只備份作用中的租戶。您無法從SnapCenter 無法還原及複製檔案型備份。
 
 
 
+[[snapshot-copy-based-backup]]
 == Snapshot複製型備份
 
 Snapshot 複本型備份利用 NetApp Snapshot 技術、建立 SAP HANA 資料庫所在磁碟區的線上唯讀複本。

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Minimum ONTAP privileges 
 summary: 所需的最低限度驗證權限會因您使用的資料保護功能的各個方面而有所不同。ONTAP SnapCenter 
 ---
-= Exchange外掛程式所需的ONTAP 最低需求權限
+= Microsoft Exchange Server 的 SnapCenter 外掛所需的最低 ONTAP 權限
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

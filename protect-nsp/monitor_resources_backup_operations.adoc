@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Server, NetApp supported plug-in 
 summary: 您可以使用SnapCenter 「更新工作」頁面來監控不同備份作業的進度。您可能需要檢查進度、以判斷何時完成或是否有問題。 
 ---
-= 監控 NetApp 支援的外掛程式資源備份作業
+= 在 SnapCenter 中監控 NetApp 支援的外掛資源備份作業
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

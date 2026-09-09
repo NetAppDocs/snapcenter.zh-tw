@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource, resource group, policy 
 summary: 在您使用SnapCenter 原地複製之前、先瞭解與您想要執行的備份、複製及還原作業相關的基本概念非常實用。 
 ---
-= 資料保護的關鍵概念
+= SnapCenter 中的資源、資源群組與原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,12 +15,14 @@ summary: 在您使用SnapCenter 原地複製之前、先瞭解與您想要執行
 
 
 
+[[resources]]
 == 資源
 
 資源包括資料庫， Windows 檔案系統，或是與 SnapCenter 備份或複製的檔案共用。視您的環境而定，資源也可能是資料庫執行個體， SQL Server 可用性群組， Oracle 資料庫， RAC 資料庫或自訂應用程式群組。
 
 
 
+[[resource-group]]
 == 資源群組
 
 資源群組是主機或叢集上的資源集合，可能來自多個主機和叢集。在資源群組上執行的作業會根據指定的排程套用至其所有資源。您可以針對個別資源或群組執行隨需或排程備份。
@@ -32,6 +34,7 @@ NOTE: 如果共享資源群組中的一部主機進入維護模式，則該群�
 
 
 
+[[policies]]
 == 原則
 
 原則指定資料保護作業的備份頻率，複本保留，複寫，指令碼及其他特性。
@@ -46,18 +49,21 @@ NOTE: 如果共享資源群組中的一部主機進入維護模式，則該群�
 
 
 
+[[consistency-group-cg]]
 == 一致性組（CG）
 
 一致性組是作為單一單元進行管理的磁碟區的集合。 CG 同步以確保跨儲存單元和磁碟區的資料一致性。在ONTAP中，它們為跨多個磁碟區的應用程式工作負載提供了輕鬆的管理和保護保障。詳細了解link:https://docs.netapp.com/us-en/ontap/consistency-groups["一致性組"^] 。
 
 
 
+[[usage-of-prescripts-and-postscripts]]
 == 使用預先編寫和後置指令碼
 
 自訂預先編寫和後置指令碼可在工作前後自動執行資料保護工作。例如，您可以新增指令碼來通知您工作失敗或警告。在設定指令碼之前，請先確定您瞭解這些指令碼的需求。
 
 
 
+[[supported-script-types]]
 === 支援的指令碼類型
 
 Windows支援下列指令碼類型：
@@ -80,6 +86,7 @@ NOTE: 除了預設的Bash Shell、也支援諸如sh-shell、k-shell和c-shell等
 
 
 
+[[script-path]]
 === 指令碼路徑
 
 在非虛擬化和虛擬化儲存系統上，所有作為 SnapCenter 作業一部分執行的預先編寫和後指令碼都會在外掛主機上執行。
@@ -98,6 +105,7 @@ NOTE: 指令碼路徑會在執行時驗證。
 
 
 
+[[where-to-specify-scripts]]
 === 指令碼的指定位置
 
 指令碼是在備份原則中指定。當備份工作啟動時，原則會自動將指令碼與要備份的資源建立關聯。建立備份原則時、您可以指定pretced和postscript引數。
@@ -107,12 +115,14 @@ NOTE: 您無法指定多個指令碼。
 
 
 
+[[script-timeouts]]
 === 指令碼逾時
 
 依預設、逾時設定為60秒。您可以修改逾時值。
 
 
 
+[[script-output]]
 === 指令碼輸出
 
 Windows預先編寫和後指令碼輸出檔案的預設目錄為Windows\System32。

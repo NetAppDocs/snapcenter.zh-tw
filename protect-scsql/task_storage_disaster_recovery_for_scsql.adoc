@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disaster recovery 
 summary: 您可以SnapCenter 在「Global Settings（全域設定）」頁面中啟用「DR Mode for Storage（儲存的DR模式）」、以還原適用於SQL Server儲存設備的「支援功能」外掛程式。 
 ---
-= 適用於SQL Server的儲存災難恢復（DR）SnapCenter
+= 災難發生後恢復 SnapCenter Plug-in for SQL Server 儲存設備
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

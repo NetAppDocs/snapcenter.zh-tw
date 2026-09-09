@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 您必須先定義策略、才能使用SnapCenter 還原成功執行還原作業。自動探索到的 IBM DB2 資料庫有兩種還原策略。 
 ---
-= 自動探索到的 IBM DB2 支援的還原策略類型
+= 在 SnapCenter 中自動探索的 IBM Db2 還原策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

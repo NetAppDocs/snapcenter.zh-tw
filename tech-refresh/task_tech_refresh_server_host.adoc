@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: tech refresh, SnapCenter Server, cmdlet, APIs, F5, rollback, decommission, disaster recovery, standalone 
 summary: 在新主機上安裝相同版本的 SnapCenter 伺服器、然後執行 API 或執行 Cmdlet 、從舊伺服器備份 SnapCenter 、並在新伺服器上還原。 
 ---
-= SnapCenter 伺服器主機的技術更新
+= 對 SnapCenter 伺服器主機執行技術更新
 :allow-uri-read: 
 
 
@@ -55,6 +55,7 @@ NOTE: 如果您已手動更新舊 SnapCenter 主機中的 web.config 檔案、�
 
 
 
+[[tech-refresh-of-a-node-in-f5-cluster]]
 == F5 叢集中節點的技術更新
 
 您可以移除節點並新增新節點、以技術方式重新整理 F5 叢集中的任何節點。如果需要重新整理的節點是作用中的、請將叢集的另一個節點設為作用中、然後移除節點。
@@ -66,22 +67,26 @@ NOTE: 如果 F5 叢集的 URL 變更、則可以使用 API 或 Cmdlet 在所有�
 
 
 
+[[decommissioning-the-old-snapcenter-server-host]]
 == 解除委任舊的 SnapCenter 伺服器主機
 
 您可以在確認新的 SnapCenter 伺服器已啟動且正在執行、且所有外掛主機都能與新的 SnapCenter 伺服器主機通訊之後、移除舊的 SnapCenter 伺服器主機。
 
 
 
+[[rollback-to-the-old-snapcenter-server-host]]
 == 復原至舊的 SnapCenter 伺服器主機
 
 如果發生任何問題、您可以使用 API: 或 Cmdlet 更新所有主機中的 SnapCenter 伺服器 URL 、以恢復舊的 SnapCenter 伺服器主機 `/<snapcenter_version>/server/configureurl` ： _Set-SmServerConfig_ 。
 
 
 
+[[disaster-recovery]]
 == 災難恢復
 
 
 
+[[disaster-recovery-of-standalone-snapcenter-host]]
 === 獨立式 SnapCenter 主機的災難恢復
 
 您可以將伺服器備份還原至新主機、以執行災難恢復。
@@ -115,6 +120,7 @@ NOTE: 伺服器 /etc/host_ 項目將不會還原。您可以從舊伺服器手�
 
 
 
+[[disaster-recovery-of-snapcenter-f5-cluster]]
 === SnapCenter F5 叢集的災難恢復
 
 您可以將伺服器備份還原至新主機、然後將獨立主機轉換為叢集、以執行災難恢復。

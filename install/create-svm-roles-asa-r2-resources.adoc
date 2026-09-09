@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: svm role, privileges, asa r2 systems 
 summary: 如果您在 ASA R2 系統中設定 SVM 以搭配 SanpCenter 使用，而不想使用 vsadmin 角色，則應該建立 SVM 角色。 
 ---
-= 為 ASA R2 系統建立 SVM 角色
+= 在 SnapCenter 中為 ASA r2 系統建立 SVM 角色
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -35,6 +35,7 @@ NOTE: 您應該針對每個權限重複此命令。
 
 
 
+[[ontap-cli-commands-for-creating-svm-roles-and-assigning-permissions]]
 == 用於建立SVM角色和指派權限的CLI命令ONTAP
 
 您應該執行幾ONTAP 個SVM命令來建立SVM角色並指派權限。

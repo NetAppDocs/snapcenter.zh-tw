@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter, SPL, Plug-in loader service, CA certificate, certificate 
 summary: 在SnapCenter Linux主機上使用支援功能的「支援程式載入器」服務來設定CA憑證 
 ---
-= 在SnapCenter Linux主機上使用支援支援功能的支援程式（SPL）服務來設定CA認證
+= 在 Linux 主機上為 SnapCenter 外掛程式 Loader 服務設定 CA 憑證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -18,6 +18,7 @@ IMPORTANT: SPL使用位於「/var/opt/snapcenter/spl/etc」的「keystore-store�
 
 
 
+[[manage-password-for-spl-keystore-and-alias-of-the-ca-signed-key-pair-in-use]]
 == 管理SPL Keystore的密碼、以及使用中CA簽署金鑰配對的別名
 
 *步驟*
@@ -43,6 +44,7 @@ NOTE: SPL Keystore的密碼以及私密金鑰的所有相關別名密碼均應�
 
 
 
+[[configure-root-or-intermediate-certificates-to-spl-trust-store]]
 == 將根或中繼憑證設定為SPL信任存放區
 
 您應該設定根或中繼憑證、而不要將私密金鑰設定為SPL信任存放區。
@@ -65,6 +67,7 @@ NOTE: 您應該先新增根CA憑證、然後再新增中繼CA憑證。
 
 
 
+[[configure-ca-signed-key-pair-to-spl-trust-store]]
 == 將CA簽署金鑰配對設定為SPL信任存放區
 
 您應該將CA簽署金鑰配對設定為SPL信任存放區。
@@ -101,6 +104,7 @@ NOTE: 您應該先新增根CA憑證、然後再新增中繼CA憑證。
 
 
 
+[[configure-certificate-revocation-list-crl-for-spl]]
 == 設定SPL的憑證撤銷清單（CRL）
 
 您應該設定SPL的CRL

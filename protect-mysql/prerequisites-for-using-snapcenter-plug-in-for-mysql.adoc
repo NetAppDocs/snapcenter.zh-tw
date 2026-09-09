@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Credentials,SnapCenter Plug-in for mysql 
 summary: 在您使用適用於 MySQL 的 SnapCenter 外掛程式之前、 SnapCenter 管理員必須先安裝及設定 SnapCenter 伺服器、然後執行必要的工作。 
 ---
-= 使用適用於 MySQL 的 SnapCenter 外掛程式的先決條件
+= 使用 SnapCenter MySQL 外掛的前提條件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

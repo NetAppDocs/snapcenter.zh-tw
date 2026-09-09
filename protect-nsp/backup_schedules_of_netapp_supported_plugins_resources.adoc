@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-in 
 summary: 決定備份排程的最關鍵因素是資源的變更率。備份資源的頻率越高、SnapCenter 還原所需的歸檔記錄就越少、還原作業也就越快完成。 
 ---
-= NetApp 支援外掛程式資源的備份排程
+= SnapCenter 針對 NetApp 支援的外掛資源的備份排程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

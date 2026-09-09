@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage storage system 
 summary: 新增儲存系統之後、您可以修改儲存系統組態和連線、或刪除儲存系統。 
 ---
-= 管理儲存系統
+= 在 SnapCenter 中管理儲存系統
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 新增儲存系統之後、您可以修改儲存系統組態和連線�
 
 
 
+[[modify-storage-system-configuration]]
 == 修改儲存系統組態
 
 如果您想要變更使用者名稱、密碼、平台、連接埠、傳輸協定、SnapCenter 逾時期間、偏好的IP位址或訊息選項。
@@ -72,6 +73,7 @@ NOTE: 在更新儲存系統密碼SnapCenter 時、您應該重新啟動個別外
 
 
 
+[[delete-the-storage-system]]
 == 刪除儲存系統
 
 您可以使用SnapCenter 功能表來刪除任何未使用的儲存系統。
@@ -102,6 +104,7 @@ NOTE: 如果SVM是ONTAP 使用ONTAP 無法修復的GUI從叢集刪除、SnapCent
 
 
 
+[[rest-api-support]]
 == REST API支援
 
 預設情況下，所有 ASA、AFF 或 FAS 系統與 ONTAP 的連線都將透過 ZAPI 進行。您可以針對特定 ONTAP 版本啟用 REST API。

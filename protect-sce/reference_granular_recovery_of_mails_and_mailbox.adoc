@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SMBR, Single Mailbox recovery, Exchange database 
 summary: 單一信箱恢復（SMBR）軟體可讓您還原及恢復郵件或信箱、而非完整的Exchange資料庫。 
 ---
-= 精細恢復郵件和信箱
+= 適用於 Microsoft Exchange Server 的 SnapCenter 外掛的精細郵件和信箱恢復
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

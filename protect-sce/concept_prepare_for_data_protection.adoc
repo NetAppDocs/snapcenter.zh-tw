@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Exchange Server 
 summary: 在執行任何資料保護作業（例如備份、複製或還原作業）之前、您必須先定義策略並設定環境。您也可以設定SnapCenter 使用SnapMirror和SnapVault SnapMirror技術的「支援伺服器」。 
 ---
-= 準備資料保護
+= 適用於 Microsoft Exchange Server 的 SnapCenter 外掛的資料保護先決條件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -21,6 +21,7 @@ link:https://docs.netapp.com/us-en/ontap-automation/getting_started_with_the_res
 
 
 
+[[prerequisites-for-using-the-snapcenter-plug-in-for-microsoft-exchange-server]]
 == 使用SnapCenter Microsoft Exchange Server的功能的先決條件
 
 在您使用外掛程式for Exchange之前、SnapCenter 管理員必須先安裝及設定SnapCenter 好該伺服器、並執行必要的工作。
@@ -49,6 +50,7 @@ https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/["VMware vSphere文件的
 
 
 
+[[how-resources-resource-groups-and-policies-are-used-for-protecting-exchange-server]]
 == 如何使用資源、資源群組和原則來保護Exchange Server
 
 在您使用SnapCenter 原地複本之前、先瞭解與您想要執行的備份、還原及重新作業相關的基本概念是很有幫助的。您可以與不同作業的資源、資源群組和原則互動。

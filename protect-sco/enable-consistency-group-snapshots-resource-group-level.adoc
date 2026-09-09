@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: consistency group, enable, create, resource group level 
 summary: 資源群組是一個容器、您可以在其中新增要備份和保護的資源。資源群組可讓您同時備份與指定應用程式相關的所有資料。 
 ---
-= 在資源群組層級啟用一致性群組 Snapshot
+= 在資源群組層級啟用 SnapCenter 一致性群組快照
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

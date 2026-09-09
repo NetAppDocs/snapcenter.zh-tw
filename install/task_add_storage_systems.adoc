@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, storage system, SVM, ASA r2 systems 
 summary: 您應該設定儲存系統SnapCenter 、讓您能夠存取ONTAP 不必要的資料儲存設備、以執行資料保護和資源配置作業。您可以新增獨立的SVM或由多個SVM組成的叢集。 
 ---
-= 新增儲存系統
+= 在 SnapCenter 中新增儲存系統
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

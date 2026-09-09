@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: REST API, Swagger 
 summary: REST API會透過Swagger網頁公開。您可以存取Swagger網頁以顯示SnapCenter 「伺服器REST API」、以及手動發出API呼叫。您可以使用REST API來協助管理SnapCenter 您的支援中心伺服器或執行資料保護作業。 
 ---
-= 如何使用Swagger API網頁存取REST API
+= 透過 Swagger 網頁存取 SnapCenter REST API
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

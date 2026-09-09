@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: requirements 
 summary: 在安裝Windows外掛程式之前、您應該瞭解某些安裝需求。 
 ---
-= 適用於Microsoft Windows的安裝需求SnapCenter
+= 適用於 Microsoft Windows 的 SnapCenter 外掛程式安裝需求
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -26,6 +26,7 @@ summary: 在安裝Windows外掛程式之前、您應該瞭解某些安裝需求�
 
 
 
+[[host-requirements-to-install-snapcenter-plug-ins-package-for-windows]]
 == 安裝SnapCenter 適用於Windows的功能性外掛程式套件的主機需求
 
 在安裝SnapCenter 適用於Windows的整套解決方案之前、您應該先熟悉一些基本的主機系統空間需求和規模調整需求。
@@ -76,6 +77,7 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
 |===
 
 
+[[set-up-your-credentials-for-the-plug-in-for-windows]]
 == 設定適用於Windows的外掛程式認證
 
 使用認證資料驗證使用者執行的不中斷作業。SnapCenter SnapCenter您應該建立認證、以安裝SnapCenter 更新程式、以及在Windows檔案系統上執行資料保護作業的其他認證資料。
@@ -145,6 +147,7 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
 
 
 
+[[configure-gmsa-on-windows-server-2016-or-later]]
 == 在Windows Server 2016或更新版本上設定GMSA
 
 Windows Server 2016或更新版本可讓您建立群組託管服務帳戶（GMSA）、以便從託管網域帳戶提供自動化服務帳戶密碼管理。

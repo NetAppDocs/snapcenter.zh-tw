@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Database, restore, recover, tablespaces, pluggable databases, point-in-time 
 summary: 您可以使用SnapCenter 效益管理功能、從一或多個備份中還原及恢復資料。 
 ---
-= 還原及還原Oracle資料庫
+= 使用 SnapCenter 還原與恢復 Oracle 資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -54,6 +54,7 @@ summary: 您可以使用SnapCenter 效益管理功能、從一或多個備份中
 
 
 
+[[restore-and-recover-tablespaces-using-point-in-time-recovery]]
 == 使用時間點還原來還原及還原資料表空間
 
 您可以還原已毀損或遺失的資料表空間子集、而不會影響資料庫中的其他資料表空間。使用RMAN執行表空間的時間點恢復（PITRR）SnapCenter 。
@@ -88,6 +89,7 @@ summary: 您可以使用SnapCenter 效益管理功能、從一或多個備份中
 
 
 
+[[restore-and-recover-pluggable-database-using-point-in-time-recovery]]
 == 使用時間點還原來還原及還原可插拔的資料庫
 
 您可以還原及還原已毀損或遺失的可插拔資料庫（pdb）、而不會影響容器資料庫（CDB）中的其他PDF。使用RMAN執行pdb的時間點恢復（PITRR）SnapCenter 。

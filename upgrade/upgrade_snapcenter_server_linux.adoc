@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, upgrade snapcenter server, linux 
 summary: 您可以使用 SnapCenter 伺服器安裝程式檔案來升級 SnapCenter 伺服器。 
 ---
-= 升級 Linux 主機上的 SnapCenter 伺服器
+= 在 Linux 主機上升級 SnapCenter 伺服器
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

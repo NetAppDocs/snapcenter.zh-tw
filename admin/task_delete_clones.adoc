@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Delete clones 
 summary: 您可以刪除不再需要的複本。 
 ---
-= 刪除複本
+= 刪除 SnapCenter Clone
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

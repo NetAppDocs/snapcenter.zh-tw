@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 您可以使用SnapCenter 支援功能還原備份的Exchange資料庫。 
 ---
-= 還原Exchange資料庫
+= 使用 SnapCenter 還原 Exchange 資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

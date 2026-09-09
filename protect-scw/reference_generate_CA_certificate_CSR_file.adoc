@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter 
 summary: 您可以產生憑證簽署要求（CSR）並匯入憑證。 
 ---
-= 產生CA認證CSR檔案
+= 在 SnapCenter 中產生 CA 憑證 CSR 檔案
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

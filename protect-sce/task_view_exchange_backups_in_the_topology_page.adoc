@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter plug-in for Exchange Server 
 summary: 當您準備備備備份資源時、您可能會發現在一線和二線儲存設備上檢視所有備份的圖形化表示方式很有幫助。 
 ---
-= 在「拓撲」頁面中檢視Exchange備份
+= 在 SnapCenter 「拓撲」頁面中查看 Exchange 備份
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

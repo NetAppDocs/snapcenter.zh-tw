@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for PostgreSQL 
 summary: 您可以使用外掛程式為資源群組建立一致性群組快照。一致性群組是一個容器、可容納多個磁碟區、以便您將其管理為單一實體。一致性群組是多個磁碟區的同步快照、可為一組磁碟區提供一致的複本。 
 ---
-= 適用於 PostgreSQL 的 SnapCenter 外掛程式如何使用一致性群組快照
+= 適用於 PostgreSQL 的 SnapCenter 外掛程式如何使用一致性群組 Snapshot 複本
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

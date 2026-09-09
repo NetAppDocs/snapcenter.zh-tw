@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clone 
 summary: 您可以使用SnapCenter 支援功能來複製備份。您可以從主要或次要備份複製。複製作業的功能取決於您使用的外掛程式。 
 ---
-= 從備份複製
+= 在 SnapCenter 中從備份 Clone
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

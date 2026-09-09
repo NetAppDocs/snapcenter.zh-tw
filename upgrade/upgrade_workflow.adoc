@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade, snapcenter server, plug-ins, workflow, upgrade path 
 summary: 說明如何升級SnapCenter Sfor Server和外掛程式、以及支援的升級途徑 
 ---
-= 升級工作流程
+= SnapCenter 伺服器升級工作流程
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -19,6 +19,7 @@ image::../media/upgrade_workflow.gif[升級工作流程]
 
 
 
+[[supported-upgrade-paths]]
 == 支援的升級途徑
 
 本節顯示您可以從哪些SnapCenter版本升級以及支援哪些外掛程式版本。

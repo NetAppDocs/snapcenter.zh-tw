@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: mfa, authentication, multifactor authentication 
 summary: 利用嚴苛的安全性與驗證功能、確保資料安全無虞。SnapCenter 
 ---
-= 管理多因素驗證（ MFA ）
+= 在 SnapCenter 中管理多因素驗證
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 利用嚴苛的安全性與驗證功能、確保資料安全無虞。Sn
 
 
 
+[[enable-multi-factor-authentication-mfa]]
 == 啟用多因素驗證（ MFA ）
 
 您可以使用 PowerShell 命令為 SnapCenter 伺服器啟用 MFA 功能。
@@ -120,6 +121,7 @@ path參數指定將MFA中繼資料檔案儲存到SnapCenter Sof the Server主機
 
 
 
+[[update-ad-fs-mfa-metadata]]
 == 更新AD FS MFA中繼資料
 
 只要AD FS伺服器有任何修改、例如升級、CA憑證續約、DR等、您就應該更新SnapCenter 位於支援區的AD FS MFA中繼資料。
@@ -136,6 +138,7 @@ path參數指定將MFA中繼資料檔案儲存到SnapCenter Sof the Server主機
 
 
 
+[[update-snapcenter-mfa-metadata]]
 == 更新SnapCenter 功能不支援MFA中繼資料
 
 每當有任何修改ADFS伺服器（例如修復、CA憑證續約、DR等）時、您就應該更新SnapCenter AD FS中的功能完善的MFA中繼資料。
@@ -159,6 +162,7 @@ path參數指定將MFA中繼資料檔案儲存到SnapCenter Sof the Server主機
 
 
 
+[[disable-multi-factor-authentication-mfa]]
 == 停用多因素驗證（MFA）
 
 .步驟

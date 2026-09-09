@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for SQL Server 
 summary: 您可以使用SnapCenter 支援功能、在SQL Server資源上執行不同類型的還原作業。 
 ---
-= 還原作業類型
+= SnapCenter 中的 SQL Server 還原作業類型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -28,6 +28,7 @@ NOTE: 不支援Volume型的功能。SnapCenter SnapRestore
 
 
 
+[[restore-up-to-the-minute]]
 == 直到現在恢復
 
 在最新的還原作業中（預設為選取）、資料庫會恢復到故障點。執行下列順序、即可達成此目的：SnapCenter
@@ -48,12 +49,14 @@ NOTE: 不支援Volume型的功能。SnapCenter SnapRestore
 
 
 
+[[example-of-an-up-to-the-minute-restore-operation]]
 == 最新還原作業的範例
 
 假設您每天中午執行SQL Server備份、星期三下午4點執行您需要從備份還原。由於某種原因、星期三中午的備份驗證失敗、因此您決定從星期二中午的備份還原。之後、如果備份已還原、則所有交易記錄都會向前移動並套用至還原的資料庫、從您建立星期二備份時未提交的記錄開始、並繼續執行星期三下午4點寫入的最新交易記錄（如果已備份交易記錄）。
 
 
 
+[[restore-to-a-previous-point-in-time]]
 == 還原到先前的時間點
 
 在時間點還原作業中、資料庫只會還原到過去的特定時間。在下列還原情況下、會執行時間點還原作業：
@@ -75,6 +78,7 @@ image::../media/point_in_time_recovery_path.gif[還原至先前的時間點]
 
 
 
+[[example-of-a-point-in-time-restore-operation]]
 == 時間點還原作業的範例
 
 假設您在午夜進行一次完整資料庫備份、每小時進行一次交易記錄備份。資料庫在上午9：45當機、但您仍要備份故障資料庫的交易記錄。您可以從下列時間點還原案例中進行選擇：

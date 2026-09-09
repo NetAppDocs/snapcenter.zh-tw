@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: HDB User Store Key, HDBSQL OS User, SAP HANA database 
 summary: 您必須設定HDB使用者儲存金鑰和HDBSQL OS使用者、才能在SAP HANA資料庫上執行資料保護作業。 
 ---
-= 針對SAP HANA資料庫設定HDB使用者儲存金鑰和HDBSQL OS使用者
+= 為 SnapCenter SAP HANA 資料庫設定 HDB 使用者儲存金鑰和 HDBSQL 作業系統使用者
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

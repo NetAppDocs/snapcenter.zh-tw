@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: dashboard 
 summary: 您可以使用儀表板、要求特定外掛程式所管理資源的保護詳細資料。 
 ---
-= 從儀表板索取保護狀態報告
+= 從 SnapCenter 儀表板請求保護狀態報告
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

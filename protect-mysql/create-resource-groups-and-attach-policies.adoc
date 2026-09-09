@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resource groups, attach policies, snapcenter 
 summary: 資源群組是您必須新增要備份及保護之資源的容器。資源群組可讓您同時備份與特定應用程式相關的所有資料。任何資料保護工作都需要資源群組。您也必須將一或多個原則附加至資源群組、以定義您要執行的資料保護工作類型。 
 ---
-= 建立資源群組並附加原則
+= 使用 SnapCenter 為 MySQL 建立資源群組並附加原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

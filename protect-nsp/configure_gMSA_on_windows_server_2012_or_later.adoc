@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: gMSA 
 summary: Windows Server 2016或更新版本可讓您建立群組託管服務帳戶（GMSA）、以便從託管網域帳戶提供自動化服務帳戶密碼管理。 
 ---
-= 在Windows Server 2016或更新版本上設定GMSA
+= 在 Windows Server 2016 或更新版本上為 SnapCenter 設定 gMSA
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ permalink: sc-automation/task_get_started_with_the_rest_api.html
 keywords: REST API 
 summary: 存取API可在您開始使用API之前、先提供一些觀點、讓您在即時設定中使用更複雜的工作流程程序。 
 ---
-= 開始使用REST API
+= 開始使用 SnapCenter REST API
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 存取API可在您開始使用API之前、先提供一些觀點、讓�
 
 
 
+[[hello-world]]
 == 您好：World
 
 您可以在系統上執行簡單的命令、開始使用SnapCenter 靜態API並確認其可用度。

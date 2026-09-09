@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Microsoft Exchange Server 
 summary: 您可以使用外掛程式for Exchange來備份及還原Exchange Server資料庫。 
 ---
-= 使用適用於Microsoft Exchange Server的解決方案SnapCenter
+= 適用於 Microsoft Exchange Server 的 SnapCenter 外掛功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

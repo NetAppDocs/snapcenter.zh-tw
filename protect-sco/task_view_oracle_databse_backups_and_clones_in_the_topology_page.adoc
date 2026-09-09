@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for Oracle Databases 
 summary: 當您準備備備備份或複製資源時、您可能會發現在一線和二線儲存設備上檢視所有備份和複製的圖形化表示方式很有幫助。 
 ---
-= 在「拓撲」頁面中檢視Oracle資料庫備份與複製
+= 在 SnapCenter 拓撲頁面中查看 Oracle 資料庫備份和 Clone
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: restore, recover, Oracle 
 summary: 在資料遺失的情況下、SnapCenter 您可以使用效益管理功能將資料從一或多個備份還原至使用中的檔案系統、然後還原資料庫。 
 ---
-= 還原及還原Oracle資料庫
+= 在 SnapCenter 中還原與恢復 Oracle 資料庫
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

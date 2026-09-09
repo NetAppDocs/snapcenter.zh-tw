@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: guest OS, VMware ESXi server, limitations, RDM, Microsoft cluster 
 summary: 您可以在SnapCenter VMware環境中使用適用於Microsoft Windows的解決方案、來建立及管理LUN、以及管理Snapshot備份複本。 
 ---
-= 在VMware環境中配置儲存設備
+= SnapCenter 在 VMware 環境中的儲存資源配置
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,7 @@ summary: 您可以在SnapCenter VMware環境中使用適用於Microsoft Windows�
 
 
 
+[[supported-vmware-guest-os-platforms]]
 == 支援的VMware來賓作業系統平台
 
 * 支援的Windows Server版本
@@ -33,6 +34,7 @@ summary: 您可以在SnapCenter VMware環境中使用適用於Microsoft Windows�
 
 
 
+[[vmware-esxi-server-related-limitations]]
 === VMware ESXi伺服器相關限制
 
 * 不支援在使用ESXi認證的虛擬機器上、於Microsoft叢集上安裝Windows外掛程式。
@@ -46,6 +48,7 @@ summary: 您可以在SnapCenter VMware環境中使用適用於Microsoft Windows�
 
 
 
+[[minimum-vcenter-privileges-required-for-snapcenter-rdm-operations]]
 === 執行不必要的vCenter權限SnapCenter
 
 您應該在主機上擁有下列vCenter權限、以便在客體作業系統中執行RDM作業：
@@ -61,6 +64,7 @@ summary: 您可以在SnapCenter VMware環境中使用適用於Microsoft Windows�
 
 
 
+[[manage-fc-rdm-luns-in-a-microsoft-cluster]]
 == 管理Microsoft叢集中的FC RDM LUN
 
 您可以使用Windows外掛程式來管理使用FC RDM LUN的Microsoft叢集、但必須先在外掛程式之外建立共用的RDM仲裁和共用儲存設備、然後將磁碟新增至叢集的虛擬機器。
@@ -69,6 +73,7 @@ summary: 您可以在SnapCenter VMware環境中使用適用於Microsoft Windows�
 
 
 
+[[requirements]]
 === 需求
 
 當您符合特定組態需求時、適用於Windows的外掛程式會在兩部不同的虛擬機器上使用FC RDM LUN來支援Microsoft叢集、這些虛擬機器屬於兩部不同的ESX或ESXi伺服器、也稱為跨機箱叢集。
@@ -111,6 +116,7 @@ NOTE: 在實體相容模式下、將SCSI控制器新增至虛擬機器上的共�
 
 
 
+[[limitations]]
 === 限制
 
 適用於Windows的外掛程式可在屬於不同ESX或ESXi伺服器的不同虛擬機器上、使用FC/iSCSI RDM LUN來支援Microsoft叢集。
@@ -130,6 +136,7 @@ NOTE: ESX 5.5i之前的版本不支援此功能。
 
 
 
+[[create-a-shared-fc-rdm-lun]]
 === 建立共享的FC RDM LUN
 
 在使用FC RDM LUN在Microsoft叢集中的節點之間共用儲存設備之前、您必須先建立共用仲裁磁碟和共用儲存磁碟、然後將它們新增至叢集中的兩個虛擬機器。
@@ -138,6 +145,7 @@ NOTE: ESX 5.5i之前的版本不支援此功能。
 
 
 
+[[related-information]]
 == 相關資訊
 
 請參閱 link:https://techdocs.broadcom.com["Broadcom 技術文件"^] 並搜尋有關跨實體主機對虛擬機器進行叢集以及為 Microsoft 叢集建立共用 FC RDM LUN 的文件。

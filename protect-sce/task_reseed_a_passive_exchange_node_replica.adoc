@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 如果您需要重新複本複本複本、例如複本毀損時、您可以使用SnapCenter 更新功能重新複製到最新的備份。 
 ---
-= 已重新建立被動式Exchange節點複本
+= 在 SnapCenter 中重新播種被動 Exchange 節點複本
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

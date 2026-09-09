@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Active Directory 
 summary: 您應向SnapCenter 支援此功能的伺服器登錄Active Directory、以管理來自多個不受信任Active Directory網域的主機、使用者和群組。 
 ---
-= 登錄不受信任的Active Directory網域
+= 向 SnapCenter 註冊不受信任的 Active Directory 網域
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

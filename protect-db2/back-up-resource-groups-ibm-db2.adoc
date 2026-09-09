@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter Plug-in for IBM Db2 
 summary: 資源群組是主機上的資源集合。資源群組上的備份作業會對資源群組中定義的所有資源執行。 
 ---
-= 備份資源群組
+= 在 SnapCenter 中備份 IBM Db2 資源群組
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

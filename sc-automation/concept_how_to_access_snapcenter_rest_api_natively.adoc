@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: REST APIs, swagger 
 summary: 原生存取REST API。REST API會透過Swagger網頁公開。 
 ---
-= 如何SnapCenter 原生存取靜態API
+= 對 SnapCenter REST API 的原生存取
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

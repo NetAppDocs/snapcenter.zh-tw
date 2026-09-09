@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Manage resource groups 
 summary: 您可以對資源群組執行各種作業。 
 ---
-= 管理資源群組
+= 在 SnapCenter 中管理資源群組
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -39,6 +39,7 @@ NOTE: 如果您從資源群組移除資源、目前附加至資源群組的原�
 
 
 
+[[stop-and-resume-operations-on-resource-groups]]
 == 停止並恢復資源群組上的作業
 
 您可以暫時停用從資源群組啟動的排程作業。稍後您可以視需要啟用這些作業。
@@ -55,6 +56,7 @@ NOTE: 如果您從資源群組移除資源、目前附加至資源群組的原�
 
 
 
+[[delete-resource-groups]]
 == 刪除資源群組
 
 如果不再需要保護資源群組中的資源、您可以刪除資源群組。您必須先確定已刪除資源群組、才能從SnapCenter 功能性資源移除外掛程式。

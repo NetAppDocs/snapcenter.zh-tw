@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: NetApp supported plug-ins 
 summary: 您可以使用 NetApp 支援的外掛程式來執行資料保護作業。 
 ---
-= 您可以使用 NetApp 支援的外掛程式來執行哪些工作
+= 瞭解 SnapCenter 中支援的 NetApp 外掛
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

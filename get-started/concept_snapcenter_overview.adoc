@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: SnapCenter overview 
 summary: SnapCenter 軟體是一個簡單，集中且可擴充的平台，可為混合雲中任何位置的 ONTAP 系統上執行的應用程式，資料庫，主機檔案系統和 VM 提供應用程式一致的資料保護。 
 ---
-= 概述SnapCenter
+= 瞭解 SnapCenter 軟體
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -49,6 +49,7 @@ SnapCenter包括SnapCenter伺服器和輕量級插件。您可以自動將外掛
 
 
 
+[[key-features]]
 == 主要功能
 
 SnapCenter 提供下列主要功能：
@@ -94,6 +95,7 @@ SnapCenter 提供 REST API ，可用於大多數功能，以整合任何協調�
 
 
 
+[[snapcenter-architecture-and-components]]
 == SnapCenter 架構與元件
 
 SnapCenter採用分層設計，包含中央管理伺服器和插件主機。伺服器和插件主機可以位於不同的位置。
@@ -104,6 +106,7 @@ SnapCenter 包括 SnapCenter 伺服器，適用於 Windows 的 SnapCenter 外掛
 
 
 
+[[snapcenter-server]]
 === 伺服器SnapCenter
 
 SnapCenter 伺服器支援 Microsoft Windows 和 Linux （ RHEL 8.x ， RHEL 9.x ， SLES 15 SP5 ）作業系統。SnapCenter 伺服器包含 Web 伺服器，集中式 HTML5 使用者介面， PowerShell Cmdlet ， REST API 及 SnapCenter 儲存庫。
@@ -112,6 +115,7 @@ SnapCenter將其操作的相關資訊儲存在SnapCenter儲存庫中。
 
 
 
+[[snapcenter-plug-ins]]
 === 實體外掛程式SnapCenter
 
 每SnapCenter 個支援特定環境、資料庫和應用程式的支援。
@@ -293,6 +297,7 @@ SnapCenter Plug-in for VMware vSphere支援虛擬機器 (VM)、資料儲存庫�
 
 
 
+[[snapcenter-repository]]
 === 系統儲存庫SnapCenter
 
 此系統庫有時也稱為NSM資料庫、可儲存每個環節的資訊和中繼資料。SnapCenter SnapCenter

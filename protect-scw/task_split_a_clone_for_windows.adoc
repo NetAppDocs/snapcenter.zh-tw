@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: split clone 
 summary: 您可以使用SnapCenter 此功能從父資源分割複製的資源。分割的實體複本會變成獨立於父資源的實體複本。 
 ---
-= 分割實體複本
+= 使用 SnapCenter Microsoft Windows 外掛拆分 Clone
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
