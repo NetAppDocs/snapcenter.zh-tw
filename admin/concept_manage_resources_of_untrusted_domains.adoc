@@ -2,7 +2,7 @@
 permalink: admin/concept_manage_resources_of_untrusted_domains.html 
 sidebar: sidebar 
 keywords: Manage resources 
-summary: 除了管理Active Directory（AD\）信任網域中的主機之外、SnapCenter 還能管理多個AD不受信任網域中的主機。不可信的AD網域必須向SnapCenter 該伺服器註冊。支援多個不受信任AD網域的使用者和群組。SnapCenter 
+summary: 除了管理Active Directory（AD）信任網域中的主機之外、SnapCenter 還能管理多個AD不信任網域中的主機。不可信的AD網域必須向SnapCenter 該伺服器註冊。支援多個不受信任AD網域的使用者和群組。SnapCenter 
 ---
 = 管理不受信任網域中的 SnapCenter 資源
 :allow-uri-read: 

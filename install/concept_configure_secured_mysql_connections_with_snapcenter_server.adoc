@@ -2,7 +2,7 @@
 permalink: install/concept_configure_secured_mysql_connections_with_snapcenter_server.html 
 sidebar: sidebar 
 keywords: Secure Sockets Layer, secure MYSQL connections, standalone configuration, HA configuration, SSL 
-summary: 如果您想要在SnapCenter 獨立組態或網路負載平衡（NLB）組態中、確保支援穩定的伺服器與MySQL Server之間的通訊、可以產生安全通訊端層（SSL）憑證和金鑰檔。 
+summary: 如果您想要在SnapCenter 獨立組態或網路負載平衡（NLB）組態中、確保支援彼此之間的通訊安全、可以產生安全通訊端層（SSL）憑證和金鑰檔。 
 ---
 = 使用SnapCenter 伺服器設定安全的MySQL連線
 :allow-uri-read: 

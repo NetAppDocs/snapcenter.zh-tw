@@ -2,7 +2,7 @@
 permalink: protect-sco/task_restore_and_recover_pluggable_database_using_point_in_time_recovery.html 
 sidebar: sidebar 
 keywords: PDB, pluggable database, restore, CDB, PITR, point-in-time recovery, RMAN 
-summary: 您可以還原及還原已毀損或遺失的可插拔資料庫（pdb）、而不會影響容器資料庫（CDB）中的其他PDF。使用RMAN執行pdb的時間點恢復（PITR\）SnapCenter 。 
+summary: 您可以還原及還原已毀損或遺失的可插拔資料庫（pdb）、而不會影響容器資料庫（CDB）中的其他PDF。使用RMAN執行pdb的時間點恢復（PITRR）SnapCenter 。 
 ---
 = 在 SnapCenter 中使用時間點恢復來還原可插拔資料庫
 :allow-uri-read: 

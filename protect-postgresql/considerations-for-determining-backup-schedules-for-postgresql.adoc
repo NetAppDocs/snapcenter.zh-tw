@@ -2,7 +2,7 @@
 permalink: protect-postgresql/considerations-for-determining-backup-schedules-for-postgresql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for PostgreSQL 
-summary: 決定備份排程的最關鍵因素是資源的變更率。您可以每小時備份大量使用的資源、而每天備份一次極少使用的資源。其他因素包括資源對貴組織的重要性、服務層級協議（SLA）和您的恢復點目標（RPO）。 
+summary: 決定備份排程的最關鍵因素是資源的變更率。您可以每小時備份大量使用的資源、而每天備份一次極少使用的資源。其他因素包括資源對貴組織的重要性、服務層級協議（SLA）、以及您的恢復點目標（RPO）。 
 ---
 = 適用於 PostgreSQL 的 SnapCenter 外掛備份排程因素
 :allow-uri-read: 

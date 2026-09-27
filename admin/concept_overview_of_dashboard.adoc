@@ -2,7 +2,7 @@
 permalink: admin/concept_overview_of_dashboard.html 
 sidebar: sidebar 
 keywords: dashboard 
-summary: 從 SnapCenter 左側瀏覽窗格中、儀表板可讓您一覽系統的健全狀況、包括最近的工作活動、警示、保護摘要、儲存效率和使用量、 SnapCenter 工作的狀態（備份、複製、還原）、獨立式和 Windows 叢集主機的組態狀態、 由 SnapCenter 管理的儲存虛擬機器（ SVM ）數量、以及授權容量。 
+summary: 儀表板可從SnapCenter 左側導覽窗格、讓您一覽系統的健全狀況、包括最近的工作活動、警示、保護摘要、儲存效率與使用率、SnapCenter 不中斷作業的狀態（備份、複製、還原）、獨立式和Windows叢集主機的組態狀態、 由VMware及授權容量管理的儲存虛擬機器（SVM）數量SnapCenter 。 
 ---
 = 了解 SnapCenter 儀表板
 :allow-uri-read: 

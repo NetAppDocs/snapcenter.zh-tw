@@ -2,7 +2,7 @@
 permalink: protect-postgresql/types-of-restore-performed-for-auto-discovered-postgresql.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for postgresql 
-summary: SnapCenter 支援 Volume 型 SnapRestore （ VBSR\ ）、單一檔案 SnapRestore 、以及自動探索的 PostgreSQL 叢集的連線與複製還原類型。 
+summary: SnapCenter 支援以 Volume 為基礎的 SnapRestore（VBSR）、單一檔案 SnapRestore，以及適用於自動探索到的 PostgreSQL 叢集的連線與複製還原類型。 
 ---
 = SnapCenter 中自動探索的 PostgreSQL 還原類型
 :allow-uri-read: 

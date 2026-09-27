@@ -2,7 +2,7 @@
 permalink: protect-sco/task_restore_and_recovere_tablespaces_using_point_in_time_recovery.html 
 sidebar: sidebar 
 keywords: restore, PITR, point-in-time recovery, RMAN, tablespaces 
-summary: 您可以還原已毀損或遺失的一部分表格空間、而不會影響資料庫中的其他表格空間。使用RMAN執行表空間的時間點恢復（PITR\）SnapCenter 。 
+summary: 您可以還原已毀損或遺失的一部分表格空間、而不會影響資料庫中的其他表格空間。使用RMAN執行表空間的時間點恢復（PITRR）SnapCenter 。 
 ---
 = 在 SnapCenter 中使用時間點恢復來還原表空間
 :allow-uri-read: 

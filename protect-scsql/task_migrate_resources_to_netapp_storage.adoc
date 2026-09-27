@@ -2,7 +2,7 @@
 permalink: protect-scsql/task_migrate_resources_to_netapp_storage.html 
 sidebar: sidebar 
 keywords: migrate resources 
-summary: 在您使用SnapCenter 適用於Microsoft Windows的支援功能更新NetApp儲存系統後、您可以使用SnapCenter 「支援功能」圖形化使用者介面（GUI）或PowerShell Cmdlet、將資源移轉至NetApp儲存系統、或從一個NetApp LUN移轉至另一個NetApp LUN。 
+summary: 使用SnapCenter 適用於Microsoft Windows的支援功能、配置NetApp儲存系統之後、您可以使用SnapCenter 支援功能、圖形化使用者介面（GUI）或PowerShell Cmdlet、將資源移轉至NetApp儲存系統、或從一個NetApp LUN移轉至另一個NetApp LUN。 
 ---
 = 在 SnapCenter 中將資源移轉至 NetApp 儲存設備
 :allow-uri-read: 

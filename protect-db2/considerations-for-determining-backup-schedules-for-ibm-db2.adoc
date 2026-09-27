@@ -2,7 +2,7 @@
 permalink: protect-db2/considerations-for-determining-backup-schedules-for-ibm-db2.html 
 sidebar: sidebar 
 keywords: SnapCenter Plug-in for IBM Db2 
-summary: 決定備份排程的最關鍵因素是資源的變更率。您可以每小時備份大量使用的資源、而每天備份一次極少使用的資源。其他因素包括資源對貴組織的重要性、服務層級協議（SLA）和您的恢復點目標（RPO）。 
+summary: 決定備份排程的最關鍵因素是資源的變更率。您可以每小時備份大量使用的資源、而每天備份一次極少使用的資源。其他因素包括資源對貴組織的重要性、服務層級協議（SLA）、以及您的恢復點目標（RPO）。 
 ---
 = 決定 IBM Db2 的 SnapCenter 備份排程的因素
 :allow-uri-read: 

@@ -1,7 +1,7 @@
 ---
 permalink: install/concept_snapcenter_standard_controller_based_licenses.html 
 sidebar: sidebar 
-keywords: 'controller-based licenses, standard license, SnapManager Suite license, FAS, AFF, All SAN Array (ASA), retrieve controller serial number, controller serial number, controller-based license serial number, add controller-based license, remove trial license' 
+keywords: controller-based licenses, standard license, SnapManager Suite license, FAS, AFF, All SAN Array ASA, retrieve controller serial number, controller serial number, controller-based license serial number, add controller-based license, remove trial license 
 summary: 如果您使用的是 FAS 、 AFF 或 ASA 儲存控制器、則需要 SnapCenter 標準控制器型授權。 
 ---
 = 新增SnapCenter 以控制器為基礎的功能

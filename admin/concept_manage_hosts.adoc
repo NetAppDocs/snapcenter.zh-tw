@@ -2,7 +2,7 @@
 permalink: admin/concept_manage_hosts.html 
 sidebar: sidebar 
 keywords: Manage hosts 
-summary: 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套件、新增驗證伺服器、移除主機、移轉備份工作、以及更新主機以升級外掛程式套件或新增外掛程式套件。視所使用的外掛程式而定、您也可以配置磁碟、管理SMB共用、管理啟動器群組（igroups\）、管理iSCSI工作階段、以及移轉資料。 
+summary: 您可以新增主機並安裝SnapCenter 支援功能的外掛程式套件、新增驗證伺服器、移除主機、移轉備份工作、以及更新主機以升級外掛程式套件或新增外掛程式套件。視所使用的外掛程式而定、您也可以配置磁碟、管理SMB共用、管理啟動器群組（igroup）、管理iSCSI工作階段、以及移轉資料。 
 ---
 = 在 SnapCenter 中管理主機
 :allow-uri-read: 

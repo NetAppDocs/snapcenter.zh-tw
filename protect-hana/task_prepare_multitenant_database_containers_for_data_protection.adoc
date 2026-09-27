@@ -2,7 +2,7 @@
 permalink: protect-hana/task_prepare_multitenant_database_containers_for_data_protection.html 
 sidebar: sidebar 
 keywords: multitenant database containers 
-summary: 若SAP HANA主機直接登錄SnapCenter 到位、安裝或升級SnapCenter 適用於SAP HANA資料庫的整套功能、將會觸發自動探索主機上的資源。安裝或升級外掛程式之後、對於外掛程式主機上的每個多租戶資料庫容器（MDM\）資源、將會自動以不同的GUID格式探索另一個MDC資源、並在SnapCenter 其中進行登錄。新資源將處於「鎖定」狀態。 
+summary: 對於直接註冊在 SnapCenter 中的 SAP HANA 主機，安裝或升級 SAP HANA 資料庫的 SnapCenter 外掛將觸發對主機上資源的自動探索。安裝或升級外掛後，對於位於外掛主機上的每個多租戶資料庫容器（MDC）資源，系統將自動探索到另一個具有不同 GUID 格式的 MDC 資源，並將其註冊至 SnapCenter。新資源將處於「鎖定」狀態。 
 ---
 = 在 SnapCenter 中準備多租戶資料庫容器以進行資料保護
 :allow-uri-read: 
