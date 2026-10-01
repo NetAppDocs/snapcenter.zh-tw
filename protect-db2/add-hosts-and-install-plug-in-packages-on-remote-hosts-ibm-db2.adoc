@@ -132,6 +132,10 @@ NOTE: GMSA僅會做為SnapCenter Windows版的更新外掛程式服務的登入�
 如果您未選取 *跳過預檢查* 複選框，系統將驗證主機是否符合安裝外掛程式的要求。系統會根據最低要求驗證磁碟空間、RAM、PowerShell 版本、.NET 版本、位置（針對 Windows 外掛程式）以及 Java 17（適用於 SnapCenter 6.2.1 及更高版本）或 Java 11（適用於 SnapCenter 6.2 及更早版本）（針對 Windows 和 Linux 外掛程式）。如果未滿足最低要求，則會顯示相應的錯誤或警告訊息。
 
 +
+
+NOTE: 非 root 使用者必須擁有執行權限才能執行 Java。
+
++
 如果錯誤與磁碟空間或RAM有關、您可以更新位於C:\Program Files\NetApp\SnapCenter Webapp的Web.config檔案、以修改預設值。如果錯誤與其他參數有關、您必須修正問題。
 
 +

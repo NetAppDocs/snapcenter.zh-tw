@@ -51,6 +51,10 @@ NOTE: 您應該配置足夠的磁碟空間、並監控logs資料夾的儲存使�
 必要的軟體套件
  a| 
 * Java 17（Oracle Java、OpenJDK 或 SAP JDK）適用於 SnapCenter 6.2.1 及更新版本，Java 11 適用於 SnapCenter 6.2 及更早版本
++
+
+NOTE: 非 root 使用者必須擁有執行權限才能執行 Java。
+
 
 
 如果您已將 Java 升級至最新版本，則必須確保位於 /var/opt/snapcenter/spl/etc/spl.properties 的 JAVA_HOME 選項設定為正確的 Java 版本和正確的路徑。

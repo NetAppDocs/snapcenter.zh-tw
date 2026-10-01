@@ -16,7 +16,7 @@ summary: 新增主機並安裝外掛程式套件之前、您必須先完成所�
 * 您必須在主機上安裝 Java 17（Oracle Java、OpenJDK 或 SAP JDK，適用於 SnapCenter 6.2.1 及更新版本）或 Java 11（適用於 SnapCenter 6.2 及更早版本）。
 +
 
-NOTE: IBM Java 在 Windows 和 Linux 主機上不受支援。
+NOTE: Windows 和 Linux 主機不支援 IBM Java。
 
 * 對於 Windows 、外掛程式建立者服務應使用「 'LocalSystem' 」 Windows 使用者執行、這是以網域管理員身分安裝適用於 IBM DB2 的外掛程式時的預設行為。
 * 在Windows主機上安裝外掛程式時、如果您指定的認證不是內建的、或是使用者屬於本機工作群組使用者、則必須停用主機上的UAC.SnapCenter Plug-in for Microsoft Windows 預設會在 Windows 主機上與 IBM DB2 外掛程式一起部署。
@@ -49,6 +49,10 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["下載適用於
 
 +
 link:https://developer.ibm.com/languages/java/semeru-runtimes/downloads/?license=IBM["下載適用於 AIX 的 Java"^]
+
++
+
+NOTE: 非 root 使用者必須擁有執行權限才能執行 Java。
 
 * 對於在 Linux 主機上執行的 IBM DB2 資料庫、當安裝適用於 IBM DB2 的外掛程式時、會自動安裝適用於 UNIX 的 SnapCenter 外掛程式。
 * 您應該將 * bash* 作為外掛程式安裝的預設 Shell 。

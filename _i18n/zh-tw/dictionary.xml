@@ -7790,7 +7790,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="84f9528e600ab53a4c808da98efb3668" category="summary">資源是由 SnapCenter 管理的 Linux 主機上的 IBM DB2 資料庫。您可以在探索可用的 IBM DB2 資料庫之後、將這些資源新增至資源群組、以執行資料保護作業。</block>
   <block id="1613db1c8ee565787325feb95428e9ea" category="paragraph">資源是由 SnapCenter 管理的 Linux 主機上的 IBM DB2 資料庫。您可以在探索可用的 IBM DB2 資料庫之後、將資源新增至資源群組、以執行資料保護作業。</block>
   <block id="c39495ad9bcb958b9080a36f441abbbe" category="list-text">您必須已完成安裝 SnapCenter 伺服器、新增主機及設定儲存系統連線等工作。</block>
-  <block id="97a161d2a9a0ce59a5128905c924a379" category="list-text">適用於 IBM DB2 的 SnapCenter 外掛程式不支援自動探索駐留在 RDM/VMDK 虛擬環境中的資源。您必須在手動新增資料庫的同時、提供虛擬環境的儲存資訊。</block>
   <block id="2fc619a3874b3d7ee66dc2b056c19d58" category="list-text">安裝外掛程式之後、系統會自動探索該 Linux 主機上的所有資料庫、並顯示在「資源」頁面上。</block>
   <block id="1c38e2d02d815dacbf8f55fddf8a55ef" category="list-text">只會自動探索資料庫。</block>
   <block id="ad19113026dc77ce4d582f20058e7d2e" category="list-text">在左導覽窗格中、按一下 * 資源 * 、然後從清單中選取 IBM DB2 的外掛程式。</block>
@@ -10036,4 +10035,13 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="829690f9bb273b74b9b78d6c6f633563" category="summary">備份頻率（排程類型）在原則中指定，而備份排程則在資源群組組態中指定。</block>
   <block id="7961a2a642f2ef14bcc3560c4533978b" category="summary">為了減少對備份作業效能的影響，請將備份驗證排程在稍後的分隔作業中，而不是在建立備份後立即進行。</block>
   <block id="2faaeb23f72a64bdbb16cfe932406ce8" category="summary">您可以從主儲存設備或次要儲存設備 Clone 檔案系統備份。您也可以選擇符合您要求的目的地，可以是原始備份位置，或是同一主機或不同主機上的不同目的地。目的地必須與 Clone 來源備份位於同一 Volume 上。</block>
+  <block id="f7182d7a35e19e73172617deaca2e396" category="admonition">執行 Java 的帳戶必須具有執行 Java 的權限。</block>
+  <block id="baf777b8ad8fec11ce73312d60c6beec" category="paragraph">+ 注意：非 root 使用者必須具有執行權限才能執行 Java。</block>
+  <block id="af4f76638af48843fe26083b8647819a" category="admonition">非 root 使用者必須擁有執行權限才能執行 Java。</block>
+  <block id="28476e82f924742dee48ae4d44d52558" category="inline-xref">駐留在 RDM/VMDK 虛擬環境中的資源</block>
+  <block id="211bef1be936b825b44ea7171f22e760" category="list-text">SnapCenter IBM Db2 外掛程式不支援自動探索 RDM/VMDK 虛擬環境中的資源。您必須在手動新增資料庫時提供虛擬環境的儲存設備資訊。詳情請參閱 <block ref="40c107052fc48aa77e5bdccb7af86d58" category="inline-xref-macro-rx"></block>。</block>
+  <block id="288d3dea029b52699e9d4a669729d1f7" category="paragraph">駐留在 RDM/VMDK 虛擬環境中的資源無法自動探索。您必須停用自動探索，並為 IBM Db2 的 SnapCenter 外掛程式手動新增執行個體，如下所示：</block>
+  <block id="8f3b4f1a702849c5530b3620426cca19" category="inline-link-macro">備份 IBM Db2 資料庫，PowerShell cmdlets</block>
+  <block id="17a05e9785500431b7cdd6242282c8ed" category="paragraph">如需詳細資訊，請參閱 <block ref="636d9603a663670ca77c87610aa537ee" category="inline-link-macro-rx"></block>。</block>
+  <block id="b9bcbcd68d11ccb28e0b885b2d2877cf" category="admonition">Windows 和 Linux 主機不支援 IBM Java。</block>
 </blocks>

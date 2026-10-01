@@ -47,6 +47,10 @@ link:https://www.oracle.com/java/technologies/downloads/#java17["下載適用於
 +
 link:https://www.oracle.com/java/technologies/downloads/#java17["下載適用於所有作業系統的 Java"]
 
++
+
+NOTE: 非 root 使用者必須擁有執行權限才能執行 Java。
+
 * 對於在 Linux 主機上執行的 PostgreSQL 叢集、在安裝 PostgreSQL 的外掛程式時、會自動安裝 SnapCenter Plug-in for UNIX 。
 * 您應該將 * bash* 作為外掛程式安裝的預設 Shell 。
 

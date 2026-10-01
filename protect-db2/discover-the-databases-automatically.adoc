@@ -15,7 +15,7 @@ summary: 資源是由 SnapCenter 管理的 Linux 主機上的 IBM DB2 資料庫�
 
 .開始之前
 * 您必須已完成安裝 SnapCenter 伺服器、新增主機及設定儲存系統連線等工作。
-* 適用於 IBM DB2 的 SnapCenter 外掛程式不支援自動探索駐留在 RDM/VMDK 虛擬環境中的資源。您必須在手動新增資料庫的同時、提供虛擬環境的儲存資訊。
+* SnapCenter IBM Db2 外掛程式不支援自動探索 RDM/VMDK 虛擬環境中的資源。您必須在手動新增資料庫時提供虛擬環境的儲存設備資訊。詳情請參閱 <<resources_rdm_vmdk_virtual_environments,駐留在 RDM/VMDK 虛擬環境中的資源>>。
 
 
 .關於這項工作
@@ -45,3 +45,16 @@ summary: 資源是由 SnapCenter 管理的 Linux 主機上的 IBM DB2 資料庫�
 
 
 IMPORTANT: 如果資料庫重新命名為SnapCenter 不屬於支援範圍、您必須重新整理資源。
+
+[[resources_rdm_vmdk_virtual_environments]]
+.駐留在 RDM/VMDK 虛擬環境中的資源
+駐留在 RDM/VMDK 虛擬環境中的資源無法自動探索。您必須停用自動探索，並為 IBM Db2 的 SnapCenter 外掛程式手動新增執行個體，如下所示：
+
+[listing]
+----
+Set-SmConfigSettings -Agent -Hostname <HOST_NAME> -configSettings @{"DISABLE_AUTO_DISCOVERY"="true"}
+
+PS C:\> Add-SmResource -HostName 10.32.212.13 -PluginCode DB2 -ResourceType Instance -ResourceName db2inst1 -StorageFootPrint
+(@{"VolumeName"="windb201_data01";"LUNName"="windb201_data01";"StorageSystem"="windb2svm"})
+----
+如需詳細資訊，請參閱 link:back-up-db2-databases.html["備份 IBM Db2 資料庫，PowerShell cmdlets"]。
