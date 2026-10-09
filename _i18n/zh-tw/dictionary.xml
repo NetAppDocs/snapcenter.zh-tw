@@ -10036,7 +10036,6 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="7961a2a642f2ef14bcc3560c4533978b" category="summary">為了減少對備份作業效能的影響，請將備份驗證排程在稍後的分隔作業中，而不是在建立備份後立即進行。</block>
   <block id="2faaeb23f72a64bdbb16cfe932406ce8" category="summary">您可以從主儲存設備或次要儲存設備 Clone 檔案系統備份。您也可以選擇符合您要求的目的地，可以是原始備份位置，或是同一主機或不同主機上的不同目的地。目的地必須與 Clone 來源備份位於同一 Volume 上。</block>
   <block id="f7182d7a35e19e73172617deaca2e396" category="admonition">執行 Java 的帳戶必須具有執行 Java 的權限。</block>
-  <block id="baf777b8ad8fec11ce73312d60c6beec" category="paragraph">+ 注意：非 root 使用者必須具有執行權限才能執行 Java。</block>
   <block id="af4f76638af48843fe26083b8647819a" category="admonition">非 root 使用者必須擁有執行權限才能執行 Java。</block>
   <block id="28476e82f924742dee48ae4d44d52558" category="inline-xref">駐留在 RDM/VMDK 虛擬環境中的資源</block>
   <block id="211bef1be936b825b44ea7171f22e760" category="list-text">SnapCenter IBM Db2 外掛程式不支援自動探索 RDM/VMDK 虛擬環境中的資源。您必須在手動新增資料庫時提供虛擬環境的儲存設備資訊。詳情請參閱 <block ref="40c107052fc48aa77e5bdccb7af86d58" category="inline-xref-macro-rx"></block>。</block>
@@ -10044,4 +10043,8 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="8f3b4f1a702849c5530b3620426cca19" category="inline-link-macro">備份 IBM Db2 資料庫，PowerShell cmdlets</block>
   <block id="17a05e9785500431b7cdd6242282c8ed" category="paragraph">如需詳細資訊，請參閱 <block ref="636d9603a663670ca77c87610aa537ee" category="inline-link-macro-rx"></block>。</block>
   <block id="b9bcbcd68d11ccb28e0b885b2d2877cf" category="admonition">Windows 和 Linux 主機不支援 IBM Java。</block>
+  <block id="123edbe25c8249f99cd2533a36af7a0d" category="list-text">SnapCenter 執行 LUN 還原或 Clone 作業時，如果 igroup 尚不存在，則會自動建立 igroup。建立的 igroup 名稱格式如下：<block ref="bcd792dfc656b95e5dc2b984425fc0f5" prefix=" " category="inline-code"></block></block>
+  <block id="56612541ccd886dc39344f635827756c" category="list-text">SnapCenter 不會刪除在刪除 Clone 操作過程中建立的 igroup。它會被保留以供後續的 Clone 或還原操作使用。</block>
+  <block id="3156e86fd2bdb0611b9b9c89c87999b7" category="list-text">對於基於 TCP 的 NVMe 和基於 FC 的 NVMe 儲存設備佈局，SnapCenter 在 LUN 還原或 Clone 作業期間，如果 NVMe 子系統尚不存在，則會自動建立 NVMe 子系統。</block>
+  <block id="4426256068c2cde9d001eb996c0ed069" category="list-text">SnapCenter 不會刪除作為刪除 Clone 操作一部分而建立的子系統。此子系統將被保留，以便進行後續的 Clone 或還原操作。如果您要刪除子系統，請使用下列命令將其從 ONTAP 中刪除並中斷與主機的連線：<block ref="49bebb92a89712c3abd8ca411ed2bb21" prefix=" " category="inline-code"></block>將<block ref="42f6268ffadaad1cb31f90aff2a0b50b" prefix=" " category="inline-code"></block>替換為子系統的實際 NQN。</block>
 </blocks>

@@ -13,6 +13,13 @@ summary: 您可以建立啟動器群組（igroup）、以指定哪些主機可�
 [role="lead"]
 您可以建立啟動器群組（igroup）、以指定哪些主機可以存取儲存系統上的特定LUN。您可以使用SnapCenter 支援功能來建立、重新命名、修改或刪除Windows主機上的igroup。
 
+[NOTE]
+====
+* SnapCenter 執行 LUN 還原或 Clone 作業時，如果 igroup 尚不存在，則會自動建立 igroup。建立的 igroup 名稱格式如下： `snapcenter_<id>_igroup`
+* SnapCenter 不會刪除在刪除 Clone 操作過程中建立的 igroup。它會被保留以供後續的 Clone 或還原操作使用。
+
+
+====
 
 
 [[create-an-igroup]]
