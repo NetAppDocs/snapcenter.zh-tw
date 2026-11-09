@@ -19,8 +19,20 @@ image::../media/upgrade_workflow.gif[升級工作流程]
 
 
 
+[[recommended-upgrade-path]]
+== 建議升級途徑
+
+NetApp 建議升級至最新支援的 SnapCenter 版本 6.2.3，以確保與 SnapCenter 的相容性與最佳效能。
+
+
+CAUTION: 若要從 6.0 之前的版本或從 6.0 升級至 SnapCenter 6.2.3，請先升級至支援 .NET 8 和 Java 11 的 6.1P3，然後再升級至支援 .NET 10 和 Java 17 的 6.2.3。除非您已經在使用 6.2.2 或任何其他中間版本，否則請勿將其作為升級途徑的一部分。
+
+有關升級主機的進一步詳細資料，請參閱 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 發行說明"^] 中的 *將主機升級至 SnapCenter 6.2.3*。
+
+
+
 [[supported-upgrade-paths]]
-== 支援的升級途徑
+=== 支援的升級途徑
 
 本節顯示您可以從哪些SnapCenter版本升級以及支援哪些外掛程式版本。
 
@@ -56,7 +68,7 @@ NOTE: 如果將SnapCenter Server 升級至 6.2，也請將外掛程式升級至 
 
 
 
-.3+| 6.1  a| 
+.4+| 6.1  a| 
 6.2
  a| 
 * 6.1
@@ -77,7 +89,14 @@ NOTE: 如果將SnapCenter Server 升級至 6.2，也請將外掛程式升級至 
 
 
 
-.2+| 6.2 | 6.2.1  a| 
+| 6.2.3  a| 
+* 6.2.2
+* 6.2.3
+
+
+
+
+.3+| 6.2 | 6.2.1  a| 
 * 6.2
 
 
@@ -87,5 +106,14 @@ NOTE: 如果將SnapCenter Server 升級至 6.2，也請將外掛程式升級至 
 * 6.2
 
 
+
+
+| 6.2.3  a| 
+* 6.2.2
+* 6.2.3
+
+
 |===
+請參閱 *將主機升級至 SnapCenter 6.2.3*（位於 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 發行說明"^] 中），以取得有關將主機升級至 SnapCenter 6.2.3 的進一步詳細資料。
+
 若要了解如何升級SnapCenter Plug-in for VMware vSphere，請參閱 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_upgrade.html["升級SnapCenter VMware vSphere的插件"^]。

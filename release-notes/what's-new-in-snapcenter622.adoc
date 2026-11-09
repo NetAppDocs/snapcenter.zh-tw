@@ -11,4 +11,6 @@ summary: SnapCenter 軟體 6.2.2 版本沒有任何新功能或增強功能，�
 
 
 [role="lead"]
-SnapCenter 軟體 6.2.2 版本沒有新增任何功能或改進。它僅包含已知錯誤修復以及 SnapCenter Server 和外掛程式的合格版本更新。如需更多詳細資訊，請參閱 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 6.2.2 版本說明"^]。
+SnapCenter 軟體 6.2.2 版本沒有新增任何功能或改進。
+
+它僅包含已知錯誤修復以及 SnapCenter Server 和外掛程式的合格版本更新。請參閱 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 發行說明"^] 以取得詳細資訊。

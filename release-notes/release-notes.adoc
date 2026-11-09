@@ -11,9 +11,9 @@ summary: 提供SnapCenter 此版本的《支援服務器》和SnapCenter 《支�
 
 
 [role="lead"]
-了解 SnapCenter 6.2、6.2.1 和 6.2.2 版本中新增和增強的功能。
+了解 SnapCenter 6.2、6.2.1、6.2.2 和 6.2.3 版本中新增和增強的功能。
 
-如需新功能與增強功能的完整清單，請參閱 link:what's-new-in-snapcenter622.html["SnapCenter 6.2.2 的新功能"]。
+如需新功能與增強功能的完整清單，請參閱 link:what's-new-in-snapcenter623.html["SnapCenter 6.2.3 的新功能"]。如需新功能與增強功能的完整清單，請參閱 link:what's-new-in-snapcenter622.html["SnapCenter 6.2.2 的新功能"]。
 
 如需新功能與增強功能的完整清單，請參閱 link:what's-new-in-snapcenter621.html["SnapCenter 6.2.1 的新功能"]。
 

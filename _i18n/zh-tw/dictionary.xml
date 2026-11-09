@@ -5610,7 +5610,6 @@
   <block id="061b9167e88f686d39fa02000809052c" category="list-text">您必須擁有具有本機系統管理員權限的使用者、且該使用者具有遠端主機的本機登入權限。</block>
   <block id="953acf14bebe77c11e648186f3957214" category="list-text">您的使用者必須具有SQL Server上的Sysadmin權限。</block>
   <block id="d165009fc919b7c43f63036983c47ae0" category="paragraph">適用於Microsoft SQL Server的VMware vCenter外掛程式使用Microsoft VDI架構、需要系統管理員存取權。SnapCenter</block>
-  <block id="9221af74572734362746f0af9104d884" category="inline-link">Microsoft支援文件編號2926557：SQL Server VDI備份與還原作業需要Sysadmin權限</block>
   <block id="9c9a08a242e9f6311be9fa5bd945d582" category="list-text">如果安裝了適用於Microsoft SQL Server的功能、您必須停止或停用服務和排程。SnapManager</block>
   <block id="1931c747684bb6010ac638ae2be606b3" category="paragraph">如果您打算將備份或複製工作匯入SnapCenter 到支援區、請勿解除安裝SnapManager Microsoft SQL Server的功能。</block>
   <block id="024ecfe0da835b1f362b5e64ec1408ab" category="list-text">主機必須可解析為伺服器的完整網域名稱（FQDN）。</block>
@@ -9421,12 +9420,9 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="5aae26cfc631423a28ee9f3eea8618b0" category="cell">6.2.1</block>
   <block id="4405435b2ad2e79a5a4506de478aafd7" category="summary">SnapCenter 軟體 6.2.1 版本沒有任何新功能或增強功能，僅包含已知的錯誤修復以及 SnapCenter 伺服器和外掛程式的合格版本更新。</block>
   <block id="fed22bd00ec1bb7537e843bbc0886bcc" category="doc">SnapCenter software 6.2.1 的新增功能</block>
-  <block id="f6a2ad4b89455cf23e3e4843e1f51aee" category="inline-link-macro">SnapCenter 6.2.1 版本說明</block>
-  <block id="f0de22be0ad3dd3c1e51ed207f0e298e" category="paragraph">SnapCenter 軟體 6.2.1 版本沒有新增任何功能或改進。它僅包含已知錯誤修復以及 SnapCenter Server 和外掛程式的合格版本更新。如需更多詳細資訊，請參閱 <block ref="f297672c4e3c5441ce384d3bd8457e0c" category="inline-link-macro-rx"></block>。</block>
   <block id="92f7e9adcc0061bde4c2abd78f00e01e" category="paragraph">若要使用 SnapCenter Plug-in for VMware vSphere 設定 CA 憑證，請參閱<block ref="e0ef04da7ad7ee6e29cb49ed5497582e" category="inline-link-rx"></block>。</block>
   <block id="0ff275ffe02e672fcd7c5215c9cbcfb6" category="paragraph"><block ref="a578dd94961bb2b0ce287d29a112740b" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
   <block id="11428fc511268a2c63fa0e7ebcb2530d" category="paragraph"><block ref="ee29fb805334372351c3e459eaf40ac3" prefix="" category="inline-code"></block><block ref="e685e5103f8306754d61ec1a0da15686" prefix=" " category="inline-code"></block><block ref="0897acf49c7c1ea9f76efe59187aa046" prefix=" " category="inline-code"></block></block>
-  <block id="2af0fc8c21c11cf5ed04e0063f53931e" category="paragraph"><block ref="2af0fc8c21c11cf5ed04e0063f53931e" category="inline-link-rx"></block></block>
   <block id="58065290ed803cdf3874ac1d4114dcef" category="list-text">您必須使用 Microsoft Exchange Server 進行獨立設定和資料庫可用性群組配置。請參閱 <block ref="a56461e56210fb5ec91e8f031015b65a" category="inline-link-macro-rx"></block> 以了解支援的 Microsoft Exchange Server 版本。</block>
   <block id="00ae82bfdfa80871841f81003a4c71b8" category="list-text">請確保防火牆未封鎖以下連接埠，否則新增主機操作將失敗。若要解決此問題，您必須設定動態連接埠範圍。如需詳細資訊，請參閱<block ref="70d4a5fd2803e35738264291f84fc1aa" category="inline-link-rx"></block>。有關支援的 Microsoft Exchange Server 版本，請參閱<block ref="a56461e56210fb5ec91e8f031015b65a" category="inline-link-macro-rx"></block>。</block>
   <block id="e009ef54959ef44bca3f7d7710210754" category="list-text">Windows 2012 R2 和 Exchange 2013 的連接埠範圍 6000 - 6500</block>
@@ -9471,17 +9467,12 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="39ba353d702229155256e298616dd0e9" category="list-text">您的 Linux 主機上必須安裝 Java 17 （適用於 SnapCenter 6.2.1 及更新版本）或 Java 11 （適用於 SnapCenter 6.2 及更早版本）。</block>
   <block id="f876eb454a143bb9b6ede6eb4f5d0c25" category="list-text">您必須安裝 ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）。</block>
   <block id="12eef6603e9d6e7e0f7396e2f1e8f9f1" category="list-text">您必須安裝 PowerShell 7.6.1（或更高版本）。</block>
-  <block id="b019cdc322bc185f2cdc3f59ae2b1ac4" category="paragraph">了解 SnapCenter 6.2、6.2.1 和 6.2.2 版本中新增和增強的功能。</block>
   <block id="6993919150e52bd9b34176c264e22513" category="inline-link-macro">SnapCenter 6.2.2 的新功能</block>
-  <block id="3043c81c3ea9bb59a962f1a8c25998aa" category="paragraph">如需新功能與增強功能的完整清單，請參閱 <block ref="b49911080e0d8e9d778dd3850ba77c90" category="inline-link-macro-rx"></block>。</block>
   <block id="7276a69fb4994eeb60e98f647f8809cc" category="inline-link">SnapCenter Software 6.2.2 版本說明</block>
   <block id="5c4c3a61d43c17720237d0252bd7964f" category="paragraph">有關已知問題、限制、已修復問題以及新增和變更的命令的詳細資訊，請參閱<block ref="310da251eb499e87cac462ed442bc118" category="inline-link-rx"></block>。您必須使用您的 NetApp 帳戶登入或建立帳戶才能存取發行說明。</block>
   <block id="3e7e96fad5e237fb2d5a081c6cb11212" category="cell">6.2.2</block>
-  <block id="ec72aa272d1e0c8676733268fcea8629" category="inline-link-macro">SnapCenter 6.2.2 版本說明</block>
-  <block id="3939a14b7eae2f5a633f8c4b2e990fa8" category="paragraph">SnapCenter 軟體的 6.2 版本包含已知的錯誤修正，以及 SnapCenter Server 和外掛程式合格版本的更新。它還包含以下擴充功能。請參閱 <block ref="8325eb4c00d5692ebe130b4b8b28f43c" category="inline-link-macro-rx"></block> 以取得詳細資訊。</block>
   <block id="1d9c92dfdf9a7170a6f57175018cd0b6" category="summary">SnapCenter 軟體 6.2.2 版本沒有任何新功能或增強功能，僅包含已知的錯誤修復以及 SnapCenter 伺服器和外掛程式的合格版本更新。</block>
   <block id="f45649ab475309b80142ce8fdc3cfeeb" category="doc">SnapCenter software 6.2.2 的新增功能</block>
-  <block id="132161a0728f2aca84e97d9ad274492b" category="paragraph">SnapCenter 軟體 6.2.2 版本沒有新增任何功能或改進。它僅包含已知錯誤修復以及 SnapCenter Server 和外掛程式的合格版本更新。如需更多詳細資訊，請參閱 <block ref="8325eb4c00d5692ebe130b4b8b28f43c" category="inline-link-macro-rx"></block>。</block>
   <block id="cd093f4c82c3df7f4e6ea55c02b1ffda" category="list-text">安裝 ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更高版本）和 PowerShell 7.6.1（或更高版本）。</block>
   <block id="fd0b9239b899bfaafa239db9df2999d8" category="list-text">確保 Windows 插件主機上已安裝 ASP.NET Core Runtime 10.0.7 Hosting Bundle（或更新版本）和 PowerShell 7.6.1（或更新版本）。</block>
   <block id="66898743f260fbb7a17be9643b2f4490" category="list-text">確保在 Windows 和 Linux 外掛主機上安裝了適用於 SnapCenter 6.2.1 及更新版本的 Java 17（Oracle Java、OpenJDK 或 SAP JDK），或適用於 SnapCenter 6.2 及更早版本的 Java 11。</block>
@@ -10047,4 +10038,24 @@ NetApp ® 單一信箱恢復已於 2023 年 5 月 12 日結束可用度（ EOA �
   <block id="56612541ccd886dc39344f635827756c" category="list-text">SnapCenter 不會刪除在刪除 Clone 操作過程中建立的 igroup。它會被保留以供後續的 Clone 或還原操作使用。</block>
   <block id="3156e86fd2bdb0611b9b9c89c87999b7" category="list-text">對於基於 TCP 的 NVMe 和基於 FC 的 NVMe 儲存設備佈局，SnapCenter 在 LUN 還原或 Clone 作業期間，如果 NVMe 子系統尚不存在，則會自動建立 NVMe 子系統。</block>
   <block id="4426256068c2cde9d001eb996c0ed069" category="list-text">SnapCenter 不會刪除作為刪除 Clone 操作一部分而建立的子系統。此子系統將被保留，以便進行後續的 Clone 或還原操作。如果您要刪除子系統，請使用下列命令將其從 ONTAP 中刪除並中斷與主機的連線：<block ref="49bebb92a89712c3abd8ca411ed2bb21" prefix=" " category="inline-code"></block>將<block ref="42f6268ffadaad1cb31f90aff2a0b50b" prefix=" " category="inline-code"></block>替換為子系統的實際 NQN。</block>
+  <block id="ab8c41fe6c0631568c4f7721188add28" category="paragraph">了解 SnapCenter 6.2、6.2.1、6.2.2 和 6.2.3 版本中新增和增強的功能。</block>
+  <block id="71d666a1ece80d37fc99f3fb4040beb8" category="inline-link-macro">SnapCenter 6.2.3 的新功能</block>
+  <block id="41aef99112aa5172c10c621cf5da53e8" category="paragraph">如需新功能與增強功能的完整清單，請參閱 <block ref="2155740d9940c2bc1556235aa7189068" category="inline-link-macro-rx"></block>。如需新功能與增強功能的完整清單，請參閱 <block ref="b49911080e0d8e9d778dd3850ba77c90" category="inline-link-macro-rx"></block>。</block>
+  <block id="56d11aa60f1e8b5d8731445c4d250b09" category="doc">SnapCenter 的升級途徑</block>
+  <block id="ae3c4052759d52b1e22fb192d17f29b7" category="section-title">建議升級途徑</block>
+  <block id="9e72d8328f79d15398854da7b2794a1b" category="paragraph">NetApp 建議升級至最新支援的 SnapCenter 版本 6.2.3，以確保與 SnapCenter 的相容性與最佳效能。</block>
+  <block id="163b15a5dca02d28e2445b18b3de6862" category="admonition">若要從 6.0 之前的版本或從 6.0 升級至 SnapCenter 6.2.3，請先升級至支援 .NET 8 和 Java 11 的 6.1P3，然後再升級至支援 .NET 10 和 Java 17 的 6.2.3。除非您已經在使用 6.2.2 或任何其他中間版本，否則請勿將其作為升級途徑的一部分。</block>
+  <block id="8c02671efcef8b6a724887efbfbaa46a" category="inline-link-macro">SnapCenter 發行說明</block>
+  <block id="ffb1843dceaa58f89d906d41dc88c123" category="paragraph">有關升級主機的進一步詳細資料，請參閱 <block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block> 中的 *將主機升級至 SnapCenter 6.2.3*。</block>
+  <block id="5c4d30aeb4e6059223dc156f675a1315" category="cell">6.2.3</block>
+  <block id="d723121d9ecbf7e5520f9d8a9ecbe11a" category="paragraph">SnapCenter 軟體的 6.2 版本包含已知的錯誤修正，以及 SnapCenter Server 和外掛程式合格版本的更新。它還包含以下擴充功能。</block>
+  <block id="b3fe65d6300325740113ade6cc8fd3f2" category="paragraph">請參閱 <block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block> 以取得詳細資訊。</block>
+  <block id="cf984782b22632f0c24d17fe92e2b0bd" category="paragraph">SnapCenter 軟體 6.2.1 版本沒有新增任何功能或改進。</block>
+  <block id="35f1c704c4de930b04f776710bd0aba9" category="paragraph">它僅包含已知錯誤修復以及 SnapCenter Server 和外掛程式的合格版本更新。請參閱 <block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block> 以取得詳細資訊。</block>
+  <block id="5f39a09f48a40a5fbced091639035408" category="paragraph">SnapCenter 軟體 6.2.2 版本沒有新增任何功能或改進。</block>
+  <block id="92ef69937457efbd5f4fbf8a70556363" category="summary">SnapCenter 軟體 6.2.3 版本沒有任何新功能或增強功能，僅包含已知的錯誤修復以及 SnapCenter 伺服器和外掛程式的合格版本更新。</block>
+  <block id="9a9fb0522345d7bedd5c343326c0af18" category="doc">SnapCenter software 6.2.3 的新增功能</block>
+  <block id="a83a9a8dd992eb258a6c4abc6c6b2c97" category="paragraph">SnapCenter 軟體 6.2.3 版本沒有新增任何功能或改進。</block>
+  <block id="064072d3b881bfbb5d5f6ea225eb8867" category="paragraph">若要將主機升級至 SnapCenter 6.2.3，請參閱 <block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block> 中的 *將主機升級至 SnapCenter 6.2.3*，以取得有關升級主機的進一步詳細資料。</block>
+  <block id="6fc609e22b9ec71526720e491d7f9a37" category="paragraph">請參閱 *將主機升級至 SnapCenter 6.2.3*（位於 <block ref="c12c01bc09a3f61e41d7f2a98eb13862" category="inline-link-macro-rx"></block> 中），以取得有關將主機升級至 SnapCenter 6.2.3 的進一步詳細資料。</block>
 </blocks>

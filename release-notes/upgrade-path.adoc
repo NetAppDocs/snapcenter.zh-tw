@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: upgrade paths, supported, upgrade to SnapCenter 
 summary: SnapCenter 支援的升級路徑。 
 ---
-= SnapCenter 支援的升級路徑
+= SnapCenter 的升級途徑
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -15,6 +15,23 @@ summary: SnapCenter 支援的升級路徑。
 
 
 NOTE: 如果將SnapCenter Server 升級至 6.2，也請將外掛程式升級至 6.2。
+
+
+
+[[recommended-upgrade-path]]
+== 建議升級途徑
+
+NetApp 建議升級至最新支援的 SnapCenter 版本 6.2.3，以確保與 SnapCenter 的相容性與最佳效能。
+
+
+CAUTION: 若要從 6.0 之前的版本或從 6.0 升級至 SnapCenter 6.2.3，請先升級至支援 .NET 8 和 Java 11 的 6.1P3，然後再升級至支援 .NET 10 和 Java 17 的 6.2.3。除非您已經在使用 6.2.2 或任何其他中間版本，否則請勿將其作為升級途徑的一部分。
+
+有關升級主機的進一步詳細資料，請參閱 link:https://library.netapp.com/ecm/ecm_download_file/ECMLP3359467["SnapCenter 發行說明"^] 中的 *將主機升級至 SnapCenter 6.2.3*。
+
+
+
+[[supported-upgrade-paths]]
+=== 支援的升級途徑
 
 |===
 | 如果您使用SnapCenter 的是伺服器版本... | 您可以直接將SnapCenter 伺服器升級至... | 支援的外掛程式版本 
@@ -45,7 +62,7 @@ NOTE: 如果將SnapCenter Server 升級至 6.2，也請將外掛程式升級至 
 
 
 
-.3+| 6.1  a| 
+.4+| 6.1  a| 
 6.2
  a| 
 * 6.1
@@ -66,7 +83,14 @@ NOTE: 如果將SnapCenter Server 升級至 6.2，也請將外掛程式升級至 
 
 
 
-.2+| 6.2 | 6.2.1  a| 
+| 6.2.3  a| 
+* 6.2.2
+* 6.2.3
+
+
+
+
+.3+| 6.2 | 6.2.1  a| 
 * 6.2
 
 
@@ -74,6 +98,13 @@ NOTE: 如果將SnapCenter Server 升級至 6.2，也請將外掛程式升級至 
 
 | 6.2.2  a| 
 * 6.2
+
+
+
+
+| 6.2.3  a| 
+* 6.2.2
+* 6.2.3
 
 
 |===
